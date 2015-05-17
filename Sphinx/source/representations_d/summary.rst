@@ -7,39 +7,66 @@ Table :ref:`Initialization Table <Initialization>` lists the member functions re
 
 .. _Initialization:
 
-+-----------------------------------------------------------------------------------------------------------+
-|                     Initalization of VBF                                                                  |
-+===========================================================================================================+
-| SYNTAX                                   | DESCRIPTION                                                    |
-+------------------------------------------+----------------------------------------------------------------+
-| void puttt(const NTL::mat_GF2& X)        | (1) :math:`\matr{T}_F = \matr{T}`                              |
-+-----------------------------------------------------------------------------------------------------------+
-| void putHexTT(istream& s)                | (1) VBF which has an hexadecimal representation                |
-|					   | of its truth table defined by :math:`s` (only for :math:`m=1`) | 
-+-----------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+|                     			   Initalization of VBF                                                                  |
++=====================================================+==========================================================================+
+| SYNTAX                                              | DESCRIPTION                                                              |
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void puttt(const NTL::mat_GF2& X)                   | (1) :math:`\matr{T}_F = \matr{T}`                                        |
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void putHexTT(istream& s)                           | (1) VBF which has an hexadecimal representat                             |
+|					              | of its truth table defined by :math:`s` (only for :math:`m=1`)           | 
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void putDecTT(const NTL::vec_long& d,const long& m) | (1) VBF which has an decimal representation of its truth table           |
+|						      | defined by *d* and *m* is the number of component boolean functions      |
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void putirrpol(GF2X& g)                             | (2) Set *F* by its trace *f* and the irreducible polynomial *g*          |
+| void puttrace(string& f)                            | 								         |
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void putpol(vec_pol& p)                             | (3) Set *F* with Polynomials in *ANF* equals to *p*                      |
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void putanf(const NTL::mat_GF2& A)                  | (4) :math:`\matr{ANF}_F = \matr{A}`                                      |
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void putchar(const NTL::mat_ZZ& C)                  | (5) :math:`\matr{Img}(F) = \matr{C}`                                     |
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void putwalsh(const NTL::mat_ZZ& W)                 | (6) :math:`\matr{WS}(F) = \matr{W}`                                      |
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void putper(const NTL::vec_ZZ& v)                   | (10) VBF which is a permutation defined by :math:`\vec{v}`               |
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void putexp_comp(const NTL::vec_ZZ& v)              | (11) VBF defined by Expansion and Compression DES vector :math:`\vec{v}` |
++-----------------------------------------------------+--------------------------------------------------------------------------+
+| void putsbox(const NTL::mat_ZZ& S)                  | (12) VBF which is a DES S-Box defined by :math:`\matr{S}`                |
++-----------------------------------------------------+--------------------------------------------------------------------------+
 
-\textsl{void putDecTT(const NTL::vec\_long\& d,const long\& m)} & (1) VBF which has an decimal representation of its truth table \\
-& defined by $d$ and $m$ is the number of component boolean functions\\\hline
-\textsl{void putirrpol(GF2X\& g)} \ \ \textsl{void puttrace(string\& f)} & (2) Set $F$ by its trace $f$ and the irreducible polynomial $g$ \\\hline
-\textsl{void putpol(vec\_pol\& p)} & (3) Set $F$ with Polynomials in $ANF$ equals to $p$\\\hline
-\textsl{void putanf(const NTL::mat\_GF2\& A)} & (4) $\matr{ANF}_F = \matr{A}$\\\hline
-\textsl{void putchar(const NTL::mat\_ZZ\& C)} & (5) $\matr{Img}(F) = \matr{C}$\\\hline
-\textsl{void putwalsh(const NTL::mat\_ZZ\& W)} & (6) $\matr{WS}(F) = \matr{W}$\\\hline
-\textsl{void putper(const NTL::vec\_ZZ\& v)} & (10) VBF which is a permutation defined by $\vec{v}$\\\hline
-\textsl{void putexp\_comp(const NTL::vec\_ZZ\& v)} & (11) VBF defined by Expansion and Compression DES vector $\vec{v}$\\\hline
-\textsl{void putsbox(const NTL::mat\_ZZ\& S)} & (12) VBF which is a DES S-Box defined by $\matr{S}$\\\hline
+.. _Representation:
 
-\caption{Representation of VBF\label{tab:Representation}}
-SYNTAX & DESCRIPTION\\\hline
-\textsl{void TT(NTL::mat\_GF2\& X, VBF\& F)} & (1) $\matr{X}=\matr{T}_F$\\\hline
-\textsl{void getHexTT(ostream\& s)} & (1)  $s$ is the hexadecimal representation of the truth table of $F$ \\\hline
-\textsl{NTL::vec\_long getDecTT() const} & (1) Decimal representation of the truth table \\\hline
-\textsl{void Trace(GF2EX\& f, VBF\& F)} & (2) $F$ has a trace representation defined by $f$\\\hline
-\textsl{void Pol(NTL\_SNS ostream\& s, VBF\& F)} & (3) $s$ contains the Polynomials in $ANF$ of $F$\\\hline
-\textsl{void ANF(NTL::mat\_GF2\& X, VBF\& F)} & (4) $\matr{X}=\matr{ANF}_F$\\\hline
-\textsl{void Charact(NTL::mat\_ZZ\& X, VBF\& F)} & (5) $\matr{X}=\matr{Img(F)}$\\\hline
-\textsl{void Walsh(NTL::mat\_ZZ\& X, VBF\& F)} & (6) $\matr{X}=\matr{WS}(F)$\\\hline
-\textsl{void LAT(NTL::mat\_ZZ\& X, VBF\& F)} & (7) $\matr{X}=\matr{LP}(F)$\\\hline
-\textsl{void DAT(NTL::mat\_ZZ\& X, VBF\& F)} & (8) $\matr{X}=\matr{DP}(F)$\\\hline
-\textsl{void AC(NTL::mat\_ZZ\& X, VBF\& F)} & (9) $\matr{X}=\matr{R}(F)$\\\hline
-\textsl{void PER(NTL::vec\_ZZ\& v, VBF\& F)} & (10) $\vec{v}$ is the permutation vector defined by $F$ \\\hline
++------------------------------------------------------------------------------------------------------------+
+|                             Representation of VBF                                                          |
++======================================+=====================================================================+
+| SYNTAX                               | DESCRIPTION                                                         |
++--------------------------------------+---------------------------------------------------------------------+
+| void TT(NTL::mat_GF2& X, VBF& F)     | (1) :math:`\matr{X}=\matr{T}_F`                                     |
++--------------------------------------+---------------------------------------------------------------------+
+| void getHexTT(ostream& s)            | (1) *s* is the hexadecimal representation of the truth table of *F* |
++--------------------------------------+---------------------------------------------------------------------+
+| NTL::vec_long getDecTT() const       | (1) Decimal representation of the truth table                       |
++--------------------------------------+---------------------------------------------------------------------+
+| void Trace(GF2EX& f, VBF& F)         | (2) *F* has a trace representation defined by *f*                   |
++--------------------------------------+---------------------------------------------------------------------+
+| void Pol(NTL_SNS ostream& s, VBF& F) | (3) *s* contains the Polynomials in *ANF* of *F*                    |
++--------------------------------------+---------------------------------------------------------------------+
+| void ANF(NTL::mat_GF2& X, VBF& F)    | (4) :math:`\matr{X}=\matr{ANF}_F`                                   |
++--------------------------------------+---------------------------------------------------------------------+
+| void Charact(NTL::mat_ZZ& X, VBF& F) | (5) :math:`\matr{X}=\matr{Img(F)}`                                  |
++--------------------------------------+---------------------------------------------------------------------+
+| void Walsh(NTL::mat_ZZ& X, VBF& F)   | (6) :math:`\matr{X}=\matr{WS}(F)`                                   |
++--------------------------------------+---------------------------------------------------------------------+
+| void LAT(NTL::mat_ZZ& X, VBF& F)     | (7) :math:`\matr{X}=\matr{LP}(F)`                                   |
++--------------------------------------+---------------------------------------------------------------------+
+| void DAT(NTL::mat_ZZ& X, VBF& F)     | (8) :math:`\matr{X}=\matr{DP}(F)`                                   |
++--------------------------------------+---------------------------------------------------------------------+
+| void AC(NTL::mat_ZZ& X, VBF& F)      | (9) :math:`\matr{X}=\matr{R}(F)`                                    |
++--------------------------------------+---------------------------------------------------------------------+
+| void PER(NTL::vec_ZZ& v, VBF& F)     | (10) :math:`\vec{v}` is the permutation vector defined by *F*       |
++--------------------------------------+---------------------------------------------------------------------+
+

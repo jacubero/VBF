@@ -27,3 +27,4 @@ An example of use of 2-nd order nonlinearity could be the following:
    nlr(a,F,2);
    cout << "2-nd order nonlinearity: " << a << endl;
 
+This method return -1 if the number of functions to check is too large (greater than the maximum value of la long it variable).

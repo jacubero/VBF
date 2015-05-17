@@ -6,6 +6,8 @@ Useful information in cryptanalysis
    :local:
    :depth: 2
 
+Other useful information in cryptanalysis can be obtained by means of the *VBF* class:
+
 .. include::
    /criteria_d/useful_d/lp.rst
 
