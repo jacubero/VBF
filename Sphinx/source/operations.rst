@@ -1,14 +1,31 @@
-##############
-Operationalize
-##############
+##########################################################
+Operations and constructions over Vector Boolean Functions
+##########################################################
 
 .. contents::
    :local:
    :depth: 2
 
 .. include::
-   oper_d/learning_objectives.rst
+   operations_d/equality.rst
 
 .. include::
-   oper_d/story.rst
+   operations_d/composition.rst
 
+.. include::
+   operations_d/inverse.rst
+
+.. include::
+   operations_d/sum.rst
+
+.. include::
+   operations_d/directsum.rst
+
+.. include::
+   operations_d/addition.rst
+
+.. include::
+   operations_d/bricklayer.rst
+
+.. include::
+   operations_d/summary.rst

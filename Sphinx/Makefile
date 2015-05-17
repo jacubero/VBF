@@ -85,17 +85,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/ACITroubleshootingBook.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/VBFlibraryBook.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/ACITroubleshootingBook.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/VBFlibraryBook.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/ACITroubleshootingBook"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/ACITroubleshootingBook"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/VBFlibraryBook"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/VBFlibraryBook"
 	@echo "# devhelp"
 
 epub:

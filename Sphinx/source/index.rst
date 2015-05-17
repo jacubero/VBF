@@ -1,6 +1,6 @@
-#############################################
-Vector Boolean Function Library (VBF Library)
-#############################################
+##################################################
+Vector Boolean Functions Library: Reference Manual
+##################################################
 
 .. _cover:
 
@@ -16,15 +16,17 @@ Vector Boolean Function Library (VBF Library)
 Table of Contents:
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    Preface <preface>
    Introduction <intro>
    Using the library <using>
    Initializations and representations <representations>
    Cryptographic Criteria <criteria>
-   Operations and constructions over Vector Boolean Functions
- <operations>
+   Operations and constructions over Vector Boolean Functions <operations>
+   Examples <examples>
+   Support <support>
+   Bibliography <bibliography>
    Appendix <appendix>
 
 Indices and tables

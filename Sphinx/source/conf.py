@@ -35,6 +35,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinxtogithub',
+    'sphinx.ext.pngmath',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -185,7 +186,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ACITroubleshootingBookdoc'
+htmlhelp_basename = 'VBFlibraryBookdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -198,16 +199,34 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+'preamble': '\usepackage{amsmath}\n\usepackage{amssymb}\n',
 }
+
+#####################################################
+# add LaTeX macros 
+
+f = file('latex_macros.sty')
+
+try:
+    pngmath_latex_preamble  # check whether this is already defined
+except NameError:
+    pngmath_latex_preamble = ""
+
+for macro in f:
+    # used when building latex and pdf versions
+    latex_elements['preamble'] += macro + '\n'
+    # used when building html version
+    pngmath_latex_preamble += macro + '\n'
+
+#####################################################
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index',
-   'VBFBook.tex',
-   u'VBF Book Documentation',
+   'VBFlibraryBook.tex',
+   u'VBF Library Reference Manual',
    u'Jose Antonio Alvarez Cubero',
    'howto'),
 ]
@@ -238,7 +257,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'datasciencebook', u'VBF Book Documentation',
+    ('index', 'VBFlibrarybook', u'VBF Library Reference Manual',
      [u'Jose Antonio Alvarez Cubero'], 1)
 ]
 
@@ -252,8 +271,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'VBFBook', u'VBF Book Documentation',
-   u'Jose Antonio Alvarez Cubero', 'VBFBook', 'One line description of project.',
+  ('index', 'VBFlibraryBook', u'VBF Library Reference Manual',
+   u'Jose Antonio Alvarez Cubero', 'VBFlibraryBook', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -273,13 +292,13 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'VBF Book'
+epub_title = u'VBF Library Reference Manual'
 epub_author = u'Jose Antonio Alvarez Cubero'
 pub_publisher = u'Jose Antonio Alvarez Cubero'
 epub_copyright = u'2015, Jose Antonio Alvarez Cubero'
 
 # The basename for the epub file. It defaults to the project name.
-#epub_basename = u'VBF Book'
+#epub_basename = u'VBF Library Reference Manual'
 
 # The HTML theme for the epub output. Since the default themes are not optimized
 # for small screen space, using the same theme for HTML and epub output is
@@ -360,8 +379,8 @@ intersphinx_mapping = {'http://docs.python.org/': None}
 # regardless of the global pdf_compressed setting.
 
 pdf_documents = [
- ('index', u'VBFBook',
- u'Vector Boolean Function Library (VBF Library)',
+ ('index', u'VBFlibaryBook',
+ u'Vector Boolean Functions Library: Reference Manual',
  u'Jose Antonio Alvarez Cubero'),
 ]
 

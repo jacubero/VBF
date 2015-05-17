@@ -1,0 +1,3 @@
+Negated fixed points
+====================
+

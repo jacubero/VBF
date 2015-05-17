@@ -1,13 +1,18 @@
-###################
-Communicate Results
-###################
+#################
+Using the library
+#################
 
 .. contents::
    :local:
    :depth: 2
 
-.. include::
-   comm_d/learning_objectives.rst
+This chapter describes how to compile programs that use VBF, and introduces its conventions.
 
 .. include::
-   comm_d/story.rst
+   using_d/example.rst
+
+.. include::
+   using_d/compiling.rst
+
+.. include::
+   using_d/evaluate.rst
