@@ -6,7 +6,7 @@ Using the library
    :local:
    :depth: 2
 
-This chapter describes how to compile programs that use VBF, and introduces its conventions.
+This chapter describes how to compile programs that use VBF and how to evaluate new algorithms.
 
 .. include::
    using_d/example.rst

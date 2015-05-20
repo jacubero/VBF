@@ -6,7 +6,7 @@ Operations and constructions over Vector Boolean Functions
    :local:
    :depth: 2
 
-In this chapter, the operations over Vector Boolean Functions supported by the VBF class are described. We consider operations to identify if two VBF class are equal, to compose two functions, to find out the inverted function, to implement the sum and the direct sum of functions, to add coordinate functions to a given Vector Boolean Function, to bricklayer bricklayering (parallel application of Vector Boolean Functions as employed in Rijndael cipher [DaemenR:02]_).
+In this chapter, the operations over Vector Boolean Functions supported by the VBF library are described. We consider operations to identify if two VBF class are equal, to compose two functions, to find out the inverted function, to implement the sum and the direct sum of functions, to add coordinate functions to a given Vector Boolean Function, to bricklayer bricklayering (parallel application of Vector Boolean Functions as employed in Rijndael cipher [DaemenR:02]_).
 
 In order to illustrate the use of these methods, we are going to use two Vector Boolean Functions :math:`F,G \in \funct{F}_{4,4}` with the following Truth Tables:
 

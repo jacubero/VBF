@@ -15,7 +15,7 @@ We are going to illustrate the installation of the package in an Unix or Unix-li
    $ cd ntl-xxx/src
    $ ./configure
 
-   The execution of *configure* generates the file "makefile" and the file "../include/NTL/config.h", based upon the values assigned to the variables on the command line. In the example above no arguments were employed. The most important variables are: "CC" for choosing the C compiler,
+The execution of *configure* generates the file "makefile" and the file "../include/NTL/config.h", based upon the values assigned to the variables on the command line. In the example above no arguments were employed. The most important variables are: "CC" for choosing the C compiler,
 "CXX" for choosing the C++ compiler, "PREFIX" for choosing the directory in which to install NTL library components.
 
 4. **Build NTL:**

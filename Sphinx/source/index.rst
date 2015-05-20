@@ -25,9 +25,8 @@ Table of Contents:
    Cryptographic Criteria <criteria>
    Operations and constructions over Vector Boolean Functions <operations>
    Examples <examples>
-   Support <support>
+   FAQ <faq>
    Bibliography <bibliography>
-   Appendix <appendix>
 
 Indices and tables
 ==================

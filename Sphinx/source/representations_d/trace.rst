@@ -20,9 +20,9 @@ When :math:`m=n`, we endow :math:`\gf{V_n}` with the structure of the field :mat
 .. math::
    :nowrap:
 
-   \begin{equation}
+   \begin{equation*}
       F(\vec{x}) = \sum_{i=0}^{2^n-1} \delta_i x^i, \ \delta_i \in \gf{GF(2^n)}
-   \end{equation}
+   \end{equation*}
 
 A general way to derive this polynomial representation is given by a Lagrange interpolation from the knowledge of the irreducible polynomial of degree :math:`n` over :math:`\gf{GF(2)}` associated with the field :math:`\gf{GF(2^n)}` and the Truth Table of *F*.
 
@@ -48,4 +48,8 @@ An example of use could be the following:
 
    output << Trace(F) << endl;
 
-The resulting trace representation for *S7* is :math:`1x^128+1x^7+1x^2+1x+1`
+The resulting trace representation for *S7* is:
+
+.. code-block:: console
+
+   1x^128+1x^7+1x^2+1x+1

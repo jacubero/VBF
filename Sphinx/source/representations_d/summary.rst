@@ -14,14 +14,14 @@ Table :ref:`Initialization Table <Initialization>` lists the member functions re
 +-----------------------------------------------------+--------------------------------------------------------------------------+
 | void puttt(const NTL::mat_GF2& X)                   | (1) :math:`\matr{T}_F = \matr{T}`                                        |
 +-----------------------------------------------------+--------------------------------------------------------------------------+
-| void putHexTT(istream& s)                           | (1) VBF which has an hexadecimal representat                             |
-|					              | of its truth table defined by :math:`s` (only for :math:`m=1`)           | 
+| void putHexTT(istream& s)                           || (1) VBF which has an hexadecimal representation                         |
+|					              || of its truth table defined by *s* (only for *m=1*)                      | 
 +-----------------------------------------------------+--------------------------------------------------------------------------+
-| void putDecTT(const NTL::vec_long& d,const long& m) | (1) VBF which has an decimal representation of its truth table           |
-|						      | defined by *d* and *m* is the number of component boolean functions      |
+| void putDecTT(const NTL::vec_long& d,const long& m) || (1) VBF which has an decimal representation of its truth table          |
+|						      || defined by *d* and *m* is the number of component boolean functions     |
 +-----------------------------------------------------+--------------------------------------------------------------------------+
-| void putirrpol(GF2X& g)                             | (2) Set *F* by its trace *f* and the irreducible polynomial *g*          |
-| void puttrace(string& f)                            | 								         |
+|| void putirrpol(GF2X& g)                            | (2) Set *F* by its trace *f* and the irreducible polynomial *g*          |
+|| void puttrace(string& f)                           | 								         |
 +-----------------------------------------------------+--------------------------------------------------------------------------+
 | void putpol(vec_pol& p)                             | (3) Set *F* with Polynomials in *ANF* equals to *p*                      |
 +-----------------------------------------------------+--------------------------------------------------------------------------+
@@ -33,9 +33,10 @@ Table :ref:`Initialization Table <Initialization>` lists the member functions re
 +-----------------------------------------------------+--------------------------------------------------------------------------+
 | void putper(const NTL::vec_ZZ& v)                   | (10) VBF which is a permutation defined by :math:`\vec{v}`               |
 +-----------------------------------------------------+--------------------------------------------------------------------------+
-| void putexp_comp(const NTL::vec_ZZ& v)              | (11) VBF defined by Expansion and Compression DES vector :math:`\vec{v}` |
+| void putexp_comp(const NTL::vec_ZZ& v)              || (11) VBF defined by Expansion and Compression                           |
+|                                                     || DES vector :math:`\vec{v}`                                              |
 +-----------------------------------------------------+--------------------------------------------------------------------------+
-| void putsbox(const NTL::mat_ZZ& S)                  | (12) VBF which is a DES S-Box defined by :math:`\matr{S}`                |
+| void putsbox(const NTL::mat_ZZ& S)                  | (12) VBF which is a DES S-Box defined by *S*                             |
 +-----------------------------------------------------+--------------------------------------------------------------------------+
 
 .. _Representation:

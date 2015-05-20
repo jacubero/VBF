@@ -19,14 +19,14 @@ It is a matrix whose rows are indexed by :math:`\vec{x} \in \gf{V_n}` and whose 
 .. math::
    :nowrap:
 
-   \begin{equation}
+   \begin{equation*}
       \matr{Img(F)} = \begin{bmatrix}
         \theta_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_0})&\dots&\theta_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_{2^m-1}}) \\ 
         \theta_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_0})&\dots&\theta_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_{2^m-1}}) \\ 
         \hdotsfor[2]{3}\\
         \theta_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_0})&\dots&\theta_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_{2^m-1}}) \\ 
       \end{bmatrix}
-   \end{equation}
+   \end{equation*}
 
 where :math:`\theta_F(\vec{x},\vec{y})` stands for the indicator function defined in :ref:`Indicator Function <IndicatorFunction>`.
 
