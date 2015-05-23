@@ -11,26 +11,28 @@ In this chapter, the operations over Vector Boolean Functions supported by the V
 In order to illustrate the use of these methods, we are going to use two Vector Boolean Functions :math:`F,G \in \funct{F}_{4,4}` with the following Truth Tables:
 
 :math:`\matr{T}_F=`
+
 .. code-block:: console
 
    [[0 0 1 1]
-   [1 0 0 0] 
-   [1 1 1 1] 
-   [0 0 0 1] 
-   [1 0 1 0] 
+   [1 0 0 0]
+   [1 1 1 1]
+   [0 0 0 1]
+   [1 0 1 0]
    [0 1 1 0]
    [0 1 0 1]
    [1 0 1 1]
    [1 1 1 0]
-   [1 1 0 1] 
-   [0 1 0 0] 
-   [0 0 1 0] 
-   [0 1 1 1] 
-   [0 0 0 0] 
-   [1 0 0 1] 
+   [1 1 0 1]
+   [0 1 0 0]
+   [0 0 1 0]
+   [0 1 1 1]
+   [0 0 0 0]
+   [1 0 0 1]
    [1 1 0 0]]
 
 :math:`\matr{T}_G=`
+
 .. code-block:: console
 
    [[1 1 1 1]
@@ -39,15 +41,15 @@ In order to illustrate the use of these methods, we are going to use two Vector 
    [0 1 1 1]
    [1 0 0 1]
    [0 0 0 0]
-   [0 1 0 1] 
-   [1 0 1 0] 
+   [0 1 0 1]
+   [1 0 1 0]
    [0 0 0 1]
-   [1 0 1 1] 
-   [1 1 1 0] 
-   [1 0 0 0] 
-   [0 1 1 0] 
-   [1 1 0 1] 
-   [0 0 1 1] 
+   [1 0 1 1]
+   [1 1 1 0]
+   [1 0 0 0]
+   [0 1 1 0]
+   [1 1 0 1]
+   [0 0 1 1]
    [0 1 0 0]]
 
 In this chapter, we will use the program below as a template to illustrate the use of operations' methods. The line "[ Operation code ]" can be substituted by the code described for each method in order to execute this example program.
