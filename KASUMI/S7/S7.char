@@ -1,0 +1,16 @@
+1,1
+13,1
+22,1
+92,1
+NL,NL2,LD,deg,AI,maxAC,sigma,lp,dp,nlmax,ldmax,typenl
+56,36,63,3,3,16,4161536,0.015625,0.015625
+56,72,2
+
+Fixed
+[[0 0 1 1 0 1 1]
+]
+Negated fixed
+[]
+
+CI,Bal,PC
+0,1,0
