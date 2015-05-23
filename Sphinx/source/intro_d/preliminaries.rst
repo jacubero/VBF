@@ -14,27 +14,27 @@ Let :math:`f \in \funct{F}_n` be a Boolean function; the *Walsh Transform* of :m
 .. math::
    :nowrap: 
 
-	\begin{equation}
+	\begin{equation*}
 	   \walsh{\chi}_f(\vec{u}) = \left\langle \xi_f, \xi_{l_{\vec{u}}} \right\rangle = \sum_{\vec{x} \in \gf{V_n}} (-1)^{f(\vec{x}) + \vec{u} \vec{x}} 
-	\end{equation}
+	\end{equation*}
 
 The *autocorrelation* of :math:`f \in \funct{F}_n` with respect to the shift :math:`\vec{u} \in \gf{V_n}` is a measure of the statistical dependency among the involved variables (indicating robustness against randomness-based attacks). It is the cross-correlation of :math:`f` with itself, denoted by :math:`\R_{f}(\vec{u}): \gf{V_n} \to \bbbz` and defined by [#f1]_:
 
 .. math::
    :nowrap:
  
-	\begin{equation}
+	\begin{equation*}
 	   \R_f(\vec{u}) = \sum_{\vec{x} \in \gf{V_n}} \chi_f(\vec{x}) \chi_f(\vec{x}+\vec{u}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{f(\vec{x})+f(\vec{u}+\vec{x})}
-	\end{equation}
+	\end{equation*}
 
 The *directional derivative* of :math:`f \in \funct{F}_n` in the direction of :math:`\vec{u} \in \gf{V_n}` is defined by:
 
 .. math::
    :nowrap:
 
-	\begin{equation}
+	\begin{equation*}
     	   \Delta_{\vec{u}}f(\vec{x}) = f(\vec{x}+\vec{u}) + f(\vec{x}), \  \  \vec{x} \in \gf{V_n}
-	\end{equation}
+	\end{equation*}
 
 We shall call the linear kernel of :math:`f` the set of those vectors :math:`\vec{u}` such that :math:`\Delta_{\vec{u}}f` is a constant function. The linear kernel of any Boolean function is a subspace of :math:`\gf{V_n}`. Any element :math:`\vec{u}` of the linear kernel of :math:`f` is said to be a linear structure of :math:`f`.
 
@@ -46,24 +46,24 @@ We now extend the scope of the study by considering functions between any pair o
    :nowrap:
    :label: IndicatorFunction
 
-	\begin{equation}
+	\begin{equation*}
     	   \theta_F(\vec{x},\vec{y}) = \left\{
 	      \begin{array}{ll}
 		1 & \mbox{if }\vec{y}=F(\vec{x}) \\
 		0 & \mbox{if }\vec{y} \neq F(\vec{x})
 	      \end{array}
            \right.
-	\end{equation}
+	\end{equation*}
 
-Again, several mappings associated with a Vector Boolean Functions can be defined, in similar terms to the binary functions case. Hence, the character form of :math:`(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}` can be defined as follows: :math:`\chi_{(\vec{u},\vec{v})}(\vec{x},\vec{y}) = {(-1)}^{\vec{u} \cdot \vec{x} + \vec{v} \cdot \vec{y}}`. Similarly, let `F \in \funct{F}_{n,m}` be a Vector Boolean function; its *Walsh Transform* is the two-dimensional Walsh Transform defined by:
+Again, several mappings associated with a Vector Boolean Functions can be defined, in similar terms to the binary functions case. Hence, the character form of :math:`(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}` can be defined as follows: :math:`\chi_{(\vec{u},\vec{v})}(\vec{x},\vec{y}) = {(-1)}^{\vec{u} \cdot \vec{x} + \vec{v} \cdot \vec{y}}`. Similarly, let :math:`F \in \funct{F}_{n,m}` be a Vector Boolean function; its *Walsh Transform* is the two-dimensional Walsh Transform defined by:
 
 .. math::
    :nowrap:
    :label: WalshTransformInnerVector
 
-	\begin{equation}
+	\begin{equation*}
 	   \walsh{\theta}_F(\vec{u}, \vec{v}) = \sum_{\vec{x} \in \gf{V_n}} \sum_{\vec{y} \in \gf{V_m}} \theta_F(\vec{x},\vec{y}) \chi_{(\vec{u},\vec{v})}(\vec{x},\vec{y}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{\vec{u}\vec{x} + \vec{v} F(\vec{x})} 
-	\end{equation}
+	\end{equation*}
 
 Also, the *autocorrelation* of :math:`F \in \funct{F}_{n,m}` with respect to the shift :math:`(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}` is the cross-correlation of :math:`F` with itself, denoted by :math:`\R_F(\vec{u},\vec{v}): \gf{V_n} \times \gf{V_m} \to \bbbz`, so that [fse-Nyberg:94]_:
 
@@ -71,9 +71,9 @@ Also, the *autocorrelation* of :math:`F \in \funct{F}_{n,m}` with respect to the
    :nowrap:
    :label: AutocorrelationVBF
  
-	\begin{equation}
+	\begin{equation*}
 	   \R_F(\vec{u},\vec{v}) = \sum_{\vec{x} \in \gf{V_n}} \chi_{\vec{v} F}(\vec{x} + \vec{u}) \chi_{\vec{v} F}(\vec{x}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{\vec{v} F(\vec{x} + \vec{u}) + \vec{v} F(\vec{x})} 
-	\end{equation}
+	\end{equation*}
 
 Let :math:`F \in \funct{F}_{n,m}$ and $\vec{u} \in \gf{V_n}`, then the *difference Vector Boolean function* of :math:`F` in the direction of :math:`\vec{u} \in \gf{V_n}`, denoted by :math:`\Delta_{\vec{u}}F \in \funct{F}_{n,m}` is defined as follows: :math:`\Delta_{\vec{u}}F(\vec{x})=F(\vec{x}+\vec{u})+F(\vec{x}), \  \vec{x} \in \gf{V_n}`. If the following equality is satisfied:
 :math:`\Delta_{\vec{u}}F(\vec{x})=\vec{c}, \  \ \vec{c} \in \gf{V_n} \ \fa \vec{x} \in \gf{V_n}$ then $\vec{u} \in \gf{V_n}` is called a linear structure of :math:`F`. 

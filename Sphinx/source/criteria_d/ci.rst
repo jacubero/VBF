@@ -2,7 +2,7 @@
 Correlation Immunity
 ********************
 
-*Correlation Immunity*, so that :math:`F \in \funct{F}_{n,m} is an :math:`(n,m,t)-\crit{CI}` function if and only if every nonzero linear combination :math:`f(\vec{x})=\sum_{i=1}^{m} v_if_i(\vec{x})` of coordinate functions of *F* is an :math:`(n,1,t)-\crit{CI}` function or a :math:`t-\crit{CI}` function, where :math:`\vec{x} \in \gf{V_n},\  v_i \in \gf{GF(2)} \ i=1,\dots,m` and not all zeroes. This criterion can be obtained from the Walsh Spectrum the following way:
+*Correlation Immunity*, so that :math:`F \in \funct{F}_{n,m}` is an :math:`(n,m,t)-\crit{CI}` function if and only if every nonzero linear combination :math:`f(\vec{x})=\sum_{i=1}^{m} v_if_i(\vec{x})` of coordinate functions of *F* is an :math:`(n,1,t)-\crit{CI}` function or a :math:`t-\crit{CI}` function, where :math:`\vec{x} \in \gf{V_n},\  v_i \in \gf{GF(2)} \ i=1,\dots,m` and not all zeroes. This criterion can be obtained from the Walsh Spectrum the following way:
 
 .. math::
    :nowrap: 

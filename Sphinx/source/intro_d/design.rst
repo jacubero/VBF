@@ -42,15 +42,15 @@ Note that the modulus *P* in :math:`\gf{GF2E}` may be any polynomial with degree
 
 .. _NewModules:
 
-+------------------------------------------------------------------+
-| New modules created for VBF                                      |
-+================+=================================================+
-| **CLASS NAME** | **DESCRIPTION**                                 |
-+----------------+-------------------------------------------------+
-| pol            | Polynomial in ANF of a Boolean Function         |
-+----------------+-------------------------------------------------+
-| vec_pol        | Polynomials in ANF of a Vector Boolean Function |
-+----------------+-------------------------------------------------+
++-------------------------------------------------------------------+
+| New modules created for VBF                                       |
++=================+=================================================+
+| **CLASS NAME**  | **DESCRIPTION**                                 |
++-----------------+-------------------------------------------------+
+| :code:`pol`     | Polynomial in ANF of a Boolean Function         |
++-----------------+-------------------------------------------------+
+| :code:`vec_pol` | Polynomials in ANF of a Vector Boolean Function |
++-----------------+-------------------------------------------------+
 
 The main file in the library, called *VBF.h* has the definitions of the objects described in the next chapters.
 
