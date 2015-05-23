@@ -51,7 +51,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'VBF Book'
+project = u'VBF Library Reference Manual'
 copyright = u'2015, Jose Antonio Alvarez Cubero'
 
 # The version info for the project you're documenting, acts as replacement for

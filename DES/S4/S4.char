@@ -1,0 +1,5 @@
+NL,NL2,LD,deg,AI,maxAC,sigma,lp,dp,nlmax,ldmax,typenl
+16,8,24,3,2,64,285696,0.25,0.25,28,40,0,[],[]
+
+CI,Bal,PC
+0,-1,0
