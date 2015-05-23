@@ -4,25 +4,25 @@ Examples
 
 Hereunder you can find a summary of the cryptographic criteria of several modern ciphers. Below you can find a legend describing the cryptographic criteria usedin this chapter: 
 
-+----------------------+--------------------------+
-| :math:`\crit{NL}`    | Nonlinearity             |
-+----------------------+--------------------------+
-| :math:`\crit{NL}_2`  | 2-nd order nonlinearity  |
-+----------------------+--------------------------+
-| :math:`\crit{LD}`    | Linearity distance       |
-+----------------------+--------------------------+
-| :math:`\crit{DEG}`   | Algebraic degree         |
-+----------------------+--------------------------+
-| :math:`\crit{AI}`    | Algebraic immunity       |
-+----------------------+--------------------------+
-| :math:`\crit{MAXAC}` | Absolute indicator       |
-+----------------------+--------------------------+
-| :math:`\sigma`       | Sum-of-squares indicator |
-+----------------------+--------------------------+
-| :math:`\crit{LP}`    | Linear potential         |
-+----------------------+--------------------------+
-| :math:`\crit{DP}`    | Differential Potential   |
-+----------------------+--------------------------+
++----------------+--------------------------+
+| *NL*           | Nonlinearity             |
++----------------+--------------------------+
+| *NL2*          | 2-nd order nonlinearity  |
++----------------+--------------------------+
+| *LD*           | Linearity distance       |
++----------------+--------------------------+
+| *DEG*          | Algebraic degree         |
++----------------+--------------------------+
+| *AI*           | Algebraic immunity       |
++----------------+--------------------------+
+| *MAXAC*        | Absolute indicator       |
++----------------+--------------------------+
+| :math:`\sigma` | Sum-of-squares indicator |
++----------------+--------------------------+
+| *LP*           | Linear potential         |
++----------------+--------------------------+
+| *DP*           | Differential Potential   |
++----------------+--------------------------+
 
 
 .. contents::

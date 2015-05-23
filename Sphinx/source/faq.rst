@@ -16,7 +16,7 @@ The stated mission of VBF is to be viable free open source library for analysing
 Who is behind this project?
 ============================
 
-At this moment, Jose Antonio Alvarez is the only person who is contributing to develop this code. If you are interested in contributing to it, please send a comment on http://jacubero.wix.com/vbflibrary#!contact/c17jp
+At this moment, Jose Antonio Alvarez is the only person who is contributing to develop this code. If you are interested in contributing to it, please send a comment to the email: vbflibrary@gmail.com
 
 Why is VBF free/open source?
 ============================
@@ -30,11 +30,10 @@ Using VBF
 How do I get started?
 =====================
 
-To download VBF source code, visit the page. You can read the documentation on
+To download VBF source code, go to `VBF source code URL <https://github.com/jacubero/VBF/tree/master/src>`_ . You can read the documentation on `http://vbflibrary.tk`.
 
 What are VBF prerequisites?
 =============================
 
-The only prerequisite is to have a version of NTL library installed on the computer in which the VBF library is executed
-
+The only prerequisite is to have a version of NTL library installed on the computer in which the VBF library is executed.
 
