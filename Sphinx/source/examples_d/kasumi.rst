@@ -88,7 +88,7 @@ Polynomial representation in ANF:
 
 :math:`f_4 = 1+x_7+x_5x_8+x_4x_5+x_3x_9+x_3x_8+x_2x_6+x_2x_5+x_2x_3+x_1x_4+x_1x_3+x_1x_2`
 
-:math:`f_5 = x_8x_9+x_6x_8+x_5+x_4x_9+x_3x_6+x_2x_9+x_2x_3+x_1x_8+x_1x_7+x_1x_6 `
+:math:`f_5 = x_8x_9+x_6x_8+x_5+x_4x_9+x_3x_6+x_2x_9+x_2x_3+x_1x_8+x_1x_7+x_1x_6`
 
 :math:`f_6 = x_9+x_7x_8+x_6x_9+x_5x_7+x_4+x_3x_9+x_3x_8+x_2x_5+x_1x_9+x_1x_8+x_1x_2`
 

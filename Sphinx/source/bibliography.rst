@@ -20,6 +20,8 @@ Bibliography
 
 .. [fse-Nyberg:94] Kaisa Nyberg. S-boxes and round functions with controllable linearity and differential uniformity. In Bart Preneel, editor, Fast Software Encryption, volume 1008 of Lecture Notes in Computer Science, pages 111–130. Springer Berlin / Heidelberg, 1995.
 
+.. [Phan02miniadvanced] PHAN, R. C.-W. 2002. Mini advanced encryption standard (mini-AES): A testbed for cryptanalysis. Students, Cryptologia, 283–306.
+
 .. [Rothaus:76] O. S. Rothaus. On “bent” functions. J. Comb. Theory, Ser. A, 20(3):300–305, 1976.
 
 .. [Siegenthaler:84] Thomas Siegenthaler. Decrypting a class of stream ciphers using ciphertext only. IEEE Transactions on Computers, 34(1):81–85, 1985.
