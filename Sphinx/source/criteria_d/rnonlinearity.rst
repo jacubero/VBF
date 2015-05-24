@@ -7,9 +7,9 @@ For every positive integer *r*, the *r-th order nonlinearity* of a Vector Boolea
 .. math::
    :nowrap: 
 
-   \begin{equation}
+   \begin{equation*}
       \crit{NL}_r(F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \crit{NL}_r(\vec{v} \cdot F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \min_{f \in \funct{F}_n} d(f,\vec{v} \cdot F) 
-   \end{equation}
+   \end{equation*}
 
 The method used to obtain this criterion is the following:
 

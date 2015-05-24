@@ -1,7 +1,7 @@
 Type of function in terms of nonlinearity
 =========================================
 
-The *Type of function in terms of nonlinearity* of a Boolean Function (only for :math:`m=1`), that is, if it linear, almost optimal or a bent function (*F* with maximum nonlinearity and $n$ even).  The method used to obtain this informaton is the following:
+The *Type of function in terms of nonlinearity* of a Boolean Function (only for :math:`m=1`), that is, if it linear, almost optimal or a bent function (*F* with maximum nonlinearity and *n* even).  The method used to obtain this informaton is the following:
 
 .. code-block:: c
 
