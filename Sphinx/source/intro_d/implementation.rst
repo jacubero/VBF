@@ -17,4 +17,4 @@ The package included consists of:
 
 4. A set of files associated with the decimal representation of KASUMI [KASUMI:05]_ S-boxes (S7.dec and S9.dec).
 
-The Output files can be found within "KASUMI Analysis" in the "Examples" menu at :ref:`secExamplesKASUMI`.
+The Output files can be found within "KASUMI Analysis" in the "Examples" menu at :ref:`KASUMI Analysis <secExamplesKASUMI>`.

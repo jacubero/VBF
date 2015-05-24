@@ -39,28 +39,38 @@ Polynomial representation in ANF:
 
 :math:`f_7 = x_4x_6+x_3+x_3x_6x_7+x_2+x_2x_5+x_2x_3x_4+x_1+x_1x_7+x_1x_6+x_1x_4+x_1x_3x_5+x_1x_2x_6+x_1x_2x_3`
 
-`Truth Table <https://github.com/jacubero/VBF/blob/master/KASUMI/S7/S7.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.tt>`_
 
-`Decimal Representation <https://github.com/jacubero/VBF/blob/master/KASUMI/S7/S7.dec>`_
+`Decimal Representation <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.dec>`_
 
-`ANF Table <https://github.com/jacubero/VBF/blob/master/KASUMI/S7/S7.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.anf>`_
 
-`Characteristic Function <https://github.com/jacubero/VBF/blob/master/KASUMI/S7/S7.char>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.wal>`_
 
-`Walsh Spectrum <https://github.com/jacubero/VBF/blob/master/KASUMI/S7/S7.wal>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.lp>`_
 
-`Linear Profile <https://github.com/jacubero/VBF/blob/master/KASUMI/S7/S7.lp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.dp>`_
 
-`Differential Profile <https://github.com/jacubero/VBF/blob/master/KASUMI/S7/S7.dp>`_
-
-`Autocorrelation Spectrum <https://github.com/jacubero/VBF/blob/master/KASUMI/S7/S7.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Cycle structure <https://github.com/jacubero/VBF/blob/master/KASUMI/S7/S7.cy>`_
+Cycle structure:
 
-`Linear structures <https://github.com/jacubero/VBF/blob/master/KASUMI/S7/S7.ls>`_
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 1            | 1                |
++--------------+------------------+
+| 13           | 1                |
++--------------+------------------+
+| 22           | 1                |
++--------------+------------------+
+| 92           | 1                |
++--------------+------------------+
+
+There are no linear structures
 
 S9
 ===
@@ -88,37 +98,53 @@ Polynomial representation in ANF:
 
 :math:`f_9 = 1+x_7x_9+x_6+x_4x_7+x_3x_4+x_2x_9+x_2x_8+x_2x_7+x_1x_5+x_1x_4+x_1x_2`
  
-`Truth Table <https://github.com/jacubero/VBF/blob/master/KASUMI/S9/S9.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.tt>`_
 
-`Decimal Representation <https://github.com/jacubero/VBF/blob/master/KASUMI/S9/S9.dec>`_
+`Decimal Representation <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.dec>`_
 
-`ANF Table <https://github.com/jacubero/VBF/blob/master/KASUMI/S9/S9.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.anf>`_
 
-`Characteristic Function <https://github.com/jacubero/VBF/blob/master/KASUMI/S9/S9.char>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.wal>`_
 
-`Walsh Spectrum <https://github.com/jacubero/VBF/blob/master/KASUMI/S9/S9.wal>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.lp>`_
 
-`Linear Profile <https://github.com/jacubero/VBF/blob/master/KASUMI/S9/S9.lp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.dp>`_
 
-`Differential Profile <https://github.com/jacubero/VBF/blob/master/KASUMI/S9/S9.dp>`_
-
-`Autocorrelation Spectrum <https://github.com/jacubero/VBF/blob/master/KASUMI/S9/S9.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Cycle structure <https://github.com/jacubero/VBF/blob/master/KASUMI/S9/S9.cy>`_
+Cycle structure:
 
-`Linear structures <https://github.com/jacubero/VBF/blob/master/KASUMI/S9/S9.ls>`_
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 1            | 2                |
++--------------+------------------+
+| 2            | 1                |
++--------------+------------------+
+| 12           | 1                |
++--------------+------------------+
+| 26           | 1                |
++--------------+------------------+
+| 74           | 1                |
++--------------+------------------+
+| 121          | 1                |
++--------------+------------------+
+| 275          | 1                |
++--------------+------------------+
+
+There are no linear structures
 
 FI
 ==
 
-`Algebraic degree from key 00000 to 65535 <https://github.com/jacubero/VBF/blob/master/KASUMI/FI/FIdeg.pdf>`_
+`Algebraic degree from key 00000 to 65535 <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/FI/FIdeg.pdf>`_
 
-`Cycle structure from key 00000 to 65535 <https://github.com/jacubero/VBF/blob/master/KASUMI/FI/cycle.pdf>`_
+`Cycle structure from key 00000 to 65535 <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/FI/cycle.pdf>`_
 
-`Fixed and negated points from key 00000 to 65535 <https://github.com/jacubero/VBF/blob/master/KASUMI/FI/points.pdf>`_
+`Fixed and negated points from key 00000 to 65535 <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/FI/points.pdf>`_
 
-`Nonlinearities from key 00000 to 65535 <https://github.com/jacubero/VBF/blob/master/KASUMI/FI/fi.pdf>`_
+`Nonlinearities from key 00000 to 65535 <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/FI/fi.pdf>`_
 

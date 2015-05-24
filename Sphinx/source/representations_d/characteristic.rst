@@ -28,7 +28,7 @@ It is a matrix whose rows are indexed by :math:`\vec{x} \in \gf{V_n}` and whose 
       \end{bmatrix}
    \end{equation*}
 
-where :math:`\theta_F(\vec{x},\vec{y})` stands for the indicator function defined in :ref:`Indicator Function <IndicatorFunction>`.
+where :math:`\theta_F(\vec{x},\vec{y})` stands for the indicator function defined in :ref:`Indicator Function <eq:IndicatorFunction>`.
 
 The following program shows how to use this function to print the Characteristic Function of *F* initialized by its Characteristic Function.
 

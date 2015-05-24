@@ -43,24 +43,24 @@ Polynomial representation in ANF:
 
 :math:`f_4 = x_5x_6+x_4+x_3x_5+x_2+x_2x_6+x_2x_5+x_2x_4x_6+x_2x_4x_5+x_2x_3x_6+x_2x_3x_5x_6+x_1x_6+x_1x_5+x_1x_5x_6+x_1x_4+x_1x_4x_6+x_1x_4x_5+x_1x_3+x_1x_3x_5+x_1x_3x_4+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4x_5+x_1x_2x_3+x_1x_2x_3x_5x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_6`
 
-`Truth Table <https://github.com/jacubero/VBF/blob/master/DES/S1/S1.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.tt>`_
 
-`ANF Table <https://github.com/jacubero/VBF/blob/master/DES/S1/S1.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.anf>`_
 
-`Characteristic Function <https://github.com/jacubero/VBF/blob/master/DES/S1/S1.char>`_
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.char>`_
 
-`Walsh Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S1/S1.wal>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.wal>`_
 
-`Linear Profile <https://github.com/jacubero/VBF/blob/master/DES/S1/S1.lp>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.lp>`_
 
-`Differential Profile <https://github.com/jacubero/VBF/blob/master/DES/S1/S1.dp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.dp>`_
 
-`Autocorrelation Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S1/S1.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://github.com/jacubero/VBF/blob/master/DES/S1/S1.ls>`_
+`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.ls>`_
 
 S2
 ==
@@ -78,24 +78,24 @@ Polynomial representation in ANF:
 
 :math:`f_4 = 1+x_4+x_4x_5x_6+x_3+x_3x_6+x_3x_5+x_2x_6+x_2x_4x_5+x_2x_4x_5x_6+x_2x_3x_5+x_2x_3x_5x_6+x_1+x_1x_6+x_1x_5x_6+x_1x_4x_5x_6+x_1x_3+x_1x_3x_6+x_1x_3x_5+x_1x_3x_5x_6+x_1x_2+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4x_6+x_1x_2x_3x_6+x_1x_2x_3x_5x_6`
 
-`Truth Table <https://github.com/jacubero/VBF/blob/master/DES/S2/S2.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.tt>`_
 
-`ANF Table <https://github.com/jacubero/VBF/blob/master/DES/S2/S2.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.anf>`_
 
-`Characteristic Function <https://github.com/jacubero/VBF/blob/master/DES/S2/S2.char>`_
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.char>`_
 
-`Walsh Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S2/S2.wal>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.wal>`_
 
-`Linear Profile <https://github.com/jacubero/VBF/blob/master/DES/S2/S2.lp>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.lp>`_
 
-`Differential Profile <https://github.com/jacubero/VBF/blob/master/DES/S2/S2.dp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.dp>`_
 
-`Autocorrelation Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S2/S2.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://github.com/jacubero/VBF/blob/master/DES/S2/S2.ls>`_
+`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.ls>`_
 
 S3
 ==
@@ -113,24 +113,24 @@ Polynomial representation in ANF:
 
 :math:`f_4 = x_6+x_4+x_4x_5+x_3x_5+x_2+x_1+x_1x_6+x_1x_5+x_1x_4x_6+x_1x_4x_5+x_1x_3+x_1x_3x_5+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_4x_6`
 
-`Truth Table <https://github.com/jacubero/VBF/blob/master/DES/S3/S3.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.tt>`_
 
-`ANF Table <https://github.com/jacubero/VBF/blob/master/DES/S3/S3.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.anf>`_
 
-`Characteristic Function <https://github.com/jacubero/VBF/blob/master/DES/S3/S3.char>`_
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.char>`_
 
-`Walsh Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S3/S3.wal>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.wal>`_
 
-`Linear Profile <https://github.com/jacubero/VBF/blob/master/DES/S3/S3.lp>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.lp>`_
 
-`Differential Profile <https://github.com/jacubero/VBF/blob/master/DES/S3/S3.dp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.dp>`_
 
-`Autocorrelation Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S3/S3.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://github.com/jacubero/VBF/blob/master/DES/S3/S3.ls>`_
+`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.ls>`_
 
 S4
 ==
@@ -148,24 +148,24 @@ Polynomial representation in ANF:
 
 :math:`f_4 = 1+x_5x_6+x_4+x_4x_6+x_4x_5+x_3+x_3x_4x_5x_6+x_2x_6+x_2x_5+x_2x_5x_6+x_2x_4x_5+x_2x_4x_5x_6+x_2x_3+x_2x_3x_6+x_2x_3x_4x_6+x_1+x_1x_6+x_1x_5x_6+x_1x_4x_6+x_1x_4x_5x_6+x_1x_3+x_1x_3x_6+x_1x_3x_5+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_5+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
 
-`Truth Table <https://github.com/jacubero/VBF/blob/master/DES/S4/S4.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.tt>`_
 
-`ANF Table <https://github.com/jacubero/VBF/blob/master/DES/S4/S4.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.anf>`_
 
-`Characteristic Function <https://github.com/jacubero/VBF/blob/master/DES/S4/S4.char>`_
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.char>`_
 
-`Walsh Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S4/S4.wal>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.wal>`_
 
-`Linear Profile <https://github.com/jacubero/VBF/blob/master/DES/S4/S4.lp>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.lp>`_
 
-`Differential Profile <https://github.com/jacubero/VBF/blob/master/DES/S4/S4.dp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.dp>`_
 
-`Autocorrelation Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S4/S4.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://github.com/jacubero/VBF/blob/master/DES/S4/S4.ls>`_
+`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.ls>`_
 
 S5
 ==
@@ -183,24 +183,24 @@ Polynomial representation in ANF:
 
 :math:`f_4 = x_5x_6+x_4x_5+x_3+x_3x_6+x_3x_5+x_3x_5x_6+x_3x_4x_6+x_3x_4x_5+x_3x_4x_5x_6+x_2x_6+x_2x_5+x_2x_5x_6+x_2x_4+x_2x_4x_6+x_2x_4x_5x_6+x_2x_3x_5+x_1x_6+x_1x_4+x_1x_4x_5+x_1x_3+x_1x_3x_6+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
 
-`Truth Table <https://github.com/jacubero/VBF/blob/master/DES/S5/S5.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.tt>`_
 
-`ANF Table <https://github.com/jacubero/VBF/blob/master/DES/S5/S5.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.anf>`_
 
-`Characteristic Function <https://github.com/jacubero/VBF/blob/master/DES/S5/S5.char>`_
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.char>`_
 
-`Walsh Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S5/S5.wal>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.wal>`_
 
-`Linear Profile <https://github.com/jacubero/VBF/blob/master/DES/S5/S5.lp>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.lp>`_
 
-`Differential Profile <https://github.com/jacubero/VBF/blob/master/DES/S5/S5.dp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.dp>`_
 
-`Autocorrelation Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S5/S5.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://github.com/jacubero/VBF/blob/master/DES/S5/S5.ls>`_
+`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.ls>`_
 
 S6
 ==
@@ -218,24 +218,24 @@ Polynomial representation in ANF:
 
 :math:`f_4 = x_5+x_4x_5x_6+x_3+x_3x_4+x_3x_4x_6+x_3x_4x_5+x_3x_4x_5x_6+x_2x_4+x_2x_4x_5x_6+x_2x_3+x_2x_3x_4+x_2x_3x_4x_6+x_1+x_1x_6+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3x_5+x_1x_3x_4+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2x_6+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_3x_6`
 
-`Truth Table <https://github.com/jacubero/VBF/blob/master/DES/S6/S6.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.tt>`_
 
-`ANF Table <https://github.com/jacubero/VBF/blob/master/DES/S6/S6.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.anf>`_
 
-`Characteristic Function <https://github.com/jacubero/VBF/blob/master/DES/S6/S6.char>`_
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.char>`_
 
-`Walsh Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S6/S6.wal>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.wal>`_
 
-`Linear Profile <https://github.com/jacubero/VBF/blob/master/DES/S6/S6.lp>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.lp>`_
 
-`Differential Profile <https://github.com/jacubero/VBF/blob/master/DES/S6/S6.dp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.dp>`_
 
-`Autocorrelation Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S6/S6.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://github.com/jacubero/VBF/blob/master/DES/S6/S6.ls>`_
+`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.ls>`_
 
 S7
 ==
@@ -253,24 +253,24 @@ Polynomial representation in ANF:
 
 :math:`f_4 = x_6+x_5+x_4x_5+x_3+x_3x_4+x_3x_4x_5+x_2+x_2x_4x_6+x_2x_4x_5x_6+x_2x_3+x_1+x_1x_4x_6+x_1x_4x_5x_6+x_1x_3x_4x_6+x_1x_3x_4x_5x_6+x_1x_2x_5x_6+x_1x_2x_4x_6+x_1x_2x_3x_6`
 
-`Truth Table <https://github.com/jacubero/VBF/blob/master/DES/S7/S7.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.tt>`_
 
-`ANF Table <https://github.com/jacubero/VBF/blob/master/DES/S7/S7.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.anf>`_
 
-`Characteristic Function <https://github.com/jacubero/VBF/blob/master/DES/S7/S7.char>`_
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.char>`_
 
-`Walsh Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S7/S7.wal>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.wal>`_
 
-`Linear Profile <https://github.com/jacubero/VBF/blob/master/DES/S7/S7.lp>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.lp>`_
 
-`Differential Profile <https://github.com/jacubero/VBF/blob/master/DES/S7/S7.dp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.dp>`_
 
-`Autocorrelation Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S7/S7.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://github.com/jacubero/VBF/blob/master/DES/S7/S7.ls>`_
+`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.ls>`_
 
 S8
 ==
@@ -288,21 +288,21 @@ Polynomial representation in ANF:
 
 :math:`f_4 = x_6+x_4+x_4x_5+x_3x_5+x_2+x_1+x_1x_6+x_1x_5+x_1x_4x_6+x_1x_4x_5+x_1x_3+x_1x_3x_5+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_4x_6`
 
-`Truth Table <https://github.com/jacubero/VBF/blob/master/DES/S8/S8.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.tt>`_
 
-`ANF Table <https://github.com/jacubero/VBF/blob/master/DES/S8/S8.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.anf>`_
 
-`Characteristic Function <https://github.com/jacubero/VBF/blob/master/DES/S8/S8.char>`_
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.char>`_
 
-`Walsh Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S8/S8.wal>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.wal>`_
 
-`Linear Profile <https://github.com/jacubero/VBF/blob/master/DES/S8/S8.lp>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.lp>`_
 
-`Differential Profile <https://github.com/jacubero/VBF/blob/master/DES/S8/S8.dp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.dp>`_
 
-`Autocorrelation Spectrum <https://github.com/jacubero/VBF/blob/master/DES/S8/S8.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://github.com/jacubero/VBF/blob/master/DES/S8/S8.ls>`_
+`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.ls>`_

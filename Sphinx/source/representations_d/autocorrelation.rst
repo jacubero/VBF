@@ -8,7 +8,7 @@ The Autocorrelation Spectrum of a Vector Boolean Function does not characterize 
 
    void AC(NTL::mat_ZZ& R, VBF& F)
 
-It is denoted by :math:`\matr{R}(F) \in \matr{M}_{2^n \times 2^m}(\bbbz)`, obtained by Equation :ref:`Autocorrelation Spectrum <AutocorrelationVBF>`.  The lower bound of the Autocorrelation Spectrum values is :math:`-2^n` and the upper bound is :math:`2^n`.
+It is denoted by :math:`\matr{R}(F) \in \matr{M}_{2^n \times 2^m}(\bbbz)`, obtained by Equation :ref:`Autocorrelation Spectrum <eq:AutocorrelationVBF>`.  The lower bound of the Autocorrelation Spectrum values is :math:`-2^n` and the upper bound is :math:`2^n`.
 
 An example of use could be the following:
 

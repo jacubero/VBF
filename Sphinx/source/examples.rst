@@ -24,7 +24,11 @@ Hereunder you can find a summary of the cryptographic criteria of several modern
 | *DP*           | Differential Potential   |
 +----------------+--------------------------+
 
+.. admonition:: Hyperlinks to representations
+   :class: note
 
+   Open the hyperlinks to representations below in a new browser window or in a new tab.
+ 
 .. contents::
    :local:
    :depth: 2
