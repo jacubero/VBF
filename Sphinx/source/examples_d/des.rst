@@ -47,8 +47,6 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.lp>`_
@@ -60,7 +58,7 @@ Polynomial representation in ANF:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.ls>`_
+There are no linear structures
 
 S2
 ==
@@ -82,8 +80,6 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.lp>`_
@@ -95,7 +91,7 @@ Polynomial representation in ANF:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.ls>`_
+There are no linear structures
 
 S3
 ==
@@ -117,8 +113,6 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.lp>`_
@@ -130,7 +124,7 @@ Polynomial representation in ANF:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.ls>`_
+There are no linear structures
 
 S4
 ==
@@ -152,8 +146,6 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.lp>`_
@@ -165,7 +157,7 @@ Polynomial representation in ANF:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.ls>`_
+There are no linear structures
 
 S5
 ==
@@ -187,8 +179,6 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.lp>`_
@@ -200,7 +190,7 @@ Polynomial representation in ANF:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.ls>`_
+There are no linear structures
 
 S6
 ==
@@ -222,8 +212,6 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.lp>`_
@@ -235,7 +223,7 @@ Polynomial representation in ANF:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.ls>`_
+There are no linear structures
 
 S7
 ==
@@ -257,8 +245,6 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.lp>`_
@@ -270,7 +256,7 @@ Polynomial representation in ANF:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.ls>`_
+There are no linear structures
 
 S8
 ==
@@ -292,8 +278,6 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.lp>`_
@@ -305,4 +289,4 @@ Polynomial representation in ANF:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.ls>`_
+There are no linear structures

@@ -47,8 +47,6 @@ Polynomial function over :math:`\gf{GF(2^8)}`:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.lp>`_
@@ -60,9 +58,23 @@ Polynomial function over :math:`\gf{GF(2^8)}`:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Cycle structure <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.cy>`_
+Cycle structure:
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.ls>`_
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 2            | 1                |
++--------------+------------------+
+| 27           | 1                |
++--------------+------------------+
+| 59           | 1                |
++--------------+------------------+
+| 81           | 1                |
++--------------+------------------+
+| 87           | 1                |
++--------------+------------------+
+
+There are no linear structures
 
 SRDInv
 ======
@@ -96,8 +108,6 @@ Polynomial function over :math:`\gf{GF(2^8)}`:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.lp>`_
@@ -109,7 +119,21 @@ Polynomial function over :math:`\gf{GF(2^8)}`:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Cycle structure <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.cy>`_
+Cycle structure:
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.ls>`_
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 2            | 1                |
++--------------+------------------+
+| 27           | 1                |
++--------------+------------------+
+| 59           | 1                |
++--------------+------------------+
+| 81           | 1                |
++--------------+------------------+
+| 87           | 1                |
++--------------+------------------+
+
+There are no linear structures
 

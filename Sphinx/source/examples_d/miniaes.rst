@@ -73,8 +73,6 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.anf>`_
 
-`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.char>`_
-
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.wal>`_
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.lp>`_
@@ -86,7 +84,27 @@ Polynomial representation in ANF:
 Other useful information in cryptanalysis
 -----------------------------------------
 
-`Cycle structure <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.cy>`_
+Cycle structure:
 
-`Linear structures <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.ls>`_
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 2            | 1                |
++--------------+------------------+
+| 14           | 1                |
++--------------+------------------+
 
+There are no linear structures
+
+mini-AES
+========
+
+Algebraic degree from key 00000 to 65535 is equal to 14
+
+`Cycle structure from key 00000 to 65535 <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/cycle.pdf>`_
+
+`Fixed and negated points from key 00000 to 65535 <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/points.pdf>`_
+
+`Nonlinearities from key 00000 to 65535 <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/nl.pdf>`_
+
+`Nonlinearities in ascendent order <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/fi.s>`_

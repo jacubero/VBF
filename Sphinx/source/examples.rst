@@ -5,23 +5,23 @@ Examples
 Hereunder you can find a summary of the cryptographic criteria of several modern ciphers. Below you can find a legend describing the cryptographic criteria usedin this chapter: 
 
 +----------------+--------------------------+
-| *NL*           | Nonlinearity             |
+| **NL**         | Nonlinearity             |
 +----------------+--------------------------+
-| *NL2*          | 2-nd order nonlinearity  |
+| **NL2**        | 2-nd order nonlinearity  |
 +----------------+--------------------------+
-| *LD*           | Linearity distance       |
+| **LD**         | Linearity distance       |
 +----------------+--------------------------+
-| *DEG*          | Algebraic degree         |
+| **DEG**        | Algebraic degree         |
 +----------------+--------------------------+
-| *AI*           | Algebraic immunity       |
+| **AI**         | Algebraic immunity       |
 +----------------+--------------------------+
-| *MAXAC*        | Absolute indicator       |
+| **MAXAC**      | Absolute indicator       |
 +----------------+--------------------------+
 | :math:`\sigma` | Sum-of-squares indicator |
 +----------------+--------------------------+
-| *LP*           | Linear potential         |
+| **LP**         | Linear potential         |
 +----------------+--------------------------+
-| *DP*           | Differential Potential   |
+| **DP**         | Differential Potential   |
 +----------------+--------------------------+
 
 .. admonition:: Hyperlinks to representations
