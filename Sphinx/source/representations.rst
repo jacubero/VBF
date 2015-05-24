@@ -45,7 +45,7 @@ In this chapter we are going to describe the methods that can be used to represe
    representations_d/des.rst
 
 .. include::
-   representations_d/auxiliar.rst
+   representations_d/auxiliary.rst
 
 .. include::
    representations_d/summary.rst

@@ -11,7 +11,7 @@ Correlation Immunity
       \walsh{\theta}_F(\vec{u},\vec{v})= 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq t, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}
    \end{equation*}
 
-[Siegenthaler:84]_ **Siegenthaler's inequality**. If *f* is a t-CI function, then :math:`deg(f) \leq n-t`. Moreover if *f* is balanced (i.e. *f* is t-resilient), then :math:`deg(f) < n-t` unless :math:`t=n-1`.
+[Siegenthaler:85]_ **Siegenthaler's inequality**. If *f* is a t-CI function, then :math:`deg(f) \leq n-t`. Moreover if *f* is balanced (i.e. *f* is t-resilient), then :math:`deg(f) < n-t` unless :math:`t=n-1`.
 
 The method used to obtain this criterion is the following:
 

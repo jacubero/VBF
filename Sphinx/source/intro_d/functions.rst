@@ -2,7 +2,7 @@
 Functions available in VBF
 **************************
 
-The library covers a wide range of topics for analysing cryptographic properties
+The library covers a wide range of topics for analyzing cryptographic properties
 of Vector Boolean Functions. Methods are available for the following areas:
 
 1. Vector Boolean Function initialization and representation

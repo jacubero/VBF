@@ -6,7 +6,7 @@ The *cycle structure* of an invertible Vector Boolean Function :math:`F \in \fun
 A cycle structure with a low number of cycles of high length is considered
 well suited to be used in cipher design. This fact means that a lot of transpositions are present.
 
-The method used to obtain this informaton is the following:
+The method used to obtain this information is the following:
 
 .. code-block:: c
 

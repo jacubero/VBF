@@ -101,7 +101,7 @@ If the input file contains the following information:
 
 The nonlinearity obtain from the program will be 242.
 
-3. A VBF class can be initialized by a Boolean vector representing the decimal representation of Truth Table for a Vector Boolean Fuction defined by a vector of outputs in lexicographic order :math:`d` and knowing the number of component boolean functions :math:`m`:
+3. A VBF class can be initialized by a Boolean vector representing the decimal representation of Truth Table for a Vector Boolean Function defined by a vector of outputs in lexicographic order :math:`d` and knowing the number of component boolean functions :math:`m`:
 
 .. code-block:: c
 

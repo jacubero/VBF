@@ -1,7 +1,7 @@
 Frequency distribution of the absolute values of the Autocorrelation Spectrum 
 =============================================================================
 
-The method used to obtain this informaton is the following:
+The method used to obtain this information is the following:
 
 .. code-block:: c
 

@@ -1,7 +1,7 @@
 Fixed points
 ============
 
-The fixed points of *F* are those which satisfy :math:`\{ \vec{x} \given F(\vec{x})=\vec{x} \}`. The method used to obtain this informaton is the following:
+The fixed points of *F* are those which satisfy :math:`\{ \vec{x} \given F(\vec{x})=\vec{x} \}`. The method used to obtain this information is the following:
 
 .. code-block:: c
 

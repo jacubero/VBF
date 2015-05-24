@@ -2,13 +2,13 @@
 Summary
 *******
 
-Table :ref:`Initialization Table <Initialization>` lists the member functions related to methods of vector boolean functions initialization. Table
-:ref:`Representation Table <Representation>` lists the member functions related to the representations of vector boolean functions as described above. All the member functions of *VBF* have an in-line definition, for instance: :code:`void TT(NTL::mat_GF2& X, VBF& F)` is also defined as :code:`inline NTL::mat_GF2 TT(VBF& F)`.
+Table :ref:`Initialization Table <Initialization>` lists the member functions related to methods of vector Boolean functions initialization. Table
+:ref:`Representation Table <Representation>` lists the member functions related to the representations of vector Boolean functions as described above. All the member functions of *VBF* have an in-line definition, for instance: :code:`void TT(NTL::mat_GF2& X, VBF& F)` is also defined as :code:`inline NTL::mat_GF2 TT(VBF& F)`.
 
 .. _Initialization:
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Initalization of VBF													                                                                     |
+| Initialization of VBF													                                                                     |
 +=============================================================+==============================================================================================================================+
 | **SYNTAX**                                                  | **DESCRIPTION**                                                                                                              |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
@@ -16,7 +16,7 @@ Table :ref:`Initialization Table <Initialization>` lists the member functions re
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
 | :code:`void putHexTT(istream& s)`                           | (1) VBF which has an hexadecimal representation of its truth table defined by *s* (only for *m=1*)                           |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
-| :code:`void putDecTT(const NTL::vec_long& d,const long& m)` | (1) VBF with a decimal representation of its truth table defined by *d* and *m* is the number of component boolean functions |
+| :code:`void putDecTT(const NTL::vec_long& d,const long& m)` | (1) VBF with a decimal representation of its truth table defined by *d* and *m* is the number of component Boolean functions |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
 | :code:`void putirrpol(GF2X& g)`                             | (2) Set *F* by its trace *f* and the irreducible polynomial *g*            						     |
 | :code:`void puttrace(string& f)`                            |                                                                     							     |

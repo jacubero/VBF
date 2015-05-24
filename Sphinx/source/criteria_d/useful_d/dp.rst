@@ -5,7 +5,7 @@ The *Differential Potential* of *F*, defined as :math:`\crit{DP}(F) = \stackrel{
 
 This criterion can take values from :math:`\frac{1}{2^m}` to :math:`1`.
 
-The method used to obtain this informaton is the following:
+The method used to obtain this information is the following:
 
 .. code-block:: c
 

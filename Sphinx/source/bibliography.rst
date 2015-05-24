@@ -24,6 +24,6 @@ Bibliography
 
 .. [Rothaus:76] O. S. Rothaus. On “bent” functions. J. Comb. Theory, Ser. A, 20(3):300–305, 1976.
 
-.. [Siegenthaler:84] Thomas Siegenthaler. Decrypting a class of stream ciphers using ciphertext only. IEEE Transactions on Computers, 34(1):81–85, 1985.
+.. [Siegenthaler:85] Thomas Siegenthaler. Decrypting a class of stream ciphers using ciphertext only. IEEE Transactions on Computers, 34(1):81–85, 1985.
 
 .. [zhang95gac] Xian-Mo Zhang and Yuliang Zheng. GAC — the criterion for global avalanche characteristics of cryptographic functions. Journal of Universal Computer Science, 1(5):320–337, 1995.

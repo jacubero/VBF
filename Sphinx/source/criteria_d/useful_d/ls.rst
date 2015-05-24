@@ -3,7 +3,7 @@ Linear structures
 
 The *Linear structures* of *F*, defined as the vectors for which its associated row in the Differential Profile coincides with the vector zero. 
 
-The method used to obtain this informaton is the following:
+The method used to obtain this information is the following:
 
 .. code-block:: c
 

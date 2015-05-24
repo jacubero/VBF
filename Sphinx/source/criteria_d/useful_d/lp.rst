@@ -5,7 +5,7 @@ The *Linear Potential* of *F*, defined as :math:`\crit{LP}(F) = \frac{1}{2^{2n}}
 
 This criterion can take values from :math:`\frac{1}{2^n}` to :math:`1`.
 
-The method used to obtain this informaton is the following:
+The method used to obtain this information is the following:
 
 .. code-block:: c
 

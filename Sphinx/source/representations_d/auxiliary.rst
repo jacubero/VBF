@@ -1,6 +1,6 @@
-******************
-Auxiliar functions
-******************
+*******************
+Auxiliary functions
+*******************
 
 In order to compute the matrices described above, some functions have been
 implemented which allow to obtain some of these matrices from others: 

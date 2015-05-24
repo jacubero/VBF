@@ -11,7 +11,7 @@ Considering that :math:`F \in \funct{F}_{n,m}` is balanced (or to have balanced 
       \walsh{\theta}_F(\vec{0},\vec{v})= 0, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}
    \end{equation*}
 
-This criterion can onlye take values :math:`0` (meaning *F* is not balanced) or :math:`1` (meaning *F* is balanced).
+This criterion can only take values :math:`0` (meaning *F* is not balanced) or :math:`1` (meaning *F* is balanced).
 
 The method used to obtain this criterion is the following:
 
