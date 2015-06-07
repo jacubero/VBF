@@ -34,16 +34,16 @@ Hereunder you can find a summary of the cryptographic criteria of several modern
    :depth: 2
 
 .. include::
-   examples_d/kasumi.rst
-
-.. include::
    examples_d/miniaes.rst
 
 .. include::
-   examples_d/aes.rst
+   examples_d/kasumi.rst
 
 .. include::
    examples_d/des.rst
+
+.. include::
+   examples_d/aes.rst
 
 .. include::
    examples_d/nl-9.rst
