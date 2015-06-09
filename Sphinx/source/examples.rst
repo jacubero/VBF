@@ -1,6 +1,6 @@
-########
-Examples
-########
+####################################
+Analysis of Cryptanalytic algorithms
+####################################
 
 Hereunder you can find a summary of the cryptographic criteria of several modern ciphers. Below you can find a legend describing the cryptographic criteria usedin this chapter: 
 
