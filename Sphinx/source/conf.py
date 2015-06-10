@@ -51,7 +51,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'VBF Library User Manual and Analysis of Cryptanalytic algorithms'
+project = u'VBF Library: User Manual and Analysis of Cryptanalytic algorithms'
 copyright = u'2015, Jose Antonio Alvarez Cubero'
 
 # The version info for the project you're documenting, acts as replacement for

@@ -24,7 +24,7 @@ Table of Contents:
    Initializations and representations <representations>
    Cryptographic Criteria <criteria>
    Operations and constructions over Vector Boolean Functions <operations>
-   User Manual and Analysis of Cryptanalytic algorithms <examples>
+   Analysis of Cryptanalytic algorithms <examples>
    FAQ <faq>
    Bibliography <bibliography>
 

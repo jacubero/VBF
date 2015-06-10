@@ -47,6 +47,12 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.wal>`_
 
+Walsh Spectrum representation:
+
+.. image:: /images/S7WS.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.dp>`_
@@ -105,6 +111,12 @@ Polynomial representation in ANF:
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.anf>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.wal>`_
+
+Walsh Spectrum representation:
+
+.. image:: /images/S9WS.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.lp>`_
 
