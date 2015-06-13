@@ -49,6 +49,12 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.wal>`_
 
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/S1WS.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.dp>`_
@@ -105,6 +111,12 @@ Polynomial representation in ANF:
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.anf>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/S2WS.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.lp>`_
 
@@ -163,6 +175,12 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.wal>`_
 
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/S3WS.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.dp>`_
@@ -220,6 +238,12 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.wal>`_
 
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/S4WS.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.dp>`_
@@ -273,6 +297,12 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.wal>`_
 
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/S5WS.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.dp>`_
@@ -323,6 +353,12 @@ Polynomial representation in ANF:
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.anf>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/S6WS.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.lp>`_
 
@@ -378,6 +414,12 @@ Polynomial representation in ANF:
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.anf>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/DES-S7WS.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.lp>`_
 
@@ -437,6 +479,12 @@ Polynomial representation in ANF:
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.anf>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/S8WS.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.lp>`_
 
