@@ -75,6 +75,12 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.wal>`_
 
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/Nibble.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.dp>`_

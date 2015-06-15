@@ -49,6 +49,12 @@ Polynomial function over :math:`\gf{GF(2^8)}`:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.wal>`_
 
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/SRD.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.dp>`_
@@ -109,6 +115,12 @@ Polynomial function over :math:`\gf{GF(2^8)}`:
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.anf>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/SRDInv.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.lp>`_
 
