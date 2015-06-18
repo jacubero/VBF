@@ -2,6 +2,9 @@
 Mini-AES analysis
 *****************
 
+Introduction
+============
+
 Raphael Chung-Wei Phan presented a version of the AES [Phan02miniadvanced]_, with all the parameters significantly reduced while preserving its original structure. This Mini version is purely educational and is designed to grasp the underlying concepts of Rijndael-like ciphers. It may also serve as a testbed for starting cryptanalysts to experiment with various cryptanalytic attacks. The Mini-AES cipher is a :math:`16 \times 16` vector Boolean function and the Mini-AES encryption is performed with a secret key of 16 bits.
 
 The Mini-AES S-box is called *NibbleSub*, and defines a simple operation that substitutes each input with an output according to a :math:`4 \times 4` substitution table (S-box) given in the table below. These values are, in fact, taken from the first row of the first S-box in DES.

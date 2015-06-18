@@ -4,6 +4,9 @@ KASUMI analysis
 
 .. _secExamplesKASUMI
 
+Introduction
+============
+
 It is a block cipher used in UMTS, GSM, and GPRS mobile communications systems. UMTS uses KASUMI in the confidentiality (f8) and integrity algorithms (f9) named UEA1 and UIA1, respectively. GSM employs KASUMI in the A5/3 key stream generator whereas GPRS does so in the GEA3 key stream generator.
 
 Cryptographic Criteria
@@ -111,12 +114,6 @@ Polynomial representation in ANF:
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.anf>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.wal>`_
-
-Walsh Spectrum representation (except first row and column):
-
-.. image:: /images/S9WS.png
-   :width: 750 px
-   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.lp>`_
 

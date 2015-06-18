@@ -2,6 +2,9 @@
 AES analysis
 ************
 
+Introduction
+============
+
 *AES* is a block cipher used for securing sensitive but unclassified material by U.S. Government agencies since December 6, 2001 and has become the de facto encryption standard for commercial transactions in the private sector.
 
 Cryptographic Criteria

@@ -2,6 +2,9 @@
 DES analysis
 ************
 
+Introduction
+============
+
 It is a block cipher used for securing sensitive but unclassified material by U.S. Government agencies and became the de facto encryption standard for commercial transactions in the private sector up to December 6, 2001. It was superseded by AES.
 
 Cryptographic Criteria

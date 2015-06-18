@@ -44,7 +44,7 @@ We now extend the scope of the study by considering functions between any pair o
 
 .. math::
    :nowrap:
-   :label: IndicatorFunction
+   :label: eq:IndicatorFunction
 
 	\begin{equation*}
     	   \theta_F(\vec{x},\vec{y}) = \left\{
@@ -69,7 +69,7 @@ Also, the *autocorrelation* of :math:`F \in \funct{F}_{n,m}` with respect to the
 
 .. math::
    :nowrap:
-   :label: AutocorrelationVBF
+   :label: eq:AutocorrelationVBF
  
 	\begin{equation*}
 	   \R_F(\vec{u},\vec{v}) = \sum_{\vec{x} \in \gf{V_n}} \chi_{\vec{v} F}(\vec{x} + \vec{u}) \chi_{\vec{v} F}(\vec{x}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{\vec{v} F(\vec{x} + \vec{u}) + \vec{v} F(\vec{x})} 

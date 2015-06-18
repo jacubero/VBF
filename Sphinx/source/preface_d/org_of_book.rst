@@ -27,8 +27,8 @@ This chapter defines some properties relevant for cryptographic applications and
 
 In this chapter, the operations over Vector Boolean Functions supported by the VBF library are described.
 
-**Section 6: Examples**
-=======================
+**Section 6: Analysis of Cryptanalytic Algorithms**
+===================================================
 
 In this chapter, a number of examples that illustrate some aspects of the functionality and programming interface of VBF are included.
 
