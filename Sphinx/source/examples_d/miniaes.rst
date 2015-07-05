@@ -238,6 +238,10 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks1.anf>`_
 
+`Walsh Spectrum (each row represents a column of Walsh Spectrum) <https://github.com/jacubero/VBF/blob/master/miniAES/ks1.wal.gz>`_
+
+`Linear Profile (each row represents a column of Linear Profile) <https://github.com/jacubero/VBF/blob/master/miniAES/ks1.lp.gz>`_
+
 Other useful information in cryptanalysis
 -----------------------------------------
 
