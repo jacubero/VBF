@@ -1,0 +1,9 @@
+NL,NL2,LD,deg,AI,maxAC,sigma,lp,dp,nlmax,ldmax,typenl
+2,16,4,2,2,16,13056,0.5625,0.5,5.171572875,10,0
+Fixed Points, Negated Fixed Points
+[],[[1 0 0 0]
+[1 1 0 1]
+]
+
+CI,Balancedness,PC
+0,-1,0

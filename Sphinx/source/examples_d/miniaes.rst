@@ -47,6 +47,46 @@ The Mini-AES S-box is called *NibbleSub*, and defines a simple operation that su
 | 1111  | 0111		|
 +-------+---------------+
 
+The inverse of the previous table is easily computed by interchanging the input nibble with the output nibble, and then resorting it based on the new input nibble, as given in the table below.
+
++--------------------------+
+| NibbleSubInv Truth Table |
++=======+==================+
+| Input | Output           |
++-------+------------------+
+| 0000  | 1110             |
++-------+------------------+
+| 0001  | 0011             |
++-------+------------------+
+| 0010  | 0100             |
++-------+------------------+
+| 0011  | 1000             |
++-------+------------------+
+| 0100  | 0001             |
++-------+------------------+
+| 0101  | 1100             |
++-------+------------------+
+| 0110  | 1010             |
++-------+------------------+
+| 0111  | 1111             |
++-------+------------------+
+| 1000  | 0111             |
++-------+------------------+
+| 1001  | 1101             |
++-------+------------------+
+| 1010  | 1001             |
++-------+------------------+
+| 1011  | 0110             |
++-------+------------------+
+| 1100  | 1011             |
++-------+------------------+
+| 1101  | 0010             |
++-------+------------------+
+| 1110  | 0000             |
++-------+------------------+
+| 1111  | 0101             |
++-------+------------------+
+
 Cryptographic Criteria
 ======================
 
@@ -54,6 +94,8 @@ Cryptographic Criteria
 | S-box        | *NL* | *NL2* | *LD* | *DEG* | *AI* | *MAXAC* | :math:`\sigma` | *LP*   | *DP* |
 +==============+======+=======+======+=======+======+=========+================+========+======+
 | NibbleSub    | 2    | 0     | 4    | 2     | 2    | 16      | 13056          | 0.5625 | 0.5  |
++--------------+------+-------+------+-------+------+---------+----------------+--------+------+
+| NibbleSubInv | 2    | 0     | 4    | 2     | 2    | 16      | 13056          | 0.5625 | 0.5  |
 +--------------+------+-------+------+-------+------+---------+----------------+--------+------+
 
 NibbleSub
@@ -139,6 +181,146 @@ Cycle structure:
 
 There are no linear structures
 
+NibbleSubInv
+============
+
+Representations
+---------------
+
+Polynomial representation in ANF:
+
+:math:`f_1 = 1+x_4+x_3+x_2+x_2x_3x_4+x_1`
+
+:math:`f_2 = 1+x_3x_4+x_2+x_1x_4+x_1x_3+x_1x_3x_4+x_1x_2x_3`
+
+:math:`f_3 = 1+x_3+x_2+x_1x_4+x_1x_2+x_1x_2x_4`
+
+:math:`f_4 = x_4+x_3x_4+x_2+x_2x_3+x_2x_3x_4+x_1+x_1x_4+x_1x_2+x_1x_2x_4`
+
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.tt>`_
+
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.anf>`_
+
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.wal>`_
+
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|16|0 |0  |0  |0 |0 |0 |0 |0  |0  |0 |0 |0 |0 |0  |0  |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |0 |0  |0  |4 |-4|4 |-4|0  |0  |8 |8 |-4|4 |4  |-4 |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |-4|-4 |0  |0 |-4|-4|0 |0  |-4 |-4|0 |8 |4 |4  |-8 |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |-4|-4 |0  |-4|0 |8 |4 |0  |-4 |4 |-8|-4|0 |0  |-4 |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |0 |0  |0  |-4|-4|4 |4 |0  |0  |-8|8 |-4|-4|-4 |-4 |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |0 |0  |0  |-8|0 |0 |-8|0  |0  |0 |0 |0 |8 |-8 |0  |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |-4|-4 |0  |-4|8 |0 |4 |0  |-4 |4 |8 |4 |0 |0  |4  |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |12|-4 |0  |0 |4 |4 |0 |0  |-4 |-4|0 |0 |4 |4  |0  |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |4 |0  |4  |0 |-4|0 |-4|-4 |-8 |4 |0 |4 |-8|-4 |0  |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |4 |0  |-12|-4|0 |-4|0 |4  |0  |4 |0 |0 |-4|0  |-4 |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |0 |4  |-4 |0 |-8|4 |4 |4  |-4 |0 |0 |4 |4 |0  |8  |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |0 |4  |-4 |4 |4 |8 |0 |-4 |4  |0 |0 |8 |0 |-4 |-4 |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |4 |0  |4  |4 |0 |-4|8 |4  |0  |4 |0 |0 |4 |-8 |-4 |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |4 |0  |4  |-8|-4|0 |4 |-4 |8  |4 |0 |4 |0 |4  |0  |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |0 |-12|-4 |4 |-4|0 |0 |-4 |4  |0 |0 |0 |0 |-4 |4  |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+|0 |0 |4  |-4 |0 |0 |-4|4 |-12|-4 |0 |0 |-4 |4 |0 |0  |
++--+--+---+---+--+--+--+--+---+---+--+--+--+--+---+---+
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/NibbleSubInv.png
+   :width: 750 px
+   :align: center
+
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.lp>`_
+
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.dp>`_
+
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.ac>`_
+
+Other useful information in cryptanalysis
+-----------------------------------------
+
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 2            | 1                |
++--------------+------------------+
+| 14           | 1                |
++--------------+------------------+
+
+There are no linear structures
+
+MixColumn
+=========
+
+Representations
+---------------
+
+Polynomial representation in ANF:
+
+:math:`f_1 = x_6+x_2+x_1`
+
+:math:`f_2 = x_7+x_3+x_2`
+
+:math:`f_3 = x_8+x_5+x_4+x_3+x_1`
+
+:math:`f_4 = x_5+x_4+x_1`
+
+:math:`f_5 = x_6+x_5+x_2`
+
+:math:`f_6 = x_7+x_6+x_3`
+
+:math:`f_7 = x_8+x_7+x_5+x_4+x_1`
+
+:math:`f_8 = x_8+x_5+x_1`
+
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.tt>`_
+
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.anf>`_
+
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/mixcolumn.png
+   :width: 750 px
+   :align: center
+
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.lp>`_
+
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.dp>`_
+
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.ac>`_
+
+Other useful information in cryptanalysis
+-----------------------------------------
+
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 1            | 16               |
++--------------+------------------+
+| 2            | 120              |
++--------------+------------------+
+
+There 255 linear structures
+
 ks0
 ===
 
@@ -182,6 +364,10 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks0.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks0.anf>`_
+
+`Walsh Spectrum (each row represents a column of Walsh Spectrum) <https://github.com/jacubero/VBF/blob/master/miniAES/ks0.wal.gz>`_
+
+`Linear Profile (each row represents a column of Linear Profile) <https://github.com/jacubero/VBF/blob/master/miniAES/ks0.lp.gz>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------
