@@ -99,7 +99,13 @@ Cryptographic Criteria
 +-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
 | :math:`{S_{RD}}^{-1}` | 112  | 102   | 126  | 7     | 4    | 32      | 33945600       | 0.015625 | 0.015625 |
 +-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
-| xtime                 | 0    | 0     | 1    | 1     | 1    | 256     | 4211865600     | 1        | 0.9921875|
+| :math:`g`             | 112  | 102   | 126  | 7     | 4    | 32      | 33945600       | 0.015625 | 0.015625 |
++-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
+| :math:`f`             | 0    | -     | 0    | 1     | 1    | 256     | 4278190080     | 1        | 1        |
++-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
+| :math:`f^{-1}`        | 0    | -     | 0    | 1     | 1    | 256     | 4278190080     | 1        | 1        |
++-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
+| xtime                 | 0    | -     | 1    | 1     | 1    | 256     | 4211865600     | 1        | 0.9921875|
 +-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
 
 :math:`S_{RD}`
@@ -277,6 +283,58 @@ The :math:`f` mapping is represented in hexadecimal notation as follows:
 |f|39|26|07|18|45|5a|7b|64|c1|de|ff|e0|bd|a2|83|9c|
 +-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
 
+Representations
+---------------
+
+Polynomial representation in ANF:
+
+:math:`f_1 = x_5+x_4+x_3+x_2+x_1`
+
+:math:`f_2 = 1+x_6+x_5+x_4+x_3+x_2`
+
+:math:`f_3 = 1+x_7+x_6+x_5+x_4+x_3`
+
+:math:`f_4 = x_8+x_7+x_6+x_5+x_4`
+
+:math:`f_5 = x_8+x_7+x_6+x_5+x_1`
+
+:math:`f_6 = x_8+x_7+x_6+x_2+x_1`
+
+:math:`f_7 = 1+x_8+x_7+x_3+x_2+x_1`
+
+:math:`f_8 = 1+x_8+x_4+x_3+x_2+x_1`
+
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.tt>`_
+
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.anf>`_
+
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/f.png
+   :width: 750 px
+   :align: center
+
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.lp>`_
+
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.dp>`_
+
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.ac>`_
+
+Other useful information in cryptanalysis
+-----------------------------------------
+
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 4            | 64               |
++--------------+------------------+
+
+There are 255 linear structures
+
 :math:`f^{-1}`
 ==============
 
@@ -318,6 +376,58 @@ The :math:`f^{-1}` mapping is represented in hexadecimal notation as follows:
 |f|5f|15|cb|81|76|3c|e2|a8|0d|47|99|d3|24|6e|b0|fa|
 +-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
 
+Representations
+---------------
+
+Polynomial representation in ANF:
+
+:math:`f_1 = x_7+x_4+x_2`
+
+:math:`f_2 = x_8+x_5+x_3`
+
+:math:`f_3 = x_6+x_4+x_1`
+
+:math:`f_4 = x_7+x_5+x_2`
+
+:math:`f_5 = x_8+x_6+x_3`
+
+:math:`f_6 = 1+x_7+x_4+x_1`
+
+:math:`f_7 = x_8+x_5+x_2`
+
+:math:`f_8 = 1+x_6+x_3+x_1`
+
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.tt>`_
+
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.anf>`_
+
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/finv.png
+   :width: 750 px
+   :align: center
+
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.lp>`_
+
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.dp>`_
+
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.ac>`_
+
+Other useful information in cryptanalysis
+-----------------------------------------
+
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 4            | 64               |
++--------------+------------------+
+
+There are 255 linear structures
+
 :math:`g`
 =========
 
@@ -358,6 +468,60 @@ The :math:`g` mapping is represented in hexadecimal notation as follows:
 +-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
 |f|5b|23|38|34|68|46|03|8c|dd|9c|7d|a0|cd|1a|41|1c|
 +-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+
+Representations
+---------------
+
+Polynomial representation in ANF:
+
+:math:`f_1 = x_7+x_6+x_6x_8+x_5+x_5x_8+x_5x_6+x_5x_6x_7+x_4x_8+x_4x_6x_8+x_4x_6x_7x_8+x_4x_5+x_4x_5x_6+x_4x_5x_6x_8+x_3x_7+x_3x_7x_8+x_3x_6+x_3x_6x_8+x_3x_6x_7+x_3x_6x_7x_8+x_3x_5x_7x_8+x_3x_5x_6x_8+x_3x_5x_6x_7+x_3x_5x_6x_7x_8+x_3x_4x_8+x_3x_4x_7+x_3x_4x_6+x_3x_4x_6x_7+x_3x_4x_5+x_3x_4x_5x_7x_8+x_3x_4x_5x_6x_8+x_3x_4x_5x_6x_7+x_3x_4x_5x_6x_7x_8+x_2x_8+x_2x_7+x_2x_7x_8+x_2x_6+x_2x_6x_7+x_2x_5x_8+x_2x_5x_7x_8+x_2x_5x_6x_7+x_2x_5x_6x_7x_8+x_2x_4+x_2x_4x_8+x_2x_4x_7+x_2x_4x_7x_8+x_2x_4x_6+x_2x_4x_6x_8+x_2x_4x_6x_7+x_2x_4x_6x_7x_8+x_2x_4x_5+x_2x_4x_5x_8+x_2x_4x_5x_7+x_2x_4x_5x_6+x_2x_4x_5x_6x_8+x_2x_4x_5x_6x_7x_8+x_2x_3x_8+x_2x_3x_6+x_2x_3x_6x_8+x_2x_3x_6x_7+x_2x_3x_5x_8+x_2x_3x_5x_7+x_2x_3x_5x_7x_8+x_2x_3x_5x_6x_7x_8+x_2x_3x_4+x_2x_3x_4x_6x_8+x_2x_3x_4x_6x_7+x_2x_3x_4x_5+x_2x_3x_4x_5x_7+x_2x_3x_4x_5x_7x_8+x_2x_3x_4x_5x_6+x_2x_3x_4x_5x_6x_8+x_1+x_1x_8+x_1x_6+x_1x_6x_8+x_1x_6x_7+x_1x_5+x_1x_5x_7+x_1x_5x_6+x_1x_5x_6x_8+x_1x_5x_6x_7x_8+x_1x_4x_8+x_1x_4x_7x_8+x_1x_4x_6x_7x_8+x_1x_4x_5x_7+x_1x_4x_5x_7x_8+x_1x_4x_5x_6x_8+x_1x_4x_5x_6x_7+x_1x_4x_5x_6x_7x_8+x_1x_3x_7+x_1x_3x_7x_8+x_1x_3x_6+x_1x_3x_6x_7x_8+x_1x_3x_5+x_1x_3x_5x_8+x_1x_3x_5x_6+x_1x_3x_4+x_1x_3x_4x_8+x_1x_3x_4x_7x_8+x_1x_3x_4x_6+x_1x_3x_4x_6x_8+x_1x_3x_4x_6x_7+x_1x_3x_4x_5x_8+x_1x_3x_4x_5x_7+x_1x_3x_4x_5x_7x_8+x_1x_3x_4x_5x_6x_7+x_1x_3x_4x_5x_6x_7x_8+x_1x_2+x_1x_2x_5+x_1x_2x_5x_8+x_1x_2x_5x_7x_8+x_1x_2x_5x_6x_8+x_1x_2x_4+x_1x_2x_4x_8+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_4x_5x_6x_8+x_1x_2x_3+x_1x_2x_3x_5+x_1x_2x_3x_5x_7+x_1x_2x_3x_5x_7x_8+x_1x_2x_3x_5x_6+x_1x_2x_3x_5x_6x_8+x_1x_2x_3x_5x_6x_7x_8+x_1x_2x_3x_4+x_1x_2x_3x_4x_8+x_1x_2x_3x_4x_5x_8+x_1x_2x_3x_4x_5x_6x_8`
+
+:math:`f_2 = x_7x_8+x_6+x_6x_7x_8+x_5+x_5x_7+x_5x_6x_8+x_5x_6x_7x_8+x_4+x_4x_8+x_4x_7+x_4x_7x_8+x_4x_6x_8+x_4x_6x_7x_8+x_4x_5+x_4x_5x_7x_8+x_4x_5x_6+x_4x_5x_6x_8+x_4x_5x_6x_7x_8+x_3x_8+x_3x_7+x_3x_6x_8+x_3x_6x_7x_8+x_3x_5x_7+x_3x_5x_6x_7+x_3x_4+x_3x_4x_8+x_3x_4x_5+x_3x_4x_5x_7+x_3x_4x_5x_7x_8+x_3x_4x_5x_6x_7x_8+x_2x_8+x_2x_7x_8+x_2x_6+x_2x_6x_8+x_2x_6x_7+x_2x_6x_7x_8+x_2x_5+x_2x_5x_7+x_2x_5x_7x_8+x_2x_5x_6+x_2x_5x_6x_7+x_2x_4x_6x_8+x_2x_4x_6x_7+x_2x_4x_6x_7x_8+x_2x_4x_5x_7+x_2x_4x_5x_6+x_2x_4x_5x_6x_8+x_2x_4x_5x_6x_7+x_2x_3x_8+x_2x_3x_7+x_2x_3x_6+x_2x_3x_6x_7x_8+x_2x_3x_5+x_2x_3x_5x_8+x_2x_3x_5x_6+x_2x_3x_5x_6x_8+x_2x_3x_4+x_2x_3x_4x_6x_8+x_2x_3x_4x_6x_7+x_2x_3x_4x_6x_7x_8+x_2x_3x_4x_5x_8+x_2x_3x_4x_5x_7+x_2x_3x_4x_5x_6+x_2x_3x_4x_5x_6x_8+x_2x_3x_4x_5x_6x_7+x_2x_3x_4x_5x_6x_7x_8+x_1x_8+x_1x_7+x_1x_7x_8+x_1x_6+x_1x_6x_7+x_1x_6x_7x_8+x_1x_5+x_1x_5x_8+x_1x_5x_7x_8+x_1x_5x_6+x_1x_5x_6x_7x_8+x_1x_4x_7+x_1x_4x_6x_7+x_1x_4x_5x_8+x_1x_4x_5x_7x_8+x_1x_4x_5x_6+x_1x_4x_5x_6x_8+x_1x_4x_5x_6x_7+x_1x_3+x_1x_3x_7+x_1x_3x_7x_8+x_1x_3x_6+x_1x_3x_6x_8+x_1x_3x_6x_7+x_1x_3x_5+x_1x_3x_5x_7+x_1x_3x_5x_6+x_1x_3x_5x_6x_7+x_1x_3x_5x_6x_7x_8+x_1x_3x_4+x_1x_3x_4x_8+x_1x_3x_4x_7+x_1x_3x_4x_6+x_1x_3x_4x_6x_8+x_1x_3x_4x_6x_7x_8+x_1x_3x_4x_5+x_1x_3x_4x_5x_8+x_1x_3x_4x_5x_7+x_1x_3x_4x_5x_7x_8+x_1x_3x_4x_5x_6x_8+x_1x_3x_4x_5x_6x_7+x_1x_2x_7+x_1x_2x_7x_8+x_1x_2x_6x_8+x_1x_2x_5+x_1x_2x_5x_8+x_1x_2x_5x_7+x_1x_2x_5x_7x_8+x_1x_2x_5x_6+x_1x_2x_4x_7+x_1x_2x_4x_7x_8+x_1x_2x_4x_6+x_1x_2x_4x_6x_8+x_1x_2x_4x_6x_7+x_1x_2x_4x_6x_7x_8+x_1x_2x_4x_5x_7x_8+x_1x_2x_4x_5x_6x_7+x_1x_2x_4x_5x_6x_7x_8+x_1x_2x_3+x_1x_2x_3x_7x_8+x_1x_2x_3x_6x_8+x_1x_2x_3x_6x_7x_8+x_1x_2x_3x_5x_7+x_1x_2x_3x_5x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_7x_8+x_1x_2x_3x_4x_6+x_1x_2x_3x_4x_6x_8+x_1x_2x_3x_4x_6x_7+x_1x_2x_3x_4x_5+x_1x_2x_3x_4x_5x_7+x_1x_2x_3x_4x_5x_7x_8`
+
+:math:`f_3 = x_7x_8+x_6x_7+x_5+x_5x_8+x_5x_7x_8+x_5x_6x_8+x_5x_6x_7+x_5x_6x_7x_8+x_4+x_4x_6+x_4x_6x_8+x_4x_6x_7x_8+x_4x_5x_7+x_4x_5x_6x_7+x_4x_5x_6x_7x_8+x_3+x_3x_7+x_3x_6+x_3x_6x_7+x_3x_5x_8+x_3x_5x_7+x_3x_5x_6x_7+x_3x_5x_6x_7x_8+x_3x_4+x_3x_4x_8+x_3x_4x_7x_8+x_3x_4x_6x_7+x_3x_4x_5+x_3x_4x_5x_8+x_3x_4x_5x_7+x_3x_4x_5x_7x_8+x_3x_4x_5x_6x_7+x_2x_8+x_2x_7+x_2x_6+x_2x_6x_8+x_2x_6x_7x_8+x_2x_5x_7+x_2x_5x_7x_8+x_2x_5x_6x_8+x_2x_5x_6x_7+x_2x_5x_6x_7x_8+x_2x_4x_6+x_2x_4x_6x_7x_8+x_2x_4x_5x_8+x_2x_4x_5x_6+x_2x_4x_5x_6x_7x_8+x_2x_3+x_2x_3x_8+x_2x_3x_7+x_2x_3x_5x_8+x_2x_3x_5x_6x_8+x_2x_3x_4+x_2x_3x_4x_8+x_2x_3x_4x_6+x_2x_3x_4x_6x_8+x_2x_3x_4x_6x_7+x_2x_3x_4x_5x_8+x_2x_3x_4x_5x_7x_8+x_2x_3x_4x_5x_6x_7+x_1x_8+x_1x_7+x_1x_7x_8+x_1x_6x_7+x_1x_5+x_1x_5x_7+x_1x_5x_7x_8+x_1x_5x_6+x_1x_5x_6x_7+x_1x_4+x_1x_4x_7x_8+x_1x_4x_6+x_1x_4x_6x_7+x_1x_4x_6x_7x_8+x_1x_4x_5+x_1x_4x_5x_8+x_1x_4x_5x_6+x_1x_3x_8+x_1x_3x_7x_8+x_1x_3x_6x_8+x_1x_3x_6x_7x_8+x_1x_3x_5x_8+x_1x_3x_5x_7+x_1x_3x_5x_6+x_1x_3x_5x_6x_7+x_1x_3x_4x_7x_8+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_8+x_1x_3x_4x_5x_7+x_1x_3x_4x_5x_6+x_1x_3x_4x_5x_6x_7x_8+x_1x_2x_8+x_1x_2x_7+x_1x_2x_7x_8+x_1x_2x_6+x_1x_2x_6x_7x_8+x_1x_2x_5+x_1x_2x_5x_6x_7+x_1x_2x_5x_6x_7x_8+x_1x_2x_4+x_1x_2x_4x_7+x_1x_2x_4x_7x_8+x_1x_2x_4x_6x_8+x_1x_2x_4x_5+x_1x_2x_4x_5x_7+x_1x_2x_3+x_1x_2x_3x_6x_8+x_1x_2x_3x_5x_8+x_1x_2x_3x_5x_7+x_1x_2x_3x_5x_6+x_1x_2x_3x_5x_6x_7+x_1x_2x_3x_5x_6x_7x_8+x_1x_2x_3x_4x_7+x_1x_2x_3x_4x_7x_8+x_1x_2x_3x_4x_6+x_1x_2x_3x_4x_5+x_1x_2x_3x_4x_5x_8+x_1x_2x_3x_4x_5x_7+x_1x_2x_3x_4x_5x_6+x_1x_2x_3x_4x_5x_6x_8+x_1x_2x_3x_4x_5x_6x_7`
+
+:math:`f_4 = x_7x_8+x_6x_8+x_6x_7+x_5x_7x_8+x_5x_6+x_5x_6x_7x_8+x_4+x_4x_7+x_4x_7x_8+x_4x_6x_7+x_4x_5x_7+x_4x_5x_6+x_4x_5x_6x_7+x_3+x_3x_8+x_3x_6x_8+x_3x_5+x_3x_5x_8+x_3x_5x_7+x_3x_5x_6x_8+x_3x_5x_6x_7+x_3x_4x_8+x_3x_4x_7x_8+x_3x_4x_6+x_3x_4x_6x_7x_8+x_3x_4x_5x_8+x_3x_4x_5x_6+x_3x_4x_5x_6x_8+x_3x_4x_5x_6x_7+x_2+x_2x_6+x_2x_6x_7x_8+x_2x_5+x_2x_5x_7x_8+x_2x_5x_6+x_2x_4x_8+x_2x_4x_7+x_2x_4x_7x_8+x_2x_4x_6+x_2x_4x_6x_7x_8+x_2x_4x_5x_8+x_2x_4x_5x_6+x_2x_4x_5x_6x_7+x_2x_3+x_2x_3x_8+x_2x_3x_7+x_2x_3x_6x_7+x_2x_3x_6x_7x_8+x_2x_3x_5x_6+x_2x_3x_5x_6x_7x_8+x_2x_3x_4+x_2x_3x_4x_7+x_2x_3x_4x_7x_8+x_2x_3x_4x_6+x_2x_3x_4x_6x_7+x_2x_3x_4x_6x_7x_8+x_2x_3x_4x_5x_8+x_2x_3x_4x_5x_6+x_2x_3x_4x_5x_6x_8+x_2x_3x_4x_5x_6x_7x_8+x_1x_8+x_1x_7+x_1x_7x_8+x_1x_6+x_1x_5+x_1x_5x_8+x_1x_5x_7+x_1x_5x_7x_8+x_1x_5x_6x_7+x_1x_5x_6x_7x_8+x_1x_4x_7x_8+x_1x_4x_6+x_1x_4x_6x_8+x_1x_4x_6x_7+x_1x_4x_5x_8+x_1x_4x_5x_7+x_1x_4x_5x_6+x_1x_4x_5x_6x_8+x_1x_4x_5x_6x_7+x_1x_4x_5x_6x_7x_8+x_1x_3x_6x_8+x_1x_3x_6x_7x_8+x_1x_3x_5+x_1x_3x_5x_7x_8+x_1x_3x_5x_6x_7+x_1x_3x_5x_6x_7x_8+x_1x_3x_4x_8+x_1x_3x_4x_7+x_1x_3x_4x_6x_7x_8+x_1x_3x_4x_5+x_1x_3x_4x_5x_6x_8+x_1x_3x_4x_5x_6x_7+x_1x_2+x_1x_2x_8+x_1x_2x_7+x_1x_2x_6+x_1x_2x_6x_8+x_1x_2x_6x_7x_8+x_1x_2x_5x_8+x_1x_2x_5x_6x_7x_8+x_1x_2x_4x_7+x_1x_2x_4x_6x_8+x_1x_2x_4x_6x_7x_8+x_1x_2x_4x_5x_7+x_1x_2x_4x_5x_6x_7x_8+x_1x_2x_3+x_1x_2x_3x_8+x_1x_2x_3x_7+x_1x_2x_3x_6x_8+x_1x_2x_3x_5+x_1x_2x_3x_5x_7+x_1x_2x_3x_5x_7x_8+x_1x_2x_3x_5x_6+x_1x_2x_3x_4x_8+x_1x_2x_3x_4x_7+x_1x_2x_3x_4x_6x_7+x_1x_2x_3x_4x_5x_7x_8+x_1x_2x_3x_4x_5x_6+x_1x_2x_3x_4x_5x_6x_8`
+
+:math:`f_5 = x_7+x_7x_8+x_6+x_6x_8+x_6x_7+x_6x_7x_8+x_5+x_5x_7+x_5x_6x_8+x_5x_6x_7+x_4x_7x_8+x_4x_6x_8+x_4x_6x_7+x_4x_5x_6+x_4x_5x_6x_7+x_4x_5x_6x_7x_8+x_3+x_3x_7+x_3x_6x_7x_8+x_3x_5x_8+x_3x_5x_7x_8+x_3x_5x_6+x_3x_5x_6x_8+x_3x_5x_6x_7+x_3x_4x_8+x_3x_4x_7+x_3x_4x_6x_7+x_3x_4x_6x_7x_8+x_3x_4x_5x_6+x_3x_4x_5x_6x_8+x_3x_4x_5x_6x_7+x_2+x_2x_7x_8+x_2x_6+x_2x_6x_7+x_2x_6x_7x_8+x_2x_5x_7+x_2x_5x_7x_8+x_2x_5x_6x_7+x_2x_5x_6x_7x_8+x_2x_4x_6x_8+x_2x_4x_6x_7+x_2x_4x_6x_7x_8+x_2x_4x_5+x_2x_4x_5x_6x_8+x_2x_3x_8+x_2x_3x_7+x_2x_3x_6+x_2x_3x_6x_8+x_2x_3x_5+x_2x_3x_5x_7+x_2x_3x_5x_7x_8+x_2x_3x_5x_6x_7+x_2x_3x_4+x_2x_3x_4x_8+x_2x_3x_4x_7+x_2x_3x_4x_6x_8+x_2x_3x_4x_6x_7+x_1x_8+x_1x_7x_8+x_1x_6+x_1x_6x_7+x_1x_5x_8+x_1x_5x_7+x_1x_5x_7x_8+x_1x_5x_6+x_1x_5x_6x_7+x_1x_5x_6x_7x_8+x_1x_4+x_1x_4x_8+x_1x_4x_6x_7+x_1x_4x_5+x_1x_4x_5x_7+x_1x_4x_5x_7x_8+x_1x_4x_5x_6x_7+x_1x_3x_8+x_1x_3x_7x_8+x_1x_3x_6x_8+x_1x_3x_6x_7+x_1x_3x_5x_8+x_1x_3x_5x_7x_8+x_1x_3x_5x_6+x_1x_3x_5x_6x_7+x_1x_3x_4+x_1x_3x_4x_8+x_1x_3x_4x_7+x_1x_3x_4x_7x_8+x_1x_3x_4x_6+x_1x_3x_4x_6x_7+x_1x_3x_4x_6x_7x_8+x_1x_3x_4x_5+x_1x_3x_4x_5x_8+x_1x_3x_4x_5x_7+x_1x_3x_4x_5x_7x_8+x_1x_3x_4x_5x_6+x_1x_3x_4x_5x_6x_8+x_1x_3x_4x_5x_6x_7+x_1x_2x_8+x_1x_2x_7+x_1x_2x_6+x_1x_2x_6x_7x_8+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_5x_6x_8+x_1x_2x_5x_6x_7+x_1x_2x_5x_6x_7x_8+x_1x_2x_4+x_1x_2x_4x_6+x_1x_2x_4x_6x_8+x_1x_2x_4x_5+x_1x_2x_4x_5x_8+x_1x_2x_4x_5x_6+x_1x_2x_4x_5x_6x_7+x_1x_2x_3x_8+x_1x_2x_3x_6+x_1x_2x_3x_6x_8+x_1x_2x_3x_6x_7+x_1x_2x_3x_6x_7x_8+x_1x_2x_3x_5x_7+x_1x_2x_3x_5x_7x_8+x_1x_2x_3x_5x_6x_7+x_1x_2x_3x_4+x_1x_2x_3x_4x_7+x_1x_2x_3x_4x_5+x_1x_2x_3x_4x_5x_7+x_1x_2x_3x_4x_5x_7x_8+x_1x_2x_3x_4x_5x_6x_7`
+
+:math:`f_6 = x_7+x_6x_7+x_5x_8+x_5x_7+x_5x_7x_8+x_5x_6x_8+x_5x_6x_7x_8+x_4+x_4x_6+x_4x_6x_7x_8+x_4x_5+x_4x_5x_7+x_4x_5x_6x_8+x_4x_5x_6x_7x_8+x_3x_8+x_3x_7+x_3x_7x_8+x_3x_6+x_3x_6x_8+x_3x_6x_7x_8+x_3x_5x_7+x_3x_5x_7x_8+x_3x_5x_6+x_3x_5x_6x_8+x_3x_5x_6x_7+x_3x_4x_8+x_3x_4x_7+x_3x_4x_6+x_3x_4x_6x_8+x_3x_4x_6x_7+x_3x_4x_5x_7x_8+x_3x_4x_5x_6+x_3x_4x_5x_6x_8+x_3x_4x_5x_6x_7x_8+x_2+x_2x_7+x_2x_6x_8+x_2x_6x_7+x_2x_5x_8+x_2x_5x_7x_8+x_2x_5x_6x_7x_8+x_2x_4+x_2x_4x_7x_8+x_2x_4x_6+x_2x_4x_6x_8+x_2x_4x_5x_8+x_2x_4x_5x_6x_7x_8+x_2x_3x_8+x_2x_3x_7+x_2x_3x_6x_8+x_2x_3x_6x_7+x_2x_3x_5x_7+x_2x_3x_5x_7x_8+x_2x_3x_5x_6+x_2x_3x_5x_6x_8+x_2x_3x_5x_6x_7+x_2x_3x_4+x_2x_3x_4x_7x_8+x_2x_3x_4x_6x_8+x_2x_3x_4x_6x_7+x_2x_3x_4x_6x_7x_8+x_2x_3x_4x_5x_8+x_1x_8+x_1x_6+x_1x_6x_7x_8+x_1x_5x_8+x_1x_5x_7+x_1x_5x_7x_8+x_1x_5x_6x_8+x_1x_5x_6x_7+x_1x_4x_6+x_1x_4x_6x_8+x_1x_4x_6x_7+x_1x_4x_6x_7x_8+x_1x_4x_5x_7+x_1x_4x_5x_6+x_1x_3x_8+x_1x_3x_7+x_1x_3x_7x_8+x_1x_3x_6+x_1x_3x_6x_8+x_1x_3x_5+x_1x_3x_5x_7+x_1x_3x_5x_6x_7+x_1x_3x_4x_8+x_1x_3x_4x_7x_8+x_1x_3x_4x_6+x_1x_3x_4x_6x_7+x_1x_3x_4x_5x_8+x_1x_3x_4x_5x_7x_8+x_1x_3x_4x_5x_6x_8+x_1x_3x_4x_5x_6x_7+x_1x_3x_4x_5x_6x_7x_8+x_1x_2+x_1x_2x_8+x_1x_2x_7+x_1x_2x_7x_8+x_1x_2x_6+x_1x_2x_6x_7x_8+x_1x_2x_5x_7+x_1x_2x_5x_6x_8+x_1x_2x_5x_6x_7x_8+x_1x_2x_4x_8+x_1x_2x_4x_6x_8+x_1x_2x_4x_6x_7+x_1x_2x_4x_6x_7x_8+x_1x_2x_3x_7+x_1x_2x_3x_7x_8+x_1x_2x_3x_6+x_1x_2x_3x_6x_8+x_1x_2x_3x_6x_7x_8+x_1x_2x_3x_5+x_1x_2x_3x_5x_8+x_1x_2x_3x_5x_7x_8+x_1x_2x_3x_5x_6x_7x_8+x_1x_2x_3x_4+x_1x_2x_3x_4x_6x_8+x_1x_2x_3x_4x_6x_7x_8+x_1x_2x_3x_4x_5x_8`
+
+:math:`f_7 = x_7x_8+x_6+x_5x_8+x_5x_6+x_5x_6x_8+x_4x_7+x_4x_7x_8+x_4x_6+x_4x_6x_8+x_4x_6x_7+x_4x_5x_7+x_4x_5x_7x_8+x_4x_5x_6x_7+x_3+x_3x_6x_7x_8+x_3x_5+x_3x_5x_6x_7+x_3x_4+x_3x_4x_7x_8+x_3x_4x_6+x_3x_4x_6x_7x_8+x_3x_4x_5x_7+x_3x_4x_5x_6x_8+x_3x_4x_5x_6x_7+x_2x_8+x_2x_7+x_2x_6+x_2x_6x_8+x_2x_6x_7+x_2x_6x_7x_8+x_2x_5+x_2x_5x_8+x_2x_5x_7+x_2x_5x_6x_8+x_2x_5x_6x_7+x_2x_4x_8+x_2x_4x_7x_8+x_2x_4x_6+x_2x_4x_6x_7+x_2x_4x_5+x_2x_4x_5x_8+x_2x_4x_5x_7+x_2x_4x_5x_6+x_2x_4x_5x_6x_8+x_2x_3x_8+x_2x_3x_7+x_2x_3x_7x_8+x_2x_3x_6+x_2x_3x_6x_7x_8+x_2x_3x_5+x_2x_3x_5x_8+x_2x_3x_5x_7+x_2x_3x_5x_6+x_2x_3x_4x_7x_8+x_2x_3x_4x_6x_8+x_2x_3x_4x_6x_7+x_2x_3x_4x_6x_7x_8+x_2x_3x_4x_5+x_2x_3x_4x_5x_7+x_2x_3x_4x_5x_7x_8+x_2x_3x_4x_5x_6x_8+x_2x_3x_4x_5x_6x_7+x_2x_3x_4x_5x_6x_7x_8+x_1+x_1x_6+x_1x_6x_7x_8+x_1x_5x_8+x_1x_5x_7+x_1x_5x_7x_8+x_1x_5x_6+x_1x_5x_6x_8+x_1x_5x_6x_7x_8+x_1x_4x_7+x_1x_4x_7x_8+x_1x_4x_6x_7+x_1x_4x_5x_8+x_1x_4x_5x_7x_8+x_1x_4x_5x_6x_7+x_1x_4x_5x_6x_7x_8+x_1x_3+x_1x_3x_8+x_1x_3x_6x_7+x_1x_3x_5+x_1x_3x_5x_7+x_1x_3x_5x_7x_8+x_1x_3x_5x_6x_8+x_1x_3x_4x_8+x_1x_3x_4x_7+x_1x_3x_4x_6x_8+x_1x_3x_4x_6x_7x_8+x_1x_3x_4x_5x_6x_8+x_1x_3x_4x_5x_6x_7+x_1x_2x_7+x_1x_2x_6+x_1x_2x_6x_8+x_1x_2x_6x_7x_8+x_1x_2x_5x_8+x_1x_2x_5x_7+x_1x_2x_5x_6+x_1x_2x_5x_6x_8+x_1x_2x_4x_6+x_1x_2x_4x_6x_7+x_1x_2x_4x_5+x_1x_2x_4x_5x_8+x_1x_2x_4x_5x_7+x_1x_2x_4x_5x_6+x_1x_2x_4x_5x_6x_8+x_1x_2x_4x_5x_6x_7x_8+x_1x_2x_3+x_1x_2x_3x_8+x_1x_2x_3x_6x_7+x_1x_2x_3x_5x_7+x_1x_2x_3x_5x_7x_8+x_1x_2x_3x_5x_6+x_1x_2x_3x_5x_6x_7+x_1x_2x_3x_5x_6x_7x_8+x_1x_2x_3x_4x_7+x_1x_2x_3x_4x_7x_8`
+
+:math:`f_8 = x_8+x_7+x_6+x_6x_7+x_6x_7x_8+x_5x_6+x_5x_6x_7+x_4x_8+x_4x_7+x_4x_7x_8+x_4x_6x_7x_8+x_4x_5x_8+x_4x_5x_7+x_4x_5x_7x_8+x_4x_5x_6+x_4x_5x_6x_7x_8+x_3x_8+x_3x_7+x_3x_7x_8+x_3x_6x_7x_8+x_3x_5+x_3x_5x_8+x_3x_5x_7+x_3x_5x_7x_8+x_3x_5x_6+x_3x_5x_6x_8+x_3x_5x_6x_7+x_3x_4x_7+x_3x_4x_7x_8+x_3x_4x_6x_8+x_3x_4x_5+x_3x_4x_5x_7x_8+x_3x_4x_5x_6+x_3x_4x_5x_6x_8+x_3x_4x_5x_6x_7+x_2+x_2x_7+x_2x_7x_8+x_2x_6+x_2x_6x_8+x_2x_6x_7+x_2x_5x_6x_8+x_2x_5x_6x_7x_8+x_2x_4x_8+x_2x_4x_7+x_2x_4x_6+x_2x_4x_6x_7+x_2x_4x_5+x_2x_4x_5x_7+x_2x_4x_5x_7x_8+x_2x_4x_5x_6x_8+x_2x_4x_5x_6x_7x_8+x_2x_3+x_2x_3x_6+x_2x_3x_5+x_2x_3x_5x_7+x_2x_3x_5x_6x_7+x_2x_3x_4+x_2x_3x_4x_6+x_2x_3x_4x_6x_8+x_2x_3x_4x_6x_7+x_2x_3x_4x_5+x_1+x_1x_7+x_1x_6x_7+x_1x_5x_7x_8+x_1x_5x_6x_7+x_1x_4+x_1x_4x_7+x_1x_4x_6+x_1x_4x_6x_7x_8+x_1x_4x_5x_8+x_1x_4x_5x_6+x_1x_4x_5x_6x_8+x_1x_4x_5x_6x_7+x_1x_4x_5x_6x_7x_8+x_1x_3x_8+x_1x_3x_7x_8+x_1x_3x_6+x_1x_3x_6x_7+x_1x_3x_5x_6x_7x_8+x_1x_3x_4x_7+x_1x_3x_4x_6x_8+x_1x_3x_4x_6x_7+x_1x_3x_4x_6x_7x_8+x_1x_3x_4x_5+x_1x_3x_4x_5x_6x_8+x_1x_3x_4x_5x_6x_7+x_1x_2+x_1x_2x_7+x_1x_2x_6+x_1x_2x_6x_7+x_1x_2x_6x_7x_8+x_1x_2x_5x_8+x_1x_2x_5x_7x_8+x_1x_2x_5x_6x_8+x_1x_2x_5x_6x_7+x_1x_2x_5x_6x_7x_8+x_1x_2x_4x_7+x_1x_2x_4x_5+x_1x_2x_4x_5x_8+x_1x_2x_4x_5x_6+x_1x_2x_4x_5x_6x_8+x_1x_2x_4x_5x_6x_7x_8+x_1x_2x_3+x_1x_2x_3x_8+x_1x_2x_3x_6x_8+x_1x_2x_3x_6x_7+x_1x_2x_3x_5+x_1x_2x_3x_5x_6x_7+x_1x_2x_3x_4x_7x_8+x_1x_2x_3x_4x_6+x_1x_2x_3x_4x_6x_8+x_1x_2x_3x_4x_6x_7+x_1x_2x_3x_4x_6x_7x_8+x_1x_2x_3x_4x_5x_7+x_1x_2x_3x_4x_5x_6+x_1x_2x_3x_4x_5x_6x_7`
+
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.tt>`_
+
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.anf>`_
+
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/g.png
+   :width: 750 px
+   :align: center
+
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.lp>`_
+
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.dp>`_
+
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.ac>`_
+
+Other useful information in cryptanalysis
+-----------------------------------------
+
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 1            | 2                |
++--------------+------------------+
+| 2            | 127              |
++--------------+------------------+
+
+There are no linear structures
 
 xtime
 =====
