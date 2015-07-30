@@ -1,0 +1,33 @@
+330	# current generation
+1	# current convergence
+33000	# number of selections since initialization
+1062	# number of crossovers since initialization
+1683000	# number of mutations since initialization
+33000	# number of replacements since initialization
+33100	# number of genome evaluations since initialization
+166	# number of population evaluations since initialization
+2.16308	# maximum score since initialization
+1.03829	# minimum score since initialization
+2.09603	# average of all scores ('on-line' performance)
+2.16248	# average of maximum scores ('off-line' performance)
+1.54607	# average of minimum scores ('off-line' performance)
+
+1.57797	# mean score in initial population
+2.14264	# maximum score in initial population
+1.06263	# minimum score in initial population
+0.504757	# standard deviation of initial population
+-1	# diversity of initial population (0=identical,-1=unset)
+
+2.10531	# mean score in current population
+2.16308	# maximum score in current population
+2.04392	# minimum score in current population
+0.0210751	# standard deviation of current population
+-1	# diversity of current population (0=identical,-1=unset)
+
+20	# how far back to look for convergence
+1	# how often to record scores
+0	# how often to write scores to file
+generations.dat	# name of file to which scores are written
+
+00001011001010110111000100010100000000000111001000000101111011011010001101110110100010111111000101100101110101000001010011010110101010010001000010010110101000110100001101110010110000010110010010011000001101011000111000100101111000011101001000111001000010101011010010001001101100111011001100100101010010011000111010000010000000110000100000001101100000111010101001011100000010010110011001110101001100011111100010011100111111111000000110010001101011111011011100000111010000001110100111100111111010111111100011101010
+
