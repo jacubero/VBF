@@ -95,17 +95,17 @@ Cryptographic Criteria
 +-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
 | S-box                 | *NL* | *NL2* | *LD* | *DEG* | *AI* | *MAXAC* | :math:`\sigma` | *LP*     | *DP*     |
 +=======================+======+=======+======+=======+======+=========+================+==========+==========+
-| :math:`S_{RD}`        | 112  | 104   | 126  | 7     | 4    | 32      | 33945600       | 0.015625 | 0.015625 |
+| :math:`S_{RD}`        | 112  | 104   | 126  | 7     | 4    | 32      | 50722816       | 0.015625 | 0.015625 |
 +-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
-| :math:`{S_{RD}}^{-1}` | 112  | 102   | 126  | 7     | 4    | 32      | 33945600       | 0.015625 | 0.015625 |
+| :math:`{S_{RD}}^{-1}` | 112  | 102   | 126  | 7     | 4    | 32      | 50722816       | 0.015625 | 0.015625 |
 +-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
-| :math:`g`             | 112  | 102   | 126  | 7     | 4    | 32      | 33945600       | 0.015625 | 0.015625 |
+| :math:`g`             | 112  | 102   | 126  | 7     | 4    | 32      | 50722816       | 0.015625 | 0.015625 |
 +-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
-| :math:`f`             | 0    | -     | 0    | 1     | 1    | 256     | 4278190080     | 1        | 1        |
+| :math:`f`             | 0    | -     | 0    | 1     | 1    | 256     | 4294967296     | 1        | 1        |
 +-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
-| :math:`f^{-1}`        | 0    | -     | 0    | 1     | 1    | 256     | 4278190080     | 1        | 1        |
+| :math:`f^{-1}`        | 0    | -     | 0    | 1     | 1    | 256     | 4294967296     | 1        | 1        |
 +-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
-| xtime                 | 0    | -     | 1    | 1     | 1    | 256     | 4211865600     | 1        | 0.9921875|
+| xtime                 | 0    | -     | 1    | 1     | 1    | 256     | 4228642816     | 1        | 0.9921875|
 +-----------------------+------+-------+------+-------+------+---------+----------------+----------+----------+
 
 :math:`S_{RD}`
@@ -139,6 +139,8 @@ Polynomial function over :math:`\gf{GF(2^8)}`:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.wal>`_
 
@@ -175,6 +177,8 @@ Cycle structure:
 
 There are no linear structures
 
+It has no fixed points. It has no negated fixed points
+
 :math:`{S_{RD}}^{-1}`
 =====================
 
@@ -206,6 +210,8 @@ Polynomial function over :math:`\gf{GF(2^8)}`:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.wal>`_
 
@@ -242,191 +248,7 @@ Cycle structure:
 
 There are no linear structures
 
-:math:`f`
-=========
-
-The :math:`f` mapping is represented in hexadecimal notation as follows:
-
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-| | 0| 1| 2| 3| 4| 5| 6| 7| 8| 9| a| b| c| d| e| f|
-+=+==+==+==+==+==+==+==+==+==+==+==+==+==+==+==+==+
-|0|63|7c|5d|42|1f|00|21|3e|9b|84|a5|ba|e7|f8|d9|c6|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|1|92|8d|ac|b3|ee|f1|d0|cf|6a|75|54|4b|16|09|28|37|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|2|80|9f|be|a1|fc|e3|c2|dd|78|67|46|59|04|1b|3a|25|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|3|71|6e|4f|50|0d|12|33|2c|89|96|b7|a8|f5|ea|cb|d4|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|4|a4|bb|9a|85|d8|c7|e6|f9|5c|43|62|7d|20|3f|1e|01|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|5|55|4a|6b|74|29|36|17|08|ad|b2|93|8c|d1|ce|ef|f0|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|6|47|58|79|66|3b|24|05|1a|bf|a0|81|9e|c3|dc|fd|e2|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|7|b6|a9|88|97|ca|d5|f4|eb|4e|51|70|6f|32|2d|0c|13|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-|8|ec|f3|d2|cd|90|8f|ae|b1|14|0b|2a|35|68|77|56|49|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|9|1d|02|23|3c|61|7e|5f|40|e5|fa|db|c4|99|86|a7|b8|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|a|0f|10|31|2e|73|6c|4d|52|f7|e8|c9|d6|8b|94|b5|aa|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|b|fe|e1|c0|df|82|9d|bc|a3|06|19|38|27|7a|65|44|5b|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|c|2b|34|15|0a|57|48|69|76|d3|cc|ed|f2|af|b0|91|8e|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|d|da|c5|e4|fb|a6|b9|98|87|22|3d|1c|03|5e|41|60|7f|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|e|c8|d7|f6|e9|b4|ab|8a|95|30|2f|0e|11|4c|53|72|6d|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|f|39|26|07|18|45|5a|7b|64|c1|de|ff|e0|bd|a2|83|9c|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-
-Representations
----------------
-
-Polynomial representation in ANF:
-
-:math:`f_1 = x_5+x_4+x_3+x_2+x_1`
-
-:math:`f_2 = 1+x_6+x_5+x_4+x_3+x_2`
-
-:math:`f_3 = 1+x_7+x_6+x_5+x_4+x_3`
-
-:math:`f_4 = x_8+x_7+x_6+x_5+x_4`
-
-:math:`f_5 = x_8+x_7+x_6+x_5+x_1`
-
-:math:`f_6 = x_8+x_7+x_6+x_2+x_1`
-
-:math:`f_7 = 1+x_8+x_7+x_3+x_2+x_1`
-
-:math:`f_8 = 1+x_8+x_4+x_3+x_2+x_1`
-
-`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.tt>`_
-
-`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.anf>`_
-
-`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.wal>`_
-
-Walsh Spectrum representation (except first row and column):
-
-.. image:: /images/f.png
-   :width: 750 px
-   :align: center
-
-`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.lp>`_
-
-`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.dp>`_
-
-`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.ac>`_
-
-Other useful information in cryptanalysis
------------------------------------------
-
-Cycle structure:
-
-+--------------+------------------+
-| Cycle length | Number of cycles |
-+==============+==================+
-| 4            | 64               |
-+--------------+------------------+
-
-There are 255 linear structures
-
-:math:`f^{-1}`
-==============
-
-The :math:`f^{-1}` mapping is represented in hexadecimal notation as follows:
-
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-| | 0| 1| 2| 3| 4| 5| 6| 7| 8| 9| a| b| c| d| e| f|
-+=+==+==+==+==+==+==+==+==+==+==+==+==+==+==+==+==+
-|0|05|4f|91|db|2c|66|b8|f2|57|1d|c3|89|7e|34|ea|a0|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|1|a1|eb|35|7f|88|c2|1c|56|f3|b9|67|2d|da|90|4e|04|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|2|4c|06|d8|92|65|2f|f1|bb|1e|54|8a|c0|37|7d|a3|e9|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|3|e8|a2|7c|36|c1|8b|55|1f|ba|f0|2e|64|93|d9|07|4d|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|4|97|dd|03|49|be|f4|2a|60|c5|8f|51|1b|ec|a6|78|32|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|5|33|79|a7|ed|1a|50|8e|c4|61|2b|f5|bf|48|02|dc|96|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|6|de|94|4a|00|f7|bd|63|29|8c|c6|18|52|a5|ef|31|7b|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|7|7a|30|ee|a4|53|19|c7|8d|28|62|bc|f6|01|4b|95|df|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-|8|20|6a|b4|fe|09|43|9d|d7|72|38|e6|ac|5b|11|cf|85|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|9|84|ce|10|5a|ad|e7|39|73|d6|9c|42|08|ff|b5|6b|21|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|a|69|23|fd|b7|40|0a|d4|9e|3b|71|af|e5|12|58|86|cc|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|b|cd|87|59|13|e4|ae|70|3a|9f|d5|0b|41|b6|fc|22|68|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|c|b2|f8|26|6c|9b|d1|0f|45|e0|aa|74|3e|c9|83|5d|17|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|d|16|5c|82|c8|3f|75|ab|e1|44|0e|d0|9a|6d|27|f9|b3|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|e|fb|b1|6f|25|d2|98|46|0c|a9|e3|3d|77|80|ca|14|5e|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-|f|5f|15|cb|81|76|3c|e2|a8|0d|47|99|d3|24|6e|b0|fa|
-+-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
-
-Representations
----------------
-
-Polynomial representation in ANF:
-
-:math:`f_1 = x_7+x_4+x_2`
-
-:math:`f_2 = x_8+x_5+x_3`
-
-:math:`f_3 = x_6+x_4+x_1`
-
-:math:`f_4 = x_7+x_5+x_2`
-
-:math:`f_5 = x_8+x_6+x_3`
-
-:math:`f_6 = 1+x_7+x_4+x_1`
-
-:math:`f_7 = x_8+x_5+x_2`
-
-:math:`f_8 = 1+x_6+x_3+x_1`
-
-`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.tt>`_
-
-`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.anf>`_
-
-`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.wal>`_
-
-Walsh Spectrum representation (except first row and column):
-
-.. image:: /images/finv.png
-   :width: 750 px
-   :align: center
-
-`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.lp>`_
-
-`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.dp>`_
-
-`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.ac>`_
-
-Other useful information in cryptanalysis
------------------------------------------
-
-Cycle structure:
-
-+--------------+------------------+
-| Cycle length | Number of cycles |
-+==============+==================+
-| 4            | 64               |
-+--------------+------------------+
-
-There are 255 linear structures
+It has no fixed points. It has no negated fixed points
 
 :math:`g`
 =========
@@ -494,6 +316,8 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.anf>`_
 
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.char>`_
+
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.wal>`_
 
 Walsh Spectrum representation (except first row and column):
@@ -522,6 +346,204 @@ Cycle structure:
 +--------------+------------------+
 
 There are no linear structures
+
+It has 2 fixed points: (0,0,0,0,0,0,0,0), (0,0,0,0,0,0,0,1)
+
+It has no negated fixed points: (0,1,1,1,1,1,1,0), (1,0,0,0,0,0,0,1)
+
+:math:`f`
+=========
+
+The :math:`f` mapping is represented in hexadecimal notation as follows:
+
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+| | 0| 1| 2| 3| 4| 5| 6| 7| 8| 9| a| b| c| d| e| f|
++=+==+==+==+==+==+==+==+==+==+==+==+==+==+==+==+==+
+|0|63|7c|5d|42|1f|00|21|3e|9b|84|a5|ba|e7|f8|d9|c6|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|1|92|8d|ac|b3|ee|f1|d0|cf|6a|75|54|4b|16|09|28|37|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|2|80|9f|be|a1|fc|e3|c2|dd|78|67|46|59|04|1b|3a|25|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|3|71|6e|4f|50|0d|12|33|2c|89|96|b7|a8|f5|ea|cb|d4|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|4|a4|bb|9a|85|d8|c7|e6|f9|5c|43|62|7d|20|3f|1e|01|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|5|55|4a|6b|74|29|36|17|08|ad|b2|93|8c|d1|ce|ef|f0|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|6|47|58|79|66|3b|24|05|1a|bf|a0|81|9e|c3|dc|fd|e2|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|7|b6|a9|88|97|ca|d5|f4|eb|4e|51|70|6f|32|2d|0c|13|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+|8|ec|f3|d2|cd|90|8f|ae|b1|14|0b|2a|35|68|77|56|49|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|9|1d|02|23|3c|61|7e|5f|40|e5|fa|db|c4|99|86|a7|b8|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|a|0f|10|31|2e|73|6c|4d|52|f7|e8|c9|d6|8b|94|b5|aa|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|b|fe|e1|c0|df|82|9d|bc|a3|06|19|38|27|7a|65|44|5b|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|c|2b|34|15|0a|57|48|69|76|d3|cc|ed|f2|af|b0|91|8e|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|d|da|c5|e4|fb|a6|b9|98|87|22|3d|1c|03|5e|41|60|7f|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|e|c8|d7|f6|e9|b4|ab|8a|95|30|2f|0e|11|4c|53|72|6d|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|f|39|26|07|18|45|5a|7b|64|c1|de|ff|e0|bd|a2|83|9c|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+
+Representations
+---------------
+
+Polynomial representation in ANF:
+
+:math:`f_1 = x_5+x_4+x_3+x_2+x_1`
+
+:math:`f_2 = 1+x_6+x_5+x_4+x_3+x_2`
+
+:math:`f_3 = 1+x_7+x_6+x_5+x_4+x_3`
+
+:math:`f_4 = x_8+x_7+x_6+x_5+x_4`
+
+:math:`f_5 = x_8+x_7+x_6+x_5+x_1`
+
+:math:`f_6 = x_8+x_7+x_6+x_2+x_1`
+
+:math:`f_7 = 1+x_8+x_7+x_3+x_2+x_1`
+
+:math:`f_8 = 1+x_8+x_4+x_3+x_2+x_1`
+
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.tt>`_
+
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.char>`_
+
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/f.png
+   :width: 750 px
+   :align: center
+
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.lp>`_
+
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.dp>`_
+
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.ac>`_
+
+Other useful information in cryptanalysis
+-----------------------------------------
+
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 4            | 64               |
++--------------+------------------+
+
+There are 255 linear structures
+
+It has no fixed points. It has no negated fixed points
+
+:math:`f^{-1}`
+==============
+
+The :math:`f^{-1}` mapping is represented in hexadecimal notation as follows:
+
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+| | 0| 1| 2| 3| 4| 5| 6| 7| 8| 9| a| b| c| d| e| f|
++=+==+==+==+==+==+==+==+==+==+==+==+==+==+==+==+==+
+|0|05|4f|91|db|2c|66|b8|f2|57|1d|c3|89|7e|34|ea|a0|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|1|a1|eb|35|7f|88|c2|1c|56|f3|b9|67|2d|da|90|4e|04|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|2|4c|06|d8|92|65|2f|f1|bb|1e|54|8a|c0|37|7d|a3|e9|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|3|e8|a2|7c|36|c1|8b|55|1f|ba|f0|2e|64|93|d9|07|4d|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|4|97|dd|03|49|be|f4|2a|60|c5|8f|51|1b|ec|a6|78|32|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|5|33|79|a7|ed|1a|50|8e|c4|61|2b|f5|bf|48|02|dc|96|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|6|de|94|4a|00|f7|bd|63|29|8c|c6|18|52|a5|ef|31|7b|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|7|7a|30|ee|a4|53|19|c7|8d|28|62|bc|f6|01|4b|95|df|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+|8|20|6a|b4|fe|09|43|9d|d7|72|38|e6|ac|5b|11|cf|85|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|9|84|ce|10|5a|ad|e7|39|73|d6|9c|42|08|ff|b5|6b|21|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|a|69|23|fd|b7|40|0a|d4|9e|3b|71|af|e5|12|58|86|cc|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|b|cd|87|59|13|e4|ae|70|3a|9f|d5|0b|41|b6|fc|22|68|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|c|b2|f8|26|6c|9b|d1|0f|45|e0|aa|74|3e|c9|83|5d|17|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|d|16|5c|82|c8|3f|75|ab|e1|44|0e|d0|9a|6d|27|f9|b3|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|e|fb|b1|6f|25|d2|98|46|0c|a9|e3|3d|77|80|ca|14|5e|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+|f|5f|15|cb|81|76|3c|e2|a8|0d|47|99|d3|24|6e|b0|fa|
++-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+  
+
+Representations
+---------------
+
+Polynomial representation in ANF:
+
+:math:`f_1 = x_7+x_4+x_2`
+
+:math:`f_2 = x_8+x_5+x_3`
+
+:math:`f_3 = x_6+x_4+x_1`
+
+:math:`f_4 = x_7+x_5+x_2`
+
+:math:`f_5 = x_8+x_6+x_3`
+
+:math:`f_6 = 1+x_7+x_4+x_1`
+
+:math:`f_7 = x_8+x_5+x_2`
+
+:math:`f_8 = 1+x_6+x_3+x_1`
+
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.tt>`_
+
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.char>`_
+
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/finv.png
+   :width: 750 px
+   :align: center
+
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.lp>`_
+
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.dp>`_
+
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.ac>`_
+
+Other useful information in cryptanalysis
+-----------------------------------------
+
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 4            | 64               |
++--------------+------------------+
+
+There are 255 linear structures
+
+It has no fixed points. It has no negated fixed points
 
 xtime
 =====
@@ -589,6 +611,8 @@ Polynomial representation in ANF:
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.anf>`_
 
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.char>`_
+
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.wal>`_
 
 Walsh Spectrum representation (except first row and column):
@@ -628,3 +652,6 @@ Cycle structure:
 
 There are no linear structures
 
+It has 1 fixed point: (0,0,0,0,0,0,0,0)
+
+It has 1 negated fixed point: (0,1,0,1,0,1,0,1)

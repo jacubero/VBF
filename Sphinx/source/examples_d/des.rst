@@ -15,21 +15,21 @@ Cryptographic Criteria
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
 | S-box | *NL* | *NL2* | *LD* | *DEG* | *AI* | *MAXAC* | :math:`\sigma` | *LP*       | *DP* |
 +=======+======+=======+======+=======+======+=========+================+============+======+
-| S1    | 14   | 8     | 24   | 5     | 2    | 48      | 231936         | 0.31640625 | 0.25 |
+| S1    | 14   | 8     | 24   | 5     | 2    | 48      | 494080         | 0.31640625 | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S2    | 16   | 10    | 24   | 5     | 3    | 56      | 240000         | 0.25       | 0.25 |
+| S2    | 16   | 10    | 24   | 5     | 3    | 56      | 502144         | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S3    | 16   | 10    | 24   | 5     | 3    | 48      | 234624         | 0.25       | 0.25 |
+| S3    | 16   | 10    | 24   | 5     | 3    | 48      | 496768         | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S4    | 16   | 8     | 24   | 3     | 2    | 64      | 285696         | 0.25       | 0.25 |
+| S4    | 16   | 8     | 24   | 3     | 2    | 64      | 547840         | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S5    | 12   | 10    | 24   | 4     | 2    | 40      | 244608         | 0.390625   | 0.25 |
+| S5    | 12   | 10    | 24   | 4     | 2    | 40      | 506752         | 0.390625   | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S6    | 18   | 10    | 24   | 5     | 3    | 48      | 223488         | 0.19140625 | 0.25 |
+| S6    | 18   | 10    | 24   | 5     | 3    | 48      | 485632         | 0.19140625 | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S7    | 14   | 10    | 24   | 5     | 3    | 48      | 256128         | 0.31640625 | 0.25 |
+| S7    | 14   | 10    | 24   | 5     | 3    | 48      | 518272         | 0.31640625 | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S8    | 16   | 10    | 24   | 5     | 3    | 48      | 234624         | 0.25       | 0.25 |
+| S8    | 16   | 10    | 24   | 5     | 3    | 48      | 496768         | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
 
 S1
@@ -51,6 +51,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.wal>`_
 
@@ -95,6 +97,8 @@ Cycle structure:
 
 There are no linear structures
 
+It has no fixed points. It has no negated fixed points.
+
 S2
 ==
 
@@ -114,6 +118,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.wal>`_
 
@@ -158,6 +164,10 @@ Cycle structure:
 
 There are no linear structures
 
+It has 1 fixed point: (0,0,0,1,1,1)
+
+It has no negated fixed points
+
 S3
 ==
 
@@ -177,6 +187,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.wal>`_
 
@@ -221,6 +233,8 @@ Cycle structure:
 
 There are no linear structures
 
+It has no fixed points. It has no negated fixed points
+
 S4
 ==
 
@@ -240,6 +254,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.wal>`_
 
@@ -280,6 +296,8 @@ Cycle structure:
 
 There are no linear structures
 
+It has no fixed points. It has no negated fixed points
+
 S5
 ==
 
@@ -299,6 +317,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.wal>`_
 
@@ -337,6 +357,10 @@ Cycle structure:
 
 There are no linear structures
 
+It has 3 fixed points: (0,0,0,1,0,0), (0,0,1,0,1,0), (0,0,1,1,0,1)
+
+It has no negated fixed points.
+
 S6
 ==
 
@@ -356,6 +380,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.wal>`_
 
@@ -398,6 +424,8 @@ Cycle structure:
 
 There are no linear structures
 
+It has no fixed points. It has no negated fixed points
+
 S7
 ==
 
@@ -417,6 +445,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.wal>`_
 
@@ -463,6 +493,10 @@ Cycle structure:
 
 There are no linear structures
 
+It has 1 fixed point: (0,0,0,1,1,1)
+
+It has no negated fixed points
+
 S8
 ==
 
@@ -482,6 +516,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.wal>`_
 
@@ -525,3 +561,5 @@ Cycle structure:
 +--------------+------------------+
 
 There are no linear structures
+
+It has no fixed points. It has no negated fixed points

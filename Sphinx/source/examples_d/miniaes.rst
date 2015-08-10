@@ -90,14 +90,15 @@ The inverse of the previous table is easily computed by interchanging the input 
 Cryptographic Criteria
 ======================
 
-+--------------+------+-------+------+-------+------+---------+----------------+--------+------+
-| S-box        | *NL* | *NL2* | *LD* | *DEG* | *AI* | *MAXAC* | :math:`\sigma` | *LP*   | *DP* |
-+==============+======+=======+======+=======+======+=========+================+========+======+
-| NibbleSub    | 2    | 0     | 4    | 2     | 2    | 16      | 13056          | 0.5625 | 0.5  |
-+--------------+------+-------+------+-------+------+---------+----------------+--------+------+
-| NibbleSubInv | 2    | 0     | 4    | 2     | 2    | 16      | 13056          | 0.5625 | 0.5  |
-+--------------+------+-------+------+-------+------+---------+----------------+--------+------+
-
++--------------+------+------+-------+------+-------+------+---------+----------------+--------+------+
+| S-box        | size | *NL* | *NL2* | *LD* | *DEG* | *AI* | *MAXAC* | :math:`\sigma` | *LP*   | *DP* |
++==============+======+======+=======+======+=======+======+=========+================+========+======+
+| NibbleSub    | 4x4  | 2    | 0     | 4    | 2     | 2    | 16      | 17152          | 0.5625 | 0.5  |
++--------------+------+------+-------+------+-------+------+---------+----------------+--------+------+
+| NibbleSubInv | 4x4  | 2    | 0     | 4    | 2     | 2    | 16      | 17152          | 0.5625 | 0.5  |
++--------------+------+------+-------+------+-------+------+---------+----------------+--------+------+
+| MixColumn    | 8x8  | 0    | -     | 0    | 1     | 1    | 256     | 4294967296     | 1      | 1    |
++--------------+------+------+-------+------+-------+------+---------+----------------+--------+------+
 NibbleSub
 =========
 
@@ -117,6 +118,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.anf>`_
+
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.wal>`_
 
@@ -181,6 +184,8 @@ Cycle structure:
 
 There are no linear structures
 
+It has no fixed points and 2 negated fixed points: (0,0,1,0), (0,1,1,1)
+
 NibbleSubInv
 ============
 
@@ -200,6 +205,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.anf>`_
+
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.wal>`_
 
@@ -264,6 +271,8 @@ Cycle structure:
 
 There are no linear structures
 
+It has no fixed points and 2 negated fixed points: (1,0,0,0), (1,1,0,1)
+
 MixColumn
 =========
 
@@ -291,6 +300,8 @@ Polynomial representation in ANF:
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.tt>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.anf>`_
+
+`Characteristic Function <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.wal>`_
 
@@ -320,6 +331,10 @@ Cycle structure:
 +--------------+------------------+
 
 There 255 linear structures
+
+It has 15 fixed points: (0,0,0,0,0,0,0,0), (0,0,0,1,0,0,0,1), (0,0,1,0,0,0,1,0), (0,0,1,1,0,0,1,1), (0,1,0,0,0,1,0,0), (0,1,0,1,0,1,0,1), (0,1,1,0,0,1,1,0), (0,1,1,1,0,1,1,1), (1,0,0,0,1,0,0,0), (1,0,0,1,1,0,0,1), (1,0,1,0,1,0,1,0), (1,0,1,1,1,0,1,1), (1,1,0,0,1,1,0,0), (1,1,0,1,1,1,0,1), (1,1,1,0,1,1,1,0)
+
+It has 16 negated fixed points: (0,0,0,0,1,1,1,0), (0,0,0,1,1,1,1,1), (0,0,1,0,1,1,0,0), (0,0,1,1,1,1,0,1), (0,1,0,0,1,0,1,0), (0,1,0,1,1,0,1,1), (0,1,1,0,1,0,0,0), (0,1,1,1,1,0,0,1), (1,0,0,0,0,1,1,0), (1,0,0,1,0,1,1,1), (1,0,1,0,0,1,0,0), (1,0,1,1,0,1,0,1), (1,1,0,0,0,0,1,0), (1,1,0,1,0,0,1,1), (1,1,1,0,0,0,0,0), (1,1,1,1,0,0,0,1)
 
 ks0
 ===

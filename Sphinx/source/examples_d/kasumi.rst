@@ -14,13 +14,13 @@ This cipher has two S-boxes: a 7x7 S-box called S7 and a 9x9 S-box called S9.
 Cryptographic Criteria
 ======================
 
-+-------+------+-------+------+-------+------+---------+----------------+------------+------------+
-| S-box | *NL* | *NL2* | *LD* | *DEG* | *AI* | *MAXAC* | :math:`\sigma` | *LP*       | *DP*       |
-+=======+======+=======+======+=======+======+=========+================+============+============+
-| S7    | 56   | 36    | 63   | 3     | 3    | 16      | 4161536        | 0.015625   | 0.015625   |
-+-------+------+-------+------+-------+------+---------+----------------+------------+------------+
-| S9    | 240  | 192   | 255  | 2     | 2    | 512     | 267911168      | 0.00390625 | 0.00390625 |
-+-------+------+-------+------+-------+------+---------+----------------+------------+------------+
++-------+------+-----+-------+------+-------+------+---------+----------------+------------+------------+
+| S-box | size |*NL* | *NL2* | *LD* | *DEG* | *AI* | *MAXAC* | :math:`\sigma` | *LP*       | *DP*       |
++=======+======+=====+=======+======+=======+======+=========+================+============+============+
+| S7    | 7x7  | 56  | 36    | 63   | 3     | 3    | 16      | 6258688        | 0.015625   | 0.015625   |
++-------+------+-----+-------+------+-------+------+---------+----------------+------------+------------+
+| S9    | 9x9  | 240 | 192   | 255  | 2     | 2    | 512     | 402128896      | 0.00390625 | 0.00390625 |
++-------+------+-----+-------+------+-------+------+---------+----------------+------------+------------+
 
 S7
 ===
@@ -49,6 +49,8 @@ Polynomial representation in ANF:
 `Decimal Representation <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.dec>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.wal>`_
 
@@ -83,6 +85,10 @@ Cycle structure:
 
 There are no linear structures
 
+It has 1 fixed point: (0,0,1,1,0,1,1)
+
+It has no negated fixed points
+
 S9
 ===
 
@@ -114,6 +120,8 @@ Polynomial representation in ANF:
 `Decimal Representation <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.dec>`_
 
 `ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.anf>`_
+
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.wal>`_
 
@@ -147,6 +155,10 @@ Cycle structure:
 +--------------+------------------+
 
 There are no linear structures
+
+It has 1 fixed point: (0,1,0,0,1,0,1,1,1)
+
+It has 1 negated fixed points (1,0,0,0,1,1,0,0,0)
 
 FI
 ==
