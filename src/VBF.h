@@ -1668,7 +1668,7 @@ namespace VBFNS {
 
          for (i = 0; i < numrows; i++)
          {
-            for (j = 1; j < numcolumns; j++)
+            for (j = 0; j < numcolumns; j++)
             {
                x += power(W[i][j],4);
             }
