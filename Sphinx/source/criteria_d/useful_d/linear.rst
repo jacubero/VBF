@@ -42,17 +42,11 @@ The following program prints the linear relations associated with a value of the
       return 0;
    }
 
-For instance, if we execute this program having the truth Table of the DES Sbox called S1 and the value 576, the output would be the following:
+For instance, if we execute this program having the truth Table of the NibbleSub Sbox and the value 144, the output would be the following:
 
 .. code-block:: console
 
-   x4=y3+y4+y5+y6
-   x2+x5+x6=y4+y5+y6
-   x2+x4+x5+x6=y3
-   x2+x3+x4+x6=y3+y4
-   x1+x3=y3+y4+y5
-   x1+x3+x4=y3+y5+y6
-   x1+x3+x4+x5+x6=y4+y5
-   x1+x2+x3+x4+x5+x6=y5
-   x1+x2+x3+x4+x5+x6=y3+y5
-
+   x4=y2+y3+y4
+   x3=y1+y2+y3
+   x3+x4=y1+y4
+   x1=y1+y2+y3+y4

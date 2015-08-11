@@ -1435,7 +1435,6 @@ namespace VBFNS {
       }
    }
 
-
    // Maximum value of LAT
    void maxLAT(NTL::ZZ& x, VBF& a)
    {
@@ -1982,7 +1981,6 @@ namespace VBFNS {
       vector<long> cols;
       NTL::mat_ZZ D;
       unsigned long i, j, n = a.n(), spacen = a.spacen(), spacem = a.spacem();
-      NTL::vec_GF2 v;
       string str;
       
       D = DAT(a);
@@ -1997,36 +1995,8 @@ namespace VBFNS {
 
       for (i = 0; i < rows.size(); i++)
       {
-         if (rows[i] == 0) str += "0";
-         v = to_vecGF2(rows[i], n);
-         int count = 0;
-         for (j = 0; j < n; j++)
-         {
-            if (v[j] == 1)
-            {
-               if (count > 0) str +="+";
-               str += "x";
-               str += long2string(j+1);
-               count = 1;
-            }
-         }
-         str += "=";
-         if (cols[i] == 0) str += "0";
-         v = to_vecGF2(cols[i], n);
-         count = 0;
-         for (j = 0; j < n; j++)
-         {
-            if (v[j] == 1)
-            {
-               if (count > 0) str +="+";
-               str += "y";
-               str += long2string(j+1);
-               count = 1;
-            }
-         }
-         str += "\n";
+         s << to_vecGF2(rows[i], n) << "->" << to_vecGF2(cols[i], n) << endl;
       }
-      s << str;
 
    }   
    
