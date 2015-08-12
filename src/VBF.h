@@ -1332,20 +1332,20 @@ namespace VBFNS {
       if (n % 2 == 0 && m <= n/2) 
       {
         nlm = to_RR(power(to_ZZ(2),(n-1))) - to_RR(power(to_ZZ(2),(n/2-1)));
-      } else if (n == 3) {
-	nlm = to_RR(2.0);
-      } else if (n == 5) {
-	nlm = to_RR(12.0);
-      } else if (n == 7) {
-	nlm = to_RR(56.0);
-      } else if (n == 9) {
-	nlm = to_RR(242.0);
-      } else if (n == 11) {
-        nlm = to_RR(996.0);
-      } else if (n == 13) {
-        nlm = to_RR(4040.0);
-      } else if (n == 15) {
-        nlm = to_RR(16276.0);
+      } else if (n == 3 && m == 1) {
+        nlm = to_RR(2.0);
+      } else if (n == 5 && m == 1) {
+        nlm = to_RR(12.0);
+      } else if (n == 7 && m == 1) {
+        nlm = to_RR(56.0);
+      } else if (n == 9 && m == 1) {
+        nlm = to_RR(244.0);
+      } else if (n == 11 && m == 1) {
+        nlm = to_RR(1000.0);
+      } else if (n == 13 && m == 1) {
+        nlm = to_RR(4050.0);
+      } else if (n == 15 && m == 1) {
+        nlm = to_RR(16292.0);
       } else if (m < n) {
 // Covering radius bound
         nlm = to_RR(power(to_ZZ(2),(n-1))) - to_RR(power(to_ZZ(2),(n/2-1)));
