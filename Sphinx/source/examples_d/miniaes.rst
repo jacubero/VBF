@@ -87,8 +87,8 @@ The inverse of the previous table is easily computed by interchanging the input 
 | 1111  | 0101             |
 +-------+------------------+
 
-Cryptographic Criteria
-======================
+Summary
+=======
 
 +--------------+------+------+-------+------+-------+------+---------+----------------+--------+------+
 | S-box        | size | *NL* | *NL2* | *LD* | *DEG* | *AI* | *MAXAC* | :math:`\sigma` | *LP*   | *DP* |

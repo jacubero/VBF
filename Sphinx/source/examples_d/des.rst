@@ -9,8 +9,8 @@ DES is a block cipher used for securing sensitive but unclassified material by U
 
 DES has eight 6x4 S-boxes: S1, S2, S3, S4, S5, S6, S7, S8.
 
-Cryptographic Criteria
-======================
+Summary
+=======
 
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
 | S-box | *NL* | *NL2* | *LD* | *DEG* | *AI* | *MAXAC* | :math:`\sigma` | *LP*       | *DP* |
