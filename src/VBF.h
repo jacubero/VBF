@@ -1325,31 +1325,28 @@ namespace VBFNS {
    // Returns the maximum possible nonlinearity of a VBF with the same dimensions
    NTL::RR nlmax(VBF& a)
    { 
-      NTL::RR nlm;
+      NTL::RR nlm = -1;
       int  n = a.n();
       int  m = a.m();
      
       if (n % 2 == 0 && m <= n/2) 
       {
         nlm = to_RR(power(to_ZZ(2),(n-1))) - to_RR(power(to_ZZ(2),(n/2-1)));
-      } else if (n == 3 && m == 1) {
+      } else if (n == 3) {
         nlm = to_RR(2.0);
-      } else if (n == 5 && m == 1) {
+      } else if (n == 5) {
         nlm = to_RR(12.0);
-      } else if (n == 7 && m == 1) {
+      } else if (n == 7) {
         nlm = to_RR(56.0);
-      } else if (n == 9 && m == 1) {
+      } else if (n == 9) {
         nlm = to_RR(244.0);
-      } else if (n == 11 && m == 1) {
+      } else if (n == 11) {
         nlm = to_RR(1000.0);
-      } else if (n == 13 && m == 1) {
+      } else if (n == 13) {
         nlm = to_RR(4050.0);
-      } else if (n == 15 && m == 1) {
+      } else if (n == 15) {
         nlm = to_RR(16292.0);
-      } else if (m < n) {
-// Covering radius bound
-        nlm = to_RR(power(to_ZZ(2),(n-1))) - to_RR(power(to_ZZ(2),(n/2-1)));
-      } else if (m >= n) {
+      } else if (n % 2 == 0 && m > n/2) {
 // Sidelnikov-Chabaud-Vaudenay bound
         nlm = to_RR(power(to_ZZ(2),(n-1))) - to_RR(0.5*sqrt(to_RR(3*power(to_ZZ(2),n)-2-2*((power(to_ZZ(2),n)-1)*(power(to_ZZ(2),n-1)-1))/(power(to_ZZ(2),m)-1))));
       }
@@ -1482,7 +1479,7 @@ namespace VBFNS {
          if (n % 2 == 0) {
             nl = a.getnl(); 
             nlm = nlmax(a);
-            if (nl == 0) {
+	    if (nl == 0) {
                typenl = LINEAR;
             } else if (nl == nlm) {
                typenl = BENT;
