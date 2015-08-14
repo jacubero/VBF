@@ -1,0 +1,46 @@
+Argument Dimension = 6
+Argument space has 64 elements.
+Image Dimension = 2
+Image space has 4 elements.
+
+Writing Algebraic Normal Form to file: S7.anf
+[Columns = Image components]
+
+Writing Characteristic Function to file: S7.char
+[Columns = Image components]
+
+Writing Walsh Spectrum to file: S7.wal
+
+Writing Linear Profile to file: S7.lp
+[To normalize divide by 4096]
+
+Writing Differential Profile to file: S7.dp
+[To normalize divide by 16384]
+
+Writing the polynomials in ANF to file: S7.pol
+
+Writing Linear structures to file: S7.ls
+
+Writing Autocorrelation Spectrum to file: S7.ac
+
+Writing Cycle Structure to file: S7.cy
+
+Nonlinearity: 18
+Second order Nonlinearity: 64
+Linearity distance: 15
+Algebraic degree: 5
+Algebraic immunity: 3
+Absolute indicator: 48
+Sum-of-squares indicator: 312832
+Linear potential: 0.19140625
+Differential potential: 0.53125
+Maximum Nonlinearity (if n is even): 28
+Maximum Linearity distance: 48
+The fixed points are: 
+[[0 0 0 0 0 0]
+]
+The negated fixed points are: 
+[]
+Correlation immunity: 0
+It is a balanced function
+The function is PC of degree 0
