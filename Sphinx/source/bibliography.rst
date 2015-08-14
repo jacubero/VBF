@@ -16,6 +16,10 @@ Bibliography
 
 .. [FaugereA:03] J.-C. Faugere and G. Ars. An algebraic cryptanalysis of nonlinear filter generators using Grobner bases. Technical report, INRIA 4739, 2003.
 
+.. [Hou:97] Hou, X. (1997). On the norm and covering radius of the first order reed-muller codes. In IEEE Transactions on Information Theory, Volume IT-43(3), pages 1025–1027.
+
+.. [Nyberg:91] Nyberg, K. (1991). Perfect nonlinear s-boxes. In EUROCRYPT, pages 378–386.
+
 .. [Nyberg:92] Kaisa Nyberg. On the construction of highly nonlinear permutations. In Rainer A. Rueppel, editor, Advances in Cryptology EUROCRYPT 92, volume 658 of Lecture Notes in Computer Science, pages 92–98. Springer Berlin Heidelberg, 1993.
 
 .. [fse-Nyberg:94] Kaisa Nyberg. S-boxes and round functions with controllable linearity and differential uniformity. In Bart Preneel, editor, Fast Software Encryption, volume 1008 of Lecture Notes in Computer Science, pages 111–130. Springer Berlin / Heidelberg, 1995.

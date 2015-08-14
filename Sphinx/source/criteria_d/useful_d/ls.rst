@@ -1,7 +1,7 @@
 Linear structures
 =================
 
-The *Linear structures* of *F*, defined as the vectors for which its associated row in the Differential Profile coincides with the vector zero. 
+Let :math:`F \in \funct{F}_{n,m}`, then :math:`\vec{u} \neq \vec{0} \in \gf{V_n}` is a linear structure of :math:`F` in terms of Differential Profile if and only if :math:`\matr{DP}(\vec{u},\vec{v}) = 0 \ \fa  \vec{v} \neq \vec{0} \in \gf{V_m}`
 
 The method used to obtain this information is the following:
 

@@ -52,7 +52,7 @@ const int UNDEFINED = -1;
 const int BENT = 1;
 const int ALMOST_OPTIMAL = 2;
 const int LINEAR = 3;
-
+const int ALMONST_BENT = 4;
 
 namespace VBFNS {
 
@@ -1469,6 +1469,7 @@ namespace VBFNS {
    {
       int rep = a.getrep();
       int n = a.n();
+      int m= a.m();
       int b = a.gettypenl();
       NTL::RR nl, nlm, nlo;
       
@@ -1476,33 +1477,39 @@ namespace VBFNS {
       	 typenl = LINEAR;
          a.puttypenl(typenl);
       }	else if (b == UNDEFINED) {
-         if (n % 2 == 0) {
-            nl = a.getnl(); 
+         nl = a.getnl();
+         typenl = 0;
+         if (nl == 0) {
+            typenl = LINEAR;
+         } else if (n % 2 == 0 && m == 1) {
             nlm = nlmax(a);
-	    if (nl == 0) {
-               typenl = LINEAR;
-            } else if (nl == nlm) {
+            
+	    if (nl == nlm) {
                typenl = BENT;
 	    } else {
               nlo = to_RR(power(to_ZZ(2),(n-1))) - to_RR(power(to_ZZ(2),n/2)); 
               
 	      if (nl >= nlo) {
                  typenl = ALMOST_OPTIMAL;
-              } else {
-                 typenl = 0;
               } 
             }
-         } else {
-            nl = a.getnl(); 
+         } else if (n % 2 == 1 && m == 1) {
             nlo = to_RR(power(to_ZZ(2),(n-1))) - to_RR(power(to_ZZ(2),((n-1)/2))); 
             
-            if (nl == 0) {
-               typenl = LINEAR;
-            } else if (nl >= nlo) {
+            if (nl >= nlo) {
                typenl = ALMOST_OPTIMAL;
-            } else {
-               typenl = 0;
             } 
+         } else if (n % 2 == 0 && m <= n/2) {
+            nlm = nlmax(a);
+
+            if (nl == nlm) {
+               typenl = BENT;
+	    }
+         } else if (n % 2 == 1 && n == m) {
+            nlo = to_RR(power(to_ZZ(2),(n-1))) - to_RR(power(to_ZZ(2),((n-1)/2)));
+            if (nl == nlo) {
+               typenl = ALMOST_BENT;
+            }
          }
          a.puttypenl(typenl);
       } else {
