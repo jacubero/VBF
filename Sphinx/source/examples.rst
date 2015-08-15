@@ -2,7 +2,7 @@
 Analysis of Cryptanalytic Algorithms
 ####################################
 
-Hereunder you can find a summary of the cryptographic criteria of several modern ciphers. Below you can find a legend describing the cryptographic criteria usedin this chapter: 
+Hereunder you can find a summary of the cryptographic criteria of several modern ciphers. Below you can find a legend describing the cryptographic criteria used in this chapter: 
 
 +----------------+--------------------------+
 | **NL**         | Nonlinearity             |
@@ -34,16 +34,19 @@ Hereunder you can find a summary of the cryptographic criteria of several modern
    :depth: 2
 
 .. include::
-   examples_d/miniaes.rst
-
-.. include::
-   examples_d/kasumi.rst
+   examples_d/aes.rst
 
 .. include::
    examples_d/des.rst
 
 .. include::
-   examples_d/aes.rst
+   examples_d/kasumi.rst
 
 .. include::
-   examples_d/nl-9.rst
+   examples_d/macguffin.rst
+
+.. include::
+   examples_d/miniaes.rst
+
+
+

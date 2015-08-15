@@ -25,6 +25,7 @@ Table of Contents:
    Cryptographic Criteria <criteria>
    Operations and constructions over Vector Boolean Functions <operations>
    Analysis of Cryptanalytic Algorithms <examples>
+   Other applications <applications>
    FAQ <faq>
    Bibliography <bibliography>
 
