@@ -30,14 +30,19 @@ In this chapter, the operations over Vector Boolean Functions supported by the V
 **Section 6: Analysis of Cryptanalytic Algorithms**
 ===================================================
 
-In this chapter, a number of examples that illustrate some aspects of the functionality and programming interface of VBF are included.
+In this chapter a number of ciphers are analysed.
 
-**Section 7: FAQ**
+**Section 7: Other applications**
+=================================
+
+In this chapter, a number of examples that illustrate some other aspects of the functionality and programming interface of VBF are included.
+
+**Section 8: FAQ**
 ==================
 
 Frequently Asked Questions.
 
-**Section 8: Bibliography**
+**Section 9: Bibliography**
 ===========================
 
 This chapter includes all citations referenced along the Reference Manual.

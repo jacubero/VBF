@@ -2,7 +2,7 @@
 MacGuffin analysis
 ******************
 
-MacGuffincription
+Description
 ===========
 
 MacGuffin is a block cipher uses a F-function which consists of the 8 S-boxes of the DES, but the two middle output bits of each S-box are neglected in order to obtain a 16-bit output.
