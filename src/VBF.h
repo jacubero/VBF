@@ -52,7 +52,7 @@ const int UNDEFINED = -1;
 const int BENT = 1;
 const int ALMOST_OPTIMAL = 2;
 const int LINEAR = 3;
-const int ALMONST_BENT = 4;
+const int ALMOST_BENT = 4;
 
 namespace VBFNS {
 
@@ -1325,7 +1325,7 @@ namespace VBFNS {
    // Returns the maximum possible nonlinearity of a VBF with the same dimensions
    NTL::RR nlmax(VBF& a)
    { 
-      NTL::RR nlm = -1;
+      NTL::RR nlm = to_RR(-1);
       int  n = a.n();
       int  m = a.m();
      
