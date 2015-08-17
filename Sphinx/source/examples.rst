@@ -37,7 +37,7 @@ Hereunder you can find a summary of the cryptographic criteria of several modern
    examples_d/aes.rst
 
 .. include::
-   examples_d/cammellia.rst
+   examples_d/camellia.rst
 
 .. include::
    examples_d/des.rst
@@ -54,5 +54,7 @@ Hereunder you can find a summary of the cryptographic criteria of several modern
 .. include::
    examples_d/miniaes.rst
 
+.. include::
+   examples_d/square.rst
 
 
