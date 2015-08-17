@@ -37,7 +37,13 @@ Hereunder you can find a summary of the cryptographic criteria of several modern
    examples_d/aes.rst
 
 .. include::
+   examples_d/cammellia.rst
+
+.. include::
    examples_d/des.rst
+
+.. include::
+   examples_d/grandcru.rst
 
 .. include::
    examples_d/kasumi.rst
