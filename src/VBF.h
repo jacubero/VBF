@@ -1374,7 +1374,7 @@ namespace VBFNS {
          t = t + Combination(n,i);
       }
       if (t > 30) {
-         x = -1;
+         min = -1;
          return;
       }
       spacet = 1 << t;
