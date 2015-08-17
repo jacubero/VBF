@@ -37,6 +37,9 @@ Hereunder you can find a summary of the cryptographic criteria of several modern
    examples_d/aes.rst
 
 .. include::
+   examples_d/anubis.rst
+
+.. include::
    examples_d/camellia.rst
 
 .. include::
