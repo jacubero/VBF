@@ -1368,15 +1368,15 @@ namespace VBFNS {
       NTL::mat_GF2 T,Tt,B,Bt;
       NTL::vec_GF2 u,g;
 
-      x = spacen;
+      min = spacen;
       for (i = 0; i <= r; i++)
       {
          t = t + Combination(n,i);
       }
-      if (t > 30)
+      if (t > 30) {
          x = -1;
          return;
-
+      }
       spacet = 1 << t;
 
       T = TT(F);
@@ -1426,8 +1426,8 @@ namespace VBFNS {
           {
 	     u = to_vecGF2(j,t);
 	     g = u*C;
-             min = weight(f+g);
-             if (min < x) x = min;
+             x = weight(f+g);
+             if (x < min) min = x;
 	  }
       }
    }
