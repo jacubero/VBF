@@ -1356,15 +1356,15 @@ namespace VBFNS {
 
    // r-th order nonlinearity
    // return -1 if the number of functions to check is too large (> maximum value of long) 
-   void nlr(long& x, VBF& F, int r)
+   void nlr(long& min, VBF& F, int r)
    {
       int  n = F.n();
       int  m = F.m();
       long spacen = F.spacen();
       long spacem = F.spacem();
-      long num, cont=0, t=0, spacet;
+      long num, cont=0, t=0, spacet,x;
       long *v = NULL;
-      int  i,j,min;
+      int  i,j;
       NTL::mat_GF2 T,Tt,B,Bt;
       NTL::vec_GF2 u,g;
 
