@@ -24,7 +24,11 @@ Table of Contents:
    Initializations and representations <representations>
    Cryptographic Criteria <criteria>
    Operations and constructions over Vector Boolean Functions <operations>
-   Analysis of Cryptanalytic Algorithms <examples>
+   Analysis of AES competition cryptographic algorithms <aes>
+   Analysis of DES-related cryptographic algorithms <des>
+   Analysis of NESSIE project cryptographic algorithms <nessie>   
+   Analysis of Rijndael-related cryptographic algorithms <rijndael>
+   Analysis of other cryptographic algorithms <other>  
    Other applications <applications>
    FAQ <faq>
    Bibliography <bibliography>

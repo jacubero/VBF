@@ -1,8 +1,10 @@
-####################################
-Analysis of Cryptanalytic Algorithms
-####################################
+###################################################
+Analysis of NESSIE project cryptographic algorithms
+###################################################
 
-Hereunder you can find a summary of the cryptographic criteria of several modern ciphers. Below you can find a legend describing the cryptographic criteria used in this chapter: 
+The NESSIE call includes a request for a broad set of algorithms providing date confidentiality, data authentication, and entity authentication. These algorithms include block ciphers, stream ciphers, hash functions, MAC algorithms, digital signature schemes, and public-key encryption and identification schemes. In this chapter, several cryptographic algorithms from NESSIE (New European Schemes for Signature, Integrity, and Encryption) research project candidates are analysed.
+
+Below you can find a legend describing the cryptographic criteria used in this chapter: 
 
 +----------------+--------------------------+
 | **NL**         | Nonlinearity             |
@@ -34,30 +36,10 @@ Hereunder you can find a summary of the cryptographic criteria of several modern
    :depth: 2
 
 .. include::
-   examples_d/aes.rst
+   nessie_d/anubis.rst
 
 .. include::
-   examples_d/anubis.rst
+   nessie_d/camellia.rst
 
 .. include::
-   examples_d/camellia.rst
-
-.. include::
-   examples_d/des.rst
-
-.. include::
-   examples_d/grandcru.rst
-
-.. include::
-   examples_d/kasumi.rst
-
-.. include::
-   examples_d/macguffin.rst
-
-.. include::
-   examples_d/miniaes.rst
-
-.. include::
-   examples_d/square.rst
-
-
+   nessie_d/grandcru.rst

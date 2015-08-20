@@ -1,6 +1,6 @@
-******************
-Grand Cru analysis
-******************
+*********
+Grand Cru
+*********
 
 Introduction
 ============
@@ -48,6 +48,10 @@ Polynomial representation in ANF:
 `Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/GrandCru/S.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/GrandCru/S.wal>`_
+
+.. image:: /images/GrandCru.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/GrandCru/S.lp>`_
 

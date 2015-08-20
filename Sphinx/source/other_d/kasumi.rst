@@ -1,6 +1,6 @@
-***************
-KASUMI analysis
-***************
+******
+KASUMI
+******
 
 .. _secExamplesKASUMI
 

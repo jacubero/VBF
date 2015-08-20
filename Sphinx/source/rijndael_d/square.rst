@@ -1,6 +1,6 @@
-***************
-Square analysis
-***************
+******
+Square
+******
 
 Introduction
 ============
@@ -48,6 +48,10 @@ Polynomial representation in ANF:
 `Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/Square/S.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/Square/S.wal>`_
+
+.. image:: /images/Square.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Square/S.lp>`_
 

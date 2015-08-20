@@ -1,6 +1,6 @@
-******************
-MacGuffin analysis
-******************
+*********
+MacGuffin
+*********
 
 Description
 ===========
@@ -52,6 +52,10 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S1/S1.wal>`_
 
+.. image:: /images/MacG1.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S1/S1.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S1/S1.dp>`_
@@ -82,6 +86,10 @@ Polynomial representation in ANF:
 `Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S2/S2.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S2/S2.wal>`_
+
+.. image:: /images/MacG2.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S2/S2.lp>`_
 
@@ -114,6 +122,10 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S3/S3.wal>`_
 
+.. image:: /images/MacG3.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S3/S3.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S3/S3.dp>`_
@@ -144,6 +156,10 @@ Polynomial representation in ANF:
 `Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S4/S4.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S4/S4.wal>`_
+
+.. image:: /images/MacG4.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S4/S4.lp>`_
 
@@ -176,6 +192,10 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S5/S5.wal>`_
 
+.. image:: /images/MacG5.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S5/S5.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S5/S5.dp>`_
@@ -206,6 +226,10 @@ Polynomial representation in ANF:
 `Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S6/S6.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S6/S6.wal>`_
+
+.. image:: /images/MacG6.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S6/S6.lp>`_
 
@@ -238,6 +262,10 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S7/S7.wal>`_
 
+.. image:: /images/MacG7.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S7/S7.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S7/S7.dp>`_
@@ -268,6 +296,10 @@ Polynomial representation in ANF:
 `Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S8/S8.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S8/S8.wal>`_
+
+.. image:: /images/MacG8.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S8/S8.lp>`_
 

@@ -1,6 +1,6 @@
-***************
-Anubis analysis
-***************
+******
+Anubis
+******
 
 Introduction
 ============
@@ -66,6 +66,12 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/Anubis/S.wal>`_
 
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/AnubisS.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Anubis/S.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Anubis/S.dp>`_
@@ -113,6 +119,12 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/Anubis/P.wal>`_
 
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/AnubisP.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Anubis/P.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Anubis/P.dp>`_
@@ -157,6 +169,12 @@ Polynomial representation in ANF:
 `Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/Anubis/Q.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/Anubis/Q.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/AnubisQ.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Anubis/Q.lp>`_
 

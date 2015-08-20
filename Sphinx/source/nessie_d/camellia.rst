@@ -1,6 +1,6 @@
-*****************
-Camellia analysis
-*****************
+********
+Camellia
+********
 
 Introduction
 ============
@@ -55,6 +55,12 @@ Polynomial representation in ANF:
 `Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S1/S1.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S1/S1.wal>`_
+
+Walsh Spectrum representation (except first row and column):
+
+.. image:: /images/CamelliaS1.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S1/S1.lp>`_
 
@@ -112,6 +118,10 @@ Polynomial representation in ANF:
 `Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S2/S2.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S2/S2.wal>`_
+
+.. image:: /images/CamelliaS2.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S2/S2.lp>`_
 
@@ -176,6 +186,10 @@ Polynomial representation in ANF:
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S3/S3.wal>`_
 
+.. image:: /images/CamelliaS3.png
+   :width: 750 px
+   :align: center
+
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S3/S3.lp>`_
 
 `Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S3/S3.dp>`_
@@ -234,6 +248,10 @@ Polynomial representation in ANF:
 `Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S4/S4.char>`_
 
 `Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S4/S4.wal>`_
+
+.. image:: /images/CamelliaS4.png
+   :width: 750 px
+   :align: center
 
 `Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S4/S4.lp>`_
 
