@@ -36,6 +36,15 @@ Below you can find a legend describing the cryptographic criteria used in this c
    :depth: 2
 
 .. include::
+   aes_d/crypton.rst
+
+.. include::
+   aes_d/deal.rst
+
+.. include::
+   aes_d/e2.rst
+
+.. include::
    aes_d/Rijndael.rst
 
 

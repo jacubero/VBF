@@ -2,6 +2,8 @@
 DES
 ***
 
+.. _secExamplesDES
+
 Description
 ===========
 
