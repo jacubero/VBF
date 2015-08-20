@@ -326,43 +326,6 @@ namespace VBFNS {
        _VBF__trace = str2GF2EX(str,d);
      }
 
-     // set the Truth Table with Hexadecimal representation to s
-     // Only for Boolean Functions m=1
-     void putHexTT(istream& s)
-     {
-       long c,i,val;
-       NTL::vec_GF2 bin;
-       vector<int> ibuf;
-
-       c = s.peek();
-       val = CharToIntVal(c);
-       while (val != -1) {
-          bin = to_vecGF2(val,4);
-          for (i = 0; i < 4; i++)
-             ibuf.push_back(rep(bin[i]));
- 
-          s.get();
-          c = s.peek();
-          val = CharToIntVal(c);
-       }
-
-       _VBF__spacen = ibuf.size();
-       _VBF__m = 1;
-       _VBF__spacem = 1 << _VBF__m;
-       _VBF__n = logtwo(_VBF__spacen);
-
-       if (_VBF__rep == UNDEFINED)
-          _VBF__rep = TTMATRIX;
-
-       _VBF__tt.SetDims(_VBF__spacen, _VBF__m);
-
-       for (i = 0; i < _VBF__spacen; i++)
-       {
-	   _VBF__tt[i][0] = to_GF2(ibuf[i]);
-       }
-       
-     }
-
      // set the Truth Table with binary representation to s
      // Only for Boolean Functions m=1
      void putBinTT(istream& s)
