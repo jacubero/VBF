@@ -13,7 +13,7 @@ They can be defined in different representations:
 	-tt = 2^n x m mat_GF2 representing the truth table 
 	-per = 1 x m vec_ZZ representing the permutation transformation (n==m)
 	-exp_comp = 1 x m vec_ZZ representing the expansion and compression transformation (n!=m)
-	-linmat = n x m mat_GF2 representing the matrix associated with a linear                  Vector Boolean Function 
+	-linmat = n x m mat_GF2 representing the matrix associated with a linear Vector Boolean Function 
 	-trac = GF2EX representing trace with GF2X primitive polynomial
         -hex = Hexadecimal representation of the Truth Table
 	-dec = Decimal representation of The Truth Table	
@@ -361,6 +361,90 @@ namespace VBFNS {
 	   _VBF__tt[i][0] = to_GF2(ibuf[i]);
        }
        
+     }
+
+     // set the Truth Table with binary representation to s
+     // Only for Boolean Functions m=1
+     void putBinTT(istream& s)
+     {
+       long c,i,val;
+       vector<int> ibuf;
+
+       c = s.peek();
+       val = CharToIntVal(c);
+       while (val != -1) {
+          ibuf.push_back(val);
+
+          s.get();
+          c = s.peek();
+          val = CharToIntVal(c);
+       }
+
+       _VBF__spacen = ibuf.size();
+       _VBF__m = 1;
+       _VBF__spacem = 1 << _VBF__m;
+       _VBF__n = logtwo(_VBF__spacen);
+
+       if (_VBF__rep == UNDEFINED)
+          _VBF__rep = TTMATRIX;
+
+       _VBF__tt.SetDims(_VBF__spacen, _VBF__m);
+
+       for (i = 0; i < _VBF__spacen; i++)
+       {
+           _VBF__tt[i][0] = to_GF2(ibuf[i]);
+       }
+
+     }
+
+     // get the Truth Table in binary representation
+     // Only for Boolean Functions m=1
+     void getBinTT(ostream& s)
+     {
+       long i;
+
+       for (i = 0; i < _VBF__spacen; i++)
+       {
+           s << _VBF__tt[i][0]; 
+       }
+
+     }
+
+     // set the Truth Table with Hexadecimal representation to s
+     // Only for Boolean Functions m=1
+     void putHexTT(istream& s)
+     {
+       long c,i,val;
+       NTL::vec_GF2 bin;
+       vector<int> ibuf;
+
+       c = s.peek();
+       val = CharToIntVal(c);
+       while (val != -1) {
+          bin = to_vecGF2(val,4);
+          for (i = 0; i < 4; i++)
+             ibuf.push_back(rep(bin[i]));
+
+          s.get();
+          c = s.peek();
+          val = CharToIntVal(c);
+       }
+
+       _VBF__spacen = ibuf.size();
+       _VBF__m = 1;
+       _VBF__spacem = 1 << _VBF__m;
+       _VBF__n = logtwo(_VBF__spacen);
+
+       if (_VBF__rep == UNDEFINED)
+          _VBF__rep = TTMATRIX;
+
+       _VBF__tt.SetDims(_VBF__spacen, _VBF__m);
+
+       for (i = 0; i < _VBF__spacen; i++)
+       {
+           _VBF__tt[i][0] = to_GF2(ibuf[i]);
+       }
+
      }
 
      // get the Truth Table in Hexadecimal representation
