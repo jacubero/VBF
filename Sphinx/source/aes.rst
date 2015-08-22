@@ -60,6 +60,9 @@ Below you can find a legend describing the cryptographic criteria used in this c
    aes_d/Rijndael.rst
 
 .. include::
+   aes_d/safer.rst
+
+.. include::
    aes_d/serpent.rst
 
 

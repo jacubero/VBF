@@ -53,11 +53,11 @@ There are some block ciphers that are relevant either because its wide use or be
 In this chapter, a number of examples that illustrate some other aspects of the functionality and programming interface of VBF are included.
 
 **Section 11: FAQs**
-===================
+====================
 
 Frequently Asked Questions.
 
 **Section 12: Bibliography**
-===========================
+============================
 
 This chapter includes all citations referenced along the Reference Manual.

@@ -7,9 +7,9 @@ Description
 
 *LOKI97* is a block cipher which was a candidate in the Advanced Encryption Standard competition. It is a member of the LOKI family of ciphers, earlier instances being LOKI89 and LOKI91. LOKI97 was designed by Lawrie Brown, assisted by Jennifer Seberry and Josef Pieprzyk. The LOKI97 round function uses two columns each with multiple copies of two basic S-boxes. The S-boxes chosen for LOKI97 use cubing in a galois field :math:`GF(2^n)` with n odd. In order to use odd sized inputs, S1 uses 13 input bits, and S2 uses 11. The S-box functions are:
 
-:math:`S1[x]=((x XOR 1FFF)^3 mod 2911) & FF \in GF(2^{13})`
+S1[x]=((x XOR 1FFF)^3 mod 2911) & FF :math:`\in GF(2^{13})`
 
-:math:`S2[x]=((x XOR 7FF)^3 mod AA7) & FF \in GF(2^{11})`
+S2[x]=((x XOR 7FF)^3 mod AA7) & FF :math:`\in GF(2^{11})`
 
 where all constant above are written in hex and all computations are done as polynomials in :math:`GF(2^n)`.
 

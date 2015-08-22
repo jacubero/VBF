@@ -1395,7 +1395,7 @@ namespace VBFNS {
         nlm = to_RR(16292.0);
       } else if (n % 2 == 0 && m >= n-1) {
 // Sidelnikov-Chabaud-Vaudenay bound
-        nlm = to_RR(power(to_ZZ(2),(n-1))) - to_RR(0.5*sqrt(to_RR(3*power(to_ZZ(2),n)-2-2*((power(to_ZZ(2),n)-1)*(power(to_ZZ(2),n-1)-1))/(power(to_ZZ(2),m)-1))));
+        nlm = floor(to_RR(power(to_ZZ(2),(n-1))) - to_RR(0.5*sqrt(to_RR(3*power(to_ZZ(2),n)-2-2*((power(to_ZZ(2),n)-1)*(power(to_ZZ(2),n-1)-1))/(power(to_ZZ(2),m)-1)))));
       }
 
       return nlm; 
