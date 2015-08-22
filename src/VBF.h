@@ -2081,14 +2081,20 @@ namespace VBFNS {
    }   
 
    // Cycle structure
+   // if n != m do not return any result
    void Cycle(NTL::vec_ZZ& v, VBF& a)
    {
       std::set<long> C,D;
       std::set<long>::iterator it;
       vector<long> f;
+      long am = a.m();
+      long an = a.n();
       long i, x, y, len, spacen = a.spacen();
       NTL::vec_GF2 vy;
       NTL::mat_GF2 T;
+
+      if (an != am)
+         return;
 
       v = a.getcycle();
       if (IsZero(v)) 

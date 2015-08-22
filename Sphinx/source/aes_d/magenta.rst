@@ -1,12 +1,11 @@
-**
-E2
-**
+*******
+Magenta
+*******
 
 Description
 ===========
 
-*E2* is a symmetric block cipher which was created in 1998 by NTT and submitted to the AES competition. E2 has an input transformation and output transformation that both use modular multiplication, but the round function itself consists only of XORs and S-box lookups. The single 8×8-bit S-box is constructed from the composition of an affine transformation with the discrete exponentiation :math:`x^{127}` over the finite field :math:`GF(2^8)`. NTT adopted many of E2's special characteristics in Camellia, which has essentially replaced E2.
-
+*Magenta* is a symmetric key block cipher developed by Michael Jacobson Jr. and Klaus Huber for Deutsche Telekom. The cipher was submitted to the Advanced Encryption Standard process, but did not advance beyond the first round; cryptographic weaknesses were discovered and it was found to be one of the slower ciphers submitted. It has one 8x8 S-box.
 
 Summary
 =======
@@ -42,25 +41,25 @@ Polynomial representation in ANF:
 
 :math:`f_8 = 1+x_8+x_7x_8+x_6+x_6x_7+x_5+x_5x_7+x_5x_6+x_5x_6x_7+x_5x_6x_7x_8+x_4+x_4x_8+x_4x_7+x_4x_7x_8+x_4x_6+x_4x_6x_8+x_4x_6x_7+x_4x_5x_8+x_4x_5x_7+x_4x_5x_6x_7x_8+x_3x_8+x_3x_6x_8+x_3x_6x_7x_8+x_3x_5x_8+x_3x_5x_6+x_3x_5x_6x_8+x_3x_5x_6x_7+x_3x_4x_7x_8+x_3x_4x_6x_8+x_3x_4x_6x_7x_8+x_3x_4x_5x_6x_8+x_2x_8+x_2x_7+x_2x_7x_8+x_2x_6+x_2x_6x_8+x_2x_6x_7+x_2x_6x_7x_8+x_2x_5x_8+x_2x_5x_6x_7+x_2x_5x_6x_7x_8+x_2x_4+x_2x_4x_8+x_2x_4x_7+x_2x_4x_6x_7+x_2x_4x_5x_8+x_2x_4x_5x_7+x_2x_4x_5x_7x_8+x_2x_4x_5x_6x_8+x_2x_4x_5x_6x_7x_8+x_2x_3+x_2x_3x_7+x_2x_3x_6+x_2x_3x_6x_8+x_2x_3x_5x_8+x_2x_3x_5x_7x_8+x_2x_3x_5x_6x_7+x_2x_3x_4+x_2x_3x_4x_8+x_2x_3x_4x_7+x_2x_3x_4x_7x_8+x_2x_3x_4x_6+x_2x_3x_4x_6x_7+x_2x_3x_4x_5x_8+x_2x_3x_4x_5x_6+x_2x_3x_4x_5x_6x_8+x_1x_7x_8+x_1x_6+x_1x_6x_8+x_1x_6x_7x_8+x_1x_5x_7+x_1x_5x_6+x_1x_5x_6x_8+x_1x_5x_6x_7+x_1x_5x_6x_7x_8+x_1x_4x_8+x_1x_4x_7x_8+x_1x_4x_6+x_1x_4x_6x_8+x_1x_4x_6x_7+x_1x_4x_6x_7x_8+x_1x_4x_5+x_1x_4x_5x_6x_7x_8+x_1x_3+x_1x_3x_6+x_1x_3x_6x_8+x_1x_3x_6x_7x_8+x_1x_3x_5+x_1x_3x_5x_7x_8+x_1x_3x_5x_6+x_1x_3x_5x_6x_7+x_1x_3x_5x_6x_7x_8+x_1x_3x_4x_8+x_1x_3x_4x_7+x_1x_3x_4x_6+x_1x_3x_4x_6x_8+x_1x_3x_4x_6x_7x_8+x_1x_3x_4x_5x_8+x_1x_3x_4x_5x_7+x_1x_3x_4x_5x_6+x_1x_3x_4x_5x_6x_8+x_1x_2+x_1x_2x_6+x_1x_2x_6x_7+x_1x_2x_6x_7x_8+x_1x_2x_5+x_1x_2x_5x_7+x_1x_2x_5x_7x_8+x_1x_2x_5x_6+x_1x_2x_5x_6x_7x_8+x_1x_2x_4x_8+x_1x_2x_4x_6x_8+x_1x_2x_4x_6x_7+x_1x_2x_4x_5x_8+x_1x_2x_4x_5x_7x_8+x_1x_2x_4x_5x_6x_7+x_1x_2x_4x_5x_6x_7x_8+x_1x_2x_3+x_1x_2x_3x_7+x_1x_2x_3x_7x_8+x_1x_2x_3x_6x_7+x_1x_2x_3x_6x_7x_8+x_1x_2x_3x_5+x_1x_2x_3x_5x_8+x_1x_2x_3x_5x_6x_8+x_1x_2x_3x_4x_7x_8+x_1x_2x_3x_4x_6+x_1x_2x_3x_4x_6x_7+x_1x_2x_3x_4x_6x_7x_8+x_1x_2x_3x_4x_5x_7+x_1x_2x_3x_4x_5x_6+x_1x_2x_3x_4x_5x_6x_8`
 
-`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.tt>`_
+`Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/S.tt>`_
 
-`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.anf>`_
+`ANF Table <https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/S.anf>`_
 
-`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.char>`_
+`Characteristic function <https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/S.char>`_
 
-`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.wal>`_
+`Walsh Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/S.wal>`_
 
 Walsh Spectrum representation (except first row and column):
 
-.. image:: /images/e2.png
+.. image:: /images/Magenta.png
    :width: 750 px
    :align: center
 
-`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.lp>`_
+`Linear Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/S.lp>`_
 
-`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.dp>`_
+`Differential Profile <https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/S.dp>`_
 
-`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.ac>`_
+`Autocorrelation Spectrum <https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/S.ac>`_
 
 Other useful information in cryptanalysis
 -----------------------------------------

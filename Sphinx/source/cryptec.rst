@@ -1,8 +1,8 @@
 ####################################################
-Analysis of AES competition cryptographic algorithms
+Analysis of CRYPTEC project cryptographic algorithms
 ####################################################
 
-In January 1997, the US National Institute of Standards and Technology (NIST) announced the start of an initiative to develop a new encryption standard: the AES. The AES selection process was open in which 15 candidates were accepted for the first evaluation round and 5 finalists were announced in the second round. On October 2, 2000, NIST officially announced that Rijndael would become the AES. In this chapter, a number of cryptographic algorithms from the AES (Advanced Encryption Standard) candidates accepted for the first evaluation round process are analysed.
+CRYPTREC is the Cryptography Research and Evaluation Committees set up by the Japanese Government to evaluate and recommend cryptographic techniques for government and industrial use. It is comparable in many respects to the European Union's NESSIE project and to the Advanced Encryption Standard process run by NIST in the U.S.. In this chapter, certain cryptographic algorithms from CRYPTEC project candidates are analysed.
 
 Below you can find a legend describing the cryptographic criteria used in this chapter: 
 
@@ -36,30 +36,10 @@ Below you can find a legend describing the cryptographic criteria used in this c
    :depth: 2
 
 .. include::
-   aes_d/cast.rst
+   cryptec_d/cipherunicorn-e.rst
 
 .. include::
-   aes_d/crypton.rst
+   cryptec_d/sc2000.rst
 
-.. include::
-   aes_d/deal.rst
-
-.. include::
-   aes_d/e2.rst
-
-.. include::
-   aes_d/loki.rst
-
-.. include::
-   aes_d/magenta.rst
-
-.. include::
-   aes_d/mars.rst
-
-.. include::
-   aes_d/Rijndael.rst
-
-.. include::
-   aes_d/serpent.rst
 
 

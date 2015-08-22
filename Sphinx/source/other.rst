@@ -36,6 +36,16 @@ Below you can find a legend describing the cryptographic criteria used in this c
    :depth: 2
 
 .. include::
+   other_d/DES.rst
+
+.. include::
    other_d/kasumi.rst
 
+.. include::
+   other_d/macguffin.rst
 
+.. include::
+   other_d/miniaes.rst
+
+.. include::
+   other_d/square.rst

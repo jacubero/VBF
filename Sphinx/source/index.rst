@@ -25,9 +25,8 @@ Table of Contents:
    Cryptographic Criteria <criteria>
    Operations and constructions over Vector Boolean Functions <operations>
    Analysis of AES competition cryptographic algorithms <aes>
-   Analysis of DES-related cryptographic algorithms <des>
+   Analysis of CRYPTEC project cryptographic algorithms <cryptec>
    Analysis of NESSIE project cryptographic algorithms <nessie>   
-   Analysis of Rijndael-related cryptographic algorithms <rijndael>
    Analysis of other cryptographic algorithms <other>  
    Other applications <applications>
    FAQ <faq>

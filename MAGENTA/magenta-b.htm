@@ -1,0 +1,101 @@
+<html><head><!-- Copyright (c) 1998 John J. G. Savard --><title>Magenta</title></head><body>
+[<a href="http://www.quadibloc.com/crypto/co040412.htm">Next</a>] [<a href="http://www.quadibloc.com/crypto/co0404.htm">Up</a>]
+[<a href="http://www.quadibloc.com/crypto/co040410.htm">Previous</a>] [<a href="http://www.quadibloc.com/crypto/jscrypt.htm">Index</a>]
+<hr>
+<h1>Magenta</h1>
+<p>Magenta is a block cipher with a complex and deeply nested design.
+However, the S-box has a simple structure, and there are also
+weaknesses in the key schedule. This led to cryptanalytic results
+being obtained against it shortly after it was disclosed. Although it
+has been claimed that there are other weaknesses in the design, it
+still seems to me that the design contains some useful principles.</p>
+<p>The S-box used in Magenta is the following:</p>
+<pre>   1     2     4     8    16    32    64   128   101
+ 202   241   135   107   214   201   247   139   115
+ 230   169    55   110   220   221   223   219   211
+ 195   227   163    35    70   140   125   250   145
+  71   142   121   242   129   103   206   249   151
+  75   150    73   146    65   130    97   194   225
+ 167    43    86   172    61   122   244   141   127
+ 254   153    87   174    57   114   228   173    63
+ 126   252   157    95   190    25    50   100   200
+ 245   143   123   246   137   119   238   185    23
+  46    92   184    21    42    84   168    53   106
+ 212   205   255   155    83   166    41    82   164
+  45    90   180    13    26    52   104   208   197
+ 239   187    19    38    76   152    85   170    49
+  98   196   237   191    27    54   108   216   213
+ 207   251   147    67   134   105   210   193   231
+ 171    51   102   204   253   159    91   182     9
+  18    36    72   144    69   138   113   226   161
+  39    78   156    93   186    17    34    68   136
+ 117   234   177     7    14    28    56   112   224
+ 165    47    94   188    29    58   116   232   181
+  15    30    60   120   240   133   111   222   217
+ 215   203   243   131    99   198   233   183    11
+  22    44    88   176     5    10    20    40    80
+ 160    37    74   148    77   154    81   162    33
+  66   132   109   218   209   199   235   179     3
+   6    12    24    48    96   192   229   175    59
+ 118   236   189    31    62   124   248   149    79
+ 158    89   178     0
+</pre>
+<p>Start with 1, and shift one position left to obtain
+the next entry: when 1 is shifted out, XOR the contents
+with 101. This obtains the first 255 entries of the table;
+use 0 as the last entry.</p>
+<p>In the Magenta documentation, f(x) is defined as
+entry x in this S-box. On that basis, other functions
+are defined in a step by step manner:</p>
+<p>A(x,y) = f(x xor f(y)) [x and y are both bytes]</p>
+<p>PE(x,y) = (A(x,y),A(y,x)) [that is, PE(x,y) is A(x,y)
+catenated with A(y,x)]</p>
+<p>pi(x(0), x(1), ... x(15)) = ( PE(x(0),x(8)), PE(x(1),x(9)),
+PE(x(2),x(10)), ... PE(x(7),x(15)) )</p>
+<p>To help keep track of where we are so far, this diagram illustrates
+how pi(X) operates on a 16-byte bit string:</p>
+<p><img src="magenta_files/pi.gif" height="160" width="480"></p>
+<p>T(w) = pi(pi(pi(pi(w)))) [where w is a 16-byte vector]</p>
+<p>S(x(0),x(1),x(2),...x(15)) =
+(x(0),x(2),x(4),...x(14),x(1),x(3),x(5),...x(15))</p>
+<p>Our last preparatory definition is that of C(n,w), where n is a number, and w a 16-bit vector, as
+the following:</p>
+<p>C(1,w) = T(w)</p>
+<p>C(n+1,w) = T(w xor S(C(n,w)))</p>
+<p>Note that n is not a piece of the key or of the block being encrypted; it is a parameter
+giving the depth of recursion used.</p>
+<p>Finally, with all these definitions, Magenta is a Feistel cipher.</p>
+<p>Each Feistel round is expressed as taking (X(1),X(2)), where each X is
+half the block, 64 bits in length, and replacing it with (X(2),X(1) xor F(X(2),SK(n))),
+where n is the round number, and SK(n) the n-th subkey.</p><p>
+</p><p>The F function equals the first eight bytes of S(C(3,(X(2),SK(n)))).</p>
+<p>Thus, a round of Magenta may be pictured as follows:</p>
+<p><img src="magenta_files/magenta.gif" height="720" width="360"></p>
+<p>Since the Magenta f-function consists of a non-invertible function
+applied to one half of the block with the key appended, the Magenta
+block cipher is a multi-round example of a Luby-Rackoff construction.</p>
+<p>The key schedule is as follows:</p>
+<ul>
+<li>for a 128-bit key, the key is divided into parts, K1, K2, and the
+subkeys for the six rounds in order are K1, K1, K2, K2, K1, K1.
+</li><li>for a 192-bit key, K1, K2, K3, K3, K2, K1.
+</li><li>for a 256-bit key, K1, K2, K3, K4, K4, K3, K2, K1.
+</li></ul>
+<p>It appears that, except for swapping halves, Magenta is reciprocal.
+The first paper giving a cryptanalysis of Magenta incorrectly gave the
+key schedule as K1 K2 K1 K1 K2 K1, it appears.</p>
+<p>Originally, the F function was going to be the first eight
+bytes of S(C(7,(X(2),SK(n)))), but the number of rounds inside
+the f-function was reduced because of a possible weakness. Even so,
+Magenta is deeply nested with complexity.</p>
+<hr>
+[<a href="http://www.quadibloc.com/crypto/co040412.htm">Next</a>] [<a href="http://www.quadibloc.com/crypto/co0404.htm">Up</a>]
+[<a href="http://www.quadibloc.com/crypto/co040410.htm">Previous</a>] [<a href="http://www.quadibloc.com/crypto/jscrypt.htm">Index</a>]
+<p>
+<a href="http://www.quadibloc.com/crypto/co040412.htm">Next</a><br>
+<a href="http://www.quadibloc.com/crypto/comp04.htm">Chapter Start</a><br>
+<a href="http://www.quadibloc.com/crypto/jscrypt.htm">Table of Contents</a><br>
+<a href="http://www.quadibloc.com/crypto/entry.htm">Main Page</a>
+</p>
+
+</body></html>
