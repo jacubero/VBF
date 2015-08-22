@@ -36,9 +36,6 @@ Below you can find a legend describing the cryptographic criteria used in this c
    :depth: 2
 
 .. include::
-   cryptec_d/cipherunicorn-e.rst
-
-.. include::
    cryptec_d/sc2000.rst
 
 

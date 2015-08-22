@@ -2,8 +2,8 @@
 Grand Cru
 *********
 
-Introduction
-============
+Description
+===========
 
 Grand Cru is a block cipher invented in 2000 by Johan Borst. It was submitted to the NESSIE project, but was not selected. It has a Non-linear Substitution Transformation which uses a 8x8 S-box called S.
  

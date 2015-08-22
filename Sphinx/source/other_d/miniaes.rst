@@ -2,8 +2,8 @@
 Mini-AES
 ********
 
-Introduction
-============
+Description
+===========
 
 Raphael Chung-Wei Phan presented a version of the AES [Phan02miniadvanced]_, with all the parameters significantly reduced while preserving its original structure. This Mini version is purely educational and is designed to grasp the underlying concepts of Rijndael-like ciphers. It may also serve as a testbed for starting cryptanalysts to experiment with various cryptanalytic attacks. The Mini-AES cipher is a :math:`16 \times 16` vector Boolean function and the Mini-AES encryption is performed with a secret key of 16 bits.
 

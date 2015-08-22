@@ -4,12 +4,10 @@ KASUMI
 
 .. _secExamplesKASUMI
 
-Introduction
-============
+Description
+===========
 
-KASUMI is a block cipher used in UMTS, GSM, and GPRS mobile communications systems. UMTS uses KASUMI in the confidentiality (f8) and integrity algorithms (f9) named UEA1 and UIA1, respectively. GSM employs KASUMI in the A5/3 key stream generator whereas GPRS does so in the GEA3 key stream generator.
-
-This cipher has two S-boxes: a 7x7 S-box called S7 and a 9x9 S-box called S9.
+KASUMI is a block cipher used in UMTS, GSM, and GPRS mobile communications systems. UMTS uses KASUMI in the confidentiality (f8) and integrity algorithms (f9) named UEA1 and UIA1, respectively. GSM employs KASUMI in the A5/3 key stream generator whereas GPRS does so in the GEA3 key stream generator. This cipher has two S-boxes: a 7x7 S-box called S7 and a 9x9 S-box called S9.
  
 Summary
 =======

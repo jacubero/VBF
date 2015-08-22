@@ -2,10 +2,10 @@
 Square
 ******
 
-Introduction
-============
+Description
+===========
 
-Square is a block cipher invented by Joan Daemen and Vincent Rijmen. The design, published in 1997, is a forerunner to Rijndael, which has been adopted as the Advanced Encryption Standard. It has a 8x8 S-box called S.
+*Square* is a block cipher invented by Joan Daemen and Vincent Rijmen. The design, published in 1997, is a forerunner to Rijndael, which has been adopted as the Advanced Encryption Standard. It has a 8x8 S-box called S.
  
 Summary
 =======
@@ -15,7 +15,6 @@ Summary
 +=======+======+=====+======+=======+======+=========+================+============+============+
 | S     | 8x8  | 112 | 126  | 7     | 4    | 32      | 50722816       | 0.015625   | 0.015625   |
 +-------+------+-----+------+-------+------+---------+----------------+------------+------------+
-
 
 S
 =

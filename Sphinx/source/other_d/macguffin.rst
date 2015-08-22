@@ -5,9 +5,7 @@ MacGuffin
 Description
 ===========
 
-MacGuffin is a block cipher uses a F-function which consists of the 8 S-boxes of the DES, but the two middle output bits of each S-box are neglected in order to obtain a 16-bit output.
-
-MacGuffin has eight 6x2 S-boxes: S1, S2, S3, S4, S5, S6, S7, S8.
+MacGuffin is a block cipher uses a F-function which consists of the 8 S-boxes of the DES, but the two middle output bits of each S-box are neglected in order to obtain a 16-bit output. MacGuffin has eight 6x2 S-boxes: S1, S2, S3, S4, S5, S6, S7, S8.
 
 Summary
 =======

@@ -2,12 +2,10 @@
 Camellia
 ********
 
-Introduction
-============
+Description
+===========
 
-Camellia is a symmetric key block cipher with a block size of 128 bits and key sizes of 128, 192 and 256 bits. It was jointly developed by Mitsubishi and NTT of Japan. The cipher has been approved for use by the ISO/IEC, the European Union's NESSIE project and the Japanese CRYPTREC project. 
-
-It has four 8x8 S-boxes called S1, S2, S3, S4.
+Camellia is a symmetric key block cipher with a block size of 128 bits and key sizes of 128, 192 and 256 bits. It was jointly developed by Mitsubishi and NTT of Japan. The cipher has been approved for use by the ISO/IEC, the European Union's NESSIE project and the Japanese CRYPTREC project. It has four 8x8 S-boxes called S1, S2, S3, S4.
  
 Summary
 =======

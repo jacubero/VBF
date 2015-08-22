@@ -2,12 +2,10 @@
 Serpent
 *******
 
-Serpentcription
+Description
 ===========
 
-*Serpent* 
-
-It has eight 4x4 S-boxes: S0, S1, S2, S3, S4, S5, S6, S7.
+*Serpent* is a symmetric key block cipher that was a finalist in the Advanced Encryption Standard (AES) contest, where it was ranked second to Rijndael. Serpent was designed by Ross Anderson, Eli Biham, and Lars Knudsen. It has eight 4x4 S-boxes: S0, S1, S2, S3, S4, S5, S6, S7.
 
 Summary
 =======
@@ -15,21 +13,21 @@ Summary
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
 | S-box | *NL* | *NL2* | *LD* | *DEG* | *AI* | *MAXAC* | :math:`\sigma` | *LP*       | *DP* |
 +=======+======+=======+======+=======+======+=========+================+============+======+
-| S0    | 16   | 10    | 24   | 4     | 3    | 48      | 496768         | 0.25       | 0.25 |
+| S0    | 4    | 0     | 6    | 2     | 2    | 16      | 14848          | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S1    | 14   | 8     | 24   | 4     | 2    | 48      | 494080         | 0.31640625 | 0.25 |
+| S1    | 4    | 0     | 6    | 2     | 2    | 16      | 14848          | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S2    | 16   | 10    | 24   | 4     | 3    | 56      | 502144         | 0.25       | 0.25 |
+| S2    | 4    | 0     | 6    | 2     | 2    | 16      | 14848          | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S3    | 16   | 10    | 24   | 4     | 3    | 48      | 496768         | 0.25       | 0.25 |
+| S3    | 4    | 0     | 6    | 2     | 2    | 16      | 14080          | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S4    | 16   | 8     | 24   | 3     | 2    | 64      | 547840         | 0.25       | 0.25 |
+| S4    | 4    | 0     | 6    | 2     | 2    | 16      | 14080          | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S5    | 12   | 10    | 24   | 4     | 2    | 40      | 506752         | 0.390625   | 0.25 |
+| S5    | 4    | 0     | 6    | 2     | 2    | 16      | 14080          | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S6    | 18   | 10    | 24   | 5     | 3    | 48      | 485632         | 0.19140625 | 0.25 |
+| S6    | 4    | 0     | 6    | 2     | 2    | 16      | 14848          | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
-| S7    | 14   | 10    | 24   | 5     | 3    | 48      | 518272         | 0.31640625 | 0.25 |
+| S7    | 4    | 0     | 6    | 2     | 2    | 16      | 14080          | 0.25       | 0.25 |
 +-------+------+-------+------+-------+------+---------+----------------+------------+------+
 
 S0
@@ -40,13 +38,13 @@ Representations
 
 Polynomial representation in ANF:
 
-:math:`f_1 = 1+x_5+x_4x_6+x_4x_5+x_4x_5x_6+x_3+x_3x_5+x_3x_4+x_3x_4x_5x_6+x_2+x_2x_4+x_2x_4x_5+x_2x_4x_5x_6+x_2x_3x_5+x_2x_3x_5x_6+x_2x_3x_4+x_1x_6+x_1x_4+x_1x_4x_6+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3+x_1x_3x_5x_6+x_1x_3x_4+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_4`
+:math:`f_1 = x_4+x_3+x_2+x_1+x_1x_4`
 
-:math:`f_2 = x_6+x_4x_6+x_4x_5+x_4x_5x_6+x_3+x_3x_5+x_2x_6+x_2x_5+x_2x_5x_6+x_2x_4+x_2x_4x_6+x_2x_3+x_2x_3x_6+x_2x_3x_5+x_2x_3x_5x_6+x_2x_3x_4+x_1+x_1x_4x_5x_6+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
+:math:`f_2 = x_3+x_3x_4+x_2x_4+x_2x_3x_4+x_1+x_1x_3+x_1x_2x_3`
 
-:math:`f_3 = 1+x_6+x_5+x_4+x_4x_6+x_4x_5x_6+x_3x_6+x_3x_5+x_3x_5x_6+x_3x_4+x_3x_4x_6+x_3x_4x_5+x_3x_4x_5x_6+x_2+x_2x_5+x_2x_5x_6+x_2x_4+x_2x_4x_5+x_2x_3+x_2x_3x_6+x_2x_3x_4+x_2x_3x_4x_6+x_1+x_1x_6+x_1x_4+x_1x_4x_6+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3x_5+x_1x_3x_5x_6+x_1x_3x_4x_6+x_1x_3x_4x_5x_6+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_6`
+:math:`f_3 = 1+x_4+x_2x_4+x_2x_3+x_2x_3x_4+x_1x_3+x_1x_2x_4+x_1x_2x_3`
 
-:math:`f_4 = x_6+x_4+x_4x_5+x_3x_5+x_2+x_1+x_1x_6+x_1x_5+x_1x_4x_6+x_1x_4x_5+x_1x_3+x_1x_3x_5+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_4x_6`
+:math:`f_4 = 1+x_4+x_3x_4+x_2+x_2x_4+x_2x_3+x_2x_3x_4+x_1+x_1x_2x_4+x_1x_2x_3`
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.tt>`_
 
@@ -71,7 +69,21 @@ Walsh Spectrum representation (except first row and column):
 Other useful information in cryptanalysis
 -----------------------------------------
 
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 2            | 2                |
++--------------+------------------+
+| 5            | 1                |
++--------------+------------------+
+| 7            | 1                |
++--------------+------------------+
+
 There are no linear structures
+
+It has no fixed points. It has no negated fixed points
 
 S1
 ==
@@ -81,13 +93,13 @@ Representations
 
 Polynomial representation in ANF:
 
-:math:`f_1 = 1+x_6+x_5+x_4x_5x_6+x_3+x_3x_4+x_3x_4x_6+x_3x_4x_5+x_2+x_2x_3+x_2x_3x_4+x_1+x_1x_5+x_1x_4+x_1x_4x_6+x_1x_3x_5+x_1x_3x_4+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_4x_6+x_1x_2x_4x_5+x_1x_2x_3+x_1x_2x_3x_5x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_6`
+:math:`f_1 = 1+x_3+x_2x_4+x_1+x_1x_4+x_1x_3x_4+x_1x_2x_4+x_1x_2x_3`
 
-:math:`f_2 = 1+x_6+x_5x_6+x_4x_6+x_4x_5+x_3+x_3x_5+x_3x_5x_6+x_3x_4x_6+x_3x_4x_5x_6+x_2+x_2x_6+x_2x_4+x_2x_4x_6+x_2x_4x_5+x_2x_3x_6+x_1x_6+x_1x_5+x_1x_4x_5+x_1x_3+x_1x_3x_5x_6+x_1x_3x_4+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_6`
+:math:`f_2 = 1+x_3+x_3x_4+x_2+x_1`
 
-:math:`f_3 = 1+x_6+x_5+x_4+x_4x_5+x_4x_5x_6+x_3x_6+x_3x_5+x_3x_4+x_3x_4x_6+x_2x_6+x_2x_5+x_2x_4+x_2x_4x_6+x_2x_4x_5x_6+x_2x_3+x_2x_3x_6+x_2x_3x_5+x_2x_3x_4+x_2x_3x_4x_6+x_1+x_1x_5+x_1x_5x_6+x_1x_3x_4+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_6+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_4x_6+x_1x_2x_4x_5+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_6`
+:math:`f_3 = 1+x_4+x_3x_4+x_2+x_2x_4+x_1+x_1x_3+x_1x_3x_4+x_1x_2x_4+x_1x_2x_3`
 
-:math:`f_4 = x_5x_6+x_4+x_3x_5+x_2+x_2x_6+x_2x_5+x_2x_4x_6+x_2x_4x_5+x_2x_3x_6+x_2x_3x_5x_6+x_1x_6+x_1x_5+x_1x_5x_6+x_1x_4+x_1x_4x_6+x_1x_4x_5+x_1x_3+x_1x_3x_5+x_1x_3x_4+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4x_5+x_1x_2x_3+x_1x_2x_3x_5x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_6`
+:math:`f_4 = 1+x_4+x_3+x_2x_3+x_1x_4+x_1x_2+x_1x_2x_4+x_1x_2x_3`
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.tt>`_
 
@@ -112,7 +124,23 @@ Walsh Spectrum representation (except first row and column):
 Other useful information in cryptanalysis
 -----------------------------------------
 
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 1            | 2                |
++--------------+------------------+
+| 4            | 1                |
++--------------+------------------+
+| 10           | 1                |
++--------------+------------------+
+
 There are no linear structures
+
+It has 1 fixed point: (0,0,1,0)
+
+It has 1 negated fixed point: (0,0,0,0)
 
 S2
 ==
@@ -122,13 +150,13 @@ Representations
 
 Polynomial representation in ANF:
 
-:math:`f_1 = 1+x_6+x_5+x_4x_5+x_3+x_2x_6+x_2x_4+x_2x_4x_5+x_2x_3+x_2x_3x_6+x_1+x_1x_5x_6+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3x_5x_6+x_1x_2x_6+x_1x_2x_5x_6+x_1x_2x_4x_5+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_6`
+:math:`f_1 = 1+x_4+x_3+x_2+x_2x_3x_4+x_1x_3`
 
-:math:`f_2 = 1+x_6+x_5+x_4+x_4x_5x_6+x_3x_6+x_3x_4x_5x_6+x_2+x_2x_4+x_2x_4x_6+x_2x_3+x_1+x_1x_2x_4x_5+x_1x_2x_4x_5x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6`
+:math:`f_2 = x_4+x_3+x_2x_3+x_1+x_1x_3+x_1x_3x_4+x_1x_2+x_1x_2x_4`
 
-:math:`f_3 = 1+x_5+x_4+x_3x_5+x_3x_4+x_3x_4x_6+x_3x_4x_5+x_2+x_2x_5x_6+x_2x_4x_6+x_2x_4x_5x_6+x_2x_3x_6+x_1+x_1x_5x_6+x_1x_4x_5+x_1x_3+x_1x_3x_5+x_1x_3x_4+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_4+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
+:math:`f_3 = x_4+x_3+x_2+x_2x_3+x_2x_3x_4+x_1x_4+x_1x_3x_4+x_1x_2+x_1x_2x_4`
 
-:math:`f_4 = 1+x_4+x_4x_5x_6+x_3+x_3x_6+x_3x_5+x_2x_6+x_2x_4x_5+x_2x_4x_5x_6+x_2x_3x_5+x_2x_3x_5x_6+x_1+x_1x_6+x_1x_5x_6+x_1x_4x_5x_6+x_1x_3+x_1x_3x_6+x_1x_3x_5+x_1x_3x_5x_6+x_1x_2+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4x_6+x_1x_2x_3x_6+x_1x_2x_3x_5x_6`
+:math:`f_4 = x_3+x_2+x_2x_4+x_1`
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.tt>`_
 
@@ -153,7 +181,21 @@ Walsh Spectrum representation (except first row and column):
 Other useful information in cryptanalysis
 -----------------------------------------
 
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 3            | 1                |
++--------------+------------------+
+| 13           | 1                |
++--------------+------------------+
+
 There are no linear structures
+
+It has no fixed points
+
+It has 1 negated fixed point: (1,0,1,1)
 
 S3
 ==
@@ -163,13 +205,13 @@ Representations
 
 Polynomial representation in ANF:
 
-:math:`f_1 = 1+x_5+x_4x_6+x_4x_5+x_4x_5x_6+x_3+x_3x_5+x_3x_4+x_3x_4x_5x_6+x_2+x_2x_4+x_2x_4x_5+x_2x_4x_5x_6+x_2x_3x_5+x_2x_3x_5x_6+x_2x_3x_4+x_1x_6+x_1x_4+x_1x_4x_6+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3+x_1x_3x_5x_6+x_1x_3x_4+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_4`
+:math:`f_1 = x_4+x_3+x_3x_4+x_2+x_2x_4+x_2x_3x_4+x_1+x_1x_2+x_1x_2x_4`
 
-:math:`f_2 = x_6+x_4x_6+x_4x_5+x_4x_5x_6+x_3+x_3x_5+x_2x_6+x_2x_5+x_2x_5x_6+x_2x_4+x_2x_4x_6+x_2x_3+x_2x_3x_6+x_2x_3x_5+x_2x_3x_5x_6+x_2x_3x_4+x_1+x_1x_4x_5x_6+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
+:math:`f_2 = x_4+x_3x_4+x_2+x_2x_3x_4+x_1+x_1x_3+x_1x_3x_4`
 
-:math:`f_3 = 1+x_6+x_5+x_4+x_4x_6+x_4x_5x_6+x_3x_6+x_3x_5+x_3x_5x_6+x_3x_4+x_3x_4x_6+x_3x_4x_5+x_3x_4x_5x_6+x_2+x_2x_5+x_2x_5x_6+x_2x_4+x_2x_4x_5+x_2x_3+x_2x_3x_6+x_2x_3x_4+x_2x_3x_4x_6+x_1+x_1x_6+x_1x_4+x_1x_4x_6+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3x_5+x_1x_3x_5x_6+x_1x_3x_4x_6+x_1x_3x_4x_5x_6+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_6`
+:math:`f_3 = x_4+x_3+x_2x_4+x_1x_4+x_1x_3x_4+x_1x_2+x_1x_2x_4`
 
-:math:`f_4 = x_6+x_4+x_4x_5+x_3x_5+x_2+x_1+x_1x_6+x_1x_5+x_1x_4x_6+x_1x_4x_5+x_1x_3+x_1x_3x_5+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_4x_6`
+:math:`f_4 = x_4+x_3+x_2x_3+x_1+x_1x_4+x_1x_2+x_1x_2x_4+x_1x_2x_3`
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.tt>`_
 
@@ -194,7 +236,23 @@ Walsh Spectrum representation (except first row and column):
 Other useful information in cryptanalysis
 -----------------------------------------
 
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 1            | 2                |
++--------------+------------------+
+| 4            | 1                |
++--------------+------------------+
+| 5            | 2                |
++--------------+------------------+
+
 There are no linear structures
+
+It has 1 fixed point: (0,0,0,0)
+
+It has 1 negated fixed point: (1,0,1,1)
 
 S4
 ==
@@ -204,13 +262,13 @@ Representations
 
 Polynomial representation in ANF:
 
-:math:`f_1 = x_6+x_5+x_5x_6+x_4+x_4x_6+x_4x_5x_6+x_3x_6+x_3x_5+x_2x_6+x_2x_5+x_2x_5x_6+x_2x_4x_5+x_2x_4x_5x_6+x_2x_3+x_2x_3x_5+x_2x_3x_5x_6+x_2x_3x_4x_6+x_1+x_1x_5x_6+x_1x_4+x_1x_4x_6+x_1x_3x_5x_6+x_1x_3x_4+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
+:math:`f_1 = x_4+x_3+x_2+x_2x_3+x_1x_4+x_1x_3+x_1x_3x_4`
 
-:math:`f_2 = 1+x_5x_6+x_4x_6+x_4x_5+x_4x_5x_6+x_3+x_3x_6+x_3x_5+x_2+x_2x_6+x_2x_5x_6+x_2x_4x_5x_6+x_2x_3+x_2x_3x_5x_6+x_2x_3x_4+x_2x_3x_4x_6+x_1+x_1x_5+x_1x_5x_6+x_1x_4x_6+x_1x_3x_5+x_1x_3x_5x_6+x_1x_3x_4x_6+x_1x_3x_4x_5x_6+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
+:math:`f_2 = x_4+x_3x_4+x_2+x_2x_3+x_2x_3x_4+x_1x_3+x_1x_3x_4+x_1x_2+x_1x_2x_3`
 
-:math:`f_3 = 1+x_6+x_5+x_5x_6+x_4x_6+x_4x_5+x_3+x_3x_4x_5+x_3x_4x_5x_6+x_2+x_2x_6+x_2x_5x_6+x_2x_4x_5x_6+x_2x_3x_6+x_2x_3x_4+x_2x_3x_4x_6+x_1x_6+x_1x_5+x_1x_5x_6+x_1x_4+x_1x_4x_6+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3x_6+x_1x_3x_5+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_5+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
+:math:`f_3 = x_4+x_2x_4+x_2x_3+x_1+x_1x_3+x_1x_2+x_1x_2x_4+x_1x_2x_3`
 
-:math:`f_4 = 1+x_5x_6+x_4+x_4x_6+x_4x_5+x_3+x_3x_4x_5x_6+x_2x_6+x_2x_5+x_2x_5x_6+x_2x_4x_5+x_2x_4x_5x_6+x_2x_3+x_2x_3x_6+x_2x_3x_4x_6+x_1+x_1x_6+x_1x_5x_6+x_1x_4x_6+x_1x_4x_5x_6+x_1x_3+x_1x_3x_6+x_1x_3x_5+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_5+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
+:math:`f_4 = 1+x_3+x_3x_4+x_2+x_1+x_1x_4+x_1x_3`
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.tt>`_
 
@@ -235,7 +293,23 @@ Walsh Spectrum representation (except first row and column):
 Other useful information in cryptanalysis
 -----------------------------------------
 
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 1            | 1                |
++--------------+------------------+
+| 2            | 1                |
++--------------+------------------+
+| 13           | 1                |
++--------------+------------------+
+
 There are no linear structures
+
+It has 1 fixed point: (0,0,1,1)
+
+It has no negated fixed points
 
 S5
 ==
@@ -245,13 +319,13 @@ Representations
 
 Polynomial representation in ANF:
 
-:math:`f_1 = x_6+x_5+x_5x_6+x_4x_6+x_4x_5+x_3x_6+x_3x_4+x_3x_4x_6+x_3x_4x_5+x_3x_4x_5x_6+x_2+x_2x_4+x_2x_4x_6+x_2x_4x_5+x_2x_3x_6+x_2x_3x_5x_6+x_1x_5+x_1x_5x_6+x_1x_4x_6+x_1x_3+x_1x_3x_6+x_1x_3x_5x_6+x_1x_3x_4x_5+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_4x_6+x_1x_2x_4x_5+x_1x_2x_4x_5x_6+x_1x_2x_3x_6+x_1x_2x_3x_4`
+:math:`f_1 = 1+x_4+x_3+x_2+x_2x_3x_4+x_1+x_1x_4+x_1x_2x_4`
 
-:math:`f_2 = x_6+x_5+x_4+x_3+x_3x_6+x_3x_5x_6+x_3x_4x_6+x_3x_4x_5x_6+x_2x_4+x_2x_3x_6+x_2x_3x_4x_6+x_1+x_1x_5x_6+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3x_4x_5+x_1x_2x_6+x_1x_2x_4x_6+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_6`
+:math:`f_2 = 1+x_3+x_2x_4+x_1+x_1x_3x_4+x_1x_2+x_1x_2x_4+x_1x_2x_3`
 
-:math:`f_3 = 1+x_5+x_5x_6+x_4+x_4x_6+x_4x_5+x_3x_6+x_3x_5+x_3x_4+x_3x_4x_6+x_3x_4x_5+x_3x_4x_5x_6+x_2+x_2x_5+x_2x_5x_6+x_2x_4x_6+x_2x_4x_5+x_2x_3x_5+x_2x_3x_5x_6+x_2x_3x_4+x_2x_3x_4x_6+x_1+x_1x_6+x_1x_5x_6+x_1x_4+x_1x_4x_5+x_1x_3+x_1x_3x_6+x_1x_3x_5+x_1x_3x_4+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2x_6+x_1x_2x_5+x_1x_2x_4+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_5x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_6`
+:math:`f_3 = 1+x_4+x_3x_4+x_2+x_1+x_1x_3+x_1x_3x_4+x_1x_2`
 
-:math:`f_4 = x_5x_6+x_4x_5+x_3+x_3x_6+x_3x_5+x_3x_5x_6+x_3x_4x_6+x_3x_4x_5+x_3x_4x_5x_6+x_2x_6+x_2x_5+x_2x_5x_6+x_2x_4+x_2x_4x_6+x_2x_4x_5x_6+x_2x_3x_5+x_1x_6+x_1x_4+x_1x_4x_5+x_1x_3+x_1x_3x_6+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
+:math:`f_4 = 1+x_3+x_3x_4+x_2+x_1+x_1x_4+x_1x_3`
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.tt>`_
 
@@ -276,7 +350,21 @@ Walsh Spectrum representation (except first row and column):
 Other useful information in cryptanalysis
 -----------------------------------------
 
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 1            | 2                |
++--------------+------------------+
+| 14           | 1                |
++--------------+------------------+
+
 There are no linear structures
+
+It has 1 fixed point: (0,0,1,0)
+
+It has 3 negated fixed points: (0,0,0,0), (0,1,0,1), (0,1,1,0)
 
 S6
 ==
@@ -286,13 +374,13 @@ Representations
 
 Polynomial representation in ANF:
 
-:math:`f_1 = 1+x_5+x_5x_6+x_4x_6+x_4x_5+x_4x_5x_6+x_3x_6+x_3x_5x_6+x_3x_4+x_3x_4x_6+x_3x_4x_5+x_3x_4x_5x_6+x_2+x_2x_3+x_2x_3x_4x_6+x_1x_6+x_1x_5+x_1x_5x_6+x_1x_4x_6+x_1x_4x_5x_6+x_1x_3+x_1x_3x_6+x_1x_3x_5+x_1x_3x_5x_6+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_3x_6+x_1x_2x_3x_5x_6+x_1x_2x_3x_4x_6`
+:math:`f_1 = x_3+x_3x_4+x_2+x_2x_4+x_2x_3x_4+x_1+x_1x_2+x_1x_2x_3`
 
-:math:`f_2 = 1+x_6+x_5+x_4+x_3+x_3x_5+x_3x_4x_5+x_2+x_2x_4+x_2x_4x_5x_6+x_1+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3+x_1x_3x_6+x_1x_3x_5x_6+x_1x_3x_4x_5+x_1x_2x_4x_5+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4x_6`
+:math:`f_2 = 1+x_4+x_3x_4+x_2+x_2x_3+x_2x_3x_4+x_1x_3+x_1x_3x_4+x_1x_2+x_1x_2x_3`
 
-:math:`f_3 = x_6+x_4+x_4x_5x_6+x_3x_5+x_2x_5x_6+x_2x_4x_5+x_2x_3+x_2x_3x_5+x_1x_6+x_1x_5+x_1x_4x_5x_6+x_1x_3+x_1x_3x_6+x_1x_3x_5+x_1x_3x_5x_6+x_1x_2+x_1x_2x_4x_5+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_5x_6`
+:math:`f_3 = 1+x_3+x_2+x_1x_4`
 
-:math:`f_4 = x_5+x_4x_5x_6+x_3+x_3x_4+x_3x_4x_6+x_3x_4x_5+x_3x_4x_5x_6+x_2x_4+x_2x_4x_5x_6+x_2x_3+x_2x_3x_4+x_2x_3x_4x_6+x_1+x_1x_6+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3x_5+x_1x_3x_4+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2x_6+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_3x_6`
+:math:`f_4 = 1+x_4+x_3+x_2+x_2x_4+x_2x_3+x_2x_3x_4+x_1+x_1x_3x_4+x_1x_2x_3`
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.tt>`_
 
@@ -317,7 +405,23 @@ Walsh Spectrum representation (except first row and column):
 Other useful information in cryptanalysis
 -----------------------------------------
 
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 1            | 2                |
++--------------+------------------+
+| 4            | 1                |
++--------------+------------------+
+| 10           | 1                |
++--------------+------------------+
+
 There are no linear structures
+
+It has 1 fixed point: (0,1,1,0)
+
+It has 1 negated fixed point: (1,1,1,1)
 
 S7
 ==
@@ -327,13 +431,13 @@ Representations
 
 Polynomial representation in ANF:
 
-:math:`f_1 = x_6+x_5+x_3+x_3x_4x_5+x_3x_4x_5x_6+x_2x_4+x_2x_3+x_2x_3x_6+x_2x_3x_4+x_2x_3x_4x_6+x_1x_6+x_1x_5+x_1x_5x_6+x_1x_4+x_1x_4x_5x_6+x_1x_3x_6+x_1x_3x_5+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_4+x_1x_2x_3x_4x_6`
+:math:`f_1 = x_4+x_3+x_2+x_2x_4+x_2x_3x_4+x_1x_4`
 
-:math:`f_2 = 1+x_5+x_4+x_3x_4x_5x_6+x_2+x_2x_6+x_2x_4+x_2x_4x_5x_6+x_2x_3+x_1+x_1x_6+x_1x_4+x_1x_3+x_1x_3x_4x_5+x_1x_2+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_3x_6+x_1x_2x_3x_4`
+:math:`f_2 = x_4+x_3+x_2+x_2x_3x_4+x_1+x_1x_4+x_1x_3+x_1x_3x_4+x_1x_2x_3`
 
-:math:`f_3 = x_5+x_5x_6+x_4+x_4x_5+x_4x_5x_6+x_3+x_3x_6+x_3x_4x_6+x_3x_4x_5x_6+x_2+x_2x_4x_5+x_2x_4x_5x_6+x_2x_3x_4x_6+x_1x_6+x_1x_5+x_1x_5x_6+x_1x_3+x_1x_3x_5+x_1x_3x_5x_6+x_1x_3x_4x_6+x_1x_3x_4x_5x_6+x_1x_2x_4+x_1x_2x_4x_5+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4x_6`
+:math:`f_3 = x_3+x_3x_4+x_2+x_2x_4+x_2x_3+x_1+x_1x_4+x_1x_3x_4+x_1x_2x_4`
 
-:math:`f_4 = x_6+x_5+x_4x_5+x_3+x_3x_4+x_3x_4x_5+x_2+x_2x_4x_6+x_2x_4x_5x_6+x_2x_3+x_1+x_1x_4x_6+x_1x_4x_5x_6+x_1x_3x_4x_6+x_1x_3x_4x_5x_6+x_1x_2x_5x_6+x_1x_2x_4x_6+x_1x_2x_3x_6`
+:math:`f_4 = 1+x_3x_4+x_2+x_1x_4+x_1x_3+x_1x_2+x_1x_2x_4+x_1x_2x_3`
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.tt>`_
 
@@ -358,5 +462,21 @@ Walsh Spectrum representation (except first row and column):
 Other useful information in cryptanalysis
 -----------------------------------------
 
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 3            | 1                |
++--------------+------------------+
+| 4            | 1                |
++--------------+------------------+
+| 9            | 1                |
++--------------+------------------+
+
 There are no linear structures
+
+It has no fixed points
+
+It has 1 negated fixed point: (1,0,0,0)
 
