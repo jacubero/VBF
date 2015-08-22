@@ -5,7 +5,7 @@ CAST-256
 Description
 ===========
 
-*CAST-256* is a symmetric block cipher . The four 8x32 S-boxes are S1,S2,S3 and S4
+*CAST-256* is a symmetric-key block cipher published in June 1998. It was submitted as a candidate for the Advanced Encryption Standard (AES); however, it was not among the five AES finalists. It is an extension of an earlier cipher, CAST-128; both were designed according to the "CAST" design methodology invented by Carlisle Adams and Stafford Tavares. Howard Heys and Michael Wiener also contributed to the design. It has four 8x32 S-boxes: S1,S2,S3 and S4
 
 S1
 ==

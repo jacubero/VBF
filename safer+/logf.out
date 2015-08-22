@@ -1,0 +1,45 @@
+Argument Dimension = 9
+Argument space has 512 elements.
+Image Dimension = 8
+Image space has 256 elements.
+
+Writing Algebraic Normal Form to file: logf.anf
+[Columns = Image components]
+
+Writing Characteristic Function to file: logf.char
+[Columns = Image components]
+
+Writing Walsh Spectrum to file: logf.wal
+
+Writing Linear Profile to file: logf.lp
+[To normalize divide by 262144]
+
+Writing Differential Profile to file: logf.dp
+[To normalize divide by 67108864]
+
+Writing the polynomials in ANF to file: logf.pol
+
+Writing Linear structures to file: logf.ls
+
+Writing Autocorrelation Spectrum to file: logf.ac
+
+Writing Cycle Structure to file: logf.cy
+
+Nonlinearity: 164
+Second order Nonlinearity: -1
+Linearity distance: 128
+Algebraic degree: 6
+Algebraic immunity: 3
+Absolute indicator: 512
+Sum-of-squares indicator: 656408576
+Linear potential: 0.1291503906
+Differential potential: 0.5
+Maximum Nonlinearity (if n is even): 244
+Maximum Linearity distance: 272
+The fixed points are: 
+[]
+The negated fixed points are: 
+[]
+Correlation immunity: 0
+It is a balanced function
+The function is PC of degree 0

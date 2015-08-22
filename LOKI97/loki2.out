@@ -1,0 +1,45 @@
+Argument Dimension = 11
+Argument space has 2048 elements.
+Image Dimension = 8
+Image space has 256 elements.
+
+Writing Algebraic Normal Form to file: loki2.anf
+[Columns = Image components]
+
+Writing Characteristic Function to file: loki2.char
+[Columns = Image components]
+
+Writing Walsh Spectrum to file: loki2.wal
+
+Writing Linear Profile to file: loki2.lp
+[To normalize divide by 4194304]
+
+Writing Differential Profile to file: loki2.dp
+[To normalize divide by 1073741824]
+
+Writing the polynomials in ANF to file: loki2.pol
+
+Writing Linear structures to file: loki2.ls
+
+Writing Autocorrelation Spectrum to file: loki2.ac
+
+Writing Cycle Structure to file: loki2.cy
+
+Nonlinearity: 992
+Second order Nonlinearity: -1
+Linearity distance: 1016
+Algebraic degree: 2
+Algebraic immunity: 2
+Absolute indicator: 2048
+Sum-of-squares indicator: 10729029632
+Linear potential: 0.0009765625
+Differential potential: 0.0078125
+Maximum Nonlinearity (if n is even): 1000
+Maximum Linearity distance: 1088
+The fixed points are: 
+[]
+The negated fixed points are: 
+[]
+Correlation immunity: 0
+It is a balanced function
+The function is PC of degree 0

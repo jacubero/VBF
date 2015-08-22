@@ -1,0 +1,43 @@
+<html><head><!-- Copyright (c) 1998 John J. G. Savard --><title>SAFER+</title></head><body>
+[<a href="http://www.quadibloc.com/crypto/co040408.htm">Next</a>] [<a href="http://www.quadibloc.com/crypto/co0404.htm">Up</a>]
+[<a href="http://www.quadibloc.com/crypto/co040406.htm">Previous</a>] [<a href="http://www.quadibloc.com/crypto/jscrypt.htm">Index</a>]
+<hr>
+<h1>SAFER+</h1>
+<p>SAFER+ is the proposal of Cylink Corporation for the Advanced Encryption
+Standard, and its description is available at
+<a href="http://www.cylink.com/internet/library.nsf/pages/SAFER/" target="_top">http://www.cylink.com/internet/library.nsf/pages/SAFER/</a>.
+It is very similar to the original 64-bit block cipher SAFER.</p>
+<p>The following diagram shows one round of SAFER+:</p>
+<p><img src="safer+_files/safer2.gif" height="360" width="480"></p>
+<p>it uses the same S-boxes as SAFER in the same way. Instead of the regular
+"butterfly" formation of Pseudo-Hadamard Transforms used in the original SAFER, a
+slightly irregular arrangement is used, so that the net result of the operations,
+given in the document as the matrix M (it stated that that matrix could be realized
+by a four-layer PHT network similar to the three-layer one in SAFER, but did
+not give the network; thus this diagram rectifies the omission) has certain
+desirable properties.</p>
+<p>One other improvement in SAFER+ over SAFER is that after matrix M is applied
+in the last round, one extra subkey is applied to the block, using the same sequence of
+alternating XORs and additions as is used for the first subkey in a round. This means
+that the final application of matrix M is not a waste of time in terms of cryptographic
+security.</p>
+<p>For a key length of 128 bits, 8 rounds are used; for 192 bits, 12 rounds; and
+for a 256-bit key, SAFER+ has 16 rounds.</p>
+<h3>The Key Schedule</h3>
+<p>The key schedule of SAFER+ is quite simple. The key, whatever its length, has one
+byte appended to it, equal to the XOR of all the bytes in the key.</p>
+<p>The first subkey consists of the first 16 bytes of the key. For each remaining
+subkey, first rotate the expanded key left 11 bits, then take the first 16 bytes of
+the result, and use them after XORing them with a constant. I am not reproducing
+the constants here; the paper describing SAFER+ gives them, but in decimal form.</p>
+<hr>
+[<a href="http://www.quadibloc.com/crypto/co040408.htm">Next</a>] [<a href="http://www.quadibloc.com/crypto/co0404.htm">Up</a>]
+[<a href="http://www.quadibloc.com/crypto/co040406.htm">Previous</a>] [<a href="http://www.quadibloc.com/crypto/jscrypt.htm">Index</a>]
+<p>
+<a href="http://www.quadibloc.com/crypto/co040408.htm">Next</a><br>
+<a href="http://www.quadibloc.com/crypto/comp04.htm">Chapter Start</a><br>
+<a href="http://www.quadibloc.com/crypto/jscrypt.htm">Table of Contents</a><br>
+<a href="http://www.quadibloc.com/crypto/entry.htm">Main Page</a>
+</p>
+
+</body></html>
