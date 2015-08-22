@@ -196,7 +196,7 @@ int main(int argc, char *argv[])
    cout << "The negated fixed points are: " << endl;
    cout << negatedfixedpoints(F) << endl;
    cout << "Correlation immunity: " << CI(F) << endl;
-   if (F.getbal())
+   if (Bal(F))
    {
      cout << "It is a balanced function" << endl;
    } else

@@ -45,8 +45,8 @@ int
 main ()
 {
    int i;
-   Byte y[8];
-   string c[8];
+   Byte y[16];
+   string c[16];
    char	buf[256];			/* input buffer, hex block */
 
    if((filein = fopen("S.txt","r")) == NULL) {
@@ -60,7 +60,7 @@ main ()
 
    while ( fgets(buf, sizeof(buf), filein) != NULL) { /* read next line  */
       istringstream Str( buf );
-      for (i = 0; i < 8; i++) {
+      for (i = 0; i < 16; i++) {
          Str >> c[i];
          istringstream decimal( c[i] );
          decimal >> y[i];
