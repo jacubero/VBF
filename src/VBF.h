@@ -1705,25 +1705,28 @@ namespace VBFNS {
    // Sum-of-square indicator 
    void sigma(NTL::ZZ& x, VBF& a)
    {
-      NTL::mat_ZZ       W;
+      NTL::mat_ZZ       A;
       NTL::ZZ           sumofsquare = a.getsigma();
       long numrows, numcolumns, i, j;
 
       if (sumofsquare == UNDEFINED)
       {
-         W = Walsh(a);
-         numrows = W.NumRows();
-         numcolumns = W.NumCols();
+         ZZ temp;
+
+         A = AC(a);
+         numrows = A.NumRows();
+         numcolumns = A.NumCols();
          x = 0;
 
-         for (i = 0; i < numrows; i++)
+         for (j = 1; j < numcolumns; j++)
          {
-            for (j = 0; j < numcolumns; j++)
+            temp = 0;
+            for (i = 0; i < numrows; i++)
             {
-               x += power(W[i][j],4);
+               temp += power(A[i][j],2);
             }
+            if (temp > x) x = temp;
          }
-         x = x/to_ZZ(numrows);
 
          a.putsigma(x);
       }
@@ -1902,15 +1905,26 @@ namespace VBFNS {
                 f += Tt[j];
              }
           }
-
 	  min = aibf(f,n,d);
           if (min < ai) ai = min;
       }
- 
    }
 
    inline int AI(VBF& F)
    { int x; AI(x, F); return x; }
+
+   // Returns the maximum possible algebraic immunity of a VBF with the same dimensions
+   int aimax(VBF& a)
+   {
+      int aimax;
+      double aimax_d;
+      int  n = a.n();
+
+      aimax_d = ceil(double(n)/2.0);
+      aimax = int(aimax_d);
+
+      return aimax;
+   }
 
    // Propagation criterion of degree k
    void PC(int& k, VBF& a)
