@@ -25,14 +25,14 @@ Writing Autocorrelation Spectrum to file: S2.ac
 
 Writing Cycle Structure to file: S2.cy
 
-Nonlinearity: 111
+Nonlinearity: 112
 Second order Nonlinearity: -1
 Linearity distance: 126
 Algebraic degree: 7
 Algebraic immunity: 4
-Absolute indicator: 36
-Sum-of-squares indicator: 50956288
-Linear potential: 0.01763916016
+Absolute indicator: 32
+Sum-of-squares indicator: 50722816
+Linear potential: 0.015625
 Differential potential: 0.015625
 Maximum Nonlinearity (if n is even): 116
 Maximum Linearity distance: 136
@@ -41,5 +41,5 @@ The fixed points are:
 The negated fixed points are: 
 []
 Correlation immunity: 0
-It is a non-balanced function
+It is a balanced function
 The function is PC of degree 0
