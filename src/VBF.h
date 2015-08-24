@@ -2107,7 +2107,7 @@ namespace VBFNS {
       NTL::vec_GF2 vy;
       NTL::mat_GF2 T;
 
-      if (an != am)
+      if (an != am || !Bal(a))
          return;
 
       v = a.getcycle();
