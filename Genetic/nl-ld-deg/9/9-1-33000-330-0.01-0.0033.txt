@@ -1,27 +1,27 @@
 330	# current generation
 1	# current convergence
 10890000	# number of selections since initialization
-36104	# number of crossovers since initialization
+35780	# number of crossovers since initialization
 54450000	# number of mutations since initialization
 10890000	# number of replacements since initialization
 10923000	# number of genome evaluations since initialization
 166	# number of population evaluations since initialization
 2.17134	# maximum score since initialization
-1.00087	# minimum score since initialization
-2.10622	# average of all scores ('on-line' performance)
-2.16969	# average of maximum scores ('off-line' performance)
-1.06872	# average of minimum scores ('off-line' performance)
+0.997869	# minimum score since initialization
+2.10621	# average of all scores ('on-line' performance)
+2.16975	# average of maximum scores ('off-line' performance)
+1.0683	# average of minimum scores ('off-line' performance)
 
-1.61236	# mean score in initial population
-2.15481	# maximum score in initial population
-1.00087	# minimum score in initial population
-0.500356	# standard deviation of initial population
+1.6073	# mean score in initial population
+2.15917	# maximum score in initial population
+1.00178	# minimum score in initial population
+0.500122	# standard deviation of initial population
 -1	# diversity of initial population (0=identical,-1=unset)
 
-2.10932	# mean score in current population
+2.10912	# mean score in current population
 2.17134	# maximum score in current population
-1.07135	# minimum score in current population
-0.0434542	# standard deviation of current population
+1.0757	# minimum score in current population
+0.0473945	# standard deviation of current population
 -1	# diversity of current population (0=identical,-1=unset)
 
 20	# how far back to look for convergence
@@ -29,5 +29,5 @@
 0	# how often to write scores to file
 generations.dat	# name of file to which scores are written
 
-01110101000111100111011111001011001101000010011100101110001011010110110111011101001010111010101001010101011110110110101100011001100001111110001111010000011101110011111001000000001001010010111011010101100011101001000001010000010001100111111100101000010101011011100100111100000001110111011111111000010011111011111010101111011100100010001011100000000010011000100010100011101101100100001001110001010001011100001111100101001000100011010101101101010000001001000010000100110100000110110011011110101001110000010101001100
+10110101001010100000011101100110010100001101000100101111001111100010110100100000000011011000110011011111110111011010010001100100001111110010101110101101011111111111011110010011010110111101100011110011001011101011011100101000010001101111101001001001001101110011111000110010111110111001110100111110110110110110101011100000010011010001010101110010101010010111100101101010101001001010010110000010110101011111011111010110011110100010100111000000101011111110001110000110011001010011100001000110110101010011110000000011
 

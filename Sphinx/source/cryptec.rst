@@ -42,6 +42,9 @@ Below you can find a legend describing the cryptographic criteria used in this c
    cryptec_d/clefia.rst
 
 .. include::
+   cryptec_d/Hierocrypt3.rst
+
+.. include::
    cryptec_d/sc2000.rst
 
 
