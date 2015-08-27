@@ -761,9 +761,9 @@ namespace VBFNS {
      NTL::RR getnl() const { return _VBF__nl; }
      void putnl(const NTL::RR& a) { _VBF__nl = a; }
 
-     // Linearity distance: 0 <= ld <= 2^{n-1}-2^{n-m/2-1}
+     // Linearity distance: 0 <= ld <= 2^{n-1}(1-2^{-m})
      // Distance from the set of VBF with linear structures
-     // ld = 2^{n-1}*(1-sqrt{dp})
+     // ld = 2^{n-1}*(1-dp)
      NTL::RR getld() const { return _VBF__ld; }
      void putld(const NTL::RR& a) { _VBF__ld = a; }
 
