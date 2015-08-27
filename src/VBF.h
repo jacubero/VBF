@@ -1640,7 +1640,7 @@ namespace VBFNS {
       int  n = a.n();
       int  m = a.m();
       
-      ldm = to_RR(power(to_ZZ(2),(n-1))) + to_RR(power(to_ZZ(2),(n-m/2-1))); 
+      ldm = to_RR(power(to_ZZ(2),(n-1)))* (1-to_RR(1.0)/to_RR(power(to_ZZ(2),(m)))); 
       
       return ldm; 
    } 
