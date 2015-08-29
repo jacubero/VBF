@@ -127,9 +127,8 @@ int main(int argc, char *argv[])
       return 0;   
    }
 
-   A = LS(F);
    cout << endl << "Writing Linear structures to file: " << file << endl;
-   output6 << A << endl; 
+   LS(output6,F);
    output6.close();
 
    sprintf(file,"%s.ac",argv[1]);

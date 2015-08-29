@@ -76,7 +76,7 @@ namespace VBFNS {
      NTL::mat_ZZ _VBF__AC;
      NTL::mat_ZZ _VBF__FWH;
      NTL::mat_ZZ _VBF__FAC;
-     vector<long> _VBF__ls;
+     vector< pair<long, long> > _VBF__ls;
      vector<long> _VBF__fp;
      vector<long> _VBF__nfp;
      NTL::GF2X _VBF__irrpol;
@@ -470,10 +470,10 @@ namespace VBFNS {
      }
  
      // returns VBF's linear structures
-     vector<long> getls() const { return _VBF__ls; } 
+     vector< pair<long, long> > getls() const { return _VBF__ls; } 
 
      // set the linear structures to v
-     void putls(vector<long>& v) { _VBF__ls = v; }
+     void putls(vector< pair<long, long> >& v) { _VBF__ls = v; }
 
      // returns VBF's fixed points
      vector<long> getfp() const { return _VBF__fp; }
@@ -761,9 +761,9 @@ namespace VBFNS {
      NTL::RR getnl() const { return _VBF__nl; }
      void putnl(const NTL::RR& a) { _VBF__nl = a; }
 
-     // Linearity distance: 0 <= ld <= 2^{n-1}(1-2^{-m})
+     // Linearity distance: 0 <= ld <= 2^{n-2}
      // Distance from the set of VBF with linear structures
-     // ld = 2^{n-1}*(1-dp)
+     // ld = 2^{n-2}-(1/4)maxac
      NTL::RR getld() const { return _VBF__ld; }
      void putld(const NTL::RR& a) { _VBF__ld = a; }
 
@@ -1606,13 +1606,49 @@ namespace VBFNS {
    inline NTL::RR dp(VBF& a)	
    { NTL::RR x; dp(x, a); return x; }
 
+   // Maximum value of AC = Absolute indicator
+   void maxAC(NTL::ZZ& x, VBF& a)
+   {
+      NTL::mat_ZZ       D;
+      NTL::ZZ           maxac = a.getmaxac();
+
+      if (maxac == UNDEFINED)
+      {
+         D = AC(a);
+
+         ZZ   temp;
+         long i, j;
+         long n = D.NumRows();
+         long m = D.NumCols();
+
+         x = 0;
+         for (i = 1; i < n; i++)
+         {
+            for (j = 1; j < m; j++)
+            {
+                abs(temp,D[i][j]);
+                if (temp > x) x = temp;
+            }
+         }
+
+         a.putmaxac(x);
+      }
+      else
+      {
+         x = maxac;
+      }
+   }
+
+   inline NTL::ZZ maxAC(VBF& a)
+   { NTL::ZZ x; maxAC(x, a); return x; }
+
    // Linearity distance
    void ld(NTL::RR& x, VBF& a)
    {
       int 	rep = a.getrep();
-      long      spacen = a.spacen();
+      long      n = a.n();
       NTL::RR	ld = a.getld();
-      NTL::RR 	omega, nminus1;
+      NTL::ZZ   absolute_indicator;
    	      
       if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == LINEARMATRIX)
       {
@@ -1621,9 +1657,11 @@ namespace VBFNS {
       }	 
       else if (ld == NOTDEFINED)
       {
-      	 omega = dp(a);
-      	 nminus1 = to_RR(spacen)/2.0;
-      	 x = nminus1*(1.0-omega);
+         absolute_indicator = a.getmaxac();
+         if (absolute_indicator == UNDEFINED)
+            absolute_indicator = maxAC(a);
+
+      	 x = to_RR(power(to_ZZ(2),(n-2)))-to_RR(absolute_indicator)/4.0;
       	 a.putld(x);
       } else { 
       	 x = ld;
@@ -1665,42 +1703,6 @@ namespace VBFNS {
 
    inline NTL::ZZ maxDAT(VBF& a)	
    { NTL::ZZ x; maxDAT(x, a); return x; }
-
-   // Maximum value of AC 
-   void maxAC(NTL::ZZ& x, VBF& a)
-   {
-      NTL::mat_ZZ       D;
-      NTL::ZZ           maxac = a.getmaxac();
-
-      if (maxac == UNDEFINED)
-      {
-         D = AC(a);
-
-   	 ZZ   temp;
-   	 long i, j;
-   	 long n = D.NumRows();
-   	 long m = D.NumCols();
-
-   	 x = 0;
-   	 for (i = 1; i < n; i++)
-   	 {
-            for (j = 1; j < m; j++)
-      	    {
-         	abs(temp,D[i][j]);
-         	if (temp > x) x = temp;
-      	    }
-   	 }
-        
-         a.putmaxac(x);
-      }
-      else
-      {
-         x = maxac;
-      }
-   }
-
-   inline NTL::ZZ maxAC(VBF& a)
-   { NTL::ZZ x; maxAC(x, a); return x; }
 
    // Sum-of-square indicator 
    void sigma(NTL::ZZ& x, VBF& a)
@@ -2046,7 +2048,6 @@ namespace VBFNS {
       vector<long> cols;
       NTL::mat_ZZ D;
       unsigned long i, j, n = a.n(), spacen = a.spacen(), spacem = a.spacem();
-      string str;
       
       D = DAT(a);
       for (i = 0; i < spacen; i++) {
@@ -2066,32 +2067,35 @@ namespace VBFNS {
    }   
    
    // Linear structures
-   NTL::mat_GF2 LS(VBF& a)
+   void LS(NTL_SNS ostream& s, VBF& a)
    {
-      NTL::mat_GF2 L;
-      vector<long> v;
-      NTL::mat_ZZ D;
-      long i, spacen = a.spacen(), rows, cols = a.n();
+      vector<  pair<long, long> > v;
+      NTL::mat_ZZ A;
+      NTL::ZZ   absolute_indicator;
+      unsigned long i, j, spacen = a.spacen(), spacem = a.spacem(), n = a.n(), m = a.m();
       
       v = a.getls();
       if (v.size() <= 0)
       {
-         D = DAT(a);
+         A = AC(a);
+         absolute_indicator = a.getmaxac();
+         if (absolute_indicator == UNDEFINED)
+            absolute_indicator = maxAC(a);
+         
 	 for (i = 1; i < spacen; i++) {
-            if (IsImpulse(D[i])) {
-	       v.push_back(i);
+            for (j = 1; j < spacem; j++) {
+               if (abs(A[i][j]) == absolute_indicator) {
+	          v.push_back( std::make_pair(i,j));
+               }
 	    }
 	 }
       } 
 
       a.putls(v);
-      rows = v.size();
-      L.SetDims(rows,cols);
-      for (i = 0; i < rows; i++) {
-         L[i] = to_vecGF2(v[i], cols);
+      for (i = 0; i < v.size(); i++) {
+         s << "(" << to_vecGF2(v[i].first, n) << "," << to_vecGF2(v[i].second, m) << ")" << endl;
       }
 
-      return L;
    }   
 
    // Cycle structure
