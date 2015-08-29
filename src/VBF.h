@@ -2077,10 +2077,12 @@ namespace VBFNS {
       v = a.getls();
       if (v.size() <= 0)
       {
-         A = AC(a);
          absolute_indicator = a.getmaxac();
          if (absolute_indicator == UNDEFINED)
             absolute_indicator = maxAC(a);
+         if (absolute_indicator != power(to_ZZ(2),n))
+            return; 
+         A = AC(a);
          
 	 for (i = 1; i < spacen; i++) {
             for (j = 1; j < spacem; j++) {
