@@ -1,5 +1,5 @@
 ######################################################################################
-Vector Boolean Functions Library: User Manual and Analysis of Cryptographic algorithms
+Vector Boolean Functions Library: User Manual and Analysis of Cryptographic Algorithms
 ######################################################################################
 
 .. _cover:
