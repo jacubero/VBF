@@ -51,6 +51,8 @@ class vbf_mat_GF2: public mat_GF2 {
 
   int aibf(const vec_GF2& f, int n, int d);
 
+  mat_GF2 invltt(const mat_GF2& A, long spacen, int m);
+
 }; // end class vbf_mat_GF2
 
 int IsNotDefined(const mat_GF2& a)
@@ -426,5 +428,27 @@ int aibf(const vec_GF2& f, int n, int d)
    return d;
 }
 
+mat_GF2 invltt(const mat_GF2& A, long spacen, int m)
+{
+   long index;
+   int i;
+   NTL::vec_GF2 bin;
+   NTL::mat_GF2 Atrans, X, Xtrans;
+
+   Atrans = transpose(A);
+   X.SetDims(spacen, m);
+   Xtrans.SetDims(m,spacen);
+   bin.SetLength(m);
+
+   for (i = 0; i < m; i++)
+   {
+       clear(bin);
+       bin[i] = 1;
+       index = conv_long(bin);
+       Xtrans[i] = Atrans[index];
+   }
+   X = transpose(Xtrans);
+   return X;
+}
 
 #endif

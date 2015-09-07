@@ -327,24 +327,42 @@ namespace VBFNS {
      }
 
      // set the Truth Table with binary representation to s
-     // Only for Boolean Functions m=1
+     // The format must be 1 row for each of the Coordinate functions:
+     // f1
+     // f2
+     // ...
+     // fm
+
      void putBinTT(istream& s)
      {
-       long c,i,val;
+       long c,i,j,val,cont;
+       int salta_c = 0;
        vector<int> ibuf;
 
+       _VBF__m = 0;
        c = s.peek();
        val = CharToIntVal(c);
        while (val != -1) {
-          ibuf.push_back(val);
+          if (!salta_c)
+          {
+            ibuf.push_back(val);
+          } else {
+            salta_c = 0;
+          }
 
           s.get();
           c = s.peek();
-          val = CharToIntVal(c);
+          if (c == '\n')
+          { 
+             _VBF__m += 1;
+             salta_c = 1;
+             if (_VBF__spacen <= 0)
+                _VBF__spacen = ibuf.size();
+          } else {
+             val = CharToIntVal(c);
+          }
        }
 
-       _VBF__spacen = ibuf.size();
-       _VBF__m = 1;
        _VBF__spacem = 1 << _VBF__m;
        _VBF__n = logtwo(_VBF__spacen);
 
@@ -353,9 +371,14 @@ namespace VBFNS {
 
        _VBF__tt.SetDims(_VBF__spacen, _VBF__m);
 
-       for (i = 0; i < _VBF__spacen; i++)
+       cont = 0;
+       for (j = 0; j < _VBF__m; j++)
        {
-           _VBF__tt[i][0] = to_GF2(ibuf[i]);
+          for (i = 0; i < _VBF__spacen; i++)
+          {
+              _VBF__tt[i][j] = to_GF2(ibuf[cont]);
+              cont++;
+          }
        }
 
      }
@@ -364,11 +387,15 @@ namespace VBFNS {
      // Only for Boolean Functions m=1
      void getBinTT(ostream& s)
      {
-       long i;
+       long i, j;
 
-       for (i = 0; i < _VBF__spacen; i++)
+       for (j = 0; j < _VBF__m; j++)
        {
-           s << _VBF__tt[i][0]; 
+          for (i = 0; i < _VBF__spacen; i++)
+          {
+             s << _VBF__tt[i][j]; 
+          }
+          s << endl;
        }
 
      }
@@ -377,24 +404,37 @@ namespace VBFNS {
      // Only for Boolean Functions m=1
      void putHexTT(istream& s)
      {
-       long c,i,val;
+       long c,i,j,val,cont;
+       int salta_c = 0;
        NTL::vec_GF2 bin;
        vector<int> ibuf;
 
+       _VBF__m = 0;
        c = s.peek();
        val = CharToIntVal(c);
        while (val != -1) {
-          bin = to_vecGF2(val,4);
-          for (i = 0; i < 4; i++)
-             ibuf.push_back(rep(bin[i]));
+          if (!salta_c)
+          {
+             bin = to_vecGF2(val,4);
+             for (i = 0; i < 4; i++)
+                ibuf.push_back(rep(bin[i]));
+          } else {
+             salta_c = 0;
+          }
 
           s.get();
           c = s.peek();
-          val = CharToIntVal(c);
+          if (c == '\n')
+          {
+             _VBF__m += 1;
+             salta_c = 1;
+             if (_VBF__spacen <= 0)
+                _VBF__spacen = ibuf.size();
+          } else {
+             val = CharToIntVal(c);
+          }
        }
 
-       _VBF__spacen = ibuf.size();
-       _VBF__m = 1;
        _VBF__spacem = 1 << _VBF__m;
        _VBF__n = logtwo(_VBF__spacen);
 
@@ -403,9 +443,14 @@ namespace VBFNS {
 
        _VBF__tt.SetDims(_VBF__spacen, _VBF__m);
 
-       for (i = 0; i < _VBF__spacen; i++)
+       cont = 0;
+       for (j = 0; j < _VBF__m; j++)
        {
-           _VBF__tt[i][0] = to_GF2(ibuf[i]);
+          for (i = 0; i < _VBF__spacen; i++)
+          {
+              _VBF__tt[i][j] = to_GF2(ibuf[cont]);
+              cont++;
+          }
        }
 
      }
@@ -414,17 +459,22 @@ namespace VBFNS {
      // Only for Boolean Functions m=1
      void getHexTT(ostream& s)
      {
-       long i,j;
+       long i,j,k;
        NTL::vec_GF2 bin;
 
        bin.SetLength(4);
-       for (i = 0; i < _VBF__spacen; i += 4)
+       
+       for (j = 0; j < _VBF__m; j++)
        {
-	   for (j = 0; j < 4; j++)
-           {
-              bin[j] = _VBF__tt[i+j][0];
-           }
-           s << IntValToChar(conv_long(bin));
+          for (i = 0; i < _VBF__spacen; i += 4)
+          {
+	     for (k = 0; k < 4; k++)
+             {
+                bin[k] = _VBF__tt[i+k][j];
+             }
+             s << IntValToChar(conv_long(bin));
+          }
+          s << endl;
        }
 
      }
@@ -894,6 +944,30 @@ namespace VBFNS {
             
             S = a.getsbox();
             X = to_tt(S);
+         } else if (rep == LTTMATRIX) {
+            long spacen = a.spacen();
+
+            A = a.getltt();
+            X = invltt(A,spacen,m);
+         } else if (rep == CTTMATRIX) {
+            long i, j, spacen = a.spacen(), spacem = a.spacem();
+            NTL::mat_ZZ  C;
+
+            C = a.getctt();
+            A.SetDims(spacen,spacem);
+
+            for (i = 0; i < spacen; i++)
+            {
+               for (j = 0; j < spacem; j++) {
+                  if (C[i][j] == 1) {
+                    A[i][j] = 0;
+                  } else {
+                    A[i][j] = 1;
+                  }
+               } 
+            } 
+
+            X = invltt(A,spacen,m);
          } else if (rep == TRACE) {
 	    long i, spacen = a.spacen();
             NTL::mat_GF2 A,B;
@@ -1008,7 +1082,7 @@ namespace VBFNS {
       X = a.getanf();
       if (IsNotDefined(X))
       {  
-      	 if (rep == TTMATRIX || rep==CHARMATRIX || rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == SBOXMATRIX || rep == TRACE || rep == LINEARMATRIX)
+      	 if (rep == TTMATRIX || rep==CHARMATRIX || rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == SBOXMATRIX || rep == TRACE || rep == LINEARMATRIX || rep == LTTMATRIX)
       	 {
             T = TT(a);
             X = rev(T, n, m);
