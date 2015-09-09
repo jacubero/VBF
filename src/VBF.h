@@ -40,7 +40,7 @@ const int SBOXMATRIX=6;
 const int LTTMATRIX=7;
 const int CTTMATRIX=8;
 const int TRACE=9;
-const int LINEARMATRIX=10;
+const int AFFINEMATRIX=10;
 const int CHARMATRIX=11;
 
 NTL_CLIENT
@@ -68,6 +68,8 @@ namespace VBFNS {
      NTL::mat_ZZ _VBF__char;
      NTL::vec_ZZ _VBF__per;
      NTL::mat_GF2 _VBF__lin;
+     NTL::mat_GF2 _VBF__affinemat;
+     NTL::vec_GF2 _VBF__affinevec;
      NTL::mat_ZZ _VBF__walsh;
      NTL::mat_ZZ _VBF__sbox;     
      vec_pol _VBF__pol;
@@ -128,12 +130,13 @@ namespace VBFNS {
 	_VBF__per = a.getper(); 
 
         _VBF__lin.SetDims(_VBF__n, _VBF__m);
-	if (_VBF__rep == EXP_COMP_TRANSF)
-	{ 
-		_VBF__lin = a.getexp_comp();
-	} else {
-                _VBF__lin = a.getlinmat();
-	}  
+	_VBF__lin = a.getexp_comp();
+	
+        _VBF__affinemat.SetDims(_VBF__n, _VBF__m);
+        _VBF__affinemat = a.getaffinemat();
+
+        _VBF__affinevec.SetLength(_VBF__n);
+        _VBF__affinevec = a.getaffinevec();
 
         _VBF__char.SetDims(_VBF__spacen, _VBF__spacem);
         _VBF__char = a.getchar();
@@ -685,14 +688,15 @@ namespace VBFNS {
    	}   
      }	
 
-     // set Matrix associated with Linear VBF 
-     void putlinmat(const NTL::mat_GF2& a)
+     // set Matrix and vector associated with Affine VBF 
+     void putaffine(const NTL::mat_GF2& A,const NTL::vec_GF2& b)
      {
-        _VBF__n = a.NumRows();
-        _VBF__m = a.NumCols();
+        _VBF__n = A.NumRows();
+        _VBF__m = A.NumCols();
+        int n = b.length();
 
-        if ((_VBF__n < 0) || (_VBF__m < 0))
-           Error("putlinmat: bad args");
+        if ((_VBF__n < 0) || (_VBF__m < 0) || (_VBF__n != _VBF__m) || (n != _VBF__n))
+           Error("putaffine: bad args");
 
         _VBF__spacen = (1 << _VBF__n);
         _VBF__spacem = (1 << _VBF__m);
@@ -702,10 +706,17 @@ namespace VBFNS {
         _VBF__dp = ONE;
 
         if (_VBF__rep == UNDEFINED)
-          _VBF__rep = LINEARMATRIX;
+          _VBF__rep = AFFINEMATRIX;
 
-     	_VBF__lin = a;
+     	_VBF__affinemat = A;
+        _VBF__affinevec = b;
      }
+
+     // returns the n x m matrix which constitutes the Matrix of the affine VBF
+     NTL::mat_GF2 getaffinemat() const { return _VBF__affinemat; }
+
+     // returns the n vector which constitutes the vector of the affine VBF
+     NTL::vec_GF2 getaffinevec() const { return _VBF__affinevec; }
 
      // returns the 2^n x 2^m matrix which constitutes the Characteristic Function
      NTL::mat_ZZ getchar() const { return _VBF__char; }
@@ -887,22 +898,34 @@ namespace VBFNS {
 
       if (IsNotDefined(X))
       {  
-      	 if (rep == EXP_COMP_TRANSF || rep == LINEARMATRIX)
+      	 if (rep == EXP_COMP_TRANSF)
       	 {
  	    long i, spacen = a.spacen();
       	    NTL::vec_GF2 bin;
 
 	    X.SetDims(spacen, m);
-            if (rep == EXP_COMP_TRANSF) { 
-               A = a.getexp_comp();
-	    } else {
-	       A = a.getlinmat();
-	    }
+            A = a.getexp_comp();
+            
             for (i = 0; i < spacen; i++)  
             {
       	       bin = to_vecGF2(i,n);
 	       mul(X[i],bin,A);
-            }           
+            }
+         } else if (rep == AFFINEMATRIX)
+         {
+            long i, spacen = a.spacen();
+            NTL::vec_GF2 bin, b;
+
+            X.SetDims(spacen, m);
+            A = a.getaffinemat();
+            b = a.getaffinevec();
+
+            for (i = 0; i < spacen; i++)
+            {
+               bin = to_vecGF2(i,n);
+               mul(X[i],bin,A);
+               X[i] += b;
+            }
          } else if (rep == PERTRANSF) {
 	    long l;
       	    NTL::vec_ZZ a_per;
@@ -1082,7 +1105,7 @@ namespace VBFNS {
       X = a.getanf();
       if (IsNotDefined(X))
       {  
-      	 if (rep == TTMATRIX || rep==CHARMATRIX || rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == SBOXMATRIX || rep == TRACE || rep == LINEARMATRIX || rep == LTTMATRIX)
+      	 if (rep == TTMATRIX || rep==CHARMATRIX || rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == SBOXMATRIX || rep == TRACE || rep == AFFINEMATRIX || rep == LTTMATRIX)
       	 {
             T = TT(a);
             X = rev(T, n, m);
@@ -1189,7 +1212,7 @@ namespace VBFNS {
       if (IsNotDefined(X))
       {   
          W = Walsh(a);	 
-      	 if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == LINEARMATRIX)
+      	 if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX)
       	 {
 	    X = spacen * W;
          } else {
@@ -1214,7 +1237,7 @@ namespace VBFNS {
       if (IsNotDefined(X))
       {   
          L = LAT(a);
-      	 if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == LINEARMATRIX)
+      	 if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX)
       	 {
 	    X = spacem * L;
          } else {
@@ -1375,7 +1398,7 @@ namespace VBFNS {
       NTL::RR		nl = a.getnl();
       NTL::ZZ		max;
    	      
-      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == LINEARMATRIX)
+      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX)
       {
       	 x = ONE;
       	 a.putlp(x);
@@ -1416,7 +1439,7 @@ namespace VBFNS {
       NTL::RR		nminus1, la, ll, lp;
       NTL::ZZ		max;
    	      
-      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == LINEARMATRIX)
+      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX)
       {
       	 x = ZERO;
       	 a.putnl(x);
@@ -1594,7 +1617,7 @@ namespace VBFNS {
       int b = a.gettypenl();
       NTL::RR nl, nlm, nlo;
       
-      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == LINEARMATRIX) {
+      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX) {
       	 typenl = LINEAR;
          a.puttypenl(typenl);
       }	else if (b == UNDEFINED) {
@@ -1651,7 +1674,7 @@ namespace VBFNS {
       NTL::RR		ld = a.getld();
       NTL::ZZ		max;
    	      
-      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == LINEARMATRIX)
+      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX)
       {
       	 x = ONE;
       	 a.putdp(x);
@@ -1724,7 +1747,7 @@ namespace VBFNS {
       NTL::RR	ld = a.getld();
       NTL::ZZ   absolute_indicator;
    	      
-      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == LINEARMATRIX)
+      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX)
       {
       	 x = ZERO;
       	 a.putld(x);
@@ -1836,7 +1859,7 @@ namespace VBFNS {
       int ci = a.getCI();
       NTL::mat_ZZ W;
       
-      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == LINEARMATRIX)
+      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX)
       {
       	 t = 0;
          a.putCI(t);
@@ -1878,7 +1901,7 @@ namespace VBFNS {
       int b = a.getbal();
       NTL::mat_ZZ W;
       
-      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == LINEARMATRIX)
+      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX)
       {
       	 bal = 1;
          a.putbal(bal);
@@ -1911,7 +1934,7 @@ namespace VBFNS {
       {
 	 d = 1;
       }	
-      else if (rep == EXP_COMP_TRANSF || rep == LINEARMATRIX) 
+      else if (rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX) 
       {
          if (rep == EXP_COMP_TRANSF)
          {
@@ -2336,7 +2359,7 @@ namespace VBFNS {
 
          if (a_anf != b_anf) return 0;
       }
-      else if (arep == TTMATRIX || arep == SBOXMATRIX)
+      else if (arep == TTMATRIX || arep == SBOXMATRIX || arep == AFFINEMATRIX)
       {
          a_tt = TT(a);
          b_tt = TT(b);
@@ -2364,13 +2387,6 @@ namespace VBFNS {
       
          if (a_lin != b_lin) return 0;                       
       }	
-      else if (arep == LINEARMATRIX)
-      {
-         a_lin = a.getlinmat();
-         b_lin = b.getlinmat();
-
-         if (a_lin != b_lin) return 0;
-      }  
       else if (arep == CHARMATRIX)
       {
          a_char = Charact(a);
