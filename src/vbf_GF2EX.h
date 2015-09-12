@@ -3,6 +3,7 @@
 
 #include <NTL/GF2EX.h>
 #include "vbf_vec_GF2E.h"
+#include  <iomanip>
 
 NTL_CLIENT
 
@@ -10,6 +11,8 @@ class vbf_GF2EX: public GF2EX {
 
   GF2EX str2GF2EX(string& str, const long& n);
   // convert string str to GF2EX
+
+  void print(NTL_SNS ostream& s, GF2EX& f);
 
 }; // end class vbf_GF2EX
 
@@ -64,6 +67,42 @@ GF2EX str2GF2EX(string& str, const long& n)
    f = to_GF2EX(x);
 
    return f;
+}
+
+void print(NTL_SNS ostream& s, GF2EX& f, const long& m)
+{
+   long i, coef, digits;
+   vec_GF2 c, d;
+   vec_vec_GF2 z;
+
+   ofstream outemp("GF2EX_to_vec_vec_GF2.tmp");
+   outemp << f;
+   outemp.close();
+
+   ifstream inputemp("GF2EX_to_vec_vec_GF2.tmp");
+   inputemp >> z;
+
+   d.SetLength(m);
+   digits = (m+3)/4;
+
+   for (i = z.length()-1; i > 0; i--)
+   {
+      VectorCopy(c,z[i],m);
+      reverse(d,c);
+      coef = conv_long(d);
+      if (coef != 0) {
+        s << setfill('0') << setw(digits) << std::hex << coef << std::dec << "·x^{" <<  i << "}+";
+      }
+   }
+   
+   VectorCopy(c,z[0],m);
+   reverse(d,c);
+   coef = conv_long(d);
+   if (coef != 0) {
+      s << setfill('0') << setw(digits) << std::hex << coef << std::dec;
+   }
+
+   s << endl;
 }
 
 #endif
