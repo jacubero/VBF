@@ -72,6 +72,7 @@ GF2EX str2GF2EX(string& str, const long& n)
 void print(NTL_SNS ostream& s, GF2EX& f, const long& m)
 {
    long i, coef, digits;
+   int first = 1;
    vec_GF2 c, d;
    vec_vec_GF2 z;
 
@@ -85,21 +86,31 @@ void print(NTL_SNS ostream& s, GF2EX& f, const long& m)
    d.SetLength(m);
    digits = (m+3)/4;
 
-   for (i = z.length()-1; i > 0; i--)
+   for (i = z.length()-1; i > 1; i--)
    {
       VectorCopy(c,z[i],m);
       reverse(d,c);
       coef = conv_long(d);
-      if (coef != 0) {
-        s << setfill('0') << setw(digits) << std::hex << coef << std::dec << "·x^{" <<  i << "}+";
+      if (coef != 0 && !first) {
+        s << "+" << setfill('0') << setw(digits) << std::hex << coef << std::dec << "·x^{" <<  i << "}";
+      } else if (coef != 0 && first) {
+        s << setfill('0') << setw(digits) << std::hex << coef << std::dec << "·x^{" <<  i << "}";
+        first = 0;
       }
    }
-   
+
+   VectorCopy(c,z[1],m);
+   reverse(d,c);
+   coef = conv_long(d);
+   if (coef != 0) {
+      s << "+" << setfill('0') << setw(digits) << std::hex << coef << std::dec << "·x";
+   }
+
    VectorCopy(c,z[0],m);
    reverse(d,c);
    coef = conv_long(d);
    if (coef != 0) {
-      s << setfill('0') << setw(digits) << std::hex << coef << std::dec;
+      s << "+" << setfill('0') << setw(digits) << std::hex << coef << std::dec;
    }
 
    s << endl;
