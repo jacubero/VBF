@@ -12,7 +12,7 @@ class vbf_GF2EX: public GF2EX {
   GF2EX str2GF2EX(string& str, const long& n);
   // convert string str to GF2EX
 
-  void print(NTL_SNS ostream& s, GF2EX& f);
+  void print(NTL_SNS ostream& s, GF2EX& f, const long& m); 
 
 }; // end class vbf_GF2EX
 
