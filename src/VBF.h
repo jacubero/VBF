@@ -1597,16 +1597,15 @@ namespace VBFNS {
    inline NTL::ZZ maxLAT(VBF& a)	
    { NTL::ZZ x; maxLAT(x, a); return x; }
 
-   // Probability of a linear relation
+   // Probability bias of a linear relation
    void ProbLin(NTL::RR& x, VBF& a, NTL::ZZ& w)
    {
-      NTL::mat_ZZ	L;
-      int  		n = a.n();
-         	      
+      NTL::mat_ZZ       L;
+
       L = LAT(a);
-      x = 0.5 + to_RR(w)/to_RR(power(to_ZZ(2),(n+1)));
-      
-   }	
+      x = abs(to_RR(w)/to_RR(L[0][0])-0.5);
+
+   }
 
    // type of functions in terms of nonlinearity
    void typenl(int& typenl, VBF& a)
