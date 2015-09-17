@@ -1291,47 +1291,61 @@ namespace VBFNS {
    inline NTL::mat_ZZ AC(VBF& a)
    { NTL::mat_ZZ X; AC(X, a); return X; }
 
-   // Absolute Walsh values frequency distribution 
-   void FWH(NTL::mat_ZZ& X, VBF& a)
+   // Absolute Walsh values frequency distribution
+   void printFWH(NTL_SNS ostream& s, VBF& a)
    {
-      NTL::mat_ZZ	W;
-      unsigned long 	i,j,v;
-      unsigned long	spacen = a.spacen();
-      unsigned long	spacem = a.spacem();
-      
-      X = a.getfwh();
-      if (IsNotDefined(X))
-      {   
-      	 W = Walsh(a);
-	 X.SetDims((spacen >> 1)+1, spacem-1);
- 
-    	 for (i = 0; i < spacen; i++)
-   	 {             
+      NTL::mat_ZZ       W, A;
+      unsigned long     i,j,v;
+      unsigned long     spacen = a.spacen();
+      unsigned long     spacem = a.spacem();
+      int k,l, nofirst;
+
+      A = a.getfwh();
+      if (IsNotDefined(A))
+      {
+         W = Walsh(a);
+         A.SetDims((spacen >> 1)+1, spacem-1);
+
+         for (i = 0; i < spacen; i++)
+         {
              for (j = 1; j < spacem; j++)
              {
-         	v = to_long(abs(W[i][j]));
-		X[v>>1][j-1] += 1;
+                v = to_long(abs(W[i][j]));
+                A[v>>1][j-1] += 1;
              }
-	 }
-         a.putfwh(X);
+         }
+         a.putfwh(A);
       }
-   }    
 
-   inline NTL::mat_ZZ FWH(VBF& a)	
-   { NTL::mat_ZZ X; FWH(X, a); return X; }
+      for (l = 0; l < A.NumCols(); l++) {
+        nofirst = 0;
+        for (k = 0; k < A.NumRows(); k++) {
+           if (A[k][l] != 0) {
+              if (nofirst) {
+                 s << ",";
+              } else {
+                 nofirst = 1;
+              }
+              s << "(" << 2*k << "," << A[k][l] << ")";
+           }
+        }
+        s << endl;
+      }
+   }
 
    // Absolute AC values frequency distribution 
-   void FAC(NTL::mat_ZZ& X, VBF& a)
+   void printFAC(NTL_SNS ostream& s, VBF& a)
    {
-      NTL::mat_ZZ	A;
-      unsigned long 	i,j,v;
-      unsigned long	spacen = a.spacen();
-      unsigned long	spacem = a.spacem();
-      
+      NTL::mat_ZZ       A, X;
+      unsigned long     i,j,v;
+      unsigned long     spacen = a.spacen();
+      unsigned long     spacem = a.spacem();
+      int k, l, nofirst;
+
       X = a.getfac();
       if (IsNotDefined(X))
-      {   
-      	 A = AC(a);
+      {
+         A = AC(a);
          X.SetDims((spacen >> 1)+1, spacem-1);
 
          for (i = 0; i < spacen; i++)
@@ -1344,10 +1358,22 @@ namespace VBFNS {
          }
          a.putfac(X);
       }
-   }    
 
-   inline NTL::mat_ZZ FAC(VBF& a)	
-   { NTL::mat_ZZ X; FAC(X, a); return X; }
+      for (l = 0; l < X.NumCols(); l++) {
+        nofirst = 0;
+        for (k = 0; k < X.NumRows(); k++) {
+           if (X[k][l] != 0) {
+              if (nofirst) {
+                 s << ",";
+              } else {
+                 nofirst = 1;
+              }
+              s << "(" << 2*k << "," << X[k][l] << ")";
+           }
+        }
+        s << endl;
+      }
+   }
 
    void PER(NTL::vec_ZZ& x, VBF& a)
    {
