@@ -102,9 +102,10 @@ namespace VBFNS {
      int _VBF__typenl;
      int _VBF__deg; 
      int _VBF__PC; 
+     long _VBF__wt;
 
      // Initialization of the scalar values        
-     VBF() { _VBF__n = 0; _VBF__m = 0; _VBF__rep = UNDEFINED; _VBF__spacen = 0; _VBF__spacem = 0; _VBF__nl = -1; _VBF__ld = -1; _VBF__lp = -1; _VBF__maxLAT = -1; _VBF__dp = -1; _VBF__maxDAT = -1; _VBF__maxAC = -1; _VBF__sigma = -1; _VBF__CI = -1; _VBF__bal = -1; _VBF__typenl = -1; _VBF__deg = -1; _VBF__PC = -1; } 
+     VBF() { _VBF__n = 0; _VBF__m = 0; _VBF__rep = UNDEFINED; _VBF__spacen = 0; _VBF__spacem = 0; _VBF__nl = -1; _VBF__ld = -1; _VBF__lp = -1; _VBF__maxLAT = -1; _VBF__dp = -1; _VBF__maxDAT = -1; _VBF__maxAC = -1; _VBF__sigma = -1; _VBF__CI = -1; _VBF__bal = -1; _VBF__typenl = -1; _VBF__deg = -1; _VBF__PC = -1; _VBF__wt = -1; } 
 
      VBF(const int n, const int m) { _VBF__n = n; _VBF__m = m; _VBF__spacen = (1 << n); _VBF__spacem = (1 << m); } 
 
@@ -189,6 +190,7 @@ namespace VBFNS {
         _VBF__maxDAT = a.getmaxdat();
 	_VBF__maxAC = a.getmaxac();
 	_VBF__sigma = a.getsigma();
+        _VBF__wt = a.getwt();
      	     	 
         return *this;
      }  
@@ -216,6 +218,7 @@ namespace VBFNS {
         _VBF__maxDAT = -1; 
 	_VBF__maxAC = -1;
 	_VBF__sigma = -1;
+        _VBF__wt = -1;
           
      	_VBF__anf.kill();  
      	_VBF__tt.kill();
@@ -793,6 +796,10 @@ namespace VBFNS {
          t = to_tt(a);
          puttt(t);
      }
+
+     // Weight = Hamming weight of its Truth Table
+     int getwt() const { return _VBF__wt; }
+     void putwt(const long& a) { _VBF__wt = a; }
 
      // 2^n x 2^m matrix = Linear Approximation Table
      NTL::mat_ZZ getLAT() const { return _VBF__LAT; }
@@ -1412,6 +1419,29 @@ namespace VBFNS {
 
    inline NTL::vec_ZZ PER(VBF& a)
    { NTL::vec_ZZ v; PER(v, a); return v; }
+
+   // Weight
+   void weight(long& w, VBF& F)
+   {
+      long i, spacen = F.spacen();
+      NTL::mat_GF2 T;
+      w = F.getwt();
+
+      if (w == UNDEFINED) {
+ 
+        T = TT(F);
+        w = 0;
+
+        for (i = 0; i < spacen; i++)
+        {
+           w += weight(T[i]);          
+        }
+        F.putwt(w);
+      }
+   }
+
+   inline long weight(VBF& F)
+   { long x; weight(x, F); return x; }
 
    // Linear potential
    void lp(NTL::RR& x, VBF& a)
