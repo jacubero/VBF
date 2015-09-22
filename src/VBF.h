@@ -50,9 +50,8 @@ const NTL::RR ZERO = to_RR(0);
 const NTL::RR ONE = to_RR(1);
 const int UNDEFINED = -1;
 const int BENT = 1;
-const int ALMOST_OPTIMAL = 2;
-const int LINEAR = 3;
-const int ALMOST_BENT = 4;
+const int LINEAR = 2;
+const int ALMOST_BENT = 3;
 
 namespace VBFNS {
 
@@ -850,7 +849,7 @@ namespace VBFNS {
 
      // Type of function in terms of nonlinearity 
      // 1 = It is bent = nl = nlmax (only if n is even)
-     // 2 = It is almost optimal
+     // 2 = It is almost bent 
      // 3 = It is linear
      int gettypenl() const { return _VBF__typenl; }
      void puttypenl(const int& a) { _VBF__typenl = a; }
@@ -1672,43 +1671,22 @@ namespace VBFNS {
       int b = a.gettypenl();
       NTL::RR nl, nlm, nlo;
       
-      if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX) {
-      	 typenl = LINEAR;
-         a.puttypenl(typenl);
-      }	else if (b == UNDEFINED) {
+      if (b == UNDEFINED) {
          nl = a.getnl();
-         typenl = 0;
          if (nl == 0) {
             typenl = LINEAR;
-         } else if (n % 2 == 0 && m == 1) {
+         } else if (n >= (2*m)) {
             nlm = nlmax(a);
             
 	    if (nl == nlm) {
                typenl = BENT;
-	    } else {
-              nlo = to_RR(power(to_ZZ(2),(n-1))) - to_RR(power(to_ZZ(2),n/2)); 
-              
-	      if (nl >= nlo) {
-                 typenl = ALMOST_OPTIMAL;
-              } 
             }
-         } else if (n % 2 == 1 && m == 1) {
+         } else if (n == m) {
             nlo = to_RR(power(to_ZZ(2),(n-1))) - to_RR(power(to_ZZ(2),((n-1)/2))); 
             
-            if (nl >= nlo) {
-               typenl = ALMOST_OPTIMAL;
-            } 
-         } else if (n % 2 == 0 && m <= n/2) {
-            nlm = nlmax(a);
-
-            if (nl == nlm) {
-               typenl = BENT;
-	    }
-         } else if (n % 2 == 1 && n == m) {
-            nlo = to_RR(power(to_ZZ(2),(n-1))) - to_RR(power(to_ZZ(2),((n-1)/2)));
             if (nl == nlo) {
                typenl = ALMOST_BENT;
-            }
+            } 
          }
          a.puttypenl(typenl);
       } else {
