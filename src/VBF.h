@@ -1665,7 +1665,6 @@ namespace VBFNS {
    // type of functions in terms of nonlinearity
    void typenl(int& typenl, VBF& a)
    {
-      int rep = a.getrep();
       int n = a.n();
       int m= a.m();
       int b = a.gettypenl();

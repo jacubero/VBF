@@ -182,9 +182,9 @@ int main(int argc, char *argv[])
    if (type == BENT)
    {
      cout << "It is a bent function" << endl;
-   } else if (type == ALMOST_OPTIMAL)
+   } else if (type == ALMOST_BENT)
    {
-     cout << "It is an almost optimal function" << endl;
+     cout << "It is an almost bent function" << endl;
    } else if (type == LINEAR)
    {
      cout << "It is a linear function" << endl;
