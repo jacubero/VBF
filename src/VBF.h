@@ -2504,21 +2504,34 @@ namespace VBFNS {
    void sum(VBF& X, VBF& A, VBF& B)  
    {   
       NTL::mat_ZZ 	a_walsh, b_walsh, x_walsh;
+      NTL::mat_GF2      a_tt, b_tt, x_tt;
       long aspacen = A.spacen();
       long aspacem = A.spacem();
       long bspacen = B.spacen();
       long bspacem = B.spacem();
+      int arep = A.getrep();
       
       if (aspacen != bspacen || aspacem != bspacem)   
          Error("VBF sum: dimensions mismatch");  
-   
-      // Walsh       
-      a_walsh = Walsh(A);
-      b_walsh = Walsh(B);
+
+      if (arep == WALSHMATRIX) {
+          
+        // Walsh       
+        a_walsh = Walsh(A);
+        b_walsh = Walsh(B);
            
-      x_walsh.SetDims(aspacen,aspacem);
-      convol_column(x_walsh,a_walsh,b_walsh);
-      X.putwalsh(x_walsh);
+        x_walsh.SetDims(aspacen,aspacem);
+        convol_column(x_walsh,a_walsh,b_walsh);
+        X.putwalsh(x_walsh);
+      } else {
+        
+        //Truth Table
+        a_tt = TT(A);
+        b_tt = TT(B);
+ 
+        x_tt = a_tt+b_tt;
+        X.puttt(x_tt);       
+      }
    }  
 
    VBF operator+(VBF& A, VBF& B)	
