@@ -1771,6 +1771,17 @@ namespace VBFNS {
    inline NTL::ZZ maxAC(VBF& a)
    { NTL::ZZ x; maxAC(x, a); return x; }
 
+   // Returns the maximum possible absolute indicator of a VBF with the same dimensions
+   NTL::ZZ maxACmax(VBF& a)
+   {
+      NTL::ZZ x;
+      long  n = a.n();
+
+      x = power(to_ZZ(2),n);
+
+      return x;
+   }
+
    // Linearity distance
    void ld(NTL::RR& x, VBF& a)
    {
@@ -1869,6 +1880,28 @@ namespace VBFNS {
 
    inline NTL::ZZ sigma(VBF& a)
    { NTL::ZZ x; sigma(x, a); return x; }
+
+   // Returns the maximum possible sum-of-square indicator of a VBF with the same dimensions
+   NTL::ZZ sigmamax(VBF& a)
+   {
+      NTL::ZZ x;
+      long  n = a.n();
+
+      x = power(to_ZZ(2),(3*n));
+
+      return x;
+   }
+
+   // Returns the minimum possible sum-of-square indicator of a VBF with the same dimensions
+   NTL::ZZ sigmamin(VBF& a)
+   {
+      NTL::ZZ x;
+      long  n = a.n();
+
+      x = power(to_ZZ(2),(2*n));
+
+      return x;
+   }
 
    // Probability of a differential
    void ProbDif(NTL::RR& x, VBF& a, NTL::ZZ& w)
