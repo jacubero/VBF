@@ -2601,7 +2601,7 @@ namespace VBFNS {
 
    // A:Vn1->Vm1		B:Vn1->Vm2
    // X:V(n1+n2)->V(m1+m2)
-   void concat(VBF& X, VBF& A, VBF& B)  
+   void bricklayer(VBF& X, VBF& A, VBF& B)  
    {  
       long 		numrows, numcolumns, i, j, a, b, c, d;
       NTL::mat_ZZ 	a_walsh, b_walsh, x_walsh;   
@@ -2634,8 +2634,43 @@ namespace VBFNS {
    }   
 
    VBF operator|(VBF& A, VBF& B)	
-   { VBF X; concat(X, A, B); return X; }
+   { VBF X; bricklayer(X, A, B); return X; }
 
+   // A:Vn->Vm                B:Vn->Vm
+   // X:V(n+1)->Vm
+   void concat(VBF& X, VBF& A, VBF& B)
+   {
+      long              numrows, numcolumns, i;
+      NTL::mat_GF2      a_tt, b_tt, x_tt;
+      int an = A.n();
+      int am = A.m();
+      int bn = B.n();
+      int bm = B.m();
+
+      if ((an != bn) || (am != bm))  
+         Error("VBF addimage: argument dimension mismatch");
+   
+      // TT
+      a_tt = TT(A);
+      b_tt = TT(B);
+ 
+      numrowsA = 1 << an; 
+      numrows = (1 << (an+1));
+      numcolumns = 1 << am;
+      x_tt.SetDims(numrows,numcolumns);
+  
+      for (i = 0; i < numrowsA; i++)
+      {
+         x_tt[i]=a_tt[i];
+         x_tt[i+numrowsA]=b_tt[i];
+      }
+ 
+      X.putwalsh(x_walsh);
+
+   }  
+
+   VBF operator||(VBF& A, VBF& B)
+   { VBF X; concat(X, A, B); return X; }
 
    // A:Vn->Vp		B:Vp->Vm
    // X = B*A:Vn->Vm
