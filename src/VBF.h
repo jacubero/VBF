@@ -2640,7 +2640,7 @@ namespace VBFNS {
    // X:V(n+1)->Vm
    void concat(VBF& X, VBF& A, VBF& B)
    {
-      long              numrows, numcolumns, i;
+      long              numrows, numrowsA, i;
       NTL::mat_GF2      a_tt, b_tt, x_tt;
       int an = A.n();
       int am = A.m();
@@ -2648,7 +2648,7 @@ namespace VBFNS {
       int bm = B.m();
 
       if ((an != bn) || (am != bm))  
-         Error("VBF addimage: argument dimension mismatch");
+         Error("VBF concat: argument dimension mismatch");
    
       // TT
       a_tt = TT(A);
@@ -2656,8 +2656,7 @@ namespace VBFNS {
  
       numrowsA = 1 << an; 
       numrows = (1 << (an+1));
-      numcolumns = 1 << am;
-      x_tt.SetDims(numrows,numcolumns);
+      x_tt.SetDims(numrows,am);
   
       for (i = 0; i < numrowsA; i++)
       {
@@ -2665,12 +2664,23 @@ namespace VBFNS {
          x_tt[i+numrowsA]=b_tt[i];
       }
  
-      X.putwalsh(x_walsh);
+      X.puttt(x_tt);
 
    }  
 
    VBF operator||(VBF& A, VBF& B)
    { VBF X; concat(X, A, B); return X; }
+
+   // ANF de h(x_1,...,x_{nf},x_{nf+1},...,x_{nf+ng}) = ANF de f(x_1,...,x_{nf})+ ANF de g(x_{nf+1},...,x_{nf+ng})
+   void concatpol(VBF&H, VBF& F, VBF& G)
+   {
+       vec_pol f=F.getpol();
+       vec_pol g=G.getpol();
+       vec_pol h;
+       
+       h = concat_vec_pol(f,g);
+       H.putpol(h); 
+   }
 
    // A:Vn->Vp		B:Vp->Vm
    // X = B*A:Vn->Vm

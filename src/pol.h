@@ -91,7 +91,6 @@ string to_pol(const vec_GF2& a)
    return s;
 }
 
-
 long len_vec(string& str)
 {
    vector<string> monoms;
@@ -117,6 +116,45 @@ long len_vec(string& str)
    return n;
 }
 
+string translate(string& str, long n)
+{
+   vector<string> monoms;
+   string strout;
+   string strtr;
+   unsigned long i, j;
+
+   Tokenize(str, monoms,"+");
+
+   for (i = 0; i < monoms.size(); i++)
+   {
+      vector<string> indexes;
+      Tokenize(monoms[i], indexes, "x");
+     
+      if (indexes.size() == 0)
+         strout += monoms[i];
+
+      for (j = 0; j < indexes.size(); j++)
+      {
+         istringstream Sindex(indexes[j]);
+         unsigned long index, newindex;
+
+         Sindex >> index;
+         newindex = index+n;
+         strout += "x";
+         strout += long2string(newindex);
+      }
+      strout += "+";
+   }
+
+   char ch = *strout.rbegin();
+   if (ch == '+') {
+     strtr = strout.substr(0, strout.size()-1);   
+   } else {
+     strtr = strout;
+   }
+
+   return strtr;
+}
 
 vec_GF2 to_vec(string& str, long n)
 {

@@ -59,7 +59,6 @@ vector<string> to_vec_pol(const mat_GF2& A)
    return polynoms;
 }
 
-
 mat_GF2 to_mat(vector<string>& str)
 {
    long i, temp, spacen, n = 0, m = str.size();
@@ -87,7 +86,6 @@ mat_GF2 to_mat(vector<string>& str)
    return A;
 }
 
-
 vector<string> rep(vec_pol& a)
 {
 
@@ -109,6 +107,34 @@ mat_GF2 mat(vec_pol& a)
    return a._mat__rep; 
 }
 
+vec_pol concat_vec_pol(vec_pol& f, vec_pol& g)
+{
+   long i, temp, nf = 0;
+   vector<string> strf = rep(f);
+   vector<string> strg = rep(g);
+   vector<string> strgt, strh;
+   long mf = strf.size(), mg= strg.size();
+   vec_pol h;
+
+   if (mf != mg)
+     Error("concat_vec_pol: dimensions mismatch");
+
+   for (i = 0; i < mf; i++)
+   {
+      temp = len_vec(strf[i]);
+      if (temp > nf) nf = temp;
+   }
+
+   for (i = 0; i < mg; i++)
+   {
+      strgt.push_back(translate(strg[i],nf));
+      strh.push_back(strf[i]+"+"+strgt[i]);
+   }
+
+   h = strh;
+
+   return h;
+}
 
 NTL_SNS istream& operator>>(NTL_SNS istream& s, vec_pol& a)
 {
