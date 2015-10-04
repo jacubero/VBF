@@ -2671,7 +2671,7 @@ namespace VBFNS {
    VBF operator||(VBF& A, VBF& B)
    { VBF X; concat(X, A, B); return X; }
 
-   // ANF de h(x_1,...,x_{nf},x_{nf+1},...,x_{nf+ng}) = ANF de f(x_1,...,x_{nf})+ ANF de g(x_{nf+1},...,x_{nf+ng})
+   // ANF of h(x_1,...,x_{nf},x_{nf+1},...,x_{nf+ng}) = ANF of f(x_1,...,x_{nf})+ ANF of g(x_{nf+1},...,x_{nf+ng})
    void concatpol(VBF&H, VBF& F, VBF& G)
    {
        vec_pol f=F.getpol();

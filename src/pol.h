@@ -121,27 +121,32 @@ string translate(string& str, long n)
    vector<string> monoms;
    string strout;
    string strtr;
+   string str1 ("1");
    unsigned long i, j;
 
    Tokenize(str, monoms,"+");
 
    for (i = 0; i < monoms.size(); i++)
    {
-      vector<string> indexes;
-      Tokenize(monoms[i], indexes, "x");
+      if (monoms[i].compare(str1) == 0) {
+        strout += "1";
+      } else {
+        vector<string> indexes;
+        Tokenize(monoms[i], indexes, "x");
      
-      if (indexes.size() == 0)
-         strout += monoms[i];
+        if (indexes.size() == 0)
+           strout += monoms[i];
 
-      for (j = 0; j < indexes.size(); j++)
-      {
-         istringstream Sindex(indexes[j]);
-         unsigned long index, newindex;
+        for (j = 0; j < indexes.size(); j++)
+        {
+           istringstream Sindex(indexes[j]);
+           unsigned long index, newindex;
 
-         Sindex >> index;
-         newindex = index+n;
-         strout += "x";
-         strout += long2string(newindex);
+           Sindex >> index;
+           newindex = index+n;
+           strout += "x";
+           strout += long2string(newindex);
+        }
       }
       strout += "+";
    }
