@@ -2268,7 +2268,6 @@ namespace VBFNS {
    {
       std::set<long> C,D;
       std::set<long>::iterator it;
-      vector<long> f;
       long am = a.m();
       long an = a.n();
       long i, x, y, len, spacen = a.spacen();
@@ -2279,57 +2278,47 @@ namespace VBFNS {
          return;
 
       v = a.getcycle();
-      if (IsZero(v)) 
+      if (IsZero(v))
       {
-         v.SetLength(spacen);
- 	 T = TT(a);
+         v.SetLength(spacen+1);
+         T = TT(a);
          for (i = 0; i < spacen; i++) {
-	     C.insert(i);
+             C.insert(i);
          }
 
          x = *C.begin();
          D.insert(x);
 
-	 f = a.getfp();
-
          while (C.size() > 1)
          {
-	    vy = T[x];
-	    y = conv_long(vy);
-	    C.erase(x);
+            vy = T[x];
+            y = conv_long(vy);
+            C.erase(x);
             it = D.find(y);
 
             // y is in D, start new cycle 
             if (it != D.end())
-	    {
-	       len = D.size();
-	       v[len] += 1;
-	       if (len == 1)
-	       {
-		  x = *D.begin();
-		  f.push_back(x);
-               }
-	       D.clear();
-	       x = *C.begin();
-	       y = x;
+            {
+               len = D.size();
+               v[len] += 1;
+               D.clear();
+               x = *C.begin();
+               y = x;
             } else {
-	       x=y;
-	    }
-	    D.insert(y);
+               x=y;
+            }
+            D.insert(y);
          }
 
-	 it = D.find(y);
+         it = D.find(y);
          if (it != D.end())
          {
             len = D.size();
-            v[len] += 1; 
+            v[len] += 1;
          } else {
-	    v[1] += 1;
-	    x = *D.begin();
-	    f.push_back(x);
+            v[1] += 1;
          }
-	 a.putcycle(v);
-	 a.putfp(f);
+         a.putcycle(v);
       }
    }
 
