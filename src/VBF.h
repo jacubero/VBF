@@ -2517,7 +2517,6 @@ namespace VBFNS {
 
         x_tt = a_tt+b_tt;
         X.puttt(x_tt);
-
       }
    }  
 
@@ -2538,25 +2537,29 @@ namespace VBFNS {
       if (am != bm)   
          Error("VBF direct sum: image dimension mismatch"); 
 
-
-      // Walsh       
-      a_walsh = Walsh(A);
-      b_walsh = Walsh(B);
-   
-      numrows = (1 << (an+bn));   
-      numcolumns = (1 << am);
-      x_walsh.SetDims(numrows,numcolumns);
-   
-      for (i = 0; i < numrows; i++)  
+      if ((A.getrep() == WALSHMATRIX) || (B.getrep() == WALSHMATRIX))
       {
-         a = i >> bn;
-         b = i & ((1 << bn)- 1);
-         for (j = 0; j < numcolumns; j++)
-         {
-   	    x_walsh[i][j]=a_walsh[a][j]*b_walsh[b][j];
-         }	
-      }  
-      X.putwalsh(x_walsh);
+        // Walsh       
+        a_walsh = Walsh(A);
+        b_walsh = Walsh(B);
+   
+        numrows = (1 << (an+bn));   
+        numcolumns = (1 << am);
+        x_walsh.SetDims(numrows,numcolumns);
+   
+        for (i = 0; i < numrows; i++)  
+        {
+           a = i >> bn;
+           b = i & ((1 << bn)- 1);
+           for (j = 0; j < numcolumns; j++)
+           {
+   	      x_walsh[i][j]=a_walsh[a][j]*b_walsh[b][j];
+           }	
+        }  
+        X.putwalsh(x_walsh);
+      } else {
+
+      } 
       
    }  
 
