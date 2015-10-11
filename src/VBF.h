@@ -2486,7 +2486,6 @@ namespace VBFNS {
    inline VBF inv(VBF& A)
    { VBF X; inv(X, A); return X; }
 
-
    // procedural arithmetic routines:
 
    // X = A + B
@@ -2498,34 +2497,32 @@ namespace VBFNS {
       long aspacem = A.spacem();
       long bspacen = B.spacen();
       long bspacem = B.spacem();
-      int arep = A.getrep();
       
       if (aspacen != bspacen || aspacem != bspacem)   
          Error("VBF sum: dimensions mismatch");  
 
-      if (arep == WALSHMATRIX) {
-          
-        // Walsh       
+      if ((A.getrep() == WALSHMATRIX) || (B.getrep() == WALSHMATRIX))
+      {
+        // Walsh
         a_walsh = Walsh(A);
         b_walsh = Walsh(B);
-           
+
         x_walsh.SetDims(aspacen,aspacem);
         convol_column(x_walsh,a_walsh,b_walsh);
         X.putwalsh(x_walsh);
       } else {
-        
         //Truth Table
         a_tt = TT(A);
         b_tt = TT(B);
- 
+
         x_tt = a_tt+b_tt;
-        X.puttt(x_tt);       
+        X.puttt(x_tt);
+
       }
    }  
 
    VBF operator+(VBF& A, VBF& B)	
    { VBF X; sum(X, A, B); return X; }
-
 
    // A:Vn1->Vm		B:Vn2->Vm
    // X:V(n1+n2)->Vm
@@ -2540,6 +2537,7 @@ namespace VBFNS {
   
       if (am != bm)   
          Error("VBF direct sum: image dimension mismatch"); 
+
 
       // Walsh       
       a_walsh = Walsh(A);
@@ -2692,9 +2690,17 @@ namespace VBFNS {
       if (am != bn)
          Error("VBF composition: dimensions mismatch");
 
-      x_walsh.SetDims(a_spacen,B.spacem());
+      if ((A.getrep() == WALSHMATRIX) || (B.getrep() == WALSHMATRIX))
+      {
+         a_walsh = Walsh(A);
+         b_walsh = Walsh(B);
+         x_walsh.SetDims(a_spacen,B.spacem());
 
-      if ((A.getrep() == TTMATRIX) || (B.getrep() == TTMATRIX))
+         x_walsh = a_walsh * b_walsh;
+         div(x_walsh,x_walsh, a_spacem);
+         X.putwalsh(x_walsh);
+      }
+      else
       {
          a_tt = TT(A);
          b_tt = TT(B);
@@ -2705,17 +2711,7 @@ namespace VBFNS {
             j = conv_long(a_tt[i]);
             x_tt[i] = b_tt[j];
          }
-
       }
-      else
-      {
-         a_walsh = Walsh(A);
-         b_walsh = Walsh(B);
-
-         x_walsh = a_walsh * b_walsh;
-      }
-      div(x_walsh,x_walsh, a_spacem);
-      X.putwalsh(x_walsh);
    }
 
    VBF operator*(VBF& A, VBF& B)	

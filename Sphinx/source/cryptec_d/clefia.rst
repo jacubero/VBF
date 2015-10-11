@@ -115,7 +115,7 @@ Next figure shows the construction of :math:`S_0`:
 
 Hence, CLEFIA S0 can be denoted by:
 
-:math:`S_0(\vec{x_0},\vec{x_1}) = \left( SS_2 \left( SS_0(\vec{x_0}) \oplus Mul2 \left( SS_1(\vec{x_1}) \right) \right), SS_3 \left( Mul2 \left( SS_0(\vec{x_0}) \right) \oplus SS_1(\vec{x_1}) \right)`
+:math:`S_0(\vec{x_0},\vec{x_1}) = \left( SS_2 \left( SS_0(\vec{x_0}) \oplus Mul2 \left( SS_1(\vec{x_1}) \right) \right), SS_3 \left( Mul2 \left( SS_0(\vec{x_0}) \right) \oplus SS_1(\vec{x_1}) \right) \right)`
 
 Note that the symbol :math:`\circ` refers to the composition of functions, :math:`\oplus` refers to the direct sum of functions and :math:`Mul2(\vec{x}) = 0x2 \cdot \vec{x}`.
 
