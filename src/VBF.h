@@ -2677,70 +2677,46 @@ namespace VBFNS {
    // is a permutation of the rows of the Walsh spectrum of B
    // If B is a permutation, then the Walsh spectrum of X
    // is a permutation of the columns of the Walsh spectrum of A
-   void Comp(VBF& X, VBF& A, VBF& B)  
-   {  
-      long 		i;
-      NTL::mat_ZZ 	a_walsh, b_walsh, x_walsh;
-      NTL::vec_ZZ  	a_per, b_per, bin;  
+   void Comp(VBF& X, VBF& A, VBF& B)
+   {
+      long              i, j;
+      NTL::mat_ZZ       a_walsh, b_walsh, x_walsh;
+      NTL::mat_GF2      a_tt, b_tt, x_tt;
+      vec_GF2 bin;
+      long a_spacen = A.spacen();
+      long a_spacem = A.spacem();
       int am = A.m();
       int bn = B.n();
       int bm = B.m();
-  
-      if (am != bn)   
-         Error("VBF composition: dimensions mismatch");  
 
-      x_walsh.SetDims(A.spacen(),B.spacem());
-   
-      if (A.getrep() == PERTRANSF)
+      if (am != bn)
+         Error("VBF composition: dimensions mismatch");
+
+      x_walsh.SetDims(a_spacen,B.spacem());
+
+      if ((A.getrep() == TTMATRIX) || (B.getrep() == TTMATRIX))
       {
-         ZZ row;
-	 NTL::RR nlB;
-      
-         a_per.SetLength(am);
-         a_per = A.getper();
- 
-         // Walsh Transform
-	 b_walsh = Walsh(B);
-         
-         for (i = 0; i < B.spacem(); i++)  
+         a_tt = TT(A);
+         b_tt = TT(B);
+         x_tt.SetDims(a_spacen,bm);
+
+         for (i = 0; i < a_spacen; i++)
          {
-      	    bin = to_vecZZ(i,am);
-            InnerProduct(row,bin,a_per);
-            x_walsh[i] = b_walsh(to_long(row));
+            j = conv_long(a_tt[i]);
+            x_tt[i] = b_tt[j];
          }
 
-      } else if (B.getrep() == PERTRANSF)
-      {
-         ZZ row;
-         NTL::mat_ZZ temp;
-      
-	 a_walsh = Walsh(A);
-	 
-         b_per.SetLength(bm);
-         b_per = B.getper();
-
-         temp.SetDims(B.spacem(),A.spacen());      
-      
-         for (i = 0; i < B.spacem(); i++)  
-         {
-      	    bin = to_vecZZ(i,bm);
-      	    InnerProduct(row,bin,b_per);
-            temp[i] = a_walsh(to_long(row));
-         }      
-         x_walsh = transpose(temp);
       }
-      else	
+      else
       {
-	 a_walsh = Walsh(A); 
-	 b_walsh = Walsh(B);
+         a_walsh = Walsh(A);
+         b_walsh = Walsh(B);
 
          x_walsh = a_walsh * b_walsh;
-      }     
-      long a_spacem = A.spacem();
+      }
       div(x_walsh,x_walsh, a_spacem);
       X.putwalsh(x_walsh);
-
-   }  
+   }
 
    VBF operator*(VBF& A, VBF& B)	
    { VBF X; Comp(X, A, B); return X; }
