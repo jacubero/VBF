@@ -2528,6 +2528,7 @@ namespace VBFNS {
    void directsum(VBF& X, VBF& A, VBF& B)  
    {  
       NTL::mat_ZZ 	a_walsh, b_walsh, x_walsh;
+      NTL::mat_GF2      a_tt, b_tt, x_tt;
       long numrows, numcolumns, i, j, a, b;
       int an = A.n();  
       int am = A.m();
@@ -2537,13 +2538,13 @@ namespace VBFNS {
       if (am != bm)   
          Error("VBF direct sum: image dimension mismatch"); 
 
+      numrows = (1 << (an+bn));
+
       if ((A.getrep() == WALSHMATRIX) || (B.getrep() == WALSHMATRIX))
       {
         // Walsh       
         a_walsh = Walsh(A);
         b_walsh = Walsh(B);
-   
-        numrows = (1 << (an+bn));   
         numcolumns = (1 << am);
         x_walsh.SetDims(numrows,numcolumns);
    
@@ -2558,7 +2559,18 @@ namespace VBFNS {
         }  
         X.putwalsh(x_walsh);
       } else {
+        // Truth Table
+        a_tt = TT(A);
+        b_tt = TT(B);
+        x_tt.SetDims(numrows,am);
 
+        for (i = 0; i < numrows; i++)
+        {
+           a = i >> bn;
+           b = i & ((1 << bn)- 1);
+           x_tt[i]=a_tt[a]+b_tt[b];
+        }
+        X.puttt(x_tt);
       } 
       
    }  
@@ -2568,7 +2580,8 @@ namespace VBFNS {
    void addimage(VBF& X, VBF& A, VBF& B)  
    {  
       NTL::mat_ZZ 	a_walsh, b_walsh, x_walsh;
-      long numrows, numcolumns; 
+      NTL::mat_GF2      a_tt, b_tt, x_tt, ainv_tt, binv_tt, xinv_tt;
+      long i, numrows, numcolumns; 
       int an = A.n();  
       int am = A.m();
       int bn = B.n();
@@ -2576,17 +2589,43 @@ namespace VBFNS {
   
       if (an != bn)   
          Error("VBF addimage: argument dimension mismatch"); 
-       
-      // Walsh       
-      a_walsh = Walsh(A);
-      b_walsh = Walsh(B);
+
+      numrows = (1 << an);
+
+      if ((A.getrep() == WALSHMATRIX) || (B.getrep() == WALSHMATRIX))
+      {
+        // Walsh       
+        a_walsh = Walsh(A);
+        b_walsh = Walsh(B);
    
-      numrows = (1 << an);   
-      numcolumns = (1 << (am+bm));
-      x_walsh.SetDims(numrows,numcolumns);  
-      convolution(x_walsh, a_walsh, b_walsh);
+        numcolumns = (1 << (am+bm));
+        x_walsh.SetDims(numrows,numcolumns);  
+        convolution(x_walsh, a_walsh, b_walsh);
  
-      X.putwalsh(x_walsh);
+        X.putwalsh(x_walsh);
+      } else {
+        // Truth Table
+        a_tt = TT(A);
+        b_tt = TT(B);
+        ainv_tt = transpose(a_tt);
+        binv_tt = transpose(b_tt);
+        
+        numcolumns = am+bm;
+        x_tt.SetDims(numrows,numcolumns);
+        xinv_tt = transpose(x_tt);
+
+        for (i = 0; i < am; i++)
+        {
+           xinv_tt[i]=ainv_tt[i];
+        }
+        for (i = 0; i < bm; i++)
+        {
+           xinv_tt[am+i]=binv_tt[i];
+        }
+        x_tt = transpose(xinv_tt);
+
+        X.puttt(x_tt);
+      }
    }     
 
    // A:Vn1->Vm1		B:Vn1->Vm2
@@ -2594,33 +2633,60 @@ namespace VBFNS {
    void bricklayer(VBF& X, VBF& A, VBF& B)  
    {  
       long 		numrows, numcolumns, i, j, a, b, c, d;
-      NTL::mat_ZZ 	a_walsh, b_walsh, x_walsh;   
+      NTL::mat_ZZ 	a_walsh, b_walsh, x_walsh;  
+      NTL::mat_GF2      a_tt, b_tt, x_tt;
       int an = A.n();
       int am = A.m();
       int bn = B.n();  
       int bm = B.m();
-    
-      // Walsh
-      a_walsh = Walsh(A);
-      b_walsh = Walsh(B);
-   
-      numrows = (1 << (an+bn));   
-      numcolumns = (1 << (am+bm));
-      x_walsh.SetDims(numrows,numcolumns);
-   
-      for (i = 0; i < numrows; i++)  
-      {
-         a = i >> bn;
-         b = i & ((1 << bn)- 1);
-         for (j = 0; j < numcolumns; j++)
-         {
-      	    c = j >> bm;
-   	    d = j & ((1 << bm)- 1);
-   	    x_walsh[i][j]=a_walsh[a][c]*b_walsh[b][d];
-         }	
-      }  
-      X.putwalsh(x_walsh);
 
+      numrows = (1 << (an+bn));  
+
+      if ((A.getrep() == WALSHMATRIX) || (B.getrep() == WALSHMATRIX))
+      {
+        // Walsh
+        a_walsh = Walsh(A);
+        b_walsh = Walsh(B);
+   
+        numcolumns = (1 << (am+bm));
+        x_walsh.SetDims(numrows,numcolumns);
+   
+        for (i = 0; i < numrows; i++)  
+        {
+           a = i >> bn;
+           b = i & ((1 << bn)- 1);
+           for (j = 0; j < numcolumns; j++)
+           {
+      	      c = j >> bm;
+   	      d = j & ((1 << bm)- 1);
+   	      x_walsh[i][j]=a_walsh[a][c]*b_walsh[b][d];
+           }	
+        }  
+        X.putwalsh(x_walsh);
+      } else {
+        // Truth Table
+        a_tt = TT(A);
+        b_tt = TT(B);
+
+        numcolumns = am+bm;
+        x_tt.SetDims(numrows,numcolumns);
+
+        for (i = 0; i < numrows; i++)
+        {
+           a = i >> bn;
+           b = i & ((1 << bn)- 1);
+           for (j = 0; j < am; j++)
+           {
+              x_tt[i][j]=a_tt[a][j];
+           }
+           for (j = 0; j < bm; j++)
+           {
+              x_tt[i][am+j]=b_tt[b][j];
+           }
+        }
+
+        X.puttt(x_tt);
+      }
    }   
 
    VBF operator|(VBF& A, VBF& B)	
@@ -2714,6 +2780,7 @@ namespace VBFNS {
             j = conv_long(a_tt[i]);
             x_tt[i] = b_tt[j];
          }
+         X.puttt(x_tt);
       }
    }
 

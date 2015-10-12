@@ -139,6 +139,8 @@ The criteria of several constructions in S0 are summarized in the following tabl
 | :math:`\vec{y_1}`           | 8x4  | 100  | -     | 42   | 6     | 4    | 88      | 246784         | 0.0478515625 | 0.4514160156 |
 +-----------------------------+------+------+-------+------+-------+------+---------+----------------+--------------+--------------+
 
+You can find a program which calculates the Truth Tables of these constructions in Appendix in section "Analysis of CLEFIA S0 construction".
+
 Mul2
 ^^^^
 
@@ -396,6 +398,14 @@ Walsh Spectrum representation (except first row and column):
 
 Other useful information in cryptanalysis
 -----------------------------------------
+
+Cycle structure:
+
++--------------+------------------+
+| Cycle length | Number of cycles |
++==============+==================+
+| 256          | 1                |
++--------------+------------------+
 
 There are no linear structures
 

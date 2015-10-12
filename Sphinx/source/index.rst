@@ -31,6 +31,7 @@ Table of Contents:
    Other applications <applications>
    FAQ <faq>
    Bibliography <bibliography>
+   Appendix <appendix>   
 
 Indices and tables
 ==================
