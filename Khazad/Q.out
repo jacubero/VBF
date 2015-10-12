@@ -1,0 +1,47 @@
+Argument Dimension = 4
+Argument space has 16 elements.
+Image Dimension = 4
+Image space has 16 elements.
+
+Writing Algebraic Normal Form to file: Q.anf
+[Columns = Image components]
+
+Writing Characteristic Function to file: Q.char
+[Columns = Image components]
+
+Writing Walsh Spectrum to file: Q.wal
+
+Writing Linear Profile to file: Q.lp
+[To normalize divide by 256]
+
+Writing Differential Profile to file: Q.dp
+[To normalize divide by 4096]
+
+Writing the polynomials in ANF to file: Q.pol
+
+Writing Linear structures to file: Q.ls
+
+Writing Autocorrelation Spectrum to file: Q.ac
+
+Writing Cycle Structure to file: Q.cy
+
+Nonlinearity: 4
+Second order Nonlinearity: 2
+Linearity distance: 2
+Algebraic degree: 3
+Algebraic immunity: 2
+Absolute indicator: 8
+Sum-of-squares indicator: 640
+Linear potential: 0.25
+Differential potential: 0.5625
+Maximum Nonlinearity (if n is even): 5
+Maximum Linearity distance: 7.5
+The fixed points are: 
+[]
+The negated fixed points are: 
+[[0 0 0 1]
+[1 1 1 0]
+]
+Correlation immunity: 0
+It is a balanced function
+The function is PC of degree 0

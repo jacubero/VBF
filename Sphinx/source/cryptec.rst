@@ -33,7 +33,7 @@ Below you can find a legend describing the cryptographic criteria used in this c
  
 .. contents::
    :local:
-   :depth: 2
+   :depth: 3
 
 .. include::
    cryptec_d/cipherunicorn-e.rst
