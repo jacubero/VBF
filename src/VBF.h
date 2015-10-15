@@ -1702,8 +1702,7 @@ namespace VBFNS {
       NTL::mat_ZZ	D;
       int 		rep = a.getrep();
       NTL::RR		dp = a.getdp();
-      NTL::RR		dd, nminus1, la;
-      NTL::RR		ld = a.getld();
+      NTL::RR		dd;
       NTL::ZZ		max;
    	      
       if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX)
@@ -1711,15 +1710,7 @@ namespace VBFNS {
       	 x = ONE;
       	 a.putdp(x);
       }	 
-      else if (dp == NOTDEFINED && ld != NOTDEFINED)
-      {
-         long spacen = a.spacen();
-
-      	 nminus1 = to_RR(spacen)/2.0;
-         la = 1 - ld/nminus1;
-         x = la*la;	 
-      }
-      else if (dp == NOTDEFINED && ld == NOTDEFINED)
+      else if (dp == NOTDEFINED)
       {
 	 D = DAT(a);  	
          max = maxvalue(D);
