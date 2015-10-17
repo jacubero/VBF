@@ -12,7 +12,6 @@ int main(int argc, char *argv[])
    
    VBF		F;
    NTL::vec_long vec_F;
-   NTL::vec_ZZ	 c;
    NTL::mat_GF2 A, T;
    NTL::mat_ZZ  W, LP, DP;
    NTL::mat_ZZ  Ac;
@@ -152,15 +151,8 @@ int main(int argc, char *argv[])
       return 0;   
    }
 
-   c = Cycle(F);
    cout << endl << "Writing Cycle Structure to file: " << file << endl;
-   for (i = 0; i < c.length(); i++)
-   {
-      if (c[i] > 0)
-      {
-	output8 << i << "," << c[i] << endl;
-      }
-   }
+   printCycle(output8,F);
    output8.close();
 
    cout << endl <<  "Nonlinearity: " << nl(F) << endl;
