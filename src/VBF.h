@@ -2344,6 +2344,23 @@ namespace VBFNS {
    inline NTL::vec_ZZ Cycle(VBF& a)
    { NTL::vec_ZZ v; Cycle(v, a); return v; }
 
+   // Print Cycle Structure 
+   void printCycle(NTL_SNS ostream& s, VBF& F)
+   {
+       NTL::vec_ZZ c;
+       int i;
+
+       c = Cycle(F);
+
+       for (i = 0; i < c.length(); i++)
+       {
+          if (c[i] > 0)
+          {
+            s << i << "," << c[i] << endl;
+          }
+       }
+   }
+
    // Fixed points S(x)=x
    // valid when n==m
    NTL::mat_GF2 fixedpoints(VBF& a)
