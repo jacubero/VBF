@@ -90,9 +90,10 @@ namespace VBFNS {
      long _VBF__spacem; 
      NTL::RR _VBF__nl; 
      NTL::RR _VBF__ld; 
-     NTL::RR _VBF__lp; 
+     NTL::RR _VBF__lp;
+     NTL::RR _VBF__dp;
+     NTL::ZZ _VBF__maxW; 
      NTL::ZZ _VBF__maxLAT; 
-     NTL::RR _VBF__dp; 
      NTL::ZZ _VBF__maxDAT;
      NTL::ZZ _VBF__maxAC;
      NTL::ZZ _VBF__sigma;
@@ -104,7 +105,7 @@ namespace VBFNS {
      long _VBF__wt;
 
      // Initialization of the scalar values        
-     VBF() { _VBF__n = 0; _VBF__m = 0; _VBF__rep = UNDEFINED; _VBF__spacen = 0; _VBF__spacem = 0; _VBF__nl = -1; _VBF__ld = -1; _VBF__lp = -1; _VBF__maxLAT = -1; _VBF__dp = -1; _VBF__maxDAT = -1; _VBF__maxAC = -1; _VBF__sigma = -1; _VBF__CI = -1; _VBF__bal = -1; _VBF__typenl = -1; _VBF__deg = -1; _VBF__PC = -1; _VBF__wt = -1; } 
+     VBF() { _VBF__n = 0; _VBF__m = 0; _VBF__rep = UNDEFINED; _VBF__spacen = 0; _VBF__spacem = 0; _VBF__nl = -1; _VBF__ld = -1; _VBF__lp = -1; _VBF__dp = -1; _VBF__maxW = -1; _VBF__maxLAT = -1; _VBF__maxDAT = -1; _VBF__maxAC = -1; _VBF__sigma = -1; _VBF__CI = -1; _VBF__bal = -1; _VBF__typenl = -1; _VBF__deg = -1; _VBF__PC = -1; _VBF__wt = -1; } 
 
      VBF(const int n, const int m) { _VBF__n = n; _VBF__m = m; _VBF__spacen = (1 << n); _VBF__spacem = (1 << m); } 
 
@@ -185,6 +186,7 @@ namespace VBFNS {
         _VBF__typenl = a.gettypenl();
      	_VBF__deg = a.getdeg();   
      	_VBF__PC = a.getPC(); 
+        _VBF__maxW = a.getmaxwalsh();
         _VBF__maxLAT = a.getmaxlat();
         _VBF__maxDAT = a.getmaxdat();
 	_VBF__maxAC = a.getmaxac();
@@ -213,6 +215,7 @@ namespace VBFNS {
         _VBF__typenl = -1;
      	_VBF__deg = -1;   
      	_VBF__PC = -1;   
+        _VBF__maxW = -1;
         _VBF__maxLAT = -1;
         _VBF__maxDAT = -1; 
 	_VBF__maxAC = -1;
@@ -869,6 +872,10 @@ namespace VBFNS {
      // linear potential: 1/2^n <= lp <= 1
      NTL::RR getlp() const { return _VBF__lp; }	
      void putlp(const NTL::RR& a) { _VBF__lp = a; }
+
+     // Maximum value of the Walsh Spectrum = Spectral Radius
+     NTL::ZZ getmaxwalsh() const { return _VBF__maxW; }
+     void putmaxwalsh(const NTL::ZZ& a) { _VBF__maxW = a; }
 
      // Maximum value of the LAT
      NTL::ZZ getmaxlat() const { return _VBF__maxLAT; }	
@@ -1631,7 +1638,28 @@ namespace VBFNS {
       }
    }
 
-   // Maximum value of LAT
+   // Maximum value of Walsh Spectrum except from value on (0,0)
+   void SpectralRadius(NTL::ZZ& x, VBF& a)
+   {
+      NTL::mat_ZZ       W;
+      NTL::ZZ           maxw = a.getmaxwalsh();
+
+      if (maxw == -1)
+      {
+         W = Walsh(a);
+         x = maxvalue_abs(W);
+         a.putmaxwalsh(x);
+      }
+      else
+      {
+         x = maxw;
+      }
+   }
+
+   inline NTL::ZZ SpectralRadius(VBF& a)
+   { NTL::ZZ x; SpectralRadius(x, a); return x; }
+
+   // Maximum value of LAT except from value on (0,0)
    void maxLAT(NTL::ZZ& x, VBF& a)
    {
       NTL::mat_ZZ	L;
