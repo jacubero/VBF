@@ -1,30 +1,26 @@
-/*   ex		          */
-
 #include <iostream>
 #include <fstream>
 #include "VBF.h"
-  
 
-/******************************************************************/
-int main(int argc, char *argv[]) 
+int main(int argc, char *argv[])
 {
    using namespace VBFNS;
-   
-   VBF		F;
+
+   VBF          F;
    NTL::vec_long vec_F;
+   NTL::vec_ZZ   c;
    NTL::mat_GF2 A, T;
    NTL::mat_ZZ  W, LP, DP;
    NTL::mat_ZZ  Ac;
    long a;
-   int  i, n;
+   int  n;
    char file[33];
 
    // Load VBF definitions
-   
-   sprintf(file,"%s.dec",argv[1]); 
+
+   sprintf(file,"%s.dec",argv[1]);
    ifstream input(file);
-   if(!input)
-   {
+   if(!input) {
       cerr << "Error opening " << file << endl;
       return 0;
    }
@@ -35,13 +31,12 @@ int main(int argc, char *argv[])
 
    sprintf(file,"%s.anf",argv[1]);
    ofstream output(file);
-   if(!output)
-   {
+   if(!output) {
       cerr << "Error opening " << file << endl;
       return 0;
    }
 
-   A = ANF(F); 
+   A = ANF(F);
    cout << "Argument Dimension = " << F.n() << endl;
    cout << "Argument space has " << F.spacen() << " elements."<< endl;
    cout << "Image Dimension = " << F.m() << endl;
@@ -53,13 +48,12 @@ int main(int argc, char *argv[])
 
    sprintf(file,"%s.tt",argv[1]);
    ofstream output1(file);
-   if(!output1)
-   {
+   if(!output1) {
       cerr << "Error opening " << file << endl;
       return 0;
    }
 
-   T = TT(F);   
+   T = TT(F);
    cout << endl << "Writing Truth Table to file: " << file << endl;
    cout << "[Columns = Image components]" << endl;
    output1 << T << endl;
@@ -67,25 +61,23 @@ int main(int argc, char *argv[])
 
    sprintf(file,"%s.wal",argv[1]);
    ofstream output2(file);
-   if(!output2)
-   {
+   if(!output2) {
       cerr << "Error opening " << file << endl;
       return 0;
    }
 
-   W = Walsh(F); 
+   W = Walsh(F);
    cout << endl << "Writing Walsh Spectrum to file: " << file <<endl;
    output2 << W << endl;
    output2.close();
 
    sprintf(file,"%s.lp",argv[1]);
    ofstream output3(file);
-   if(!output3)
-   {
-      cerr << "Error opening " << file << endl; 
-      return 0; 
+   if(!output3) {
+      cerr << "Error opening " << file << endl;
+      return 0;
    }
-   
+
    LP = LAT(F);
    cout << endl << "Writing Linear Profile to file: " << file << endl;
    cout << "[To normalize divide by " << LP[0][0] << "]" << endl;
@@ -94,12 +86,11 @@ int main(int argc, char *argv[])
 
    sprintf(file,"%s.dp",argv[1]);
    ofstream output4(file);
-   if(!output4)
-   {
+   if(!output4) {
       cerr << "Error opening " << file << endl;
       return 0;
    }
-   
+
    DP = DAT(F);
    cout << endl << "Writing Differential Profile to file: " << file << endl;
    cout << "[To normalize divide by " << DP[0][0] << "]" << endl;
@@ -108,8 +99,7 @@ int main(int argc, char *argv[])
 
    sprintf(file,"%s.pol",argv[1]);
    ofstream output5(file);
-   if(!output5)
-   {
+   if(!output5) {
       cerr << "Error opening " << file << endl;
       return 0;
    }
@@ -120,10 +110,9 @@ int main(int argc, char *argv[])
 
    sprintf(file,"%s.ls",argv[1]);
    ofstream output6(file);
-   if(!output6)
-   {
+   if(!output6) {
       cerr << "Error opening " << file << endl;
-      return 0;   
+      return 0;
    }
 
    cout << endl << "Writing Linear structures to file: " << file << endl;
@@ -132,10 +121,9 @@ int main(int argc, char *argv[])
 
    sprintf(file,"%s.ac",argv[1]);
    ofstream output7(file);
-   if(!output7)
-   {
+   if(!output7) {
       cerr << "Error opening " << file << endl;
-      return 0;   
+      return 0;
    }
 
    Ac = AC(F);
@@ -145,14 +133,13 @@ int main(int argc, char *argv[])
 
    sprintf(file,"%s.cy",argv[1]);
    ofstream output8(file);
-   if(!output8)
-   {
+   if(!output8) {
       cerr << "Error opening " << file << endl;
-      return 0;   
+      return 0;
    }
 
    cout << endl << "Writing Cycle Structure to file: " << file << endl;
-   printCycle(output8,F);
+   printCycle(output8,F); 
    output8.close();
 
    cout << endl <<  "Nonlinearity: " << nl(F) << endl;
@@ -171,14 +158,11 @@ int main(int argc, char *argv[])
    int type;
    typenl(type, F);
 
-   if (type == BENT)
-   {
+   if (type == BENT) {
      cout << "It is a bent function" << endl;
-   } else if (type == ALMOST_BENT)
-   {
+   } else if (type == ALMOST_BENT) {
      cout << "It is an almost bent function" << endl;
-   } else if (type == LINEAR)
-   {
+   } else if (type == LINEAR) {
      cout << "It is a linear function" << endl;
    }
 
@@ -195,11 +179,6 @@ int main(int argc, char *argv[])
      cout << "It is a non-balanced function" << endl;
    }
    cout << "The function is PC of degree " << PC(F) << endl;
- 
-/* Finish **********************************************************/
 
   return 0;
 }
-//
-
-
