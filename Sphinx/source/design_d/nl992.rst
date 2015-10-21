@@ -1,0 +1,9 @@
+************************************************************
+11-variable Balanced Boolean functions with nonlinearity 992
+************************************************************
+
+Below you can find the profiles of 11-variable balanced functions with the the best known nonlinearity (992). Each row represents a profile with four values separated by commmas: Algebraic Degree, Algebraic Immunity, Absolute Indicator and Sum-of-square Indicator:
+
+`Profiles <https://raw.githubusercontent.com/jacubero/VBF/master/nl992/992b.cri>`_
+
+2722 different profiles were found with nonlinearity 992. The algebraic degree takes values from the set { 9, 10 }. The algebraic immunity takes values from the set { 4, 5 }. The absolute indicator takes values from the set: { 120, 128, 136, 144, 160, 168, 176, 192, 200, 208, 224, 232, 240, 248, 256, 264 }. The sum-of-square indicator takes 596 different values between 5254016 and 5839232.

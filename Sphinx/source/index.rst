@@ -1,6 +1,6 @@
-######################################################################################
-Vector Boolean Functions Library: User Manual and Analysis of Cryptographic Algorithms
-######################################################################################
+##############################################################################################
+Vector Boolean Functions Library: User Manual, Analysis and Design of Cryptographic Algorithms
+##############################################################################################
 
 .. _cover:
 
@@ -28,7 +28,7 @@ Table of Contents:
    Analysis of CRYPTEC project cryptographic algorithms <cryptec>
    Analysis of NESSIE project cryptographic algorithms <nessie>   
    Analysis of other cryptographic algorithms <other>  
-   Other applications <applications>
+   Design of cryptographically robust Vector Boolean functions <design>
    FAQ <faq>
    Bibliography <bibliography>
    Appendix <appendix>   
