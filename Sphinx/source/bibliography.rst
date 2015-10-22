@@ -4,6 +4,10 @@ Bibliography
 
 .. [KASUMI:05] 3rd Generation Partnership Project. Specification of the 3GPP Confidentiality and Integrity Algorithms - Document 2: KASUMI specification (Release 6) no. 3GPP TS 35.202 V6.1.0 (2005-09). Technical report, 3GPP, 2005. 
 
+.. [Carlet:04] Carlet, C. (2004). On the secondary constructions of resilient and bent functions. In Progress in Computer Science and Applied Logic, pages 3–28.
+
+.. [CAST:256] Adams, C. M. and Tavares, S. E. (1993). Designing s-boxes for ciphers resistant to differential cryptanalysis (extended abstract). In Proceedings of the 3rd Symposium on State and Progress of Research in Cryptography, pages 181–190.
+
 .. [ChabaudV:94] F. Chabaud and S. Vaudenay. Links between differential and linear cryptanalysis. In Advances in Cryptology- EUROCRYPT’ 94, pages 356–365, 1995.
 
 .. [Courtois:03] N. Courtois. Fast algebraic attacks on stream ciphers with linear feedback. In Advances in cryptology CRYPTO 2003, Lecture Notes in Computer Science 2729, pages 177–194, 2003. 

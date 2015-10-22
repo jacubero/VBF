@@ -21,15 +21,14 @@ The following program demonstrates the use of the library to analyze Vector Bool
       NTL::mat_ZZ  W, LP, DP;
       NTL::mat_ZZ  Ac;
       long a;
-      int  i, n;
+      int  n;
       char file[33];
 
       // Load VBF definitions
 
       sprintf(file,"%s.dec",argv[1]);
       ifstream input(file);
-      if(!input)
-      {
+      if(!input) {
          cerr << "Error opening " << file << endl;
          return 0;
       }
@@ -40,8 +39,7 @@ The following program demonstrates the use of the library to analyze Vector Bool
 
       sprintf(file,"%s.anf",argv[1]);
       ofstream output(file);
-      if(!output)
-      {
+      if(!output) {
          cerr << "Error opening " << file << endl;
          return 0;
       }
@@ -58,8 +56,7 @@ The following program demonstrates the use of the library to analyze Vector Bool
 
       sprintf(file,"%s.tt",argv[1]);
       ofstream output1(file);
-      if(!output1)
-      {
+      if(!output1) {
          cerr << "Error opening " << file << endl;
          return 0;
       }
@@ -72,8 +69,7 @@ The following program demonstrates the use of the library to analyze Vector Bool
 
       sprintf(file,"%s.wal",argv[1]);
       ofstream output2(file);
-      if(!output2)
-      {
+      if(!output2) {
          cerr << "Error opening " << file << endl;
          return 0;
       }
@@ -85,8 +81,7 @@ The following program demonstrates the use of the library to analyze Vector Bool
 
       sprintf(file,"%s.lp",argv[1]);
       ofstream output3(file);
-      if(!output3)
-      {
+      if(!output3) {
          cerr << "Error opening " << file << endl;
          return 0;
       }
@@ -99,8 +94,7 @@ The following program demonstrates the use of the library to analyze Vector Bool
 
       sprintf(file,"%s.dp",argv[1]);
       ofstream output4(file);
-      if(!output4)
-      {
+      if(!output4) {
          cerr << "Error opening " << file << endl;
          return 0;
       }
@@ -113,8 +107,7 @@ The following program demonstrates the use of the library to analyze Vector Bool
 
       sprintf(file,"%s.pol",argv[1]);
       ofstream output5(file);
-      if(!output5)
-      {
+      if(!output5) {
          cerr << "Error opening " << file << endl;
          return 0;
       }
@@ -125,21 +118,18 @@ The following program demonstrates the use of the library to analyze Vector Bool
 
       sprintf(file,"%s.ls",argv[1]);
       ofstream output6(file);
-      if(!output6)
-      {
+      if(!output6) {
          cerr << "Error opening " << file << endl;
          return 0;
       }
 
-      A = LS(F);
       cout << endl << "Writing Linear structures to file: " << file << endl;
-      output6 << A << endl;
+      LS(output6,F);
       output6.close();
 
       sprintf(file,"%s.ac",argv[1]);
       ofstream output7(file);
-      if(!output7)
-      {
+      if(!output7) {
          cerr << "Error opening " << file << endl;
          return 0;
       }
@@ -151,21 +141,13 @@ The following program demonstrates the use of the library to analyze Vector Bool
 
       sprintf(file,"%s.cy",argv[1]);
       ofstream output8(file);
-      if(!output8)
-      {
+      if(!output8) {
          cerr << "Error opening " << file << endl;
          return 0;
       }
 
-      c = Cycle(F);
       cout << endl << "Writing Cycle Structure to file: " << file << endl;
-      for (i = 0; i < c.length(); i++)
-      {
-         if (c[i] > 0)
-         {
-           output8 << i << "," << c[i] << endl;
-         }
-      }
+      printCycle(output8,F); 
       output8.close();
 
       cout << endl <<  "Nonlinearity: " << nl(F) << endl;
@@ -184,14 +166,11 @@ The following program demonstrates the use of the library to analyze Vector Bool
       int type;
       typenl(type, F);
 
-      if (type == BENT)
-      {
+      if (type == BENT) {
         cout << "It is a bent function" << endl;
-      } else if (type == ALMOST_OPTIMAL)
-      {
-        cout << "It is an almost optimal function" << endl;
-      } else if (type == LINEAR)
-      {
+      } else if (type == ALMOST_BENT) {
+        cout << "It is an almost bent function" << endl;
+      } else if (type == LINEAR) {
         cout << "It is a linear function" << endl;
       }
 
@@ -200,7 +179,7 @@ The following program demonstrates the use of the library to analyze Vector Bool
       cout << "The negated fixed points are: " << endl;
       cout << negatedfixedpoints(F) << endl;
       cout << "Correlation immunity: " << CI(F) << endl;
-      if (F.getbal())
+      if (Bal(F))
       {
         cout << "It is a balanced function" << endl;
       } else
@@ -212,17 +191,17 @@ The following program demonstrates the use of the library to analyze Vector Bool
      return 0;
    }
 
-A set of files associated with the decimal representation of KASUMI S-boxes (S7.dec and S9.dec) are in the "Example" directory. If we use as input of the program above "S7.dec" (S7 Decimal representation), the output would be: 
+
+A set of files associated with the decimal representation of KASUMI S-boxes (S7.dec and S9.dec) are in the "Example" directory. If we use as input of the program above "S7.dec" (S7 Decimal representation), the output files would be: 
 
 1. S7.ac (Autocorrelation Spectrum)
-2. S7.cy (Cycle structure)
-3. S7.lp (Linear Profile)
-4. S7.tt (Truth Table)
-5. S7.anf (ANF Table)
+2. S7.anf (ANF Table)
+3. S7.cy (Cycle structure)
+4. S7.dp (Differential Profile)
+5. S7.lp (Linear Profile)
 6. S7.ls (Linear structures): It is an empty vector because there is no linear structures 
-7. S7.char	(Cryptographic criteria)
-8. S7.dp (Differential Profile)
-9. S7.pol (Polynomial representation)
-10. S7.wal (Walsh Spectrum)
+7. S7.pol (Polynomial representation)
+8. S7.tt (Truth Table)
+9. S7.wal (Walsh Spectrum)
 
 The same applies to S9 S-box analysis.
