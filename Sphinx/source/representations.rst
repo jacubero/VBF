@@ -1,6 +1,6 @@
-###################################
-Initializations and representations
-###################################
+#####################################
+Representations and characterizations
+#####################################
 
 .. contents::
    :local:

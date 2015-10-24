@@ -21,7 +21,7 @@ Table of Contents:
    Preface <preface>
    Introduction <intro>
    Using the library <using>
-   Initializations and representations <representations>
+   Representations and characterizations <representations>
    Cryptographic Criteria <criteria>
    Operations and constructions over Vector Boolean Functions <operations>
    Analysis of AES competition cryptographic algorithms <aes>

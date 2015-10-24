@@ -18,7 +18,7 @@ The ANF table of *F*, denoted by :math:`\matr{ANF}_F \in \matr{M}_{2^n \times m}
 
 where :math:`{\matr{ANF}_F}^i` is the *i*-th column of :math:`\matr{ANF}_F`.
 
-The ANF Table can be derived from the Truth Table by a binary matrix transformation called the Algebraic Normal Form Transformation (implemented in the VBF library with $getanf$ method). The Truth Table can be obtained from the ANF Table using a method we call $rev$.
+The ANF Table can be derived from the Truth Table by a binary matrix transformation called the Algebraic Normal Form Transformation (implemented in the VBF library with *getanf* method). The Truth Table can be obtained from the ANF Table using a method we call *rev*.
 
 Library
 =======
@@ -34,6 +34,9 @@ To obtain its representation as ANF table, the following method must be used:
 .. code-block:: c
 
    void ANF(NTL::mat_GF2& X, VBF& F)
+
+Example
+-------
 
 The following program provides the ANF Table of a Vector Boolean function from its Truth Table.
 
