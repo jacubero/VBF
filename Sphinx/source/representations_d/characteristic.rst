@@ -5,35 +5,28 @@ Characteristic Function
 Description
 ===========
 
-The *characteristic or indicator* function of :math:`F \in \funct{F}_{n,m}`, denoted by :math:`\\theta_F : \gf{V_n} \times \gf{V_m} \to \left\{0,1\right\}`, is defined by:
-
-.. math::
-   :nowrap:
-
-    \theta_{F}(\vec{x},\vec{y}) = \left\{
+The *characteristic or indicator* function of :math:`F \in \funct{F}_{n,m}`, denoted by :math:`\theta_F : \gf{V_n} \times \gf{V_m} \to \left\{0,1\right\}`, is defined by: :math:`\theta_{F}(\vec{x},\vec{y}) = \left\{
     \begin{array}{cc}
       1 & \mbox{if }\vec{y}=F(\vec{x}) \\
       0 & \mbox{if }\vec{y} \neq F(\vec{x})
     \end{array}
-    \right. 
+    \right.` 
 
 The Image of *F* can be represented by a matrix whose rows are indexed by :math:`\vec{x} \in \gf{V_n}` and whose columns are indexed by :math:`\vec{y} \in \gf{V_m}` in lexicographic order, denoted by :math:`\matr{Img(F)} \in \matr{M}_{2^n \times 2^m}(\gf{GF(2)})` and defined as follows:
 
 .. math::
-   :nowrap:
 
-  \matr{Img(F)} = \begin{bmatrix} \\theta_{F}(\boldsymbol{\alpha_0},\boldsymbol{\alpha_0})&\dots&\\theta_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_{2^m-1}}) \\
-  \\theta_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_0})&\dots&\\theta_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_{2^m-1}}) \\
+  \matr{Img(F)} = \begin{bmatrix} \theta_{F}(\boldsymbol{\alpha_0},\boldsymbol{\alpha_0})&\dots&\theta_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_{2^m-1}}) \\
+  \theta_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_0})&\dots&\theta_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_{2^m-1}}) \\
   \hdotsfor[2]{3}\\
-  \\theta_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_0})&\dots&\\theta_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_{2^m-1}}) \\
+  \theta_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_0})&\dots&\theta_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_{2^m-1}}) \\
   \end{bmatrix} 
 
-where :math:`\\theta_{F}(\vec{x},\vec{y})` is the value of the indicator function at :math:`(\vec{x},\vec{y})`.
+where :math:`\theta_{F}(\vec{x},\vec{y})` is the value of the indicator function at :math:`(\vec{x},\vec{y})`.
 
 It is clear that all the rows of the matrix :math:`\matr{Img(F)}` have one element equal to one and the rest is zero, that is :math:`\ \fa i \in \{1,\dots,2^n\}`:
 
 .. math::
-   :nowrap:
 
   \begin{array}{rcl}
   \matr{Img(F)}_i &=& \begin{bmatrix} a_{i1}&\dots&a_{i2^m} \end{bmatrix} \\
@@ -90,7 +83,7 @@ The following program provides the Image of a Vector Boolean function from its T
      return 0;
   }
 
-If we use as input of this program the Truth Table of $NibbleSub$, the output of the program would be the following:
+If we use as input of this program the Truth Table of *NibbleSub*, the output of the program would be the following:
 
 .. code-block:: console
 

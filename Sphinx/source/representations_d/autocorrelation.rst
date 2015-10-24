@@ -7,14 +7,13 @@ Description
 
 The Autocorrelation provides a useful description of a Vector Boolean function in relation to some cryptographic criteria. It is derived from the sequences of the component functions of the Vector Boolean function and does not uniquely determine the Vector Boolean function itself.
 
-The *directional derivative* of :math:`f \in \funct{F}_n` in the direction of :math:`\vec{u} \in \gf{V_n}` is defined as :math:`\\Delta_{\vec{u}}f(\vec{x}) = f(\vec{x}+\vec{u}) + f(\vec{x}), \  \  \vec{x} \in \gf{V_n}`. 
+The *directional derivative* of :math:`f \in \funct{F}_n` in the direction of :math:`\vec{u} \in \gf{V_n}` is defined as :math:`\Delta_{\vec{u}}f(\vec{x}) = f(\vec{x}+\vec{u}) + f(\vec{x}), \  \  \vec{x} \in \gf{V_n}`. 
 
-Similarly, the *directional derivative* of the sequence of a Boolean function :math:`\xi_f` in the direction of :math:`\vec{u} \in \gf{V_n}` is defined as: :math:`\\Delta_{\vec{u}} \chi_f(\vec{x}) = \chi_f(\vec{x}+\vec{u}) \cdot \chi_f(\vec{x}), \  \  \vec{x} \in \gf{V_n}`.
+Similarly, the *directional derivative* of the sequence of a Boolean function :math:`\xi_f` in the direction of :math:`\vec{u} \in \gf{V_n}` is defined as: :math:`\Delta_{\vec{u}} \chi_f(\vec{x}) = \chi_f(\vec{x}+\vec{u}) \cdot \chi_f(\vec{x}), \  \  \vec{x} \in \gf{V_n}`.
 
 The *autocorrelation* of :math:`f \in \funct{F}_n` with respect to the shift :math:`\vec{u} \in \gf{V_n}`, :math:`\R_{f}(\vec{u})`, is defined by the Polarity Truth Table to be:
 
 .. math::
-   :nowrap:
 
   \R_f(\vec{u}) = \sum_{\vec{x} \in \gf{V_n}} \chi_f(\vec{x})
   \chi_f(\vec{x}+\vec{u})
@@ -30,9 +29,9 @@ The Aucorrelation Spectrum gives an indication of the imbalance of all first ord
 Linear structures
 =================
 
-If the *directional derivative* of :math:`f \in \funct{F}_n` in the direction of :math:`\vec{u} \in \gf{V_n}`: :math:`\Delta_{\vec{u}}f(\vec{x}) = f(\vec{x}+\vec{u}) + f(\vec{x})` is a constant function, then :math:`\vec{u}` is a *linear structure* of :math:`f` [Lai:95]_,[Chaum:E85]_. The zero vector :math:`\vec{0}` is a trivial linear structure since :math:`\Delta_{\vec{0}}f(\vec{x}) = 0 \ \ \fa \vec{x} \in \gf{V_n}`. From the point of view of autocorrelation, a vector in :math:`\gf{V_n}` is a linear structure if it satisfies the following:
+If the *directional derivative* of :math:`f \in \funct{F}_n` in the direction of :math:`\vec{u} \in \gf{V_n}`: :math:`\Delta_{\vec{u}}f(\vec{x}) = f(\vec{x}+\vec{u}) + f(\vec{x})` is a constant function, then :math:`\vec{u}` is a *linear structure* of :math:`f` [Lai:95]_ [Chaum:E85]_. The zero vector :math:`\vec{0}` is a trivial linear structure since :math:`\Delta_{\vec{0}}f(\vec{x}) = 0 \ \ \fa \vec{x} \in \gf{V_n}`. From the point of view of autocorrelation, a vector in :math:`\gf{V_n}` is a linear structure if it satisfies the following:
 
-The vector $\vec{u} \in \gf{V_n}$ is a linear structure of $f$  if and only if $|\R_f(\vec{u})|= 2^n$.
+The vector :math:`\vec{u} \in \gf{V_n}` is a linear structure of :math:`f` if and only if :math:`|\R_f(\vec{u})|= 2^n`.
 
 The notion of linear structures can be extended for the case of Vector Boolean functions. The definition of a Vector Boolean function that has a linear structure was originally proposed by Chaum [Chaum:E85]_ and Evertse [Evertse:87]_. They defined that a Vector Boolean function *F* has a linear structure by considering the existence of nontrivial linear structure in any of the component functions of *F*.
 
@@ -92,7 +91,7 @@ The following program finds out the Autocorrelation Spectrum of a Vector Boolean
      return 0;
   }
 
-  If we use as input of this program the Truth Table of *NibbleSub*, the output of the program would be the following:
+If we use as input of this program the Truth Table of *NibbleSub*, the output of the program would be the following:
 
 .. code-block:: console
 

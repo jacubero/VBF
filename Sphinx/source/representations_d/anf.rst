@@ -59,7 +59,7 @@ The following program provides the ANF Table of a Vector Boolean function from i
       return 0;
    }
 
-If we use as input of this program the Truth Table of $NibbleSub$, the output of the program would be the following:
+If we use as input of this program the Truth Table of *NibbleSub*, the output of the program would be the following:
 
 .. code-block:: console
 
