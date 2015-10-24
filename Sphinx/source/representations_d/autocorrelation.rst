@@ -7,33 +7,17 @@ Description
 
 The Autocorrelation provides a useful description of a Vector Boolean function in relation to some cryptographic criteria. It is derived from the sequences of the component functions of the Vector Boolean function and does not uniquely determine the Vector Boolean function itself.
 
-The *directional derivative* of :math:`f \in \funct{F}_n` in the direction of :math:`\vec{u} \in \gf{V_n}` is defined as:
+The *directional derivative* of :math:`f \in \funct{F}_n` in the direction of :math:`\vec{u} \in \gf{V_n}` is defined as :math:`\\Delta_{\vec{u}}f(\vec{x}) = f(\vec{x}+\vec{u}) + f(\vec{x}), \  \  \vec{x} \in \gf{V_n}`. 
 
-.. math::
-   :nowrap:
-
-	\begin{equation}
-	    \Delta_{\vec{u}}f(\vec{x}) = f(\vec{x}+\vec{u}) + f(\vec{x}), \  \  \vec{x} \in \gf{V_n} 
-	\end{equation}
-
-Similarly, the *directional derivative* of the sequence of a Boolean function :math:`\xi_f` in the direction of :math:`\vec{u} \in \gf{V_n}` is defined as:
-
-.. math::
-   :nowrap:
-
-  \begin{equation}
-      \Delta_{\vec{u}} \chi_f(\vec{x}) = \chi_f(\vec{x}+\vec{u}) \cdot \chi_f(\vec{x}), \  \  \vec{x} \in \gf{V_n} 
-  \end{equation}
+Similarly, the *directional derivative* of the sequence of a Boolean function :math:`\xi_f` in the direction of :math:`\vec{u} \in \gf{V_n}` is defined as: :math:`\\Delta_{\vec{u}} \chi_f(\vec{x}) = \chi_f(\vec{x}+\vec{u}) \cdot \chi_f(\vec{x}), \  \  \vec{x} \in \gf{V_n}`.
 
 The *autocorrelation* of :math:`f \in \funct{F}_n` with respect to the shift :math:`\vec{u} \in \gf{V_n}`, :math:`\R_{f}(\vec{u})`, is defined by the Polarity Truth Table to be:
 
 .. math::
    :nowrap:
 
-  \begin{equation}
   \R_f(\vec{u}) = \sum_{\vec{x} \in \gf{V_n}} \chi_f(\vec{x})
   \chi_f(\vec{x}+\vec{u})
-  \end{equation}
 
 From this definition of the autocorrelation function we note two important properties:
 
@@ -65,7 +49,7 @@ To obtain its representation as Autocorrelation Spectrum, the following method m
 
 .. code-block:: c
 
-void AC(NTL::mat_ZZ& R, VBF& F)
+  void AC(NTL::mat_ZZ& R, VBF& F)
 
 The method used to obtain the linear structures is the following:
 
@@ -80,65 +64,65 @@ The following program finds out the Autocorrelation Spectrum of a Vector Boolean
 
 .. code-block:: c
 
-#include <iostream>
-#include <fstream>
-#include "VBF.h"
+  #include <iostream>
+  #include <fstream>
+  #include "VBF.h"
 
-int main(int argc, char *argv[])
-{
-   using namespace VBFNS;
+  int main(int argc, char *argv[])
+  {
+     using namespace VBFNS;
 
-   VBF          F;
-   NTL::mat_GF2 T;
+     VBF          F;
+     NTL::mat_GF2 T;
 
-   ifstream input(argv[1]);
-   if(!input) {
-      cerr << "Error opening " << argv[1] << endl;
-      return 0;
-   }
-   input >> T;
-   F.puttt(T);
-   input.close();
+     ifstream input(argv[1]);
+     if(!input) {
+        cerr << "Error opening " << argv[1] << endl;
+        return 0;
+     }
+     input >> T;
+     F.puttt(T);
+     input.close();
 
-   cout << "The Autocorrelation Spectrum is:" << endl;
-   cout << AC(F) << endl;
-   cout << endl << "The linear structures are: " << endl;
-   LS(cout,F);
+     cout << "The Autocorrelation Spectrum is:" << endl;
+     cout << AC(F) << endl;
+     cout << endl << "The linear structures are: " << endl;
+     LS(cout,F);
 
-   return 0;
-}
+     return 0;
+  }
 
-If we use as input of this program the Truth Table of *NibbleSub*, the output of the program would be the following:
+  If we use as input of this program the Truth Table of *NibbleSub*, the output of the program would be the following:
 
 .. code-block:: console
 
-The Autocorrelation Spectrum is:
-[[16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16]
-[16 0 0 0 0 0 -8 -8 -8 -8 -8 8 0 0 8 8]
-[16 -8 0 -8 -8 0 0 8 8 -8 0 0 -8 8 -8 8]
-[16 0 0 0 0 0 0 -16 -8 8 0 0 0 0 -8 8]
-[16 0 -8 0 0 -16 0 8 0 8 -8 -8 -8 0 8 8]
-[16 0 0 -8 0 0 0 -8 0 -8 8 -8 0 -8 8 8]
-[16 -8 0 0 -8 0 -8 8 0 -8 0 0 8 0 -8 8]
-[16 0 -8 0 0 0 0 -8 0 8 0 0 0 -8 -8 8]
-[16 -8 -8 0 -8 0 0 8 -8 8 0 0 0 0 8 -8]
-[16 0 0 8 0 0 0 -8 0 -8 0 0 -8 0 8 -8]
-[16 8 0 0 8 0 8 8 -8 -8 0 -8 0 0 -8 -16]
-[16 0 -8 -8 0 16 -8 -8 8 8 -8 -8 8 8 -8 -8]
-[16 -8 8 -8 -8 0 -8 8 0 8 0 0 0 -8 8 -8]
-[16 0 0 0 0 0 8 -8 0 -16 0 0 0 0 8 -8]
-[16 8 0 8 8 0 0 8 0 -8 -8 0 0 -8 -16 -8]
-[16 0 8 0 0 -16 0 -8 0 8 8 8 -8 0 -8 -8]
-]
+  The Autocorrelation Spectrum is:
+  [[16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16]
+  [16 0 0 0 0 0 -8 -8 -8 -8 -8 8 0 0 8 8]
+  [16 -8 0 -8 -8 0 0 8 8 -8 0 0 -8 8 -8 8]
+  [16 0 0 0 0 0 0 -16 -8 8 0 0 0 0 -8 8]
+  [16 0 -8 0 0 -16 0 8 0 8 -8 -8 -8 0 8 8]
+  [16 0 0 -8 0 0 0 -8 0 -8 8 -8 0 -8 8 8]
+  [16 -8 0 0 -8 0 -8 8 0 -8 0 0 8 0 -8 8]
+  [16 0 -8 0 0 0 0 -8 0 8 0 0 0 -8 -8 8]
+  [16 -8 -8 0 -8 0 0 8 -8 8 0 0 0 0 8 -8]
+  [16 0 0 8 0 0 0 -8 0 -8 0 0 -8 0 8 -8]
+  [16 8 0 0 8 0 8 8 -8 -8 0 -8 0 0 -8 -16]
+  [16 0 -8 -8 0 16 -8 -8 8 8 -8 -8 8 8 -8 -8]
+  [16 -8 8 -8 -8 0 -8 8 0 8 0 0 0 -8 8 -8]
+  [16 0 0 0 0 0 8 -8 0 -16 0 0 0 0 8 -8]
+  [16 8 0 8 8 0 0 8 0 -8 -8 0 0 -8 -16 -8]
+  [16 0 8 0 0 -16 0 -8 0 8 8 8 -8 0 -8 -8]
+  ]
 
-The linear structures are:
-([0 0 1 1],[0 1 1 1])
-([0 1 0 0],[0 1 0 1])
-([1 0 1 0],[1 1 1 1])
-([1 0 1 1],[0 1 0 1])
-([1 1 0 1],[1 0 0 1])
-([1 1 1 0],[1 1 1 0])
-([1 1 1 1],[0 1 0 1])
+  The linear structures are:
+  ([0 0 1 1],[0 1 1 1])
+  ([0 1 0 0],[0 1 0 1])
+  ([1 0 1 0],[1 1 1 1])
+  ([1 0 1 1],[0 1 0 1])
+  ([1 1 0 1],[1 0 0 1])
+  ([1 1 1 0],[1 1 1 0])
+  ([1 1 1 1],[0 1 0 1])
 
 We can notice that *NibbleSub* S-box has seven linear structures which are the following:
 

@@ -7,16 +7,7 @@ Description
 
 *ANF table* of *F*, denoted by :math:`\matr{ANF}_F \in \matr{M}_{2^n \times m}(\gf{GF(2)})`, represents the :math:`2^n` coefficients of the polynomials of each of the m coordinate functions in *ANF*.
 
-The ANF table of *F*, denoted by :math:`\matr{ANF}_F \in \matr{M}_{2^n \times m}(\gf{GF(2)})`, is defined by:
-
-.. math::
-   :nowrap:
-
-   \begin{equation}
-       {\matr{ANF}_F}^i= \matr{ANF}_{f_i} \  \  i \in \{1,\dots,m\} 
-   \end{equation}
-
-where :math:`{\matr{ANF}_F}^i` is the *i*-th column of :math:`\matr{ANF}_F`.
+The ANF table of *F*, denoted by :math:`\matr{ANF}_F \in \matr{M}_{2^n \times m}(\gf{GF(2)})`, is defined by :math:`{\matr{ANF}_{F}}^i= \matr{ANF}_{f_i} \  \  i \in \{1,\dots,m\}` where :math:`{\matr{ANF}_{F}}^i` is the *i*-th column of :math:`\matr{ANF}_{F}`.
 
 The ANF Table can be derived from the Truth Table by a binary matrix transformation called the Algebraic Normal Form Transformation (implemented in the VBF library with *getanf* method). The Truth Table can be obtained from the ANF Table using a method we call *rev*.
 

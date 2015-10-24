@@ -26,12 +26,13 @@ Bibliography
 
 .. [Hou:97] Hou, X. (1997). On the norm and covering radius of the first order reed-muller codes. In IEEE Transactions on Information Theory, Volume IT-43(3), pages 1025-1027.
 
-.. [Lai:95] Lai, X. (1995). Additive and linear structures of cryptographic functions. In Preneel, B., editor, Fast Software Encryption, volume 1008 of Lecture Notes in Computer Science,
-pages 75–85. Springer Berlin Heidelberg.
+.. [Lai:95] Lai, X. (1995). Additive and linear structures of cryptographic functions. In Preneel, B., editor, Fast Software Encryption, volume 1008 of Lecture Notes in Computer Science, pages 75–85. Springer Berlin Heidelberg.
 
 .. [Nyberg:91] Nyberg, K. (1991). Perfect nonlinear s-boxes. In EUROCRYPT, pages 378-386.
 
 .. [Nyberg:92] Kaisa Nyberg. On the construction of highly nonlinear permutations. In Rainer A. Rueppel, editor, Advances in Cryptology EUROCRYPT 92, volume 658 of Lecture Notes in Computer Science, pages 92-98. Springer Berlin Heidelberg, 1993.
+
+.. [Nyberg:93] Nyberg, K. (1993). Differentially uniform mappings for cryptography. In EUROCRYPT, pages 55–64.
 
 .. [fse-Nyberg:94] Kaisa Nyberg. S-boxes and round functions with controllable linearity and differential uniformity. In Bart Preneel, editor, Fast Software Encryption, volume 1008 of Lecture Notes in Computer Science, pages 111-130. Springer Berlin / Heidelberg, 1995.
 
