@@ -57,10 +57,13 @@ The representations which are Boolean matrices are coloured in red, those which 
    representations_d/autocorrelation.rst
 
 .. include::
-   representations_d/permutation.rst
+   representations_d/affine.rst
 
 .. include::
-   representations_d/expansion.rst
+   representations_d/cycle.rst
+
+.. include::
+   representations_d/permutation.rst
 
 .. include::
    representations_d/des.rst

@@ -26,6 +26,8 @@ Bibliography
 
 .. [Hou:97] Hou, X. (1997). On the norm and covering radius of the first order reed-muller codes. In IEEE Transactions on Information Theory, Volume IT-43(3), pages 1025-1027.
 
+.. [JakobsenK:97] Jakobsen, T. and Knudsen, L. R. (1997). The interpolation attack on block ciphers. In SAC 97, pages 28–40.
+
 .. [Lai:95] Lai, X. (1995). Additive and linear structures of cryptographic functions. In Preneel, B., editor, Fast Software Encryption, volume 1008 of Lecture Notes in Computer Science, pages 75–85. Springer Berlin Heidelberg.
 
 .. [Nyberg:91] Nyberg, K. (1991). Perfect nonlinear s-boxes. In EUROCRYPT, pages 378-386.
