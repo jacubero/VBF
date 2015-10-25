@@ -11,45 +11,47 @@ Summary
 +==========================================+===================================================+
 | **SYNTAX**                               | **DESCRIPTION**                                   |
 +------------------------------------------+---------------------------------------------------+
-| :code:`void nl(NTL::RR& x, VBF& F)`      | (1) :math:`\crit{NL}(F)=x`                        |
+| :code:`void deg(int& d, VBF& F)`         | :math:`\crit{DEG}(F)=d`                           |
 +------------------------------------------+---------------------------------------------------+
-| :code:`void nlr(long& x, VBF& F, int r)` | (2) :math:`\crit{NL}_r(F)=x`                      |
+| :code:`void nl(NTL::RR& x, VBF& F)`      | :math:`\crit{NL}(F)=x`                            |
 +------------------------------------------+---------------------------------------------------+
-| :code:`void ld(NTL::RR& x, VBF& F)`      | (3) :math:`\crit{LD}(F)=x`                        |
+| :code:`void nlr(long& x, VBF& F, int r)` | :math:`\crit{NL}_r(F)=x`                          |
 +------------------------------------------+---------------------------------------------------+
-| :code:`void Bal(int& bal, VBF& F)`       | (4) If *F* is balanced returns *1*, otherwise *0* |
+| :code:`void Bal(int& bal, VBF& F)`       | If *F* is balanced returns *1*, otherwise *0*     |
 +------------------------------------------+---------------------------------------------------+
-| :code:`void CI(int& t, VBF& F)`          | (5) *F* is an :math:`(n,m,t)-\crit{CI}`           |
+| :code:`void CI(int& t, VBF& F)`          | *F* is an :math:`(n,m,t)-\crit{CI}`               |
 +------------------------------------------+---------------------------------------------------+
-| :code:`void PC(int& l, VBF& F)`          | (6) *F* satisfies the :math:`\crit{PC}(l)`        |
+| :code:`void AI(int& i, VBF& F)`          | :math:`\crit{AI}(F)=i`                            |
 +------------------------------------------+---------------------------------------------------+
-| :code:`void maxAC(NTL::ZZ& x, VBF& F)`   | (7) *F* has absolute indicator *x*                |
+| :code:`void maxAC(NTL::ZZ& x, VBF& F)`   | *F* has absolute indicator *x*                    |
 +------------------------------------------+---------------------------------------------------+
-| :code:`void sigma(NTL::ZZ& x, VBF& F)`   | (7) *F* has sum-of-squares indicator *x*          |
+| :code:`void sigma(NTL::ZZ& x, VBF& F)`   | *F* has sum-of-squares indicator *x*              |
 +------------------------------------------+---------------------------------------------------+
-| :code:`void deg(int& d, VBF& F)`         | (8) :math:`\crit{DEG}(F)=d`                       |
+| :code:`void ld(NTL::RR& x, VBF& F)`      | :math:`\crit{LD}(F)=x`                            |
 +------------------------------------------+---------------------------------------------------+
-| :code:`void AI(int& i, VBF& F)`          | (9) :math:`\crit{AI}(F)=i`                        |
+| :code:`void PC(int& l, VBF& F)`          | *F* satisfies the :math:`\crit{PC}(l)`            |
 +------------------------------------------+---------------------------------------------------+
 
-:ref:`Member functions of the characteristics Table <Member>` lists the member functions related to the previous characterizing elements.
+:ref:`Member functions Table <Info>` lists the member functions related to bounds and other properties of above criteria.
 
-.. _Member:
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Member functions of the characteristics (cryptographic criteria)                                                                                     |
-+==============================================================+=======================================================================================+
-| **SYNTAX**                                                   | **DESCRIPTION**                                                                       |
-+--------------------------------------------------------------+---------------------------------------------------------------------------------------+
-| :code:`void lp(NTL::RR& x, VBF& F)`                          | (1) :math:`\crit{LP}(F)=x`                                                            |
-+--------------------------------------------------------------+---------------------------------------------------------------------------------------+
-| :code:`void linear(NTL_SNS ostream& s, VBF& F, ZZ& x)`       | (2) Linear relations associated with the value *x* of the Linear Profile of *F*       |
-+--------------------------------------------------------------+---------------------------------------------------------------------------------------+
-| :code:`void dp(NTL::RR& x, VBF& F)`                          | (3) :math:`\crit{DP}(F)=x`                                                            |
-+--------------------------------------------------------------+---------------------------------------------------------------------------------------+
-| :code:`void differential(NTL_SNS ostream& s, VBF& F, ZZ& x)` | (4) Differential relations associated with the value *x* of the Linear Profile of *F* |
-+--------------------------------------------------------------+---------------------------------------------------------------------------------------+
-| :code:`NTL::mat_GF2 LS(VBF& F)`                              | (5) Returns a matrix whose rows are the linear structures                             |
-+--------------------------------------------------------------+---------------------------------------------------------------------------------------+
-
-
++-----------------------------------------------------------------------------------------------------+
+| Member functions of the cryptographic criteria                                                      |
++=================================================+===================================================+
+| **SYNTAX**                                      | **DESCRIPTION**                                   |
++-------------------------------------------------+---------------------------------------------------+
+| :code:`void SpectralRadius(NTL::ZZ& x, VBF& F)` | Spectral Radius                                   |
++-------------------------------------------------+---------------------------------------------------+
+| :code:`NTL::RR nlmax(VBF& F)`                   | Maximum possible nonlinearity                     |
++-------------------------------------------------+---------------------------------------------------+
+| :code:`void typenl(int& typenl, VBF& F)`        | 1=Bent, 2=Almost Bent, 3=Linear                   |
++-------------------------------------------------+---------------------------------------------------+
+| :code:`int aimax(VBF& F)`                       | Maximum possible algebraic immunity               |
++-------------------------------------------------+---------------------------------------------------+
+| :code:`NTL::ZZ maxACmax(VBF& F)`                | Maximum possible absolute indicator               |
++-------------------------------------------------+---------------------------------------------------+
+| :code:`NTL::ZZ maxsigma(VBF& F)`                | Maximum possible sum-of-square indicator          |
++-------------------------------------------------+---------------------------------------------------+
+| :code:`NTL::ZZ minsigma(VBF& F)`                | Minimum possible sum-of-square indicator          |
++-------------------------------------------------+---------------------------------------------------+
+| :code:`NTL::RR ldmax(VBF& F)`                   | Maximum possible linearity distance               |
++-------------------------------------------------+---------------------------------------------------+

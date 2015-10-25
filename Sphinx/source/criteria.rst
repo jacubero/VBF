@@ -26,16 +26,7 @@ The representations which are Boolean matrices are coloured in red, those which 
    criteria_d/rnonlinearity.rst
 
 .. include::
-   criteria_d/ld.rst
-
-.. include::
    criteria_d/balancedness.rst
-
-.. include::
-   criteria_d/pc.rst
-
-.. include::
-   criteria_d/gac.rst
 
 .. include::
    criteria_d/ci.rst
@@ -44,7 +35,13 @@ The representations which are Boolean matrices are coloured in red, those which 
    criteria_d/ai.rst
 
 .. include::
-   criteria_d/useful.rst
+   criteria_d/gac.rst
+
+.. include::
+   criteria_d/ld.rst
+
+.. include::
+   criteria_d/pc.rst
 
 .. include::
    criteria_d/summary.rst

@@ -4,9 +4,13 @@ Bibliography
 
 .. [KASUMI:05] 3rd Generation Partnership Project. Specification of the 3GPP Confidentiality and Integrity Algorithms - Document 2: KASUMI specification (Release 6) no. 3GPP TS 35.202 V6.1.0 (2005-09). Technical report, 3GPP, 2005. 
 
+.. [BihamS:90] Biham, E. and Shamir, A. (1990). Differential cryptanalysis of DES-like cryptosystems. In CRYPTO, pages 2ñ21.
+
 .. [Carlet:04] Carlet, C. (2004). On the secondary constructions of resilient and bent functions. In Progress in Computer Science and Applied Logic, pages 3-28.
 
 .. [carlet2008higher] Carlet, C. (2008b). On the higher order nonlinearities of Boolean functions and S-boxes, and their generalizations. In Sequences and Their Applications SETA 2008, pages 345ñ367. Springer.
+
+.. [CarletBF:08] Carlet, C. (2008a). Boolean functions for cryptography and error correcting codes.
 
 .. [CAST:256] Adams, C. M. and Tavares, S. E. (1993). Designing s-boxes for ciphers resistant to differential cryptanalysis (extended abstract). In Proceedings of the 3rd Symposium on State and Progress of Research in Cryptography, pages 181-190.
 
@@ -14,7 +18,11 @@ Bibliography
 
 .. [Chaum:E85] Chaum, D. and Evertse, J.-H. (1985). Crytanalysis of des with a reduced number of rounds: Sequences of linear factors in block ciphers. In CRYPTO, pages 192ñ211.
 
+.. [Chen:02] Chen, L., Fu, F.-W., and Wei, V. K. (2002). On the constructions and nonlinearity of binary vector correlation-immune functions. In Information Theory, 2002. Proceedings. 2002 IEEE International Symposium on Information Theory, page 39.
+
 .. [Courtois:03] N. Courtois. Fast algebraic attacks on stream ciphers with linear feedback. In Advances in cryptology CRYPTO 2003, Lecture Notes in Computer Science 2729, pages 177-194, 2003. 
+
+.. [courtois2002cryptanalysis] Courtois, N. and Meier, W. (2002). Algebraic attacks on stream ciphers with linear feedback. In Advances in cryptology EUROCRYPT 2003, Lecture Notes in Computer Science 2656, pages 346ñ359.
 
 .. [CourtoisM:02] N. Courtois and W. Meier. Algebraic attacks on stream ciphers with linear feedback. In Advances in cryptology EUROCRYPT 03, Lecture Notes in Computer Science 2656, pages 346-359, 2002.
 
@@ -24,9 +32,13 @@ Bibliography
 
 .. [DingXS:91] C. Ding, G. X. and Shan, W. (1991). The stability theory of stream ciphers. Berlin. Springer-Verlag. Lecture Notes in Computer Science Volume 561.
 
-.. [Evertse:87] Evertse, J.-H. (1987). Linear structures in blockciphers. In EUROCRYPT, pages 249ñ266
+.. [Evertse:87] Evertse, J.-H. (1987). Linear structures in blockciphers. In EUROCRYPT, pages 249ñ266.
+
+.. [Evertse:88] Evertse, J. H. (1988). Linear structures in block ciphers. In Advances in Cryptology - EUROCRYPT 87, no. 304 in Lecture Notes in Computer Science, pages 249ñ266.
 
 .. [FaugereA:03] J.-C. Faugere and G. Ars. An algebraic cryptanalysis of nonlinear filter generators using Grobner bases. Technical report, INRIA 4739, 2003.
+
+.. [GuptaS:05] Gupta, K. and Sarkar, P. (2005). Improved construction of nonlinear resilient S-boxes. Information Theory, IEEE Transactions on, 51(1):339ñ348.
 
 .. [heys-tutorial] Heys, H. (1999). A tutorial on linear and differential cryptanalysis. Technical report, Electrical and Computer Engineering, Faculty of Engineering and Applied Science, Memorial University of Newfoundland, St. Johns, NF, Canada A1B 3X5.
 
@@ -44,6 +56,8 @@ Bibliography
 
 .. [Matsui:94] Matsui, M. (1994). The first experimental cryptanalysis of the Data Encryption Standard. In CRYPTO, pages 1ñ11.
 
+.. [MeierS:89] Meier, W. and Staffelbach, O. (1989). Nonlinearity criteria for cryptographic functions. In EUROCRYPT, pages 549ñ562.
+
 .. [Nyberg:91] Nyberg, K. (1991). Perfect nonlinear s-boxes. In EUROCRYPT, pages 378-386.
 
 .. [Nyberg:92] Kaisa Nyberg. On the construction of highly nonlinear permutations. In Rainer A. Rueppel, editor, Advances in Cryptology EUROCRYPT 92, volume 658 of Lecture Notes in Computer Science, pages 92-98. Springer Berlin Heidelberg, 1993.
@@ -54,14 +68,24 @@ Bibliography
 
 .. [Phan02miniadvanced] PHAN, R. C.-W. 2002. Mini advanced encryption standard (mini-AES): A testbed for cryptanalysis. Students, Cryptologia, 283-306.
 
+.. [PreneelLLGV90] Preneel, B., Leekwijck, W. V., Linden, L. V., Govaerts, R., and Vandewalle, J. (1990). Propagation characteristics of boolean functions. In EUROCRYPT, pages 161ñ173.
+
 .. [Preneel:93] Preneel, B. (1993). Analysis and design of cryptographic hash functions. Ph.D. dissertation, Katholieke Universiteit Leuven.
 
 .. [PieprzykF:88] Pieprzyk, J. and Finkelstein, G. (1988). Towards effective nonlinear cryptosystem design. Computers and Digital Techniques, IEEE Proceedings, 135(6):325ñ335.
 
+.. [Pommerening:05] Pommerening, K. (2005a). Linearitatsmase fur boolesche abbildungen. Technical report, Fachbereich Mathematik der Johannes-Gutenberg-Universitaet.
+
 .. [Rothaus:76] O. S. Rothaus. On bentù functions. J. Comb. Theory, Ser. A, 20(3):300-305, 1976.
+
+.. [Siegenthaler:84] Siegenthaler, T. (1984). Correlation-immunity of nonlinear combining functions for cryptographic applications. IEEE Transactions on Information Theory, 30(5):776ñ.
 
 .. [Siegenthaler:85] Thomas Siegenthaler. Decrypting a class of stream ciphers using ciphertext only. IEEE Transactions on Computers, 34(1):81-85, 1985.
 
 .. [TardyG:91] Tardy-Corfdir, A. and Gilbert, H. (1992). A known plaintext attack of feal-4 and feal-6. In Feigenbaum, J., editor, Advances in Cryptology ó CRYPTO91, volume 576 of Lecture Notes in Computer Science, pages 172ñ182. Springer Berlin Heidelberg.
+
+.. [c85-Webster-Tavares] Webster, A. F. and Tavares, S. E. (1986). On the design of S-boxes. In Williams, H. C., editor, Advances in Cryptology - Cryptoí85, pages 523ñ534, Berlin. Springer-Verlag. Lecture Notes in Computer Science Volume 218.
+
+.. [XiaoM:88] Xiao, G.-Z. and Massey, J. L. (1988). A spectral characterization of correlation- immune combining functions. IEEE Transactions on Information Theory, 34(3):569ñ.
 
 .. [zhang95gac] Xian-Mo Zhang and Yuliang Zheng. GAC ‚Äî the criterion for global avalanche characteristics of cryptographic functions. Journal of Universal Computer Science, 1(5):320-337, 1995.
