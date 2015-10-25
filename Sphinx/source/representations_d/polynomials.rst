@@ -5,7 +5,7 @@ Polynomials in ANF
 Description
 ===========
 
-Any vector Boolean function :math:`F \in \funct{F}_{n,m}` can be uniquely represented by *m* multivariate polynomials over :math:`\gf{GF(2)}` (called coordinate functions) where each variable has power at most one. Each of these polynomials can be expressed as a sum of all distinct $k$th-order product terms :math:`(0 < k \leq n)` of the variables in the form: 
+Any vector Boolean function :math:`F \in \funct{F}_{n,m}` can be uniquely represented by *m* multivariate polynomials over :math:`\gf{GF(2)}` (called coordinate functions) where each variable has power at most one. Each of these polynomials can be expressed as a sum of all distinct *k*th-order product terms :math:`(0 < k \leq n)` of the variables in the form: 
 
 .. math::
 
@@ -15,7 +15,7 @@ Any vector Boolean function :math:`F \in \funct{F}_{n,m}` can be uniquely repres
    = \sum_{\set{I} \in \set{P}(N)} a_{\set{I}}\left(\prod_{i \in \set{I}} x_i\right) = \sum_{\set{I} \in \set{P}(N)} a_{\set{I}} x^{\set{I}}, \ \ a_{\set{I}} \in \gf{GF(2)}
    \end{array}
 
-where :math:`\set{P}(N)` denotes the power set of :math:`N=\{1,\dots,n\}`. This representation of *f* is called the *algebraic normal form (ANF)* of *f*. The algebraic normal form is thus a set of multivariate polynomials and the constant functions (those obtained by decomposition) are the coefficients of the $2^n$ products of input variables (i.e. monomials).
+where :math:`\set{P}(N)` denotes the power set of :math:`N=\{1,\dots,n\}`. This representation of *f* is called the *algebraic normal form (ANF)* of *f*. The algebraic normal form is thus a set of multivariate polynomials and the constant functions (those obtained by decomposition) are the coefficients of the :math:`2^n` products of input variables (i.e. monomials).
 
 Library
 =======

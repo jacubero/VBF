@@ -5,11 +5,11 @@ Trace representation
 Description
 ===========
 
-We identify a Boolean function in $n$ variables with a function from :math:`\gf{GF(2^n)}` to :math:`\gf{GF(2)}` and Vector Boolean function in $n$ variables with a function from :math:`\gf{GF(2^n)}` to :math:`\gf{GF(2^n)}`.
+We identify a Boolean function in *n* variables with a function from :math:`\gf{GF(2^n)}` to :math:`\gf{GF(2)}` and Vector Boolean function in *n* variables with a function from :math:`\gf{GF(2^n)}` to :math:`\gf{GF(2^n)}`.
 
 A *trace* is a function over a finite field :math:`\gf{GF(2^n)}` defined as: :math:`tr(\vec{x}) = \sum_{i=0}^{2^n-1} x^i`
 
-Since there is is an isomorphism between :math:`\gf{V_n}$ and $\gf{GF(2^n)}`, it is possible to identify the trace function with a Boolean function in *n* variables. Analogously, a Vector Boolean function can be identified with trace as follows:
+Since there is is an isomorphism between :math:`\gf{V_n}` and :math:`\gf{GF(2^n)}`, it is possible to identify the trace function with a Boolean function in *n* variables. Analogously, a Vector Boolean function can be identified with trace as follows:
  
 When *m=n*, we endow :math:`\gf{V_n}` with the structure of the field :math:`\gf{GF(2^n)}`. Any :math:`F \in \funct{F}_{n,n}` admits a unique *univariate polynomial representation* over :math:`\gf{GF(2^n)}`, of degree at most :math:`2^n-1`: 
 
@@ -17,7 +17,7 @@ When *m=n*, we endow :math:`\gf{V_n}` with the structure of the field :math:`\gf
 
    F(\vec{x}) = \sum_{i=0}^{2^n-1} \delta_i x^i, \ \delta_i \in \gf{GF(2^n)}
 
-A general way to derive this polynomial representation is given by a Lagrange interpolation from the knowledge of the irreducible polynomial of degree $n$ over :math:`\gf{GF(2)}` associated with the field :math:`GF(2^n)` and the Truth Table of *F*.
+A general way to derive this polynomial representation is given by a Lagrange interpolation from the knowledge of the irreducible polynomial of degree *n* over :math:`\gf{GF(2)}` associated with the field :math:`GF(2^n)` and the Truth Table of *F*.
 
 The *interpolation attack* [JakobsenK:97]_ is efficient when the degree of the univariate polynomial representation of the S-box over :math:`\gf{GF(2^n)}` is low or when the distance of the S-box to the set of low univariate degree functions is small. This attack exploits the low degree of the algebraic relation between some input (respective output) and intermediate data to infer some keybits relating the output (respective input) and the intermediate data.
 

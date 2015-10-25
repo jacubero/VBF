@@ -199,7 +199,7 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-'preamble': '\usepackage{amsmath}\n\usepackage{amssymb}\n',
+'preamble': '\usepackage{amsmath}\n\usepackage{amssymb}\n\usepackage{stmaryrd}\n',
 }
 
 #####################################################
