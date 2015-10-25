@@ -14,3 +14,6 @@ Design of cryptographically robust Vector Boolean functions
 
 .. include::
    design_d/nl992.rst
+
+.. include::
+   design_d/bent.rst

@@ -16,7 +16,7 @@ The stated mission of VBF is to be viable free open source library for analyzing
 Who is behind this project?
 ============================
 
-At this moment, Jose Antonio Alvarez is the only person who is contributing to develop this code. If you are interested in contributing to it, please send a comment to the email: vbflibrary@gmail.com
+At this moment, Jose Antonio Alvarez Cubero is the only person who is contributing to develop this code. If you are interested in contributing to it, please send a comment to the email: vbflibrary@gmail.com
 
 Why is VBF free/open source?
 ============================
