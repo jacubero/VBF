@@ -5,7 +5,7 @@ Concatenation
 Description
 ===========
 
-Let :math:`n_1,n_2 \geq 1`, `F_1 \in \funct{F}_{n,m}, F_2 \in \funct{F}_{n,m}` be Vector Boolean functions. Consider the Vector Boolean function :math:`F_1 |_{c} F_2 \in \funct{F}_{n+1,m}` defined as :math:`(\vec{x},x_{n+1}) \rightarrow \left( x_{n+1}+1 \right) F_1(\vec{x})+ x_{n+1} F_2(\vec{x})` where :math:`\vec{x} \in \gf{V_n}`.
+Let :math:`n_1,n_2 \geq 1`, :math:`F_1 \in \funct{F}_{n,m}, F_2 \in \funct{F}_{n,m}` be Vector Boolean functions. Consider the Vector Boolean function :math:`F_1 |_{c} F_2 \in \funct{F}_{n+1,m}` defined as :math:`(\vec{x},x_{n+1}) \rightarrow \left( x_{n+1}+1 \right) F_1(\vec{x})+ x_{n+1} F_2(\vec{x})` where :math:`\vec{x} \in \gf{V_n}`.
 
 Library
 =======

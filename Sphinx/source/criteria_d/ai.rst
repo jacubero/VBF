@@ -68,7 +68,7 @@ The following program provides the algebraic immunity of a Vector Boolean functi
 	   return 0;
 	}
 
-If we use the $NibbleSub$ S-box Truth Table as input, the output would be the following:
+If we use the *NibbleSub* S-box Truth Table as input, the output would be the following:
 
 .. code-block:: console
 

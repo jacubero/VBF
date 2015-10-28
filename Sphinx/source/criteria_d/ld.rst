@@ -9,10 +9,7 @@ Functions with non-zero linear structures are considered weak functions from cry
 
 S-boxes used in block ciphers should have no nonzero linear structures (see [Evertse:88]_). The existence of nonzero linear structures, for the functions implemented in stream ciphers, is a potential risk that should also be avoided, despite the fact that such existence could not be used in attacks, so far.
 
-The *linearity distance* of a Boolean function :math:`f \in \funct{F}_{n}` is a characteristic
-defined by the distance to the set of all Boolean functions admitting nonzero
-linear structures. These include, among others, all the affine functions and
-all non bent quadratic functions and are defined as follows [MeierS:89]_:
+The *linearity distance* of a Boolean function :math:`f \in \funct{F}_{n}` is a characteristic defined by the distance to the set of all Boolean functions admitting nonzero linear structures. These include, among others, all the affine functions and all non bent quadratic functions and are defined as follows [MeierS:89]_:
 
 .. math::
 
@@ -24,8 +21,7 @@ where:
 
 	\set{LS}_n = \left\{ f \in \funct{F}_{n} \given f \mbox{ has a linear structure } \neq \vec{0} \right\}
 
-*Linearity distance* of a Vector Boolean function, defined as the minimum among the linearity
-  distances of all component functions of $F$, may be computed from the Autocorrelation Spectrum using [CarletBF:08]_: 
+*Linearity distance* of a Vector Boolean function, defined as the minimum among the linearity distances of all component functions of *F*, may be computed from the Autocorrelation Spectrum using [CarletBF:08]_: 
 
 .. math::
 

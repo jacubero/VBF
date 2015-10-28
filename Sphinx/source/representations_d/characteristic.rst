@@ -5,12 +5,7 @@ Characteristic Function
 Description
 ===========
 
-The *characteristic or indicator* function of :math:`F \in \funct{F}_{n,m}`, denoted by :math:`\theta_F : \gf{V_n} \times \gf{V_m} \to \left\{0,1\right\}`, is defined by: :math:`\theta_{F}(\vec{x},\vec{y}) = \left\{
-    \begin{array}{cc}
-      1 & \mbox{if }\vec{y}=F(\vec{x}) \\
-      0 & \mbox{if }\vec{y} \neq F(\vec{x})
-    \end{array}
-    \right.` 
+The *characteristic or indicator* function of :math:`F \in \funct{F}_{n,m}`, denoted by :math:`\theta_F : \gf{V_n} \times \gf{V_m} \to \left\{0,1\right\}`, is defined by: :math:`\theta_{F}(\vec{x},\vec{y}) = \left\{ \begin{array}{cc} 1 & \mbox{if }\vec{y}=F(\vec{x}) \\ 0 & \mbox{if }\vec{y} \neq F(\vec{x}) \end{array} \right.` 
 
 The Image of *F* can be represented by a matrix whose rows are indexed by :math:`\vec{x} \in \gf{V_n}` and whose columns are indexed by :math:`\vec{y} \in \gf{V_m}` in lexicographic order, denoted by :math:`\matr{Img(F)} \in \matr{M}_{2^n \times 2^m}(\gf{GF(2)})` and defined as follows:
 

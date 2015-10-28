@@ -26,13 +26,14 @@ where :math:`\matr{A} \in \matr{M}_{n \times n}(\gf{GF(2)})`    non-singular, :m
 
 Of particular interest in the study of equivalence classes is the effect of the affine transformation on the algebraic degree, the Walsh Spectrum and Autocorrelation Spectrum of a Boolean function.
 
-Frequency distribution of absolute values of Walsh Spectrum -----------------------------------------------------------
+Frequency distribution of absolute values of Walsh Spectrum 
+-----------------------------------------------------------
 
 The effect of the application of an affine transformation to a Boolean function on the Walsh Spectrum is to rearrange the values and hence, the Walsh value distributions are invariant under all affine transformations [Preneel:93]_:
 
 .. math::
 
-\walsh{\chi}_g(\vec{u}) = (-1)^{\vec{c} \cdot \matr{A}^{-1} \vec{b}} (-1)^{\vec{u} \cdot \matr{A}^{-1} \vec{b}} \walsh{\chi}_f\left( \left(  \matr{A}^{-1} \right) \vec{u} + \left(  \matr{A}^{-1} \right) \vec{c} \right)
+   \walsh{\chi}_g(\vec{u}) = (-1)^{\vec{c} \cdot \matr{A}^{-1} \vec{b}} (-1)^{\vec{u} \cdot \matr{A}^{-1} \vec{b}} \walsh{\chi}_f\left( \left(  \matr{A}^{-1} \right) \vec{u} + \left(  \matr{A}^{-1} \right) \vec{c} \right)
 
 Thus nonlinearity is also invariant under affine transformation.
  
@@ -75,72 +76,72 @@ The following program finds out the Walsh Spectrum, Frequency distribution of th
 
 .. math::
 
-\matr{A} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \\ \end{bmatrix}, \ \ \vec{b} = (0,1)
+   \matr{A} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \\ \end{bmatrix}, \ \ \vec{b} = (0,1)
 
 .. code-block:: c
 
-#include <iostream>
-#include <fstream>
-#include "VBF.h"
+   #include <iostream>
+   #include <fstream>
+   #include "VBF.h"
 
-int main(int argc, char *argv[])
-{
-   using namespace VBFNS;
+   int main(int argc, char *argv[])
+   {
+      using namespace VBFNS;
 
-   VBF          F;
-   NTL::mat_GF2 A;
-   NTL::vec_GF2 b;
+      VBF          F;
+      NTL::mat_GF2 A;
+      NTL::vec_GF2 b;
 
-   ifstream input(argv[1]);
-   if(!input) {
-      cerr << "Error opening " << argv[1] << endl;
+      ifstream input(argv[1]);
+      if(!input) {
+         cerr << "Error opening " << argv[1] << endl;
+         return 0;
+      }
+      input >> A;
+      input >> b;
+      F.putaffine(A,b);
+      input.close();
+
+      cout << "The Walsh Spectrum is:" << endl << Walsh(F) << endl << endl;
+
+      cout << "Frequency distribution of the absolute values of 
+      the Walsh Spectrum:" << endl;
+      printFWH(cout,F);
+      cout << endl;
+
+      cout << "The Autocorrelation Spectrum is:" << endl << AC(F) << endl;
+
+      cout << "Frequency distribution of the absolute values of 
+      the Autocorrelation Spectrum:" << endl;
+      printFAC(cout,F);
+      cout << endl;
+
       return 0;
    }
-   input >> A;
-   input >> b;
-   F.putaffine(A,b);
-   input.close();
-
-   cout << "The Walsh Spectrum is:" << endl << Walsh(F) << endl << endl;
-
-   cout << "Frequency distribution of the absolute values of 
-   the Walsh Spectrum:" << endl;
-   printFWH(cout,F);
-   cout << endl;
-
-   cout << "The Autocorrelation Spectrum is:" << endl << AC(F) << endl;
-
-   cout << "Frequency distribution of the absolute values of 
-   the Autocorrelation Spectrum:" << endl;
-   printFAC(cout,F);
-   cout << endl;
-
-   return 0;
-}
 
 The output of the program would be the following:
 
 .. code-block:: console
 
-The Walsh Spectrum is:
-[[4 0 0 0]
-[0 0 4 0]
-[0 -4 0 0]
-[0 0 0 -4]
-]
+   The Walsh Spectrum is:
+   [[4 0 0 0]
+   [0 0 4 0]
+   [0 -4 0 0]
+   [0 0 0 -4]
+   ]
 
-Frequency distribution of the absolute values of the Walsh Spectrum:
-(0,3),(4,1)
-(0,3),(4,1)
-(0,3),(4,1)
+   Frequency distribution of the absolute values of the Walsh Spectrum:
+   (0,3),(4,1)
+   (0,3),(4,1)
+   (0,3),(4,1)
 
-The Autocorrelation Spectrum is:
-[[4 4 4 4]
-[4 4 -4 -4]
-[4 -4 4 -4]
-[4 -4 -4 4]
-]
-Frequency distribution of the absolute values of the Autocorrelation Spectrum:
-(4,4)
-(4,4)
-(4,4)
+   The Autocorrelation Spectrum is:
+   [[4 4 4 4]
+   [4 4 -4 -4]
+   [4 -4 4 -4]
+   [4 -4 -4 4]
+   ]
+   Frequency distribution of the absolute values of the Autocorrelation Spectrum:
+   (4,4)
+   (4,4)
+   (4,4)

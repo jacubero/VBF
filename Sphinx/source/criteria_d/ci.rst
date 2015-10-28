@@ -76,7 +76,6 @@ If we use the function :math:`f = (1+x_1)(1+x_2)(1+x_3)(1+x_4)+x_1x_2x_3x_4` pol
 The following figure represents the Walsh Spectrum of *f* and emphasizes in red the rows whose indexes are of weight 1.
 
 .. image:: /images/ci.png
-   :width: 750 px
    :align: center
 
 For all this rows, the Walsh values are *0* so *f* is 1-CI. There are rows whose indexes are of weight 2 and the Walsh values are not *0* so *f* cannot be 2-CI. 

@@ -26,7 +26,6 @@ Example 1
 KHAZAD is a block cipher designed by Paulo S. L. M. Barreto together with Vincent Rijmen, which was presented at the first NESSIE workshop in 2000, and, after some small changes, was selected as a finalist in the project. This cipher uses a :math:`8 \times 8` S-box composed of smaller pseudo-randomly generated :math:`4 \times 4` mini S-boxes (the P-box and the Q-box) as represented in the figure:
 
 .. image:: /images/KHAZADS.png
-   :width: 750 px
    :align: center
 
 The following program provides the Truth Tables of the different intermediate constructions that allow to obtain KHAZAD S-box from *P* and *Q* mini S-boxes and the permutation that apply between them.

@@ -5,7 +5,7 @@ Addition of coordinate functions
 Description
 ===========
 
-Let :math:`F=(f_1,\ldots,f_{m_1}) \in \funct{F}_{n,m_1}`, :math:`G=(g_1,\ldots,g_{m_2}) \in \funct{F}_{n,m_2}` and the function conformed by adding the coordinate functions :math:`(F,G) =(f_1,\dots,f_{m_1},g_1,\ldots,g_{m_2}) \in \funct{F}_{n,m_1+m_2}`. Let :math:`\vec{v} \in \gf{V_{m_1+m_2}}`,:math:`\vec{v_F} \in \gf{V_{m_1}}` and :math:`\vec{v_G} \in \gf{V_{m_2}}` so that :math:`\vec{v} = (\vec{v_F}, \vec{v_G})`. 
+Let :math:`F=(f_1,\ldots,f_{m_1}) \in \funct{F}_{n,m_1}`, :math:`G=(g_1,\ldots,g_{m_2}) \in \funct{F}_{n,m_2}` and the function conformed by adding the coordinate functions :math:`(F,G) =(f_1,\dots,f_{m_1},g_1,\ldots,g_{m_2}) \in \funct{F}_{n,m_1+m_2}`. Let :math:`\vec{v} \in \gf{V_{m_1+m_2}}`, :math:`\vec{v_F} \in \gf{V_{m_1}}` and :math:`\vec{v_G} \in \gf{V_{m_2}}` so that :math:`\vec{v} = (\vec{v_F}, \vec{v_G})`. 
 
 .. image:: /images/AddImage.png
    :width: 750 px

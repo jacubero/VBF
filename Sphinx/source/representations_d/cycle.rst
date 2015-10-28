@@ -11,10 +11,10 @@ A permutation can also be written in a way that groups together the images of a 
 
 .. math::
 
-F = \begin{bmatrix} 
-1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
-3 & 6 & 4 & 7 & 5 & 9 & 1 & 8 & 2
-\end{bmatrix}
+   F = \begin{bmatrix} 
+   1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+   3 & 6 & 4 & 7 & 5 & 9 & 1 & 8 & 2
+   \end{bmatrix}
 
 can be written
 
@@ -71,55 +71,55 @@ The following program prints the cycle structure of a Vector Boolean function ha
 
 .. code-block:: c
 
-#include <iostream>
-#include <fstream>
-#include "VBF.h"
+   #include <iostream>
+   #include <fstream>
+   #include "VBF.h"
 
-int main(int argc, char *argv[])
-{
-   using namespace VBFNS;
+   int main(int argc, char *argv[])
+   {
+      using namespace VBFNS;
 
-   VBF          F;
-   NTL::mat_GF2 T;
+      VBF          F;
+      NTL::mat_GF2 T;
 
-   ifstream input(argv[1]);
-   if(!input) {
-      cerr << "Error opening " << argv[1] << endl;
+      ifstream input(argv[1]);
+      if(!input) {
+         cerr << "Error opening " << argv[1] << endl;
+         return 0;
+      }
+      input >> T;
+      F.puttt(T);
+      input.close();
+
+      cout << "The Cycle Structure is:" << endl;
+      printCycle(cout,F);
+
+      cout << endl << "The fixed points are the following:"
+      << endl;
+      cout << fixedpoints(F) << endl;
+
+      cout << endl << "The negated fixed points are the following:"
+      << endl;
+      cout << negatedfixedpoints(F) << endl;
+
       return 0;
    }
-   input >> T;
-   F.puttt(T);
-   input.close();
-
-   cout << "The Cycle Structure is:" << endl;
-   printCycle(cout,F);
-
-   cout << endl << "The fixed points are the following:"
-   << endl;
-   cout << fixedpoints(F) << endl;
-
-   cout << endl << "The negated fixed points are the following:"
-   << endl;
-   cout << negatedfixedpoints(F) << endl;
-
-   return 0;
-}
 
 If we use as input of this program the Truth Table of *NibbleSub*, the output of the program would be the following:
 
 .. code-block:: console
 
-The Cycle Structure is:
-2,1
-14,1
+   The Cycle Structure is:
+   2,1
+   14,1
 
-The fixed points are the following:
-[]
+   The fixed points are the following:
+   []
 
-The negated fixed points are the following:
-[[0 0 1 0]
-[0 1 1 1]
-]
+   The negated fixed points are the following:
+   [[0 0 1 0]
+   [0 1 1 1]
+   ]
 
 which means:
 
@@ -137,7 +137,7 @@ It has no fixed points and 2 negated fixed points which are the following:
 
 .. code-block:: console
 
-[0 0 1 0]
-[0 1 1 1]
+   [0 0 1 0]
+   [0 1 1 1]
 
 This is because :math:`NibbleSub[(1,1,0,1)]=(0,0,1,0)` and :math:`NibbleSub[(1,0,0,0)]=(0,1,1,1)`.

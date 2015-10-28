@@ -152,7 +152,7 @@ The output would be the following:
 	AI(F directsum G)=3
 	F directsum G is PC of degree 1
 
-These results are congruent with the properties derived in [SarkarMaitra:00] and others derived by Jose Antonio Alvarez:
+These results are congruent with the properties derived in [SarkarMaitra:00]_ and others derived by Jose Antonio Alvarez:
 
 1. :math:`wt(F \oplus G) = 2^6 \cdot 32+2^6 \cdot 32 - 2 \cdot 32 \cdot 32 = 2048`.
 

@@ -33,31 +33,31 @@ The following program provides the degree of propagation criterion of a Vector B
 
 .. code-block:: c
 
-#include <iostream>
-#include <fstream>
-#include "VBF.h"
+   #include <iostream>
+   #include <fstream>
+   #include "VBF.h"
 
-int main(int argc, char *argv[])
-{
-   using namespace VBFNS;
+   int main(int argc, char *argv[])
+   {
+      using namespace VBFNS;
 
-   VBF          F;
-   vec_pol p;
-   int t;
+      VBF          F;
+      vec_pol p;
+      int t;
 
-   ifstream input(argv[1]);
-   if(!input) {
-      cerr << "Error opening " << argv[1] << endl;
+      ifstream input(argv[1]);
+      if(!input) {
+         cerr << "Error opening " << argv[1] << endl;
+         return 0;
+      }
+      input >> p;
+      F.putpol(p);
+      input.close();
+
+      cout << "The function is PC of degree " << PC(F) << endl;
+
       return 0;
    }
-   input >> p;
-   F.putpol(p);
-   input.close();
-
-   cout << "The function is PC of degree " << PC(F) << endl;
-
-   return 0;
-}
 
 If we use the function :math:`f = x_1x_2+x_3x_4` polynomial in ANF as input, the output would be the following:
 
@@ -68,7 +68,6 @@ If we use the function :math:`f = x_1x_2+x_3x_4` polynomial in ANF as input, the
 The following figure represents the Autocorrelation Spectrum of *f* and emphasizes in red the rows whose indexes are of weight 1,2,3 and 4.
 
 .. image:: /images/pc.png
-   :width: 750 px
    :align: center
 
 For all this rows, the Autocorrelation values are 0. As a consequence *f* satisfies :math:`\crit{PC}(4)`.

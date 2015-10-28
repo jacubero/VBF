@@ -47,15 +47,15 @@ The *Walsh Spectrum* of *f* can be represented by a matrix whose rows are indexe
 
     \matr{WS}(f) = \begin{bmatrix} \walsh{\chi}_f(\boldsymbol	{\alpha_0})&\dots&\walsh{\chi}_f(\vec{u})&\dots&\walsh	{\chi}_f(\boldsymbol{\alpha_{2^n-1}}) \end{bmatrix}^{T} 
 
-where :math:`\walsh{\chi}_f(\vec{u})` is the value of the spectrum at :math:`\vec{u}. A Boolean function is uniquely determined by its Walsh Spectrum.
+where :math:`\walsh{\chi}_f(\vec{u})` is the value of the spectrum at :math:`\vec{u}`. A Boolean function is uniquely determined by its Walsh Spectrum.
 
 Let the vector Boolean function :math:`F \in \funct{F}_{n,m}`, the *Walsh Transform* of *F* is the two-dimensional Walsh Transform defined by:
 
 .. math::
 
-\begin{array}{rcl}
-\W_F(\vec{u}, \vec{v}) &=& \walsh{\theta}_F(\vec{u}, \vec{v}) = \W\{ \matr{Img(F)} \}(\vec{u}, \vec{v}) = \sum_{\vec{x} \in \gf{V_n}} \sum_{\vec{y} \in \gf{V_m}} \theta_F(\vec{x},\vec{y}) \chi_{(\vec{u},\vec{v})}(\vec{x},\vec{y})
-\end{array} 
+  \begin{array}{rcl}
+  \W_F(\vec{u}, \vec{v}) &=& \walsh{\theta}_F(\vec{u}, \vec{v}) = \W\{ \matr{Img(F)} \}(\vec{u}, \vec{v}) = \sum_{\vec{x} \in \gf{V_n}} \sum_{\vec{y} \in \gf{V_m}} \theta_F(\vec{x},\vec{y}) \chi_{(\vec{u},\vec{v})}(\vec{x},\vec{y})
+  \end{array} 
 
 or, as it is most often written as:
 
@@ -67,11 +67,11 @@ The *Walsh Spectrum* of *F* can be represented by a matrix whose rows are indexe
 
 .. math::
 
-\matr{WS}(F) = \begin{bmatrix} \walsh{\theta}_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_0})&\dots&\walsh{\theta}_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_{2^m-1}}) \\
-\walsh{\theta}_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_0})&\dots&\walsh{\theta}_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_{2^m-1}}) \\
-\hdotsfor[2]{3}\\
-\walsh{\theta}_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_0})&\dots&\walsh{\theta}_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_{2^m-1}}) \\
-\end{bmatrix} 
+  \matr{WS}(F) = \begin{bmatrix} \walsh{\theta}_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_0})&\dots&\walsh{\theta}_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_{2^m-1}}) \\
+  \walsh{\theta}_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_0})&\dots&\walsh{\theta}_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_{2^m-1}}) \\
+  \hdotsfor[2]{3}\\
+  \walsh{\theta}_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_0})&\dots&\walsh{\theta}_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_{2^m-1}}) \\
+  \end{bmatrix} 
 
 where :math:`\walsh{\theta}_F(\vec{u},\vec{v})` is the value of the spectrum at :math:`(\vec{u},\vec{v})`.
 
@@ -99,59 +99,59 @@ The following program provides the Walsh Spectrum of a Vector Boolean function f
 
 .. code-block:: c
 
-#include <iostream>
-#include <fstream>
-#include "VBF.h"
+  #include <iostream>
+  #include <fstream>
+  #include "VBF.h"
 
-int main(int argc, char *argv[])
-{
-   using namespace VBFNS;
+  int main(int argc, char *argv[])
+  {
+     using namespace VBFNS;
 
-   VBF          F;
-   NTL::mat_GF2 T;
+     VBF          F;
+     NTL::mat_GF2 T;
 
-   ifstream input(argv[1]);
-   if(!input) {
-      cerr << "Error opening " << argv[1] << endl;
-      return 0;
-   }
-   input >> T;
-   F.puttt(T);
-   input.close();
+     ifstream input(argv[1]);
+     if(!input) {
+        cerr << "Error opening " << argv[1] << endl;
+        return 0;
+     }
+     input >> T;
+     F.puttt(T);
+     input.close();
 
-   cout << "The Walsh Spectrum is:" << endl;
-   cout << Walsh(F) << endl;
+     cout << "The Walsh Spectrum is:" << endl;
+     cout << Walsh(F) << endl;
 
-   return 0;
-}
+     return 0;
+  }
 
 If we use as input of this program the Truth Table of *NibbleSub*, the output of the program would be the following:
 
 .. code-block:: console
 
-The Walsh Spectrum is:
-[[16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
-[0 0 -4 -4 0 0 -4 12 4 4 0 0 4 4 0 0]
-[0 0 -4 -4 0 0 -4 -4 0 0 4 4 0 0 -12 4]
-[0 0 0 0 0 0 0 0 4 -12 -4 -4 4 4 -4 -4]
-[0 4 0 -4 -4 -8 -4 0 0 -4 0 4 4 -8 4 0]
-[0 -4 -4 0 -4 0 8 4 -4 0 -8 4 0 -4 -4 0]
-[0 4 -4 8 4 0 0 4 0 -4 4 8 -4 0 0 -4]
-[0 -4 0 4 4 -8 4 0 -4 0 4 0 8 4 0 4]
-[0 0 0 0 0 0 0 0 -4 4 4 -4 4 -4 -4 -12]
-[0 0 -4 -4 0 0 -4 -4 -8 0 -4 4 0 8 4 -4]
-[0 8 -4 4 -8 0 4 -4 4 4 0 0 4 4 0 0]
-[0 8 0 -8 8 0 8 0 0 0 0 0 0 0 0 0]
-[0 -4 8 -4 -4 0 4 0 4 0 4 8 0 4 0 -4]
-[0 4 4 0 -4 8 0 4 -8 -4 4 0 4 0 0 4]
-[0 4 4 0 -4 -8 0 4 -4 0 0 -4 -8 4 -4 0]
-[0 -4 -8 -4 -4 0 4 0 0 -4 8 -4 -4 0 4 0]
-]
+  The Walsh Spectrum is:
+  [[16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 -4 -4 0 0 -4 12 4 4 0 0 4 4 0 0]
+  [0 0 -4 -4 0 0 -4 -4 0 0 4 4 0 0 -12 4]
+  [0 0 0 0 0 0 0 0 4 -12 -4 -4 4 4 -4 -4]
+  [0 4 0 -4 -4 -8 -4 0 0 -4 0 4 4 -8 4 0]
+  [0 -4 -4 0 -4 0 8 4 -4 0 -8 4 0 -4 -4 0]
+  [0 4 -4 8 4 0 0 4 0 -4 4 8 -4 0 0 -4]
+  [0 -4 0 4 4 -8 4 0 -4 0 4 0 8 4 0 4]
+  [0 0 0 0 0 0 0 0 -4 4 4 -4 4 -4 -4 -12]
+  [0 0 -4 -4 0 0 -4 -4 -8 0 -4 4 0 8 4 -4]
+  [0 8 -4 4 -8 0 4 -4 4 4 0 0 4 4 0 0]
+  [0 8 0 -8 8 0 8 0 0 0 0 0 0 0 0 0]
+  [0 -4 8 -4 -4 0 4 0 4 0 4 8 0 4 0 -4]
+  [0 4 4 0 -4 8 0 4 -8 -4 4 0 4 0 0 4]
+  [0 4 4 0 -4 -8 0 4 -4 0 0 -4 -8 4 -4 0]
+  [0 -4 -8 -4 -4 0 4 0 0 -4 8 -4 -4 0 4 0]
+  ]
 
 We can see that the Walsh Spectrum of :math:`f_1(NibbleSub)` where 
 
 .. math::
 
-NibbleSub=(f_1(NibbleSub),f_2(NibbleSub),f_3(NibbleSub),f_4(NibbleSub))
+  NibbleSub=(f_1(NibbleSub),f_2(NibbleSub),f_3(NibbleSub),f_4(NibbleSub))
 
 corresponds to the Spectrum of :math:`l_{(1,0,0,0)} \circ NibbleSub`. As a consequence, the Walsh Spectrum of :math:`f_1(NibbleSub)` coincides with the *9*-th column of :math:`\matr{WS}(NibbleSub)`, that is, the column indexed by the vector :math:`(1,0,0,0)`.

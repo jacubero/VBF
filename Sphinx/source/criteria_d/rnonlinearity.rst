@@ -7,7 +7,7 @@ Description
 
 As well as the affine functions, we can consider that functions with low algebraic degree are weak functions from the cryptographic point of view. A criterion can be defined en terms of the Hamming distance to the Reed-Muller code of order :math:`r (r < n)`.
 
-For every positive integer *r*, the *r-th order nonlinearity* of a Vector Boolean function $F$ is the minimum *r*-th order nonlinearity of its component functions. The *r*-th order nonlinearity of a Boolean function equals its minimum Hamming distance to functions of algebraic degrees at most *r* (see [carlet2008higher]_ for details).
+For every positive integer *r*, the *r-th order nonlinearity* of a Vector Boolean function *F* is the minimum *r*-th order nonlinearity of its component functions. The *r*-th order nonlinearity of a Boolean function equals its minimum Hamming distance to functions of algebraic degrees at most *r* (see [carlet2008higher]_ for details).
 
 .. math::
 

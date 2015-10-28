@@ -35,43 +35,43 @@ For example, you can see bit 13 moves to bit 5, while bit 5 moves to bit 13.
 
 .. code-block:: c
 
-#include <iostream>
-#include <fstream>
-#include "VBF.h"
+   #include <iostream>
+   #include <fstream>
+   #include "VBF.h"
 
-int main(int argc, char *argv[])
-{
-   using namespace VBFNS;
+   int main(int argc, char *argv[])
+   {
+      using namespace VBFNS;
 
-   VBF          F;
-   NTL::vec_ZZ  a;
+      VBF          F;
+      NTL::vec_ZZ  a;
 
-   ifstream input(argv[1]);
-   if(!input) {
-      cerr << "Error opening " << argv[1] << endl;
+      ifstream input(argv[1]);
+      if(!input) {
+         cerr << "Error opening " << argv[1] << endl;
+         return 0;
+      }
+      input >> a;
+      F.putper(a);
+      input.close();
+
+      cout << "The Truth Table is:" << endl;
+      cout << TT(F) << endl;
+
       return 0;
    }
-   input >> a;
-   F.putper(a);
-   input.close();
-
-   cout << "The Truth Table is:" << endl;
-   cout << TT(F) << endl;
-
-   return 0;
-}
 
 The first 10 lines of the output of the program would be the following:
 
 .. code-block:: console
 
-The Truth Table is:
-[[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
-[0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
-[0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0]
-[0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
-[0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0]
-[0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0]
-[0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0]
-[0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0]
-[0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0]
+   The Truth Table is:
+   [[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0]
+   [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0]
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0]
+   [0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0]
+   [0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0]
+   [0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0]
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0]

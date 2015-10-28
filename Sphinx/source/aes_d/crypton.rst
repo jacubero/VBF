@@ -5,7 +5,7 @@ Crypton
 Description
 ===========
 
-*CRYPTON* is a symmetric block cipher designed by Chae Hoon Lim of Future Systems Inc. In this section, we study both the AES proposal (v0.5) and the revised version (v1.0). In v0.5 the authors used two 8x8 S-boxes constructed from 4-bit permutations using a 3-round Feistel Cipher (`Tabular representation of S-boxes <https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/lim98crypton.pdf>`_). In v1.0 the authors used four variants of one S-box, instead of independent four S-boxes to allow greater flexibility in memory requirements. The four 8x8 S-boxes are Si (0 \leq i \leq 3)`, such that S2 = {S_0}^{-1}` and S3 = {S_1}^{-1}`
+*CRYPTON* is a symmetric block cipher designed by Chae Hoon Lim of Future Systems Inc. In this section, we study both the AES proposal (v0.5) and the revised version (v1.0). In v0.5 the authors used two 8x8 S-boxes constructed from 4-bit permutations using a 3-round Feistel Cipher (`Tabular representation of S-boxes <https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/lim98crypton.pdf>`_). In v1.0 the authors used four variants of one S-box, instead of independent four S-boxes to allow greater flexibility in memory requirements. The four 8x8 S-boxes are :math:`S_i (0 \leq i \leq 3)`, such that :math:`S2 = {S_0}^{-1}` and :math:`S3 = {S_1}^{-1}`
 
 Summary
 =======
