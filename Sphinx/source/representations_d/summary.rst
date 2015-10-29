@@ -83,7 +83,7 @@ functions of *VBF* have an in-line definition, for instance: :code:`void TT(NTL:
 +--------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
 | :code:`void dp(NTL::RR& x, VBF& F)` 			       | :math:`\crit{dp}(F)=x`								                 |
 +--------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| :code:`void differential(NTL_SNS ostream& s, VBF& F, ZZ& x)` | Differential relations associated with the value $x$ of the Differential Profile of *F*         |
+| :code:`void differential(NTL_SNS ostream& s, VBF& F, ZZ& x)` | Differential relations associated with the value *x* of the Differential Profile of *F*         |
 +--------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
 | :code:`void ProbDif(NTL::RR& x, VBF& F, NTL::ZZ& w)`         | Probability of characteristics associated with the value *w* of the Differential Profile of *F* |
 +--------------------------------------------------------------+-------------------------------------------------------------------------------------------------+

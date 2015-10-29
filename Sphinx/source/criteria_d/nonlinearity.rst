@@ -5,7 +5,7 @@ Nonlinearity
 Description
 ===========
 
-In order to provide confusion, cryptographic functions must lie at large Hamming distance to all affine functions. Because of Parseval's Relation, any Vector Boolean function has correlation with some affine functions of its input. This correlation should be small: the existence of affine approximations of the Boolean functions involved in a cipher allows to build attacks on this system (see,[Matsui:93]_ for block ciphers and [DingXS:91]_ for stream ciphers).
+In order to provide confusion, cryptographic functions must lie at large Hamming distance to all affine functions. Because of Parseval's Relation, any Vector Boolean function has correlation with some affine functions of its input. This correlation should be small: the existence of affine approximations of the Boolean functions involved in a cipher allows to build attacks on this system (see, [Matsui:93]_ for block ciphers and [DingXS:91]_ for stream ciphers).
 
 The nonlinearity of a Boolean function :math:`f \in \funct{F}_{m}` is defined as the Hamming distance between *f* and the subspace of affine functions [PieprzykF:88]_: :math:`\crit{NL}(f)=d(f,\set{A}_n)`.
 

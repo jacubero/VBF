@@ -78,6 +78,8 @@ Bibliography
 
 .. [Rothaus:76] O. S. Rothaus. On bentù functions. J. Comb. Theory, Ser. A, 20(3):300-305, 1976.
 
+.. [SarkarMaitra:00] Sarkar, P. and Maitra, S. (2000a). Construction of nonlinear boolean functions with important cryptographic properties. In EUROCRYPT, pages 488ñ511.
+
 .. [Siegenthaler:84] Siegenthaler, T. (1984). Correlation-immunity of nonlinear combining functions for cryptographic applications. IEEE Transactions on Information Theory, 30(5):776ñ.
 
 .. [Siegenthaler:85] Thomas Siegenthaler. Decrypting a class of stream ciphers using ciphertext only. IEEE Transactions on Computers, 34(1):81-85, 1985.

@@ -5,7 +5,7 @@ Truth Table
 Description
 ===========
 
-A Vector Boolean function :math:`F \in \funct{F}_{n,m}` can be uniquely represented by its Truth Table which is a matrix with :math:`2^n` rows and $m$ columns whose elements are the values of *F* taken on all possible vector of :math:`\gf{V_n}` ordered lexicographically.
+A Vector Boolean function :math:`F \in \funct{F}_{n,m}` can be uniquely represented by its Truth Table which is a matrix with :math:`2^n` rows and *m* columns whose elements are the values of *F* taken on all possible vector of :math:`\gf{V_n}` ordered lexicographically.
 
 Let :math:`F \in \funct{F}_{n,m}`, if we take into account the one-to-one mapping of :math:`\gf{V_n}` onto the set of integers, we are able to define any vector Boolean function by the corresponding set of values:
 

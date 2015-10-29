@@ -40,7 +40,7 @@ Thus nonlinearity is also invariant under affine transformation.
 Frequency distribution of absolute values of Autocorrelation Spectrum
 ----------------------------------------------------------------------
 
-The effect of the application of an affine transformation to a Boolean function on the Autocorrelation Spectrum is to rearrange the values and hence, the Autocorrelation value distributions are invariant under all affine transformations[Preneel:93]_:
+The effect of the application of an affine transformation to a Boolean function on the Autocorrelation Spectrum is to rearrange the values and hence, the Autocorrelation value distributions are invariant under all affine transformations [Preneel:93]_:
 
 .. math::
 

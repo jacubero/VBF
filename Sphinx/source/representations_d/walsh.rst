@@ -61,7 +61,7 @@ or, as it is most often written as:
 
 .. math::
 
-\W_F(\vec{u}, \vec{v}) = \walsh{\theta}_F(\vec{u}, \vec{v}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{\vec{u} \cdot \vec{x} + \vec{v} \cdot F(\vec{x})} 
+  \W_F(\vec{u}, \vec{v}) = \walsh{\theta}_F(\vec{u}, \vec{v}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{\vec{u} \cdot \vec{x} + \vec{v} \cdot F(\vec{x})} 
 
 The *Walsh Spectrum* of *F* can be represented by a matrix whose rows are indexed by :math:`\vec{u} \in \gf{V_n}` and whose columns are indexed by :math:`\vec{v} \in \gf{V_m}` in lexicographic order, denoted by :math:`\matr{WS}(F) \in \matr{M}_{2^n \times 2^m}(\bbbr)` and defined as follows:
 

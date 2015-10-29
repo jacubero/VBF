@@ -32,7 +32,7 @@ The first group of numbers in parentheses indicates that 1 gets mapped to 3, 3 g
 
 A cycle structure with a low number of cycles of high length is considered well suited to be used in cipher design. This fact means that many transpositions are present.
 
-The *fixed points* of *F* are those which belong to the set :math:`\{ \vec{x} \given F(\vec{x})=\vec{x} \}`. The *negated fixed points* of *F* belong to the set :math:`\{ \vec{x} \given F(\vec{x})= \overline{\vec{x}} \}` where :math:`\overline{\vec{x}}` is the inverse of :math:`\vec{x}` or the vector resulting from adding $1$ to each of its components. 
+The *fixed points* of *F* are those which belong to the set :math:`\{ \vec{x} \given F(\vec{x})=\vec{x} \}`. The *negated fixed points* of *F* belong to the set :math:`\{ \vec{x} \given F(\vec{x})= \overline{\vec{x}} \}` where :math:`\overline{\vec{x}}` is the inverse of :math:`\vec{x}` or the vector resulting from adding *1* to each of its components. 
 
 A cryptographic primitive with a high number of fixed and/or
 negated fixed points is considered to be not well designed, since it lacks the needed randomness.
