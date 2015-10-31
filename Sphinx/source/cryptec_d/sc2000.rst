@@ -26,15 +26,7 @@ S4
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_3+x_2x_4+x_2x_3+x_1+x_1x_4+x_1x_2+x_1x_2x_4`
-
-:math:`f_2 = x_4+x_2+x_2x_4+x_2x_3+x_1+x_1x_4+x_1x_3+x_1x_2+x_1x_2x_3`
-
-:math:`f_3 = 1+x_4+x_2x_4+x_2x_3+x_2x_3x_4+x_1+x_1x_3x_4`
-
-:math:`f_4 = x_4+x_3x_4+x_2+x_2x_4+x_2x_3x_4+x_1+x_1x_3+x_1x_3x_4`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S4.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S4.tt>`_
 
@@ -89,17 +81,7 @@ S5
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = 1+x_4+x_4x_5+x_3x_5+x_2x_4x_5+x_2x_3+x_2x_3x_4+x_1x_5+x_1x_4x_5+x_1x_3+x_1x_3x_5+x_1x_3x_4+x_1x_2x_3`
-
-:math:`f_2 = x_5+x_3x_4+x_3x_4x_5+x_2x_4+x_2x_4x_5+x_2x_3x_4+x_1+x_1x_5+x_1x_4+x_1x_3+x_1x_2+x_1x_2x_4+x_1x_2x_3`
-
-:math:`f_3 = 1+x_5+x_4x_5+x_3+x_3x_4x_5+x_2x_5+x_2x_4x_5+x_2x_3+x_2x_3x_5+x_2x_3x_4+x_1+x_1x_5+x_1x_3x_5+x_1x_3x_4+x_1x_2+x_1x_2x_5+x_1x_2x_4+x_1x_2x_3`
-
-:math:`f_4 = x_5+x_4+x_4x_5+x_3+x_3x_4+x_2+x_2x_5+x_1+x_1x_5+x_1x_4x_5+x_1x_3+x_1x_3x_5+x_1x_2+x_1x_2x_3`
-
-:math:`f_5 = x_4+x_3+x_3x_5+x_2x_4x_5+x_2x_3+x_2x_3x_5+x_1+x_1x_4+x_1x_3x_5+x_1x_2x_4+x_1x_2x_3`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S5.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S5.tt>`_
 
@@ -146,19 +128,7 @@ S6
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = 1+x_5+x_5x_6+x_4+x_4x_5+x_3+x_3x_6+x_3x_5x_6+x_3x_4x_5+x_2x_4+x_2x_4x_6+x_2x_4x_5+x_2x_4x_5x_6+x_2x_3x_6+x_2x_3x_5+x_2x_3x_4+x_2x_3x_4x_6+x_2x_3x_4x_5+x_1x_5+x_1x_4x_6+x_1x_4x_5+x_1x_4x_5x_6+x_1x_3x_5x_6+x_1x_3x_4+x_1x_3x_4x_5+x_1x_2+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_3x_5+x_1x_2x_3x_4+x_1x_2x_3x_4x_5`
-
-:math:`f_2 = x_6+x_5+x_3+x_3x_4x_6+x_3x_4x_5+x_2x_5x_6+x_2x_4+x_2x_4x_5+x_2x_4x_5x_6+x_2x_3+x_2x_3x_6+x_2x_3x_5+x_2x_3x_4x_6+x_2x_3x_4x_5x_6+x_1+x_1x_6+x_1x_5x_6+x_1x_4+x_1x_4x_5+x_1x_3+x_1x_3x_6+x_1x_3x_5+x_1x_3x_5x_6+x_1x_3x_4+x_1x_3x_4x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_6+x_1x_2x_5+x_1x_2x_5x_6+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_5x_6+x_1x_2x_3x_4x_6+x_1x_2x_3x_4x_5`
-
-:math:`f_3 = 1+x_4x_6+x_3x_6+x_3x_5+x_3x_5x_6+x_3x_4x_5+x_3x_4x_5x_6+x_2+x_2x_6+x_2x_4x_5+x_2x_3+x_2x_3x_5x_6+x_2x_3x_4+x_2x_3x_4x_6+x_2x_3x_4x_5+x_1x_6+x_1x_5+x_1x_5x_6+x_1x_4x_5x_6+x_1x_3+x_1x_3x_6+x_1x_3x_5+x_1x_3x_4+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2x_4x_6+x_1x_2x_4x_5+x_1x_2x_4x_5x_6+x_1x_2x_3x_6+x_1x_2x_3x_5+x_1x_2x_3x_4`
-
-:math:`f_4 = 1+x_6+x_5+x_5x_6+x_4x_6+x_4x_5+x_4x_5x_6+x_3+x_3x_5x_6+x_3x_4+x_3x_4x_6+x_3x_4x_5x_6+x_2x_6+x_2x_5+x_2x_5x_6+x_2x_4x_5+x_2x_3x_5+x_2x_3x_5x_6+x_2x_3x_4x_6+x_2x_3x_4x_5x_6+x_1x_6+x_1x_5x_6+x_1x_4x_6+x_1x_4x_5+x_1x_3x_5+x_1x_2+x_1x_2x_6+x_1x_2x_5x_6+x_1x_2x_4x_6+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_5x_6+x_1x_2x_3x_4+x_1x_2x_3x_4x_6+x_1x_2x_3x_4x_5`
-
-:math:`f_5 = 1+x_5+x_5x_6+x_3x_4+x_3x_4x_5+x_3x_4x_5x_6+x_2+x_2x_6+x_2x_5+x_2x_4+x_2x_4x_6+x_2x_3x_5+x_2x_3x_4x_5+x_1x_6+x_1x_5+x_1x_4x_6+x_1x_4x_5+x_1x_3+x_1x_3x_6+x_1x_3x_5+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_6+x_1x_2x_5x_6+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_4x_6+x_1x_2x_3x_4x_5`
-
-:math:`f_6 = 1+x_5x_6+x_4x_5+x_3+x_2x_5+x_2x_4x_6+x_2x_4x_5+x_2x_3+x_2x_3x_6+x_2x_3x_4x_6+x_2x_3x_4x_5+x_1+x_1x_5+x_1x_4x_5x_6+x_1x_3x_6+x_1x_3x_5+x_1x_3x_5x_6+x_1x_3x_4x_5+x_1x_3x_4x_5x_6+x_1x_2+x_1x_2x_6+x_1x_2x_5x_6+x_1x_2x_4x_5x_6+x_1x_2x_3+x_1x_2x_3x_6+x_1x_2x_3x_5x_6+x_1x_2x_3x_4`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S6.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S6.tt>`_
 

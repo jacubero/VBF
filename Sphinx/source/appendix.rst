@@ -7,7 +7,13 @@ Appendix
    :depth: 2
 
 .. include::
-   appendix_d/clefiaS0.rst
+   appendix_d/balanced.rst
 
 .. include::
-   appendix_d/khazad.rst
+   appendix_d/conversion.rst
+
+.. include::
+   appendix_d/criteria.rst
+
+.. include::
+   appendix_d/cast.rst
