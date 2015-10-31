@@ -7,6 +7,12 @@ Design of cryptographically robust Vector Boolean functions
    :depth: 2
 
 .. include::
+   design_d/bent.rst
+
+.. include::
+   design_d/genetic.rst
+
+.. include::
    design_d/nl242.rst
 
 .. include::
@@ -14,6 +20,3 @@ Design of cryptographically robust Vector Boolean functions
 
 .. include::
    design_d/nl992.rst
-
-.. include::
-   design_d/bent.rst

@@ -77,3 +77,8 @@ Frequently Asked Questions.
 ============================
 
 This chapter includes all citations referenced along the Reference Manual.
+
+**Section 13: Appendix**
+========================
+
+This chapter includes example programs using VBF library.

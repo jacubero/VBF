@@ -38,6 +38,8 @@ Bibliography
 
 .. [FaugereA:03] J.-C. Faugere and G. Ars. An algebraic cryptanalysis of nonlinear filter generators using Grobner bases. Technical report, INRIA 4739, 2003.
 
+.. [Goldberg:1989] Goldberg, D. E. (1989). Genetic Algorithms in Search, Optimization and Machine Learning. Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1st edition.
+
 .. [GuptaS:05] Gupta, K. and Sarkar, P. (2005). Improved construction of nonlinear resilient S-boxes. Information Theory, IEEE Transactions on, 51(1):339-348.
 
 .. [heys-tutorial] Heys, H. (1999). A tutorial on linear and differential cryptanalysis. Technical report, Electrical and Computer Engineering, Faculty of Engineering and Applied Science, Memorial University of Newfoundland, St. Johns, NF, Canada A1B 3X5.

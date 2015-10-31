@@ -2,8 +2,8 @@
 Balanced Boolean functions generation
 *************************************
 
-Boolean with distance 2 to a Balanced Boolean function
-======================================================
+Boolean function with distance 2 to a Balanced Boolean function
+===============================================================
 
 The following bash script obtain Balanced Boolean functions from Boolean functions which are 2 bits far from a Balanced Boolean function.
 
@@ -31,8 +31,8 @@ where *infile.bin* is an input file where each row is the binary representation 
 Let :math:`f \in \funct{F}_n` an input function within infile.bin. If its weight is :math:`\frac{n}{2}+2` then the parameters must be :math:`a=\frac{n}{2}+2` and *b=1*. If its weight is :math:`\frac{n}{2}-2` then the parameters must be :math:`a=\frac{n}{2}+2` and *b=0*. 
 
 .. code-block:: c
-   :caption: balanced.exe
-   :name: balanced.exe
+   :caption: balanced.cpp
+   :name: balanced.cpp
 
 	#include <iostream>
 	#include <fstream>
@@ -92,8 +92,8 @@ Let :math:`f \in \funct{F}_n` an input function within infile.bin. If its weight
 	   return 0;
 	}
 
-Boolean with distance 4 to a Balanced Boolean function
-======================================================
+Boolean function with distance 4 to a Balanced Boolean function
+===============================================================
 
 The bash script *balanced.sh* can be used to obtain Balanced Boolean functions from Boolean functions which are 4 bits far from a Balanced Boolean function.
 
@@ -108,8 +108,8 @@ where *infile.bin* is an input file where each row is the binary representation 
 Let :math:`f \in \funct{F}_n` an input function within infile.bin. If its weight is :math:`\frac{n}{2}+4` then the parameters must be :math:`a=\frac{n}{2}+4` and *b=1*. If its weight is :math:`\frac{n}{2}-4` then the parameters must be :math:`a=\frac{n}{2}+4` and *b=0*. 
 
 .. code-block:: c
-   :caption: balanced.exe
-   :name: balanced.exe
+   :caption: balanced.cpp
+   :name: balanced.cpp
 
 	#include <iostream>
 	#include <fstream>
