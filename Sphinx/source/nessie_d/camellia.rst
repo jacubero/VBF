@@ -28,6 +28,10 @@ S1
 Representations
 ---------------
 
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^6 + x^5 + x^3 + 1`:
+
+<https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S1/S1-trace.pdf>`_
+
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S1/S1.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S1/S1.tt>`_
@@ -74,6 +78,10 @@ S2
 
 Representations
 ---------------
+
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^6 + x^5 + x^3 + 1`:
+
+<https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S2/S2-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S2/S2.pdf>`_
 
@@ -126,6 +134,10 @@ S3
 Representations
 ---------------
 
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^6 + x^5 + x^3 + 1`:
+
+<https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S3/S3-trace.pdf>`_
+
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S3/S3.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S3/S3.tt>`_
@@ -172,6 +184,10 @@ S4
 
 Representations
 ---------------
+
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^6 + x^5 + x^3 + 1`:
+
+<https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S4/S4-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Camellia/S4/S4.pdf>`_
 

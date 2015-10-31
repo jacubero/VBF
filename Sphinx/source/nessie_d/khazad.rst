@@ -40,6 +40,10 @@ S
 Representations
 ---------------
 
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x^2 + 1`:
+
+<https://raw.githubusercontent.com/jacubero/VBF/master/KHAZAD/S-trace.pdf>`_
+
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/KHAZAD/S.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/KHAZAD/S.tt>`_
@@ -85,15 +89,7 @@ P
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_4+x_3+x_2x_4+x_1+x_1x_4+x_1x_3+x_1x_3x_4+x_1x_2`
-
-:math:`f_2 = x_4+x_3+x_2+x_2x_4+x_2x_3x_4+x_1+x_1x_2+x_1x_2x_4`
-
-:math:`f_3 = 1+x_3x_4+x_2+x_2x_3+x_1+x_1x_4+x_1x_3x_4+x_1x_2x_3`
-
-:math:`f_4 = 1+x_3+x_2x_4+x_2x_3+x_1x_4+x_1x_3+x_1x_2x_4`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/KHAZAD/P.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/KHAZAD/P.tt>`_
 
@@ -136,15 +132,7 @@ Q
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = 1+x_3+x_2x_4+x_1x_4+x_1x_2+x_1x_2x_4+x_1x_2x_3`
-
-:math:`f_2 = x_4+x_3+x_3x_4+x_2x_4+x_2x_3+x_1+x_1x_3+x_1x_2x_4`
-
-:math:`f_3 = x_4+x_2+x_2x_4+x_2x_3x_4+x_1+x_1x_3+x_1x_3x_4+x_1x_2`
-
-:math:`f_4 = 1+x_4+x_2+x_2x_4+x_2x_3+x_2x_3x_4+x_1x_3+x_1x_2`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/KHAZAD/Q.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/KHAZAD/Q.tt>`_
 
@@ -186,5 +174,5 @@ It has 2 negated fixed points: (0,0,0,1), (1,1,1,0)
 Analysis of KHAZAD S-box construction
 =====================================
 
-You can find a program which calculates the Truth Tables of these constructions in Appendix in section "Analysis of KHAZAD S-box construction".
+You can find a program which calculates the Truth Tables of these constructions in chapter "Operations and constructions over Vector Boolean Functions", section "Bricklayer".
 

@@ -73,9 +73,11 @@ Cycle structure:
 
 There are 3 linear structures:
 
-([0 1 0 1],[0 0 1 1])
-([1 0 0 1],[0 0 1 1])
-([1 1 0 0],[0 0 1 1])
+.. code-block:: console
+
+	([0 1 0 1],[0 0 1 1])
+	([1 0 0 1],[0 0 1 1])
+	([1 1 0 0],[0 0 1 1])
 
 It has no fixed points. 
 

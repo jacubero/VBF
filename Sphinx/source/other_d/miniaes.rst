@@ -106,15 +106,7 @@ NibbleSub
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = 1+x_4+x_2+x_2x_3+x_2x_3x_4+x_1+x_1x_2+x_1x_2x_3`
-
-:math:`f_2 = 1+x_3x_4+x_2+x_2x_4+x_1+x_1x_3+x_1x_3x_4`
-
-:math:`f_3 = 1+x_4+x_3+x_3x_4+x_2x_4+x_2x_3+x_1x_4+x_1x_3+x_1x_2+x_1x_2x_4+x_1x_2x_3`
-
-:math:`f_4 = x_3+x_2x_4+x_1+x_1x_4+x_1x_3x_4`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.tt>`_
 
@@ -185,13 +177,15 @@ Cycle structure:
 
 There are 7 linear structures:
 
-([0 0 1 1],[0 1 1 1])
-([0 1 0 0],[0 1 0 1])
-([1 0 1 0],[1 1 1 1])
-([1 0 1 1],[0 1 0 1])
-([1 1 0 1],[1 0 0 1])
-([1 1 1 0],[1 1 1 0])
-([1 1 1 1],[0 1 0 1])
+.. code-block:: console
+
+	([0 0 1 1],[0 1 1 1])
+	([0 1 0 0],[0 1 0 1])
+	([1 0 1 0],[1 1 1 1])
+	([1 0 1 1],[0 1 0 1])
+	([1 1 0 1],[1 0 0 1])
+	([1 1 1 0],[1 1 1 0])
+	([1 1 1 1],[0 1 0 1])
 
 It has no fixed points and 2 negated fixed points: (0,0,1,0), (0,1,1,1)
 
@@ -201,15 +195,7 @@ NibbleSubInv
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = 1+x_4+x_3+x_2+x_2x_3x_4+x_1`
-
-:math:`f_2 = 1+x_3x_4+x_2+x_1x_4+x_1x_3+x_1x_3x_4+x_1x_2x_3`
-
-:math:`f_3 = 1+x_3+x_2+x_1x_4+x_1x_2+x_1x_2x_4`
-
-:math:`f_4 = x_4+x_3x_4+x_2+x_2x_3+x_2x_3x_4+x_1+x_1x_4+x_1x_2+x_1x_2x_4`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.tt>`_
 
@@ -280,13 +266,15 @@ Cycle structure:
 
 There are 7 linear structures:
 
-([0 0 1 0],[0 0 1 0])
-([0 1 0 1],[1 0 1 1])
-([1 0 0 0],[0 0 1 1])
-([1 0 0 0],[1 0 0 0])
-([1 0 0 0],[1 0 1 1])
-([1 0 1 0],[0 0 0 1])
-([1 1 0 1],[1 0 1 1])
+.. code-block:: console
+
+	([0 0 1 0],[0 0 1 0])
+	([0 1 0 1],[1 0 1 1])
+	([1 0 0 0],[0 0 1 1])
+	([1 0 0 0],[1 0 0 0])
+	([1 0 0 0],[1 0 1 1])
+	([1 0 1 0],[0 0 0 1])
+	([1 1 0 1],[1 0 1 1])
 
 It has no fixed points and 2 negated fixed points: (1,0,0,0), (1,1,0,1)
 
@@ -296,23 +284,7 @@ MixColumn
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_6+x_2+x_1`
-
-:math:`f_2 = x_7+x_3+x_2`
-
-:math:`f_3 = x_8+x_5+x_4+x_3+x_1`
-
-:math:`f_4 = x_5+x_4+x_1`
-
-:math:`f_5 = x_6+x_5+x_2`
-
-:math:`f_6 = x_7+x_6+x_3`
-
-:math:`f_7 = x_8+x_7+x_5+x_4+x_1`
-
-:math:`f_8 = x_8+x_5+x_1`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.tt>`_
 
@@ -359,39 +331,7 @@ ks0
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_1`
-
-:math:`f_2 = x_2`
-
-:math:`f_3 = x_3`
-
-:math:`f_4 = x_4`
-
-:math:`f_5 = x_5`
-
-:math:`f_6 = x_6`
-
-:math:`f_7 = x_7`
-
-:math:`f_8 = x_8`
-
-:math:`f_9 = x_9`
-
-:math:`f_{10} = x_{10}`
-
-:math:`f_{11} = x_{11}`
-
-:math:`f_{12} = x_{12}`
-
-:math:`f_{13} = x_{13}`
-
-:math:`f_{14} = x_{14}`
-
-:math:`f_{15} = x_{15}`
-
-:math:`f_{16} = x_{16}`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks0.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks0.tt>`_
 
@@ -418,39 +358,7 @@ ks1
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = 1+x_{16}+x_{14}+x_{14}x_{15}+x_{14}x_{15}x_{16}+x_{13}+x_{13}x_{14}+x_{13}x_{14}x_{15}+x_1`
-
-:math:`f_2 = 1+x_{15}x_{16}+x_{14}+x_{14}x_{16}+x_{13}+x_{13}x_{15}+x_{13}x_{15}x_{16}+x_2`
-
-:math:`f_3 = 1+x_{16}+x_{15}+x_{15}x_{16}+x_{14}x_{16}+x_{14}x_{15}+x_{13}x_{16}+x_{13}x_{15}+x_{13}x_{14}+x_{13}x_{14}x_{16}+x_{13}x_{14}x_{15}+x_3`
-
-:math:`f_4 = 1+x_{15}+x_{14}x_{16}+x_{13}+x_{13}x_{16}+x_{13}x_{15}x_{16}+x_4`
-
-:math:`f_5 = 1+x_{16}+x_{14}+x_{14}x_{15}+x_{14}x_{15}x_{16}+x_{13}+x_{13}x_{14}+x_{13}x_{14}x_{15}+x_5+x_1`
-
-:math:`f_6 = 1+x_{15}x_{16}+x_{14}+x_{14}x_{16}+x_{13}+x_{13}x_{15}+x_{13}x_{15}x_{16}+x_6+x_2`
-
-:math:`f_7 = 1+x_{16}+x_{15}+x_{15}x_{16}+x_{14}x_{16}+x_{14}x_{15}+x_{13}x_{16}+x_{13}x_{15}+x_{13}x_{14}+x_{13}x_{14}x_{16}+x_{13}x_{14}x_{15}+x_7+x_3`
-
-:math:`f_8 = 1+x_{15}+x_{14}x_{16}+x_{13}+x_{13}x_{16}+x_{13}x_{15}x_{16}+x_8+x_4`
-
-:math:`f_9 = 1+x_{16}+x_{14}+x_{14}x_{15}+x_{14}x_{15}x_{16}+x_{13}+x_{13}x_{14}+x_{13}x_{14}x_{15}+x_9+x_5+x_1`
-
-:math:`f_{10} = 1+x_{15}x_{16}+x_{14}+x_{14}x_{16}+x_{13}+x_{13}x_{15}+x_{13}x_{15}x_{16}+x_{10}+x_6+x_2`
-
-:math:`f_{11} = 1+x_{16}+x_{15}+x_{15}x_{16}+x_{14}x_{16}+x_{14}x_{15}+x_{13}x_{16}+x_{13}x_{15}+x_{13}x_{14}+x_{13}x_{14}x_{16}+x_{13}x_{14}x_{15}+x_{11}+x_7+x_3`
-
-:math:`f_{12} = 1+x_{15}+x_{14}x_{16}+x_{13}+x_{13}x_{16}+x_{13}x_{15}x_{16}+x_{12}+x_8+x_4`
-
-:math:`f_{13} = 1+x_{16}+x_{14}+x_{14}x_{15}+x_{14}x_{15}x_{16}+x_{13}x_{14}+x_{13}x_{14}x_{15}+x_9+x_5+x_1`
-
-:math:`f_{14} = 1+x_{15}x_{16}+x_{14}x_{16}+x_{13}+x_{13}x_{15}+x_{13}x_{15}x_{16}+x_{10}+x_6+x_2`
-
-:math:`f_{15} = 1+x_{16}+x_{15}x_{16}+x_{14}x_{16}+x_{14}x_{15}+x_{13}x_{16}+x_{13}x_{15}+x_{13}x_{14}+x_{13}x_{14}x_{16}+x_{13}x_{14}x_{15}+x_{11}+x_7+x_3`
-
-:math:`f_{16} = 1+x_{16}+x_{15}+x_{14}x_{16}+x_{13}+x_{13}x_{16}+x_{13}x_{15}x_{16}+x_{12}+x_8+x_4`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks1.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks1.tt>`_
 

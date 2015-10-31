@@ -22,6 +22,10 @@ S
 Representations
 ---------------
 
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x^2 + 1`:
+
+<https://raw.githubusercontent.com/jacubero/VBF/master/Hierocrypt3/S-trace.pdf>`_
+
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Hierocrypt3/S.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Hierocrypt3/S.tt>`_
