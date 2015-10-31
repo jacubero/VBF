@@ -16,8 +16,6 @@ int main(int argc, char *argv[])
    int  n;
    char file[33];
 
-   // Load VBF definitions
-
    sprintf(file,"%s.dec",argv[1]);
    ifstream input(file);
    if(!input) {

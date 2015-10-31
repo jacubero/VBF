@@ -11,14 +11,14 @@ The following bash script obtain Balanced Boolean functions from Boolean functio
    :caption: balanced.sh
    :name: balanced.sh
 
-cont=1
-while read line
-do
-echo $line > $1.$cont
-./balanced.exe $1.$cont $3 $4 >> $2.$cont
-rm $1.$cont
-((cont++))
-done < $1
+	cont=1
+	while read line
+	do
+	echo $line > $1.$cont
+	./balanced.exe $1.$cont $3 $4 >> $2.$cont
+	rm $1.$cont
+	((cont++))
+	done < $1
 
 The bash script *balanced.sh* must be invoked as follows:  
 
@@ -83,7 +83,7 @@ Let :math:`f \in \funct{F}_n` an input function within infile.bin. If its weight
 	         B = transpose(A);
 	         G.puttt(B);
 	         
-	         cout << "[" << A[0] << "]" << "," << nl(G) << 			"," << ld(G) << "," << deg(G) << "," << AI(G) 			<< "," << maxAC(G) << "," << sigma(G) << endl;
+	         cout << "[" << A[0] << "]" << "," << nl(G) <<	"," << ld(G) << "," << deg(G) << "," << AI(G) << "," << maxAC(G) << "," << sigma(G) << endl;
 
 	         G.kill();
 	       }
@@ -164,7 +164,7 @@ Let :math:`f \in \funct{F}_n` an input function within infile.bin. If its weight
 	               B = transpose(A);
 	               G.puttt(B);
 	         
-	               cout << "[" << A[0] << "]" << "," << nl(G) 				<< "," << deg(G) << "," << AI(G) << "," 				<< maxAC(G) << "," << sigma(G) << endl;
+	               cout << "[" << A[0] << "]" << "," << nl(G) << "," << deg(G) << "," << AI(G) << "," << maxAC(G) << "," << sigma(G) << endl;
 
 	               G.kill();
 	            }
