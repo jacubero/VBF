@@ -24,9 +24,7 @@ S0
 Representations
 ---------------
 
-Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x^2 + 1`:
-
-`Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0-trace.pdf>`_
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x^2 + 1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0.pdf>`_
 
@@ -375,9 +373,7 @@ S1
 Representations
 ---------------
 
-Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x^2 + 1`:
-
-`Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1-trace.pdf>`_
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x^2 + 1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1.pdf>`_
 

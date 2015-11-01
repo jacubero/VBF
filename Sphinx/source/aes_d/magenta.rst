@@ -22,9 +22,7 @@ S
 Representations
 ---------------
 
-Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8+x^6+x^5+x^2+1`:
-
-`Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta-trace.pdf>`_
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8+x^6+x^5+x^2+1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.pdf>`_
 

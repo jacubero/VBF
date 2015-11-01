@@ -70,9 +70,7 @@ Summary
 Representations
 ---------------
 
-Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x + 1`:
-
-`Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD-trace.pdf>`_
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x + 1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.pdf>`_
 
@@ -125,9 +123,7 @@ It has no fixed points. It has no negated fixed points
 Representations
 ---------------
 
-Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x + 1`:
-
-`Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRDinv-trace.pdf>`_
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x + 1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRDinv-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.pdf>`_
 
@@ -227,23 +223,7 @@ It has no negated fixed points: (0,1,1,1,1,1,1,0), (1,0,0,0,0,0,0,1)
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_5+x_4+x_3+x_2+x_1`
-
-:math:`f_2 = 1+x_6+x_5+x_4+x_3+x_2`
-
-:math:`f_3 = 1+x_7+x_6+x_5+x_4+x_3`
-
-:math:`f_4 = x_8+x_7+x_6+x_5+x_4`
-
-:math:`f_5 = x_8+x_7+x_6+x_5+x_1`
-
-:math:`f_6 = x_8+x_7+x_6+x_2+x_1`
-
-:math:`f_7 = 1+x_8+x_7+x_3+x_2+x_1`
-
-:math:`f_8 = 1+x_8+x_4+x_3+x_2+x_1`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.tt>`_
 
@@ -286,23 +266,7 @@ It has no fixed points. It has no negated fixed points
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_7+x_4+x_2`
-
-:math:`f_2 = x_8+x_5+x_3`
-
-:math:`f_3 = x_6+x_4+x_1`
-
-:math:`f_4 = x_7+x_5+x_2`
-
-:math:`f_5 = x_8+x_6+x_3`
-
-:math:`f_6 = 1+x_7+x_4+x_1`
-
-:math:`f_7 = x_8+x_5+x_2`
-
-:math:`f_8 = 1+x_6+x_3+x_1`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.tt>`_
 
@@ -345,23 +309,7 @@ xtime
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_2`
-
-:math:`f_2 = x_3`
-
-:math:`f_3 = x_4`
-
-:math:`f_4 = x_5+x_1`
-
-:math:`f_5 = x_6+x_1`
-
-:math:`f_6 = x_7`
-
-:math:`f_7 = x_8+x_1+x_1x_2x_3x_5x_6x_7x_8+x_1x_2x_3x_4x_5x_6x_7x_8`
-
-:math:`f_8 = x_1`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.tt>`_
 

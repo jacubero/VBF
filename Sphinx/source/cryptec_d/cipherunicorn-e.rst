@@ -28,9 +28,7 @@ S0
 Representations
 ---------------
 
-Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x^2 + 1`:
-
-`Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S0-trace.pdf>`_
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x^2 + 1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S0-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S0.pdf>`_
 
@@ -79,9 +77,7 @@ S1
 Representations
 ---------------
 
-Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^6 + x^5 + x^2 + 1`:
-
-`Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S1-trace.pdf>`_
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^6 + x^5 + x^2 + 1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S1-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S1.pdf>`_
 
@@ -130,9 +126,7 @@ S2
 Representations
 ---------------
 
-Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^6 + x^3 + x^2 + 1`:
-
-`Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S2-trace.pdf>`_
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^6 + x^3 + x^2 + 1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S2-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S2.pdf>`_
 
@@ -185,9 +179,7 @@ S3
 Representations
 ---------------
 
-Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^6 + x^5 + x^4 + 1`:
-
-`Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S3-trace.pdf>`_
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^6 + x^5 + x^4 + 1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S3-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S3.pdf>`_
 

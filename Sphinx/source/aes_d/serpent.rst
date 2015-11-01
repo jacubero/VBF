@@ -36,15 +36,7 @@ S0
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_4+x_3+x_2+x_1+x_1x_4`
-
-:math:`f_2 = x_3+x_3x_4+x_2x_4+x_2x_3x_4+x_1+x_1x_3+x_1x_2x_3`
-
-:math:`f_3 = 1+x_4+x_2x_4+x_2x_3+x_2x_3x_4+x_1x_3+x_1x_2x_4+x_1x_2x_3`
-
-:math:`f_4 = 1+x_4+x_3x_4+x_2+x_2x_4+x_2x_3+x_2x_3x_4+x_1+x_1x_2x_4+x_1x_2x_3`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.tt>`_
 
@@ -103,15 +95,7 @@ S1
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = 1+x_3+x_2x_4+x_1+x_1x_4+x_1x_3x_4+x_1x_2x_4+x_1x_2x_3`
-
-:math:`f_2 = 1+x_3+x_3x_4+x_2+x_1`
-
-:math:`f_3 = 1+x_4+x_3x_4+x_2+x_2x_4+x_1+x_1x_3+x_1x_3x_4+x_1x_2x_4+x_1x_2x_3`
-
-:math:`f_4 = 1+x_4+x_3+x_2x_3+x_1x_4+x_1x_2+x_1x_2x_4+x_1x_2x_3`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.tt>`_
 
@@ -172,15 +156,7 @@ S2
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = 1+x_4+x_3+x_2+x_2x_3x_4+x_1x_3`
-
-:math:`f_2 = x_4+x_3+x_2x_3+x_1+x_1x_3+x_1x_3x_4+x_1x_2+x_1x_2x_4`
-
-:math:`f_3 = x_4+x_3+x_2+x_2x_3+x_2x_3x_4+x_1x_4+x_1x_3x_4+x_1x_2+x_1x_2x_4`
-
-:math:`f_4 = x_3+x_2+x_2x_4+x_1`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.tt>`_
 
@@ -239,15 +215,7 @@ S3
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_4+x_3+x_3x_4+x_2+x_2x_4+x_2x_3x_4+x_1+x_1x_2+x_1x_2x_4`
-
-:math:`f_2 = x_4+x_3x_4+x_2+x_2x_3x_4+x_1+x_1x_3+x_1x_3x_4`
-
-:math:`f_3 = x_4+x_3+x_2x_4+x_1x_4+x_1x_3x_4+x_1x_2+x_1x_2x_4`
-
-:math:`f_4 = x_4+x_3+x_2x_3+x_1+x_1x_4+x_1x_2+x_1x_2x_4+x_1x_2x_3`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.tt>`_
 
@@ -302,15 +270,7 @@ S4
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_4+x_3+x_2+x_2x_3+x_1x_4+x_1x_3+x_1x_3x_4`
-
-:math:`f_2 = x_4+x_3x_4+x_2+x_2x_3+x_2x_3x_4+x_1x_3+x_1x_3x_4+x_1x_2+x_1x_2x_3`
-
-:math:`f_3 = x_4+x_2x_4+x_2x_3+x_1+x_1x_3+x_1x_2+x_1x_2x_4+x_1x_2x_3`
-
-:math:`f_4 = 1+x_3+x_3x_4+x_2+x_1+x_1x_4+x_1x_3`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.tt>`_
 
@@ -365,15 +325,7 @@ S5
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = 1+x_4+x_3+x_2+x_2x_3x_4+x_1+x_1x_4+x_1x_2x_4`
-
-:math:`f_2 = 1+x_3+x_2x_4+x_1+x_1x_3x_4+x_1x_2+x_1x_2x_4+x_1x_2x_3`
-
-:math:`f_3 = 1+x_4+x_3x_4+x_2+x_1+x_1x_3+x_1x_3x_4+x_1x_2`
-
-:math:`f_4 = 1+x_3+x_3x_4+x_2+x_1+x_1x_4+x_1x_3`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.tt>`_
 
@@ -426,15 +378,7 @@ S6
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_3+x_3x_4+x_2+x_2x_4+x_2x_3x_4+x_1+x_1x_2+x_1x_2x_3`
-
-:math:`f_2 = 1+x_4+x_3x_4+x_2+x_2x_3+x_2x_3x_4+x_1x_3+x_1x_3x_4+x_1x_2+x_1x_2x_3`
-
-:math:`f_3 = 1+x_3+x_2+x_1x_4`
-
-:math:`f_4 = 1+x_4+x_3+x_2+x_2x_4+x_2x_3+x_2x_3x_4+x_1+x_1x_3x_4+x_1x_2x_3`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.tt>`_
 
@@ -495,15 +439,7 @@ S7
 Representations
 ---------------
 
-Polynomial representation in ANF:
-
-:math:`f_1 = x_4+x_3+x_2+x_2x_4+x_2x_3x_4+x_1x_4`
-
-:math:`f_2 = x_4+x_3+x_2+x_2x_3x_4+x_1+x_1x_4+x_1x_3+x_1x_3x_4+x_1x_2x_3`
-
-:math:`f_3 = x_3+x_3x_4+x_2+x_2x_4+x_2x_3+x_1+x_1x_4+x_1x_3x_4+x_1x_2x_4`
-
-:math:`f_4 = 1+x_3x_4+x_2+x_1x_4+x_1x_3+x_1x_2+x_1x_2x_4+x_1x_2x_3`
+`Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.pdf>`_
 
 `Truth Table <https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.tt>`_
 
