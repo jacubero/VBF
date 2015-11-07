@@ -88,7 +88,7 @@ where *maxNL*, *maxDEG*, *maxAI*, *maxLD*, :math:`max\sigma` are respectively th
 Implementation
 ==============
 
-In order to use Galib library, the installation instructions described in `http://lancet.mit.edu/galib-2.4/Installation.html`_ must be followed. Once Galib is installed, we can use this library in conjunction with VBF library by using the following Makefile:
+In order to use Galib library, the installation instructions described in `Installation Instructions for GAlib <http://lancet.mit.edu/galib-2.4/Installation.html>`_ must be followed. Once Galib is installed, we can use this library in conjunction with VBF library by using the following Makefile:
 
 .. code-block:: c
 
@@ -139,7 +139,6 @@ Example program for each of the objective functions could be the following:
 	#define cout STD_COUT
 
 	float Objective(GAGenome &);	// This is the declaration of our obj function.
-									// The definition comes later in the file.
 
 	int
 	main(int argc, char **argv)
@@ -226,7 +225,6 @@ Example program for each of the objective functions could be the following:
 	#define cout STD_COUT
 
 	float Objective(GAGenome &);	// This is the declaration of our obj function.
-									// The definition comes later in the file.
 
 	int
 	main(int argc, char **argv)
@@ -318,7 +316,6 @@ Example program for each of the objective functions could be the following:
 	#define cout STD_COUT
 
 	float Objective(GAGenome &);	// This is the declaration of our obj function.
-									// The definition comes later in the file.
 
 	int
 	main(int argc, char **argv)
@@ -413,7 +410,6 @@ Example program for each of the objective functions could be the following:
 	#define cout STD_COUT
 
 	float Objective(GAGenome &);	// This is the declaration of our obj function.
-									// The definition comes later in the file.
 
 	int
 	main(int argc, char **argv)
@@ -510,7 +506,6 @@ Example program for each of the objective functions could be the following:
 	#define cout STD_COUT
 
 	float Objective(GAGenome &);	// This is the declaration of our obj function.
-									// The definition comes later in the file.
 
 	int
 	main(int argc, char **argv)
@@ -611,7 +606,6 @@ The following program illustrates how can be set the seed (included in a file ca
 	#define cout STD_COUT
 
 	float Objective(GAGenome &);	// This is the declaration of our obj function.
-									// The definition comes later in the file.
 
 	int
 	main(int argc, char **argv)

@@ -123,7 +123,7 @@ It has no fixed points. It has no negated fixed points
 Representations
 ---------------
 
-Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x + 1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRDinv-trace.pdf>`_
+Polynomial function over :math:`\gf{GF(2^8)}` with irreducible polynomial :math:`x^8 + x^4 + x^3 + x + 1`: `Trace representation <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv-trace.pdf>`_
 
 `Polynomial representation in ANF <https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.pdf>`_
 
