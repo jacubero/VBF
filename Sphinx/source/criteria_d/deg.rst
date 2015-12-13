@@ -62,17 +62,17 @@ The following program provides the algebraic degree of a Vector Boolean function
 
 If we use the *NibbleSub* S-box Truth Table as input we will find out that its algebraic degree is 2.
 
-The following figure represents the ANF table of NibbleSub and emphasizes in red the ANF terms of degree 4. As we can see there are no terms of degree 4 in neither of the component functions of NibbleSub.
+The following figure represents the ANF table of NibbleSub nonzero component functions and emphasizes in red the ANF terms of degree 4. As we can see there are no terms of degree 4 in neither of the component functions of NibbleSub.
 
 .. image:: /images/deg1.png
    :align: center
 
-The following figure represents the ANF table of NibbleSub and emphasizes in blue the ANF terms of degree 3. As we can see there are no terms of degree 3 in one of the component functions of NibbleSub, which is marked in yellow.
+The following figure represents the ANF table of NibbleSub nonzero component functions and emphasizes in blue the ANF terms of degree 3. As we can see there are no terms of degree 3 in one of the component functions of NibbleSub, which is marked in yellow.
 
 .. image:: /images/deg2.png
    :align: center
 
-The following figure represents the ANF table of NibbleSub and emphasizes in orange the ANF terms of degree 2. As we can see there are always terms of degree 2 in all the component functions of NibbleSub. Because of this, the algebraic degree of NibbleSub is 2.
+The following figure represents the ANF table of NibbleSub nonzero component functions and emphasizes in orange the ANF terms of degree 2. As we can see there are always terms of degree 2 in all the component functions of NibbleSub. Because of this, the algebraic degree of NibbleSub is 2.
 
 .. image:: /images/deg3.png
    :align: center
