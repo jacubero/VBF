@@ -13,6 +13,8 @@ Why does this library exist?
 
 The stated mission of VBF is to be viable free open source library for analyzing Vector Boolean Functions used in ciphers. VBF uses best-of-breed free open source Number Theory Library called NTL by Victor Shoup.
 
+I developed this library to support my PhD Thesis.
+
 Who is behind this project?
 ============================
 
