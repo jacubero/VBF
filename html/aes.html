@@ -1,0 +1,2326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Analysis of AES competition cryptographic algorithms &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
+        <link rel="next" title="Analysis of CRYPTEC project cryptographic algorithms" href="cryptec.html"/>
+        <link rel="prev" title="Operations and constructions over Vector Boolean Functions" href="operations.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#dedications">Dedications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#book-writing-methodology">Book Writing Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#book-objectives">Book Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#organization-of-this-book">Organization of this Book</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#software-implementation">Software implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#system-requirements">System requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#preliminaries">Preliminaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#design-philosophy">Design Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using.html#an-example-program">An Example Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using.html#compiling">Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#truth-table">Truth Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#trace-representation">Trace representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#anf-table">ANF table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#characteristic-function">Characteristic Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#walsh-spectrum">Walsh Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#linear-profile">Linear Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#differential-profile">Differential Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#permutation-matrix">Permutation matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#des-representations">DES representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#auxiliary-functions">Auxiliary functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-degree">Algebraic degree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#nonlinearity">Nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#balancedness">Balancedness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#correlation-immunity">Correlation Immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-immunity">Algebraic immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#linearity-distance">Linearity distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#propagation-criterion">Propagation criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#equality-testing">Equality testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#composition">Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#inverse">Inverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#sum">Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#direct-sum">Direct sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation">Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#bricklayer">Bricklayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Analysis of AES competition cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cast-256">CAST-256</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crypton">Crypton</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deal">DEAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loki97">LOKI97</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magenta">Magenta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mars">Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rijndael">Rijndael</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#safer">Safer+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#serpent">Serpent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#clefia">CLEFIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#hierocrypt3">Hierocrypt3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#sc2000">SC2000</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nessie.html#anubis">Anubis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nessie.html#camellia">Camellia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nessie.html#grand-cru">Grand Cru</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="other.html#des">DES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#kasumi">KASUMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#macguffin">MacGuffin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#mini-aes">Mini-AES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#square">Square</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design.html#bent-functions">Bent functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#general">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#using-vbf">Using VBF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#balanced-boolean-functions-generation">Balanced Boolean functions generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#cast-analysis-programs">CAST analysis programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#truth-table-format-conversion">Truth table format conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#criteria-calculation">Criteria calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#affine-equivalence">Affine equivalence</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div></div>
+          <div role="main" class="document">
+            
+  <div class="section" id="analysis-of-aes-competition-cryptographic-algorithms">
+<h1>Analysis of AES competition cryptographic algorithms<a class="headerlink" href="#analysis-of-aes-competition-cryptographic-algorithms" title="Permalink to this headline">¶</a></h1>
+<p>In January 1997, the US National Institute of Standards and Technology (NIST) announced the start of an initiative to develop a new encryption standard: the AES. The AES selection process was open in which 15 candidates were accepted for the first evaluation round and 5 finalists were announced in the second round. On October 2, 2000, NIST officially announced that Rijndael would become the AES. In this chapter, a number of cryptographic algorithms from the AES (Advanced Encryption Standard) candidates accepted for the first evaluation round process are analysed.</p>
+<p>Below you can find a legend describing the cryptographic criteria used in this chapter:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>NL</strong></td>
+<td>Nonlinearity</td>
+</tr>
+<tr class="row-even"><td><strong>NL2</strong></td>
+<td>2-nd order nonlinearity</td>
+</tr>
+<tr class="row-odd"><td><strong>LD</strong></td>
+<td>Linearity distance</td>
+</tr>
+<tr class="row-even"><td><strong>DEG</strong></td>
+<td>Algebraic degree</td>
+</tr>
+<tr class="row-odd"><td><strong>AI</strong></td>
+<td>Algebraic immunity</td>
+</tr>
+<tr class="row-even"><td><strong>MAXAC</strong></td>
+<td>Absolute indicator</td>
+</tr>
+<tr class="row-odd"><td><img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></td>
+<td>Sum-of-squares indicator</td>
+</tr>
+<tr class="row-even"><td><strong>LP</strong></td>
+<td>Linear potential</td>
+</tr>
+<tr class="row-odd"><td><strong>DP</strong></td>
+<td>Differential Potential</td>
+</tr>
+</tbody>
+</table>
+<div class="note admonition">
+<p class="first admonition-title">Hyperlinks to representations</p>
+<p class="last">Open the hyperlinks to representations below in a new browser window or in a new tab.</p>
+</div>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#cast-256" id="id313">CAST-256</a><ul>
+<li><a class="reference internal" href="#description" id="id314">Description</a></li>
+<li><a class="reference internal" href="#s1" id="id315">S1</a></li>
+<li><a class="reference internal" href="#s2" id="id316">S2</a></li>
+<li><a class="reference internal" href="#s3" id="id317">S3</a></li>
+<li><a class="reference internal" href="#s4" id="id318">S4</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#crypton" id="id319">Crypton</a><ul>
+<li><a class="reference internal" href="#id13" id="id320">Description</a></li>
+<li><a class="reference internal" href="#summary" id="id321">Summary</a></li>
+<li><a class="reference internal" href="#s0-v0-5" id="id322">S0 (v0.5)</a></li>
+<li><a class="reference internal" href="#s1-v0-5" id="id323">S1 (v0.5)</a></li>
+<li><a class="reference internal" href="#s0-v1-0" id="id324">S0 (v1.0)</a></li>
+<li><a class="reference internal" href="#s1-v1-0" id="id325">S1 (v1.0)</a></li>
+<li><a class="reference internal" href="#s2-v1-0" id="id326">S2 (v1.0)</a></li>
+<li><a class="reference internal" href="#s3-v1-0" id="id327">S3 (v1.0)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#deal" id="id328">DEAL</a><ul>
+<li><a class="reference internal" href="#id68" id="id329">Description</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#e2" id="id330">E2</a><ul>
+<li><a class="reference internal" href="#id69" id="id331">Description</a></li>
+<li><a class="reference internal" href="#id70" id="id332">Summary</a></li>
+<li><a class="reference internal" href="#s" id="id333">S</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#loki97" id="id334">LOKI97</a><ul>
+<li><a class="reference internal" href="#id81" id="id335">Description</a></li>
+<li><a class="reference internal" href="#id82" id="id336">Summary</a></li>
+<li><a class="reference internal" href="#id83" id="id337">S1</a></li>
+<li><a class="reference internal" href="#id94" id="id338">S2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#magenta" id="id339">Magenta</a><ul>
+<li><a class="reference internal" href="#id106" id="id340">Description</a></li>
+<li><a class="reference internal" href="#id107" id="id341">Summary</a></li>
+<li><a class="reference internal" href="#id108" id="id342">S</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mars" id="id343">Mars</a><ul>
+<li><a class="reference internal" href="#id119" id="id344">Description</a></li>
+<li><a class="reference internal" href="#s0" id="id345">S0</a></li>
+<li><a class="reference internal" href="#id124" id="id346">S1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rijndael" id="id347">Rijndael</a><ul>
+<li><a class="reference internal" href="#id129" id="id348">Description</a></li>
+<li><a class="reference internal" href="#id135" id="id349">Summary</a></li>
+<li><a class="reference internal" href="#id136" id="id350"><img class="math" src="images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/></a></li>
+<li><a class="reference internal" href="#id148" id="id351"><img class="math" src="images/math/be4b8bb919798b92f2ed4c946099f561ca7dc775.png" alt="{S_{RD}}^{-1}"/></a></li>
+<li><a class="reference internal" href="#id160" id="id352"><img class="math" src="images/math/57bfb4c6c7889ad4145104ab2e383fefa40e736d.png" alt="g"/></a></li>
+<li><a class="reference internal" href="#id171" id="id353"><img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/></a></li>
+<li><a class="reference internal" href="#id182" id="id354"><img class="math" src="images/math/6fa0331f457f3b76dd2e7ff550f578bfecb365e1.png" alt="f^{-1}"/></a></li>
+<li><a class="reference internal" href="#xtime" id="id355">xtime</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#safer" id="id356">Safer+</a><ul>
+<li><a class="reference internal" href="#id203" id="id357">Description</a></li>
+<li><a class="reference internal" href="#id204" id="id358">Summary</a></li>
+<li><a class="reference internal" href="#expf" id="id359">expf</a></li>
+<li><a class="reference internal" href="#logf" id="id360">logf</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#serpent" id="id361">Serpent</a><ul>
+<li><a class="reference internal" href="#id226" id="id362">Description</a></li>
+<li><a class="reference internal" href="#id227" id="id363">Summary</a></li>
+<li><a class="reference internal" href="#id228" id="id364">S0</a></li>
+<li><a class="reference internal" href="#id239" id="id365">S1</a></li>
+<li><a class="reference internal" href="#id250" id="id366">S2</a></li>
+<li><a class="reference internal" href="#id261" id="id367">S3</a></li>
+<li><a class="reference internal" href="#id272" id="id368">S4</a></li>
+<li><a class="reference internal" href="#s5" id="id369">S5</a></li>
+<li><a class="reference internal" href="#s6" id="id370">S6</a></li>
+<li><a class="reference internal" href="#s7" id="id371">S7</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="cast-256">
+<h2><a class="toc-backref" href="#id313">CAST-256</a><a class="headerlink" href="#cast-256" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description">
+<h3><a class="toc-backref" href="#id314">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p><em>CAST-256</em> is a symmetric-key block cipher published in June 1998. It was submitted as a candidate for the Advanced Encryption Standard (AES); however, it was not among the five AES finalists. It is an extension of an earlier cipher, CAST-128; both were designed according to the &#8220;CAST&#8221; design methodology invented by Carlisle Adams and Stafford Tavares. Howard Heys and Michael Wiener also contributed to the design. It has four 8x32 S-boxes: S1,S2,S3 and S4.</p>
+</div>
+<div class="section" id="s1">
+<h3><a class="toc-backref" href="#id315">S1</a><a class="headerlink" href="#s1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="representations">
+<h4>Representations<a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S1.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S1.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S1.anf">ANF Table</a></p>
+</div>
+</div>
+<div class="section" id="s2">
+<h3><a class="toc-backref" href="#id316">S2</a><a class="headerlink" href="#s2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>Representations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S2.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S2.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S2.anf">ANF Table</a></p>
+</div>
+</div>
+<div class="section" id="s3">
+<h3><a class="toc-backref" href="#id317">S3</a><a class="headerlink" href="#s3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>Representations<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S3.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S3.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S3.anf">ANF Table</a></p>
+</div>
+</div>
+<div class="section" id="s4">
+<h3><a class="toc-backref" href="#id318">S4</a><a class="headerlink" href="#s4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h4>Representations<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S4.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S4.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S4.anf">ANF Table</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="crypton">
+<h2><a class="toc-backref" href="#id319">Crypton</a><a class="headerlink" href="#crypton" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3><a class="toc-backref" href="#id320">Description</a><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p><em>CRYPTON</em> is a symmetric block cipher designed by Chae Hoon Lim of Future Systems Inc. In this section, we study both the AES proposal (v0.5) and the revised version (v1.0). In v0.5 the authors used two 8x8 S-boxes constructed from 4-bit permutations using a 3-round Feistel Cipher (<a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/lim98crypton.pdf">Tabular representation of S-boxes</a>). In v1.0 the authors used four variants of one S-box, instead of independent four S-boxes to allow greater flexibility in memory requirements. The four 8x8 S-boxes are <img class="math" src="images/math/2d7b409d200195af8440b31762b0a62d6e0f11eb.png" alt="S_i (0 \leq i \leq 3)"/>, such that <img class="math" src="images/math/9cd40f12a0f177f96e0d3947df53a6a0b4e685af.png" alt="S2 = {S_0}^{-1}"/> and <img class="math" src="images/math/88b60c45831ed3a1b420d319f39d33ca4d263987.png" alt="S3 = {S_1}^{-1}"/></p>
+</div>
+<div class="section" id="summary">
+<h3><a class="toc-backref" href="#id321">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="7%" />
+<col width="7%" />
+<col width="9%" />
+<col width="7%" />
+<col width="11%" />
+<col width="20%" />
+<col width="12%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">S-box</th>
+<th class="head"><em>NL</em></th>
+<th class="head"><em>LD</em></th>
+<th class="head"><em>DEG</em></th>
+<th class="head"><em>AI</em></th>
+<th class="head"><em>MAXAC</em></th>
+<th class="head"><img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><em>LP</em></th>
+<th class="head"><em>DP</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S0 (v0.5)</td>
+<td>96</td>
+<td>32</td>
+<td>5</td>
+<td>3</td>
+<td>128</td>
+<td>581632</td>
+<td>0.0625</td>
+<td>0.03125</td>
+</tr>
+<tr class="row-odd"><td>S1 (v0.5)</td>
+<td>96</td>
+<td>28</td>
+<td>5</td>
+<td>3</td>
+<td>144</td>
+<td>581632</td>
+<td>0.0625</td>
+<td>0.03125</td>
+</tr>
+<tr class="row-even"><td>S0 (v1.0)</td>
+<td>96</td>
+<td>40</td>
+<td>6</td>
+<td>4</td>
+<td>96</td>
+<td>280192</td>
+<td>0.0625</td>
+<td>0.0390625</td>
+</tr>
+<tr class="row-odd"><td>S1 (v1.0)</td>
+<td>96</td>
+<td>40</td>
+<td>6</td>
+<td>4</td>
+<td>96</td>
+<td>280192</td>
+<td>0.0625</td>
+<td>0.0390625</td>
+</tr>
+<tr class="row-even"><td>S2 (v1.0)</td>
+<td>96</td>
+<td>40</td>
+<td>6</td>
+<td>4</td>
+<td>96</td>
+<td>280192</td>
+<td>0.0625</td>
+<td>0.0390625</td>
+</tr>
+<tr class="row-odd"><td>S3 (v1.0)</td>
+<td>96</td>
+<td>40</td>
+<td>6</td>
+<td>4</td>
+<td>96</td>
+<td>280192</td>
+<td>0.0625</td>
+<td>0.0390625</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="s0-v0-5">
+<h3><a class="toc-backref" href="#id322">S0 (v0.5)</a><a class="headerlink" href="#s0-v0-5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h4>Representations<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Crypton0-05.png"><img alt="images/Crypton0-05.png" class="align-center" src="images/Crypton0-05.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="other-useful-information-in-cryptanalysis">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#other-useful-information-in-cryptanalysis" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>10</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td>11</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>15</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>16</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>17</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>22</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>42</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>61</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has 1 fixed point: (0,0,0,0,1,1,1,1)</p>
+<p>It has 1 negated fixed point: (1,1,1,0,1,1,1,1)</p>
+</div>
+</div>
+<div class="section" id="s1-v0-5">
+<h3><a class="toc-backref" href="#id323">S1 (v0.5)</a><a class="headerlink" href="#s1-v0-5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id18">
+<h4>Representations<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Crypton1-05.png"><img alt="images/Crypton1-05.png" class="align-center" src="images/Crypton1-05.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id27">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>10</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td>11</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>15</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>16</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>17</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>22</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>42</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>61</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has 1 fixed point: (0,0,0,0,1,1,1,1)</p>
+<p>It has 1 negated fixed point: (0,0,0,1,0,0,0,0)</p>
+</div>
+</div>
+<div class="section" id="s0-v1-0">
+<h3><a class="toc-backref" href="#id324">S0 (v1.0)</a><a class="headerlink" href="#s0-v1-0" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id28">
+<h4>Representations<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Crypton0-1.png"><img alt="images/Crypton0-1.png" class="align-center" src="images/Crypton0-1.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id37">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>248</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has 1 fixed point: (0,1,1,1,0,1,0,1)</p>
+<p>It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="s1-v1-0">
+<h3><a class="toc-backref" href="#id325">S1 (v1.0)</a><a class="headerlink" href="#s1-v1-0" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id38">
+<h4>Representations<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Crypton1-1.png"><img alt="images/Crypton1-1.png" class="align-center" src="images/Crypton1-1.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id47">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>3</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>22</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>28</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>48</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>50</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>88</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has no fixed points</p>
+<p>It has 1 negated fixed point: (1,0,1,0,1,1,1,0)</p>
+</div>
+</div>
+<div class="section" id="s2-v1-0">
+<h3><a class="toc-backref" href="#id326">S2 (v1.0)</a><a class="headerlink" href="#s2-v1-0" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id48">
+<h4>Representations<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Crypton2-1.png"><img alt="images/Crypton2-1.png" class="align-center" src="images/Crypton2-1.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id57">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>248</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has 1 fixed point: (0,1,1,1,0,1,0,1)</p>
+<p>It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="s3-v1-0">
+<h3><a class="toc-backref" href="#id327">S3 (v1.0)</a><a class="headerlink" href="#s3-v1-0" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id58">
+<h4>Representations<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Crypton3-1.png"><img alt="images/Crypton3-1.png" class="align-center" src="images/Crypton3-1.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id67">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id67" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>3</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>22</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>28</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>48</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>50</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>88</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has no fixed points</p>
+<p>It has 1 negated fixed point: (0,1,0,1,0,0,0,1)</p>
+</div>
+</div>
+</div>
+<div class="section" id="deal">
+<h2><a class="toc-backref" href="#id328">DEAL</a><a class="headerlink" href="#deal" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id68">
+<h3><a class="toc-backref" href="#id329">Description</a><a class="headerlink" href="#id68" title="Permalink to this headline">¶</a></h3>
+<p><em>DEAL</em> (Data Encryption Algorithm with Larger blocks) is a symmetric block cipher derived from the Data Encryption Standard (DES). The design was proposed in a report by Lars Knudsen in 1998, and was submitted to the AES competition by Richard Outerbridge (who notes that Knudsen had presented the design at the SAC conference in 1997).</p>
+<p>DEAL has eight 6x4 S-boxes: S1, S2, S3, S4, S5, S6, S7, S8. They are the same as DES S-boxes and you can see an analysis in <span class="xref std std-ref">DES</span>.</p>
+</div>
+</div>
+<div class="section" id="e2">
+<h2><a class="toc-backref" href="#id330">E2</a><a class="headerlink" href="#e2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id69">
+<h3><a class="toc-backref" href="#id331">Description</a><a class="headerlink" href="#id69" title="Permalink to this headline">¶</a></h3>
+<p><em>E2</em> is a symmetric block cipher which was created in 1998 by NTT and submitted to the AES competition. E2 has an input transformation and output transformation that both use modular multiplication, but the round function itself consists only of XORs and S-box lookups. The single 8×8-bit S-box is constructed from the composition of an affine transformation with the discrete exponentiation <img class="math" src="images/math/6e9e25e95a588dfd2f0b38a62953daac5e75fd0f.png" alt="x^{127}"/> over the finite field <img class="math" src="images/math/cff7c77bb17f485ddb65e22ad20aaf42c8e34980.png" alt="GF(2^8)"/>. NTT adopted many of E2&#8217;s special characteristics in Camellia, which has essentially replaced E2.</p>
+</div>
+<div class="section" id="id70">
+<h3><a class="toc-backref" href="#id332">Summary</a><a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="7%" />
+<col width="7%" />
+<col width="9%" />
+<col width="7%" />
+<col width="11%" />
+<col width="20%" />
+<col width="17%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">S-box</th>
+<th class="head"><em>NL</em></th>
+<th class="head"><em>LD</em></th>
+<th class="head"><em>DEG</em></th>
+<th class="head"><em>AI</em></th>
+<th class="head"><em>MAXAC</em></th>
+<th class="head"><img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><em>LP</em></th>
+<th class="head"><em>DP</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S</td>
+<td>100</td>
+<td>38</td>
+<td>6</td>
+<td>4</td>
+<td>104</td>
+<td>236800</td>
+<td>0.0478515625</td>
+<td>0.0390625</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="s">
+<h3><a class="toc-backref" href="#id333">S</a><a class="headerlink" href="#s" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id71">
+<h4>Representations<a class="headerlink" href="#id71" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/e2.png"><img alt="images/e2.png" class="align-center" src="images/e2.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id80">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id80" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>24</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>64</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>156</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has no fixed points.</p>
+<p>It has 2 negated fixed points: (0,0,1,0,1,0,0,1), (1,0,0,0,1,0,1,1)</p>
+</div>
+</div>
+</div>
+<div class="section" id="loki97">
+<h2><a class="toc-backref" href="#id334">LOKI97</a><a class="headerlink" href="#loki97" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id81">
+<h3><a class="toc-backref" href="#id335">Description</a><a class="headerlink" href="#id81" title="Permalink to this headline">¶</a></h3>
+<p><em>LOKI97</em> is a block cipher which was a candidate in the Advanced Encryption Standard competition. It is a member of the LOKI family of ciphers, earlier instances being LOKI89 and LOKI91. LOKI97 was designed by Lawrie Brown, assisted by Jennifer Seberry and Josef Pieprzyk. The LOKI97 round function uses two columns each with multiple copies of two basic S-boxes. The S-boxes chosen for LOKI97 use cubing in a galois field <img class="math" src="images/math/0b9d1709e437e136ef683c3007f869f14ab71515.png" alt="GF(2^n)"/> with n odd. In order to use odd sized inputs, S1 uses 13 input bits, and S2 uses 11. The S-box functions are:</p>
+<p>S1[x]=((x XOR 1FFF)^3 mod 2911) &amp; FF <img class="math" src="images/math/71b197859e1fad7397b856129bcc1b573fc6f672.png" alt="\in GF(2^{13})"/></p>
+<p>S2[x]=((x XOR 7FF)^3 mod AA7) &amp; FF <img class="math" src="images/math/c61cfa3c898d734cf5cafd4225327ac1d83ab392.png" alt="\in GF(2^{11})"/></p>
+<p>where all constant above are written in hex and all computations are done as polynomials in <img class="math" src="images/math/0b9d1709e437e136ef683c3007f869f14ab71515.png" alt="GF(2^n)"/>.</p>
+</div>
+<div class="section" id="id82">
+<h3><a class="toc-backref" href="#id336">Summary</a><a class="headerlink" href="#id82" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="8%" />
+<col width="7%" />
+<col width="10%" />
+<col width="18%" />
+<col width="18%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">S-box</th>
+<th class="head">size</th>
+<th class="head"><em>NL</em></th>
+<th class="head"><em>LD</em></th>
+<th class="head"><em>DEG</em></th>
+<th class="head"><em>AI</em></th>
+<th class="head"><em>MAXAC</em></th>
+<th class="head"><img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><em>LP</em></th>
+<th class="head"><em>DP</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>13x8</td>
+<td>4032</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>8192</td>
+<td>134217728</td>
+<td>0.000244140625</td>
+<td>0.0078125</td>
+</tr>
+<tr class="row-odd"><td>S2</td>
+<td>11x8</td>
+<td>992</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>2048</td>
+<td>8388608</td>
+<td>0.0009765625</td>
+<td>0.0078125</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id83">
+<h3><a class="toc-backref" href="#id337">S1</a><a class="headerlink" href="#id83" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id84">
+<h4>Representations<a class="headerlink" href="#id84" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (256x256 first values except first row and column):</p>
+<a class="reference internal image-reference" href="images/loki1.png"><img alt="images/loki1.png" class="align-center" src="images/loki1.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id93">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id93" title="Permalink to this headline">¶</a></h4>
+<p>There are 255 linear structures:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.ls">Linear structures</a></p>
+</div>
+</div>
+<div class="section" id="id94">
+<h3><a class="toc-backref" href="#id338">S2</a><a class="headerlink" href="#id94" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id95">
+<h4>Representations<a class="headerlink" href="#id95" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (256x256 first values except first row and column):</p>
+<a class="reference internal image-reference" href="images/loki2.png"><img alt="images/loki2.png" class="align-center" src="images/loki2.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id104">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id104" title="Permalink to this headline">¶</a></h4>
+<p>There are 256 linear structures:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.ls">Linear structures</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="magenta">
+<h2><a class="toc-backref" href="#id339">Magenta</a><a class="headerlink" href="#magenta" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id106">
+<h3><a class="toc-backref" href="#id340">Description</a><a class="headerlink" href="#id106" title="Permalink to this headline">¶</a></h3>
+<p><em>Magenta</em> is a symmetric key block cipher developed by Michael Jacobson Jr. and Klaus Huber for Deutsche Telekom. The cipher was submitted to the Advanced Encryption Standard process, but did not advance beyond the first round; cryptographic weaknesses were discovered and it was found to be one of the slower ciphers submitted. It has one 8x8 S-box.</p>
+</div>
+<div class="section" id="id107">
+<h3><a class="toc-backref" href="#id341">Summary</a><a class="headerlink" href="#id107" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="7%" />
+<col width="7%" />
+<col width="9%" />
+<col width="7%" />
+<col width="11%" />
+<col width="20%" />
+<col width="19%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">S-box</th>
+<th class="head"><em>NL</em></th>
+<th class="head"><em>LD</em></th>
+<th class="head"><em>DEG</em></th>
+<th class="head"><em>AI</em></th>
+<th class="head"><em>MAXAC</em></th>
+<th class="head"><img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><em>LP</em></th>
+<th class="head"><em>DP</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S</td>
+<td>102</td>
+<td>44</td>
+<td>7</td>
+<td>4</td>
+<td>80</td>
+<td>217600</td>
+<td>0.04125976563</td>
+<td>0.03125</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id108">
+<h3><a class="toc-backref" href="#id342">S</a><a class="headerlink" href="#id108" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id109">
+<h4>Representations<a class="headerlink" href="#id109" title="Permalink to this headline">¶</a></h4>
+<p>Polynomial function over <img class="math" src="images/math/a304670c9f29763f9f68c5efbc6720d035f3c4b1.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/25130d654b016fcdae734c8d4ed0261bfce503e2.png" alt="x^8+x^6+x^5+x^2+1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta-trace.pdf">Trace representation</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Magenta.png"><img alt="images/Magenta.png" class="align-center" src="images/Magenta.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id118">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id118" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>38</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>198</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has 1 fixed point: (1,0,1,0,0,0,0,1)</p>
+<p>It has 2 negated fixed points: (0,0,0,1,1,1,0,0), (1,1,1,1,1,1,1,1)</p>
+</div>
+</div>
+</div>
+<div class="section" id="mars">
+<h2><a class="toc-backref" href="#id343">Mars</a><a class="headerlink" href="#mars" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id119">
+<h3><a class="toc-backref" href="#id344">Description</a><a class="headerlink" href="#id119" title="Permalink to this headline">¶</a></h3>
+<p><em>Mars</em> is a block cipher that was IBM&#8217;s submission to the Advanced Encryption Standard process. MARS was selected as an AES finalist in August 1999, after the AES2 conference in March 1999, where it was voted as the fifth and last finalist algorithm. It has two 8x32 S-boxes: S0 and S1</p>
+</div>
+<div class="section" id="s0">
+<h3><a class="toc-backref" href="#id345">S0</a><a class="headerlink" href="#s0" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id120">
+<h4>Representations<a class="headerlink" href="#id120" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S0.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S0.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S0.anf">ANF Table</a></p>
+</div>
+</div>
+<div class="section" id="id124">
+<h3><a class="toc-backref" href="#id346">S1</a><a class="headerlink" href="#id124" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id125">
+<h4>Representations<a class="headerlink" href="#id125" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S1.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S1.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S1.anf">ANF Table</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="rijndael">
+<h2><a class="toc-backref" href="#id347">Rijndael</a><a class="headerlink" href="#rijndael" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id129">
+<h3><a class="toc-backref" href="#id348">Description</a><a class="headerlink" href="#id129" title="Permalink to this headline">¶</a></h3>
+<p><em>Rijndael</em>, later called <em>AES</em>, is a block cipher used for securing sensitive but unclassified material by U.S. Government agencies since December 6, 2001 and has become the de facto encryption standard for commercial transactions in the private sector.</p>
+<p><img class="math" src="images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/> is AES 8x8 S-box and it is generated by determining the multiplicative inverse for a given number in <img class="math" src="images/math/ca71c4b385d88da9ce7e9bcf7a5a5f9780d0c3bb.png" alt="GF(2^8) = GF(2)[x]/(x^8 + x^4 + x^3 + x + 1)"/>, Rijndael&#8217;s finite field. <img class="math" src="images/math/be4b8bb919798b92f2ed4c946099f561ca7dc775.png" alt="{S_{RD}}^{-1}"/> is the inverse S-box and it is simply the S-box <img class="math" src="images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/> run in reverse.</p>
+<p>The tabular representation of <img class="math" src="images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/> S-box represented in hexadecimal notation is the following:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD-hex.txt">Tabular representation in hexadecimal notation</a></p>
+<p>Here the column is determined by the least significant nibble (four-bit aggregation), and the row is determined by the most significant nibble. For example, the value 0x9a is converted into 0xb8 by Rijndael&#8217;s S-box. Note that the multiplicative inverse of 0x00 is defined as itself.</p>
+<p>The tabular representation of <img class="math" src="images/math/be4b8bb919798b92f2ed4c946099f561ca7dc775.png" alt="{S_{RD}}^{-1}"/> S-box represented in hexadecimal notation is the following:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv-hex.txt">Tabular representation in hexadecimal notation</a></p>
+<p>For hardware implementations, it might be useful to use the following decomposition of <img class="math" src="images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/>:</p>
+<p><img class="math" src="images/math/c36b55c592bbbbfe1887a64c495210a3559c8a4a.png" alt="S_{RD}[a] = f(g(a))"/></p>
+<p>where <img class="math" src="images/math/5f5b7573c5f455d2e8827f5ab70a1fecc2059325.png" alt="g(a)"/> is the mapping</p>
+<p><img class="math" src="images/math/911046bf1f61f9f384153c4ff00bb19d7cae7fce.png" alt="a \rightarrow a^{-1}"/> in <img class="math" src="images/math/cff7c77bb17f485ddb65e22ad20aaf42c8e34980.png" alt="GF(2^8)"/>, and <img class="math" src="images/math/7a043fdcaa83cbd7727ea37ade9ab00a0c928191.png" alt="f(a)"/> is an affine mapping. Since <img class="math" src="images/math/5f5b7573c5f455d2e8827f5ab70a1fecc2059325.png" alt="g(a)"/> is self-inverse, we have:</p>
+<p><img class="math" src="images/math/1bd6040091c6a84f9214f827d2a92d47275bc409.png" alt="{S_{RD}}^{-1}[a] = {g}^{-1}({f}^{-1}(a)) = g({f}^{-1}(a))"/></p>
+<p>The tabular representation of <img class="math" src="images/math/57bfb4c6c7889ad4145104ab2e383fefa40e736d.png" alt="g"/> mapping is represented in hexadecimal notation as follows:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g-hex.txt">Tabular representation in hexadecimal notation</a></p>
+<p>The tabular representation of <img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/> mapping is represented in hexadecimal notation as follows:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f-hex.txt">Tabular representation in hexadecimal notation</a></p>
+<p>The tabular representation of <img class="math" src="images/math/6fa0331f457f3b76dd2e7ff550f578bfecb365e1.png" alt="f^{-1}"/> mapping is represented in hexadecimal notation as follows:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv-hex.txt">Tabular representation in hexadecimal notation</a></p>
+<p>In the algorithm of Rijndael there are multiplications of a variable with a constant. A mapping called xtime is implemented in the algorithm in order to multiply by <img class="math" src="images/math/951eaf8c5e045b25de56d1cb46a3bfac010e2f30.png" alt="02"/>. Since all elements of <img class="math" src="images/math/cff7c77bb17f485ddb65e22ad20aaf42c8e34980.png" alt="GF(2^8)"/> can be written as a sum of powers of <img class="math" src="images/math/951eaf8c5e045b25de56d1cb46a3bfac010e2f30.png" alt="02"/>, multiplication by any constant can be implemented by a repeated use of xtime. The tabular representation of xtime mapping is represented in hexadecimal notation as follows:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime-hex.txt">Tabular representation in hexadecimal notation</a></p>
+</div>
+<div class="section" id="id135">
+<h3><a class="toc-backref" href="#id349">Summary</a><a class="headerlink" href="#id135" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="6%" />
+<col width="6%" />
+<col width="8%" />
+<col width="6%" />
+<col width="10%" />
+<col width="17%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">S-box</th>
+<th class="head"><em>NL</em></th>
+<th class="head"><em>LD</em></th>
+<th class="head"><em>DEG</em></th>
+<th class="head"><em>AI</em></th>
+<th class="head"><em>MAXAC</em></th>
+<th class="head"><img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><em>LP</em></th>
+<th class="head"><em>DP</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img class="math" src="images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/></td>
+<td>112</td>
+<td>56</td>
+<td>7</td>
+<td>4</td>
+<td>32</td>
+<td>133120</td>
+<td>0.015625</td>
+<td>0.015625</td>
+</tr>
+<tr class="row-odd"><td><img class="math" src="images/math/be4b8bb919798b92f2ed4c946099f561ca7dc775.png" alt="{S_{RD}}^{-1}"/></td>
+<td>112</td>
+<td>56</td>
+<td>7</td>
+<td>4</td>
+<td>32</td>
+<td>133120</td>
+<td>0.015625</td>
+<td>0.015625</td>
+</tr>
+<tr class="row-even"><td><img class="math" src="images/math/57bfb4c6c7889ad4145104ab2e383fefa40e736d.png" alt="g"/></td>
+<td>112</td>
+<td>56</td>
+<td>7</td>
+<td>4</td>
+<td>32</td>
+<td>133120</td>
+<td>0.015625</td>
+<td>0.015625</td>
+</tr>
+<tr class="row-odd"><td><img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>256</td>
+<td>16777216</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td><img class="math" src="images/math/6fa0331f457f3b76dd2e7ff550f578bfecb365e1.png" alt="f^{-1}"/></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>256</td>
+<td>16777216</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>xtime</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>256</td>
+<td>16777216</td>
+<td>1</td>
+<td>0.9921875</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id136">
+<h3><a class="toc-backref" href="#id350"><img class="math" src="images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/></a><a class="headerlink" href="#id136" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id137">
+<h4>Representations<a class="headerlink" href="#id137" title="Permalink to this headline">¶</a></h4>
+<p>Polynomial function over <img class="math" src="images/math/a304670c9f29763f9f68c5efbc6720d035f3c4b1.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/e5034f04169c52bf864a0a90480bb81a43542436.png" alt="x^8 + x^4 + x^3 + x + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD-trace.pdf">Trace representation</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/SRD.png"><img alt="images/SRD.png" class="align-center" src="images/SRD.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id147">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id147" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>27</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>59</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>81</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>87</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has no fixed points. It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="id148">
+<h3><a class="toc-backref" href="#id351"><img class="math" src="images/math/be4b8bb919798b92f2ed4c946099f561ca7dc775.png" alt="{S_{RD}}^{-1}"/></a><a class="headerlink" href="#id148" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id149">
+<h4>Representations<a class="headerlink" href="#id149" title="Permalink to this headline">¶</a></h4>
+<p>Polynomial function over <img class="math" src="images/math/a304670c9f29763f9f68c5efbc6720d035f3c4b1.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/e5034f04169c52bf864a0a90480bb81a43542436.png" alt="x^8 + x^4 + x^3 + x + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv-trace.pdf">Trace representation</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/SRDInv.png"><img alt="images/SRDInv.png" class="align-center" src="images/SRDInv.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id159">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id159" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>27</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>59</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>81</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>87</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has no fixed points. It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="id160">
+<h3><a class="toc-backref" href="#id352"><img class="math" src="images/math/57bfb4c6c7889ad4145104ab2e383fefa40e736d.png" alt="g"/></a><a class="headerlink" href="#id160" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id161">
+<h4>Representations<a class="headerlink" href="#id161" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/g.png"><img alt="images/g.png" class="align-center" src="images/g.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id170">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id170" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>127</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has 2 fixed points: (0,0,0,0,0,0,0,0), (0,0,0,0,0,0,0,1)</p>
+<p>It has no negated fixed points: (0,1,1,1,1,1,1,0), (1,0,0,0,0,0,0,1)</p>
+</div>
+</div>
+<div class="section" id="id171">
+<h3><a class="toc-backref" href="#id353"><img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/></a><a class="headerlink" href="#id171" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id172">
+<h4>Representations<a class="headerlink" href="#id172" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/f.png"><img alt="images/f.png" class="align-center" src="images/f.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id181">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id181" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>4</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+<p>There are 65025 linear structures</p>
+<p>It has no fixed points. It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="id182">
+<h3><a class="toc-backref" href="#id354"><img class="math" src="images/math/6fa0331f457f3b76dd2e7ff550f578bfecb365e1.png" alt="f^{-1}"/></a><a class="headerlink" href="#id182" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id183">
+<h4>Representations<a class="headerlink" href="#id183" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/finv.png"><img alt="images/finv.png" class="align-center" src="images/finv.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id192">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id192" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>4</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+<p>There are 65025 linear structures</p>
+<p>It has no fixed points. It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="xtime">
+<h3><a class="toc-backref" href="#id355">xtime</a><a class="headerlink" href="#xtime" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id193">
+<h4>Representations<a class="headerlink" href="#id193" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/xtime.png"><img alt="images/xtime.png" class="align-center" src="images/xtime.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id202">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id202" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>51</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>79</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>85</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>92</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>100</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has 1 fixed point: (0,0,0,0,0,0,0,0)</p>
+<p>It has 1 negated fixed point: (0,1,0,1,0,1,0,1)</p>
+</div>
+</div>
+</div>
+<div class="section" id="safer">
+<h2><a class="toc-backref" href="#id356">Safer+</a><a class="headerlink" href="#safer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id203">
+<h3><a class="toc-backref" href="#id357">Description</a><a class="headerlink" href="#id203" title="Permalink to this headline">¶</a></h3>
+<p><em>Safer+</em> (Massey et al., 1998) was submitted as a candidate for the Advanced Encryption Standard and has a block size of 128 bits. The cipher was not selected as a finalist. Bluetooth uses custom algorithms based on SAFER+ for key derivation (called E21 and E22) and authentication as message authentication codes (called E1). Encryption in Bluetooth does not use SAFER+. It has one 8x8 S-box called expf and other 9x8 S-box called logf.</p>
+</div>
+<div class="section" id="id204">
+<h3><a class="toc-backref" href="#id358">Summary</a><a class="headerlink" href="#id204" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="8%" />
+<col width="7%" />
+<col width="11%" />
+<col width="19%" />
+<col width="17%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">S-box</th>
+<th class="head">size</th>
+<th class="head"><em>NL</em></th>
+<th class="head"><em>LD</em></th>
+<th class="head"><em>DEG</em></th>
+<th class="head"><em>AI</em></th>
+<th class="head"><em>MAXAC</em></th>
+<th class="head"><img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><em>LP</em></th>
+<th class="head"><em>DP</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>expf</td>
+<td>8x8</td>
+<td>82</td>
+<td>0</td>
+<td>6</td>
+<td>3</td>
+<td>256</td>
+<td>711424</td>
+<td>0.1291503906</td>
+<td>0.5</td>
+</tr>
+<tr class="row-odd"><td>logf</td>
+<td>9x8</td>
+<td>164</td>
+<td>0</td>
+<td>6</td>
+<td>3</td>
+<td>512</td>
+<td>4520960</td>
+<td>0.1291503906</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="expf">
+<h3><a class="toc-backref" href="#id359">expf</a><a class="headerlink" href="#expf" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id205">
+<h4>Representations<a class="headerlink" href="#id205" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/expf.png"><img alt="images/expf.png" class="align-center" src="images/expf.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id214">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id214" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>41</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>42</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>168</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are 3 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([1 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 1])</span>
+<span class="go">([1 0 0 0 0 0 0 0],[0 0 0 0 0 0 1 0])</span>
+<span class="go">([1 0 0 0 0 0 0 0],[0 0 0 0 0 0 1 1])</span>
+</pre></div>
+</div>
+<p>It has 3 fixed points: (0,0,0,1,1,0,1,1), (0,1,0,1,0,1,1,1), (0,1,0,1,1,1,0,0)</p>
+<p>It has 4 negated fixed points: (0,0,0,1,0,1,0,0), (0,0,1,0,1,1,0,0), (0,1,0,1,1,1,1,1), (1,0,1,0,1,1,1,1)</p>
+</div>
+</div>
+<div class="section" id="logf">
+<h3><a class="toc-backref" href="#id360">logf</a><a class="headerlink" href="#logf" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id215">
+<h4>Representations<a class="headerlink" href="#id215" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (first 256x256 values except first row and column):</p>
+<a class="reference internal image-reference" href="images/logf.png"><img alt="images/logf.png" class="align-center" src="images/logf.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id224">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id224" title="Permalink to this headline">¶</a></h4>
+<p>There is 255 linear structures:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.ls">Linear structures</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="serpent">
+<h2><a class="toc-backref" href="#id361">Serpent</a><a class="headerlink" href="#serpent" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id226">
+<h3><a class="toc-backref" href="#id362">Description</a><a class="headerlink" href="#id226" title="Permalink to this headline">¶</a></h3>
+<p><em>Serpent</em> is a symmetric key block cipher that was a finalist in the Advanced Encryption Standard (AES) contest, where it was ranked second to Rijndael. Serpent was designed by Ross Anderson, Eli Biham, and Lars Knudsen. It has eight 4x4 S-boxes: S0, S1, S2, S3, S4, S5, S6, S7.</p>
+</div>
+<div class="section" id="id227">
+<h3><a class="toc-backref" href="#id363">Summary</a><a class="headerlink" href="#id227" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="7%" />
+<col width="9%" />
+<col width="7%" />
+<col width="9%" />
+<col width="7%" />
+<col width="11%" />
+<col width="20%" />
+<col width="15%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">S-box</th>
+<th class="head"><em>NL</em></th>
+<th class="head"><em>NL2</em></th>
+<th class="head"><em>LD</em></th>
+<th class="head"><em>DEG</em></th>
+<th class="head"><em>AI</em></th>
+<th class="head"><em>MAXAC</em></th>
+<th class="head"><img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><em>LP</em></th>
+<th class="head"><em>DP</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>1024</td>
+<td>0.25</td>
+<td>0.25</td>
+</tr>
+<tr class="row-odd"><td>S1</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>1024</td>
+<td>0.25</td>
+<td>0.25</td>
+</tr>
+<tr class="row-even"><td>S2</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>1024</td>
+<td>0.25</td>
+<td>0.25</td>
+</tr>
+<tr class="row-odd"><td>S3</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>1024</td>
+<td>0.25</td>
+<td>0.25</td>
+</tr>
+<tr class="row-even"><td>S4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>1024</td>
+<td>0.25</td>
+<td>0.25</td>
+</tr>
+<tr class="row-odd"><td>S5</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>1024</td>
+<td>0.25</td>
+<td>0.25</td>
+</tr>
+<tr class="row-even"><td>S6</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>1024</td>
+<td>0.25</td>
+<td>0.25</td>
+</tr>
+<tr class="row-odd"><td>S7</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>1024</td>
+<td>0.25</td>
+<td>0.25</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id228">
+<h3><a class="toc-backref" href="#id364">S0</a><a class="headerlink" href="#id228" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id229">
+<h4>Representations<a class="headerlink" href="#id229" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Serpent0.png"><img alt="images/Serpent0.png" class="align-center" src="images/Serpent0.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id238">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id238" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are 9 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 0],[1 0 0 0])</span>
+<span class="go">([0 1 0 0],[0 0 1 1])</span>
+<span class="go">([0 1 0 0],[1 0 0 0])</span>
+<span class="go">([0 1 0 0],[1 0 1 1])</span>
+<span class="go">([0 1 1 0],[1 0 0 0])</span>
+<span class="go">([1 0 0 1],[0 0 1 1])</span>
+<span class="go">([1 0 1 1],[1 0 1 1])</span>
+<span class="go">([1 1 0 1],[0 0 1 1])</span>
+<span class="go">([1 1 1 1],[1 0 1 1])</span>
+</pre></div>
+</div>
+<p>It has no fixed points. It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="id239">
+<h3><a class="toc-backref" href="#id365">S1</a><a class="headerlink" href="#id239" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id240">
+<h4>Representations<a class="headerlink" href="#id240" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Serpent1.png"><img alt="images/Serpent1.png" class="align-center" src="images/Serpent1.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id249">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id249" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are 9 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 1],[1 1 1 0])</span>
+<span class="go">([0 1 0 0],[0 1 0 0])</span>
+<span class="go">([0 1 0 0],[1 0 1 0])</span>
+<span class="go">([0 1 0 0],[1 1 1 0])</span>
+<span class="go">([0 1 1 1],[1 1 1 0])</span>
+<span class="go">([1 0 0 0],[0 1 0 0])</span>
+<span class="go">([1 0 1 1],[1 0 1 0])</span>
+<span class="go">([1 1 0 0],[0 1 0 0])</span>
+<span class="go">([1 1 1 1],[1 0 1 0])</span>
+</pre></div>
+</div>
+<p>It has 1 fixed point: (0,0,1,0)</p>
+<p>It has 1 negated fixed point: (0,0,0,0)</p>
+</div>
+</div>
+<div class="section" id="id250">
+<h3><a class="toc-backref" href="#id366">S2</a><a class="headerlink" href="#id250" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id251">
+<h4>Representations<a class="headerlink" href="#id251" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Serpent2.png"><img alt="images/Serpent2.png" class="align-center" src="images/Serpent2.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id260">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id260" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>3</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>13</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are 9 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 0],[0 0 0 1])</span>
+<span class="go">([0 0 1 0],[1 1 1 0])</span>
+<span class="go">([0 0 1 0],[1 1 1 1])</span>
+<span class="go">([0 1 0 0],[1 1 1 0])</span>
+<span class="go">([0 1 1 0],[1 1 1 0])</span>
+<span class="go">([1 0 0 0],[0 0 0 1])</span>
+<span class="go">([1 0 1 0],[0 0 0 1])</span>
+<span class="go">([1 1 0 0],[1 1 1 1])</span>
+<span class="go">([1 1 1 0],[1 1 1 1])</span>
+</pre></div>
+</div>
+<p>It has no fixed points</p>
+<p>It has 1 negated fixed point: (1,0,1,1)</p>
+</div>
+</div>
+<div class="section" id="id261">
+<h3><a class="toc-backref" href="#id367">S3</a><a class="headerlink" href="#id261" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id262">
+<h4>Representations<a class="headerlink" href="#id262" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Serpent3.png"><img alt="images/Serpent3.png" class="align-center" src="images/Serpent3.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id271">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id271" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>There are 3 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 1],[1 1 1 0])</span>
+<span class="go">([0 1 0 0],[1 1 1 0])</span>
+<span class="go">([0 1 1 1],[1 1 1 0])</span>
+</pre></div>
+</div>
+<p>It has 1 fixed point: (0,0,0,0)</p>
+<p>It has 1 negated fixed point: (1,0,1,1)</p>
+</div>
+</div>
+<div class="section" id="id272">
+<h3><a class="toc-backref" href="#id368">S4</a><a class="headerlink" href="#id272" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id273">
+<h4>Representations<a class="headerlink" href="#id273" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Serpent4.png"><img alt="images/Serpent4.png" class="align-center" src="images/Serpent4.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id282">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id282" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>13</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are 3 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 1 0 0],[0 0 0 1])</span>
+<span class="go">([1 0 1 1],[0 0 0 1])</span>
+<span class="go">([1 1 1 1],[0 0 0 1])</span>
+</pre></div>
+</div>
+<p>It has 1 fixed point: (0,0,1,1)</p>
+<p>It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="s5">
+<h3><a class="toc-backref" href="#id369">S5</a><a class="headerlink" href="#s5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id283">
+<h4>Representations<a class="headerlink" href="#id283" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Serpent5.png"><img alt="images/Serpent5.png" class="align-center" src="images/Serpent5.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id292">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id292" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>14</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are 3 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 1 0 0],[0 0 0 1])</span>
+<span class="go">([1 0 1 1],[0 0 0 1])</span>
+<span class="go">([1 1 1 1],[0 0 0 1])</span>
+</pre></div>
+</div>
+<p>It has 1 fixed point: (0,0,1,0)</p>
+<p>It has 3 negated fixed points: (0,0,0,0), (0,1,0,1), (0,1,1,0)</p>
+</div>
+</div>
+<div class="section" id="s6">
+<h3><a class="toc-backref" href="#id370">S6</a><a class="headerlink" href="#s6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id293">
+<h4>Representations<a class="headerlink" href="#id293" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Serpent6.png"><img alt="images/Serpent6.png" class="align-center" src="images/Serpent6.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id302">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id302" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are 9 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 0],[0 0 1 0])</span>
+<span class="go">([0 1 0 0],[0 0 1 0])</span>
+<span class="go">([0 1 1 0],[0 0 1 0])</span>
+<span class="go">([0 1 1 0],[0 1 0 1])</span>
+<span class="go">([0 1 1 0],[0 1 1 1])</span>
+<span class="go">([1 0 0 1],[0 1 0 1])</span>
+<span class="go">([1 0 1 1],[0 1 1 1])</span>
+<span class="go">([1 1 0 1],[0 1 1 1])</span>
+<span class="go">([1 1 1 1],[0 1 0 1])</span>
+</pre></div>
+</div>
+<p>It has 1 fixed point: (0,1,1,0)</p>
+<p>It has 1 negated fixed point: (1,1,1,1)</p>
+</div>
+</div>
+<div class="section" id="s7">
+<h3><a class="toc-backref" href="#id371">S7</a><a class="headerlink" href="#s7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id303">
+<h4>Representations<a class="headerlink" href="#id303" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="images/Serpent7.png"><img alt="images/Serpent7.png" class="align-center" src="images/Serpent7.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id312">
+<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id312" title="Permalink to this headline">¶</a></h4>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>3</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are 3 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 0 1],[1 1 1 1])</span>
+<span class="go">([1 0 1 0],[1 1 1 1])</span>
+<span class="go">([1 0 1 1],[1 1 1 1])</span>
+</pre></div>
+</div>
+<p>It has no fixed points</p>
+<p>It has 1 negated fixed point: (1,0,0,0)</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cryptec.html" class="btn btn-neutral float-right" title="Analysis of CRYPTEC project cryptographic algorithms">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="operations.html" class="btn btn-neutral" title="Operations and constructions over Vector Boolean Functions"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60418502-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+   
+
+</body>
+</html>

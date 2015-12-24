@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Linear Profile &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#balanced-boolean-functions-generation">Balanced Boolean functions generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#cast-analysis-programs">CAST analysis programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#truth-table-format-conversion">Truth table format conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#criteria-calculation">Criteria calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#affine-equivalence">Affine equivalence</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div></div>
+          <div role="main" class="document">
+            
+  <div class="section" id="linear-profile">
+<h1>Linear Profile<a class="headerlink" href="#linear-profile" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="overview-of-linear-cryptanalysis">
+<h3>Overview of Linear Cryptanalysis<a class="headerlink" href="#overview-of-linear-cryptanalysis" title="Permalink to this headline">¶</a></h3>
+<p>A complete enumeration of all linear approximations of the S-box is given in the <em>Linear Profile</em> (In the literature, an equivalent matrix called Linear Approximation Table is used as well), which is a matrix whose rows are indexed by <img class="math" src="../images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/> and whose columns are indexed by <img class="math" src="../images/math/578c9880e2c9877d8850a212cb95b563ce99d607.png" alt="\vec{v} \in \gf{V_m}"/> in lexicographic order, denoted by <img class="math" src="../images/math/72454ee6f5c816510f97abbe59acba4ddcef7cc9.png" alt="\matr{LP}(F) \in \matr{M}_{2^n \times 2^m}(\bbbr)"/>. It holds that <img class="math" src="../images/math/492a43362f3325feb166fd3acf883f03e3ad1cf3.png" alt="\matr{LP}(F)(\vec{u},\vec{v}) =|\matr{WS}(F)(\vec{u},\vec{v})|^2"/>. The lower bound of the Linear Profile values is <em>0</em> and the upper bound is <img class="math" src="../images/math/1af88eaa5f7d2e67634e9ea17488b34d89ee89dd.png" alt="2^{2n}"/>.</p>
+<p>If we divide each element in the Linear Profile by the value on <img class="math" src="../images/math/450e4df12d4ef35d661038b796f8809935eb6572.png" alt="\matr{LP}(F)(\vec{0},\vec{0})"/>, these values represent the number of matches between the linear equation represented in hexadecimal as &#8220;Input Sum&#8221; and the sum of the output bits represented in hexadecimal as &#8220;Output Sum&#8221;. Hence, subtracting to these values <img class="math" src="../images/math/01df72481ee6b50bc2f19ba0580ae112eb261ee5.png" alt="\frac{1}{2}"/> give the probability bias for the particular linear combination of input and output bits. The hexadecimal value representing a sum, when viewed as a binary value indicates the variables involved in the sum. For a linear combination of input variables represented as <img class="math" src="../images/math/ec1f983ceae40c72fbe24a42ddc3472bc80a56d7.png" alt="u_1 \cdot x_1+ \cdots +u_n \cdot x_n"/> where <img class="math" src="../images/math/d7ae4f145b20ba60ae61493d31ac2282a0c525dc.png" alt="u_i \in \gf{GF(2)}"/>, the hexadecimal value represents the binary value <img class="math" src="../images/math/f17707d7d18acbc093ca0ed3178f5271b6ce4212.png" alt="u_1 \ldots u_n"/>, where <img class="math" src="../images/math/26285b7175c0503d39437e45b81f330a6070b82f.png" alt="u_1"/> is the most significant bit. Similarly, for a linear combination of output bits <img class="math" src="../images/math/f9c69764541537774baa122265da83a337b786ab.png" alt="v_1 \cdot y_1+ \cdots +v_m \cdot y_m"/> where <img class="math" src="../images/math/075d9557bf9a8dcc062c998b1e3150200dce9dc8.png" alt="v_i \in \gf{GF(2)}"/>, the hexadecimal value represents the binary vector <img class="math" src="../images/math/6c8bf69aabd9f9dce2603bf6acedd73ff347f27b.png" alt="v_1 \ldots v_m"/>.</p>
+<p>In Linear Profiles, we are looking for entries with large value. If all of the entries are small, then the S-box does not have a very linear structure, and it may make Linear Cryptanalysis on the cipher difficult. The <em>Linear potential</em> of <em>F</em>, defined as <img class="math" src="../images/math/feb46c889cb204d1549df5bf792098c74dff901d.png" alt="\crit{lp}(F) = \frac{1}{2^{2n}} \cdot \stackrel{*}{\max} \left( {\matr{WS}(F)(\vec{u},\vec{v})}^2 \right)"/> is a measure of linearity in Linear Cryptanalysis, and satisfies <img class="math" src="../images/math/da2c0abb93edee6123f99cba88d1766a3ddc4757.png" alt="2^{-n} \leq \crit{lp}(F) \leq 1"/> so that the lower bound holds if and only if <em>F</em> has maximum nonlinearity (<em>F</em> is bent) and the upper bound is reached when <em>F</em> is linear or affine. This criterion can take values from <img class="math" src="../images/math/01c9030595f0e201ca3bbdc0433b4b92cb92d767.png" alt="\frac{1}{2^n}"/> to 1. The larger <img class="math" src="../images/math/04f62a2429149460254866186c1e12613c61c8a1.png" alt="\crit{lp}(F)"/> is, the &#8220;closer&#8221; to a Linear Vector Boolean function is <em>F</em>.</p>
+</div>
+</div>
+<div class="section" id="library">
+<h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
+<p>Note that the Linear Profile does not uniquely determine a Vector Boolean function. Thus, a VBF class cannot be initialized by its Linear Profile. To obtain its representation as Linear Profile, the following method must be used:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">LAT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">LP</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the VBF library, several methods have been defined in order to analyse the feasibility of Linear Cryptanalysis: Linear potential and Linear relations associated with a specific value of the Linear Profile. The method used to obtain the linear potential is the following:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">lp</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If we want to obtain the linear expressions associated with the value of the Linear Profile &#8220;w&#8221;, we will use this method:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">linear</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If we want to obtain the probability bias <img class="math" src="../images/math/0e6c3f5d7ab4dd4a72edfbce9108c2f9045fc71a.png" alt="|p_L-\frac{1}{2}|"/> that a linear expression holds with the value of the Linear Profile &#8220;w&#8221;, we will use this method:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">ProbLin</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>The following program finds out the Linear Profile of a Vector Boolean function together with the linear expressions that have the highest value, except from the value in <img class="math" src="../images/math/450e4df12d4ef35d661038b796f8809935eb6572.png" alt="\matr{LP}(F)(\vec{0},\vec{0})"/>, their probability, this highest value and the linear potential.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+  <span class="n">using</span> <span class="n">namespace</span> <span class="n">VBFNS</span><span class="p">;</span>
+
+  <span class="n">VBF</span>     <span class="n">F</span><span class="p">;</span>
+  <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">T</span><span class="p">;</span>
+  <span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span>   <span class="n">w</span><span class="p">;</span>
+  <span class="n">NTL</span><span class="o">::</span><span class="n">RR</span>   <span class="n">bias</span><span class="p">;</span>
+
+  <span class="n">ifstream</span> <span class="n">input</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Error opening &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">input</span> <span class="o">&gt;&gt;</span> <span class="n">T</span><span class="p">;</span>
+  <span class="n">F</span><span class="p">.</span><span class="n">puttt</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+  <span class="n">input</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The Linear Profile is:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">LAT</span><span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+  <span class="n">w</span> <span class="o">=</span> <span class="n">maxLAT</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The highest value of the Linear Profile is= &quot;</span>
+  <span class="o">&lt;&lt;</span> <span class="n">w</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The linear expressions that have the highest value are:&quot;</span>
+  <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">linear</span><span class="p">(</span><span class="n">cout</span><span class="p">,</span><span class="n">F</span><span class="p">,</span><span class="n">w</span><span class="p">);</span>
+
+  <span class="n">ProbLin</span><span class="p">(</span><span class="n">bias</span><span class="p">,</span><span class="n">F</span><span class="p">,</span><span class="n">w</span><span class="p">);</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;These expressions hold with probability bias= &quot;</span>
+  <span class="o">&lt;&lt;</span> <span class="n">bias</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The linear potential is= &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">lp</span><span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Linear Profile is:</span>
+<span class="go">[[256 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]</span>
+<span class="go">[0 0 16 16 0 0 16 144 16 16 0 0 16 16 0 0]</span>
+<span class="go">[0 0 16 16 0 0 16 16 0 0 16 16 0 0 144 16]</span>
+<span class="go">[0 0 0 0 0 0 0 0 16 144 16 16 16 16 16 16]</span>
+<span class="go">[0 16 0 16 16 64 16 0 0 16 0 16 16 64 16 0]</span>
+<span class="go">[0 16 16 0 16 0 64 16 16 0 64 16 0 16 16 0]</span>
+<span class="go">[0 16 16 64 16 0 0 16 0 16 16 64 16 0 0 16]</span>
+<span class="go">[0 16 0 16 16 64 16 0 16 0 16 0 64 16 0 16]</span>
+<span class="go">[0 0 0 0 0 0 0 0 16 16 16 16 16 16 16 144]</span>
+<span class="go">[0 0 16 16 0 0 16 16 64 0 16 16 0 64 16 16]</span>
+<span class="go">[0 64 16 16 64 0 16 16 16 16 0 0 16 16 0 0]</span>
+<span class="go">[0 64 0 64 64 0 64 0 0 0 0 0 0 0 0 0]</span>
+<span class="go">[0 16 64 16 16 0 16 0 16 0 16 64 0 16 0 16]</span>
+<span class="go">[0 16 16 0 16 64 0 16 64 16 16 0 16 0 0 16]</span>
+<span class="go">[0 16 16 0 16 64 0 16 16 0 0 16 64 16 16 0]</span>
+<span class="go">[0 16 64 16 16 0 16 0 0 16 64 16 16 0 16 0]</span>
+<span class="go">]</span>
+
+<span class="go">The highest value of the Linear Profile is= 144</span>
+
+<span class="go">The linear expressions that have the highest value are:</span>
+<span class="go">x4=y2+y3+y4</span>
+<span class="go">x3=y1+y2+y3</span>
+<span class="go">x3+x4=y1+y4</span>
+<span class="go">x1=y1+y2+y3+y4</span>
+
+<span class="go">These expressions hold with probability bias= 0.0625</span>
+
+<span class="go">The linear potential is= 0.5625</span>
+</pre></div>
+</div>
+<p>The figure represents the Linear Profile of <em>NibbleSub</em> and emphasizes in red the elements which achieve the highest value.</p>
+<a class="reference internal image-reference" href="../images/LP.png"><img alt="../images/LP.png" class="align-center" src="../images/LP.png" style="width: 750px;" /></a>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60418502-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+   
+
+</body>
+</html>

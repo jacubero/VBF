@@ -1,0 +1,588 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bibliography &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
+        <link rel="next" title="Appendix" href="appendix.html"/>
+        <link rel="prev" title="FAQ: Frequently Asked Questions" href="faq.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#dedications">Dedications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#book-writing-methodology">Book Writing Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#book-objectives">Book Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#organization-of-this-book">Organization of this Book</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#software-implementation">Software implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#system-requirements">System requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#preliminaries">Preliminaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#design-philosophy">Design Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using.html#an-example-program">An Example Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using.html#compiling">Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#truth-table">Truth Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#trace-representation">Trace representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#anf-table">ANF table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#characteristic-function">Characteristic Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#walsh-spectrum">Walsh Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#linear-profile">Linear Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#differential-profile">Differential Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#permutation-matrix">Permutation matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#des-representations">DES representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#auxiliary-functions">Auxiliary functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-degree">Algebraic degree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#nonlinearity">Nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#balancedness">Balancedness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#correlation-immunity">Correlation Immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-immunity">Algebraic immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#linearity-distance">Linearity distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#propagation-criterion">Propagation criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#equality-testing">Equality testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#composition">Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#inverse">Inverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#sum">Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#direct-sum">Direct sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation">Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#bricklayer">Bricklayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#cast-256">CAST-256</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#crypton">Crypton</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#deal">DEAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#loki97">LOKI97</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#magenta">Magenta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#mars">Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#rijndael">Rijndael</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#safer">Safer+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#serpent">Serpent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#clefia">CLEFIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#hierocrypt3">Hierocrypt3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#sc2000">SC2000</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nessie.html#anubis">Anubis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nessie.html#camellia">Camellia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nessie.html#grand-cru">Grand Cru</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="other.html#des">DES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#kasumi">KASUMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#macguffin">MacGuffin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#mini-aes">Mini-AES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#square">Square</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design.html#bent-functions">Bent functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#general">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#using-vbf">Using VBF</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#balanced-boolean-functions-generation">Balanced Boolean functions generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#cast-analysis-programs">CAST analysis programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#truth-table-format-conversion">Truth table format conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#criteria-calculation">Criteria calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#affine-equivalence">Affine equivalence</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div></div>
+          <div role="main" class="document">
+            
+  <div class="section" id="bibliography">
+<h1>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h1>
+<table class="docutils citation" frame="void" id="kasumi-05" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[KASUMI:05]</td><td>3rd Generation Partnership Project. Specification of the 3GPP Confidentiality and Integrity Algorithms - Document 2: KASUMI specification (Release 6) no. 3GPP TS 35.202 V6.1.0 (2005-09). Technical report, 3GPP, 2005.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="bihams-90" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[BihamS:90]</td><td>Biham, E. and Shamir, A. (1990). Differential cryptanalysis of DES-like cryptosystems. In CRYPTO, pages 2-21.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="carlet-04" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Carlet:04]</td><td>Carlet, C. (2004). On the secondary constructions of resilient and bent functions. In Progress in Computer Science and Applied Logic, pages 3-28.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="carlet2008higher" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[carlet2008higher]</td><td>Carlet, C. (2008b). On the higher order nonlinearities of Boolean functions and S-boxes, and their generalizations. In Sequences and Their Applications SETA 2008, pages 345-367. Springer.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="carletbf-08" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[CarletBF:08]</td><td>Carlet, C. (2008a). Boolean functions for cryptography and error correcting codes.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cast-256" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[CAST:256]</td><td>Adams, C. M. and Tavares, S. E. (1993). Designing s-boxes for ciphers resistant to differential cryptanalysis (extended abstract). In Proceedings of the 3rd Symposium on State and Progress of Research in Cryptography, pages 181-190.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="chabaudv-94" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[ChabaudV:94]</td><td><ol class="first last upperalpha simple" start="6">
+<li>Chabaud and S. Vaudenay. Links between differential and linear cryptanalysis. In Advances in Cryptology- EUROCRYPT 94, pages 356-365, 1995.</li>
+</ol>
+</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="chaum-e85" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Chaum:E85]</td><td>Chaum, D. and Evertse, J.-H. (1985). Crytanalysis of des with a reduced number of rounds: Sequences of linear factors in block ciphers. In CRYPTO, pages 192-211.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="chen-02" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Chen:02]</td><td>Chen, L., Fu, F.-W., and Wei, V. K. (2002). On the constructions and nonlinearity of binary vector correlation-immune functions. In Information Theory, 2002. Proceedings. 2002 IEEE International Symposium on Information Theory, page 39.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="courtois-03" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Courtois:03]</td><td><ol class="first last upperalpha simple" start="14">
+<li>Courtois. Fast algebraic attacks on stream ciphers with linear feedback. In Advances in cryptology CRYPTO 2003, Lecture Notes in Computer Science 2729, pages 177-194, 2003.</li>
+</ol>
+</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="courtois2002cryptanalysis" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[courtois2002cryptanalysis]</td><td>Courtois, N. and Meier, W. (2002). Algebraic attacks on stream ciphers with linear feedback. In Advances in cryptology EUROCRYPT 2003, Lecture Notes in Computer Science 2656, pages 346-359.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="courtoism-02" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[CourtoisM:02]</td><td><ol class="first last upperalpha simple" start="14">
+<li>Courtois and W. Meier. Algebraic attacks on stream ciphers with linear feedback. In Advances in cryptology EUROCRYPT 03, Lecture Notes in Computer Science 2656, pages 346-359, 2002.</li>
+</ol>
+</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="daemenr-02" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[DaemenR:02]</td><td>Joan Daemen and Vincent Rijmen. The Design of Rijndael. Springer-Verlag New York, Inc., Secaucus, NJ, USA, 2002.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="des-77" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[DES:77]</td><td>DES. Data Encryption Standard. In FIPS PUB 46, Federal Information Processing Standards Publication, pages 46-2, 1977.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="dingxs-91" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[DingXS:91]</td><td><ol class="first last upperalpha simple" start="3">
+<li>Ding, G. X. and Shan, W. (1991). The stability theory of stream ciphers. Berlin. Springer-Verlag. Lecture Notes in Computer Science Volume 561.</li>
+</ol>
+</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="evertse-87" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Evertse:87]</td><td>Evertse, J.-H. (1987). Linear structures in blockciphers. In EUROCRYPT, pages 249-266.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="evertse-88" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Evertse:88]</td><td>Evertse, J. H. (1988). Linear structures in block ciphers. In Advances in Cryptology - EUROCRYPT 87, no. 304 in Lecture Notes in Computer Science, pages 249-266.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="faugerea-03" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[FaugereA:03]</td><td>J.-C. Faugere and G. Ars. An algebraic cryptanalysis of nonlinear filter generators using Grobner bases. Technical report, INRIA 4739, 2003.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="goldberg-1989" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Goldberg:1989]</td><td>Goldberg, D. E. (1989). Genetic Algorithms in Search, Optimization and Machine Learning. Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1st edition.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="guptas-05" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[GuptaS:05]</td><td>Gupta, K. and Sarkar, P. (2005). Improved construction of nonlinear resilient S-boxes. Information Theory, IEEE Transactions on, 51(1):339-348.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="heys-tutorial" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[heys-tutorial]</td><td>Heys, H. (1999). A tutorial on linear and differential cryptanalysis. Technical report, Electrical and Computer Engineering, Faculty of Engineering and Applied Science, Memorial University of Newfoundland, St. Johns, NF, Canada A1B 3X5.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="hou-97" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Hou:97]</td><td>Hou, X. (1997). On the norm and covering radius of the first order reed-muller codes. In IEEE Transactions on Information Theory, Volume IT-43(3), pages 1025-1027.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="jakobsenk-97" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[JakobsenK:97]</td><td>Jakobsen, T. and Knudsen, L. R. (1997). The interpolation attack on block ciphers. In SAC 97, pages 28-40.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="lai-94" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Lai:94]</td><td>Lai, X. (1994). Higher order derivatives and differential cryptanalysis. In Proceedings of the Symposium on Communication, Coding and Cryptography.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="lai-95" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Lai:95]</td><td>Lai, X. (1995). Additive and linear structures of cryptographic functions. In Preneel, B., editor, Fast Software Encryption, volume 1008 of Lecture Notes in Computer Science, pages 75-85. Springer Berlin Heidelberg.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="lincafeal" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[linCaFEAL]</td><td>Matsui, M. and Yamagishi, A. (1993). A New Method for Known Plaintext Attack of FEAL Cipher. In Rueppel, R. A., editor, Advances in Cryptology EUROCRYPT92, volume 658 of Lecture Notes in Computer Science, chapter 7, pages 81-91. Springer Berlin Heidelberg, Berlin, Heidelberg.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="matsui-93" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Matsui:93]</td><td>Matsui, M. (1993). Linear cryptanalysis method for DES cipher. In EUROCRYPT, pages 386-397.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="matsui-94" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Matsui:94]</td><td>Matsui, M. (1994). The first experimental cryptanalysis of the Data Encryption Standard. In CRYPTO, pages 1-11.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="meiers-89" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[MeierS:89]</td><td>Meier, W. and Staffelbach, O. (1989). Nonlinearity criteria for cryptographic functions. In EUROCRYPT, pages 549-562.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="nyberg-91" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Nyberg:91]</td><td>Nyberg, K. (1991). Perfect nonlinear s-boxes. In EUROCRYPT, pages 378-386.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="nyberg-92" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Nyberg:92]</td><td>Kaisa Nyberg. On the construction of highly nonlinear permutations. In Rainer A. Rueppel, editor, Advances in Cryptology EUROCRYPT 92, volume 658 of Lecture Notes in Computer Science, pages 92-98. Springer Berlin Heidelberg, 1993.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="nyberg-93" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Nyberg:93]</td><td>Nyberg, K. (1993). Differentially uniform mappings for cryptography. In EUROCRYPT, pages 55-64.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="fse-nyberg-94" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[fse-Nyberg:94]</td><td>Kaisa Nyberg. S-boxes and round functions with controllable linearity and differential uniformity. In Bart Preneel, editor, Fast Software Encryption, volume 1008 of Lecture Notes in Computer Science, pages 111-130. Springer Berlin / Heidelberg, 1995.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="phan02miniadvanced" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Phan02miniadvanced]</td><td>PHAN, R. C.-W. 2002. Mini advanced encryption standard (mini-AES): A testbed for cryptanalysis. Students, Cryptologia, 283-306.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="preneelllgv90" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[PreneelLLGV90]</td><td>Preneel, B., Leekwijck, W. V., Linden, L. V., Govaerts, R., and Vandewalle, J. (1990). Propagation characteristics of boolean functions. In EUROCRYPT, pages 161-173.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="preneel-93" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Preneel:93]</td><td>Preneel, B. (1993). Analysis and design of cryptographic hash functions. Ph.D. dissertation, Katholieke Universiteit Leuven.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="pieprzykf-88" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[PieprzykF:88]</td><td>Pieprzyk, J. and Finkelstein, G. (1988). Towards effective nonlinear cryptosystem design. Computers and Digital Techniques, IEEE Proceedings, 135(6):325-335.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="pommerening-05" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Pommerening:05]</td><td>Pommerening, K. (2005a). Linearitatsmase fur boolesche abbildungen. Technical report, Fachbereich Mathematik der Johannes-Gutenberg-Universitaet.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="rothaus-76" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Rothaus:76]</td><td><ol class="first last upperalpha simple" start="15">
+<li><ol class="first upperalpha" start="19">
+<li>Rothaus. On bent functions. J. Comb. Theory, Ser. A, 20(3):300-305, 1976.</li>
+</ol>
+</li>
+</ol>
+</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="sarkarmaitra-00" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[SarkarMaitra:00]</td><td>Sarkar, P. and Maitra, S. (2000a). Construction of nonlinear boolean functions with important cryptographic properties. In EUROCRYPT, pages 488-511.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="siegenthaler-84" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Siegenthaler:84]</td><td>Siegenthaler, T. (1984). Correlation-immunity of nonlinear combining functions for cryptographic applications. IEEE Transactions on Information Theory, 30(5):776-.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="siegenthaler-85" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Siegenthaler:85]</td><td>Thomas Siegenthaler. Decrypting a class of stream ciphers using ciphertext only. IEEE Transactions on Computers, 34(1):81-85, 1985.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="tardyg-91" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[TardyG:91]</td><td>Tardy-Corfdir, A. and Gilbert, H. (1992). A known plaintext attack of feal-4 and feal-6. In Feigenbaum, J., editor, Advances in Cryptology CRYPTO91, volume 576 of Lecture Notes in Computer Science, pages 172-182. Springer Berlin Heidelberg.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="c85-webster-tavares" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[c85-Webster-Tavares]</td><td>Webster, A. F. and Tavares, S. E. (1986). On the design of S-boxes. In Williams, H. C., editor, Advances in Cryptology - Crypto85, pages 523-534, Berlin. Springer-Verlag. Lecture Notes in Computer Science Volume 218.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="xiaom-88" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[XiaoM:88]</td><td>Xiao, G.-Z. and Massey, J. L. (1988). A spectral characterization of correlation- immune combining functions. IEEE Transactions on Information Theory, 34(3):569-.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="zhang95gac" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[zhang95gac]</td><td>Xian-Mo Zhang and Yuliang Zheng. GAC: the criterion for global avalanche characteristics of cryptographic functions. Journal of Universal Computer Science, 1(5):320-337, 1995.</td></tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="appendix.html" class="btn btn-neutral float-right" title="Appendix">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="faq.html" class="btn btn-neutral" title="FAQ: Frequently Asked Questions"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60418502-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+   
+
+</body>
+</html>

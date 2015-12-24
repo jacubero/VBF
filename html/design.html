@@ -1,0 +1,1122 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Design of cryptographically robust Vector Boolean functions &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
+        <link rel="next" title="FAQ: Frequently Asked Questions" href="faq.html"/>
+        <link rel="prev" title="Analysis of other cryptographic algorithms" href="other.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#dedications">Dedications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#book-writing-methodology">Book Writing Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#book-objectives">Book Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#organization-of-this-book">Organization of this Book</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#software-implementation">Software implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#system-requirements">System requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#preliminaries">Preliminaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#design-philosophy">Design Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using.html#an-example-program">An Example Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using.html#compiling">Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#truth-table">Truth Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#trace-representation">Trace representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#anf-table">ANF table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#characteristic-function">Characteristic Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#walsh-spectrum">Walsh Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#linear-profile">Linear Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#differential-profile">Differential Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#permutation-matrix">Permutation matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#des-representations">DES representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#auxiliary-functions">Auxiliary functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-degree">Algebraic degree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#nonlinearity">Nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#balancedness">Balancedness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#correlation-immunity">Correlation Immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-immunity">Algebraic immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#linearity-distance">Linearity distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#propagation-criterion">Propagation criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="criteria.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#equality-testing">Equality testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#composition">Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#inverse">Inverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#sum">Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#direct-sum">Direct sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation">Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#bricklayer">Bricklayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#cast-256">CAST-256</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#crypton">Crypton</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#deal">DEAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#loki97">LOKI97</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#magenta">Magenta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#mars">Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#rijndael">Rijndael</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#safer">Safer+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aes.html#serpent">Serpent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#clefia">CLEFIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#hierocrypt3">Hierocrypt3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryptec.html#sc2000">SC2000</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nessie.html#anubis">Anubis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nessie.html#camellia">Camellia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nessie.html#grand-cru">Grand Cru</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="other.html#des">DES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#kasumi">KASUMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#macguffin">MacGuffin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#mini-aes">Mini-AES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other.html#square">Square</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Design of cryptographically robust Vector Boolean functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bent-functions">Bent functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#general">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#using-vbf">Using VBF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#balanced-boolean-functions-generation">Balanced Boolean functions generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#cast-analysis-programs">CAST analysis programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#truth-table-format-conversion">Truth table format conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#criteria-calculation">Criteria calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#affine-equivalence">Affine equivalence</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div></div>
+          <div role="main" class="document">
+            
+  <div class="section" id="design-of-cryptographically-robust-vector-boolean-functions">
+<h1>Design of cryptographically robust Vector Boolean functions<a class="headerlink" href="#design-of-cryptographically-robust-vector-boolean-functions" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#bent-functions" id="id4">Bent functions</a><ul>
+<li><a class="reference internal" href="#two-variables" id="id5">Two variables</a></li>
+<li><a class="reference internal" href="#four-variables" id="id6">Four variables</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#optimization-of-boolean-functions-via-genetic-algorithms" id="id7">Optimization of Boolean functions via Genetic Algorithms</a><ul>
+<li><a class="reference internal" href="#description" id="id8">Description</a></li>
+<li><a class="reference internal" href="#implementation" id="id9">Implementation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#variable-boolean-functions-with-nonlinearity-242" id="id10">9-variable Boolean functions with nonlinearity 242</a></li>
+<li><a class="reference internal" href="#variable-balanced-boolean-functions-with-nonlinearity-240" id="id11">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
+<li><a class="reference internal" href="#variable-balanced-boolean-functions-with-nonlinearity-992" id="id12">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
+</ul>
+</div>
+<div class="section" id="bent-functions">
+<h2><a class="toc-backref" href="#id4">Bent functions</a><a class="headerlink" href="#bent-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="two-variables">
+<h3><a class="toc-backref" href="#id5">Two variables</a><a class="headerlink" href="#two-variables" title="Permalink to this headline">¶</a></h3>
+<p>There are 8 bent functions:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Bent/2.pdf">Polynomial representation in ANF</a></p>
+</div>
+<div class="section" id="four-variables">
+<h3><a class="toc-backref" href="#id6">Four variables</a><a class="headerlink" href="#four-variables" title="Permalink to this headline">¶</a></h3>
+<p>There are 896 bent functions:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Bent/4.pdf">Polynomial representation in ANF</a></p>
+</div>
+</div>
+<div class="section" id="optimization-of-boolean-functions-via-genetic-algorithms">
+<h2><a class="toc-backref" href="#id7">Optimization of Boolean functions via Genetic Algorithms</a><a class="headerlink" href="#optimization-of-boolean-functions-via-genetic-algorithms" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description">
+<h3><a class="toc-backref" href="#id8">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="galib">
+<h4>Galib<a class="headerlink" href="#galib" title="Permalink to this headline">¶</a></h4>
+<p>The Genetic Algorithm Library called GAlib was (straightforwardly) linked with our VBF library to perform a search of Boolean functions with good combined cryptographic criteria. In using the GAlib library we will work primarily with two classes: a genome and a genetic algorithm. Each genome instance represents a single solution to our optimization problem. The genetic algorithm object defines how the evolution should take place. The genetic algorithm uses an objective function to determine how &#8216;fit&#8217; each genome is for survival. It uses the genome operators (built into the genome) and selection/replacement strategies (built into the genetic algorithm) to generate new individuals.</p>
+<p>The following three items must be defined in order to solve an optimization problem using a genetic algorithm: A representation, the genetic operators and the objective function.</p>
+<p>The <em>genetic algorithm</em> object determines which individuals should survive, which should reproduce, and which should die. It also records statistics and decides how long the evolution should continue. The algorithm updates the population of solutions over a number of iterations (or generations*). We have used the number of generations as a stopping measure. In each iteration a number of steps are involved:</p>
+<ol class="arabic simple">
+<li>Selection of parents from the current population of solutions.</li>
+<li>Crossover of parents to produce offspring.</li>
+<li>Mutation of the offspring.</li>
+<li>Selection from the mutated offspring and the current population of solutions to determine the population of solutions for the next iteration.</li>
+</ol>
+<p>Among the many different types of genetic algorithms offered by GAlib we have chosen the standard &#8216;simple genetic algorithm&#8217; described by Goldberg in his book <a class="reference internal" href="bibliography.html#goldberg-1989" id="id2">[Goldberg:1989]</a>. This algorithm uses non-overlapping populations and optional elitism. Each generation the algorithm creates an entirely new population of individuals.</p>
+</div>
+<div class="section" id="representation">
+<h4>Representation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h4>
+<p>When you use a genetic algorithm to solve an optimization problem, you must be able to represent a single solution to your problem in a single <em>data structure</em>. The genetic algorithm will create a population of solutions based on a sample data structure that you provide. The genetic algorithm then operates on the population to evolve the best solution. In GAlib, the sample data structure is called a GAGenome (some people refer to it as a chromosome). We have used a type of genome called GA2DBinaryStringGenome. This class is derived from the base GAGenome class and a data structure class which consists of a 2-dimensional array of Boolean with <img class="math" src="images/math/372fc4dd1270e8bd966735a2567c798ab49d57c8.png" alt="2^n"/> elements (the binary string is the Truth Table of the Boolean function).</p>
+</div>
+<div class="section" id="genetic-operators">
+<h4>Genetic operators<a class="headerlink" href="#genetic-operators" title="Permalink to this headline">¶</a></h4>
+<p>Each genome has three primary <em>operators</em>: initialization, mutation, and crossover. With these operators you can bias an initial population, define a mutation or crossover specific to our representation, or evolve parts of the genetic algorithm as our population evolves.</p>
+<p>The <em>initialization operator</em> determines how the genome is initialized. It is called when you initialize a population or the genetic algorithm. This operator does not actually create new genomes, rather it &#8216;stuffs&#8217; the genomes with the primordial genetic material from which all solutions will evolve. We have used a uniform random initialization operator.</p>
+<p>The <em>mutation operator</em> defines the procedure for mutating each genome. The mutation operation introduces randomness to the population of solutions. Mutation is generally applied to the children which result from the breeding process. We have used the typical mutator for a binary string genome which flips the bits in the string with a given probability (uniform random bit flip).</p>
+<p>The <em>crossover operator</em> defines the procedure for generating a child from two parent genomes in order to obtain offspring. The crossover operation involves selecting two &#8220;parents&#8221; from the current population of solutions, picking a random point in the binary string representing each of the parents and swapping the values beyond that point between the two parents. This process results in two &#8220;children&#8221; with some characteristics of each of the parents.</p>
+</div>
+<div class="section" id="weighted-objective-functions">
+<h4>Weighted Objective Functions<a class="headerlink" href="#weighted-objective-functions" title="Permalink to this headline">¶</a></h4>
+<p>In addition to the three primary operators, each genome must also contain an <em>Objective Function</em>. The Objective Function is used to evaluate the
+genome in order to know how good it is compared to the other genomes. Several objective functions were employed gradually involving more criteria in a weighted manner:</p>
+<p>1. Nonlinearity of the Boolean function: <img class="math" src="images/math/94e97e7803a66c2358b8f5cbde39a1d176057a77.png" alt="\crit{NL}(f)"/>. This cryptographic criterion is represented by a locally smooth fitness
+function:</p>
+<div class="math">
+<p><img src="images/math/069a5cd812431fb18f6bb1bac382c9406b7c1b81.png" alt="o_1 = \crit{NL}(f)"/></p>
+</div><ol class="arabic simple" start="2">
+<li>The sum of the nonlinearity and linearity distance of the Boolean function, normalized with respect to their (a priori known) maximum values:</li>
+</ol>
+<div class="math">
+<p><img src="images/math/e1f438b45272a5e1a7597d5f1aa6263aa034ca8d.png" alt="o_2 = \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{LD}(f)}{maxLD}"/></p>
+</div><p>where <em>maxNL</em> and <em>maxLD</em> are the maximum values of nonlinearity and linearity distance which can be achieved by a Boolean function with the same number of input variables as <em>f</em> respectively.</p>
+<ol class="arabic simple" start="3">
+<li>The sum of nonlinearity, algebraic degree and linearity distance of the Boolean function normalized with respect to their (a priori known) maximum values:</li>
+</ol>
+<div class="math">
+<p><img src="images/math/3e150b7fb4ca8ca2b9753134db891a746ad127ad.png" alt="o_3 =  \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{deg}(f)}{maxDEG} + \frac{\crit{LD}(f)}{maxLD}"/></p>
+</div><p>where <em>maxNL</em>, <em>maxDEG</em> and <em>maxLD</em> are respectively the maximum values of nonlinearity, algebraic degree and linearity distance which can be achieved by a Boolean function with the same number of input variables as <em>f</em>.</p>
+<ol class="arabic simple" start="4">
+<li>The sum of nonlinearity, algebraic degree, algebraic immunity and linearity distance of the Boolean function normalized with respect to their (a priori known) maximum values:</li>
+</ol>
+<div class="math">
+<p><img src="images/math/ef955d2ec7dc853d2102cb840d14f9e35fbf1706.png" alt="o_4 = \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{deg}(f)}{maxDEG} + \frac{\crit{AI}(f)}{maxAI} + \frac{\crit{LD}(f)}{maxLD}"/></p>
+</div><p>where <em>maxNL</em>, <em>maxDEG</em>, <em>maxAI</em> and <em>maxLD</em> are respectively the maximum values of nonlinearity, algebraic degree, algebraic immunity and linearity distance which can be achieved by a Boolean function with the same number of input variables as <em>f</em>.</p>
+<ol class="arabic simple" start="5">
+<li>The sum of nonlinearity, algebraic degree, algebraic immunity and linearity distance of the Boolean function normalized with respect to their (a priori known) maximum values:</li>
+</ol>
+<div class="math">
+<p><img src="images/math/cf11950d8b86e6c2a6830a6c610a328d5c47fd70.png" alt="o_5 = \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{deg}(f)}{maxDEG} + \frac{\crit{AI}(f)}{maxAI} + \frac{\crit{LD}(f)}{maxLD} + \frac{2^{3n}-\sigma(f)}{max\sigma-min\sigma}"/></p>
+</div><p>where <em>maxNL</em>, <em>maxDEG</em>, <em>maxAI</em>, <em>maxLD</em>, <img class="math" src="images/math/1adcaa92593626a016c0add1ecade333a76cc5c8.png" alt="max\sigma"/> are respectively the maximum values of nonlinearity, algebraic degree, algebraic immunity, linearity distance and sum-of-square indicator which can be achieved by a Boolean function with the same number of input variables as $f$; and <img class="math" src="images/math/96ef3735e6bb35953f003539495b455ac7c017cc.png" alt="min\sigma"/> is the minimum value of the sum-of-square indicator achievable by a Boolean function with the same number of input variables as <em>f</em>.</p>
+</div>
+</div>
+<div class="section" id="implementation">
+<h3><a class="toc-backref" href="#id9">Implementation</a><a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
+<p>In order to use Galib library, the installation instructions described in <a class="reference external" href="http://lancet.mit.edu/galib-2.4/Installation.html">Installation Instructions for GAlib</a> must be followed. Once Galib is installed, we can use this library in conjunction with VBF library by using the following Makefile:</p>
+<div class="highlight-c"><div class="highlight"><pre>include makevars
+
+############# User settings ######################
+
+# set your C++ compiler and options here...
+GPP=g++
+LIBS=-lntl
+NTLINC= -I/usr/local/include -L/usr/local/lib
+GA_LIB_DIR= ga
+LIB_DIRS= -L$(GA_LIB_DIR)
+
+############# End of user settings ###############
+
+o1: o1.cpp VBF.h
+        $(GPP) $(NTLINC) -Wall o1.cpp -o o1.exe $(LIBS) $(LIB_DIRS) -lga
+
+o2: o2.cpp VBF.h
+        $(GPP) $(NTLINC) -Wall o2.cpp -o o2.exe $(LIBS) $(LIB_DIRS)  -lga
+
+o3: o3.cpp VBF.h
+        $(GPP) $(NTLINC) -Wall o3.cpp -o o3.exe $(LIBS) $(LIB_DIRS) -lga
+
+o4: o4.cpp VBF.h
+        $(GPP) $(NTLINC) -Wall o4.cpp -o o4.exe $(LIBS) $(LIB_DIRS) -lga
+
+o5: o5.cpp VBF.h
+        $(GPP) $(NTLINC) -Wall o5.cpp -o o5.exe $(LIBS) $(LIB_DIRS) -lga
+
+clean:
+        rm -f *.exe
+</pre></div>
+</div>
+<p>Note that a file called &#8220;makevars&#8221; must be present in the same directory as the Makefile file.</p>
+<p>Example program for each of the objective functions could be the following:</p>
+<div class="literal-block-wrapper container" id="o1-cpp">
+<div class="code-block-caption"><span class="caption-text">o1.cpp</span><a class="headerlink" href="#o1-cpp" title="Permalink to this code">¶</a></div>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
+
+     <span class="cp">#define cout STD_COUT</span>
+
+     <span class="kt">float</span> <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span> <span class="o">&amp;</span><span class="p">);</span>    <span class="c1">// This is the declaration of our obj function.</span>
+
+     <span class="kt">int</span>
+     <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+     <span class="p">{</span>
+       <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">popsize</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">ngen</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">pmut</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">pcross</span><span class="p">;</span>
+
+   <span class="c1">// We generate random seed</span>
+
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">ii</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">ii</span><span class="o">&lt;</span><span class="n">argc</span><span class="p">;</span> <span class="n">ii</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">if</span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">ii</span><span class="o">++</span><span class="p">],</span><span class="s">&quot;seed&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+           <span class="n">GARandomSeed</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">ii</span><span class="p">]));</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+
+       <span class="n">n</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+       <span class="n">m</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+       <span class="kt">int</span> <span class="n">width</span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">height</span>   <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+       <span class="n">popsize</span>  <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+       <span class="n">ngen</span>     <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+       <span class="n">pmut</span>   <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+       <span class="n">pcross</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">6</span><span class="p">]);</span>
+
+       <span class="n">GA2DBinaryStringGenome</span> <span class="n">genome</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">Objective</span><span class="p">);</span>
+
+       <span class="n">GASimpleGA</span> <span class="n">ga</span><span class="p">(</span><span class="n">genome</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">populationSize</span><span class="p">(</span><span class="n">popsize</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">nGenerations</span><span class="p">(</span><span class="n">ngen</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">pMutation</span><span class="p">(</span><span class="n">pmut</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">pCrossover</span><span class="p">(</span><span class="n">pcross</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">evolve</span><span class="p">();</span>
+
+     <span class="c1">// Now we print out the best genome that the GA found.</span>
+
+       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">().</span><span class="n">bestIndividual</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+       <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="kt">float</span>
+     <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span><span class="o">&amp;</span> <span class="n">g</span><span class="p">)</span> <span class="p">{</span>
+
+       <span class="n">using</span> <span class="n">namespace</span> <span class="n">VBFNS</span><span class="p">;</span>
+
+       <span class="n">VBF</span> <span class="n">F</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">T</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">nonlin</span><span class="p">;</span>
+       <span class="kt">long</span> <span class="n">spacen</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+
+       <span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span> <span class="n">genome</span> <span class="o">=</span> <span class="p">(</span><span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span><span class="p">)</span><span class="n">g</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">score</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+
+       <span class="n">spacen</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">width</span><span class="p">();</span>
+       <span class="n">m</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">height</span><span class="p">();</span>
+
+       <span class="n">T</span><span class="p">.</span><span class="n">SetDims</span><span class="p">(</span><span class="n">spacen</span><span class="p">,</span><span class="n">m</span><span class="p">);</span>
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">spacen</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+           <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">to_GF2</span><span class="p">(</span><span class="n">genome</span><span class="p">.</span><span class="n">gene</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">));</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+
+       <span class="n">F</span><span class="p">.</span><span class="n">puttt</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+       <span class="n">nonlin</span> <span class="o">=</span> <span class="n">nl</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">conv</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">nonlin</span><span class="p">);</span>
+
+       <span class="k">return</span> <span class="n">score</span><span class="p">;</span>
+     <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper container" id="o2-cpp">
+<div class="code-block-caption"><span class="caption-text">o2.cpp</span><a class="headerlink" href="#o2-cpp" title="Permalink to this code">¶</a></div>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
+
+     <span class="cp">#define cout STD_COUT</span>
+
+     <span class="kt">float</span> <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span> <span class="o">&amp;</span><span class="p">);</span>    <span class="c1">// This is the declaration of our obj function.</span>
+
+     <span class="kt">int</span>
+     <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+     <span class="p">{</span>
+       <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">popsize</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">ngen</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">pmut</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">pcross</span><span class="p">;</span>
+
+   <span class="c1">// We generate random seed</span>
+
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">ii</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">ii</span><span class="o">&lt;</span><span class="n">argc</span><span class="p">;</span> <span class="n">ii</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">if</span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">ii</span><span class="o">++</span><span class="p">],</span><span class="s">&quot;seed&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+           <span class="n">GARandomSeed</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">ii</span><span class="p">]));</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+
+       <span class="n">n</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+       <span class="n">m</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+       <span class="kt">int</span> <span class="n">width</span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">height</span>   <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+       <span class="n">popsize</span>  <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+       <span class="n">ngen</span>     <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+       <span class="n">pmut</span>   <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+       <span class="n">pcross</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">6</span><span class="p">]);</span>
+
+       <span class="n">GA2DBinaryStringGenome</span> <span class="n">genome</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">Objective</span><span class="p">);</span>
+
+       <span class="n">GASimpleGA</span> <span class="n">ga</span><span class="p">(</span><span class="n">genome</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">populationSize</span><span class="p">(</span><span class="n">popsize</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">nGenerations</span><span class="p">(</span><span class="n">ngen</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">pMutation</span><span class="p">(</span><span class="n">pmut</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">pCrossover</span><span class="p">(</span><span class="n">pcross</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">evolve</span><span class="p">();</span>
+
+     <span class="c1">// Now we print out the best genome that the GA found.</span>
+
+       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">().</span><span class="n">bestIndividual</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+       <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="kt">float</span>
+     <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span><span class="o">&amp;</span> <span class="n">g</span><span class="p">)</span> <span class="p">{</span>
+
+       <span class="n">using</span> <span class="n">namespace</span> <span class="n">VBFNS</span><span class="p">;</span>
+
+       <span class="n">VBF</span> <span class="n">F</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">T</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">nonlin</span><span class="p">,</span> <span class="n">lind</span><span class="p">,</span> <span class="n">suma</span><span class="p">,</span> <span class="n">nlm</span><span class="p">,</span> <span class="n">ldm</span><span class="p">;</span>
+       <span class="kt">long</span> <span class="n">spacen</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+
+       <span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span> <span class="n">genome</span> <span class="o">=</span> <span class="p">(</span><span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span><span class="p">)</span><span class="n">g</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">score</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+
+       <span class="n">spacen</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">width</span><span class="p">();</span>
+       <span class="n">m</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">height</span><span class="p">();</span>
+
+       <span class="n">T</span><span class="p">.</span><span class="n">SetDims</span><span class="p">(</span><span class="n">spacen</span><span class="p">,</span><span class="n">m</span><span class="p">);</span>
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">spacen</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+           <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">to_GF2</span><span class="p">(</span><span class="n">genome</span><span class="p">.</span><span class="n">gene</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">));</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+
+       <span class="n">F</span><span class="p">.</span><span class="n">puttt</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+       <span class="n">nonlin</span> <span class="o">=</span> <span class="n">nl</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">lind</span> <span class="o">=</span> <span class="n">ld</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">nlm</span> <span class="o">=</span> <span class="n">nlmax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">ldm</span> <span class="o">=</span> <span class="n">ldmax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+
+       <span class="n">suma</span> <span class="o">=</span> <span class="n">nonlin</span><span class="o">/</span><span class="n">nlm</span><span class="o">+</span><span class="n">lind</span><span class="o">/</span><span class="n">ldm</span><span class="p">;</span>
+       <span class="n">conv</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">suma</span><span class="p">);</span>
+
+       <span class="k">return</span> <span class="n">score</span><span class="p">;</span>
+     <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper container" id="o3-cpp">
+<div class="code-block-caption"><span class="caption-text">o3.cpp</span><a class="headerlink" href="#o3-cpp" title="Permalink to this code">¶</a></div>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
+
+     <span class="cp">#define cout STD_COUT</span>
+
+     <span class="kt">float</span> <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span> <span class="o">&amp;</span><span class="p">);</span>    <span class="c1">// This is the declaration of our obj function.</span>
+
+     <span class="kt">int</span>
+     <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+     <span class="p">{</span>
+       <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">popsize</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">ngen</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">pmut</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">pcross</span><span class="p">;</span>
+
+   <span class="c1">// We generate random seed</span>
+
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">ii</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">ii</span><span class="o">&lt;</span><span class="n">argc</span><span class="p">;</span> <span class="n">ii</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">if</span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">ii</span><span class="o">++</span><span class="p">],</span><span class="s">&quot;seed&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+           <span class="n">GARandomSeed</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">ii</span><span class="p">]));</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+
+       <span class="n">n</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+       <span class="n">m</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+       <span class="kt">int</span> <span class="n">width</span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">height</span>   <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+       <span class="n">popsize</span>  <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+       <span class="n">ngen</span>     <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+       <span class="n">pmut</span>   <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+       <span class="n">pcross</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">6</span><span class="p">]);</span>
+
+       <span class="n">GA2DBinaryStringGenome</span> <span class="n">genome</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">Objective</span><span class="p">);</span>
+
+       <span class="n">GASimpleGA</span> <span class="n">ga</span><span class="p">(</span><span class="n">genome</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">populationSize</span><span class="p">(</span><span class="n">popsize</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">nGenerations</span><span class="p">(</span><span class="n">ngen</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">pMutation</span><span class="p">(</span><span class="n">pmut</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">pCrossover</span><span class="p">(</span><span class="n">pcross</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">evolve</span><span class="p">();</span>
+
+     <span class="c1">// Now we print out the best genome that the GA found.</span>
+
+       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">().</span><span class="n">bestIndividual</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+       <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="kt">float</span>
+     <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span><span class="o">&amp;</span> <span class="n">g</span><span class="p">)</span> <span class="p">{</span>
+
+       <span class="n">using</span> <span class="n">namespace</span> <span class="n">VBFNS</span><span class="p">;</span>
+
+       <span class="n">VBF</span> <span class="n">F</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">T</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">nonlin</span><span class="p">,</span> <span class="n">lind</span><span class="p">,</span> <span class="n">suma</span><span class="p">,</span> <span class="n">nlm</span><span class="p">,</span> <span class="n">ldm</span><span class="p">;</span>
+       <span class="kt">long</span> <span class="n">spacen</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
+
+       <span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span> <span class="n">genome</span> <span class="o">=</span> <span class="p">(</span><span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span><span class="p">)</span><span class="n">g</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">score</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+
+       <span class="n">spacen</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">width</span><span class="p">();</span>
+       <span class="n">m</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">height</span><span class="p">();</span>
+
+       <span class="n">T</span><span class="p">.</span><span class="n">SetDims</span><span class="p">(</span><span class="n">spacen</span><span class="p">,</span><span class="n">m</span><span class="p">);</span>
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">spacen</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+           <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">to_GF2</span><span class="p">(</span><span class="n">genome</span><span class="p">.</span><span class="n">gene</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">));</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+
+       <span class="n">F</span><span class="p">.</span><span class="n">puttt</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+       <span class="n">nonlin</span> <span class="o">=</span> <span class="n">nl</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">lind</span> <span class="o">=</span> <span class="n">ld</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">nlm</span> <span class="o">=</span> <span class="n">nlmax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">ldm</span> <span class="o">=</span> <span class="n">ldmax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">d</span> <span class="o">=</span> <span class="n">deg</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">n</span> <span class="o">=</span> <span class="n">logtwo</span><span class="p">(</span><span class="n">spacen</span><span class="p">);</span>
+
+       <span class="n">suma</span> <span class="o">=</span> <span class="n">nonlin</span><span class="o">/</span><span class="n">nlm</span><span class="o">+</span><span class="n">lind</span><span class="o">/</span><span class="n">ldm</span><span class="o">+</span><span class="n">to_RR</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="n">to_RR</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+       <span class="n">conv</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">suma</span><span class="p">);</span>
+
+       <span class="k">return</span> <span class="n">score</span><span class="p">;</span>
+     <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper container" id="o4-cpp">
+<div class="code-block-caption"><span class="caption-text">o4.cpp</span><a class="headerlink" href="#o4-cpp" title="Permalink to this code">¶</a></div>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
+
+     <span class="cp">#define cout STD_COUT</span>
+
+     <span class="kt">float</span> <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span> <span class="o">&amp;</span><span class="p">);</span>    <span class="c1">// This is the declaration of our obj function.</span>
+
+     <span class="kt">int</span>
+     <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+     <span class="p">{</span>
+       <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">popsize</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">ngen</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">pmut</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">pcross</span><span class="p">;</span>
+
+   <span class="c1">// We generate random seed</span>
+
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">ii</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">ii</span><span class="o">&lt;</span><span class="n">argc</span><span class="p">;</span> <span class="n">ii</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">if</span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">ii</span><span class="o">++</span><span class="p">],</span><span class="s">&quot;seed&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+           <span class="n">GARandomSeed</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">ii</span><span class="p">]));</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+
+       <span class="n">n</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+       <span class="n">m</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+       <span class="kt">int</span> <span class="n">width</span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">height</span>   <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+       <span class="n">popsize</span>  <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+       <span class="n">ngen</span>     <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+       <span class="n">pmut</span>   <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+       <span class="n">pcross</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">6</span><span class="p">]);</span>
+
+       <span class="n">GA2DBinaryStringGenome</span> <span class="n">genome</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">Objective</span><span class="p">);</span>
+
+       <span class="n">GASimpleGA</span> <span class="n">ga</span><span class="p">(</span><span class="n">genome</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">populationSize</span><span class="p">(</span><span class="n">popsize</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">nGenerations</span><span class="p">(</span><span class="n">ngen</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">pMutation</span><span class="p">(</span><span class="n">pmut</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">pCrossover</span><span class="p">(</span><span class="n">pcross</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">evolve</span><span class="p">();</span>
+
+     <span class="c1">// Now we print out the best genome that the GA found.</span>
+
+       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">().</span><span class="n">bestIndividual</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+       <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="kt">float</span>
+     <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span><span class="o">&amp;</span> <span class="n">g</span><span class="p">)</span> <span class="p">{</span>
+
+       <span class="n">using</span> <span class="n">namespace</span> <span class="n">VBFNS</span><span class="p">;</span>
+
+       <span class="n">VBF</span> <span class="n">F</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">T</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">nonlin</span><span class="p">,</span> <span class="n">lind</span><span class="p">,</span> <span class="n">suma</span><span class="p">,</span> <span class="n">nlm</span><span class="p">,</span> <span class="n">ldm</span><span class="p">;</span>
+       <span class="kt">long</span> <span class="n">spacen</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">ai</span><span class="p">,</span> <span class="n">maxai</span><span class="p">;</span>
+
+       <span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span> <span class="n">genome</span> <span class="o">=</span> <span class="p">(</span><span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span><span class="p">)</span><span class="n">g</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">score</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+
+       <span class="n">spacen</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">width</span><span class="p">();</span>
+       <span class="n">m</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">height</span><span class="p">();</span>
+
+       <span class="n">T</span><span class="p">.</span><span class="n">SetDims</span><span class="p">(</span><span class="n">spacen</span><span class="p">,</span><span class="n">m</span><span class="p">);</span>
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">spacen</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+           <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">to_GF2</span><span class="p">(</span><span class="n">genome</span><span class="p">.</span><span class="n">gene</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">));</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+
+       <span class="n">F</span><span class="p">.</span><span class="n">puttt</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+       <span class="n">nonlin</span> <span class="o">=</span> <span class="n">nl</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">lind</span> <span class="o">=</span> <span class="n">ld</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">nlm</span> <span class="o">=</span> <span class="n">nlmax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">ldm</span> <span class="o">=</span> <span class="n">ldmax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">d</span> <span class="o">=</span> <span class="n">deg</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">n</span> <span class="o">=</span> <span class="n">logtwo</span><span class="p">(</span><span class="n">spacen</span><span class="p">);</span>
+       <span class="n">ai</span> <span class="o">=</span> <span class="n">AI</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">maxai</span> <span class="o">=</span> <span class="n">aimax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+
+       <span class="n">suma</span> <span class="o">=</span> <span class="n">nonlin</span><span class="o">/</span><span class="n">nlm</span><span class="o">+</span><span class="n">lind</span><span class="o">/</span><span class="n">ldm</span><span class="o">+</span><span class="n">to_RR</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="n">to_RR</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">+</span><span class="n">to_RR</span><span class="p">(</span><span class="n">ai</span><span class="p">)</span><span class="o">/</span><span class="n">to_RR</span><span class="p">(</span><span class="n">maxai</span><span class="p">);</span>
+       <span class="n">conv</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">suma</span><span class="p">);</span>
+
+       <span class="k">return</span> <span class="n">score</span><span class="p">;</span>
+     <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper container" id="o5-cpp">
+<div class="code-block-caption"><span class="caption-text">o5.cpp</span><a class="headerlink" href="#o5-cpp" title="Permalink to this code">¶</a></div>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
+
+     <span class="cp">#define cout STD_COUT</span>
+
+     <span class="kt">float</span> <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span> <span class="o">&amp;</span><span class="p">);</span>    <span class="c1">// This is the declaration of our obj function.</span>
+
+     <span class="kt">int</span>
+     <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+     <span class="p">{</span>
+       <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">popsize</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">ngen</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">pmut</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">pcross</span><span class="p">;</span>
+
+   <span class="c1">// We generate random seed</span>
+
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">ii</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">ii</span><span class="o">&lt;</span><span class="n">argc</span><span class="p">;</span> <span class="n">ii</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">if</span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">ii</span><span class="o">++</span><span class="p">],</span><span class="s">&quot;seed&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+           <span class="n">GARandomSeed</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">ii</span><span class="p">]));</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+
+       <span class="n">n</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+       <span class="n">m</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+       <span class="kt">int</span> <span class="n">width</span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">height</span>   <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+       <span class="n">popsize</span>  <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+       <span class="n">ngen</span>     <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+       <span class="n">pmut</span>   <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+       <span class="n">pcross</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">6</span><span class="p">]);</span>
+
+       <span class="n">GA2DBinaryStringGenome</span> <span class="n">genome</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">Objective</span><span class="p">);</span>
+
+       <span class="n">GASimpleGA</span> <span class="n">ga</span><span class="p">(</span><span class="n">genome</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">populationSize</span><span class="p">(</span><span class="n">popsize</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">nGenerations</span><span class="p">(</span><span class="n">ngen</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">pMutation</span><span class="p">(</span><span class="n">pmut</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">pCrossover</span><span class="p">(</span><span class="n">pcross</span><span class="p">);</span>
+       <span class="n">ga</span><span class="p">.</span><span class="n">evolve</span><span class="p">();</span>
+
+     <span class="c1">// Now we print out the best genome that the GA found.</span>
+
+       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">().</span><span class="n">bestIndividual</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+       <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="kt">float</span>
+     <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span><span class="o">&amp;</span> <span class="n">g</span><span class="p">)</span> <span class="p">{</span>
+
+       <span class="n">using</span> <span class="n">namespace</span> <span class="n">VBFNS</span><span class="p">;</span>
+
+       <span class="n">VBF</span> <span class="n">F</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">T</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">nonlin</span><span class="p">,</span> <span class="n">lind</span><span class="p">,</span> <span class="n">suma</span><span class="p">,</span> <span class="n">nlm</span><span class="p">,</span> <span class="n">ldm</span><span class="p">;</span>
+       <span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span> <span class="n">s</span><span class="p">,</span> <span class="n">smin</span><span class="p">,</span> <span class="n">smax</span><span class="p">;</span>
+       <span class="kt">long</span> <span class="n">spacen</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+       <span class="kt">int</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">ai</span><span class="p">,</span> <span class="n">maxai</span><span class="p">;</span>
+
+       <span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span> <span class="n">genome</span> <span class="o">=</span> <span class="p">(</span><span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span><span class="p">)</span><span class="n">g</span><span class="p">;</span>
+       <span class="kt">float</span> <span class="n">score</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+
+       <span class="n">spacen</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">width</span><span class="p">();</span>
+       <span class="n">m</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">height</span><span class="p">();</span>
+
+       <span class="n">T</span><span class="p">.</span><span class="n">SetDims</span><span class="p">(</span><span class="n">spacen</span><span class="p">,</span><span class="n">m</span><span class="p">);</span>
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">spacen</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+           <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">to_GF2</span><span class="p">(</span><span class="n">genome</span><span class="p">.</span><span class="n">gene</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">));</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+
+       <span class="n">F</span><span class="p">.</span><span class="n">puttt</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+       <span class="n">nonlin</span> <span class="o">=</span> <span class="n">nl</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">lind</span> <span class="o">=</span> <span class="n">ld</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">nlm</span> <span class="o">=</span> <span class="n">nlmax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">ldm</span> <span class="o">=</span> <span class="n">ldmax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">d</span> <span class="o">=</span> <span class="n">deg</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">n</span> <span class="o">=</span> <span class="n">logtwo</span><span class="p">(</span><span class="n">spacen</span><span class="p">);</span>
+       <span class="n">ai</span> <span class="o">=</span> <span class="n">AI</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">maxai</span> <span class="o">=</span> <span class="n">aimax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">s</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">smin</span> <span class="o">=</span> <span class="n">sigmamin</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+       <span class="n">smax</span> <span class="o">=</span> <span class="n">sigmamax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+
+       <span class="n">suma</span> <span class="o">=</span> <span class="n">nonlin</span><span class="o">/</span><span class="n">nlm</span><span class="o">+</span><span class="n">lind</span><span class="o">/</span><span class="n">ldm</span><span class="o">+</span><span class="n">to_RR</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="n">to_RR</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">+</span><span class="n">to_RR</span><span class="p">(</span><span class="n">ai</span><span class="p">)</span><span class="o">/</span><span class="n">to_RR</span><span class="p">(</span><span class="n">maxai</span><span class="p">)</span><span class="o">+</span><span class="mf">1.0</span><span class="o">-</span><span class="p">(</span><span class="n">to_RR</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">smin</span><span class="p">)</span><span class="o">/</span><span class="n">to_RR</span><span class="p">(</span><span class="n">smax</span><span class="o">-</span><span class="n">smin</span><span class="p">));</span>
+       <span class="n">conv</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">suma</span><span class="p">);</span>
+
+       <span class="k">return</span> <span class="n">score</span><span class="p">;</span>
+     <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>The following program illustrates how can be set the seed (included in a file called &#8220;seed.bin&#8221; with the binary representation of the Truth Table of the function) of the Genetic algorithm for the o4 objective function:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+<span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+<span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
+
+<span class="cp">#define cout STD_COUT</span>
+
+<span class="kt">float</span> <span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span> <span class="o">&amp;</span><span class="p">);</span>    <span class="c1">// This is the declaration of our obj function.</span>
+
+<span class="kt">int</span>
+<span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">popsize</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">ngen</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">pmut</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">pcross</span><span class="p">;</span>
+
+  <span class="n">n</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+  <span class="n">m</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+  <span class="kt">int</span> <span class="n">width</span>    <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">height</span>   <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+  <span class="n">popsize</span>  <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+  <span class="n">ngen</span>     <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+  <span class="n">pmut</span>   <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+  <span class="n">pcross</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">6</span><span class="p">]);</span>
+
+  <span class="n">GA2DBinaryStringGenome</span> <span class="n">genome</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">Objective</span><span class="p">);</span>
+
+  <span class="n">ifstream</span> <span class="n">inStream</span><span class="p">(</span><span class="s">&quot;seed.bin&quot;</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">inStream</span><span class="p">){</span>
+    <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Cannot open &quot;</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;seed.bin&quot;</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; for input.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">inStream</span> <span class="o">&gt;&gt;</span> <span class="n">genome</span><span class="p">;</span>
+  <span class="n">inStream</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+
+  <span class="n">GASimpleGA</span> <span class="n">ga</span><span class="p">(</span><span class="n">genome</span><span class="p">);</span>
+  <span class="n">ga</span><span class="p">.</span><span class="n">populationSize</span><span class="p">(</span><span class="n">popsize</span><span class="p">);</span>
+  <span class="n">ga</span><span class="p">.</span><span class="n">nGenerations</span><span class="p">(</span><span class="n">ngen</span><span class="p">);</span>
+  <span class="n">ga</span><span class="p">.</span><span class="n">pMutation</span><span class="p">(</span><span class="n">pmut</span><span class="p">);</span>
+  <span class="n">ga</span><span class="p">.</span><span class="n">pCrossover</span><span class="p">(</span><span class="n">pcross</span><span class="p">);</span>
+  <span class="n">ga</span><span class="p">.</span><span class="n">evolve</span><span class="p">();</span>
+
+<span class="c1">// Now we print out the best genome that the GA found.</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ga</span><span class="p">.</span><span class="n">statistics</span><span class="p">().</span><span class="n">bestIndividual</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">float</span>
+<span class="nf">Objective</span><span class="p">(</span><span class="n">GAGenome</span><span class="o">&amp;</span> <span class="n">g</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="n">using</span> <span class="n">namespace</span> <span class="n">VBFNS</span><span class="p">;</span>
+
+  <span class="n">VBF</span> <span class="n">F</span><span class="p">;</span>
+  <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">T</span><span class="p">;</span>
+  <span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">nonlin</span><span class="p">,</span> <span class="n">lind</span><span class="p">,</span> <span class="n">suma</span><span class="p">,</span> <span class="n">nlm</span><span class="p">,</span> <span class="n">ldm</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">spacen</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">ai</span><span class="p">,</span> <span class="n">maxai</span><span class="p">;</span>
+
+  <span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span> <span class="n">genome</span> <span class="o">=</span> <span class="p">(</span><span class="n">GA2DBinaryStringGenome</span> <span class="o">&amp;</span><span class="p">)</span><span class="n">g</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">score</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+
+  <span class="n">spacen</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">width</span><span class="p">();</span>
+  <span class="n">m</span> <span class="o">=</span> <span class="n">genome</span><span class="p">.</span><span class="n">height</span><span class="p">();</span>
+
+  <span class="n">T</span><span class="p">.</span><span class="n">SetDims</span><span class="p">(</span><span class="n">spacen</span><span class="p">,</span><span class="n">m</span><span class="p">);</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">spacen</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+      <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">to_GF2</span><span class="p">(</span><span class="n">genome</span><span class="p">.</span><span class="n">gene</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">));</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="n">F</span><span class="p">.</span><span class="n">puttt</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+  <span class="n">nonlin</span> <span class="o">=</span> <span class="n">nl</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+  <span class="n">lind</span> <span class="o">=</span> <span class="n">ld</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+  <span class="n">nlm</span> <span class="o">=</span> <span class="n">nlmax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+  <span class="n">ldm</span> <span class="o">=</span> <span class="n">ldmax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+  <span class="n">d</span> <span class="o">=</span> <span class="n">deg</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+  <span class="n">n</span> <span class="o">=</span> <span class="n">logtwo</span><span class="p">(</span><span class="n">spacen</span><span class="p">);</span>
+  <span class="n">ai</span> <span class="o">=</span> <span class="n">AI</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+  <span class="n">maxai</span> <span class="o">=</span> <span class="n">aimax</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+
+  <span class="n">suma</span> <span class="o">=</span> <span class="n">nonlin</span><span class="o">/</span><span class="n">nlm</span><span class="o">+</span><span class="n">lind</span><span class="o">/</span><span class="n">ldm</span><span class="o">+</span><span class="n">to_RR</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="n">to_RR</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">+</span><span class="n">to_RR</span><span class="p">(</span><span class="n">ai</span><span class="p">)</span><span class="o">/</span><span class="n">to_RR</span><span class="p">(</span><span class="n">maxai</span><span class="p">);</span>
+  <span class="n">conv</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">suma</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="n">score</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="variable-boolean-functions-with-nonlinearity-242">
+<h2><a class="toc-backref" href="#id10">9-variable Boolean functions with nonlinearity 242</a><a class="headerlink" href="#variable-boolean-functions-with-nonlinearity-242" title="Permalink to this headline">¶</a></h2>
+<p>Below you can find the Truth Tables of a set of 9-variable functions with the the best known nonlinearity (242). These Boolean functions can be grouped in five different affine equivalence classes:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl242/1.txt">A representative Boolean function of class f1</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl242/2.txt">A representative Boolean function of class f2</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl242/3.txt">A representative Boolean function of class f3</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl242/4.txt">A representative Boolean function of class f4</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl242/5.txt">A representative Boolean function of class f5</a></p>
+<p>whose Frequency distribution of the absolute values of the Walsh Spectrum are the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">f</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>f1</td>
+<td>(4,30),(12,46),(20,226),(28,210)</td>
+</tr>
+<tr class="row-odd"><td>f2</td>
+<td>(4,30),(12,46),(20,226),(28,210)</td>
+</tr>
+<tr class="row-even"><td>f3</td>
+<td>(4,30),(12,46),(20,226),(28,210)</td>
+</tr>
+<tr class="row-odd"><td>f4</td>
+<td>(4,56),(12,58),(20,154),(28,244)</td>
+</tr>
+<tr class="row-even"><td>f5</td>
+<td>(4,57),(12,91),(20,97),(28,267)</td>
+</tr>
+</tbody>
+</table>
+<p>whose Frequency distribution of the absolute values of the Autocorrelation Spectrum are the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="95%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">f</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>f1</td>
+<td>(0,129),(8,298),(16,60),(24,9),(32,2),(40,13),(512,1)</td>
+</tr>
+<tr class="row-odd"><td>f2</td>
+<td>(0,150),(8,196),(16,148),(24,12),(32,5),(512,1)</td>
+</tr>
+<tr class="row-even"><td>f3</td>
+<td>(0,183),(8,223),(16,84),(24,6),(32,4),(40,10),(56,1),(512,1)</td>
+</tr>
+<tr class="row-odd"><td>f4</td>
+<td>(0,157),(8,232),(16,84),(24,8),(32,17),(40,10),(48,3),(512,1)</td>
+</tr>
+<tr class="row-even"><td>f5</td>
+<td>(0,192),(8,156),(16,129),(24,9),(32,13),(40,3),(48,6),(64,3),(512,1)</td>
+</tr>
+</tbody>
+</table>
+<p>The following table shows the values some criteria take for the functions within each class:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="13%" />
+<col width="17%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Class</th>
+<th class="head"><em>LD</em></th>
+<th class="head"><em>DEG</em></th>
+<th class="head"><em>AI</em></th>
+<th class="head"><em>MAXAC</em></th>
+<th class="head"><img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>f1</td>
+<td>118</td>
+<td>7</td>
+<td>4</td>
+<td>40</td>
+<td>324608</td>
+</tr>
+<tr class="row-odd"><td>f2</td>
+<td>120</td>
+<td>7</td>
+<td>4</td>
+<td>32</td>
+<td>324608</td>
+</tr>
+<tr class="row-even"><td>f3</td>
+<td>114</td>
+<td>7</td>
+<td>4</td>
+<td>56</td>
+<td>324608</td>
+</tr>
+<tr class="row-odd"><td>f4</td>
+<td>116</td>
+<td>7</td>
+<td>4</td>
+<td>48</td>
+<td>343424</td>
+</tr>
+<tr class="row-even"><td>f5</td>
+<td>112</td>
+<td>7</td>
+<td>4</td>
+<td>64</td>
+<td>354560</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variable-balanced-boolean-functions-with-nonlinearity-240">
+<h2><a class="toc-backref" href="#id11">9-variable Balanced Boolean functions with nonlinearity 240</a><a class="headerlink" href="#variable-balanced-boolean-functions-with-nonlinearity-240" title="Permalink to this headline">¶</a></h2>
+<p>Below you can find the profiles of 9-variable balanced functions with the the best known nonlinearity (240). Each row represents a profile with four values separated by commmas: Algebraic Degree, Algebraic Immunity, Absolute Indicator and Sum-of-square Indicator:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl240/240b.cri">Profiles</a></p>
+<p>567 different profiles were found with nonlinearity 240 and algebraic degree 8. The algebraic immunity takes values from the set {4, 5}.The linearity distance takes values from the set {110, 112, 114, 116, 118, 120, 122 }. The absolute indicator takes values from the set { 24, 32, 40, 48, 56, 64, 72 }. The sum-of-square indicator takes 137 different values between 323456 and 377600.</p>
+</div>
+<div class="section" id="variable-balanced-boolean-functions-with-nonlinearity-992">
+<h2><a class="toc-backref" href="#id12">11-variable Balanced Boolean functions with nonlinearity 992</a><a class="headerlink" href="#variable-balanced-boolean-functions-with-nonlinearity-992" title="Permalink to this headline">¶</a></h2>
+<p>Below you can find the profiles of 11-variable balanced functions with the the best known nonlinearity (992). Each row represents a profile with four values separated by commmas: Algebraic Degree, Algebraic Immunity, Absolute Indicator and Sum-of-square Indicator:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl992/992b.cri">Profiles</a></p>
+<p>3316 different profiles were found with nonlinearity 992. The algebraic degree takes values from the set { 9, 10 }. The algebraic immunity takes values from the set { 4, 5 }. The absolute indicator takes values from the set: { 120, 128, 136, 144, 160, 168, 176, 192, 200, 208, 224, 232, 240, 248, 256, 264 }. The sum-of-square indicator takes 682 different values between 5244800 and 5844608.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ: Frequently Asked Questions">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="other.html" class="btn btn-neutral" title="Analysis of other cryptographic algorithms"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60418502-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+   
+
+</body>
+</html>

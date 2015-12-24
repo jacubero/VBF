@@ -1,0 +1,673 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Rijndael &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#balanced-boolean-functions-generation">Balanced Boolean functions generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#cast-analysis-programs">CAST analysis programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#truth-table-format-conversion">Truth table format conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#criteria-calculation">Criteria calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#affine-equivalence">Affine equivalence</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div></div>
+          <div role="main" class="document">
+            
+  <div class="section" id="rijndael">
+<h1>Rijndael<a class="headerlink" href="#rijndael" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p><em>Rijndael</em>, later called <em>AES</em>, is a block cipher used for securing sensitive but unclassified material by U.S. Government agencies since December 6, 2001 and has become the de facto encryption standard for commercial transactions in the private sector.</p>
+<p><img class="math" src="../images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/> is AES 8x8 S-box and it is generated by determining the multiplicative inverse for a given number in <img class="math" src="../images/math/ca71c4b385d88da9ce7e9bcf7a5a5f9780d0c3bb.png" alt="GF(2^8) = GF(2)[x]/(x^8 + x^4 + x^3 + x + 1)"/>, Rijndael&#8217;s finite field. <img class="math" src="../images/math/be4b8bb919798b92f2ed4c946099f561ca7dc775.png" alt="{S_{RD}}^{-1}"/> is the inverse S-box and it is simply the S-box <img class="math" src="../images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/> run in reverse.</p>
+<p>The tabular representation of <img class="math" src="../images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/> S-box represented in hexadecimal notation is the following:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD-hex.txt">Tabular representation in hexadecimal notation</a></p>
+<p>Here the column is determined by the least significant nibble (four-bit aggregation), and the row is determined by the most significant nibble. For example, the value 0x9a is converted into 0xb8 by Rijndael&#8217;s S-box. Note that the multiplicative inverse of 0x00 is defined as itself.</p>
+<p>The tabular representation of <img class="math" src="../images/math/be4b8bb919798b92f2ed4c946099f561ca7dc775.png" alt="{S_{RD}}^{-1}"/> S-box represented in hexadecimal notation is the following:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv-hex.txt">Tabular representation in hexadecimal notation</a></p>
+<p>For hardware implementations, it might be useful to use the following decomposition of <img class="math" src="../images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/>:</p>
+<p><img class="math" src="../images/math/c36b55c592bbbbfe1887a64c495210a3559c8a4a.png" alt="S_{RD}[a] = f(g(a))"/></p>
+<p>where <img class="math" src="../images/math/5f5b7573c5f455d2e8827f5ab70a1fecc2059325.png" alt="g(a)"/> is the mapping</p>
+<p><img class="math" src="../images/math/911046bf1f61f9f384153c4ff00bb19d7cae7fce.png" alt="a \rightarrow a^{-1}"/> in <img class="math" src="../images/math/cff7c77bb17f485ddb65e22ad20aaf42c8e34980.png" alt="GF(2^8)"/>, and <img class="math" src="../images/math/7a043fdcaa83cbd7727ea37ade9ab00a0c928191.png" alt="f(a)"/> is an affine mapping. Since <img class="math" src="../images/math/5f5b7573c5f455d2e8827f5ab70a1fecc2059325.png" alt="g(a)"/> is self-inverse, we have:</p>
+<p><img class="math" src="../images/math/1bd6040091c6a84f9214f827d2a92d47275bc409.png" alt="{S_{RD}}^{-1}[a] = {g}^{-1}({f}^{-1}(a)) = g({f}^{-1}(a))"/></p>
+<p>The tabular representation of <img class="math" src="../images/math/57bfb4c6c7889ad4145104ab2e383fefa40e736d.png" alt="g"/> mapping is represented in hexadecimal notation as follows:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g-hex.txt">Tabular representation in hexadecimal notation</a></p>
+<p>The tabular representation of <img class="math" src="../images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/> mapping is represented in hexadecimal notation as follows:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f-hex.txt">Tabular representation in hexadecimal notation</a></p>
+<p>The tabular representation of <img class="math" src="../images/math/6fa0331f457f3b76dd2e7ff550f578bfecb365e1.png" alt="f^{-1}"/> mapping is represented in hexadecimal notation as follows:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv-hex.txt">Tabular representation in hexadecimal notation</a></p>
+<p>In the algorithm of Rijndael there are multiplications of a variable with a constant. A mapping called xtime is implemented in the algorithm in order to multiply by <img class="math" src="../images/math/951eaf8c5e045b25de56d1cb46a3bfac010e2f30.png" alt="02"/>. Since all elements of <img class="math" src="../images/math/cff7c77bb17f485ddb65e22ad20aaf42c8e34980.png" alt="GF(2^8)"/> can be written as a sum of powers of <img class="math" src="../images/math/951eaf8c5e045b25de56d1cb46a3bfac010e2f30.png" alt="02"/>, multiplication by any constant can be implemented by a repeated use of xtime. The tabular representation of xtime mapping is represented in hexadecimal notation as follows:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime-hex.txt">Tabular representation in hexadecimal notation</a></p>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="6%" />
+<col width="6%" />
+<col width="8%" />
+<col width="6%" />
+<col width="10%" />
+<col width="17%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">S-box</th>
+<th class="head"><em>NL</em></th>
+<th class="head"><em>LD</em></th>
+<th class="head"><em>DEG</em></th>
+<th class="head"><em>AI</em></th>
+<th class="head"><em>MAXAC</em></th>
+<th class="head"><img class="math" src="../images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><em>LP</em></th>
+<th class="head"><em>DP</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img class="math" src="../images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/></td>
+<td>112</td>
+<td>56</td>
+<td>7</td>
+<td>4</td>
+<td>32</td>
+<td>133120</td>
+<td>0.015625</td>
+<td>0.015625</td>
+</tr>
+<tr class="row-odd"><td><img class="math" src="../images/math/be4b8bb919798b92f2ed4c946099f561ca7dc775.png" alt="{S_{RD}}^{-1}"/></td>
+<td>112</td>
+<td>56</td>
+<td>7</td>
+<td>4</td>
+<td>32</td>
+<td>133120</td>
+<td>0.015625</td>
+<td>0.015625</td>
+</tr>
+<tr class="row-even"><td><img class="math" src="../images/math/57bfb4c6c7889ad4145104ab2e383fefa40e736d.png" alt="g"/></td>
+<td>112</td>
+<td>56</td>
+<td>7</td>
+<td>4</td>
+<td>32</td>
+<td>133120</td>
+<td>0.015625</td>
+<td>0.015625</td>
+</tr>
+<tr class="row-odd"><td><img class="math" src="../images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>256</td>
+<td>16777216</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td><img class="math" src="../images/math/6fa0331f457f3b76dd2e7ff550f578bfecb365e1.png" alt="f^{-1}"/></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>256</td>
+<td>16777216</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>xtime</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>256</td>
+<td>16777216</td>
+<td>1</td>
+<td>0.9921875</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h2><img class="math" src="../images/math/d01e8e8d2a96678d2c40a134744a50e24e850d60.png" alt="S_{RD}"/><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="representations">
+<h3>Representations<a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h3>
+<p>Polynomial function over <img class="math" src="../images/math/a304670c9f29763f9f68c5efbc6720d035f3c4b1.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="../images/math/e5034f04169c52bf864a0a90480bb81a43542436.png" alt="x^8 + x^4 + x^3 + x + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD-trace.pdf">Trace representation</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="../images/SRD.png"><img alt="../images/SRD.png" class="align-center" src="../images/SRD.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="other-useful-information-in-cryptanalysis">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#other-useful-information-in-cryptanalysis" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>27</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>59</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>81</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>87</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has no fixed points. It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h2><img class="math" src="../images/math/be4b8bb919798b92f2ed4c946099f561ca7dc775.png" alt="{S_{RD}}^{-1}"/><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>Representations<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Polynomial function over <img class="math" src="../images/math/a304670c9f29763f9f68c5efbc6720d035f3c4b1.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="../images/math/e5034f04169c52bf864a0a90480bb81a43542436.png" alt="x^8 + x^4 + x^3 + x + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv-trace.pdf">Trace representation</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="../images/SRDInv.png"><img alt="../images/SRDInv.png" class="align-center" src="../images/SRDInv.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id18">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>27</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>59</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>81</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>87</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has no fixed points. It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="id19">
+<h2><img class="math" src="../images/math/57bfb4c6c7889ad4145104ab2e383fefa40e736d.png" alt="g"/><a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id20">
+<h3>Representations<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="../images/g.png"><img alt="../images/g.png" class="align-center" src="../images/g.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id29">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>127</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has 2 fixed points: (0,0,0,0,0,0,0,0), (0,0,0,0,0,0,0,1)</p>
+<p>It has no negated fixed points: (0,1,1,1,1,1,1,0), (1,0,0,0,0,0,0,1)</p>
+</div>
+</div>
+<div class="section" id="id30">
+<h2><img class="math" src="../images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/><a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id31">
+<h3>Representations<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="../images/f.png"><img alt="../images/f.png" class="align-center" src="../images/f.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id40">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>4</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+<p>There are 65025 linear structures</p>
+<p>It has no fixed points. It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="id41">
+<h2><img class="math" src="../images/math/6fa0331f457f3b76dd2e7ff550f578bfecb365e1.png" alt="f^{-1}"/><a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id42">
+<h3>Representations<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="../images/finv.png"><img alt="../images/finv.png" class="align-center" src="../images/finv.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id51">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>4</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+<p>There are 65025 linear structures</p>
+<p>It has no fixed points. It has no negated fixed points</p>
+</div>
+</div>
+<div class="section" id="xtime">
+<h2>xtime<a class="headerlink" href="#xtime" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id52">
+<h3>Representations<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.char">Characteristic function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="../images/xtime.png"><img alt="../images/xtime.png" class="align-center" src="../images/xtime.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id61">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>51</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>79</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>85</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>92</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>100</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are no linear structures</p>
+<p>It has 1 fixed point: (0,0,0,0,0,0,0,0)</p>
+<p>It has 1 negated fixed point: (0,1,0,1,0,1,0,1)</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60418502-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+   
+
+</body>
+</html>

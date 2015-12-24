@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Organization of this Book &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#balanced-boolean-functions-generation">Balanced Boolean functions generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#cast-analysis-programs">CAST analysis programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#truth-table-format-conversion">Truth table format conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#criteria-calculation">Criteria calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#affine-equivalence">Affine equivalence</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div></div>
+          <div role="main" class="document">
+            
+  <div class="section" id="organization-of-this-book">
+<h1>Organization of this Book<a class="headerlink" href="#organization-of-this-book" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="section-1-introduction">
+<h2><strong>Section 1: Introduction</strong><a class="headerlink" href="#section-1-introduction" title="Permalink to this headline">¶</a></h2>
+<p>The introduction provides a brief description of the functions available in the VBF library and gives a general overview of the VBF&#8217;s programming interface and conventions. It also illustrates how to obtain and install the library, and introduces some mathematical preliminaries and notations.</p>
+</div>
+<div class="section" id="section-2-using-the-library">
+<h2><strong>Section 2: Using the library</strong><a class="headerlink" href="#section-2-using-the-library" title="Permalink to this headline">¶</a></h2>
+<p>This chapter describes how to compile programs that use VBF and how to evaluate new algorithms.</p>
+</div>
+<div class="section" id="section-3-representations-and-characterizations">
+<h2><strong>Section 3: Representations and characterizations</strong><a class="headerlink" href="#section-3-representations-and-characterizations" title="Permalink to this headline">¶</a></h2>
+<p>This chapter presents a review of theory relevant to the study of the typical forms of Vector Boolean function representations and chacterizations. We will consider representations those that uniquely represents a Vector Boolean function. Characterizations does not uniquely determine the Vector Boolean function in contrast to the previous matrices but provide some useful information in the context of cryptography.</p>
+<p>Representations included in this chapter are the Truth Table (TT), the polynomials in Algebraic Normal Form (Pol) and ANF Table (ANF), the Image (Char), Component functions Truth Table(LTT), Sequence vectors of Component functions CTT, the Trace Representation (Trace) and Affine function Representation. A definition for all these representations are given and the relationships among them and their various properties are also discussed.</p>
+<p>Characterizations such as Linear Profile (LP), Differential Profile (DP), Autocorrelation Spectrum (AC), Linear Structures (LS) are introduced. A definition for all these representations are given and the relationships among them and the above representations and their various properties are also discussed.</p>
+<p>The basic concepts of linear and differential cryptanalysis are introduced in terms of the Linear Profile and Differential Profile, together with other properties related with these attacks, such as linear potential, differential potential, linear or differential relations associated with a specific value.</p>
+<p>Affine equivalence analysis of Boolean functions by means of VBF library is described. It is showed how to obtain the Frequency distribution of the absolute values of the Walsh Spectrum and of the Autocorrelation Spectrum.</p>
+<p>It is possible to check randomness of a Vector Boolean function outputs with VBF by means of its cycle structure, and the analysis of the presence of fixed points or negated fixed points.</p>
+<p>Finally, some other representations useful in block ciphers are described such as the Permutation Vector (Per), Expansion and Compression DES permutations and DES-like S-box representations.
+The description of each representation and characterization is complemented with the description of the methods in VBF related to them. Most of the member functions of V BF have an in-line definition, for instance: <code class="code docutils literal"><span class="pre">void</span> <span class="pre">TT(NTL::mat_GF2&amp;</span> <span class="pre">X,</span> <span class="pre">VBF&amp;</span> <span class="pre">F)</span></code> is also defined as inline <code class="code docutils literal"><span class="pre">NTL::mat_GF2</span> <span class="pre">TT(VBF&amp;</span> <span class="pre">F)</span></code>.</p>
+</div>
+<div class="section" id="section-4-cryptographic-criteria">
+<h2><strong>Section 4: Cryptographic Criteria</strong><a class="headerlink" href="#section-4-cryptographic-criteria" title="Permalink to this headline">¶</a></h2>
+<p>This chapter defines some properties relevant for cryptographic applications and explains how to use the package to compute them. They are defined in relation to the representation or transform from which they are derived.</p>
+<p>Those properties are criteria or those which provide useful information in cryptanalysis. Among the criteria we find nonlinearity, r-th order nonlinearity, linearity distance, balancedness, correlation immunity, resiliency (i.e. balancedness and correlation immunity), propagation criterion, global avalanche criterion, algebraic degree and algebraic immunity. Other properties described are the maximum possible nonlinearity or the maximum possible linearity distance achievable by a Vector Boolean function with the same number of inputs, the type of function in terms of nonlinearity.</p>
+</div>
+<div class="section" id="section-5-constructions-for-vector-boolean-functions">
+<h2><strong>Section 5: Constructions for Vector Boolean functions</strong><a class="headerlink" href="#section-5-constructions-for-vector-boolean-functions" title="Permalink to this headline">¶</a></h2>
+<p>In this chapter, some basic constructions for Vector Boolean functions supported by the VBF class are described. Some of them correspond to secondary constructions, which build (n,m) variable vector Boolean functions from (n′,m′) variable ones (with n′ ≤ n,m′ ≤ m). The direct sum has been used to construct resilient and bent Boolean functions <a class="reference internal" href="../bibliography.html#carlet-04" id="id1">[Carlet:04]</a>. The concatenation can be used to obtain resilient functions or functions with maximal nonlinearity. The concatenation of polynomials in ANF can be used to obtain functions of high nonlinearity with n variables from functions with high nonlinearity with n′ variables (n′ &lt; n). Adding coordinate functions and bricklayering are constructions used to build modern ciphers such as CAST <a class="reference internal" href="../bibliography.html#cast-256" id="id2">[CAST:256]</a>, DES <a class="reference internal" href="../bibliography.html#des-77" id="id3">[DES:77]</a> and AES <a class="reference internal" href="../bibliography.html#daemenr-02" id="id4">[DaemenR:02]</a>. Additionally, VBF provides operations for identification if two vector Boolean functions are equal, the sum of two vector Boolean functions, the composition of two vector Boolean functions and the inverse of a Vector Boolean function.</p>
+</div>
+<div class="section" id="section-6-analysis-of-aes-competition-cryptographic-algorithms">
+<h2><strong>Section 6: Analysis of AES competition cryptographic algorithms</strong><a class="headerlink" href="#section-6-analysis-of-aes-competition-cryptographic-algorithms" title="Permalink to this headline">¶</a></h2>
+<p>In January 1997, the US National Institute of Standards and Technology (NIST) announced the start of an initiative to develop a new encryption standard: the AES. The AES selection process was open in which 15 candidates were accepted for the first evaluation round and 5 finalists were announced in the second round. On October 2, 2000, NIST officially announced that Rijndael would become the AES. In this chapter, a number of cryptographic algorithms from the AES (Advanced Encryption Standard) candidates accepted for the first evaluation round process are analysed.</p>
+</div>
+<div class="section" id="section-7-analysis-of-cryptec-project-cryptographic-algorithms">
+<h2><strong>Section 7: Analysis of CRYPTEC project cryptographic algorithms</strong><a class="headerlink" href="#section-7-analysis-of-cryptec-project-cryptographic-algorithms" title="Permalink to this headline">¶</a></h2>
+<p>CRYPTREC is the Cryptography Research and Evaluation Committees set up by the Japanese Government to evaluate and recommend cryptographic techniques for government and industrial use. It is comparable in many respects to the European Union&#8217;s NESSIE project and to the Advanced Encryption Standard process run by NIST in the U.S.. In this chapter, certain cryptographic algorithms from CRYPTEC project candidates are analysed.</p>
+</div>
+<div class="section" id="section-8-analysis-of-nessie-project-cryptographic-algorithms">
+<h2><strong>Section 8: Analysis of NESSIE project cryptographic algorithms</strong><a class="headerlink" href="#section-8-analysis-of-nessie-project-cryptographic-algorithms" title="Permalink to this headline">¶</a></h2>
+<p>The NESSIE call includes a request for a broad set of algorithms providing date confidentiality, data authentication, and entity authentication. These algorithms include block ciphers, stream ciphers, hash functions, MAC algorithms, digital signature schemes, and public-key encryption and identification schemes. In this chapter, several cryptographic algorithms from NESSIE (New European Schemes for Signature, Integrity, and Encryption) research project candidates are analysed.</p>
+</div>
+<div class="section" id="section-9-analysis-of-other-cryptographic-algorithms">
+<h2><strong>Section 9: Analysis of other cryptographic algorithms</strong><a class="headerlink" href="#section-9-analysis-of-other-cryptographic-algorithms" title="Permalink to this headline">¶</a></h2>
+<p>There are some block ciphers that are relevant either because its wide use or because of its importance in the development of cryptanalysis techniques. In this chapter, some cryptographic algorithms from other block ciphers are analysed.</p>
+</div>
+<div class="section" id="section-10-design-of-cryptographically-robust-vector-boolean-functions">
+<h2><strong>Section 10: Design of cryptographically robust Vector Boolean functions</strong><a class="headerlink" href="#section-10-design-of-cryptographically-robust-vector-boolean-functions" title="Permalink to this headline">¶</a></h2>
+<p>This chapter is devoted to the practical implementation of robust Boolean functions as fundamental components for S-box design. First, the design of such functions is formalized as a Multi-Objective Combinatorial Optimization (MOCO) problem.</p>
+</div>
+<div class="section" id="section-11-faqs">
+<h2><strong>Section 11: FAQs</strong><a class="headerlink" href="#section-11-faqs" title="Permalink to this headline">¶</a></h2>
+<p>Frequently Asked Questions.</p>
+</div>
+<div class="section" id="section-12-bibliography">
+<h2><strong>Section 12: Bibliography</strong><a class="headerlink" href="#section-12-bibliography" title="Permalink to this headline">¶</a></h2>
+<p>This chapter includes all citations referenced along the Reference Manual.</p>
+</div>
+<div class="section" id="section-13-appendix">
+<h2><strong>Section 13: Appendix</strong><a class="headerlink" href="#section-13-appendix" title="Permalink to this headline">¶</a></h2>
+<p>This chapter includes example programs using VBF library.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60418502-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+   
+
+</body>
+</html>

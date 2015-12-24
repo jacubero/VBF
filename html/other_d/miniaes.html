@@ -1,0 +1,1461 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mini-AES &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#balanced-boolean-functions-generation">Balanced Boolean functions generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#cast-analysis-programs">CAST analysis programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#truth-table-format-conversion">Truth table format conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#criteria-calculation">Criteria calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix.html#affine-equivalence">Affine equivalence</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div></div>
+          <div role="main" class="document">
+            
+  <div class="section" id="mini-aes">
+<h1>Mini-AES<a class="headerlink" href="#mini-aes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Raphael Chung-Wei Phan presented a version of the AES <a class="reference internal" href="../bibliography.html#phan02miniadvanced" id="id1">[Phan02miniadvanced]</a>, with all the parameters significantly reduced while preserving its original structure. This Mini version is purely educational and is designed to grasp the underlying concepts of Rijndael-like ciphers. It may also serve as a testbed for starting cryptanalysts to experiment with various cryptanalytic attacks. The Mini-AES cipher is a <img class="math" src="../images/math/1956be95d69b3155e02f7966b37d28eeb20b78cf.png" alt="16 \times 16"/> vector Boolean function and the Mini-AES encryption is performed with a secret key of 16 bits.</p>
+<p>The Mini-AES S-box is called <em>NibbleSub</em>, and defines a simple operation that substitutes each input with an output according to a 4x4 substitution table (S-box) given in the table below. These values are, in fact, taken from the first row of the first S-box in DES.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">NibbleSub Truth Table</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Input</td>
+<td>Output</td>
+</tr>
+<tr class="row-odd"><td>0000</td>
+<td>1110</td>
+</tr>
+<tr class="row-even"><td>0001</td>
+<td>0100</td>
+</tr>
+<tr class="row-odd"><td>0010</td>
+<td>1101</td>
+</tr>
+<tr class="row-even"><td>0011</td>
+<td>0001</td>
+</tr>
+<tr class="row-odd"><td>0100</td>
+<td>0010</td>
+</tr>
+<tr class="row-even"><td>0101</td>
+<td>1111</td>
+</tr>
+<tr class="row-odd"><td>0110</td>
+<td>1011</td>
+</tr>
+<tr class="row-even"><td>0111</td>
+<td>1000</td>
+</tr>
+<tr class="row-odd"><td>1000</td>
+<td>0011</td>
+</tr>
+<tr class="row-even"><td>1001</td>
+<td>1010</td>
+</tr>
+<tr class="row-odd"><td>1010</td>
+<td>0110</td>
+</tr>
+<tr class="row-even"><td>1011</td>
+<td>1100</td>
+</tr>
+<tr class="row-odd"><td>1100</td>
+<td>0101</td>
+</tr>
+<tr class="row-even"><td>1101</td>
+<td>1001</td>
+</tr>
+<tr class="row-odd"><td>1110</td>
+<td>0000</td>
+</tr>
+<tr class="row-even"><td>1111</td>
+<td>0111</td>
+</tr>
+</tbody>
+</table>
+<p>The inverse of the previous table is easily computed by interchanging the input nibble with the output nibble, and then resorting it based on the new input nibble, as given in the table below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">NibbleSubInv Truth Table</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Input</td>
+<td>Output</td>
+</tr>
+<tr class="row-odd"><td>0000</td>
+<td>1110</td>
+</tr>
+<tr class="row-even"><td>0001</td>
+<td>0011</td>
+</tr>
+<tr class="row-odd"><td>0010</td>
+<td>0100</td>
+</tr>
+<tr class="row-even"><td>0011</td>
+<td>1000</td>
+</tr>
+<tr class="row-odd"><td>0100</td>
+<td>0001</td>
+</tr>
+<tr class="row-even"><td>0101</td>
+<td>1100</td>
+</tr>
+<tr class="row-odd"><td>0110</td>
+<td>1010</td>
+</tr>
+<tr class="row-even"><td>0111</td>
+<td>1111</td>
+</tr>
+<tr class="row-odd"><td>1000</td>
+<td>0111</td>
+</tr>
+<tr class="row-even"><td>1001</td>
+<td>1101</td>
+</tr>
+<tr class="row-odd"><td>1010</td>
+<td>1001</td>
+</tr>
+<tr class="row-even"><td>1011</td>
+<td>0110</td>
+</tr>
+<tr class="row-odd"><td>1100</td>
+<td>1011</td>
+</tr>
+<tr class="row-even"><td>1101</td>
+<td>0010</td>
+</tr>
+<tr class="row-odd"><td>1110</td>
+<td>0000</td>
+</tr>
+<tr class="row-even"><td>1111</td>
+<td>0101</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="7%" />
+<col width="7%" />
+<col width="8%" />
+<col width="7%" />
+<col width="8%" />
+<col width="7%" />
+<col width="10%" />
+<col width="18%" />
+<col width="9%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">S-box</th>
+<th class="head">size</th>
+<th class="head"><em>NL</em></th>
+<th class="head"><em>NL2</em></th>
+<th class="head"><em>LD</em></th>
+<th class="head"><em>DEG</em></th>
+<th class="head"><em>AI</em></th>
+<th class="head"><em>MAXAC</em></th>
+<th class="head"><img class="math" src="../images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><em>LP</em></th>
+<th class="head"><em>DP</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>NibbleSub</td>
+<td>4x4</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>1408</td>
+<td>0.5625</td>
+<td>0.5</td>
+</tr>
+<tr class="row-odd"><td>NibbleSubInv</td>
+<td>4x4</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>11408</td>
+<td>0.5625</td>
+<td>0.5</td>
+</tr>
+<tr class="row-even"><td>MixColumn</td>
+<td>8x8</td>
+<td>0</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>256</td>
+<td>16777216</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="nibblesub">
+<h2>NibbleSub<a class="headerlink" href="#nibblesub" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="representations">
+<h3>Representations<a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.char">Characteristic Function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.wal">Walsh Spectrum</a></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="9%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>16</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>12</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>-12</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>-12</td>
+<td>-4</td>
+<td>-4</td>
+<td>4</td>
+<td>4</td>
+<td>-4</td>
+<td>-4</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>-8</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>-8</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>-4</td>
+<td>0</td>
+<td>8</td>
+<td>4</td>
+<td>-4</td>
+<td>0</td>
+<td>-8</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>4</td>
+<td>-4</td>
+<td>8</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+<td>4</td>
+<td>8</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>-4</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>-8</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>8</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>4</td>
+<td>4</td>
+<td>-4</td>
+<td>4</td>
+<td>-4</td>
+<td>-4</td>
+<td>-12</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>-8</td>
+<td>0</td>
+<td>-4</td>
+<td>4</td>
+<td>0</td>
+<td>8</td>
+<td>4</td>
+<td>-4</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>8</td>
+<td>-4</td>
+<td>4</td>
+<td>-8</td>
+<td>0</td>
+<td>4</td>
+<td>-4</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>8</td>
+<td>0</td>
+<td>-8</td>
+<td>8</td>
+<td>0</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>-4</td>
+<td>8</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>8</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+<td>8</td>
+<td>0</td>
+<td>4</td>
+<td>-8</td>
+<td>-4</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+<td>-8</td>
+<td>0</td>
+<td>4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>-8</td>
+<td>4</td>
+<td>-4</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>-4</td>
+<td>-8</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>8</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="../images/Nibble.png"><img alt="../images/Nibble.png" class="align-center" src="../images/Nibble.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="other-useful-information-in-cryptanalysis">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#other-useful-information-in-cryptanalysis" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>14</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are 7 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 1],[0 1 1 1])</span>
+<span class="go">([0 1 0 0],[0 1 0 1])</span>
+<span class="go">([1 0 1 0],[1 1 1 1])</span>
+<span class="go">([1 0 1 1],[0 1 0 1])</span>
+<span class="go">([1 1 0 1],[1 0 0 1])</span>
+<span class="go">([1 1 1 0],[1 1 1 0])</span>
+<span class="go">([1 1 1 1],[0 1 0 1])</span>
+</pre></div>
+</div>
+<p>It has no fixed points and 2 negated fixed points: (0,0,1,0), (0,1,1,1)</p>
+</div>
+</div>
+<div class="section" id="nibblesubinv">
+<h2>NibbleSubInv<a class="headerlink" href="#nibblesubinv" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Representations<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.char">Characteristic Function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.wal">Walsh Spectrum</a></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="5%" />
+<col width="8%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="8%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="8%" />
+<col width="8%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>16</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>-4</td>
+<td>4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>8</td>
+<td>8</td>
+<td>-4</td>
+<td>4</td>
+<td>4</td>
+<td>-4</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>8</td>
+<td>4</td>
+<td>4</td>
+<td>-8</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>-4</td>
+<td>0</td>
+<td>8</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+<td>4</td>
+<td>-8</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>-8</td>
+<td>8</td>
+<td>-4</td>
+<td>-4</td>
+<td>-4</td>
+<td>-4</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>-8</td>
+<td>0</td>
+<td>0</td>
+<td>-8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>8</td>
+<td>-8</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>-4</td>
+<td>8</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+<td>4</td>
+<td>8</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>12</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+<td>-8</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>-8</td>
+<td>-4</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>4</td>
+<td>0</td>
+<td>-12</td>
+<td>-4</td>
+<td>0</td>
+<td>-4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>0</td>
+<td>-4</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>0</td>
+<td>4</td>
+<td>-4</td>
+<td>0</td>
+<td>-8</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>8</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>4</td>
+<td>-4</td>
+<td>4</td>
+<td>4</td>
+<td>8</td>
+<td>0</td>
+<td>-4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>8</td>
+<td>0</td>
+<td>-4</td>
+<td>-4</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>-4</td>
+<td>8</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>-8</td>
+<td>-4</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>-8</td>
+<td>-4</td>
+<td>0</td>
+<td>4</td>
+<td>-4</td>
+<td>8</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>0</td>
+<td>-12</td>
+<td>-4</td>
+<td>4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>4</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>4</td>
+<td>-12</td>
+<td>-4</td>
+<td>0</td>
+<td>0</td>
+<td colspan="3">-4 <a href="#id8"><span class="problematic" id="id9">|</span></a>4 <a href="#id10"><span class="problematic" id="id11">|</span></a>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="../images/NibbleSubInv.png"><img alt="../images/NibbleSubInv.png" class="align-center" src="../images/NibbleSubInv.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id15">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>14</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>There are 7 linear structures:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 0],[0 0 1 0])</span>
+<span class="go">([0 1 0 1],[1 0 1 1])</span>
+<span class="go">([1 0 0 0],[0 0 1 1])</span>
+<span class="go">([1 0 0 0],[1 0 0 0])</span>
+<span class="go">([1 0 0 0],[1 0 1 1])</span>
+<span class="go">([1 0 1 0],[0 0 0 1])</span>
+<span class="go">([1 1 0 1],[1 0 1 1])</span>
+</pre></div>
+</div>
+<p>It has no fixed points and 2 negated fixed points: (1,0,0,0), (1,1,0,1)</p>
+</div>
+</div>
+<div class="section" id="mixcolumn">
+<h2>MixColumn<a class="headerlink" href="#mixcolumn" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id16">
+<h3>Representations<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.char">Characteristic Function</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.wal">Walsh Spectrum</a></p>
+<p>Walsh Spectrum representation (except first row and column):</p>
+<a class="reference internal image-reference" href="../images/mixcolumn.png"><img alt="../images/mixcolumn.png" class="align-center" src="../images/mixcolumn.png" style="width: 750px;" /></a>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.lp">Linear Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.dp">Differential Profile</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.ac">Autocorrelation Spectrum</a></p>
+</div>
+<div class="section" id="id25">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>16</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<p>There 65025 linear structures</p>
+<p>It has 15 fixed points: (0,0,0,0,0,0,0,0), (0,0,0,1,0,0,0,1), (0,0,1,0,0,0,1,0), (0,0,1,1,0,0,1,1), (0,1,0,0,0,1,0,0), (0,1,0,1,0,1,0,1), (0,1,1,0,0,1,1,0), (0,1,1,1,0,1,1,1), (1,0,0,0,1,0,0,0), (1,0,0,1,1,0,0,1), (1,0,1,0,1,0,1,0), (1,0,1,1,1,0,1,1), (1,1,0,0,1,1,0,0), (1,1,0,1,1,1,0,1), (1,1,1,0,1,1,1,0)</p>
+<p>It has 16 negated fixed points: (0,0,0,0,1,1,1,0), (0,0,0,1,1,1,1,1), (0,0,1,0,1,1,0,0), (0,0,1,1,1,1,0,1), (0,1,0,0,1,0,1,0), (0,1,0,1,1,0,1,1), (0,1,1,0,1,0,0,0), (0,1,1,1,1,0,0,1), (1,0,0,0,0,1,1,0), (1,0,0,1,0,1,1,1), (1,0,1,0,0,1,0,0), (1,0,1,1,0,1,0,1), (1,1,0,0,0,0,1,0), (1,1,0,1,0,0,1,1), (1,1,1,0,0,0,0,0), (1,1,1,1,0,0,0,1)</p>
+</div>
+</div>
+<div class="section" id="ks0">
+<h2>ks0<a class="headerlink" href="#ks0" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id26">
+<h3>Representations<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks0.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks0.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks0.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/ks0.wal.gz">Walsh Spectrum (each row represents a column of Walsh Spectrum)</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/ks0.lp.gz">Linear Profile (each row represents a column of Linear Profile)</a></p>
+</div>
+<div class="section" id="id30">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>65536</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="ks1">
+<h2>ks1<a class="headerlink" href="#ks1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id31">
+<h3>Representations<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks1.pdf">Polynomial representation in ANF</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks1.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks1.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/ks1.wal.gz">Walsh Spectrum (each row represents a column of Walsh Spectrum)</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/ks1.lp.gz">Linear Profile (each row represents a column of Linear Profile)</a></p>
+</div>
+<div class="section" id="id37">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>28</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>60</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>1223</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>26097</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>38097</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="ks2">
+<h2>ks2<a class="headerlink" href="#ks2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id38">
+<h3>Representations<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<p>Polynomial representation in ANF:</p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f1.pdf">f1</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f2.pdf">f2</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f3.pdf">f3</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f4.pdf">f4</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f5.pdf">f5</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f6.pdf">f6</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f7.pdf">f7</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f8.pdf">f8</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f9.pdf">f9</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f10.pdf">f10</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f11.pdf">f11</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f12.pdf">f12</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f13.pdf">f13</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f14.pdf">f14</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f15.pdf">f15</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f16.pdf">f16</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks2.tt">Truth Table</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks2.anf">ANF Table</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/ks2.wal.gz">Walsh Spectrum (each row represents a column of Walsh Spectrum)</a></p>
+<p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/ks2.lp.gz">Linear Profile (each row represents a column of Linear Profile)</a></p>
+</div>
+<div class="section" id="id43">
+<h3>Other useful information in cryptanalysis<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
+<p>Cycle structure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cycle length</th>
+<th class="head">Number of cycles</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>12</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>15</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>30</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>109</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>385</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>831</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>2472</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>3617</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>9775</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>16777</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>31482</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id44">
+<h2>mini-AES<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h2>
+<p>Algebraic degree from key 00000 to 65535 is equal to 14</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/cycle.pdf">Cycle structure from key 00000 to 65535</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/points.pdf">Fixed and negated points from key 00000 to 65535</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/nl.pdf">Nonlinearities from key 00000 to 65535</a></p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/fi.s">Nonlinearities in ascendent order</a></p>
+<p>Graphical display of the distribution of the nonlinearities of mini-AES:</p>
+<a class="reference internal image-reference" href="../images/hist-miniAES.jpeg"><img alt="../images/hist-miniAES.jpeg" class="align-center" src="../images/hist-miniAES.jpeg" style="width: 750px;" /></a>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Descriptive Statistics of mini-AES nonlinearities</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Unique Values</td>
+<td>130</td>
+</tr>
+<tr class="row-odd"><td>Min</td>
+<td>31432</td>
+</tr>
+<tr class="row-even"><td>Max</td>
+<td>32040</td>
+</tr>
+<tr class="row-odd"><td>Mean</td>
+<td>31912.9894</td>
+</tr>
+<tr class="row-even"><td>Mean Deviation</td>
+<td>8.6571</td>
+</tr>
+<tr class="row-odd"><td>1st Quartile</td>
+<td>31880</td>
+</tr>
+<tr class="row-even"><td>Median</td>
+<td>31924</td>
+</tr>
+<tr class="row-odd"><td>3rd Quartile</td>
+<td>31960</td>
+</tr>
+<tr class="row-even"><td>Mode</td>
+<td>31952</td>
+</tr>
+<tr class="row-odd"><td>Range</td>
+<td>608</td>
+</tr>
+<tr class="row-even"><td>Variance</td>
+<td>3903.8642</td>
+</tr>
+<tr class="row-odd"><td>Standard Deviation</td>
+<td>62.4809</td>
+</tr>
+<tr class="row-even"><td>Kkewness</td>
+<td>-1.092059</td>
+</tr>
+<tr class="row-odd"><td>Kurtosis</td>
+<td>1.79284</td>
+</tr>
+<tr class="row-even"><td>P0.5</td>
+<td>31692</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>31720</td>
+</tr>
+<tr class="row-even"><td>P5</td>
+<td>31796</td>
+</tr>
+<tr class="row-odd"><td>P95</td>
+<td>31992</td>
+</tr>
+<tr class="row-even"><td>P99</td>
+<td>32012</td>
+</tr>
+<tr class="row-odd"><td>P99.5</td>
+<td>32016</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60418502-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+   
+
+</body>
+</html>
