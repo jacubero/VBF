@@ -215,64 +215,64 @@
 <h1>Operations and constructions over Vector Boolean Functions<a class="headerlink" href="#operations-and-constructions-over-vector-boolean-functions" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#equality-testing" id="id34">Equality testing</a><ul>
-<li><a class="reference internal" href="#description" id="id35">Description</a></li>
-<li><a class="reference internal" href="#library" id="id36">Library</a></li>
+<li><a class="reference internal" href="#equality-testing" id="id32">Equality testing</a><ul>
+<li><a class="reference internal" href="#description" id="id33">Description</a></li>
+<li><a class="reference internal" href="#library" id="id34">Library</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#composition" id="id37">Composition</a><ul>
-<li><a class="reference internal" href="#id5" id="id38">Description</a></li>
-<li><a class="reference internal" href="#id6" id="id39">Library</a></li>
+<li><a class="reference internal" href="#composition" id="id35">Composition</a><ul>
+<li><a class="reference internal" href="#id5" id="id36">Description</a></li>
+<li><a class="reference internal" href="#id6" id="id37">Library</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#inverse" id="id40">Inverse</a><ul>
-<li><a class="reference internal" href="#id9" id="id41">Description</a></li>
-<li><a class="reference internal" href="#id10" id="id42">Library</a></li>
+<li><a class="reference internal" href="#inverse" id="id38">Inverse</a><ul>
+<li><a class="reference internal" href="#id9" id="id39">Description</a></li>
+<li><a class="reference internal" href="#id10" id="id40">Library</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#sum" id="id43">Sum</a><ul>
-<li><a class="reference internal" href="#id12" id="id44">Description</a></li>
-<li><a class="reference internal" href="#id13" id="id45">Library</a></li>
+<li><a class="reference internal" href="#sum" id="id41">Sum</a><ul>
+<li><a class="reference internal" href="#id12" id="id42">Description</a></li>
+<li><a class="reference internal" href="#id13" id="id43">Library</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#direct-sum" id="id46">Direct sum</a><ul>
-<li><a class="reference internal" href="#id15" id="id47">Description</a></li>
-<li><a class="reference internal" href="#id16" id="id48">Library</a></li>
+<li><a class="reference internal" href="#direct-sum" id="id44">Direct sum</a><ul>
+<li><a class="reference internal" href="#id15" id="id45">Description</a></li>
+<li><a class="reference internal" href="#id16" id="id46">Library</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#concatenation" id="id49">Concatenation</a><ul>
-<li><a class="reference internal" href="#id19" id="id50">Description</a></li>
-<li><a class="reference internal" href="#id20" id="id51">Library</a></li>
+<li><a class="reference internal" href="#concatenation" id="id47">Concatenation</a><ul>
+<li><a class="reference internal" href="#id19" id="id48">Description</a></li>
+<li><a class="reference internal" href="#id20" id="id49">Library</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#concatenation-of-polynomials-in-anf" id="id52">Concatenation of polynomials in ANF</a><ul>
-<li><a class="reference internal" href="#id22" id="id53">Description</a></li>
-<li><a class="reference internal" href="#id25" id="id54">Library</a></li>
+<li><a class="reference internal" href="#concatenation-of-polynomials-in-anf" id="id50">Concatenation of polynomials in ANF</a><ul>
+<li><a class="reference internal" href="#id22" id="id51">Description</a></li>
+<li><a class="reference internal" href="#id23" id="id52">Library</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#addition-of-coordinate-functions" id="id55">Addition of coordinate functions</a><ul>
-<li><a class="reference internal" href="#id27" id="id56">Description</a></li>
-<li><a class="reference internal" href="#id28" id="id57">Library</a></li>
+<li><a class="reference internal" href="#addition-of-coordinate-functions" id="id53">Addition of coordinate functions</a><ul>
+<li><a class="reference internal" href="#id25" id="id54">Description</a></li>
+<li><a class="reference internal" href="#id26" id="id55">Library</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#bricklayer" id="id58">Bricklayer</a><ul>
-<li><a class="reference internal" href="#id30" id="id59">Description</a></li>
-<li><a class="reference internal" href="#id31" id="id60">Library</a></li>
+<li><a class="reference internal" href="#bricklayer" id="id56">Bricklayer</a><ul>
+<li><a class="reference internal" href="#id28" id="id57">Description</a></li>
+<li><a class="reference internal" href="#id29" id="id58">Library</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#summary" id="id61">Summary</a></li>
+<li><a class="reference internal" href="#summary" id="id59">Summary</a></li>
 </ul>
 </div>
 <p>In this chapter, some basic constructions for Vector Boolean functions supported by the VBF class are described. Some of them correspond to secondary constructions, which build <img class="math" src="images/math/b21618efac1dc9054dc4e58b7afaf4f2426f96a9.png" alt="(n,m)"/> variable vector Boolean functions from <img class="math" src="images/math/28524c96644a311611c8ddaa47455335f926f947.png" alt="(n',m')"/> variable ones (with <img class="math" src="images/math/3c8d5efc24f9ff591f3c3c2b2dde1e1956b12a52.png" alt="n' \leq n, m' \leq m"/>). The direct sum has been used to construct resilient and bent Boolean functions <a class="reference internal" href="bibliography.html#carlet-04" id="id1">[Carlet:04]</a>. The concatenation can be used to obtain resilient functions or functions with maximal nonlinearity. The concatenation of polynomials in ANF can be used to obtain functions of high nonlinearity with <img class="math" src="images/math/8fc5c35e3130b5c4b647b65d8de30c3a16c68a36.png" alt="n"/> variables from functions with high nonlinearity with <img class="math" src="images/math/c758babcf1dab882c42067c6ae8ad7770b5748ea.png" alt="n'"/> variables <img class="math" src="images/math/53f7647f98e24053ebcc8d5da16c50fc968ae514.png" alt="(n' &lt; n)"/>. Adding coordinate functions and bricklayering are constructions used to build modern ciphers such as CAST <a class="reference internal" href="bibliography.html#cast-256" id="id2">[CAST:256]</a>, DES <a class="reference internal" href="bibliography.html#des-77" id="id3">[DES:77]</a> and AES <a class="reference internal" href="bibliography.html#daemenr-02" id="id4">[DaemenR:02]</a>. Additionally, VBF provides operations for
 identification if two vector Boolean functions are equal, the sum of two vector Boolean functions, the composition of two vector Boolean functions and the inverse of a Vector Boolean function.</p>
 <div class="section" id="equality-testing">
-<h2><a class="toc-backref" href="#id34">Equality testing</a><a class="headerlink" href="#equality-testing" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id32">Equality testing</a><a class="headerlink" href="#equality-testing" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description">
-<h3><a class="toc-backref" href="#id35">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id33">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
 <p>Let <img class="math" src="images/math/55c8b30fa512982f0c4481cd21852f1d8c1ffbeb.png" alt="n \geq 1, m \geq 1"/>, <img class="math" src="images/math/de8c4fc651c833c66445ed88fb4eb354fdd7ea7d.png" alt="F,G \in \funct{F}_{n,m}"/>. <em>F</em> and <em>G</em> are <em>equal</em> if their Truth Tables are the same.</p>
 </div>
 <div class="section" id="library">
-<h3><a class="toc-backref" href="#id36">Library</a><a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id34">Library</a><a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h3>
 <p>We can compare two functions for equality with the following method:</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="kt">long</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 <span class="kt">long</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
@@ -328,14 +328,14 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </div>
 </div>
 <div class="section" id="composition">
-<h2><a class="toc-backref" href="#id37">Composition</a><a class="headerlink" href="#composition" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id35">Composition</a><a class="headerlink" href="#composition" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id5">
-<h3><a class="toc-backref" href="#id38">Description</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id36">Description</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>Let <img class="math" src="images/math/01cb399dd9404dc21503ee1a9415124466369f1f.png" alt="F \in \funct{F}_{n,p}"/>, <img class="math" src="images/math/a2fe85128ab9cc59be22cffdff4b0b5d31539e9e.png" alt="G \in \funct{F}_{p,m}"/> and the composition function <img class="math" src="images/math/90f335a4c8fa2f7042afa3decc5c8531778b78a5.png" alt="G \circ F \in \funct{F}_{n,m}"/> where <img class="math" src="images/math/5b7c1abd127fd4f33240513dbf32773e98ac86af.png" alt="G \circ F (\vec{x}) = G (F(\vec{x})) \ \fa \vec{x} \in \gf{V_n}"/>.</p>
 <a class="reference internal image-reference" href="images/Composition.png"><img alt="images/Composition.png" class="align-center" src="images/Composition.png" style="width: 750px;" /></a>
 </div>
 <div class="section" id="id6">
-<h3><a class="toc-backref" href="#id39">Library</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id37">Library</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>It can be obtained with the following method:</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">Comp</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
@@ -516,14 +516,14 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </div>
 </div>
 <div class="section" id="inverse">
-<h2><a class="toc-backref" href="#id40">Inverse</a><a class="headerlink" href="#inverse" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id38">Inverse</a><a class="headerlink" href="#inverse" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id9">
-<h3><a class="toc-backref" href="#id41">Description</a><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id39">Description</a><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <p>Let <img class="math" src="images/math/ff1ddd15aee35b4682121107638ec3eb52b2fe13.png" alt="n \geq 1$, $F \in \funct{F}_{n,n}"/>. <img class="math" src="images/math/2028fb36641c00155779820046bc1e7a177e9b08.png" alt="F^{-1}"/> is the <em>functional inverse</em> of <em>F</em> if the composition of both functions results in the identity function.</p>
 <a class="reference internal image-reference" href="images/Inverse.png"><img alt="images/Inverse.png" class="align-center" src="images/Inverse.png" style="width: 750px;" /></a>
 </div>
 <div class="section" id="id10">
-<h3><a class="toc-backref" href="#id42">Library</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id40">Library</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>If a Vector Boolean Function $F in funct{F}_{n,n}$ is invertible, then we can find its inverse with the following method:</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">inv</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
@@ -584,13 +584,13 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </div>
 </div>
 <div class="section" id="sum">
-<h2><a class="toc-backref" href="#id43">Sum</a><a class="headerlink" href="#sum" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id41">Sum</a><a class="headerlink" href="#sum" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id12">
-<h3><a class="toc-backref" href="#id44">Description</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id42">Description</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <p>Let <img class="math" src="images/math/55c8b30fa512982f0c4481cd21852f1d8c1ffbeb.png" alt="n \geq 1, m \geq 1"/>, <img class="math" src="images/math/de8c4fc651c833c66445ed88fb4eb354fdd7ea7d.png" alt="F,G \in \funct{F}_{n,m}"/>. The <em>Sum</em> of <em>F</em> and <em>G</em>, denoted by <img class="math" src="images/math/2108eebc03556e10a000a2f4a76cadb0b782afd7.png" alt="F + G \in \funct{F}_{n,m}"/> is the Vector Boolean Function whose Truth Table results from the addition of the Truth Tables of <em>F</em> and <em>G</em>: <img class="math" src="images/math/284d029da88d51a2a4c493f63005248c1cdc21df.png" alt="\matr{T}_{F+G} = \matr{T}_F+\matr{T}_G"/>.</p>
 </div>
 <div class="section" id="id13">
-<h3><a class="toc-backref" href="#id45">Library</a><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id43">Library</a><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <p>It can be obtained with the following method:</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">sum</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
@@ -681,14 +681,14 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </div>
 </div>
 <div class="section" id="direct-sum">
-<h2><a class="toc-backref" href="#id46">Direct sum</a><a class="headerlink" href="#direct-sum" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id44">Direct sum</a><a class="headerlink" href="#direct-sum" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id15">
-<h3><a class="toc-backref" href="#id47">Description</a><a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id45">Description</a><a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <p>Let <img class="math" src="images/math/2dfa34395f449d68b80a3edd31481b8454ac2095.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="images/math/c382c142f71217e6b48e940e87b6c4e54221837f.png" alt="F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="images/math/a6b3bb40fe9e15eeec045dc60049c7df296e3afe.png" alt="F_1 \oplus F_2 \in \funct{F}_{n_1+n_2,m}"/>, called direct sum, defined as <img class="math" src="images/math/629ce091ee46d93cf6f918f0f4bd08f83ec6ab7d.png" alt="(F_1 \oplus F_2) \left( (\vec{x_1},\vec{x_2}) \right)= F_1(\vec{x_1}) + F_2(\vec{x_2})"/>.</p>
 <a class="reference internal image-reference" href="images/DirectSum.png"><img alt="images/DirectSum.png" class="align-center" src="images/DirectSum.png" style="width: 750px;" /></a>
 </div>
 <div class="section" id="id16">
-<h3><a class="toc-backref" href="#id48">Library</a><a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id46">Library</a><a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <p>The method included in VBF to perform this construction is the following:</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">directsum</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
@@ -832,13 +832,13 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </div>
 </div>
 <div class="section" id="concatenation">
-<h2><a class="toc-backref" href="#id49">Concatenation</a><a class="headerlink" href="#concatenation" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id47">Concatenation</a><a class="headerlink" href="#concatenation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id19">
-<h3><a class="toc-backref" href="#id50">Description</a><a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id48">Description</a><a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <p>Let <img class="math" src="images/math/2dfa34395f449d68b80a3edd31481b8454ac2095.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="images/math/c8cfefcbb0066324312d4e8a7efc7d3d113f7ecd.png" alt="F_1 \in \funct{F}_{n,m}, F_2 \in \funct{F}_{n,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="images/math/92cb66050182fee39e9032197c77b74ad8d5c5d9.png" alt="F_1 |_{c} F_2 \in \funct{F}_{n+1,m}"/> defined as <img class="math" src="images/math/7cb7c9085eda5e7496d943331454d246aefa9297.png" alt="(\vec{x},x_{n+1}) \rightarrow \left( x_{n+1}+1 \right) F_1(\vec{x})+ x_{n+1} F_2(\vec{x})"/> where <img class="math" src="images/math/e638ef401ecd2a3f96a168ae956d6ddb447f0a96.png" alt="\vec{x} \in \gf{V_n}"/>.</p>
 </div>
 <div class="section" id="id20">
-<h3><a class="toc-backref" href="#id51">Library</a><a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id49">Library</a><a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <p>The method included in VBF to perform this construction is the following:</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">concat</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
@@ -957,19 +957,19 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </div>
 </div>
 <div class="section" id="concatenation-of-polynomials-in-anf">
-<h2><a class="toc-backref" href="#id52">Concatenation of polynomials in ANF</a><a class="headerlink" href="#concatenation-of-polynomials-in-anf" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id50">Concatenation of polynomials in ANF</a><a class="headerlink" href="#concatenation-of-polynomials-in-anf" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id22">
-<h3><a class="toc-backref" href="#id53">Description</a><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
-<p>Let <img class="math" src="images/math/2dfa34395f449d68b80a3edd31481b8454ac2095.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="images/math/c382c142f71217e6b48e940e87b6c4e54221837f.png" alt="F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="images/math/8b67722d23a901c5a7c4dc994768bd9857ed369a.png" alt="F_1 |_{p} F_2 \in \funct{F}_{n_1+n_2,m}"/> defined as <img class="math" src="images/math/663a463ccef50ed921945ce3ceb4f570e6404f64.png" alt="(x_1,\ldots,x_{n_1},x_{n_1+1},\ldots,x_{n_1+n_2}) \rightarrow F_1(x_1,\ldots,x_{n_1})+ F_2(x_{n_1+1},\ldots,x_{n_1+n_2})"/> where :math:<a href="#id23"><span class="problematic" id="id24">`</span></a>vec{x} in gf{V_{n_1+n_2}}.</p>
+<h3><a class="toc-backref" href="#id51">Description</a><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p>Let <img class="math" src="images/math/2dfa34395f449d68b80a3edd31481b8454ac2095.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="images/math/c382c142f71217e6b48e940e87b6c4e54221837f.png" alt="F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="images/math/8b67722d23a901c5a7c4dc994768bd9857ed369a.png" alt="F_1 |_{p} F_2 \in \funct{F}_{n_1+n_2,m}"/> defined as <img class="math" src="images/math/663a463ccef50ed921945ce3ceb4f570e6404f64.png" alt="(x_1,\ldots,x_{n_1},x_{n_1+1},\ldots,x_{n_1+n_2}) \rightarrow F_1(x_1,\ldots,x_{n_1})+ F_2(x_{n_1+1},\ldots,x_{n_1+n_2})"/> where <img class="math" src="images/math/365c2853b96040a3a3886781b6446f889e8f8bb1.png" alt="\vec{x} \in \gf{V_{n_1+n_2}}"/>.</p>
 </div>
-<div class="section" id="id25">
-<h3><a class="toc-backref" href="#id54">Library</a><a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id23">
+<h3><a class="toc-backref" href="#id52">Library</a><a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <p>The method included in VBF to perform this construction is the following:</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">concatpol</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="id26">
-<h4>Example<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id24">
+<h4>Example<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the ANF of the concatenation of polynomials in ANF of two Vector Boolean functions given its polynomial representation.</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
 <span class="cp">#include &lt;fstream&gt;</span>
@@ -1020,20 +1020,20 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </div>
 </div>
 <div class="section" id="addition-of-coordinate-functions">
-<h2><a class="toc-backref" href="#id55">Addition of coordinate functions</a><a class="headerlink" href="#addition-of-coordinate-functions" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id27">
-<h3><a class="toc-backref" href="#id56">Description</a><a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id53">Addition of coordinate functions</a><a class="headerlink" href="#addition-of-coordinate-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id25">
+<h3><a class="toc-backref" href="#id54">Description</a><a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
 <p>Let <img class="math" src="images/math/e0a3a35b03ea69e93467ee9e7f2c9ccbb97ec12b.png" alt="F=(f_1,\ldots,f_{m_1}) \in \funct{F}_{n,m_1}"/>, <img class="math" src="images/math/107b48e68d326750c07c4bdcea8ecbc286b8787e.png" alt="G=(g_1,\ldots,g_{m_2}) \in \funct{F}_{n,m_2}"/> and the function conformed by adding the coordinate functions <img class="math" src="images/math/06f6c39d7bbbb014d7ca13e317ccde28c3154c28.png" alt="(F,G) =(f_1,\dots,f_{m_1},g_1,\ldots,g_{m_2}) \in \funct{F}_{n,m_1+m_2}"/>. Let <img class="math" src="images/math/ae1ff34f321f497a0240bd2dcf39a34b433f7fbc.png" alt="\vec{v} \in \gf{V_{m_1+m_2}}"/>, <img class="math" src="images/math/4dc01f4e7f198c614d74dce1c7d42ab4627cc68d.png" alt="\vec{v_F} \in \gf{V_{m_1}}"/> and <img class="math" src="images/math/05f24d15383f39e18aadafc9f5e36678336eb9b2.png" alt="\vec{v_G} \in \gf{V_{m_2}}"/> so that <img class="math" src="images/math/f1ed186067c5513d8576b66efdeba8b5619fcaec.png" alt="\vec{v} = (\vec{v_F}, \vec{v_G})"/>.</p>
 <a class="reference internal image-reference" href="images/AddImage.png"><img alt="images/AddImage.png" class="align-center" src="images/AddImage.png" style="width: 750px;" /></a>
 </div>
-<div class="section" id="id28">
-<h3><a class="toc-backref" href="#id57">Library</a><a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id26">
+<h3><a class="toc-backref" href="#id55">Library</a><a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <p>This construction can be obtained with the following method:</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">addimage</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="id29">
-<h4>Example<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id27">
+<h4>Example<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the Truth Tables of the different intermediate constructions that allow to obtain CLEFIA <img class="math" src="images/math/774b18b6427c81f5a4e5edb37844fdcaee529452.png" alt="S_0"/> <img class="math" src="images/math/d40b7c0e8501fe5022955f0e30246a197a1732ee.png" alt="8 \times 8"/> S-box from the Truth Tables of the four 4-bit S-boxes <img class="math" src="images/math/7dbebae876f4d76e972583fe7934924dfb36030b.png" alt="SS_0,SS_1,SS_2"/> and <img class="math" src="images/math/e458b156a2dc524c085512d719245babc5b193d8.png" alt="SS_3"/> in which it is constructed and the Truth Table of the multiplication operation in <em>0x2</em> performed in <img class="math" src="images/math/be8bf6952ef89a325e77efc22f145e6458434d80.png" alt="\gf{GF(2^4)}"/> defined by the
 primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599fbecf4d425eaf308.png" alt="x^4 + x + 1"/>.</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
@@ -1145,20 +1145,20 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
 </div>
 </div>
 <div class="section" id="bricklayer">
-<h2><a class="toc-backref" href="#id58">Bricklayer</a><a class="headerlink" href="#bricklayer" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id30">
-<h3><a class="toc-backref" href="#id59">Description</a><a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id56">Bricklayer</a><a class="headerlink" href="#bricklayer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id28">
+<h3><a class="toc-backref" href="#id57">Description</a><a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
 <p>Let <img class="math" src="images/math/a5ea1d880d4663ab624ae91a93993f0d4c1c0672.png" alt="n_1,n_2,m_1,m_2 \geq 1"/> and <img class="math" src="images/math/7b65471691f29f8adda41ec6523b07eca48a148c.png" alt="F_1 \in \funct{F}_{n_1,m_1}"/> , <img class="math" src="images/math/bfffbd6a3030a1aebfcafbbb827eaa3681da2734.png" alt="F_2 \in \funct{F}_{n_2,m_2}"/> and the Bricklayer function <img class="math" src="images/math/6dcfa3d46054c73350ddb9cf62748cb12ca3c1f0.png" alt="F_1 | F_2 \in \funct{F}_{n_1+n_2,m_1+m_2}"/>. Let <img class="math" src="images/math/c11e359f2172458f69363c0c19980509ff2e7f1c.png" alt="\vec{u_1} \in \gf{V_{n_1}}"/>, <img class="math" src="images/math/b86e0a28efdcdd3ab6cba11f77d29d80c82e2c87.png" alt="\vec{u_2} \in \gf{V_{n_2}}"/> and <img class="math" src="images/math/2404026a316dd3e73c9fce243b24dbe2eafa11bc.png" alt="\vec{u}=(\vec{u_1} , \vec{u_2})"/>, <img class="math" src="images/math/d0390b9c1c7ad299408427df49841ca75dc28e86.png" alt="\vec{v_1} \in \gf{V_{m_1}}"/>, <img class="math" src="images/math/21515fa800ae2708c6d1a293ee1dbb8fb968740d.png" alt="\vec{v_2} \in \gf{V_{m_2}}"/> and <img class="math" src="images/math/403fd1dff26dd6b74a1428f0f6763b0f2847e54d.png" alt="\vec{v}=(\vec{v_1} , \vec{v_2})"/>.</p>
 <a class="reference internal image-reference" href="images/Bricklayer.png"><img alt="images/Bricklayer.png" class="align-center" src="images/Bricklayer.png" style="width: 750px;" /></a>
 </div>
-<div class="section" id="id31">
-<h3><a class="toc-backref" href="#id60">Library</a><a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id29">
+<h3><a class="toc-backref" href="#id58">Library</a><a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 <p>It can be obtained with the following method:</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">bricklayer</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="id32">
-<h4>Example 1<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id30">
+<h4>Example 1<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
 <p>KHAZAD is a block cipher designed by Paulo S. L. M. Barreto together with Vincent Rijmen, which was presented at the first NESSIE workshop in 2000, and, after some small changes, was selected as a finalist in the project. This cipher uses a <img class="math" src="images/math/d40b7c0e8501fe5022955f0e30246a197a1732ee.png" alt="8 \times 8"/> S-box composed of smaller pseudo-randomly generated <img class="math" src="images/math/8976852233990c4445ce14de4cabeff673492ce8.png" alt="4 \times 4"/> mini S-boxes (the P-box and the Q-box) as represented in the figure:</p>
 <img alt="images/KHAZADS.png" class="align-center" src="images/KHAZADS.png" />
 <p>The following program provides the Truth Tables of the different intermediate constructions that allow to obtain KHAZAD S-box from <em>P</em> and <em>Q</em> mini S-boxes and the permutation that apply between them.</p>
@@ -1236,8 +1236,8 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
 <p>If we use the Truth Tables of <em>P</em> and <em>Q</em> and the representation of the permutation between them, the output are the Truth Tables described KHAZAD section in &#8220;Analysis of NESSIE project cryptographic algorithms&#8221;. Spectral radius, nonlinearity, linear potential, differential potential and linearity distance for bricklayer of <em>P</em> and <em>Q</em> mini S-boxes:</p>
 <a class="reference internal image-reference" href="images/KHAZADCriteria.png"><img alt="images/KHAZADCriteria.png" class="align-center" src="images/KHAZADCriteria.png" style="width: 750px;" /></a>
 </div>
-<div class="section" id="id33">
-<h4>Example 2<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id31">
+<h4>Example 2<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the balancedness and correlation immunity (resiliency) of two Vector Boolean functions given its Truth Table in hexadecimal representation and calculates the same criteria for the bricklayering of <em>F</em> and <em>G</em> taking as inputs their Truth Tables in hexadecimal representation.</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
 <span class="cp">#include &lt;fstream&gt;</span>
@@ -1312,7 +1312,7 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
 </div>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id61">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id59">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="29%" />

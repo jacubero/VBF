@@ -6,7 +6,7 @@ We are going to illustrate the installation of the package in an Unix or Unix-li
 
 1. **Download the lastest version of the library** from `VBF source code URL <https://github.com/jacubero/VBF/tree/master/src>`_ and place it in the working directory. You should see the example program, input files and the "*.h" files. 
 
-2. **Obtain NTL library source code**. To obtain the source code and documentation for NTL, download ntl-xxx.tar.gz from `Download NTL library <http://www.shoup.net/ntl/download.html>`_, placing it in a different directory
+2. **Obtain NTL library source code**. To obtain the source code and documentation for NTL, download ntl-xxx.tar.gz from `Download NTL library <http://www.shoup.net/ntl/download.html>`_, placing it in a different directory.
 
 3. **Run the configuration script**. Working in the directory where you placed the NTL library, do the following (here, "xxx" denotes the desired version number of NTL; any version of NTL can be employed):
 

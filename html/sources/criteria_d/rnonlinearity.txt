@@ -14,7 +14,7 @@ For every positive integer *r*, the *r-th order nonlinearity* of a Vector Boolea
 	\crit{NL}_r(F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \crit{NL}_r(\vec{v} \cdot
 	F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \min_{f \in \funct{F}_n} d(f,\vec{v} \cdot F) 
 
-Computing *r*th-order nonlinearity is not an easy task for :math:`r \geq 2`. Unlike the first-order nonlinearity there are no efficient algorithms to compute second-order nonlinearities for :math:`n \geq 11`. VBF library naive exhaustive search is employed for this purpose.
+Computing r-th order nonlinearity is not an easy task for :math:`r \geq 2`. Unlike the first-order nonlinearity there are no efficient algorithms to compute second-order nonlinearities for :math:`n \geq 11`. VBF library naive exhaustive search is employed for this purpose.
 
 Library
 =======

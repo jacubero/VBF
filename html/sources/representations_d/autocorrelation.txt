@@ -26,6 +26,9 @@ From this definition of the autocorrelation function we note two important prope
 
 The Aucorrelation Spectrum gives an indication of the imbalance of all first order derivatives of the component functions of a Vector Boolean function. As differential cryptanalysis exploits imbalanced derivatives of Vector Boolean functions, the Aucorrelation Spectrum is vital in the analysis.
 
+*Autocorrelation Spectrum* is denoted by :math:`\matr{R}(F) \in
+  \matr{M}_{2^n \times 2^m}(\bbbz)`. The columns of the matrix correspond to the Autocorrelation Spectrum of their component functions. The lower bound of the Autocorrelation Spectrum values is :math:`-2^n` and the upper bound is :math:`2^n`.
+
 Linear structures
 =================
 
