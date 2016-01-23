@@ -5,7 +5,7 @@ Concatenation of polynomials in ANF
 Description
 ===========
 
-Let :math:`n_1,n_2 \geq 1`, :math:`F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}` be Vector Boolean functions. Consider the Vector Boolean function :math:`F_1 |_{p} F_2 \in \funct{F}_{n_1+n_2,m}` defined as :math:`(x_1,\ldots,x_{n_1},x_{n_1+1},\ldots,x_{n_1+n_2}) \rightarrow F_1(x_1,\ldots,x_{n_1})+ F_2(x_{n_1+1},\ldots,x_{n_1+n_2})` where :math:`\vec{x} \in \gf{V_{n_1+n_2}}.
+Let :math:`n_1,n_2 \geq 1`, :math:`F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}` be Vector Boolean functions. Consider the Vector Boolean function :math:`F_1 |_{p} F_2 \in \funct{F}_{n_1+n_2,m}` defined as :math:`(x_1,\ldots,x_{n_1},x_{n_1+1},\ldots,x_{n_1+n_2}) \rightarrow F_1(x_1,\ldots,x_{n_1})+ F_2(x_{n_1+1},\ldots,x_{n_1+n_2})` where :math:`\vec{x} \in \gf{V_{n_1+n_2}}`.
 
 Library
 =======

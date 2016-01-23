@@ -17,4 +17,4 @@ The package included consists of:
 
 4. A set of files associated with the decimal representation of KASUMI [KASUMI:05]_ S-boxes (S7.dec and S9.dec).
 
-The Output files can be found within "KASUMI Analysis" in the "Analysis of other cryptographic algorithms" menu at :ref:`KASUMI <secExamplesKASUMI>`.
+The Output files can be found within "KASUMI Analysis" in the "Analysis of other cryptographic algorithms" menu at `http://vbflibrary.tk`_.

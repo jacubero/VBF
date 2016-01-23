@@ -86,4 +86,4 @@ If we use the *NibbleSub* S-box Truth Table as input, the output would be the fo
 
 	Linearity distance of the function is 0
 
-TThis S-box has linear structures, and as a consequence, the distance to the set of all Boolean functions admitting nonzero linear structures is 0.  
+This S-box has linear structures, and as a consequence, the distance to the set of all Boolean functions admitting nonzero linear structures is 0.  
