@@ -1936,41 +1936,37 @@ namespace VBFNS {
    void CI(int& t, VBF& a)
    {
       int rep = a.getrep();
-      int goon = 1;
-      int bal;
+      int bal, c;
       int n = a.n();
       int m = a.m();
       int ci = a.getCI();
       NTL::mat_ZZ W;
-      
+
       if (rep == PERTRANSF || rep == EXP_COMP_TRANSF || rep == AFFINEMATRIX)
       {
-      	 t = 0;
+         t = 0;
          a.putCI(t);
          a.putbal(1);
-      }	 
+      }
       else if (ci == UNDEFINED)
       {
-         W = Walsh(a); 
+         W = Walsh(a);
          bal = WalshIsZero(W, n, m, 0);
          a.putbal(bal);
-      	 t = 1;
-         while ((t <= n) && goon)
-         { 
-            if (WalshIsZero(W, n, m, t))
-            {	
-               t++;
-               goon = 1;
-            } else {
-     	       t--;
-     	       goon = 0;
-            }	   
+         c = n;
+         for (t=1;t<=n;t++)
+         {
+            if (!WalshIsZero(W, n, m, t))
+            {
+               c = min(c,t);
+               break;
+            }
          }
-         if (t == (n+1)) t--;
+         t = c-1;
          a.putCI(t);
       } else {
-      	 t = ci;
-      }	 
+         t = ci;
+      }
    }   
 
    inline int CI(VBF& a)	
