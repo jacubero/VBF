@@ -344,88 +344,95 @@ void conv_longtomat_GF2(mat_GF2& x, const vec_long& a)
       x[i] = to_vecGF2(a[i],m);
 }
 
-void M(mat_GF2& X, const int& n, const int& deg, const vec_GF2& f, const long& t)
+vec_long Combinations(const int& n, const int& r)
 {
-   int i,j;
-   long x,rows,spacen,num,cont=1;
-   long *v = NULL;
-   NTL::ZZ a=to_ZZ(1), b, c;
-   NTL::mat_GF2 T;
+   long a, cont = 0;
+   vec_long w;
+
+   std::vector<bool> v(n);
+   std::fill(v.begin(), v.end() - n + r, true);
+
+   w.SetLength(to_long(numofweight(n,r)));
+   w[cont] = 0;
+
+   do {
+       a = 0;
+       for (int i = 0; i < n; ++i) {
+           if (v[i]) {
+               a = a + (1 << i);
+           }
+       }
+       w[cont] = a;
+       cont++;
+   } while (std::prev_permutation(v.begin(), v.end()));
+
+   return w;
+}
+
+int has_annihilator(const vec_GF2& f,const int& n, const int& deg)
+{
+   int i;
+   long a,b,j,k,spacen,cont,r;
+   NTL::mat_GF2 M,X,T;
+   NTL::vec_long c;
    vector<long> support;
 
    spacen = 1 << n;
    NTL::mat_GF2 A(INIT_SIZE, spacen,1);
 
-   rows = weight(f);
+   support.clear();
    for (i = 0; i < f.length(); i++)
    {
       if (f[i] == 1) support.push_back(i);
    }
- 
-   X.SetDims(rows,t);
 
-   for (i = 0; i < rows; i++)
+   a = 0;
+   for (i = 0; i <= deg; i++)
    {
-      X[i][0] = 1;
+      a = a + to_long(numofweight(n,i));
    }
-  
-   for (i = 1; i <= deg; i++)
+   b = weight(f);
+   M.SetDims(a,b);
+
+   cont = 0;
+   for (i = 0; i <= deg; i++)
    {
-      num = to_long(numofweight(n,i));
-      v = (long *) malloc(num * sizeof(long));
-      vectors_weight(v, n, i);
-
-      vector<long> vsorted (v,v+num);
-      vector<long>::iterator it;
-      std::sort(vsorted.begin(),vsorted.end());
-
-      for (it=vsorted.begin(); it!=vsorted.end(); ++it)
-      {
-         clear(A);
-         x = *it;
-         A[x][0] = 1;
-         T = rev(A, n, 1);
-
-         for (j = 0; j < rows; j++)
-         {
-	    X[j][cont] = T[support[j]][0];
-	 }
-	 cont++;
-      }
+       c = Combinations(n,i);
+       for (j = 0; j < c.length(); j++)
+       {
+           clear(A);
+           A[c[j]][0] = 1;
+           T = rev(A, n, 1);
+           for (k = 0; k < b; k++)
+           {
+              M[cont][k] = T[support[k]][0];
+           }
+           cont++;
+       }
    }
-    
+
+   kernel(X,M);
+   r = gauss(X);
+
+   return r;
 }
 
 int aibf(const vec_GF2& f, int n, int d)
 {
-   int  deg;
-   long r1,r2,r,t;
-   vec_GF2 fn;
-   mat_GF2 X;
+   int i;
+   long j;
+   vec_GF2 g;
 
-   t = 1;
+   g=f;
+   for (j = 0; j < g.length(); j++) g[j] = f[j]+1;
 
-   for (deg = 1; deg <= d-1; deg++)
+   for (i = 0; i <= d; i++)
    {
-       t = t + Combination(n,deg);
-
-       M(X,n,deg,f,t);
-       r1 = gauss(X);
-       NTL::negate(fn,f);
-       M(X,n,deg,fn,t);
-       r2 = gauss(X);
-
-       if (r1 < r2)
-       {
-          r = r1;
-       } else {
-          r = r2;
-       }
-
-       if (r < t) return deg;
+      if (has_annihilator(f,n,i)) return i;
+      if (has_annihilator(g,n,i)) return i;
    }
 
-   return d;
+   return 0;
 }
 
 mat_GF2 invltt(const mat_GF2& A, long spacen, int m)
