@@ -18,6 +18,11 @@ We are going to illustrate the installation of the package in an Unix or Unix-li
 The execution of *configure* generates the file "makefile" and the file "../include/NTL/config.h", based upon the values assigned to the variables on the command line. In the example above no arguments were employed. The most important variables are: "CC" for choosing the C compiler,
 "CXX" for choosing the C++ compiler, "PREFIX" for choosing the directory in which to install NTL library components.
 
+.. admonition:: Disable GMP 
+   :class: note
+ 
+	If you really do not want to use GMP, you can pass the option *NTL_GMP_LIP=off* to configure. More information on `A Tour of NTL: Obtaining and Installing NTL for UNIX <http://www.shoup.net/ntl/doc/tour-unix.html>`_
+
 4. **Build NTL:**
 
 .. code-block:: console

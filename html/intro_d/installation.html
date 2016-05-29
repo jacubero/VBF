@@ -223,6 +223,11 @@
 </div>
 <p>The execution of <em>configure</em> generates the file &#8220;makefile&#8221; and the file &#8221;../include/NTL/config.h&#8221;, based upon the values assigned to the variables on the command line. In the example above no arguments were employed. The most important variables are: &#8220;CC&#8221; for choosing the C compiler,
 &#8220;CXX&#8221; for choosing the C++ compiler, &#8220;PREFIX&#8221; for choosing the directory in which to install NTL library components.</p>
+<div class="note admonition">
+<p class="first admonition-title">Disable GMP</p>
+<blockquote class="last">
+<div>If you really do not want to use GMP, you can pass the option <em>NTL_GMP_LIP=off</em> to configure. More information on <a class="reference external" href="http://www.shoup.net/ntl/doc/tour-unix.html">A Tour of NTL: Obtaining and Installing NTL for UNIX</a></div></blockquote>
+</div>
 <ol class="arabic simple" start="4">
 <li><strong>Build NTL:</strong></li>
 </ol>
