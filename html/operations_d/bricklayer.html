@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Bricklayer &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,24 +30,46 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -53,175 +77,115 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Bricklayer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/operations_d/bricklayer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="bricklayer">
 <h1>Bricklayer<a class="headerlink" href="#bricklayer" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Let <img class="math" src="../images/math/a5ea1d880d4663ab624ae91a93993f0d4c1c0672.png" alt="n_1,n_2,m_1,m_2 \geq 1"/> and <img class="math" src="../images/math/7b65471691f29f8adda41ec6523b07eca48a148c.png" alt="F_1 \in \funct{F}_{n_1,m_1}"/> , <img class="math" src="../images/math/bfffbd6a3030a1aebfcafbbb827eaa3681da2734.png" alt="F_2 \in \funct{F}_{n_2,m_2}"/> and the Bricklayer function <img class="math" src="../images/math/6dcfa3d46054c73350ddb9cf62748cb12ca3c1f0.png" alt="F_1 | F_2 \in \funct{F}_{n_1+n_2,m_1+m_2}"/>. Let <img class="math" src="../images/math/c11e359f2172458f69363c0c19980509ff2e7f1c.png" alt="\vec{u_1} \in \gf{V_{n_1}}"/>, <img class="math" src="../images/math/b86e0a28efdcdd3ab6cba11f77d29d80c82e2c87.png" alt="\vec{u_2} \in \gf{V_{n_2}}"/> and <img class="math" src="../images/math/2404026a316dd3e73c9fce243b24dbe2eafa11bc.png" alt="\vec{u}=(\vec{u_1} , \vec{u_2})"/>, <img class="math" src="../images/math/d0390b9c1c7ad299408427df49841ca75dc28e86.png" alt="\vec{v_1} \in \gf{V_{m_1}}"/>, <img class="math" src="../images/math/21515fa800ae2708c6d1a293ee1dbb8fb968740d.png" alt="\vec{v_2} \in \gf{V_{m_2}}"/> and <img class="math" src="../images/math/403fd1dff26dd6b74a1428f0f6763b0f2847e54d.png" alt="\vec{v}=(\vec{v_1} , \vec{v_2})"/>.</p>
+<p>Let <img class="math" src="../images/math/9a78e06f4151c95b7b679f829ca25d9a88b6cba8.png" alt="n_1,n_2,m_1,m_2 \geq 1"/> and <img class="math" src="../images/math/f6184ce2d26cfe17a9ce54ab9034863f85998c8c.png" alt="F_1 \in \funct{F}_{n_1,m_1}"/> , <img class="math" src="../images/math/2ec1a6d424aa1479a8745d52ac6a7ef72e046e73.png" alt="F_2 \in \funct{F}_{n_2,m_2}"/> and the Bricklayer function <img class="math" src="../images/math/4c626762f82ee97c5ea02ca75c765b54dc144884.png" alt="F_1 | F_2 \in \funct{F}_{n_1+n_2,m_1+m_2}"/>. Let <img class="math" src="../images/math/e23e2fe22eede2517c6470ce2e21cd0184b188a2.png" alt="\vec{u_1} \in \gf{V_{n_1}}"/>, <img class="math" src="../images/math/5ca24de8c323582079c6692ae770d7e0f14ea32c.png" alt="\vec{u_2} \in \gf{V_{n_2}}"/> and <img class="math" src="../images/math/b37cc2045456a69639bf590c103b63ba9e833c94.png" alt="\vec{u}=(\vec{u_1} , \vec{u_2})"/>, <img class="math" src="../images/math/9d1a645b2a4a2284e960b2dd2772db96eecb5de3.png" alt="\vec{v_1} \in \gf{V_{m_1}}"/>, <img class="math" src="../images/math/de99a61008b96fa84382c780b3c37afba451ef32.png" alt="\vec{v_2} \in \gf{V_{m_2}}"/> and <img class="math" src="../images/math/678079e3bb0d103d886d4e6f5769259dffd66c5b.png" alt="\vec{v}=(\vec{v_1} , \vec{v_2})"/>.</p>
 <a class="reference internal image-reference" href="../images/Bricklayer.png"><img alt="../images/Bricklayer.png" class="align-center" src="../images/Bricklayer.png" style="width: 750px;" /></a>
 </div>
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>It can be obtained with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">bricklayer</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">bricklayer</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example-1">
 <h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<p>KHAZAD is a block cipher designed by Paulo S. L. M. Barreto together with Vincent Rijmen, which was presented at the first NESSIE workshop in 2000, and, after some small changes, was selected as a finalist in the project. This cipher uses a <img class="math" src="../images/math/d40b7c0e8501fe5022955f0e30246a197a1732ee.png" alt="8 \times 8"/> S-box composed of smaller pseudo-randomly generated <img class="math" src="../images/math/8976852233990c4445ce14de4cabeff673492ce8.png" alt="4 \times 4"/> mini S-boxes (the P-box and the Q-box) as represented in the figure:</p>
+<p>KHAZAD is a block cipher designed by Paulo S. L. M. Barreto together with Vincent Rijmen, which was presented at the first NESSIE workshop in 2000, and, after some small changes, was selected as a finalist in the project. This cipher uses a <img class="math" src="../images/math/20dcb48f5d806254d82093da16010cacaf88b210.png" alt="8 \times 8"/> S-box composed of smaller pseudo-randomly generated <img class="math" src="../images/math/4a8026030bd8dfd11962e0c05d910a913ccd6b44.png" alt="4 \times 4"/> mini S-boxes (the P-box and the Q-box) as represented in the figure:</p>
 <img alt="../images/KHAZADS.png" class="align-center" src="../images/KHAZADS.png" />
 <p>The following program provides the Truth Tables of the different intermediate constructions that allow to obtain KHAZAD S-box from <em>P</em> and <em>Q</em> mini S-boxes and the permutation that apply between them.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -296,9 +260,9 @@
 <div class="section" id="example-2">
 <h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>The following program provides the balancedness and correlation immunity (resiliency) of two Vector Boolean functions given its Truth Table in hexadecimal representation and calculates the same criteria for the bricklayering of <em>F</em> and <em>G</em> taking as inputs their Truth Tables in hexadecimal representation.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -350,14 +314,14 @@
 </pre></div>
 </div>
 <p>If we use the Boolean functions with the following Truth Tables (in hexadecimal representation) as inputs:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">6cb405778ea9bd30</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">6cb405778ea9bd30</span>
 </pre></div>
 </div>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">5c721bcaac27b1c5</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">5c721bcaac27b1c5</span>
 </pre></div>
 </div>
 <p>The output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">Correlation immunity of F: 1</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">Correlation immunity of F: 1</span>
 <span class="go">F is a balanced function</span>
 <span class="go">Correlation immunity of G: 2</span>
 <span class="go">G is a balanced function</span>
@@ -370,6 +334,10 @@
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -379,12 +347,13 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -400,9 +369,11 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../static/jquery.js"></script>
@@ -422,16 +393,6 @@
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

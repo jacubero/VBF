@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Affine function and affine equivalence &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,24 +30,46 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -53,207 +77,147 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Affine function and affine equivalence</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/representations_d/affine.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="affine-function-and-affine-equivalence">
 <h1>Affine function and affine equivalence<a class="headerlink" href="#affine-function-and-affine-equivalence" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>A Boolean linear function is defined as a Boolean function consisting only of the sum of single input variables. Similarly, the set of Boolean affine functions is defined as the set of linear functions and their complements. A mathematical description of the linear and affine Boolean functions is given as follows.</p>
-<p>A Boolean linear function is defined as the sum of a subset of the input variables, denoted <img class="math" src="../images/math/9e711cc400cff4f137ae4307927e765968b00a12.png" alt="l_{\vec{u}}(\vec{x})=u_1x_1+u_2x_2+ \cdots + u_nx_n"/> where <img class="math" src="../images/math/33c43f6a4a8bc0a35b20dc24054dbc54d9d35e9d.png" alt="\vec{u} = (u_1, \ldots, u_n) \in \gf{V_n}"/>.</p>
-<p>The set of Boolean affine functions are the linear functions and their complements, denoted <img class="math" src="../images/math/902b1c327551a4ae45e967f00f339365d38348ac.png" alt="l_{\vec{u},b}(\vec{x})=l_{\vec{u}}(\vec{x})+b"/> where <img class="math" src="../images/math/1567fd5a07504f858f6998bbad26ee8abfd58539.png" alt="b \in \gf{GF(2)}"/>.</p>
+<p>A Boolean linear function is defined as the sum of a subset of the input variables, denoted <img class="math" src="../images/math/521e16a6b63afc7bf54a70f6348dc88498226773.png" alt="l_{\vec{u}}(\vec{x})=u_1x_1+u_2x_2+ \cdots + u_nx_n"/> where <img class="math" src="../images/math/ee197c074fee1b4261bed9d08736423f752ee18f.png" alt="\vec{u} = (u_1, \ldots, u_n) \in \gf{V_n}"/>.</p>
+<p>The set of Boolean affine functions are the linear functions and their complements, denoted <img class="math" src="../images/math/9e47aa3d71a6add55a8ca8316ea6a28753692a9f.png" alt="l_{\vec{u},b}(\vec{x})=l_{\vec{u}}(\vec{x})+b"/> where <img class="math" src="../images/math/196f2e1103a6c8cb0c171c70f4daed5d51c36fbf.png" alt="b \in \gf{GF(2)}"/>.</p>
 <p>An affine Vector Boolean function is defined in terms of a linear Vector Boolean function and a dyadic shift. A linear Vector Boolean function involves the multiplication of the input vector by a Boolean matrix. A dyadic shift (or translation) involves the complement of a subset of input bits. As such, an affine Vector Boolean function may be defined as the combination of a linear Vector Boolean function and dyadic shift.  A mathematical description of the linear and affine Vector Boolean functions is given as follows.</p>
-<p>A Vector Boolean function <img class="math" src="../images/math/516ed0504c9d5ee3086d7b2340dd84b688a23ff0.png" alt="L_{\matr{A},\vec{b}} \in \funct{F}_{n,m}"/> defined as <img class="math" src="../images/math/d247dc14ef7630f11fb8c3549cf07c2c8cccd293.png" alt="L_{\matr{A},\vec{b}}(\vec{x}) = \vec{x} \cdot \matr{A} + \vec{b}"/> with <img class="math" src="../images/math/16c7203e97d1ec612388353a3caed6895c2aa135.png" alt="\vec{x} \in \gf{V_n}, \matr{A} \in \matr{M}_{n \times m}(\gf{GF(2)})"/> and <img class="math" src="../images/math/0066c65eca244bc129d8d71059a6eca12d50b8b4.png" alt="\vec{b} \in \gf{V_m}"/> so that if <img class="math" src="../images/math/1ce32c399addc5c4350469fac1239721e9d2c426.png" alt="\vec{b} = \vec{0}"/> then <em>F</em> is linear and if <img class="math" src="../images/math/7ec9c5f43c40fb0327b0def9319b85d51d52d8ba.png" alt="\vec{b} \neq \vec{0}"/> then <em>F</em> is affine.</p>
+<p>A Vector Boolean function <img class="math" src="../images/math/24a983823326e26d6b24e8edb443211a36d83da5.png" alt="L_{\matr{A},\vec{b}} \in \funct{F}_{n,m}"/> defined as <img class="math" src="../images/math/a28a9d9c9b6f8a489e2e2a372454208a9f0715b1.png" alt="L_{\matr{A},\vec{b}}(\vec{x}) = \vec{x} \cdot \matr{A} + \vec{b}"/> with <img class="math" src="../images/math/48e9bee1b739ea5e5ecbfbd959e4c3f0cd366474.png" alt="\vec{x} \in \gf{V_n}, \matr{A} \in \matr{M}_{n \times m}(\gf{GF(2)})"/> and <img class="math" src="../images/math/a0ed464f1eb901308df2eca66c96d9541f9046f0.png" alt="\vec{b} \in \gf{V_m}"/> so that if <img class="math" src="../images/math/a8248531f2ca7fea7bcbe1a6fab234e4b53974bd.png" alt="\vec{b} = \vec{0}"/> then <em>F</em> is linear and if <img class="math" src="../images/math/e5f0c40cc6b564c0c6e11acf6894785892210140.png" alt="\vec{b} \neq \vec{0}"/> then <em>F</em> is affine.</p>
 <div class="section" id="affine-equivalence-of-boolean-functions">
 <h3>Affine equivalence of Boolean functions<a class="headerlink" href="#affine-equivalence-of-boolean-functions" title="Permalink to this headline">¶</a></h3>
-<p>Equivalence classes provide a powerful tool in both the construction and analysis of Boolean functions for cryptography. In particular, rather than considering the entire space of <img class="math" src="../images/math/43e51163e798c53fcce5b8b6279941c5b0a2e178.png" alt="2^{2^n}"/> functions a reduced view can be found in the consideration of only one function from each equivalence class.</p>
-<p>If <img class="math" src="../images/math/79a863f3495dced406f828b5e5fb33c62ea45a3d.png" alt="g(\vec{x}) = f(\matr{A} \vec{x} + \vec{b}) + \vec{c}\vec{x}+d"/></p>
-<p>where <img class="math" src="../images/math/5d9adac746f460c29c90be661d3c924692cf7405.png" alt="\matr{A} \in \matr{M}_{n \times n}(\gf{GF(2)})"/>    non-singular, <img class="math" src="../images/math/80d8daebd5ab21d599b1aae799d701b05eadd6a7.png" alt="\vec{b}, \vec{c} \in \gf{V_n}"/> and <img class="math" src="../images/math/3e9539c1a19cede1087d3f9fd06b1576f88567ff.png" alt="d \in \gf{GF(2)}"/> and it is an affine transformation. The functions <em>f</em> and <em>g</em> satisfying the previous equation are called equivalent under the action of <img class="math" src="../images/math/269652bb1937b5ff0740c39e6f3e6c4943557893.png" alt="AGL(n, 2)"/>.</p>
+<p>Equivalence classes provide a powerful tool in both the construction and analysis of Boolean functions for cryptography. In particular, rather than considering the entire space of <img class="math" src="../images/math/907cf8bac7b21b98c70c835680a64af9299c29e2.png" alt="2^{2^n}"/> functions a reduced view can be found in the consideration of only one function from each equivalence class.</p>
+<p>If <img class="math" src="../images/math/2b37ae628979b1093c77a0921d8332660be0f3ff.png" alt="g(\vec{x}) = f(\matr{A} \vec{x} + \vec{b}) + \vec{c}\vec{x}+d"/></p>
+<p>where <img class="math" src="../images/math/3a2bf70d991700424ec2ca2ccfbd1f419f635241.png" alt="\matr{A} \in \matr{M}_{n \times n}(\gf{GF(2)})"/>    non-singular, <img class="math" src="../images/math/27c874d3e863fc2d5c60280f090acb39e4ecdee1.png" alt="\vec{b}, \vec{c} \in \gf{V_n}"/> and <img class="math" src="../images/math/649c3612a8e4e864ac037ae0eaa5a10c05b2c21a.png" alt="d \in \gf{GF(2)}"/> and it is an affine transformation. The functions <em>f</em> and <em>g</em> satisfying the previous equation are called equivalent under the action of <img class="math" src="../images/math/5388ac9fa38b50eaa4c29c895418a823e22c6d27.png" alt="AGL(n, 2)"/>.</p>
 <p>Of particular interest in the study of equivalence classes is the effect of the affine transformation on the algebraic degree, the Walsh Spectrum and Autocorrelation Spectrum of a Boolean function.</p>
 </div>
 <div class="section" id="frequency-distribution-of-absolute-values-of-walsh-spectrum">
 <h3>Frequency distribution of absolute values of Walsh Spectrum<a class="headerlink" href="#frequency-distribution-of-absolute-values-of-walsh-spectrum" title="Permalink to this headline">¶</a></h3>
 <p>The effect of the application of an affine transformation to a Boolean function on the Walsh Spectrum is to rearrange the values and hence, the Walsh value distributions are invariant under all affine transformations <a class="reference internal" href="../bibliography.html#preneel-93" id="id1">[Preneel:93]</a>:</p>
 <div class="math">
-<p><img src="../images/math/fc6c463b3d87543b3313b2212ec3f15570ac2ad8.png" alt="\walsh{\chi}_g(\vec{u}) = (-1)^{\vec{c} \cdot \matr{A}^{-1} \vec{b}} (-1)^{\vec{u} \cdot \matr{A}^{-1} \vec{b}} \walsh{\chi}_f\left( \left(  \matr{A}^{-1} \right) \vec{u} + \left(  \matr{A}^{-1} \right) \vec{c} \right)"/></p>
+<p><img src="../images/math/0d1ce6972f39a1a4419694299cea50acaac767b9.png" alt="\walsh{\chi}_g(\vec{u}) = (-1)^{\vec{c} \cdot \matr{A}^{-1} \vec{b}} (-1)^{\vec{u} \cdot \matr{A}^{-1} \vec{b}} \walsh{\chi}_f\left( \left(  \matr{A}^{-1} \right) \vec{u} + \left(  \matr{A}^{-1} \right) \vec{c} \right)"/></p>
 </div><p>Thus nonlinearity is also invariant under affine transformation.</p>
 </div>
 <div class="section" id="frequency-distribution-of-absolute-values-of-autocorrelation-spectrum">
 <h3>Frequency distribution of absolute values of Autocorrelation Spectrum<a class="headerlink" href="#frequency-distribution-of-absolute-values-of-autocorrelation-spectrum" title="Permalink to this headline">¶</a></h3>
 <p>The effect of the application of an affine transformation to a Boolean function on the Autocorrelation Spectrum is to rearrange the values and hence, the Autocorrelation value distributions are invariant under all affine transformations <a class="reference internal" href="../bibliography.html#preneel-93" id="id2">[Preneel:93]</a>:</p>
 <div class="math">
-<p><img src="../images/math/04f4a37c31970c60dbb313c3dd52e9a78d886f55.png" alt="\R_{g}(\vec{u}) = (-1)^{\vec{u} \cdot \vec{c} } \R_{f}(         \matr{A} \vec{u})"/></p>
+<p><img src="../images/math/a063712e3e5873093fc91785d8b5dcf3f53fd39e.png" alt="\R_{g}(\vec{u}) = (-1)^{\vec{u} \cdot \vec{c} } \R_{f}(         \matr{A} \vec{u})"/></p>
 </div><p>Thus absolute indicator is also invariant under affine transformation.</p>
 </div>
 </div>
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>A VBF class can be initialized for a affine Vector Boolean function giving its corresponding matrix and vector by the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putaffine</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">A</span><span class="p">,</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_GF2</span><span class="o">&amp;</span>        <span class="n">b</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putaffine</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">A</span><span class="p">,</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_GF2</span><span class="o">&amp;</span>        <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the Frequency distribution of the absolute values of the Walsh Spectrum is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">printFWH</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">printFWH</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the Frequency distribution of the absolute values of the Autocorrelation Spectrum is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">printFAC</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">printFAC</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<p>The following program finds out the Walsh Spectrum, Frequency distribution of the absolute values of the Walsh Spectrum,  Autocorrelation Spectrum, and Frequency distribution of the absolute values of the Autocorrelation Spectrum of a Vector Boolean function having as input the matrix <img class="math" src="../images/math/83e8380c1f93464e4f2ad204f51ceaa5974dd037.png" alt="\matr{A}"/> and the vector <img class="math" src="../images/math/ee99bb729a6cb6a85c1aff9d4031b51fd36144d7.png" alt="\vec{b}"/> associated with an affine function where:</p>
+<p>The following program finds out the Walsh Spectrum, Frequency distribution of the absolute values of the Walsh Spectrum,  Autocorrelation Spectrum, and Frequency distribution of the absolute values of the Autocorrelation Spectrum of a Vector Boolean function having as input the matrix <img class="math" src="../images/math/4b28f45d9c57739a44e809d69efb07ebcabc7301.png" alt="\matr{A}"/> and the vector <img class="math" src="../images/math/baf2c95f878c731cf7909331acbc3f1451d67a35.png" alt="\vec{b}"/> associated with an affine function where:</p>
 <div class="math">
-<p><img src="../images/math/db6546e8d269ceeed8213dfdd5bc7dcb715ed214.png" alt="\matr{A} = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \\ \end{bmatrix}, \ \ \vec{b} = (0,1)"/></p>
-</div><div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<p><img src="../images/math/36ebf777116f7b9cc6a10f9c4f78e84aaa21ed5a.png" alt="\matr{A} = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \\ \end{bmatrix}, \ \ \vec{b} = (0,1)"/></p>
+</div><div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -292,7 +256,7 @@
 </pre></div>
 </div>
 <p>The output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The Walsh Spectrum is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Walsh Spectrum is:</span>
 <span class="go">[[4 0 0 0]</span>
 <span class="go">[0 0 4 0]</span>
 <span class="go">[0 -4 0 0]</span>
@@ -321,6 +285,10 @@
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -330,12 +298,13 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -351,9 +320,11 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../static/jquery.js"></script>
@@ -373,16 +344,6 @@
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

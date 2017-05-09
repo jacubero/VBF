@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Cryptographic Criteria &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,26 +30,48 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
         <link rel="next" title="Operations and constructions over Vector Boolean Functions" href="operations.html"/>
         <link rel="prev" title="Representations and characterizations" href="representations.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -55,153 +79,169 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#organization-of-this-book">Organization of this Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cryptographic Criteria</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#algebraic-degree">Algebraic degree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#library">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#design-philosophy">Design Philosophy</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nonlinearity">Nonlinearity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-1">Example 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-2">Example 2</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#summary">Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#propagation-criterion">Propagation criterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#r-th-order-nonlinearity">r-th order nonlinearity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#balancedness">Balancedness</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id16">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#correlation-immunity">Correlation Immunity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id23">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#algebraic-immunity">Algebraic immunity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id24">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id30">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#global-avalanche-criterion">Global avalanche criterion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id31">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id34">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#linearity-distance">Linearity distance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id35">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id41">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id42">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#propagation-criterion">Propagation criterion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id43">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id46">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id47">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Cryptographic Criteria</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/criteria.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="cryptographic-criteria">
 <h1>Cryptographic Criteria<a class="headerlink" href="#cryptographic-criteria" title="Permalink to this headline">¶</a></h1>
@@ -264,25 +304,25 @@
 <div class="section" id="description">
 <h3><a class="toc-backref" href="#id49">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
 <p>Cryptographic algorithms using Boolean functions to achieve confusion in a cipher (S-boxes in block ciphers, combining of filtering functions in stream ciphers) can be attacked if the functions have low algebraic degree. The algebraic degree is a good indicator of the function&#8217;s algebraic complexity. The higher the degree of a function, the greater is its algebraic complexity. <em>Higher order differential attack</em> <a class="reference internal" href="bibliography.html#lai-94" id="id1">[Lai:94]</a> exploits the fact that the algebraic degree of the S-box is low.</p>
-<p>The <em>algebraic degree</em> of a Vector Boolean function <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> is defined as the minimum among the algebraic degrees of all component functions of <em>F</em> <a class="reference internal" href="bibliography.html#nyberg-92" id="id2">[Nyberg:92]</a>, namely:</p>
+<p>The <em>algebraic degree</em> of a Vector Boolean function <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> is defined as the minimum among the algebraic degrees of all component functions of <em>F</em> <a class="reference internal" href="bibliography.html#nyberg-92" id="id2">[Nyberg:92]</a>, namely:</p>
 <div class="math">
-<p><img src="images/math/cd9d12d336fb44d918bb634717a4661e3f425ee9.png" alt="\crit{deg}(F) = \min_g \{\crit{deg}(g) \given g = \sum_{j=1}^{m} v_jf_j , \  \vec{v}
+<p><img src="images/math/a6610adcdf2f0b2cc894219d1e80b617250ee5e0.png" alt="\crit{deg}(F) = \min_g \{\crit{deg}(g) \given g = \sum_{j=1}^{m} v_jf_j , \  \vec{v}
 \neq \vec{0} \in \gf{V_m} \}"/></p>
 </div><p>where the algebraic order or degree of a Boolean function is the order of the largest product term in the <em>ANF</em>. This criterion is obtained by generating the ANF table and then analyzing the degree of all the component functions.</p>
-<p>Functions with algebraic degree less than or equal to 1 are called affine. A non-constant affine function for which <img class="math" src="images/math/b9fc8a37da558ecd63e5c777bd6ead4832478903.png" alt="F(\vec{0}) = \vec{0}"/> is called linear. We refer to functions of degree two as quadratic and functions of degree three as cubic.</p>
+<p>Functions with algebraic degree less than or equal to 1 are called affine. A non-constant affine function for which <img class="math" src="images/math/53babe824856739422171ed3b49ab47548185c0b.png" alt="F(\vec{0}) = \vec{0}"/> is called linear. We refer to functions of degree two as quadratic and functions of degree three as cubic.</p>
 </div>
 <div class="section" id="library">
 <h3><a class="toc-backref" href="#id50">Library</a><a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h3>
 <p>The method used to obtain this criterion is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">deg</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">deg</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the algebraic degree of a Vector Boolean function given its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -322,18 +362,18 @@
 <div class="section" id="id3">
 <h3><a class="toc-backref" href="#id52">Description</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>In order to provide confusion, cryptographic functions must lie at large Hamming distance to all affine functions. Because of Parseval&#8217;s Relation, any Vector Boolean function has correlation with some affine functions of its input. This correlation should be small: the existence of affine approximations of the Boolean functions involved in a cipher allows to build attacks on this system (see, <a class="reference internal" href="bibliography.html#matsui-93" id="id4">[Matsui:93]</a> for block ciphers and <a class="reference internal" href="bibliography.html#dingxs-91" id="id5">[DingXS:91]</a> for stream ciphers).</p>
-<p>The nonlinearity of a Boolean function <img class="math" src="images/math/93015c3e2d62d25650602f2abeeb32cb6c2a77e9.png" alt="f \in \funct{F}_{m}"/> is defined as the Hamming distance between <em>f</em> and the subspace of affine functions <a class="reference internal" href="bibliography.html#pieprzykf-88" id="id6">[PieprzykF:88]</a>: <img class="math" src="images/math/46568df7a9ac86a0a61e63d0622b7a0ae3d61eed.png" alt="\crit{NL}(f)=d(f,\set{A}_n)"/>.</p>
-<p>The nonlinearity of a Vector Boolean function <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> is defined as the minimum among the nonlinearities of all component functions of <em>F</em> <a class="reference internal" href="bibliography.html#nyberg-92" id="id7">[Nyberg:92]</a>:</p>
+<p>The nonlinearity of a Boolean function <img class="math" src="images/math/23a6076972c6e5efcbdedc6d6d21ee550b54e8bb.png" alt="f \in \funct{F}_{m}"/> is defined as the Hamming distance between <em>f</em> and the subspace of affine functions <a class="reference internal" href="bibliography.html#pieprzykf-88" id="id6">[PieprzykF:88]</a>: <img class="math" src="images/math/e126f2417743c56335add09cac48384786d640ba.png" alt="\crit{NL}(f)=d(f,\set{A}_n)"/>.</p>
+<p>The nonlinearity of a Vector Boolean function <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> is defined as the minimum among the nonlinearities of all component functions of <em>F</em> <a class="reference internal" href="bibliography.html#nyberg-92" id="id7">[Nyberg:92]</a>:</p>
 <div class="math">
-<p><img src="images/math/86a62f21f72a320d27360b4b2fe3e0c13a59f6bc.png" alt="\crit{NL}(F)=\min_{\vec{v} \neq \vec{0}} \crit{NL}(\vec{v} \cdot F) \ \ \vec{v}=(v_1,\dots,v_m) \in \gf{V_m}"/></p>
+<p><img src="images/math/2c745e6a0a77bc420e40edaef0b66576731c6793.png" alt="\crit{NL}(F)=\min_{\vec{v} \neq \vec{0}} \crit{NL}(\vec{v} \cdot F) \ \ \vec{v}=(v_1,\dots,v_m) \in \gf{V_m}"/></p>
 </div><p>The nonlinearity of <em>F</em> can be expressed in terms of the Walsh coefficients by the following theorem:</p>
-<p>Let <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/>, the nonlinearity of <em>F</em> can be calculated in terms of the maximum of the absolute values of its Walsh Spectrum without taking into account the element of its first row and column, as follows:</p>
+<p>Let <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, the nonlinearity of <em>F</em> can be calculated in terms of the maximum of the absolute values of its Walsh Spectrum without taking into account the element of its first row and column, as follows:</p>
 <div class="math">
-<p><img src="images/math/01fba347d2ee85ba6ce4c824d33326f8c9ccb4c9.png" alt="\crit{NL}(F) = 2^{n-1}-\frac{1}{2} \stackrel{*}{\max}(\matr{WS}(F)(\vec{u},\vec{v}))"/></p>
-</div><p>Let <img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/>, the nonlinearity of <em>f</em> can be expressed in terms of its Walsh transform as follows:</p>
+<p><img src="images/math/2ec6216cdd40aabfba9524ebe0eb95ca03ec2347.png" alt="\crit{NL}(F) = 2^{n-1}-\frac{1}{2} \stackrel{*}{\max}(\matr{WS}(F)(\vec{u},\vec{v}))"/></p>
+</div><p>Let <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/>, the nonlinearity of <em>f</em> can be expressed in terms of its Walsh transform as follows:</p>
 <div class="math">
-<p><img src="images/math/9a0b79406cf3f25eba221a095bf73877cf2a05cc.png" alt="\crit{NL}(f)=2^{n-1}-\frac{1}{2}\max_{\vec{u} \in \gf{V_n}} |\walsh{\chi}_f(\vec{u})|"/></p>
-</div><p>The <em>spectral radius</em> of a Boolean function <img class="math" src="images/math/6397e61cd39c2631780fc042a825d26ee7587120.png" alt="f \in \funct{F}_n$ is $\crit{r}(f) = \max_{\vec{u} \in \gf{V_n}} |\walsh{\chi}_f(\vec{u})|"/>.</p>
+<p><img src="images/math/af61852749b01cd1bb3d1d54c1384e841d766992.png" alt="\crit{NL}(f)=2^{n-1}-\frac{1}{2}\max_{\vec{u} \in \gf{V_n}} |\walsh{\chi}_f(\vec{u})|"/></p>
+</div><p>The <em>spectral radius</em> of a Boolean function <img class="math" src="images/math/5870c79dfeb664fdd15a4d467f2affdc96cddafc.png" alt="f \in \funct{F}_n$ is $\crit{r}(f) = \max_{\vec{u} \in \gf{V_n}} |\walsh{\chi}_f(\vec{u})|"/>.</p>
 <p>This criterion is a measure of the distance of a Vector Boolean function and all
 Affine Vector Boolean functions. If this distance is small, it is possible to mount
 affine approximations of the Vector Boolean functions involved in a cipher
@@ -343,27 +383,27 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
 <div class="section" id="id9">
 <h3><a class="toc-backref" href="#id53">Library</a><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <p>The method used to obtain the nonlinearity of a Vector Boolean function is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">nl</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">nl</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the spectral radius of a Vector Boolean function is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">SpectralRadius</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">SpectralRadius</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to the maximum nonlinearity that can be achieved by a Vector Boolean function with the same number of input bits and output bits is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">nlmax</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">nlmax</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the type of function in terms of nonlinearity is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">typenl</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">typenl</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">typenl</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">typenl</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example-1">
 <h4>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the nonlinearity of a Vector Boolean function given its Truth Table together with the maximum nonlinearity that can be achieved by a Vector Boolean function with the same number of input bits and output bits.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -394,7 +434,7 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
 </pre></div>
 </div>
 <p>If we use the <em>NibbleSub</em> S-box Truth Table as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The spectral radius of the function is 12</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The spectral radius of the function is 12</span>
 <span class="go">The nonlinearity of the function is 2</span>
 <span class="go">The maximum nonlinearity that can be achieved by</span>
 <span class="go">a Vector Boolean function with the same dimensions is 5</span>
@@ -402,14 +442,14 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
 </div>
 <p>The following figure represents the Walsh Spectrum of NibbleSub and emphasizes in blue its maximum absolute values.</p>
 <a class="reference internal image-reference" href="images/nl.png"><img alt="images/nl.png" class="align-center" src="images/nl.png" style="width: 750px;" /></a>
-<p>From definition we have <img class="math" src="images/math/a86a6c65c63b9569cab4248818b24fc4c90f2950.png" alt="\crit{NL}(NibbleSub)=2^{4-1}-\frac{1}{2} \cdot 12 = 2"/></p>
+<p>From definition we have <img class="math" src="images/math/d909557f6913cfcaab33350f25c2c2730d600d1a.png" alt="\crit{NL}(NibbleSub)=2^{4-1}-\frac{1}{2} \cdot 12 = 2"/></p>
 </div>
 <div class="section" id="example-2">
 <h4>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the nonlinearity of a Vector Boolean function given its polynomial representation in ANF together with the maximum nonlinearity that can be achieved by a Vector Boolean function with the same number of input bits and output bits, and the type of function in terms of nonlinearity.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -447,8 +487,8 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If we use the <img class="math" src="images/math/ceba7e34e6d37185d590580135fb326a6a0e682c.png" alt="x_1x_2+x_3x_4"/> as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The nonlinearity of the function is 6</span>
+<p>If we use the <img class="math" src="images/math/e04bc61140f6239b9cbc5faef099073fcd600b5a.png" alt="x_1x_2+x_3x_4"/> as input, the output would be the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The nonlinearity of the function is 6</span>
 <span class="go">The maximum nonlinearity that can be achieved by</span>
 <span class="go">a Vector Boolean function with the same dimensions is 6</span>
 <span class="go">It is a bent function</span>
@@ -462,26 +502,26 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
 <h2><a class="toc-backref" href="#id54">r-th order nonlinearity</a><a class="headerlink" href="#r-th-order-nonlinearity" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id10">
 <h3><a class="toc-backref" href="#id55">Description</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
-<p>As well as the affine functions, we can consider that functions with low algebraic degree are weak functions from the cryptographic point of view. A criterion can be defined en terms of the Hamming distance to the Reed-Muller code of order <img class="math" src="images/math/fb80d5cb31775f4d078644361743db3a6b8532bf.png" alt="r (r &lt; n)"/>.</p>
+<p>As well as the affine functions, we can consider that functions with low algebraic degree are weak functions from the cryptographic point of view. A criterion can be defined en terms of the Hamming distance to the Reed-Muller code of order <img class="math" src="images/math/ebf5d42a8db5bb4055d671984e484698c1d42662.png" alt="r (r &lt; n)"/>.</p>
 <p>For every positive integer <em>r</em>, the <em>r-th order nonlinearity</em> of a Vector Boolean function <em>F</em> is the minimum <em>r</em>-th order nonlinearity of its component functions. The <em>r</em>-th order nonlinearity of a Boolean function equals its minimum Hamming distance to functions of algebraic degrees at most <em>r</em> (see <a class="reference internal" href="bibliography.html#carlet2008higher" id="id11">[carlet2008higher]</a> for details).</p>
 <div class="math">
-<p><img src="images/math/75d871712683d75eda3fd6292edbb6e0abb3d8a7.png" alt="\crit{NL}_r(F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \crit{NL}_r(\vec{v} \cdot
+<p><img src="images/math/afc101fb4b89249e7f14a0c75c2c2f1f69688730.png" alt="\crit{NL}_r(F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \crit{NL}_r(\vec{v} \cdot
 F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \min_{f \in \funct{F}_n} d(f,\vec{v} \cdot F)"/></p>
-</div><p>Computing r-th order nonlinearity is not an easy task for <img class="math" src="images/math/34bb94f40aca0a0c390c4ea3760ec1d04ae67443.png" alt="r \geq 2"/>. Unlike the first-order nonlinearity there are no efficient algorithms to compute second-order nonlinearities for <img class="math" src="images/math/a7f13e2c8e669cd2d70ab5529c6045f938103618.png" alt="n \geq 11"/>. VBF library naive exhaustive search is employed for this purpose.</p>
+</div><p>Computing r-th order nonlinearity is not an easy task for <img class="math" src="images/math/a994674dbe6bedc2c0246940eb1a9f0f4d181c8c.png" alt="r \geq 2"/>. Unlike the first-order nonlinearity there are no efficient algorithms to compute second-order nonlinearities for <img class="math" src="images/math/074dab6d9864cc55595edc24d1f8b7a830192144.png" alt="n \geq 11"/>. VBF library naive exhaustive search is employed for this purpose.</p>
 </div>
 <div class="section" id="id12">
 <h3><a class="toc-backref" href="#id56">Library</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <p>The method used to obtain this criterion is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">nlr</span><span class="p">(</span><span class="kt">long</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">nlr</span><span class="p">(</span><span class="kt">long</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This method return -1 if the number of functions to check is too large (greater than the maximum value of a long int variable).</p>
 <div class="section" id="id13">
 <h4>Example<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the <em>2</em>-nd order nonlinearity of a Vector Boolean function given its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -509,7 +549,7 @@ F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \min_{f \in \funct{F}_n} d(f,\vec{
 </pre></div>
 </div>
 <p>If we use the <em>NibbleSub</em> S-box Truth Table as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The 2-nd order nonlinearity of the function is 0</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The 2-nd order nonlinearity of the function is 0</span>
 </pre></div>
 </div>
 <p>This result is congruent to the fact that its algebraic degree is <em>2</em>.</p>
@@ -520,29 +560,29 @@ F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \min_{f \in \funct{F}_n} d(f,\vec{
 <h2><a class="toc-backref" href="#id57">Balancedness</a><a class="headerlink" href="#balancedness" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id14">
 <h3><a class="toc-backref" href="#id58">Description</a><a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
-<p>The output of a Vector Boolean function <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> used in a cipher must be uniformly distributed over <img class="math" src="images/math/b3547d53f1a27e84944fdc7dc7dc1ecdf149e420.png" alt="\gf{V_m}"/> for avoiding statistical dependence between the plaintext and the ciphertext (which can be used in attacks).</p>
-<p><img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> is balanced (or has balanced output) if each possible output <em>m</em>-tuple occurs with equal probability <img class="math" src="images/math/283cb7c8755c1ea05aa00b7d76345f0fb1aa56f6.png" alt="2^{-m}"/>. This criterion can be evaluated from the Walsh Spectrum in the following way: <img class="math" src="images/math/be1785bef6b73fa8df6c0b44cb0c439f11173751.png" alt="\walsh{\theta}_F(\vec{0},\vec{v})= 0, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}"/>.</p>
-<p><img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> is balanced if and only if the Walsh coefficient at <img class="math" src="images/math/357d88ee8a474fafd1a70ba8e97bcb713bda667b.png" alt="\vec{0}"/> is zero. <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> is balanced if and only if the first row of its Walsh Spectrum has all its elements equal to zero except from the first entry.</p>
-<p>The imbalance of a Boolean function is defined to be <img class="math" src="images/math/ee227922a0b56610d914aecbe5914dc1d605cc6d.png" alt="\crit{I}(f)= | wt(f)-2^{n-1} | = 2^{n-1} | \Cor(f,0)  |"/> where <em>0</em> indicates the constant zero Boolean function.</p>
+<p>The output of a Vector Boolean function <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> used in a cipher must be uniformly distributed over <img class="math" src="images/math/b680751d3131c6233afacb36fff1b0d13e1e3556.png" alt="\gf{V_m}"/> for avoiding statistical dependence between the plaintext and the ciphertext (which can be used in attacks).</p>
+<p><img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> is balanced (or has balanced output) if each possible output <em>m</em>-tuple occurs with equal probability <img class="math" src="images/math/af5a6218a8debb5449604288c619c41855c4f3cc.png" alt="2^{-m}"/>. This criterion can be evaluated from the Walsh Spectrum in the following way: <img class="math" src="images/math/10216cd6e5a537ecf66c2527cb45b6b2c63bca77.png" alt="\walsh{\theta}_F(\vec{0},\vec{v})= 0, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}"/>.</p>
+<p><img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> is balanced if and only if the Walsh coefficient at <img class="math" src="images/math/9da054dabc9d0fd37e77a582b84686bf6fd970f9.png" alt="\vec{0}"/> is zero. <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> is balanced if and only if the first row of its Walsh Spectrum has all its elements equal to zero except from the first entry.</p>
+<p>The imbalance of a Boolean function is defined to be <img class="math" src="images/math/6fd411ad0b4c9f58ab57ad8dfff4d6e58ba8ba5c.png" alt="\crit{I}(f)= | wt(f)-2^{n-1} | = 2^{n-1} | \Cor(f,0)  |"/> where <em>0</em> indicates the constant zero Boolean function.</p>
 <p>Imbalance is defined as the minimum Hamming distance to a balanced function and is therefore directly proportional to the magnitude of the correlation with the constant zero Boolean function. Thus, when imbalance is zero, the function is balanced. Balancedness is a fundamental cryptographic criterion as an imbalanced function has suboptimal unconditional entropy, i.e. it is correlated to a constant function.</p>
 <p>The significance of the balancedness criterion is that the higher the magnitude of a function&#8217;s imbalance (deviation from uniform distribution of outputs), the more likelihood of a high probability linear approximation being obtained. This, in turn, represents a weakness in the function in terms of linear cryptanalysis. In particular, a large imbalance may enable the function to be easily approximated by a constant function.</p>
 </div>
 <div class="section" id="id15">
 <h3><a class="toc-backref" href="#id59">Library</a><a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <p>This criterion can only take values <em>0</em> (meaning <em>F</em> is not balanced) or <em>1</em> (meaning <em>F</em> is balanced). The method used to obtain this criterion is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">Bal</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">bal</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Bal</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">bal</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and there is also an inline function:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kr">inline</span> <span class="kt">int</span> <span class="n">Bal</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kr">inline</span> <span class="kt">int</span> <span class="n">Bal</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id16">
 <h4>Example<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
 <p>The following program finds out if a Vector Boolean function is balanced given its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -571,13 +611,13 @@ F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \min_{f \in \funct{F}_n} d(f,\vec{
 </pre></div>
 </div>
 <p>If we use the <em>NibbleSub</em> S-box Truth Table as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">It is a balanced function</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">It is a balanced function</span>
 </pre></div>
 </div>
-<p><em>NibbleSub</em> S-box is balanced as each possible 4-tuple occurs with equal probability <img class="math" src="images/math/176eae46ab8cec59cf8858c6f71b58d9b97827ba.png" alt="\frac{1}{2^4}"/>.</p>
+<p><em>NibbleSub</em> S-box is balanced as each possible 4-tuple occurs with equal probability <img class="math" src="images/math/a00ad690590f422b78c9d1ab8588f7cc166de008.png" alt="\frac{1}{2^4}"/>.</p>
 <p>The following figure represents the Walsh Spectrum of <em>NibbleSub</em> and emphasizes in red the first row.</p>
 <a class="reference internal image-reference" href="images/bal.png"><img alt="images/bal.png" class="align-center" src="images/bal.png" style="width: 750px;" /></a>
-<p>As all Walsh Spectrum&#8217;s values are 0 except from the <img class="math" src="images/math/83aa5b3afdb399fce478a486871d19517a8f83a9.png" alt="\vec{0} \in \gf{V_4}"/>, we can conclude that <em>NibbleSub</em> is balanced.</p>
+<p>As all Walsh Spectrum&#8217;s values are 0 except from the <img class="math" src="images/math/2f152207e13c3bba4194f64a1e7c90f40935752d.png" alt="\vec{0} \in \gf{V_4}"/>, we can conclude that <em>NibbleSub</em> is balanced.</p>
 </div>
 </div>
 </div>
@@ -586,27 +626,27 @@ F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \min_{f \in \funct{F}_n} d(f,\vec{
 <div class="section" id="id17">
 <h3><a class="toc-backref" href="#id61">Description</a><a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <p>In stream cipher applications, it is vital that the Boolean function used as the combining function have certain properties. In addition to being balanced, possessing high nonlinearity and high algebraic degree, the function should have correlation immunity greater than zero to resist a <em>divide and conquer attack</em> <a class="reference internal" href="bibliography.html#siegenthaler-84" id="id18">[Siegenthaler:84]</a>.</p>
-<p>This criterion describes the extent to which input values of a Vector Boolean function <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> can be guessed given the output value. Equivalently, we can say that <em>F</em> is <em>t</em>-CI if its output distribution does not change when we fix <em>t</em> variables <img class="math" src="images/math/cc7e821201371a8d463764c7884645addff2bf7f.png" alt="x_i"/> of its input.</p>
+<p>This criterion describes the extent to which input values of a Vector Boolean function <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> can be guessed given the output value. Equivalently, we can say that <em>F</em> is <em>t</em>-CI if its output distribution does not change when we fix <em>t</em> variables <img class="math" src="images/math/42e187df2e77c37dacb219d81e3aa501eae0d228.png" alt="x_i"/> of its input.</p>
 <p>Interest in this criterion came from discovery by Siegenthaler <a class="reference internal" href="bibliography.html#siegenthaler-84" id="id19">[Siegenthaler:84]</a> in 1984 of an attack on pseudo-random generators using combining functions (used in stream ciphers), called a correlation attack. This attack is based on the idea of finding correlation between the outputs and the inputs, that is, finding S-boxes with low resiliency.</p>
-<p>A function <img class="math" src="images/math/ff8ff8fe04d527a17abb73d88132266b000fa947.png" alt="f \in \funct{F}_{n}"/> is <img class="math" src="images/math/2041c24c0386883aa6b9bd83aff590397413077f.png" alt="t-\crit{CI}"/> if and only if, for every set <img class="math" src="images/math/6aeea1fefa9fd9d0ee1cfceb432faa052ed8cf9b.png" alt="\set{S}"/> of <em>t</em> variables, <img class="math" src="images/math/41808830e33d6aa91d21874be8eccf55e1b98585.png" alt="1 \leq t \leq n"/>, given the value of <em>f</em>, the probability that <img class="math" src="images/math/6aeea1fefa9fd9d0ee1cfceb432faa052ed8cf9b.png" alt="\set{S}"/> takes on any of its <img class="math" src="images/math/faee1e02b482b2df65f2a5e4bbe9796eda1b8ab7.png" alt="2^t"/> assignments of values to the <em>t</em> variables is <img class="math" src="images/math/387377f7cbbb126f0429d58a1cd481937240b95e.png" alt="\frac{1}{2^t}"/>. If <em>f</em> is <img class="math" src="images/math/2041c24c0386883aa6b9bd83aff590397413077f.png" alt="t-\crit{CI}"/> and balanced, then it is <em>t</em>-resilient.</p>
-<p><img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> is said to be <em>t</em>-CI if for each linear function <img class="math" src="images/math/a52f920dc7e80f978e4c45f3af4fc8c40f0ee057.png" alt="l_{\vec{u}}=u_1x_1+\dotsb+u_nx_n"/> with <img class="math" src="images/math/fdfc4f0b8f750dc9ed125084d0bb3b6bfd85575d.png" alt="1 \leq wt(\vec{u}) \leq t"/>, <img class="math" src="images/math/50f6b85649f5848f80ce44bdc47a936c7bc5cf0f.png" alt="f+l_{\vec{u}}"/> is balanced <a class="reference internal" href="bibliography.html#xiaom-88" id="id20">[XiaoM:88]</a>.</p>
-<p><img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> is an <em>t</em>-CI function (or <img class="math" src="images/math/9b84d024ab8f0eb51795c5b5b00cc47f0fce47ab.png" alt="(n,m,t)"/>-CI function) if and only if every component function of <em>F</em> is an <em>t</em>-CI function. <em>F</em> is said to be <em>t</em>-resilient (or <img class="math" src="images/math/9b84d024ab8f0eb51795c5b5b00cc47f0fce47ab.png" alt="(n,m,t)"/>-resilient function) if it is balanced and <em>t</em>-CI <a class="reference internal" href="bibliography.html#chen-02" id="id21">[Chen:02]</a>.</p>
-<p>Let <img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> and <img class="math" src="images/math/90416470e66635405d7ae128cc1cfeea8c644b16.png" alt="t \in \left\{1,\dots,n-1\right\}"/>, <em>f</em> is called correlation immune (CI) of order <em>t</em> if its Walsh coefficients, at values of the nonzero vector indexes whose weight at most <em>t</em>, are zero: <img class="math" src="images/math/989117377680fd0fe4c6bc8aa53c2bc03a940d04.png" alt="\walsh{\chi}_f(\vec{u}) = 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq t"/>. <em>f</em> can also be denoted as <img class="math" src="images/math/5ac815f1d7ba767a1d1c09cb434e095dbbfd5421.png" alt="(n,1,t)"/>-CI function.[XiaoM:88]_</p>
-<p>Let <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> and <img class="math" src="images/math/90416470e66635405d7ae128cc1cfeea8c644b16.png" alt="t \in \left\{1,\dots,n-1\right\}"/>, <em>F</em> is a correlation immune Vector Boolean function of order <em>t</em> if its Walsh coefficients, at values of the nonzero vector indexes whose weight at most <em>t</em>, are zero: <img class="math" src="images/math/d0a2ce7c4ef3ca18b589e51e0fef6e9e0167500c.png" alt="\walsh{\theta}_F(\vec{u},\vec{v})= 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq t, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}"/>. <em>F</em> can also be denoted as an <em>t</em>-CI function.</p>
+<p>A function <img class="math" src="images/math/3f6611883a661ad9826a91529107c8e2c8d9a798.png" alt="f \in \funct{F}_{n}"/> is <img class="math" src="images/math/c2d3d90e6ff816d6c6cbe6ce209f1aaa65acdb57.png" alt="t-\crit{CI}"/> if and only if, for every set <img class="math" src="images/math/690c9078b2ed42a7250e8e9eff6ccec803b5794b.png" alt="\set{S}"/> of <em>t</em> variables, <img class="math" src="images/math/4c12608acd5f91ee55a0f683b5cdd6c9708213f3.png" alt="1 \leq t \leq n"/>, given the value of <em>f</em>, the probability that <img class="math" src="images/math/690c9078b2ed42a7250e8e9eff6ccec803b5794b.png" alt="\set{S}"/> takes on any of its <img class="math" src="images/math/972a146e73d1405d3dd9640870bb5e24f9ba4445.png" alt="2^t"/> assignments of values to the <em>t</em> variables is <img class="math" src="images/math/e22c08717122224aa7dcb8922a600a0e4786fd20.png" alt="\frac{1}{2^t}"/>. If <em>f</em> is <img class="math" src="images/math/c2d3d90e6ff816d6c6cbe6ce209f1aaa65acdb57.png" alt="t-\crit{CI}"/> and balanced, then it is <em>t</em>-resilient.</p>
+<p><img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> is said to be <em>t</em>-CI if for each linear function <img class="math" src="images/math/1f0bc180b1501facf34d9b4bd95cccea1165e220.png" alt="l_{\vec{u}}=u_1x_1+\dotsb+u_nx_n"/> with <img class="math" src="images/math/561bd357b81b9f0669e122bf6ec70523f812e824.png" alt="1 \leq wt(\vec{u}) \leq t"/>, <img class="math" src="images/math/2033c56bbd0438ff493292bf72f5ca77c8d3a632.png" alt="f+l_{\vec{u}}"/> is balanced <a class="reference internal" href="bibliography.html#xiaom-88" id="id20">[XiaoM:88]</a>.</p>
+<p><img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> is an <em>t</em>-CI function (or <img class="math" src="images/math/67f293f096c343a94507452c812b1c31f0baa35f.png" alt="(n,m,t)"/>-CI function) if and only if every component function of <em>F</em> is an <em>t</em>-CI function. <em>F</em> is said to be <em>t</em>-resilient (or <img class="math" src="images/math/67f293f096c343a94507452c812b1c31f0baa35f.png" alt="(n,m,t)"/>-resilient function) if it is balanced and <em>t</em>-CI <a class="reference internal" href="bibliography.html#chen-02" id="id21">[Chen:02]</a>.</p>
+<p>Let <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> and <img class="math" src="images/math/bea230f089de6a2725a99c530357ef1bf51a2fde.png" alt="t \in \left\{1,\dots,n-1\right\}"/>, <em>f</em> is called correlation immune (CI) of order <em>t</em> if its Walsh coefficients, at values of the nonzero vector indexes whose weight at most <em>t</em>, are zero: <img class="math" src="images/math/89478e3649eccb584f667c395b0bdf2b8d1d3fc0.png" alt="\walsh{\chi}_f(\vec{u}) = 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq t"/>. <em>f</em> can also be denoted as <img class="math" src="images/math/932b48cf075335e5e580a45d10ee3d9d4275678d.png" alt="(n,1,t)"/>-CI function.[XiaoM:88]_</p>
+<p>Let <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> and <img class="math" src="images/math/bea230f089de6a2725a99c530357ef1bf51a2fde.png" alt="t \in \left\{1,\dots,n-1\right\}"/>, <em>F</em> is a correlation immune Vector Boolean function of order <em>t</em> if its Walsh coefficients, at values of the nonzero vector indexes whose weight at most <em>t</em>, are zero: <img class="math" src="images/math/1e454ef863665be187ec1f4cadffa3792bfe0072.png" alt="\walsh{\theta}_F(\vec{u},\vec{v})= 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq t, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}"/>. <em>F</em> can also be denoted as an <em>t</em>-CI function.</p>
 <p>From the definition of resiliency we can derive that a balanced Vector Boolean function can be interpreted as a <em>0</em>-resilient function.</p>
 </div>
 <div class="section" id="id22">
 <h3><a class="toc-backref" href="#id62">Library</a><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <p>The method used to obtain this criterion is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">CI</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">CI</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id23">
 <h4>Example<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the order of correlation immunity of a Vector Boolean function given its polynomial in ANF.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -633,8 +673,8 @@ F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \min_{f \in \funct{F}_n} d(f,\vec{
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If we use the function <img class="math" src="images/math/e6d244ae687e0af0533518f46602e29221694123.png" alt="f = (1+x_1)(1+x_2)(1+x_3)(1+x_4)+x_1x_2x_3x_4"/> polynomial in ANF as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">It is a (4,1,1)-CI function</span>
+<p>If we use the function <img class="math" src="images/math/cd2ce8501bcc10f9e1c3f7d3b5da2fd921b0341a.png" alt="f = (1+x_1)(1+x_2)(1+x_3)(1+x_4)+x_1x_2x_3x_4"/> polynomial in ANF as input, the output would be the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">It is a (4,1,1)-CI function</span>
 </pre></div>
 </div>
 <p>The following figure represents the Walsh Spectrum of <em>f</em> and emphasizes in red the rows whose indexes are of weight 1.</p>
@@ -649,28 +689,28 @@ F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \min_{f \in \funct{F}_n} d(f,\vec{
 <h3><a class="toc-backref" href="#id64">Description</a><a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <p>A new kind of attacks, called <em>algebraic attacks</em>, has been introduced <a class="reference internal" href="bibliography.html#courtois-03" id="id25">[Courtois:03]</a>, <a class="reference internal" href="bibliography.html#courtoism-02" id="id26">[CourtoisM:02]</a>, <a class="reference internal" href="bibliography.html#faugerea-03" id="id27">[FaugereA:03]</a>. Algebraic attacks recover the secret key, or at least the initialization of the system, by solving a system of multivariate algebraic
 equations. A new criterion was introduced in order to identify a cryptographic algorithm&#8217;s immunity to this kind of attacks.</p>
-<p>Denote the Boolean function obtained by the product of the Truth Tables of two Boolean functions <img class="math" src="images/math/1401dc0526c2bca843f2a06c34ab062ab6028765.png" alt="f,g \in \funct{F}_n"/> by <img class="math" src="images/math/11dba4c1430adf4097cb8f7c308dad1bf280f070.png" alt="f \cdot g"/> (Note that this product is different from the dot product between two vectors <img class="math" src="images/math/f59493ab069eed4ec5914d2ac307a8f25eb9284d.png" alt="\vec{x},\vec{y}"/>). The <em>algebraic immunity (AI)</em> of <em>f</em> is defined as the lowest degree of the function <em>g</em> for which <img class="math" src="images/math/f04cfc9d3b8878d2b5cb7fe10bf88dc7d52e3486.png" alt="f \cdot g = \vec{0}"/> or <img class="math" src="images/math/a181cb4346b9f71043ae799c88cd53b1f0659b65.png" alt="(\vec{1}+f) \cdot g = \vec{0}"/>. The function <em>g</em> for which <img class="math" src="images/math/f04cfc9d3b8878d2b5cb7fe10bf88dc7d52e3486.png" alt="f \cdot g = \vec{0}"/> is called an <em>annihilator</em> of <em>f</em>. Denote the set of all annihilators of <em>f</em> by <img class="math" src="images/math/d55dad8b8ff630d47d6ec4dc645e276dd7424590.png" alt="\set{An}(f)"/>. This set is an ideal in the ring of Boolean functions generated by <img class="math" src="images/math/8ea40387d172dc671db0f04c3f618941a09324e2.png" alt="\vec{1}+f"/>.</p>
+<p>Denote the Boolean function obtained by the product of the Truth Tables of two Boolean functions <img class="math" src="images/math/2bd38813fa11875e3ae7ae009c75e935453f0f8c.png" alt="f,g \in \funct{F}_n"/> by <img class="math" src="images/math/b5b1dc79ddffdc41736650edbf156d99141c2e30.png" alt="f \cdot g"/> (Note that this product is different from the dot product between two vectors <img class="math" src="images/math/190797bc4d95dc0b6342f3db0e21d80f6035c50d.png" alt="\vec{x},\vec{y}"/>). The <em>algebraic immunity (AI)</em> of <em>f</em> is defined as the lowest degree of the function <em>g</em> for which <img class="math" src="images/math/443cd3fb5033abc259236d9b00fb42ca003e0999.png" alt="f \cdot g = \vec{0}"/> or <img class="math" src="images/math/80322e62d78491728226b5dea195d97a12cecd9b.png" alt="(\vec{1}+f) \cdot g = \vec{0}"/>. The function <em>g</em> for which <img class="math" src="images/math/443cd3fb5033abc259236d9b00fb42ca003e0999.png" alt="f \cdot g = \vec{0}"/> is called an <em>annihilator</em> of <em>f</em>. Denote the set of all annihilators of <em>f</em> by <img class="math" src="images/math/3d4016451ca379c6cc57e7c478cb05b0a7ce5f01.png" alt="\set{An}(f)"/>. This set is an ideal in the ring of Boolean functions generated by <img class="math" src="images/math/fb9a8cd5ac3ac5b271ceb0c51b09bbdd06463f28.png" alt="\vec{1}+f"/>.</p>
 <p>A function <em>f</em> should not be used if <em>f</em> or <em>1 + f</em> has a low degree annihilator. If this happens, algebraic attacks <a class="reference internal" href="bibliography.html#courtois2002cryptanalysis" id="id28">[courtois2002cryptanalysis]</a> can be executed.</p>
-<p>The component algebraic immunity of any <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/>, denoted by <img class="math" src="images/math/dfa50961db3d4567024abe8092b9ee4a86dbaf66.png" alt="\crit{AI}(F)"/>, is the minimal algebraic immunity of the component functions <img class="math" src="images/math/332939ad4a93d0d88d8527c68f037392a9492ad2.png" alt="\vec{v} \cdot
-F (\vec{v})"/> of the Vector Boolean function with <img class="math" src="images/math/a01a442bbf9a2f75daa782212dae2f8c3a7c8bb8.png" alt="\vec{v} \neq \vec{0} \in \gf{V_m}"/>.</p>
+<p>The component algebraic immunity of any <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, denoted by <img class="math" src="images/math/8dd8bb8e55968daebbbad16820e1d6946f855337.png" alt="\crit{AI}(F)"/>, is the minimal algebraic immunity of the component functions <img class="math" src="images/math/38a9a35bbd3b689c54695f88e70c1865d2867b08.png" alt="\vec{v} \cdot
+F (\vec{v})"/> of the Vector Boolean function with <img class="math" src="images/math/bb0e08688acc644dd9376c5e165f8acdd4d2234c.png" alt="\vec{v} \neq \vec{0} \in \gf{V_m}"/>.</p>
 <p>The <em>algebraic attack</em> exploits the existence of multivariate equations involving the input to the S-box and its output, that is, finding S-boxes with low algebraic immunity.</p>
 </div>
 <div class="section" id="id29">
 <h3><a class="toc-backref" href="#id65">Library</a><a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 <p>The method used to obtain this criterion is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">AI</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">ai</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">AI</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">ai</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to the maximum algebraic immunity that can be achieved by a Vector Boolean function with the same number of input bits and output bits is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">int</span> <span class="n">aimax</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">aimax</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id30">
 <h4>Example<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the algebraic immunity of a Vector Boolean function given its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -699,7 +739,7 @@ F (\vec{v})"/> of the Vector Boolean function with <img class="math" src="images
 </pre></div>
 </div>
 <p>If we use the <em>NibbleSub</em> S-box Truth Table as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The algebraic immunity of the function is 2</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The algebraic immunity of the function is 2</span>
 <span class="go">The maximum algebraic immunity that can be achieved by a</span>
 <span class="go">Vector Boolean function with the same dimensions is 2</span>
 </pre></div>
@@ -711,32 +751,32 @@ F (\vec{v})"/> of the Vector Boolean function with <img class="math" src="images
 <h2><a class="toc-backref" href="#id66">Global avalanche criterion</a><a class="headerlink" href="#global-avalanche-criterion" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id31">
 <h3><a class="toc-backref" href="#id67">Description</a><a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
-<p>The <em>Global avalanche criterion (GAC)</em> was introduced in <a class="reference internal" href="bibliography.html#zhang95gac" id="id32">[zhang95gac]</a> to measure the overall avalanche characteristics of a Boolean function. Let <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/>, its Global avalanche criterion is defined by two indicators:</p>
+<p>The <em>Global avalanche criterion (GAC)</em> was introduced in <a class="reference internal" href="bibliography.html#zhang95gac" id="id32">[zhang95gac]</a> to measure the overall avalanche characteristics of a Boolean function. Let <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, its Global avalanche criterion is defined by two indicators:</p>
 <ol class="arabic simple">
-<li>The <em>absolute indicator</em> of <em>F</em>, denoted by <img class="math" src="images/math/e23719fd4a89adeffe26e1dbf8ea1335c456349a.png" alt="\crit{AC_{max}}(F)"/>, defines the maximum absolute non-zero value of the Autocorrelation Spectrum:</li>
+<li>The <em>absolute indicator</em> of <em>F</em>, denoted by <img class="math" src="images/math/908a87c12cfa55e888c585f0193721213cffe8d7.png" alt="\crit{AC_{max}}(F)"/>, defines the maximum absolute non-zero value of the Autocorrelation Spectrum:</li>
 </ol>
 <div class="math">
-<p><img src="images/math/7e790ed5c3b42b0d603c1ebb197094c6002521f8.png" alt="\crit{AC_{max}}(F) = \max(|\matr{AC}(F)(\vec{u},\vec{v})|) \ \fa \vec{u} \neq \vec{0} \in \gf{V_n}, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}"/></p>
+<p><img src="images/math/38b762946d7abbc8527f47fb50c7601504018d0a.png" alt="\crit{AC_{max}}(F) = \max(|\matr{AC}(F)(\vec{u},\vec{v})|) \ \fa \vec{u} \neq \vec{0} \in \gf{V_n}, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}"/></p>
 </div><ol class="arabic simple" start="2">
-<li>The <em>sum-of-square indicator</em>, denoted by <img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/>, is the second moment of the autocorrelation coefficients:</li>
+<li>The <em>sum-of-square indicator</em>, denoted by <img class="math" src="images/math/efdef34dbaca15f50a1fe150b9660f076f53d54f.png" alt="\sigma"/>, is the second moment of the autocorrelation coefficients:</li>
 </ol>
 <div class="math">
-<p><img src="images/math/0cf0ef2331253aada16fba03b6dadebd9ea5bab0.png" alt="\sigma(F) = \sum_{(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}} \matr{AC}(F)(\vec{u},\vec{v})^2 =  \frac{1}{2^n} \sum_{(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}} \matr{WS}(F)(\vec{u},\vec{v})^4"/></p>
+<p><img src="images/math/502d5b86192cb863757999c3d6e2e90b4d2085b6.png" alt="\sigma(F) = \sum_{(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}} \matr{AC}(F)(\vec{u},\vec{v})^2 =  \frac{1}{2^n} \sum_{(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}} \matr{WS}(F)(\vec{u},\vec{v})^4"/></p>
 </div><p>In order to achieve good diffusion, cryptographic functions should achieve low values of both indicators.</p>
 </div>
 <div class="section" id="id33">
 <h3><a class="toc-backref" href="#id68">Library</a><a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
 <p>The methods used to obtain these criteria are the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">maxAC</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">maxAC</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 <span class="kt">void</span> <span class="n">sigma</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id34">
 <h4>Example<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the absolute indicator and the sum-of-square indicator of a Vector Boolean function given its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -773,7 +813,7 @@ F (\vec{v})"/> of the Vector Boolean function with <img class="math" src="images
 </pre></div>
 </div>
 <p>If we use the <em>NibbleSub</em> S-box Truth Table as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The absolute indicator of the function is 16</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The absolute indicator of the function is 16</span>
 <span class="go">The sum-of-square indicator of the function is 1408</span>
 <span class="go">The maximum absolute indicator that can be achieved by a</span>
 <span class="go">Vector Boolean function with the same dimensions is 16</span>
@@ -796,35 +836,35 @@ F (\vec{v})"/> of the Vector Boolean function with <img class="math" src="images
 <h3><a class="toc-backref" href="#id70">Description</a><a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
 <p>Functions with non-zero linear structures are considered weak functions from cryptanalytic viewpoint. It is our interest to identify strong Vector Boolean functions which are far from this weak functions. The cryptanalytic value of linear structures lies in their potential to map a nonlinear function to a degenerate function via a linear transformation, which may reduce the size of the keyspace.</p>
 <p>S-boxes used in block ciphers should have no nonzero linear structures (see <a class="reference internal" href="bibliography.html#evertse-88" id="id36">[Evertse:88]</a>). The existence of nonzero linear structures, for the functions implemented in stream ciphers, is a potential risk that should also be avoided, despite the fact that such existence could not be used in attacks, so far.</p>
-<p>The <em>linearity distance</em> of a Boolean function <img class="math" src="images/math/ff8ff8fe04d527a17abb73d88132266b000fa947.png" alt="f \in \funct{F}_{n}"/> is a characteristic defined by the distance to the set of all Boolean functions admitting nonzero linear structures. These include, among others, all the affine functions and all non bent quadratic functions and are defined as follows <a class="reference internal" href="bibliography.html#meiers-89" id="id37">[MeierS:89]</a>:</p>
+<p>The <em>linearity distance</em> of a Boolean function <img class="math" src="images/math/3f6611883a661ad9826a91529107c8e2c8d9a798.png" alt="f \in \funct{F}_{n}"/> is a characteristic defined by the distance to the set of all Boolean functions admitting nonzero linear structures. These include, among others, all the affine functions and all non bent quadratic functions and are defined as follows <a class="reference internal" href="bibliography.html#meiers-89" id="id37">[MeierS:89]</a>:</p>
 <div class="math">
-<p><img src="images/math/502d82c983a11e5b927951baa39c05ece48ae907.png" alt="\crit{LD}(f) = d(f, \set{LS}_n) = \min_{\set{S} \in \set{LS}_n} d(f,\set{S})"/></p>
+<p><img src="images/math/0e9b233cfb5bbce6bf0c7ca30c861b922e6baed6.png" alt="\crit{LD}(f) = d(f, \set{LS}_n) = \min_{\set{S} \in \set{LS}_n} d(f,\set{S})"/></p>
 </div><p>where:</p>
 <div class="math">
-<p><img src="images/math/ab03d692bcdee0ca2481ff65639e9fcab19c5a4e.png" alt="\set{LS}_n = \left\{ f \in \funct{F}_{n} \given f \mbox{ has a linear structure } \neq \vec{0} \right\}"/></p>
+<p><img src="images/math/86f8144095ac18e57974b0c3f14959de7511e74e.png" alt="\set{LS}_n = \left\{ f \in \funct{F}_{n} \given f \mbox{ has a linear structure } \neq \vec{0} \right\}"/></p>
 </div><p><em>Linearity distance</em> of a Vector Boolean function, defined as the minimum among the linearity distances of all component functions of <em>F</em>, may be computed from the Autocorrelation Spectrum using <a class="reference internal" href="bibliography.html#carletbf-08" id="id38">[CarletBF:08]</a>:</p>
 <div class="math">
-<p><img src="images/math/055bcaa2e1061644a693b1afc0196cd2ce82bed5.png" alt="\crit{LD}(F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \crit{LD}(\vec{v} \cdot F) = 2^{n-2} - \frac{1}{4} \cdot \crit{AC_{max}}(F)"/></p>
-</div><p>The <em>differential cryptanalysis</em> is based on the idea of finding high probable differentials pairs between the inputs and outputs of S-boxes present in the cipher, that is, finding S-boxes with low linearity distance. Differential cryptanalysis <a class="reference internal" href="bibliography.html#bihams-90" id="id39">[BihamS:90]</a> can be seen as an extension of the ideas of attacks based on the presence of linear structures <a class="reference internal" href="bibliography.html#nyberg-91" id="id40">[Nyberg:91]</a>. If <img class="math" src="images/math/1a6c1898d32eab11691ec80880b75abfe23fe906.png" alt="\vec{u}"/> is a linear structure of <em>f</em>, then the inputs of difference <img class="math" src="images/math/1a6c1898d32eab11691ec80880b75abfe23fe906.png" alt="\vec{u}"/> result in output differences of <em>1</em> or <em>-1</em> with probability <em>1</em>. In differential cryptanalysis,
-it is only required that inputs of difference <img class="math" src="images/math/c2ab50eeec44a5b6c1e767a8ded5ab155407e01f.png" alt="\Delta\vec{x}"/> lead to a known difference  <img class="math" src="images/math/761f065b6248dfd41a252bf9288ea807e887496a.png" alt="\Delta\vec{y}"/> with high probability, or with a probability that noticeably exceeds the mean. The perfect nonlinear functions are resistant to differential cryptanalysis.</p>
-<p>Let <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/>, if <img class="math" src="images/math/bde4d075f84d3e8f6c17dc52abdf3248325f3a5e.png" alt="\crit{LD}(F) = 0"/>, it means that <em>f</em> has a nontrivial linear structure. As <img class="math" src="images/math/198b850981e139645415ce65945fe59ec83c6331.png" alt="\set{A}_n \subseteq \set{LS}_n"/>, then <img class="math" src="images/math/295ff3353ec258921a50a7644b0ff36485b3901e.png" alt="\crit{NL}(F) \geq \crit{LD}(F)"/>.</p>
+<p><img src="images/math/153d9560d1433a881daaf46154033f2f9d32974e.png" alt="\crit{LD}(F) = \min_{\vec{v} \neq \vec{0} \in \gf{V_m}} \crit{LD}(\vec{v} \cdot F) = 2^{n-2} - \frac{1}{4} \cdot \crit{AC_{max}}(F)"/></p>
+</div><p>The <em>differential cryptanalysis</em> is based on the idea of finding high probable differentials pairs between the inputs and outputs of S-boxes present in the cipher, that is, finding S-boxes with low linearity distance. Differential cryptanalysis <a class="reference internal" href="bibliography.html#bihams-90" id="id39">[BihamS:90]</a> can be seen as an extension of the ideas of attacks based on the presence of linear structures <a class="reference internal" href="bibliography.html#nyberg-91" id="id40">[Nyberg:91]</a>. If <img class="math" src="images/math/2184ff78be3b934ca690852a9d1906d9dcff61dc.png" alt="\vec{u}"/> is a linear structure of <em>f</em>, then the inputs of difference <img class="math" src="images/math/2184ff78be3b934ca690852a9d1906d9dcff61dc.png" alt="\vec{u}"/> result in output differences of <em>1</em> or <em>-1</em> with probability <em>1</em>. In differential cryptanalysis,
+it is only required that inputs of difference <img class="math" src="images/math/de36cf0f7ba23a14e70081dea4078536c37379b7.png" alt="\Delta\vec{x}"/> lead to a known difference  <img class="math" src="images/math/0df44851919e43c0ad226b34cb928e08cd0b99c0.png" alt="\Delta\vec{y}"/> with high probability, or with a probability that noticeably exceeds the mean. The perfect nonlinear functions are resistant to differential cryptanalysis.</p>
+<p>Let <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, if <img class="math" src="images/math/6d731c630249d281bdffca719cadd64666a32d8d.png" alt="\crit{LD}(F) = 0"/>, it means that <em>f</em> has a nontrivial linear structure. As <img class="math" src="images/math/9f812bb7ebf899c375235f242bfb774538873a94.png" alt="\set{A}_n \subseteq \set{LS}_n"/>, then <img class="math" src="images/math/fd4194c9c64c6ec8505e49ab71521210bfb57553.png" alt="\crit{NL}(F) \geq \crit{LD}(F)"/>.</p>
 </div>
 <div class="section" id="id41">
 <h3><a class="toc-backref" href="#id71">Library</a><a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
 <p>The method used to obtain the linearity distance of a Vector Boolean function is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">ld</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">ld</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to the maximum linearity distance that can be achieved by a Vector Boolean function with the same number of input bits and output bits is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">ldmax</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">ldmax</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id42">
 <h4>Example<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the linearity distance of a Vector Boolean function given its Truth Table together with the maximum linearity distance that can be achieved by a Vector Boolean function with the same number of input bits and output bits.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -850,7 +890,7 @@ it is only required that inputs of difference <img class="math" src="images/math
 </pre></div>
 </div>
 <p>If we use the <em>NibbleSub</em> S-box Truth Table as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">Linearity distance of the function is 0</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">Linearity distance of the function is 0</span>
 </pre></div>
 </div>
 <p>This S-box has linear structures, and as a consequence, the distance to the set of all Boolean functions admitting nonzero linear structures is 0.</p>
@@ -862,24 +902,24 @@ it is only required that inputs of difference <img class="math" src="images/math
 <div class="section" id="id43">
 <h3><a class="toc-backref" href="#id73">Description</a><a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
 <p>This criterion is based on the properties of the derivatives of Boolean functions and describes the behavior of a function whenever some input bits are complemented. This concept was introduced by Preneel et al. in <a class="reference internal" href="bibliography.html#preneelllgv90" id="id44">[PreneelLLGV90]</a> and it is a generalization of the Strict Avalanche Criterion (SAC) defined by Webster and Tavares in <a class="reference internal" href="bibliography.html#c85-webster-tavares" id="id45">[c85-Webster-Tavares]</a>.</p>
-<p><img class="math" src="images/math/ff8ff8fe04d527a17abb73d88132266b000fa947.png" alt="f \in \funct{F}_{n}"/> is said to satisfy the propagation characteristics with respect to <img class="math" src="images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/> if and only if <img class="math" src="images/math/b3bcf8cf5c596f613f02299d34eb99ff601fb03d.png" alt="f(\vec{x})+f(\vec{x}+\vec{u})"/> is balanced.</p>
-<p>A function <img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> satisfies the propagation criterion of degree <em>l</em> (<img class="math" src="images/math/e74eb53e50b861ea6af2ccc29844fd323ec5e66e.png" alt="\crit{PC}(l)"/>) if and only if complementing any <em>l</em> or fewer of the input bits complements exactly half of the function values.</p>
-<p>Let <img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> and <img class="math" src="images/math/e33aeb07be1b11a0d971f01db7e007d976b95ff1.png" alt="l \in \left\{1,\dots,n\right\}"/>, <em>f</em> satisfies the propagation criterion of degree <em>l</em> if and only if <img class="math" src="images/math/b812e4728bb41663f53b9ad6ca65002fd018443a.png" alt="f(\vec{x})+f(\vec{x}+\vec{u}) \mbox{ balanced } \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq l"/>.</p>
-<p>Let <img class="math" src="images/math/07d2f836c86c9a6a2293939c4f2ce95a71a7b204.png" alt="f \in \funct{F}_n$ and $l \in \left\{1,\dots,n\right\}"/>, <em>f</em> satisfies the propagation criterion of degree <em>l</em> if its Autocorrelation Matrix elements, at values of the nonzero vector indexes whose weight at most <em>l</em>, is zero: <img class="math" src="images/math/2dd6284ebd8a8451d11b46781535570adbdc6e97.png" alt="\R_f(\vec{u}) = 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq l"/></p>
-<p><img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> satisfies the propagation criterion of degree <img class="math" src="images/math/021899ebca8ec3c33600e0ac87399c8fa2784957.png" alt="l \ (\crit{PC}(l))"/> if any component function of <em>F</em> satisfies the <img class="math" src="images/math/e74eb53e50b861ea6af2ccc29844fd323ec5e66e.png" alt="\crit{PC}(l)"/>. This criterion can be obtained from the Autocorrelation Spectrum in the following way: <img class="math" src="images/math/39f1ea08244aec18750e69db6b6fa45d53586fab.png" alt="\R_F(\vec{u},\vec{v})=0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq l, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}"/></p>
+<p><img class="math" src="images/math/3f6611883a661ad9826a91529107c8e2c8d9a798.png" alt="f \in \funct{F}_{n}"/> is said to satisfy the propagation characteristics with respect to <img class="math" src="images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> if and only if <img class="math" src="images/math/7ba29eea40de3bbe3e170b1d4d5f61ab138300a8.png" alt="f(\vec{x})+f(\vec{x}+\vec{u})"/> is balanced.</p>
+<p>A function <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> satisfies the propagation criterion of degree <em>l</em> (<img class="math" src="images/math/ece01c7fe3dc2f70961c0af18c233761ed97c8bd.png" alt="\crit{PC}(l)"/>) if and only if complementing any <em>l</em> or fewer of the input bits complements exactly half of the function values.</p>
+<p>Let <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> and <img class="math" src="images/math/23c3cbf0d730dc8bc07386dd365c5d7d85e9228d.png" alt="l \in \left\{1,\dots,n\right\}"/>, <em>f</em> satisfies the propagation criterion of degree <em>l</em> if and only if <img class="math" src="images/math/31b515740c0128973b8c039dc2e50d337c8d273f.png" alt="f(\vec{x})+f(\vec{x}+\vec{u}) \mbox{ balanced } \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq l"/>.</p>
+<p>Let <img class="math" src="images/math/27deeb4bfe912ad3cf2c91df6922d0faf3002578.png" alt="f \in \funct{F}_n$ and $l \in \left\{1,\dots,n\right\}"/>, <em>f</em> satisfies the propagation criterion of degree <em>l</em> if its Autocorrelation Matrix elements, at values of the nonzero vector indexes whose weight at most <em>l</em>, is zero: <img class="math" src="images/math/16a797c11f058c779f98203d8daf80f9ce839e0d.png" alt="\R_f(\vec{u}) = 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq l"/></p>
+<p><img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> satisfies the propagation criterion of degree <img class="math" src="images/math/28e3fa3a7834879ab0a78a5030ce216898a54f00.png" alt="l \ (\crit{PC}(l))"/> if any component function of <em>F</em> satisfies the <img class="math" src="images/math/ece01c7fe3dc2f70961c0af18c233761ed97c8bd.png" alt="\crit{PC}(l)"/>. This criterion can be obtained from the Autocorrelation Spectrum in the following way: <img class="math" src="images/math/25c8b892222a7bdb022785087419f40256ca0475.png" alt="\R_F(\vec{u},\vec{v})=0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq l, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}"/></p>
 </div>
 <div class="section" id="id46">
 <h3><a class="toc-backref" href="#id74">Library</a><a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
 <p>The method used to obtain this criterion is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">PC</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">k</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">PC</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">k</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id47">
 <h4>Example<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the degree of propagation criterion of a Vector Boolean function given its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -904,19 +944,19 @@ it is only required that inputs of difference <img class="math" src="images/math
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If we use the function <img class="math" src="images/math/7c11216f9e38390ae623ee80bfbae68dea79ff44.png" alt="f = x_1x_2+x_3x_4"/> polynomial in ANF as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The function is PC of degree 4</span>
+<p>If we use the function <img class="math" src="images/math/524aae0c95f861997d7965dcad321dd4b8a1c6b3.png" alt="f = x_1x_2+x_3x_4"/> polynomial in ANF as input, the output would be the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The function is PC of degree 4</span>
 </pre></div>
 </div>
 <p>The following figure represents the Autocorrelation Spectrum of <em>f</em> and emphasizes in red the rows whose indexes are of weight 1,2,3 and 4.</p>
 <img alt="images/pc.png" class="align-center" src="images/pc.png" />
-<p>For all this rows, the Autocorrelation values are 0. As a consequence <em>f</em> satisfies <img class="math" src="images/math/4033ca973693241bb38ff2b8f34c1ac25b91f231.png" alt="\crit{PC}(4)"/>.</p>
+<p>For all this rows, the Autocorrelation values are 0. As a consequence <em>f</em> satisfies <img class="math" src="images/math/4eb286f24077fc104fb071e4363bd25020f01a48.png" alt="\crit{PC}(4)"/>.</p>
 </div>
 </div>
 </div>
 <div class="section" id="summary">
 <h2><a class="toc-backref" href="#id75">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="criteria_d/summary.html#criteria"><span>Cryptographic criteria Table</span></a> lists the member functions related to these criteria.</p>
+<p><a class="reference internal" href="criteria_d/summary.html#criteria"><span class="std std-ref">Cryptographic criteria Table</span></a> lists the member functions related to these criteria.</p>
 <table border="1" class="docutils" id="criteria">
 <colgroup>
 <col width="45%" />
@@ -931,22 +971,22 @@ it is only required that inputs of difference <img class="math" src="images/math
 <td><strong>DESCRIPTION</strong></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">deg(int&amp;</span> <span class="pre">d,</span> <span class="pre">VBF&amp;</span> <span class="pre">F)</span></code></td>
-<td><img class="math" src="images/math/a2efa292f54419882d80788b2fe6b9d96693cc8d.png" alt="\crit{DEG}(F)=d"/></td>
+<td><img class="math" src="images/math/945b884383cdfa53e05c7cd920c6be2f0820527c.png" alt="\crit{DEG}(F)=d"/></td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">nl(NTL::RR&amp;</span> <span class="pre">x,</span> <span class="pre">VBF&amp;</span> <span class="pre">F)</span></code></td>
-<td><img class="math" src="images/math/2bc56eb54ebef0a0dfe3590f0e26d03b6f977e8f.png" alt="\crit{NL}(F)=x"/></td>
+<td><img class="math" src="images/math/2a650a51b4f0d9865e70382182cc6d691f08a838.png" alt="\crit{NL}(F)=x"/></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">nlr(long&amp;</span> <span class="pre">x,</span> <span class="pre">VBF&amp;</span> <span class="pre">F,</span> <span class="pre">int</span> <span class="pre">r)</span></code></td>
-<td><img class="math" src="images/math/83f8626f8d51b21a099f17e0334ec7edb5b209e4.png" alt="\crit{NL}_r(F)=x"/></td>
+<td><img class="math" src="images/math/6f59241a7312effb4aa1c2bce60cd47a476e2312.png" alt="\crit{NL}_r(F)=x"/></td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">Bal(int&amp;</span> <span class="pre">bal,</span> <span class="pre">VBF&amp;</span> <span class="pre">F)</span></code></td>
 <td>If <em>F</em> is balanced returns <em>1</em>, otherwise <em>0</em></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">CI(int&amp;</span> <span class="pre">t,</span> <span class="pre">VBF&amp;</span> <span class="pre">F)</span></code></td>
-<td><em>F</em> is an <img class="math" src="images/math/4d2f36e97fde3538469f4034cc815f0bf39e0bde.png" alt="(n,m,t)-\crit{CI}"/></td>
+<td><em>F</em> is an <img class="math" src="images/math/34ddfde69721ec7a95155d1661d12faac87e4d2d.png" alt="(n,m,t)-\crit{CI}"/></td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">AI(int&amp;</span> <span class="pre">i,</span> <span class="pre">VBF&amp;</span> <span class="pre">F)</span></code></td>
-<td><img class="math" src="images/math/93a4a73a539ae570d127731be2b8f0ed45007003.png" alt="\crit{AI}(F)=i"/></td>
+<td><img class="math" src="images/math/41e73fac5a5ac699a8bddb89bd54c03c787606b2.png" alt="\crit{AI}(F)=i"/></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">maxAC(NTL::ZZ&amp;</span> <span class="pre">x,</span> <span class="pre">VBF&amp;</span> <span class="pre">F)</span></code></td>
 <td><em>F</em> has absolute indicator <em>x</em></td>
@@ -955,10 +995,10 @@ it is only required that inputs of difference <img class="math" src="images/math
 <td><em>F</em> has sum-of-squares indicator <em>x</em></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">ld(NTL::RR&amp;</span> <span class="pre">x,</span> <span class="pre">VBF&amp;</span> <span class="pre">F)</span></code></td>
-<td><img class="math" src="images/math/31e6b17b61e245a9f7e2afd88b02da61ad5b7d8a.png" alt="\crit{LD}(F)=x"/></td>
+<td><img class="math" src="images/math/7cec8a38fe74cdae88a8de95d7d5c8ab4661f2e6.png" alt="\crit{LD}(F)=x"/></td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">PC(int&amp;</span> <span class="pre">l,</span> <span class="pre">VBF&amp;</span> <span class="pre">F)</span></code></td>
-<td><em>F</em> satisfies the <img class="math" src="images/math/e74eb53e50b861ea6af2ccc29844fd323ec5e66e.png" alt="\crit{PC}(l)"/></td>
+<td><em>F</em> satisfies the <img class="math" src="images/math/ece01c7fe3dc2f70961c0af18c233761ed97c8bd.png" alt="\crit{PC}(l)"/></td>
 </tr>
 </tbody>
 </table>
@@ -1006,15 +1046,19 @@ it is only required that inputs of difference <img class="math" src="images/math
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="operations.html" class="btn btn-neutral float-right" title="Operations and constructions over Vector Boolean Functions">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="operations.html" class="btn btn-neutral float-right" title="Operations and constructions over Vector Boolean Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="representations.html" class="btn btn-neutral" title="Representations and characterizations"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="representations.html" class="btn btn-neutral" title="Representations and characterizations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1024,12 +1068,13 @@ it is only required that inputs of difference <img class="math" src="images/math
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -1045,9 +1090,11 @@ it is only required that inputs of difference <img class="math" src="images/math
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="static/jquery.js"></script>
@@ -1067,16 +1114,6 @@ it is only required that inputs of difference <img class="math" src="images/math
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

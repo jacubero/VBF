@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Direct sum &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,24 +30,46 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -53,173 +77,113 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Direct sum</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/operations_d/directsum.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="direct-sum">
 <h1>Direct sum<a class="headerlink" href="#direct-sum" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Let <img class="math" src="../images/math/2dfa34395f449d68b80a3edd31481b8454ac2095.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="../images/math/c382c142f71217e6b48e940e87b6c4e54221837f.png" alt="F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="../images/math/a6b3bb40fe9e15eeec045dc60049c7df296e3afe.png" alt="F_1 \oplus F_2 \in \funct{F}_{n_1+n_2,m}"/>, called direct sum, defined as <img class="math" src="../images/math/629ce091ee46d93cf6f918f0f4bd08f83ec6ab7d.png" alt="(F_1 \oplus F_2) \left( (\vec{x_1},\vec{x_2}) \right)= F_1(\vec{x_1}) + F_2(\vec{x_2})"/>.</p>
+<p>Let <img class="math" src="../images/math/5b7705963514449bd782a5c6b5f5481877b33231.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="../images/math/71251d852519690f9e5dd8051440c86700480904.png" alt="F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="../images/math/99651bf452a6f7a5aaa7203c042d6d9467fd3cae.png" alt="F_1 \oplus F_2 \in \funct{F}_{n_1+n_2,m}"/>, called direct sum, defined as <img class="math" src="../images/math/d7acb8d8b91d8e33c6af1ad7bf8499578cf55127.png" alt="(F_1 \oplus F_2) \left( (\vec{x_1},\vec{x_2}) \right)= F_1(\vec{x_1}) + F_2(\vec{x_2})"/>.</p>
 <a class="reference internal image-reference" href="../images/DirectSum.png"><img alt="../images/DirectSum.png" class="align-center" src="../images/DirectSum.png" style="width: 750px;" /></a>
 </div>
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>The method included in VBF to perform this construction is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">directsum</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">directsum</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <p>The following program provides the weight, algebraic degree, balancedness, correlation immunity, nonlinearity and algebraic immunity of two Vector Boolean functions given its polynomial representation in ANF and calculates the same criteria for the its direct sum.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -297,14 +261,14 @@
 </pre></div>
 </div>
 <p>If we use the Boolean functions with the following Truth Tables (in hexadecimal representation) as inputs:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">6cb405778ea9bd30</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">6cb405778ea9bd30</span>
 </pre></div>
 </div>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">5c721bcaac27b1c5</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">5c721bcaac27b1c5</span>
 </pre></div>
 </div>
 <p>The output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">weight(F)=32</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">weight(F)=32</span>
 <span class="go">deg(F)=3</span>
 <span class="go">F is a balanced function</span>
 <span class="go">Degree of Correlation immunity of F=1</span>
@@ -340,20 +304,24 @@
 </div>
 <p>These results are congruent with the properties derived in <a class="reference internal" href="../bibliography.html#sarkarmaitra-00" id="id1">[SarkarMaitra:00]</a> and others derived by Jose Antonio Alvarez:</p>
 <ol class="arabic simple">
-<li><img class="math" src="../images/math/797fc36e25dba93ce91dc096c2fc17f5646c2bed.png" alt="wt(F \oplus G) = 2^6 \cdot 32+2^6 \cdot 32 - 2 \cdot 32 \cdot 32 = 2048"/>.</li>
-<li><img class="math" src="../images/math/18f1dc22a26667c6317412fdcc3f317c3812ec25.png" alt="\crit{deg}(F \oplus G) = \max \left\{ 3, 3 \right\} = 3"/>.</li>
-<li><em>F</em> is <em>1</em>-resilient, <em>G</em> is <em>2</em>-resilient, and <img class="math" src="../images/math/1a567449896c86269e9ad6fad77e74eeb85c8f46.png" alt="F \oplus G"/> is <img class="math" src="../images/math/bbc77d8bcba800c4f6f2b284a9892ec79335b3fa.png" alt="(1+2+1)"/>-resilient.</li>
-<li><img class="math" src="../images/math/ee5b0bb5aaa6fd840d1e656369ca526246e7cbf3.png" alt="\crit{R}(F \oplus G) = 16 \cdot 32=512"/> because <em>F</em> and <em>G</em> are Boolean functions.</li>
-<li><img class="math" src="../images/math/c3a20ce7b406d26e28a42e7fc4f2a329a234cfc2.png" alt="\crit{NL}(F \oplus G) = 2^{12-1} -\frac{1}{2} \cdot 512 = 1792"/>.</li>
-<li><img class="math" src="../images/math/c7ef01dc2b7eb781070e9c5d8db100b8600340db.png" alt="\crit{AC_{max}}(F \oplus G) = \max \{ 32 \cdot 64, 64 \cdot 64 \} = 4096"/>.</li>
-<li><img class="math" src="../images/math/00d6ac55ddb486f8ed5c26453452e268510b6065.png" alt="\crit{LD}(F \oplus G) =2^{12-2}-\frac{1}{4} \cdot 4096 = 0"/>.</li>
-<li><img class="math" src="../images/math/8870192183f49e64672baff41a079399973fa855.png" alt="\max \{ 3, 2 \} \leq \crit{AI}(F \oplus G) = 3 \leq \min \left\{ \max \left\{ 3 , 3 \right\} ,  3 + 2 \right\}"/>.</li>
+<li><img class="math" src="../images/math/2a3574716bfe0cdb6c6258865770ab6e2344d680.png" alt="wt(F \oplus G) = 2^6 \cdot 32+2^6 \cdot 32 - 2 \cdot 32 \cdot 32 = 2048"/>.</li>
+<li><img class="math" src="../images/math/3dd26eeb4965793534406cfc8c89c067287b079a.png" alt="\crit{deg}(F \oplus G) = \max \left\{ 3, 3 \right\} = 3"/>.</li>
+<li><em>F</em> is <em>1</em>-resilient, <em>G</em> is <em>2</em>-resilient, and <img class="math" src="../images/math/46d91924efd702f7779089316fdd78f219d07124.png" alt="F \oplus G"/> is <img class="math" src="../images/math/b474d2da21e98ce3e468e3183e15da4c08ab8631.png" alt="(1+2+1)"/>-resilient.</li>
+<li><img class="math" src="../images/math/21d3320fc87d7cdd071e31abab9ebd124189873c.png" alt="\crit{R}(F \oplus G) = 16 \cdot 32=512"/> because <em>F</em> and <em>G</em> are Boolean functions.</li>
+<li><img class="math" src="../images/math/ad3c9589c2d94e532f5c9debcc83424582f961b4.png" alt="\crit{NL}(F \oplus G) = 2^{12-1} -\frac{1}{2} \cdot 512 = 1792"/>.</li>
+<li><img class="math" src="../images/math/20211a8cfb34de7068ae24b91cb24692b4ecf98b.png" alt="\crit{AC_{max}}(F \oplus G) = \max \{ 32 \cdot 64, 64 \cdot 64 \} = 4096"/>.</li>
+<li><img class="math" src="../images/math/c56030a04d6aac27baca8c7c2288d551786a1aad.png" alt="\crit{LD}(F \oplus G) =2^{12-2}-\frac{1}{4} \cdot 4096 = 0"/>.</li>
+<li><img class="math" src="../images/math/60d66793b4ac5cf17d4479912cd6090ac861a214.png" alt="\max \{ 3, 2 \} \leq \crit{AI}(F \oplus G) = 3 \leq \min \left\{ \max \left\{ 3 , 3 \right\} ,  3 + 2 \right\}"/>.</li>
 </ol>
 </div>
 </div>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -363,12 +331,13 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -384,9 +353,11 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../static/jquery.js"></script>
@@ -406,16 +377,6 @@
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

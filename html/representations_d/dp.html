@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Differential Profile &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,24 +30,46 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -53,211 +77,151 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Differential Profile</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/representations_d/dp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="differential-profile">
 <h1>Differential Profile<a class="headerlink" href="#differential-profile" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>The first step of Differential Cryptanalysis is to compute the characteristics of inputs and the outputs of the S-boxes, which we will then combine together to form a characteristic for the complete cipher. Consider a <img class="math" src="../images/math/b5ed9eeee5f84041f3948f1eb1b4385832706f8c.png" alt="n \times m"/> S-box with input <img class="math" src="../images/math/227491a6063a1ff941eef98da6368606ba2ec452.png" alt="\vec{x} = (x_1, \ldots, x_n)"/> and output <img class="math" src="../images/math/49c8d8eac2f748458c44dcd8555d8f8f18c9bb73.png" alt="\vec{y} = (y_1,\ldots,y_m)"/>. All difference pairs of an S-box, <img class="math" src="../images/math/3ec8ff39149a214f5de3e7e60277865acd13e093.png" alt="(\Delta \vec{x}, \Delta \vec{y})"/>, can be examined and the probability of <img class="math" src="../images/math/3e52e75109f778aa34ae7be337b1e061466f7092.png" alt="\Delta \vec{y}"/> given <img class="math" src="../images/math/7e177a032c100f921e03e71a8f40682633a66730.png" alt="\Delta \vec{x}"/> can be derived by considering input pairs <img class="math" src="../images/math/d3ecd822702cc4954230155a060495f3af8890f3.png" alt="(\vec{x}^{'},\vec{x}^{''})"/> such that <img class="math" src="../images/math/3127c9a672eeeee41642b8ce8e4c7fab1b75d60a.png" alt="\vec{x}^{'}+\vec{x}^{''} = \Delta \vec{x}"/>. Since the ordering of the pair is not relevant, for a <img class="math" src="../images/math/b5ed9eeee5f84041f3948f1eb1b4385832706f8c.png" alt="n \times m"/> S-box we need only consider all <img class="math" src="../images/math/372fc4dd1270e8bd966735a2567c798ab49d57c8.png" alt="2^n"/> values for <img class="math" src="../images/math/16b263c5fe488903616d8833840c949a7a36d981.png" alt="\vec{x}^{'}"/> and then the value of <img class="math" src="../images/math/7e177a032c100f921e03e71a8f40682633a66730.png" alt="\Delta \vec{x}"/> constrains the value of <img class="math" src="../images/math/4ce0c1831ace5f6efb3327bd265ba1d12d664615.png" alt="\vec{x}^{''}"/> to be <img class="math" src="../images/math/6a2c048d00801f5f3e6366aa94633526bb7673ff.png" alt="\vec{x}^{''} = \vec{x}^{'}+\Delta \vec{x}"/>. We can derive the resulting values of <img class="math" src="../images/math/3e52e75109f778aa34ae7be337b1e061466f7092.png" alt="\Delta \vec{y}"/> for each input pair <img class="math" src="../images/math/49273b6130ae7c925c1d3112b382116ef21e6328.png" alt="(\vec{x}^{'}, \vec{x}^{''} = \vec{x}^{'}+\Delta \vec{x})"/>.</p>
-<p>We can tabulate the complete differential data for an S-box in the <em>Differential Profile</em> (In the literature, an equivalent matrix called Difference Distribution Table is used as well), which the rows represent <img class="math" src="../images/math/7e177a032c100f921e03e71a8f40682633a66730.png" alt="\Delta \vec{x}"/> values and the columns represent <img class="math" src="../images/math/3e52e75109f778aa34ae7be337b1e061466f7092.png" alt="\Delta \vec{y}"/> values.</p>
-<p>If we divide each element in the Differential Profile by the value on <img class="math" src="../images/math/daafa0f16c2f72b726ab4765ece7a5bf560518aa.png" alt="\matr{DP}(F)(\vec{0},\vec{0})"/>, these values represent the probability of the corresponding output difference <img class="math" src="../images/math/3e52e75109f778aa34ae7be337b1e061466f7092.png" alt="\Delta \vec{y}"/> value given the input difference <img class="math" src="../images/math/7e177a032c100f921e03e71a8f40682633a66730.png" alt="\Delta \vec{x}"/>, that is <img class="math" src="../images/math/a3befb3b1dc7b9834b287fd7433ed9f17d0bf214.png" alt="(\Delta \vec{x} \Rightarrow \Delta \vec{y})"/>, called <em>characteristic</em>. In general, entries in the Differential Profile with fewer bits set in the <img class="math" src="../images/math/7e177a032c100f921e03e71a8f40682633a66730.png" alt="\Delta \vec{x}"/> and <img class="math" src="../images/math/3e52e75109f778aa34ae7be337b1e061466f7092.png" alt="\Delta \vec{y}"/> that have higher probability are desirable.</p>
-<p>Let <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/>, if we denote by <img class="math" src="../images/math/7d0d547a51ae130764925136a04335c16f9c5a00.png" alt="D_F(\vec{u},\vec{v})"/> the set of vectors where the difference Vector Boolean Function of <em>F</em> in the direction of <img class="math" src="../images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/> coincides with <img class="math" src="../images/math/578c9880e2c9877d8850a212cb95b563ce99d607.png" alt="\vec{v} \in \gf{V_m}"/> by:</p>
+<p>The first step of Differential Cryptanalysis is to compute the characteristics of inputs and the outputs of the S-boxes, which we will then combine together to form a characteristic for the complete cipher. Consider a <img class="math" src="../images/math/87258a1e3b5c35cdf892710a4afcd3ddb5cfd34f.png" alt="n \times m"/> S-box with input <img class="math" src="../images/math/3e5b0dcfd7727974bc0030f19144e9e6e94ebe76.png" alt="\vec{x} = (x_1, \ldots, x_n)"/> and output <img class="math" src="../images/math/3998252cccad17fc922591c0b3494faf142dfb06.png" alt="\vec{y} = (y_1,\ldots,y_m)"/>. All difference pairs of an S-box, <img class="math" src="../images/math/b5101cf66e37982158684dda581f5275301e2f27.png" alt="(\Delta \vec{x}, \Delta \vec{y})"/>, can be examined and the probability of <img class="math" src="../images/math/2a9f35e8af72b468413c4dc744b988a68bd5d8b2.png" alt="\Delta \vec{y}"/> given <img class="math" src="../images/math/2dde92fe8758dfcccb09a3fd604f8d9cf62eaa10.png" alt="\Delta \vec{x}"/> can be derived by considering input pairs <img class="math" src="../images/math/20197c18316362c3a72ef372571576827e515a47.png" alt="(\vec{x}^{'},\vec{x}^{''})"/> such that <img class="math" src="../images/math/23e07b8f83d32c0a21607f53d45f76c08e378d5c.png" alt="\vec{x}^{'}+\vec{x}^{''} = \Delta \vec{x}"/>. Since the ordering of the pair is not relevant, for a <img class="math" src="../images/math/87258a1e3b5c35cdf892710a4afcd3ddb5cfd34f.png" alt="n \times m"/> S-box we need only consider all <img class="math" src="../images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/> values for <img class="math" src="../images/math/54e6a3e05029c95b70a5c6be08f909bc9a092bc3.png" alt="\vec{x}^{'}"/> and then the value of <img class="math" src="../images/math/2dde92fe8758dfcccb09a3fd604f8d9cf62eaa10.png" alt="\Delta \vec{x}"/> constrains the value of <img class="math" src="../images/math/fcbef3acb87d2ea50f19cf4871fb9e51727942b9.png" alt="\vec{x}^{''}"/> to be <img class="math" src="../images/math/0f5e8e165604175d47cd1af41c4bc99b470937d7.png" alt="\vec{x}^{''} = \vec{x}^{'}+\Delta \vec{x}"/>. We can derive the resulting values of <img class="math" src="../images/math/2a9f35e8af72b468413c4dc744b988a68bd5d8b2.png" alt="\Delta \vec{y}"/> for each input pair <img class="math" src="../images/math/78e3121c80ffefb9115ffe3850ce5135bec71eb6.png" alt="(\vec{x}^{'}, \vec{x}^{''} = \vec{x}^{'}+\Delta \vec{x})"/>.</p>
+<p>We can tabulate the complete differential data for an S-box in the <em>Differential Profile</em> (In the literature, an equivalent matrix called Difference Distribution Table is used as well), which the rows represent <img class="math" src="../images/math/2dde92fe8758dfcccb09a3fd604f8d9cf62eaa10.png" alt="\Delta \vec{x}"/> values and the columns represent <img class="math" src="../images/math/2a9f35e8af72b468413c4dc744b988a68bd5d8b2.png" alt="\Delta \vec{y}"/> values.</p>
+<p>If we divide each element in the Differential Profile by the value on <img class="math" src="../images/math/4a7942e41fdfe5cb2f1290ba63a8a424b99f7646.png" alt="\matr{DP}(F)(\vec{0},\vec{0})"/>, these values represent the probability of the corresponding output difference <img class="math" src="../images/math/2a9f35e8af72b468413c4dc744b988a68bd5d8b2.png" alt="\Delta \vec{y}"/> value given the input difference <img class="math" src="../images/math/2dde92fe8758dfcccb09a3fd604f8d9cf62eaa10.png" alt="\Delta \vec{x}"/>, that is <img class="math" src="../images/math/8be5cfbdd764ddbf4c9ad12c9f555f39337939d2.png" alt="(\Delta \vec{x} \Rightarrow \Delta \vec{y})"/>, called <em>characteristic</em>. In general, entries in the Differential Profile with fewer bits set in the <img class="math" src="../images/math/2dde92fe8758dfcccb09a3fd604f8d9cf62eaa10.png" alt="\Delta \vec{x}"/> and <img class="math" src="../images/math/2a9f35e8af72b468413c4dc744b988a68bd5d8b2.png" alt="\Delta \vec{y}"/> that have higher probability are desirable.</p>
+<p>Let <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, if we denote by <img class="math" src="../images/math/93145c9138d84fa3dce8d6542f6b5ae12ecf1bbb.png" alt="D_F(\vec{u},\vec{v})"/> the set of vectors where the difference Vector Boolean Function of <em>F</em> in the direction of <img class="math" src="../images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> coincides with <img class="math" src="../images/math/8e4bad02219f6039a23600926977eef31d95526c.png" alt="\vec{v} \in \gf{V_m}"/> by:</p>
 <div class="math">
-<p><img src="../images/math/1542b6f3d849630ec4f259a59d36a82c1add415f.png" alt="D_F(\vec{u},\vec{v}) = \left\{\vec{x} \in \gf{V_n} \given \Delta_{\vec{u}}F(\vec{x}) = \vec{v} \right\}"/></p>
-</div><p>Let <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> where <img class="math" src="../images/math/7cf0ee1d1dd72147c42020a13fb60d7c00ba5ad3.png" alt="n \geq m"/>. The matrix containing all possible values of <img class="math" src="../images/math/bc642595e0c1a0612110f80f56eb1a356bfe673b.png" alt="\#D_F(\vec{u},\vec{v})"/> is referred to as its <em>XOR or Differential Distribution Table</em>.</p>
+<p><img src="../images/math/7d3c76407c0910b03df6db6994e385a52151e13b.png" alt="D_F(\vec{u},\vec{v}) = \left\{\vec{x} \in \gf{V_n} \given \Delta_{\vec{u}}F(\vec{x}) = \vec{v} \right\}"/></p>
+</div><p>Let <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> where <img class="math" src="../images/math/73b48420d9ddaee0d3e3dd4f383d01979e3c337d.png" alt="n \geq m"/>. The matrix containing all possible values of <img class="math" src="../images/math/f344af3b2a17d55c2d01f095a5d20cc1862ca3fa.png" alt="\#D_F(\vec{u},\vec{v})"/> is referred to as its <em>XOR or Differential Distribution Table</em>.</p>
 <p>Nyberg in <a class="reference internal" href="../bibliography.html#nyberg-93" id="id1">[Nyberg:93]</a> introduced the concept of <em>differential uniformity</em> as a measure of the resistance to differential crytanalysis as follows:</p>
-<p>A Vector Boolean function <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> is called differentially <img class="math" src="../images/math/f16e64e5995eb25ccbd9f671c10ab34c42aa3692.png" alt="\crit{du}(F)"/>-uniform if for all <img class="math" src="../images/math/0e9b02c925a685766759a4b9353f239d8f7eb328.png" alt="\vec{u} \neq \vec{0} \in \gf{V_n}"/> and <img class="math" src="../images/math/578c9880e2c9877d8850a212cb95b563ce99d607.png" alt="\vec{v} \in \gf{V_m}"/>:</p>
+<p>A Vector Boolean function <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> is called differentially <img class="math" src="../images/math/93ef2328283d1a1b6af882b56a6728947c056958.png" alt="\crit{du}(F)"/>-uniform if for all <img class="math" src="../images/math/59a649c8e493673eddd0d9d820ba0043500880b5.png" alt="\vec{u} \neq \vec{0} \in \gf{V_n}"/> and <img class="math" src="../images/math/8e4bad02219f6039a23600926977eef31d95526c.png" alt="\vec{v} \in \gf{V_m}"/>:</p>
 <div class="math">
-<p><img src="../images/math/33b098708393ecad934fb4c2c7368363c6ff776e.png" alt="\# \left\{ \vec{x} \in \gf{V_n} \given F(\vec{x} + \vec{u}) + F(\vec{x}) = \vec{v} \right\} \leq \crit{du}(F)"/></p>
-</div><p>Let <img class="math" src="../images/math/f16e64e5995eb25ccbd9f671c10ab34c42aa3692.png" alt="\crit{du}(F)"/> (differential uniformity of <em>F</em>) is the largest value in Differential Distribution Table of <em>F</em> (not counting the first entry in the first row), namely,</p>
+<p><img src="../images/math/8e3ff142fd54274f310ef00f15d21d1995da38b9.png" alt="\# \left\{ \vec{x} \in \gf{V_n} \given F(\vec{x} + \vec{u}) + F(\vec{x}) = \vec{v} \right\} \leq \crit{du}(F)"/></p>
+</div><p>Let <img class="math" src="../images/math/93ef2328283d1a1b6af882b56a6728947c056958.png" alt="\crit{du}(F)"/> (differential uniformity of <em>F</em>) is the largest value in Differential Distribution Table of <em>F</em> (not counting the first entry in the first row), namely,</p>
 <div class="math">
-<p><img src="../images/math/e5b8b3c8bb413a74165ba9487b3ad969c5ecbcd3.png" alt="\crit{du}(F) = \max_{(\vec{u},\vec{v}) \neq (\vec{0},\vec{0})} \#D_F(\vec{u},\vec{v}) = \max_{(\vec{u},\vec{v}) \neq (\vec{0},\vec{0})} \#\left\{ \vec{x} \in \gf{V_n} \given F(\vec{x}) + F(\vec{x}+\vec{u}) = \vec{v} \right\}"/></p>
-</div><p>Let define the function <img class="math" src="../images/math/d86f1ae0e2966481c620061483d07295b0df1ba8.png" alt="\delta_F : \gf{V_n} \times \gf{V_m} \to \bbbq"/> as: <img class="math" src="../images/math/2dba1947371d32d9aad08a276fd8ea0070643af0.png" alt="\delta_F(\vec{u},\vec{v}) = \frac{1}{2^n} \#D_F(\vec{u},\vec{v})"/>.</p>
-<p>The <em>Differential Profile</em> of <em>F</em> can be represented by a matrix whose rows are indexed by <img class="math" src="../images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/> and whose columns are indexed by <img class="math" src="../images/math/578c9880e2c9877d8850a212cb95b563ce99d607.png" alt="\vec{v} \in \gf{V_m}"/> in lexicographic order, denoted by <img class="math" src="../images/math/938fa7985f240a2ca3105295aa03ef6ad631d00e.png" alt="\matr{DP}(F) \in \matr{M}_{2^n \times 2^m}(R)"/> and defined as follows:</p>
+<p><img src="../images/math/7113c15a4a4d08a731f4c2adaec26a578773f7d5.png" alt="\crit{du}(F) = \max_{(\vec{u},\vec{v}) \neq (\vec{0},\vec{0})} \#D_F(\vec{u},\vec{v}) = \max_{(\vec{u},\vec{v}) \neq (\vec{0},\vec{0})} \#\left\{ \vec{x} \in \gf{V_n} \given F(\vec{x}) + F(\vec{x}+\vec{u}) = \vec{v} \right\}"/></p>
+</div><p>Let define the function <img class="math" src="../images/math/1cccad090302fd2d9064f0783d18b11ced5c877b.png" alt="\delta_F : \gf{V_n} \times \gf{V_m} \to \bbbq"/> as: <img class="math" src="../images/math/00170816dc5a49a32709f20289755e6deb4712dd.png" alt="\delta_F(\vec{u},\vec{v}) = \frac{1}{2^n} \#D_F(\vec{u},\vec{v})"/>.</p>
+<p>The <em>Differential Profile</em> of <em>F</em> can be represented by a matrix whose rows are indexed by <img class="math" src="../images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> and whose columns are indexed by <img class="math" src="../images/math/8e4bad02219f6039a23600926977eef31d95526c.png" alt="\vec{v} \in \gf{V_m}"/> in lexicographic order, denoted by <img class="math" src="../images/math/5c611ded9b52cfd1e8c31142b70050ab7800301c.png" alt="\matr{DP}(F) \in \matr{M}_{2^n \times 2^m}(R)"/> and defined as follows:</p>
 <div class="math">
-<p><img src="../images/math/4a2aac949cea9a61ff68a72fcdb5fc0dfe9b0abd.png" alt="\matr{DP}(F) = 2^{2n+m} \begin{bmatrix}
+<p><img src="../images/math/c67677877b56375a42bec1b7a3ca53e469bdd2ef.png" alt="\matr{DP}(F) = 2^{2n+m} \begin{bmatrix}
 \delta_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_0})&amp;\dots&amp;\delta_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_{2^m-1}}) \\
 \delta_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_0})&amp;\dots&amp;\delta_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_{2^m-1}}) \\
 \hdotsfor[2]{3} \\
 \delta_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_0})&amp;\dots&amp;\delta_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_{2^m-1}})
 \end{bmatrix}"/></p>
-</div><p>The maximum value of <img class="math" src="../images/math/053b3a2c306006c656222393722bc3b9702f4696.png" alt="\delta_F(\vec{u},\vec{v})"/> is called the <em>differential potential</em> of <em>F</em>:</p>
+</div><p>The maximum value of <img class="math" src="../images/math/2dddad6e470962ab6163021c7fdc2915b2201ef4.png" alt="\delta_F(\vec{u},\vec{v})"/> is called the <em>differential potential</em> of <em>F</em>:</p>
 <div class="math">
-<p><img src="../images/math/9bd3a9fe1270678022356f1ad1373f9641e33325.png" alt="\crit{dp}(F) =\max \left\{ \delta_F(\vec{u},\vec{v}) \given \fa \vec{u} \in \gf{V_n}, \vec{v} \in \gf{V_m}, (\vec{u},\vec{v}) \neq (\vec{0},\vec{0}) \right\}"/></p>
-</div><p>The differential uniformity of <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> and its differential potential are related as: <img class="math" src="../images/math/f51e161e58cf1512856e0adce2b80e4299239494.png" alt="\crit{dp}(F) = \frac{1}{2^n} \crit{du}(F)"/>.</p>
-<p>It is a measure of the robustness against differential cryptanalysis where <img class="math" src="../images/math/7e2f478c985ffe2089790d76eefcd9c45a061661.png" alt="2^{-m} \leq \crit{dp}(F) \leq 1"/> and the lower bound holds if and only if <em>F</em> is bent and the upper bound is reached when <em>F</em> is linear or affine.  The differential uniformity of <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> and its differential potential are related by <img class="math" src="../images/math/a074a88850cb4c8a6375167f1158420b79626925.png" alt="\crit{dp}(F) = 2^{-n} \crit{du}(F)"/>.</p>
+<p><img src="../images/math/29c7d82a4370e67cda7a0f185cb4f9d1a7cadbce.png" alt="\crit{dp}(F) =\max \left\{ \delta_F(\vec{u},\vec{v}) \given \fa \vec{u} \in \gf{V_n}, \vec{v} \in \gf{V_m}, (\vec{u},\vec{v}) \neq (\vec{0},\vec{0}) \right\}"/></p>
+</div><p>The differential uniformity of <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> and its differential potential are related as: <img class="math" src="../images/math/86a3d16b9fa973685036fe477a1e681711ff5007.png" alt="\crit{dp}(F) = \frac{1}{2^n} \crit{du}(F)"/>.</p>
+<p>It is a measure of the robustness against differential cryptanalysis where <img class="math" src="../images/math/cfecd696c1c0826cd0bbd420cbef8b7cb0d909c1.png" alt="2^{-m} \leq \crit{dp}(F) \leq 1"/> and the lower bound holds if and only if <em>F</em> is bent and the upper bound is reached when <em>F</em> is linear or affine.  The differential uniformity of <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> and its differential potential are related by <img class="math" src="../images/math/e1012501271ab1f99fdccc5daed1782827062a3b.png" alt="\crit{dp}(F) = 2^{-n} \crit{du}(F)"/>.</p>
 </div>
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>Note that the Differential Profile does not uniquely determine a Vector Boolean function. Thus, a VBF class cannot be initialized by its Differential Profile. To obtain its representation as Differential Profile, the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">DAT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">DP</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">DAT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">DP</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>In the VBF library, several methods have been defined in order to analyse the feasibility of differential cryptanalysis: Differential potential and Differential relations associated with a specific value of the Differential profile. The method used to obtain the differential potential is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">dp</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">dp</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>If we want to obtain the characteristics associated with the value of the Differential Profile &#8220;w&#8221;, we will use this method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">differential</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">differential</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If we want to obtain the probability that a characteristic <img class="math" src="../images/math/a3befb3b1dc7b9834b287fd7433ed9f17d0bf214.png" alt="(\Delta \vec{x} \Rightarrow \Delta \vec{y})"/> holds with the value of the Differential Profile &#8220;w&#8221;, we will use this method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">ProbDif</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
+<p>If we want to obtain the probability that a characteristic <img class="math" src="../images/math/8be5cfbdd764ddbf4c9ad12c9f555f39337939d2.png" alt="(\Delta \vec{x} \Rightarrow \Delta \vec{y})"/> holds with the value of the Differential Profile &#8220;w&#8221;, we will use this method:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">ProbDif</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<p>The following program finds out the Differential Profile of a Vector Boolean function together with the characteristics that have the highest value, except from the value in <img class="math" src="../images/math/daafa0f16c2f72b726ab4765ece7a5bf560518aa.png" alt="\matr{DP}(F)(\vec{0},\vec{0})"/>, their probability, this highest value and the differential potential.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<p>The following program finds out the Differential Profile of a Vector Boolean function together with the characteristics that have the highest value, except from the value in <img class="math" src="../images/math/4a7942e41fdfe5cb2f1290ba63a8a424b99f7646.png" alt="\matr{DP}(F)(\vec{0},\vec{0})"/>, their probability, this highest value and the differential potential.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -298,7 +262,7 @@
 </pre></div>
 </div>
 <p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The Differential Profile is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Differential Profile is:</span>
 <span class="go">[[4096 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]</span>
 <span class="go">[0 0 0 512 0 0 0 512 0 512 1024 0 1024 512 0 0]</span>
 <span class="go">[0 0 0 512 0 1536 512 512 0 512 0 0 0 0 512 0]</span>
@@ -334,6 +298,10 @@
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -343,12 +311,13 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -364,9 +333,11 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../static/jquery.js"></script>
@@ -386,16 +357,6 @@
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

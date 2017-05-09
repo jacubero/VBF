@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Design of cryptographically robust Vector Boolean functions &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,26 +30,48 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
         <link rel="next" title="FAQ: Frequently Asked Questions" href="faq.html"/>
         <link rel="prev" title="Analysis of other cryptographic algorithms" href="other.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -55,153 +79,114 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#organization-of-this-book">Organization of this Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Design of cryptographically robust Vector Boolean functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bent-functions">Bent functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#two-variables">Two variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#four-variables">Four variables</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#design-philosophy">Design Philosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#galib">Galib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#representation">Representation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#genetic-operators">Genetic operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#weighted-objective-functions">Weighted Objective Functions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implementation">Implementation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Design of cryptographically robust Vector Boolean functions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/design.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="design-of-cryptographically-robust-vector-boolean-functions">
 <h1>Design of cryptographically robust Vector Boolean functions<a class="headerlink" href="#design-of-cryptographically-robust-vector-boolean-functions" title="Permalink to this headline">¶</a></h1>
@@ -254,7 +239,7 @@
 </div>
 <div class="section" id="representation">
 <h4>Representation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h4>
-<p>When you use a genetic algorithm to solve an optimization problem, you must be able to represent a single solution to your problem in a single <em>data structure</em>. The genetic algorithm will create a population of solutions based on a sample data structure that you provide. The genetic algorithm then operates on the population to evolve the best solution. In GAlib, the sample data structure is called a GAGenome (some people refer to it as a chromosome). We have used a type of genome called GA2DBinaryStringGenome. This class is derived from the base GAGenome class and a data structure class which consists of a 2-dimensional array of Boolean with <img class="math" src="images/math/372fc4dd1270e8bd966735a2567c798ab49d57c8.png" alt="2^n"/> elements (the binary string is the Truth Table of the Boolean function).</p>
+<p>When you use a genetic algorithm to solve an optimization problem, you must be able to represent a single solution to your problem in a single <em>data structure</em>. The genetic algorithm will create a population of solutions based on a sample data structure that you provide. The genetic algorithm then operates on the population to evolve the best solution. In GAlib, the sample data structure is called a GAGenome (some people refer to it as a chromosome). We have used a type of genome called GA2DBinaryStringGenome. This class is derived from the base GAGenome class and a data structure class which consists of a 2-dimensional array of Boolean with <img class="math" src="images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/> elements (the binary string is the Truth Table of the Boolean function).</p>
 </div>
 <div class="section" id="genetic-operators">
 <h4>Genetic operators<a class="headerlink" href="#genetic-operators" title="Permalink to this headline">¶</a></h4>
@@ -267,40 +252,40 @@
 <h4>Weighted Objective Functions<a class="headerlink" href="#weighted-objective-functions" title="Permalink to this headline">¶</a></h4>
 <p>In addition to the three primary operators, each genome must also contain an <em>Objective Function</em>. The Objective Function is used to evaluate the
 genome in order to know how good it is compared to the other genomes. Several objective functions were employed gradually involving more criteria in a weighted manner:</p>
-<p>1. Nonlinearity of the Boolean function: <img class="math" src="images/math/94e97e7803a66c2358b8f5cbde39a1d176057a77.png" alt="\crit{NL}(f)"/>. This cryptographic criterion is represented by a locally smooth fitness
+<p>1. Nonlinearity of the Boolean function: <img class="math" src="images/math/ee93a4aa0d857058ed88625aeb1b3cde5b3f6e43.png" alt="\crit{NL}(f)"/>. This cryptographic criterion is represented by a locally smooth fitness
 function:</p>
 <div class="math">
-<p><img src="images/math/069a5cd812431fb18f6bb1bac382c9406b7c1b81.png" alt="o_1 = \crit{NL}(f)"/></p>
+<p><img src="images/math/b6af269a0b7f7ccccc9ab6a30153af56740982b9.png" alt="o_1 = \crit{NL}(f)"/></p>
 </div><ol class="arabic simple" start="2">
 <li>The sum of the nonlinearity and linearity distance of the Boolean function, normalized with respect to their (a priori known) maximum values:</li>
 </ol>
 <div class="math">
-<p><img src="images/math/e1f438b45272a5e1a7597d5f1aa6263aa034ca8d.png" alt="o_2 = \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{LD}(f)}{maxLD}"/></p>
+<p><img src="images/math/42cd4e84e9969676bf5b91e11c58f81bf837fcbf.png" alt="o_2 = \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{LD}(f)}{maxLD}"/></p>
 </div><p>where <em>maxNL</em> and <em>maxLD</em> are the maximum values of nonlinearity and linearity distance which can be achieved by a Boolean function with the same number of input variables as <em>f</em> respectively.</p>
 <ol class="arabic simple" start="3">
 <li>The sum of nonlinearity, algebraic degree and linearity distance of the Boolean function normalized with respect to their (a priori known) maximum values:</li>
 </ol>
 <div class="math">
-<p><img src="images/math/3e150b7fb4ca8ca2b9753134db891a746ad127ad.png" alt="o_3 =  \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{deg}(f)}{maxDEG} + \frac{\crit{LD}(f)}{maxLD}"/></p>
+<p><img src="images/math/1cdfad4716e79e94849b3d6aa1d6f063e5a041a1.png" alt="o_3 =  \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{deg}(f)}{maxDEG} + \frac{\crit{LD}(f)}{maxLD}"/></p>
 </div><p>where <em>maxNL</em>, <em>maxDEG</em> and <em>maxLD</em> are respectively the maximum values of nonlinearity, algebraic degree and linearity distance which can be achieved by a Boolean function with the same number of input variables as <em>f</em>.</p>
 <ol class="arabic simple" start="4">
 <li>The sum of nonlinearity, algebraic degree, algebraic immunity and linearity distance of the Boolean function normalized with respect to their (a priori known) maximum values:</li>
 </ol>
 <div class="math">
-<p><img src="images/math/ef955d2ec7dc853d2102cb840d14f9e35fbf1706.png" alt="o_4 = \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{deg}(f)}{maxDEG} + \frac{\crit{AI}(f)}{maxAI} + \frac{\crit{LD}(f)}{maxLD}"/></p>
+<p><img src="images/math/882cf81a2372044ed216642f820a63ac30c77eb9.png" alt="o_4 = \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{deg}(f)}{maxDEG} + \frac{\crit{AI}(f)}{maxAI} + \frac{\crit{LD}(f)}{maxLD}"/></p>
 </div><p>where <em>maxNL</em>, <em>maxDEG</em>, <em>maxAI</em> and <em>maxLD</em> are respectively the maximum values of nonlinearity, algebraic degree, algebraic immunity and linearity distance which can be achieved by a Boolean function with the same number of input variables as <em>f</em>.</p>
 <ol class="arabic simple" start="5">
 <li>The sum of nonlinearity, algebraic degree, algebraic immunity and linearity distance of the Boolean function normalized with respect to their (a priori known) maximum values:</li>
 </ol>
 <div class="math">
-<p><img src="images/math/cf11950d8b86e6c2a6830a6c610a328d5c47fd70.png" alt="o_5 = \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{deg}(f)}{maxDEG} + \frac{\crit{AI}(f)}{maxAI} + \frac{\crit{LD}(f)}{maxLD} + \frac{2^{3n}-\sigma(f)}{max\sigma-min\sigma}"/></p>
-</div><p>where <em>maxNL</em>, <em>maxDEG</em>, <em>maxAI</em>, <em>maxLD</em>, <img class="math" src="images/math/1adcaa92593626a016c0add1ecade333a76cc5c8.png" alt="max\sigma"/> are respectively the maximum values of nonlinearity, algebraic degree, algebraic immunity, linearity distance and sum-of-square indicator which can be achieved by a Boolean function with the same number of input variables as $f$; and <img class="math" src="images/math/96ef3735e6bb35953f003539495b455ac7c017cc.png" alt="min\sigma"/> is the minimum value of the sum-of-square indicator achievable by a Boolean function with the same number of input variables as <em>f</em>.</p>
+<p><img src="images/math/ce8eb4421c86dbe20d666535e4cc6da4906c3f50.png" alt="o_5 = \frac{\crit{NL}(f)}{maxNL} + \frac{\crit{deg}(f)}{maxDEG} + \frac{\crit{AI}(f)}{maxAI} + \frac{\crit{LD}(f)}{maxLD} + \frac{2^{3n}-\sigma(f)}{max\sigma-min\sigma}"/></p>
+</div><p>where <em>maxNL</em>, <em>maxDEG</em>, <em>maxAI</em>, <em>maxLD</em>, <img class="math" src="images/math/67ff6d4c31bc4b03f3a95fa316381e48f909eaaf.png" alt="max\sigma"/> are respectively the maximum values of nonlinearity, algebraic degree, algebraic immunity, linearity distance and sum-of-square indicator which can be achieved by a Boolean function with the same number of input variables as $f$; and <img class="math" src="images/math/61ab85ce1b1b4f87ab6182b62453c935affddabe.png" alt="min\sigma"/> is the minimum value of the sum-of-square indicator achievable by a Boolean function with the same number of input variables as <em>f</em>.</p>
 </div>
 </div>
 <div class="section" id="implementation">
 <h3><a class="toc-backref" href="#id9">Implementation</a><a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
 <p>In order to use Galib library, the installation instructions described in <a class="reference external" href="http://lancet.mit.edu/galib-2.4/Installation.html">Installation Instructions for GAlib</a> must be followed. Once Galib is installed, we can use this library in conjunction with VBF library by using the following Makefile:</p>
-<div class="highlight-c"><div class="highlight"><pre>include makevars
+<div class="highlight-c"><div class="highlight"><pre><span></span>include makevars
 
 ############# User settings ######################
 
@@ -334,12 +319,12 @@ clean:
 </div>
 <p>Note that a file called &#8220;makevars&#8221; must be present in the same directory as the Makefile file.</p>
 <p>Example program for each of the objective functions could be the following:</p>
-<div class="literal-block-wrapper container" id="o1-cpp">
+<div class="literal-block-wrapper docutils container" id="o1-cpp">
 <div class="code-block-caption"><span class="caption-text">o1.cpp</span><a class="headerlink" href="#o1-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
-     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
-     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
-     <span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -420,12 +405,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper container" id="o2-cpp">
+<div class="literal-block-wrapper docutils container" id="o2-cpp">
 <div class="code-block-caption"><span class="caption-text">o2.cpp</span><a class="headerlink" href="#o2-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
-     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
-     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
-     <span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -511,12 +496,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper container" id="o3-cpp">
+<div class="literal-block-wrapper docutils container" id="o3-cpp">
 <div class="code-block-caption"><span class="caption-text">o3.cpp</span><a class="headerlink" href="#o3-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
-     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
-     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
-     <span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -605,12 +590,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper container" id="o4-cpp">
+<div class="literal-block-wrapper docutils container" id="o4-cpp">
 <div class="code-block-caption"><span class="caption-text">o4.cpp</span><a class="headerlink" href="#o4-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
-     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
-     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
-     <span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -701,12 +686,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper container" id="o5-cpp">
+<div class="literal-block-wrapper docutils container" id="o5-cpp">
 <div class="code-block-caption"><span class="caption-text">o5.cpp</span><a class="headerlink" href="#o5-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
-     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
-     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
-     <span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
+     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -802,10 +787,10 @@ clean:
 </div>
 </div>
 <p>The following program illustrates how can be set the seed (included in a file called &#8220;seed.bin&#8221; with the binary representation of the Truth Table of the function) of the Genetic algorithm for the o4 objective function:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
-<span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
-<span class="cp">#include &lt;ga/std_stream.h&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#define cout STD_COUT</span>
 
@@ -979,7 +964,7 @@ clean:
 <th class="head"><em>DEG</em></th>
 <th class="head"><em>AI</em></th>
 <th class="head"><em>MAXAC</em></th>
-<th class="head"><img class="math" src="images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><img class="math" src="images/math/efdef34dbaca15f50a1fe150b9660f076f53d54f.png" alt="\sigma"/></th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1036,15 +1021,19 @@ clean:
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ: Frequently Asked Questions">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ: Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="other.html" class="btn btn-neutral" title="Analysis of other cryptographic algorithms"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="other.html" class="btn btn-neutral" title="Analysis of other cryptographic algorithms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1054,12 +1043,13 @@ clean:
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -1075,9 +1065,11 @@ clean:
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="static/jquery.js"></script>
@@ -1097,16 +1089,6 @@ clean:
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

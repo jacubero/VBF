@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Walsh Spectrum &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,24 +30,46 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -53,215 +77,155 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Walsh Spectrum</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/representations_d/walsh.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="walsh-spectrum">
 <h1>Walsh Spectrum<a class="headerlink" href="#walsh-spectrum" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Linear and affine functions are considered as cryptographically weak functions. It is important to measure if a Vector Boolean function has some similarity with these functions. The similarity is measured by means of correlation. The values of Walsh Spectrum provide a measure of the correlation of the Vector Boolean function with the different Vector Boolean Linear functions.</p>
-<p>Let <img class="math" src="../images/math/8376c40e562f8305aa285dc3660d2de91b8d06d1.png" alt="\matr{H_n}"/> be the Walsh-Hadamard matrix of order <img class="math" src="../images/math/372fc4dd1270e8bd966735a2567c798ab49d57c8.png" alt="2^n"/>, then the vectors associated with its columns constitute an orthogonal basis for <img class="math" src="../images/math/aa5ff39a59a7f93204ab52d6cfcb2b8ef4dc58cb.png" alt="\bbbr^{2^n}"/> over <img class="math" src="../images/math/98453f2d6101e5351a0cd0ba9da42487108bdd69.png" alt="\bbbr"/> so that:</p>
+<p>Let <img class="math" src="../images/math/99ab6abcb5173e4776cc6644334f2a03944d1234.png" alt="\matr{H_n}"/> be the Walsh-Hadamard matrix of order <img class="math" src="../images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/>, then the vectors associated with its columns constitute an orthogonal basis for <img class="math" src="../images/math/ec35452c349454ab79ec2a6eafb68908e0ee6389.png" alt="\bbbr^{2^n}"/> over <img class="math" src="../images/math/6bb288302233ff7c24c3b37a8d8171c563c0bb6f.png" alt="\bbbr"/> so that:</p>
 <div class="math">
-<p><img src="../images/math/a44f4beacd10c0ef589f852a13380287247084e6.png" alt="\vec{x} \matr{H_n} = \vec{y} , \fa \vec{x}, \vec{y} \in         \bbbr^{2^n}"/></p>
-</div><p>Let <img class="math" src="../images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/>, its sequence <img class="math" src="../images/math/2dd40efb3784e2a0c50df8d760e4abbd2fcdaab4.png" alt="\xi_f \in \bbbr^{2^n}"/> can be defined as a linear combination of the sequences of all the linear functions over <img class="math" src="../images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.png" alt="\gf{V_n}"/>, as they coincide with the rows of <img class="math" src="../images/math/8376c40e562f8305aa285dc3660d2de91b8d06d1.png" alt="\matr{H_n}"/>.</p>
+<p><img src="../images/math/ed9f83022c6261ed03b05ea17fc0784c7c347e87.png" alt="\vec{x} \matr{H_n} = \vec{y} , \fa \vec{x}, \vec{y} \in         \bbbr^{2^n}"/></p>
+</div><p>Let <img class="math" src="../images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/>, its sequence <img class="math" src="../images/math/ed0ccf9a1d803a981e5a0c42ed12a2b661efb647.png" alt="\xi_f \in \bbbr^{2^n}"/> can be defined as a linear combination of the sequences of all the linear functions over <img class="math" src="../images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/>, as they coincide with the rows of <img class="math" src="../images/math/99ab6abcb5173e4776cc6644334f2a03944d1234.png" alt="\matr{H_n}"/>.</p>
 <div class="math">
-<p><img src="../images/math/c3976d5ca82a9ae12b9f6007a7a53e1bf2853541.png" alt="\xi_f = a_{\boldsymbol{\alpha_{0}}} \xi_{l_{\boldsymbol {\alpha_{0}}}} + \dots + a_{\boldsymbol{\alpha_{2^n-1}}}        \xi_{l_{\boldsymbol{\alpha_{2^n-1}}}}"/></p>
-</div><p>where <img class="math" src="../images/math/c443fc1ffbd1d702c5d885f6ba326c310962ef44.png" alt="a_{\vec{u}} = \frac{1}{2^n} \left\langle \xi_f, \xi_{l_{\vec{u}}} \right\rangle"/></p>
-<p>Let a Boolean function <img class="math" src="../images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/>, the <em>Walsh Transform</em> of <em>f</em> at <img class="math" src="../images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/> is the <em>n</em>-dimensional Discrete Fourier Transform and can be calculated as follows:</p>
+<p><img src="../images/math/3841124379054fcce73809ef2f8c79535e308679.png" alt="\xi_f = a_{\boldsymbol{\alpha_{0}}} \xi_{l_{\boldsymbol {\alpha_{0}}}} + \dots + a_{\boldsymbol{\alpha_{2^n-1}}}        \xi_{l_{\boldsymbol{\alpha_{2^n-1}}}}"/></p>
+</div><p>where <img class="math" src="../images/math/10be4905b3d9a03901c9441e98ba8f9f03fcff8c.png" alt="a_{\vec{u}} = \frac{1}{2^n} \left\langle \xi_f, \xi_{l_{\vec{u}}} \right\rangle"/></p>
+<p>Let a Boolean function <img class="math" src="../images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/>, the <em>Walsh Transform</em> of <em>f</em> at <img class="math" src="../images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> is the <em>n</em>-dimensional Discrete Fourier Transform and can be calculated as follows:</p>
 <div class="math">
-<p><img src="../images/math/bbb2b68eedbc2de9b729a7ab0247a0e1412ff984.png" alt="\W_f(\vec{u}) = \walsh{\chi}_f(\vec{u}) = \W\{ \xi_f \} (\vec{u}) = \left\langle \xi_f, \xi_{l_{\vec{u}}} \right        \rangle = \sum_{\vec{x} \in \gf{V_n}} \chi_f(\vec{x})   \chi_{\vec{u}}(\vec{x})"/></p>
+<p><img src="../images/math/ce26d2de67bbe98650add5ddfe4f66895b5babcc.png" alt="\W_f(\vec{u}) = \walsh{\chi}_f(\vec{u}) = \W\{ \xi_f \} (\vec{u}) = \left\langle \xi_f, \xi_{l_{\vec{u}}} \right        \rangle = \sum_{\vec{x} \in \gf{V_n}} \chi_f(\vec{x})   \chi_{\vec{u}}(\vec{x})"/></p>
 </div><p>or, as it is most often written as:</p>
 <div class="math">
-<p><img src="../images/math/1b194811ad51cf960b7bd77f486734aaa9431729.png" alt="\W_f(\vec{u}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{f(\vec        {x}) + \vec{u} \cdot \vec{x}}"/></p>
-</div><p>As a result, the Walsh Transform of <img class="math" src="../images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> at <img class="math" src="../images/math/1a6c1898d32eab11691ec80880b75abfe23fe906.png" alt="\vec{u}"/> is the coefficient of the sequence of <em>f</em> (<img class="math" src="../images/math/3956bc41bc2b1c71819ea481829b4e57d4fde56a.png" alt="\xi_f"/>) with respect to the basis constituted by the sequences of linear functions, scaled by a factor of <img class="math" src="../images/math/01c9030595f0e201ca3bbdc0433b4b92cb92d767.png" alt="\frac{1}{2^n}"/>. If <img class="math" src="../images/math/357252f4e833dd5e6e6355d1501418f6985953fd.png" alt="\W_f"/> is the Walsh transform of <em>f</em>, we say that <img class="math" src="../images/math/3956bc41bc2b1c71819ea481829b4e57d4fde56a.png" alt="\xi_f"/> and <img class="math" src="../images/math/357252f4e833dd5e6e6355d1501418f6985953fd.png" alt="\W_f"/> form a Transform pair and write:</p>
+<p><img src="../images/math/eeed42c58129eec465d3e9c4fc3e0a8f28120499.png" alt="\W_f(\vec{u}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{f(\vec        {x}) + \vec{u} \cdot \vec{x}}"/></p>
+</div><p>As a result, the Walsh Transform of <img class="math" src="../images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> at <img class="math" src="../images/math/2184ff78be3b934ca690852a9d1906d9dcff61dc.png" alt="\vec{u}"/> is the coefficient of the sequence of <em>f</em> (<img class="math" src="../images/math/ded2bf0dea17c6057b9629b0bcff658eb2e1b899.png" alt="\xi_f"/>) with respect to the basis constituted by the sequences of linear functions, scaled by a factor of <img class="math" src="../images/math/d90787f6e3cb0aa69556f2e02211fcfb1453b49c.png" alt="\frac{1}{2^n}"/>. If <img class="math" src="../images/math/aafbdf4c16522d5eba60b692903a36ed2011049d.png" alt="\W_f"/> is the Walsh transform of <em>f</em>, we say that <img class="math" src="../images/math/ded2bf0dea17c6057b9629b0bcff658eb2e1b899.png" alt="\xi_f"/> and <img class="math" src="../images/math/aafbdf4c16522d5eba60b692903a36ed2011049d.png" alt="\W_f"/> form a Transform pair and write:</p>
 <div class="math">
-<p><img src="../images/math/4f4978bd696eb33539508ed10cdbbe5eea50020b.png" alt="\begin{array}{rcl}
+<p><img src="../images/math/bc9b0b52d09296f0c78030b9b80c9626f46d0837.png" alt="\begin{array}{rcl}
 \xi_f&amp;\stackrel{W}{\longleftrightarrow}&amp;\W_f \ \ ( \xi_f \mbox{ corresponds to } \W_f )
 \end{array}"/></p>
-</div><p>The <em>Walsh Spectrum</em> of <em>f</em> can be represented by a matrix whose rows are indexed by <img class="math" src="../images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/> in lexicographic order, denoted by <img class="math" src="../images/math/5b54e423084608c803f496d9f684deb5d9a72c43.png" alt="\matr{WS}(f) \in \matr{M}_{2^n \times 1}(\bbbr)"/> and defined as follows:</p>
+</div><p>The <em>Walsh Spectrum</em> of <em>f</em> can be represented by a matrix whose rows are indexed by <img class="math" src="../images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> in lexicographic order, denoted by <img class="math" src="../images/math/b2497f8de2e068b7894fd3396cc98da866fcf0d3.png" alt="\matr{WS}(f) \in \matr{M}_{2^n \times 1}(\bbbr)"/> and defined as follows:</p>
 <div class="math">
-<p><img src="../images/math/b0b608ee2d322adb2f7f261031ff6b546c7f06e4.png" alt="\matr{WS}(f) = \begin{bmatrix} \walsh{\chi}_f(\boldsymbol   {\alpha_0})&amp;\dots&amp;\walsh{\chi}_f(\vec{u})&amp;\dots&amp;\walsh  {\chi}_f(\boldsymbol{\alpha_{2^n-1}}) \end{bmatrix}^{T}"/></p>
-</div><p>where <img class="math" src="../images/math/8011f36cd4cfb9a17d8ffd4a51f16ff94044ee2f.png" alt="\walsh{\chi}_f(\vec{u})"/> is the value of the spectrum at <img class="math" src="../images/math/1a6c1898d32eab11691ec80880b75abfe23fe906.png" alt="\vec{u}"/>. A Boolean function is uniquely determined by its Walsh Spectrum.</p>
-<p>Let the vector Boolean function <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/>, the <em>Walsh Transform</em> of <em>F</em> is the two-dimensional Walsh Transform defined by:</p>
+<p><img src="../images/math/d498a7f7604cfa8b4b69a61243bddec7d46bbcce.png" alt="\matr{WS}(f) = \begin{bmatrix} \walsh{\chi}_f(\boldsymbol   {\alpha_0})&amp;\dots&amp;\walsh{\chi}_f(\vec{u})&amp;\dots&amp;\walsh  {\chi}_f(\boldsymbol{\alpha_{2^n-1}}) \end{bmatrix}^{T}"/></p>
+</div><p>where <img class="math" src="../images/math/3f7f647c75cd5d5e08a9eb7288b570e632279193.png" alt="\walsh{\chi}_f(\vec{u})"/> is the value of the spectrum at <img class="math" src="../images/math/2184ff78be3b934ca690852a9d1906d9dcff61dc.png" alt="\vec{u}"/>. A Boolean function is uniquely determined by its Walsh Spectrum.</p>
+<p>Let the vector Boolean function <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, the <em>Walsh Transform</em> of <em>F</em> is the two-dimensional Walsh Transform defined by:</p>
 <div class="math">
-<p><img src="../images/math/863669eb0b94c03530ca0e10af59cb3e1c6e34b0.png" alt="\begin{array}{rcl}
+<p><img src="../images/math/b8484dcce256ac62fd71f88c020ee24bc69124ea.png" alt="\begin{array}{rcl}
 \W_F(\vec{u}, \vec{v}) &amp;=&amp; \walsh{\theta}_F(\vec{u}, \vec{v}) = \W\{ \matr{Img(F)} \}(\vec{u}, \vec{v}) = \sum_{\vec{x} \in \gf{V_n}} \sum_{\vec{y} \in \gf{V_m}} \theta_F(\vec{x},\vec{y}) \chi_{(\vec{u},\vec{v})}(\vec{x},\vec{y})
 \end{array}"/></p>
 </div><p>or, as it is most often written as:</p>
 <div class="math">
-<p><img src="../images/math/229f919cab944046e7b36eca1fba201c2c405d64.png" alt="\W_F(\vec{u}, \vec{v}) = \walsh{\theta}_F(\vec{u}, \vec{v}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{\vec{u} \cdot \vec{x} + \vec{v} \cdot F(\vec{x})}"/></p>
-</div><p>The <em>Walsh Spectrum</em> of <em>F</em> can be represented by a matrix whose rows are indexed by <img class="math" src="../images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/> and whose columns are indexed by <img class="math" src="../images/math/578c9880e2c9877d8850a212cb95b563ce99d607.png" alt="\vec{v} \in \gf{V_m}"/> in lexicographic order, denoted by <img class="math" src="../images/math/56b1bdb13dc48c5d340ae52aafd9d8192e16addc.png" alt="\matr{WS}(F) \in \matr{M}_{2^n \times 2^m}(\bbbr)"/> and defined as follows:</p>
+<p><img src="../images/math/b9270f4e67caa38c7e1b419eb2906b4cee43c5f5.png" alt="\W_F(\vec{u}, \vec{v}) = \walsh{\theta}_F(\vec{u}, \vec{v}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{\vec{u} \cdot \vec{x} + \vec{v} \cdot F(\vec{x})}"/></p>
+</div><p>The <em>Walsh Spectrum</em> of <em>F</em> can be represented by a matrix whose rows are indexed by <img class="math" src="../images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> and whose columns are indexed by <img class="math" src="../images/math/8e4bad02219f6039a23600926977eef31d95526c.png" alt="\vec{v} \in \gf{V_m}"/> in lexicographic order, denoted by <img class="math" src="../images/math/03742d82f6d8aa73afa083813cf43cced8360460.png" alt="\matr{WS}(F) \in \matr{M}_{2^n \times 2^m}(\bbbr)"/> and defined as follows:</p>
 <div class="math">
-<p><img src="../images/math/cd58e17d7a9fcfbf0779c64805eaca8c5dbf6243.png" alt="\matr{WS}(F) = \begin{bmatrix} \walsh{\theta}_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_0})&amp;\dots&amp;\walsh{\theta}_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_{2^m-1}}) \\
+<p><img src="../images/math/a74f7943d970c2e590fcfab2b6395bbbe3fd58a2.png" alt="\matr{WS}(F) = \begin{bmatrix} \walsh{\theta}_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_0})&amp;\dots&amp;\walsh{\theta}_F(\boldsymbol{\alpha_0},\boldsymbol{\alpha_{2^m-1}}) \\
 \walsh{\theta}_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_0})&amp;\dots&amp;\walsh{\theta}_F(\boldsymbol{\alpha_1},\boldsymbol{\alpha_{2^m-1}}) \\
 \hdotsfor[2]{3}\\
 \walsh{\theta}_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_0})&amp;\dots&amp;\walsh{\theta}_F(\boldsymbol{\alpha_{2^n-1}},\boldsymbol{\alpha_{2^m-1}}) \\
 \end{bmatrix}"/></p>
-</div><p>where <img class="math" src="../images/math/46d94bacf84933f92648ead049f1cc30e5ea4ca3.png" alt="\walsh{\theta}_F(\vec{u},\vec{v})"/> is the value of the spectrum at <img class="math" src="../images/math/bde043d0a0f41e905d5d4d0a3b4ced48362d3bd8.png" alt="(\vec{u},\vec{v})"/>.</p>
-<p>We can deduce that the columns of this matrix are the spectra of the Boolean functions <img class="math" src="../images/math/8fe77bff7cff74ae183ef2e803b91f8b1b4319f7.png" alt="l_{\vec{v}} \circ F"/> for all the linear functions <img class="math" src="../images/math/e6ad483d6860e97bca4745cef45791f8c6c9aca7.png" alt="l_{\vec{v}} \in \funct{L}_m"/>.</p>
+</div><p>where <img class="math" src="../images/math/5435ec78f062f9ca61262f76cc0adbb9a3139165.png" alt="\walsh{\theta}_F(\vec{u},\vec{v})"/> is the value of the spectrum at <img class="math" src="../images/math/38322185eaa3adabdb1253970a071de900b93ae7.png" alt="(\vec{u},\vec{v})"/>.</p>
+<p>We can deduce that the columns of this matrix are the spectra of the Boolean functions <img class="math" src="../images/math/e8125ddef6f7c51864342abcdc2e48fa5f19a1b2.png" alt="l_{\vec{v}} \circ F"/> for all the linear functions <img class="math" src="../images/math/7712336dec8f142ed237d98c49bb8770b94415c0.png" alt="l_{\vec{v}} \in \funct{L}_m"/>.</p>
 </div>
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>A VBF class can be initialized giving its Walsh Spectrum with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putwalsh</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putwalsh</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain its representation as Walsh Spectrum the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">Walsh</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Walsh</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <p>The following program provides the Walsh Spectrum of a Vector Boolean function from its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -287,7 +251,7 @@
 </pre></div>
 </div>
 <p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The Walsh Spectrum is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Walsh Spectrum is:</span>
 <span class="go">[[16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]</span>
 <span class="go">[0 0 -4 -4 0 0 -4 12 4 4 0 0 4 4 0 0]</span>
 <span class="go">[0 0 -4 -4 0 0 -4 -4 0 0 4 4 0 0 -12 4]</span>
@@ -307,15 +271,19 @@
 <span class="go">]</span>
 </pre></div>
 </div>
-<p>We can see that the Walsh Spectrum of <img class="math" src="../images/math/918c8aa77c2fccdd71699522c32129fecbb0a2fa.png" alt="f_1(NibbleSub)"/> where</p>
+<p>We can see that the Walsh Spectrum of <img class="math" src="../images/math/83fe2bda2200eff053fe77c27d405ee75100d298.png" alt="f_1(NibbleSub)"/> where</p>
 <div class="math">
-<p><img src="../images/math/0ac4140c2696885474e00be8b9fc0b87de57eb51.png" alt="NibbleSub=(f_1(NibbleSub),f_2(NibbleSub),f_3(NibbleSub),f_4(NibbleSub))"/></p>
-</div><p>corresponds to the Spectrum of <img class="math" src="../images/math/66239dd460dbc218f4d159362959817ed79da895.png" alt="l_{(1,0,0,0)} \circ NibbleSub"/>. As a consequence, the Walsh Spectrum of <img class="math" src="../images/math/918c8aa77c2fccdd71699522c32129fecbb0a2fa.png" alt="f_1(NibbleSub)"/> coincides with the <em>9</em>-th column of <img class="math" src="../images/math/b8dd4ee6129767841dde3f9f99b57c77f47c5e2c.png" alt="\matr{WS}(NibbleSub)"/>, that is, the column indexed by the vector <img class="math" src="../images/math/ea4988e6dad1e15edab2ff2e9ec096317b50790f.png" alt="(1,0,0,0)"/>.</p>
+<p><img src="../images/math/ad19ba978d8c42d9f5538ffd5c1071f08be58366.png" alt="NibbleSub=(f_1(NibbleSub),f_2(NibbleSub),f_3(NibbleSub),f_4(NibbleSub))"/></p>
+</div><p>corresponds to the Spectrum of <img class="math" src="../images/math/360b43f481328bd42009776e27118e74fa766d71.png" alt="l_{(1,0,0,0)} \circ NibbleSub"/>. As a consequence, the Walsh Spectrum of <img class="math" src="../images/math/83fe2bda2200eff053fe77c27d405ee75100d298.png" alt="f_1(NibbleSub)"/> coincides with the <em>9</em>-th column of <img class="math" src="../images/math/329ab4bc5efc548f7cd1fc26abd889d22586bdc8.png" alt="\matr{WS}(NibbleSub)"/>, that is, the column indexed by the vector <img class="math" src="../images/math/6293210c6e2c718dccbbcf41eda6d79f1c38869c.png" alt="(1,0,0,0)"/>.</p>
 </div>
 </div>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -325,12 +293,13 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -346,9 +315,11 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../static/jquery.js"></script>
@@ -368,16 +339,6 @@
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

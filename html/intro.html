@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Introduction &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,26 +30,48 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
         <link rel="next" title="Using the library" href="using.html"/>
         <link rel="prev" title="Preface" href="preface.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -55,24 +79,20 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#organization-of-this-book">Organization of this Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Introduction</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#functions-available-in-vbf">Functions available in VBF</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#conventions-used-in-this-manual">Conventions used in this manual</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#software-implementation">Software implementation</a></li>
@@ -82,126 +102,79 @@
 <li class="toctree-l2"><a class="reference internal" href="#design-philosophy">Design Philosophy</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/intro.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
@@ -231,7 +204,7 @@ of Vector Boolean Functions. Methods are available for the following areas:</p>
 <div class="section" id="conventions-used-in-this-manual">
 <h2><a class="toc-backref" href="#id8">Conventions used in this manual</a><a class="headerlink" href="#conventions-used-in-this-manual" title="Permalink to this headline">¶</a></h2>
 <p>This manual contains many examples which can be typed at the keyboard. A command entered at the terminal is shown like this,</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span>
 </pre></div>
 </div>
 <p>The first character on the line is the terminal prompt, and should not be typed. The dollar sign $ is used as the standard prompt in this manual, although some systems may use a different character.</p>
@@ -243,7 +216,7 @@ of Vector Boolean Functions. Methods are available for the following areas:</p>
 <ol class="arabic simple">
 <li>Derived classes inherited from NTL base classes which add new functions on top of them:</li>
 </ol>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">pol.h, vbf_GF2EX.h, vbf_GF2X.h, vbf_ZZ.h, vbf_mat_GF2.h, vbf_mat_RR.h, vbf_mat_ZZ.h, vbf_tools.h,</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">pol.h, vbf_GF2EX.h, vbf_GF2X.h, vbf_ZZ.h, vbf_mat_GF2.h, vbf_mat_RR.h, vbf_mat_ZZ.h, vbf_tools.h,</span>
 <span class="go">vbf_vec_GF2.h, vbf_vec_GF2E.h, vbf_vec_RR.h, vbf_vec_ZZ.h, vec_pol.h</span>
 </pre></div>
 </div>
@@ -272,7 +245,7 @@ evolve.</p>
 <li><strong>Obtain NTL library source code</strong>. To obtain the source code and documentation for NTL, download ntl-xxx.tar.gz from <a class="reference external" href="http://www.shoup.net/ntl/download.html">Download NTL library</a>, placing it in a different directory.</li>
 <li><strong>Run the configuration script</strong>. Working in the directory where you placed the NTL library, do the following (here, &#8220;xxx&#8221; denotes the desired version number of NTL; any version of NTL can be employed):</li>
 </ol>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">cd </span>ntl-xxx/src
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> ntl-xxx/src
 <span class="gp">$</span> ./configure
 </pre></div>
 </div>
@@ -286,7 +259,7 @@ evolve.</p>
 <ol class="arabic simple" start="4">
 <li><strong>Build NTL:</strong></li>
 </ol>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> make
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> make
 <span class="gp">$</span> make check
 <span class="gp">$</span> make install
 </pre></div>
@@ -296,30 +269,30 @@ evolve.</p>
 </div>
 <div class="section" id="preliminaries">
 <h2><a class="toc-backref" href="#id12">Preliminaries</a><a class="headerlink" href="#preliminaries" title="Permalink to this headline">¶</a></h2>
-<p>The mathematical theory of Vector Boolean Functions starts with the formal definition of vector spaces whose elements (vectors) have binary elements. Let <img class="math" src="images/math/f7370ffdabef3a26e740f4b7e5e7e47bc9f9dce6.png" alt="&lt; \gf{GF(2)}, +, \cdot &gt;"/> be the finite field of order 2, where <img class="math" src="images/math/8ffc8f5bf80ecffbd578498b4e75ad88decc38d8.png" alt="\gf{GF(2)} = \bbbz_2 = \{0,1\}"/>, <img class="math" src="images/math/c91f9ee5095d22fa5a90bfa7caa6c06f8d0b5068.png" alt="'+'"/> the &#8216;integer addition modulo 2&#8217; and <img class="math" src="images/math/fd6047af3c3782572d04bfc529e74fc0c2f35459.png" alt="'\cdot'"/> the &#8216;integer multiplication modulo 2&#8217;. <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.png" alt="\gf{V_n}"/> is the vector space of n-tuples of elements from <img class="math" src="images/math/b73c0d5e5c24eb46c1dbbeda6ca9e5953792505a.png" alt="\gf{GF(2)}"/>. The <em>direct sum</em> of <img class="math" src="images/math/509aefd1663bc2da15fa8d91f5b95624ce3e7ebf.png" alt="\vec{x} \in \gf{V_{n_1}}"/> and <img class="math" src="images/math/204571c13e940ced735a72ead71280d042ca857d.png" alt="\vec{y} \in \gf{V_{n_2}}"/> is defined as <img class="math" src="images/math/21c464bc5ea2a55ddba231cfdb6cb29d678d7627.png" alt="\vec{x} \oplus \vec{y}  = (x_1, \ldots, x_{n_1}, y_1, \ldots, y_{n_2}) \in \gf{V_{n_1+n_2}}"/>. The <em>inner product</em> of <img class="math" src="images/math/3a50d2fdf3e365e21c50c346515e5d0d757874d3.png" alt="\vec{x},\vec{y} \in \gf{V_n}"/> is denoted by <img class="math" src="images/math/446eeb195e7beda4af6245e55af757bc109d18a8.png" alt="\vec{x} \cdot \vec{y}"/>, and the inner product of real vectors <img class="math" src="images/math/99823eda396c8b11be489d69fead2637ade00320.png" alt="\vec{x}, \vec{y} \in \bbbr^n"/> is denoted by <img class="math" src="images/math/c77f4ac10d2db9d65aeac4d8f96c930536abf6e0.png" alt="\left\langle\vec{x},\vec{y}\right\rangle"/>.</p>
-<p>One can now define binary functions between this type of vector spaces, whose linearity analysis (for robustness-against-attacks purposes) will become very important. <img class="math" src="images/math/8ad6360ef505faf0dfe19c1049eecb33d1b9e9fa.png" alt="f: \gf{V_n} \to \gf{GF(2)}"/> is called a <em>Boolean function</em> and <img class="math" src="images/math/fb28eb19c3c7ecfcd7d250215fb4b2005ea88c1b.png" alt="\funct{F}_n"/> is the set of all Boolean functions on <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.png" alt="\gf{V_n}"/>. <img class="math" src="images/math/1abfedb2d3ee50052d255033669c98c0449ac863.png" alt="\funct{L}_n"/> is the set of all linear Boolean functions on <img class="math" src="images/math/5cdc2c3453c3d412af1516885ffa016698b1fbfd.png" alt="\gf{V_n}: \funct{L}_n = \{l_{\vec{u}} \  \fa \vec{u} \in \gf{V_n} \given l_{\vec{u}}(\vec{x})=\vec{u} \cdot \vec{x}\}"/> and <img class="math" src="images/math/1e267f8f4433c4435ce31591f35500e56e2f20fd.png" alt="\funct{A}_n"/> is the set of all affine Boolean functions
-on <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.png" alt="\gf{V_n}"/>.</p>
-<p>It is possible to characterize Boolean functions via alternative and very useful associated mappings. In the following, some of these mappings are presented. The real-valued mapping <img class="math" src="images/math/bea3184f799e40a370193a3adc79ade317db7e0b.png" alt="\chi_{\vec{u}}(\vec{x})={(-1)}^{\sum_{i=1}^{i=n} u_i x_i}={(-1)}^{\vec{u} \cdot \vec{x}}"/> for <img class="math" src="images/math/93c0f3d4434ea3e8213f4f0004425f64b699addc.png" alt="\vec{x}, \vec{u} \in \gf{V_n}"/> is called a <em>character</em>. The character form of <img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> is defined as <img class="math" src="images/math/7c5e75d85abdca54ee6e5c83f4d34ec3f6ba2ea3.png" alt="\chi_f(\vec{x})=(-1)^{f(\vec{x})}"/>. The Truth Table of <img class="math" src="images/math/60741d917e4e718ec00c3c4611fc633394c137f5.png" alt="\chi_f"/> is called as the <em>(1,-1)-sequence vector</em> or <em>sequence vector</em> of <img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/> and is denoted by <img class="math" src="images/math/2dd40efb3784e2a0c50df8d760e4abbd2fcdaab4.png" alt="\xi_f \in \bbbr^{2^n}"/>.</p>
-<p>Let <img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> be a Boolean function; the <em>Walsh Transform</em> of <img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/> at <img class="math" src="images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/> is the n-dimensional Discrete Fourier Transform and can be calculated as follows:</p>
+<p>The mathematical theory of Vector Boolean Functions starts with the formal definition of vector spaces whose elements (vectors) have binary elements. Let <img class="math" src="images/math/d5b734c1917e3fc2a8f356805460037bda1bd1b0.png" alt="&lt; \gf{GF(2)}, +, \cdot &gt;"/> be the finite field of order 2, where <img class="math" src="images/math/2c9c561daaf0909dbad4ae27dab0f75ce2391e17.png" alt="\gf{GF(2)} = \bbbz_2 = \{0,1\}"/>, <img class="math" src="images/math/35afdccdd887d5c32eac11ac032c15d78ea571e2.png" alt="'+'"/> the &#8216;integer addition modulo 2&#8217; and <img class="math" src="images/math/dd6bb0ff7b6467cf39809278cebe4a31b77946cb.png" alt="'\cdot'"/> the &#8216;integer multiplication modulo 2&#8217;. <img class="math" src="images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/> is the vector space of n-tuples of elements from <img class="math" src="images/math/7226a807fa9c82958d0ddd8fb72d9287d29411f1.png" alt="\gf{GF(2)}"/>. The <em>direct sum</em> of <img class="math" src="images/math/1abaa752542ea6fe4831ea7941468b2ee748a440.png" alt="\vec{x} \in \gf{V_{n_1}}"/> and <img class="math" src="images/math/238f49ef1d681713b89f92e3d25d2c962f6c9174.png" alt="\vec{y} \in \gf{V_{n_2}}"/> is defined as <img class="math" src="images/math/32d3f9303abf1df9ab62f6e119bb56313541c96a.png" alt="\vec{x} \oplus \vec{y}  = (x_1, \ldots, x_{n_1}, y_1, \ldots, y_{n_2}) \in \gf{V_{n_1+n_2}}"/>. The <em>inner product</em> of <img class="math" src="images/math/706b825984c87f7417bcea271e94715967c5c9f4.png" alt="\vec{x},\vec{y} \in \gf{V_n}"/> is denoted by <img class="math" src="images/math/77abb851bc777362f70671bc504a91e7387855c1.png" alt="\vec{x} \cdot \vec{y}"/>, and the inner product of real vectors <img class="math" src="images/math/3ed74a47c8c2d789fd6e7df552342d350d0e7e94.png" alt="\vec{x}, \vec{y} \in \bbbr^n"/> is denoted by <img class="math" src="images/math/c1f5673d9a9feb13e04e24ad726d3692f6991201.png" alt="\left\langle\vec{x},\vec{y}\right\rangle"/>.</p>
+<p>One can now define binary functions between this type of vector spaces, whose linearity analysis (for robustness-against-attacks purposes) will become very important. <img class="math" src="images/math/3cb10ddbba7ee15cd59fa673c93396d1dff2593b.png" alt="f: \gf{V_n} \to \gf{GF(2)}"/> is called a <em>Boolean function</em> and <img class="math" src="images/math/b8b9bddeee188cfd60810e17731ffbdfe7fae546.png" alt="\funct{F}_n"/> is the set of all Boolean functions on <img class="math" src="images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/>. <img class="math" src="images/math/7c2265dcf763edec6a5196677d99c856205716e1.png" alt="\funct{L}_n"/> is the set of all linear Boolean functions on <img class="math" src="images/math/45b86c59725cfe799d78a5ace697b1da7968d8b9.png" alt="\gf{V_n}: \funct{L}_n = \{l_{\vec{u}} \  \fa \vec{u} \in \gf{V_n} \given l_{\vec{u}}(\vec{x})=\vec{u} \cdot \vec{x}\}"/> and <img class="math" src="images/math/e53a8a32bcfc49787d25c40a4e7cee1d63faa467.png" alt="\funct{A}_n"/> is the set of all affine Boolean functions
+on <img class="math" src="images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/>.</p>
+<p>It is possible to characterize Boolean functions via alternative and very useful associated mappings. In the following, some of these mappings are presented. The real-valued mapping <img class="math" src="images/math/65e4ef1f5240c928acbbcf98ff041e9c83a2cfed.png" alt="\chi_{\vec{u}}(\vec{x})={(-1)}^{\sum_{i=1}^{i=n} u_i x_i}={(-1)}^{\vec{u} \cdot \vec{x}}"/> for <img class="math" src="images/math/f26e9a9ea085ede05e61f687e32d00ac7af6e317.png" alt="\vec{x}, \vec{u} \in \gf{V_n}"/> is called a <em>character</em>. The character form of <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> is defined as <img class="math" src="images/math/49fa8ec4f9d6402df259aa71ee0936350cdabb42.png" alt="\chi_f(\vec{x})=(-1)^{f(\vec{x})}"/>. The Truth Table of <img class="math" src="images/math/1c941a23db0e277de4a348ad0f0532cc586f7f22.png" alt="\chi_f"/> is called as the <em>(1,-1)-sequence vector</em> or <em>sequence vector</em> of <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/> and is denoted by <img class="math" src="images/math/ed0ccf9a1d803a981e5a0c42ed12a2b661efb647.png" alt="\xi_f \in \bbbr^{2^n}"/>.</p>
+<p>Let <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> be a Boolean function; the <em>Walsh Transform</em> of <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/> at <img class="math" src="images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> is the n-dimensional Discrete Fourier Transform and can be calculated as follows:</p>
 <div class="math">
-<p><img src="images/math/f20e6867bdf25ed8bcf993cce0f2e6b5c4086858.png" alt="\begin{equation*}
+<p><img src="images/math/3716a2180273c304022e1b0a9abc6cbdb58a6513.png" alt="\begin{equation*}
         \walsh{\chi}_f(\vec{u}) = \left\langle \xi_f, \xi_{l_{\vec{u}}} \right\rangle = \sum_{\vec{x} \in \gf{V_n}} (-1)^{f(\vec{x}) + \vec{u} \vec{x}}
      \end{equation*}"/></p>
-</div><p>The <em>autocorrelation</em> of <img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> with respect to the shift <img class="math" src="images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/> is a measure of the statistical dependency among the involved variables (indicating robustness against randomness-based attacks). It is the cross-correlation of <img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/> with itself, denoted by <img class="math" src="images/math/e41212d2ed14e575fcd0921956ef6ebf58b4266d.png" alt="\R_{f}(\vec{u}): \gf{V_n} \to \bbbz"/> and defined by <a class="footnote-reference" href="#f1" id="id4">[1]</a>:</p>
+</div><p>The <em>autocorrelation</em> of <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> with respect to the shift <img class="math" src="images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> is a measure of the statistical dependency among the involved variables (indicating robustness against randomness-based attacks). It is the cross-correlation of <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/> with itself, denoted by <img class="math" src="images/math/80b973892b087544ade4c4603c45ba7fe00c198f.png" alt="\R_{f}(\vec{u}): \gf{V_n} \to \bbbz"/> and defined by <a class="footnote-reference" href="#f1" id="id4">[1]</a>:</p>
 <div class="math">
-<p><img src="images/math/e0621f1e3daea72b1a7fe8e3064fbaa928cc988d.png" alt="\begin{equation*}
+<p><img src="images/math/8ef1c458c08bae4a23a086d76221425fcbeff7fb.png" alt="\begin{equation*}
         \R_f(\vec{u}) = \sum_{\vec{x} \in \gf{V_n}} \chi_f(\vec{x}) \chi_f(\vec{x}+\vec{u}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{f(\vec{x})+f(\vec{u}+\vec{x})}
      \end{equation*}"/></p>
-</div><p>The <em>directional derivative</em> of <img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> in the direction of <img class="math" src="images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/> is defined by:</p>
+</div><p>The <em>directional derivative</em> of <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> in the direction of <img class="math" src="images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> is defined by:</p>
 <div class="math">
-<p><img src="images/math/390096844028da463fdc6e058e49cbd3a1bbe202.png" alt="\begin{equation*}
+<p><img src="images/math/e453b3996ea9d344fc2b8b316b1fa06d15c1afcb.png" alt="\begin{equation*}
         \Delta_{\vec{u}}f(\vec{x}) = f(\vec{x}+\vec{u}) + f(\vec{x}), \  \  \vec{x} \in \gf{V_n}
      \end{equation*}"/></p>
-</div><p>We shall call the linear kernel of <img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/> the set of those vectors <img class="math" src="images/math/1a6c1898d32eab11691ec80880b75abfe23fe906.png" alt="\vec{u}"/> such that <img class="math" src="images/math/d75d51d9dc14b4e09c0f957c54d653debf2cf930.png" alt="\Delta_{\vec{u}}f"/> is a constant function. The linear kernel of any Boolean function is a subspace of <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.png" alt="\gf{V_n}"/>. Any element <img class="math" src="images/math/1a6c1898d32eab11691ec80880b75abfe23fe906.png" alt="\vec{u}"/> of the linear kernel of <img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/> is said to be a linear structure of <img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/>.</p>
-<p>Given <img class="math" src="images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/>, a nonzero function <img class="math" src="images/math/3e2c3bd7e8f5a68770a97b17905cddc09151d0cf.png" alt="g \in \funct{F}_n"/> is called an <em>annihilator</em> of <img class="math" src="images/math/2a426db098eedef98034e4420b75ae437f57d191.png" alt="f"/> if <img class="math" src="images/math/81376231f52a1b8452905b16d94a0d75402bfc28.png" alt="fg = 0"/>.</p>
-<p>We now extend the scope of the study by considering functions between any pair of binary-valued vector spaces. <img class="math" src="images/math/b3a74c9e09d87ec3c9680e47436c36c658449130.png" alt="F: \gf{V_n} \to \gf{V_m}, \ F(\vec{x}) = (f_1(\vec{x}),\dots,f_{m}(\vec{x}))"/> is called a <em>Vector Boolean function</em> and <img class="math" src="images/math/1f4243b94a9ad5a58dee6e19bc851f9b27fb22ef.png" alt="\funct{F}_{n,m}"/> is the set of all Vector Boolean Functions <img class="math" src="images/math/bad26ce4dfcd6f451ca7385b5dbae5169f79b202.png" alt="F:\gf{V_n} \to \gf{V_m}"/>. Each <img class="math" src="images/math/dbee7484fbc42d74c42f69f507592c59ac7ab32c.png" alt="f_i: \gf{V_n} \to \gf{GF(2)} \ \fa i \in \{1, \ldots, m \}"/> is a coordinate function of <img class="math" src="images/math/938394e44c76598c2a8dc7528f84e1bdc61adb09.png" alt="F"/>. The <em>indicator function</em> of <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/>, denoted by <img class="math" src="images/math/c397986cbbb9bac262a8043097babd7ffa249b05.png" alt="\theta_F : \gf{V_n} \times \gf{V_m} \to \left\{0,1\right\}"/>, is defined in <a class="reference internal" href="bibliography.html#chabaudv-94" id="id5">[ChabaudV:94]</a> as:</p>
+</div><p>We shall call the linear kernel of <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/> the set of those vectors <img class="math" src="images/math/2184ff78be3b934ca690852a9d1906d9dcff61dc.png" alt="\vec{u}"/> such that <img class="math" src="images/math/9d6db5b0461b18914d3661306b6a659758124ed1.png" alt="\Delta_{\vec{u}}f"/> is a constant function. The linear kernel of any Boolean function is a subspace of <img class="math" src="images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/>. Any element <img class="math" src="images/math/2184ff78be3b934ca690852a9d1906d9dcff61dc.png" alt="\vec{u}"/> of the linear kernel of <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/> is said to be a linear structure of <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/>.</p>
+<p>Given <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/>, a nonzero function <img class="math" src="images/math/123e93f61d67ba5e1a309428c0836e6aa0e65796.png" alt="g \in \funct{F}_n"/> is called an <em>annihilator</em> of <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/> if <img class="math" src="images/math/f8668d58bd35f898d6cfb4d3a6ec9d899866535c.png" alt="fg = 0"/>.</p>
+<p>We now extend the scope of the study by considering functions between any pair of binary-valued vector spaces. <img class="math" src="images/math/3cb0e1564dfae785464be2d8741cae996f1be320.png" alt="F: \gf{V_n} \to \gf{V_m}, \ F(\vec{x}) = (f_1(\vec{x}),\dots,f_{m}(\vec{x}))"/> is called a <em>Vector Boolean function</em> and <img class="math" src="images/math/31445a25c5968b3f5c1a666953c20b064f0399e6.png" alt="\funct{F}_{n,m}"/> is the set of all Vector Boolean Functions <img class="math" src="images/math/ec62161d7550312a6ea0fe7b67d1d129a359d3fc.png" alt="F:\gf{V_n} \to \gf{V_m}"/>. Each <img class="math" src="images/math/d7cb597039db09b2dc5e5b2116515e2a04c0feb4.png" alt="f_i: \gf{V_n} \to \gf{GF(2)} \ \fa i \in \{1, \ldots, m \}"/> is a coordinate function of <img class="math" src="images/math/56528d992f057d20fa32aa8dbb83e4ad6c91a7ad.png" alt="F"/>. The <em>indicator function</em> of <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, denoted by <img class="math" src="images/math/022974f27ac0d7b72b72d7999a15c3ce395061cd.png" alt="\theta_F : \gf{V_n} \times \gf{V_m} \to \left\{0,1\right\}"/>, is defined in <a class="reference internal" href="bibliography.html#chabaudv-94" id="id5">[ChabaudV:94]</a> as:</p>
 <div class="math" id="equation-eq:IndicatorFunction">
-<p><span class="eqno">(1)</span><img src="images/math/9124d6e3b2a4cddee0be28d51ea5d4b2818bbbd1.png" alt="\begin{equation*}
+<p><span class="eqno">(1)<a class="headerlink" href="#equation-eq:IndicatorFunction" title="Permalink to this equation">¶</a></span><img src="images/math/9920f1cdecfd9314cedb5e79c658fbe4385cda57.png" alt="\begin{equation*}
         \theta_F(\vec{x},\vec{y}) = \left\{
            \begin{array}{ll}
              1 &amp; \mbox{if }\vec{y}=F(\vec{x}) \\
@@ -327,30 +300,30 @@ on <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.p
            \end{array}
         \right.
      \end{equation*}"/></p>
-</div><p>Again, several mappings associated with a Vector Boolean Functions can be defined, in similar terms to the binary functions case. Hence, the character form of <img class="math" src="images/math/49b1b5746f5d0dc5bb4d7bdeab660fd1ed0ea4d4.png" alt="(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}"/> can be defined as follows: <img class="math" src="images/math/d78e869e9cd974f132d1a32d9c18c281b5ee3816.png" alt="\chi_{(\vec{u},\vec{v})}(\vec{x},\vec{y}) = {(-1)}^{\vec{u} \cdot \vec{x} + \vec{v} \cdot \vec{y}}"/>. Similarly, let <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> be a Vector Boolean function; its <em>Walsh Transform</em> is the two-dimensional Walsh Transform defined by:</p>
+</div><p>Again, several mappings associated with a Vector Boolean Functions can be defined, in similar terms to the binary functions case. Hence, the character form of <img class="math" src="images/math/17e078eb8a0d00e6736fdc976feadb146cf679f2.png" alt="(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}"/> can be defined as follows: <img class="math" src="images/math/22dcd9737f481247ce7dc26f7b02fe2983a13771.png" alt="\chi_{(\vec{u},\vec{v})}(\vec{x},\vec{y}) = {(-1)}^{\vec{u} \cdot \vec{x} + \vec{v} \cdot \vec{y}}"/>. Similarly, let <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> be a Vector Boolean function; its <em>Walsh Transform</em> is the two-dimensional Walsh Transform defined by:</p>
 <div class="math" id="equation-WalshTransformInnerVector">
-<p><span class="eqno">(2)</span><img src="images/math/8a183951e76ce9066ac6190c19a805e5ad56cdb6.png" alt="\begin{equation*}
+<p><span class="eqno">(2)<a class="headerlink" href="#equation-WalshTransformInnerVector" title="Permalink to this equation">¶</a></span><img src="images/math/242bc1f18606c106507c39ead3c0096ede49fd29.png" alt="\begin{equation*}
         \walsh{\theta}_F(\vec{u}, \vec{v}) = \sum_{\vec{x} \in \gf{V_n}} \sum_{\vec{y} \in \gf{V_m}} \theta_F(\vec{x},\vec{y}) \chi_{(\vec{u},\vec{v})}(\vec{x},\vec{y}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{\vec{u}\vec{x} + \vec{v} F(\vec{x})}
      \end{equation*}"/></p>
-</div><p>Also, the <em>autocorrelation</em> of <img class="math" src="images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> with respect to the shift <img class="math" src="images/math/49b1b5746f5d0dc5bb4d7bdeab660fd1ed0ea4d4.png" alt="(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}"/> is the cross-correlation of <img class="math" src="images/math/938394e44c76598c2a8dc7528f84e1bdc61adb09.png" alt="F"/> with itself, denoted by <img class="math" src="images/math/e927bf740fb754c91f3afbe710cb223d6e39a25e.png" alt="\R_F(\vec{u},\vec{v}): \gf{V_n} \times \gf{V_m} \to \bbbz"/>, so that <a class="reference internal" href="bibliography.html#fse-nyberg-94" id="id6">[fse-Nyberg:94]</a>:</p>
+</div><p>Also, the <em>autocorrelation</em> of <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> with respect to the shift <img class="math" src="images/math/17e078eb8a0d00e6736fdc976feadb146cf679f2.png" alt="(\vec{u},\vec{v}) \in \gf{V_n} \times \gf{V_m}"/> is the cross-correlation of <img class="math" src="images/math/56528d992f057d20fa32aa8dbb83e4ad6c91a7ad.png" alt="F"/> with itself, denoted by <img class="math" src="images/math/3d733578588d8157b1f37d7feaeefa5814004bbe.png" alt="\R_F(\vec{u},\vec{v}): \gf{V_n} \times \gf{V_m} \to \bbbz"/>, so that <a class="reference internal" href="bibliography.html#fse-nyberg-94" id="id6">[fse-Nyberg:94]</a>:</p>
 <div class="math" id="equation-eq:AutocorrelationVBF">
-<p><span class="eqno">(3)</span><img src="images/math/9ae56ca223fdc3253273b5f3aad1970d59fe7aca.png" alt="\begin{equation*}
+<p><span class="eqno">(3)<a class="headerlink" href="#equation-eq:AutocorrelationVBF" title="Permalink to this equation">¶</a></span><img src="images/math/326490ce66667a2c6a7750cb8ed783d6b73473c2.png" alt="\begin{equation*}
         \R_F(\vec{u},\vec{v}) = \sum_{\vec{x} \in \gf{V_n}} \chi_{\vec{v} F}(\vec{x} + \vec{u}) \chi_{\vec{v} F}(\vec{x}) = \sum_{\vec{x} \in \gf{V_n}} (-1)^{\vec{v} F(\vec{x} + \vec{u}) + \vec{v} F(\vec{x})}
      \end{equation*}"/></p>
-</div><p>Let <img class="math" src="images/math/6c6d89778381676cd5c8f6000d222f1d6ce02b2d.png" alt="F \in \funct{F}_{n,m}$ and $\vec{u} \in \gf{V_n}"/>, then the <em>difference Vector Boolean function</em> of <img class="math" src="images/math/938394e44c76598c2a8dc7528f84e1bdc61adb09.png" alt="F"/> in the direction of <img class="math" src="images/math/fd52e16c218f8700374176f9666f799c29eba3ec.png" alt="\vec{u} \in \gf{V_n}"/>, denoted by <img class="math" src="images/math/6066b68d6b23dffdf464f851147a5373c6e8a387.png" alt="\Delta_{\vec{u}}F \in \funct{F}_{n,m}"/> is defined as follows: <img class="math" src="images/math/80eb7284655195d122a2e425d0a1b14ed9e71291.png" alt="\Delta_{\vec{u}}F(\vec{x})=F(\vec{x}+\vec{u})+F(\vec{x}), \  \vec{x} \in \gf{V_n}"/>. If the following equality is satisfied:
-<img class="math" src="images/math/fec6cbeceff68d3971698750241ae278d6d422a6.png" alt="\Delta_{\vec{u}}F(\vec{x})=\vec{c}, \  \ \vec{c} \in \gf{V_n} \ \fa \vec{x} \in \gf{V_n}$ then $\vec{u} \in \gf{V_n}"/> is called a linear structure of <img class="math" src="images/math/938394e44c76598c2a8dc7528f84e1bdc61adb09.png" alt="F"/>.</p>
-<p>Finally, we define the simplifying notation for the maximum of the absolute values of a set of real numbers <img class="math" src="images/math/abb54d364361b6c100b3e1030ccf7d180c8ccb5c.png" alt="\{a_{\vec{u}\vec{v}}\}_{\vec{u},\vec{v}}"/>, characterized by vectors <img class="math" src="images/math/1a6c1898d32eab11691ec80880b75abfe23fe906.png" alt="\vec{u}"/> and <img class="math" src="images/math/52905f8cd19f2e4c69545d8082039da5b51c061d.png" alt="\vec{v}"/>, as: <img class="math" src="images/math/22e3e95af8f44af125fbe0d604cfb111703987b3.png" alt="\max \ (a_{\vec{u}\vec{v}})= \max_{(\vec{u},\vec{v})}\ \{|a_{\vec{u}\vec{v}}|\}"/>. Using the same simplifying notation, we can define the <img class="math" src="images/math/cfcad79e66c7e67e64f9fe66efe2e5244c53e489.png" alt="\stackrel{*}{\max}(\cdot)"/> operator on a set of real numbers <img class="math" src="images/math/abb54d364361b6c100b3e1030ccf7d180c8ccb5c.png" alt="\{a_{\vec{u}\vec{v}}\}_{\vec{u},\vec{v}}"/>, as: <img class="math" src="images/math/319b0d246387ed9d971f41164de4d6eef3c1a613.png" alt="\stackrel{*}{\max}(a_{\vec{u}\vec{v}})=\max_{(\vec{u},\vec{v})\neq(\vec{0},\vec{0})}\{|a_{\vec{u}\vec{v}}|\}"/>. This notation will be used in some criteria definitions.</p>
+</div><p>Let <img class="math" src="images/math/711e6ad9e4fa8917b58be7cda7e91b8702b3d54e.png" alt="F \in \funct{F}_{n,m}$ and $\vec{u} \in \gf{V_n}"/>, then the <em>difference Vector Boolean function</em> of <img class="math" src="images/math/56528d992f057d20fa32aa8dbb83e4ad6c91a7ad.png" alt="F"/> in the direction of <img class="math" src="images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/>, denoted by <img class="math" src="images/math/526dbc5cf7addd3cba3f283ead2f0d64982dcbed.png" alt="\Delta_{\vec{u}}F \in \funct{F}_{n,m}"/> is defined as follows: <img class="math" src="images/math/362d43bebdadb2fabae87901690398b851b53e5b.png" alt="\Delta_{\vec{u}}F(\vec{x})=F(\vec{x}+\vec{u})+F(\vec{x}), \  \vec{x} \in \gf{V_n}"/>. If the following equality is satisfied:
+<img class="math" src="images/math/0d71e4d9c7c1dcd57afcfe8f23413f00d6b440fd.png" alt="\Delta_{\vec{u}}F(\vec{x})=\vec{c}, \  \ \vec{c} \in \gf{V_n} \ \fa \vec{x} \in \gf{V_n}$ then $\vec{u} \in \gf{V_n}"/> is called a linear structure of <img class="math" src="images/math/56528d992f057d20fa32aa8dbb83e4ad6c91a7ad.png" alt="F"/>.</p>
+<p>Finally, we define the simplifying notation for the maximum of the absolute values of a set of real numbers <img class="math" src="images/math/36c1af8036084daeb4c554ad8e532aceb56a48a2.png" alt="\{a_{\vec{u}\vec{v}}\}_{\vec{u},\vec{v}}"/>, characterized by vectors <img class="math" src="images/math/2184ff78be3b934ca690852a9d1906d9dcff61dc.png" alt="\vec{u}"/> and <img class="math" src="images/math/74ba592af560ea6f7a3e3bb3c512a59db90e85b3.png" alt="\vec{v}"/>, as: <img class="math" src="images/math/f9d2a8c9ab9f8e5c7ee1c29d3381fa342f64f517.png" alt="\max \ (a_{\vec{u}\vec{v}})= \max_{(\vec{u},\vec{v})}\ \{|a_{\vec{u}\vec{v}}|\}"/>. Using the same simplifying notation, we can define the <img class="math" src="images/math/b3d1d00965e959442d788e7dbe4d6255f6c1b69b.png" alt="\stackrel{*}{\max}(\cdot)"/> operator on a set of real numbers <img class="math" src="images/math/36c1af8036084daeb4c554ad8e532aceb56a48a2.png" alt="\{a_{\vec{u}\vec{v}}\}_{\vec{u},\vec{v}}"/>, as: <img class="math" src="images/math/a75887918fa98c61c5cbf85e07b5222819751aaf.png" alt="\stackrel{*}{\max}(a_{\vec{u}\vec{v}})=\max_{(\vec{u},\vec{v})\neq(\vec{0},\vec{0})}\{|a_{\vec{u}\vec{v}}|\}"/>. This notation will be used in some criteria definitions.</p>
 <p class="rubric">Footnotes</p>
 <table class="docutils footnote" frame="void" id="f1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[1]</a></td><td>Most authors omit the factor <img class="math" src="images/math/01c9030595f0e201ca3bbdc0433b4b92cb92d767.png" alt="\frac{1}{2^n}"/></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id4">[1]</a></td><td>Most authors omit the factor <img class="math" src="images/math/d90787f6e3cb0aa69556f2e02211fcfb1453b49c.png" alt="\frac{1}{2^n}"/></td></tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="design-philosophy">
 <h2><a class="toc-backref" href="#id13">Design Philosophy</a><a class="headerlink" href="#design-philosophy" title="Permalink to this headline">¶</a></h2>
-<p>The core of VBF library is the VBF class which represents Vector Boolean Functions whose data members and member functions make use of the NTL modules listed in Table <a class="reference internal" href="intro_d/design.html#ntlmodules"><span>NTL Modules</span></a>. However, some new cryptography-related member functions were added to the previous modules. Besides, new modules which are not present in NTL, are defined and they are listed in Table <a class="reference internal" href="intro_d/design.html#newmodules"><span>New Modules</span></a>.</p>
+<p>The core of VBF library is the VBF class which represents Vector Boolean Functions whose data members and member functions make use of the NTL modules listed in Table <a class="reference internal" href="intro_d/design.html#ntlmodules"><span class="std std-ref">NTL Modules</span></a>. However, some new cryptography-related member functions were added to the previous modules. Besides, new modules which are not present in NTL, are defined and they are listed in Table <a class="reference internal" href="intro_d/design.html#newmodules"><span class="std std-ref">New Modules</span></a>.</p>
 <table border="1" class="docutils" id="ntlmodules">
 <colgroup>
 <col width="21%" />
@@ -365,13 +338,13 @@ on <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.p
 <td><strong>DESCRIPTION</strong></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">GF2</span></code></td>
-<td>Galois Field of order <img class="math" src="images/math/bb002c070f2bbad9a5a97791228668d7b602a18f.png" alt="2"/> denoted by <img class="math" src="images/math/b73c0d5e5c24eb46c1dbbeda6ca9e5953792505a.png" alt="\gf{GF(2)}"/></td>
+<td>Galois Field of order <img class="math" src="images/math/eec37f0046bb402c62a0fbda6757b4596d64957e.png" alt="2"/> denoted by <img class="math" src="images/math/7226a807fa9c82958d0ddd8fb72d9287d29411f1.png" alt="\gf{GF(2)}"/></td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">vec_GF2</span></code></td>
-<td>Vectors over <img class="math" src="images/math/b73c0d5e5c24eb46c1dbbeda6ca9e5953792505a.png" alt="\gf{GF(2)}"/></td>
+<td>Vectors over <img class="math" src="images/math/7226a807fa9c82958d0ddd8fb72d9287d29411f1.png" alt="\gf{GF(2)}"/></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">mat_GF2</span></code></td>
-<td>Matrices over <img class="math" src="images/math/b73c0d5e5c24eb46c1dbbeda6ca9e5953792505a.png" alt="\gf{GF(2)}"/></td>
+<td>Matrices over <img class="math" src="images/math/7226a807fa9c82958d0ddd8fb72d9287d29411f1.png" alt="\gf{GF(2)}"/></td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">RR</span></code></td>
 <td>Arbitrary-precision floating point numbers</td>
@@ -395,17 +368,17 @@ on <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.p
 <td>Implements polynomial arithmetic modulo 2</td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">GF2E</span></code></td>
-<td>Polynomials in <img class="math" src="images/math/9b97847865834681f44f33575be74aa9c1139bbe.png" alt="F_2[X]"/> modulo a polynomial <img class="math" src="images/math/1ef26c5159ff261d1e29238441dc4687609da015.png" alt="P"/></td>
+<td>Polynomials in <img class="math" src="images/math/7e175273b0c6b7ead913f759b8013fd15a6de075.png" alt="F_2[X]"/> modulo a polynomial <img class="math" src="images/math/fdf0234f43da55c32f169eaa36fbe88833a6dba1.png" alt="P"/></td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">GF2EX</span></code></td>
-<td>Polynomials over <img class="math" src="images/math/47f318b920ce7b4cd30fb0bc3eca02197c4d37bc.png" alt="\gf{GF2E}"/></td>
+<td>Polynomials over <img class="math" src="images/math/f581cf633e7c16a38c39bca3821cf3a8aee0a376.png" alt="\gf{GF2E}"/></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">vec_GF2E</span></code></td>
-<td>Vectors over <img class="math" src="images/math/47f318b920ce7b4cd30fb0bc3eca02197c4d37bc.png" alt="\gf{GF2E}"/></td>
+<td>Vectors over <img class="math" src="images/math/f581cf633e7c16a38c39bca3821cf3a8aee0a376.png" alt="\gf{GF2E}"/></td>
 </tr>
 </tbody>
 </table>
-<p>Note that the modulus <em>P</em> in <img class="math" src="images/math/47f318b920ce7b4cd30fb0bc3eca02197c4d37bc.png" alt="\gf{GF2E}"/> may be any polynomial with degree greater than 0, not necessarily irreducible. Objects of the class <img class="math" src="images/math/47f318b920ce7b4cd30fb0bc3eca02197c4d37bc.png" alt="\gf{GF2E}"/> are represented as a <img class="math" src="images/math/dbc1a6cea08c6b2f77d7db288233cb73e4801df9.png" alt="\gf{GF2X}"/> of degree less than the degree of <em>P</em>. <img class="math" src="images/math/e9bc4f056f413cd458ba3ab4020480bce76c7b5e.png" alt="\gf{GF2EX}"/> can be used, for example, for arithmetic in <img class="math" src="images/math/eabb63807db75f4be32d4c86a1d62c95dff6e2f9.png" alt="\gf{GF(2^n)[X]}"/>.</p>
+<p>Note that the modulus <em>P</em> in <img class="math" src="images/math/f581cf633e7c16a38c39bca3821cf3a8aee0a376.png" alt="\gf{GF2E}"/> may be any polynomial with degree greater than 0, not necessarily irreducible. Objects of the class <img class="math" src="images/math/f581cf633e7c16a38c39bca3821cf3a8aee0a376.png" alt="\gf{GF2E}"/> are represented as a <img class="math" src="images/math/d9101374b19ce137bc70104c85368fa43240ab12.png" alt="\gf{GF2X}"/> of degree less than the degree of <em>P</em>. <img class="math" src="images/math/6685044cf8c7b56f3d25375fad1b2fe0b2c10180.png" alt="\gf{GF2EX}"/> can be used, for example, for arithmetic in <img class="math" src="images/math/1c7d9882bfde58f94c6ff4a2f7cb4778fd6eeacc.png" alt="\gf{GF(2^n)[X]}"/>.</p>
 <table border="1" class="docutils" id="newmodules">
 <colgroup>
 <col width="26%" />
@@ -432,15 +405,19 @@ on <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.p
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="using.html" class="btn btn-neutral float-right" title="Using the library">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="using.html" class="btn btn-neutral float-right" title="Using the library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="preface.html" class="btn btn-neutral" title="Preface"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="preface.html" class="btn btn-neutral" title="Preface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -450,12 +427,13 @@ on <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.p
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -471,9 +449,11 @@ on <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.p
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="static/jquery.js"></script>
@@ -493,16 +473,6 @@ on <img class="math" src="images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.p
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

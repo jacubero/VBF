@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Nonlinearity &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,24 +30,46 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -53,171 +77,111 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Nonlinearity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/criteria_d/nonlinearity.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="nonlinearity">
 <h1>Nonlinearity<a class="headerlink" href="#nonlinearity" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>In order to provide confusion, cryptographic functions must lie at large Hamming distance to all affine functions. Because of Parseval&#8217;s Relation, any Vector Boolean function has correlation with some affine functions of its input. This correlation should be small: the existence of affine approximations of the Boolean functions involved in a cipher allows to build attacks on this system (see, <a class="reference internal" href="../bibliography.html#matsui-93" id="id1">[Matsui:93]</a> for block ciphers and <a class="reference internal" href="../bibliography.html#dingxs-91" id="id2">[DingXS:91]</a> for stream ciphers).</p>
-<p>The nonlinearity of a Boolean function <img class="math" src="../images/math/93015c3e2d62d25650602f2abeeb32cb6c2a77e9.png" alt="f \in \funct{F}_{m}"/> is defined as the Hamming distance between <em>f</em> and the subspace of affine functions <a class="reference internal" href="../bibliography.html#pieprzykf-88" id="id3">[PieprzykF:88]</a>: <img class="math" src="../images/math/46568df7a9ac86a0a61e63d0622b7a0ae3d61eed.png" alt="\crit{NL}(f)=d(f,\set{A}_n)"/>.</p>
-<p>The nonlinearity of a Vector Boolean function <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> is defined as the minimum among the nonlinearities of all component functions of <em>F</em> <a class="reference internal" href="../bibliography.html#nyberg-92" id="id4">[Nyberg:92]</a>:</p>
+<p>The nonlinearity of a Boolean function <img class="math" src="../images/math/23a6076972c6e5efcbdedc6d6d21ee550b54e8bb.png" alt="f \in \funct{F}_{m}"/> is defined as the Hamming distance between <em>f</em> and the subspace of affine functions <a class="reference internal" href="../bibliography.html#pieprzykf-88" id="id3">[PieprzykF:88]</a>: <img class="math" src="../images/math/e126f2417743c56335add09cac48384786d640ba.png" alt="\crit{NL}(f)=d(f,\set{A}_n)"/>.</p>
+<p>The nonlinearity of a Vector Boolean function <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> is defined as the minimum among the nonlinearities of all component functions of <em>F</em> <a class="reference internal" href="../bibliography.html#nyberg-92" id="id4">[Nyberg:92]</a>:</p>
 <div class="math">
-<p><img src="../images/math/86a62f21f72a320d27360b4b2fe3e0c13a59f6bc.png" alt="\crit{NL}(F)=\min_{\vec{v} \neq \vec{0}} \crit{NL}(\vec{v} \cdot F) \ \ \vec{v}=(v_1,\dots,v_m) \in \gf{V_m}"/></p>
+<p><img src="../images/math/2c745e6a0a77bc420e40edaef0b66576731c6793.png" alt="\crit{NL}(F)=\min_{\vec{v} \neq \vec{0}} \crit{NL}(\vec{v} \cdot F) \ \ \vec{v}=(v_1,\dots,v_m) \in \gf{V_m}"/></p>
 </div><p>The nonlinearity of <em>F</em> can be expressed in terms of the Walsh coefficients by the following theorem:</p>
-<p>Let <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/>, the nonlinearity of <em>F</em> can be calculated in terms of the maximum of the absolute values of its Walsh Spectrum without taking into account the element of its first row and column, as follows:</p>
+<p>Let <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, the nonlinearity of <em>F</em> can be calculated in terms of the maximum of the absolute values of its Walsh Spectrum without taking into account the element of its first row and column, as follows:</p>
 <div class="math">
-<p><img src="../images/math/01fba347d2ee85ba6ce4c824d33326f8c9ccb4c9.png" alt="\crit{NL}(F) = 2^{n-1}-\frac{1}{2} \stackrel{*}{\max}(\matr{WS}(F)(\vec{u},\vec{v}))"/></p>
-</div><p>Let <img class="math" src="../images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/>, the nonlinearity of <em>f</em> can be expressed in terms of its Walsh transform as follows:</p>
+<p><img src="../images/math/2ec6216cdd40aabfba9524ebe0eb95ca03ec2347.png" alt="\crit{NL}(F) = 2^{n-1}-\frac{1}{2} \stackrel{*}{\max}(\matr{WS}(F)(\vec{u},\vec{v}))"/></p>
+</div><p>Let <img class="math" src="../images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/>, the nonlinearity of <em>f</em> can be expressed in terms of its Walsh transform as follows:</p>
 <div class="math">
-<p><img src="../images/math/9a0b79406cf3f25eba221a095bf73877cf2a05cc.png" alt="\crit{NL}(f)=2^{n-1}-\frac{1}{2}\max_{\vec{u} \in \gf{V_n}} |\walsh{\chi}_f(\vec{u})|"/></p>
-</div><p>The <em>spectral radius</em> of a Boolean function <img class="math" src="../images/math/6397e61cd39c2631780fc042a825d26ee7587120.png" alt="f \in \funct{F}_n$ is $\crit{r}(f) = \max_{\vec{u} \in \gf{V_n}} |\walsh{\chi}_f(\vec{u})|"/>.</p>
+<p><img src="../images/math/af61852749b01cd1bb3d1d54c1384e841d766992.png" alt="\crit{NL}(f)=2^{n-1}-\frac{1}{2}\max_{\vec{u} \in \gf{V_n}} |\walsh{\chi}_f(\vec{u})|"/></p>
+</div><p>The <em>spectral radius</em> of a Boolean function <img class="math" src="../images/math/5870c79dfeb664fdd15a4d467f2affdc96cddafc.png" alt="f \in \funct{F}_n$ is $\crit{r}(f) = \max_{\vec{u} \in \gf{V_n}} |\walsh{\chi}_f(\vec{u})|"/>.</p>
 <p>This criterion is a measure of the distance of a Vector Boolean function and all
 Affine Vector Boolean functions. If this distance is small, it is possible to mount
 affine approximations of the Vector Boolean functions involved in a cipher
@@ -227,27 +191,27 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>The method used to obtain the nonlinearity of a Vector Boolean function is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">nl</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">nl</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the spectral radius of a Vector Boolean function is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">SpectralRadius</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">SpectralRadius</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to the maximum nonlinearity that can be achieved by a Vector Boolean function with the same number of input bits and output bits is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">nlmax</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span> <span class="n">nlmax</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the type of function in terms of nonlinearity is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">typenl</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">typenl</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">typenl</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">typenl</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example-1">
 <h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p>The following program provides the nonlinearity of a Vector Boolean function given its Truth Table together with the maximum nonlinearity that can be achieved by a Vector Boolean function with the same number of input bits and output bits.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -278,7 +242,7 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
 </pre></div>
 </div>
 <p>If we use the <em>NibbleSub</em> S-box Truth Table as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The spectral radius of the function is 12</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The spectral radius of the function is 12</span>
 <span class="go">The nonlinearity of the function is 2</span>
 <span class="go">The maximum nonlinearity that can be achieved by</span>
 <span class="go">a Vector Boolean function with the same dimensions is 5</span>
@@ -286,14 +250,14 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
 </div>
 <p>The following figure represents the Walsh Spectrum of NibbleSub and emphasizes in blue its maximum absolute values.</p>
 <a class="reference internal image-reference" href="../images/nl.png"><img alt="../images/nl.png" class="align-center" src="../images/nl.png" style="width: 750px;" /></a>
-<p>From definition we have <img class="math" src="../images/math/a86a6c65c63b9569cab4248818b24fc4c90f2950.png" alt="\crit{NL}(NibbleSub)=2^{4-1}-\frac{1}{2} \cdot 12 = 2"/></p>
+<p>From definition we have <img class="math" src="../images/math/d909557f6913cfcaab33350f25c2c2730d600d1a.png" alt="\crit{NL}(NibbleSub)=2^{4-1}-\frac{1}{2} \cdot 12 = 2"/></p>
 </div>
 <div class="section" id="example-2">
 <h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>The following program provides the nonlinearity of a Vector Boolean function given its polynomial representation in ANF together with the maximum nonlinearity that can be achieved by a Vector Boolean function with the same number of input bits and output bits, and the type of function in terms of nonlinearity.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -331,8 +295,8 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If we use the <img class="math" src="../images/math/ceba7e34e6d37185d590580135fb326a6a0e682c.png" alt="x_1x_2+x_3x_4"/> as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The nonlinearity of the function is 6</span>
+<p>If we use the <img class="math" src="../images/math/e04bc61140f6239b9cbc5faef099073fcd600b5a.png" alt="x_1x_2+x_3x_4"/> as input, the output would be the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The nonlinearity of the function is 6</span>
 <span class="go">The maximum nonlinearity that can be achieved by</span>
 <span class="go">a Vector Boolean function with the same dimensions is 6</span>
 <span class="go">It is a bent function</span>
@@ -344,6 +308,10 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -353,12 +321,13 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -374,9 +343,11 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../static/jquery.js"></script>
@@ -396,16 +367,6 @@ to assess the resistance of a Vector Boolean function to linear attacks (includi
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

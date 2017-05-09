@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Operations and constructions over Vector Boolean Functions &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,26 +30,48 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
         <link rel="next" title="Analysis of AES competition cryptographic algorithms" href="aes.html"/>
         <link rel="prev" title="Cryptographic Criteria" href="criteria.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -55,153 +79,170 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#organization-of-this-book">Organization of this Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Operations and constructions over Vector Boolean Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#equality-testing">Equality testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#library">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#design-philosophy">Design Philosophy</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#composition">Composition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-1">Example 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-2">Example 2</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html#summary">Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="criteria.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inverse">Inverse</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bricklayer">Bricklayer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sum">Sum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id14">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#direct-sum">Direct sum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id17">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#concatenation">Concatenation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id19">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id21">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id22">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id24">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#addition-of-coordinate-functions">Addition of coordinate functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id25">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id27">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bricklayer">Bricklayer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id28">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id30">Example 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id31">Example 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Operations and constructions over Vector Boolean Functions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/operations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="operations-and-constructions-over-vector-boolean-functions">
 <h1>Operations and constructions over Vector Boolean Functions<a class="headerlink" href="#operations-and-constructions-over-vector-boolean-functions" title="Permalink to this headline">¶</a></h1>
@@ -255,27 +296,27 @@
 <li><a class="reference internal" href="#summary" id="id59">Summary</a></li>
 </ul>
 </div>
-<p>In this chapter, some basic constructions for Vector Boolean functions supported by the VBF class are described. Some of them correspond to secondary constructions, which build <img class="math" src="images/math/b21618efac1dc9054dc4e58b7afaf4f2426f96a9.png" alt="(n,m)"/> variable vector Boolean functions from <img class="math" src="images/math/28524c96644a311611c8ddaa47455335f926f947.png" alt="(n',m')"/> variable ones (with <img class="math" src="images/math/3c8d5efc24f9ff591f3c3c2b2dde1e1956b12a52.png" alt="n' \leq n, m' \leq m"/>). The direct sum has been used to construct resilient and bent Boolean functions <a class="reference internal" href="bibliography.html#carlet-04" id="id1">[Carlet:04]</a>. The concatenation can be used to obtain resilient functions or functions with maximal nonlinearity. The concatenation of polynomials in ANF can be used to obtain functions of high nonlinearity with <img class="math" src="images/math/8fc5c35e3130b5c4b647b65d8de30c3a16c68a36.png" alt="n"/> variables from functions with high nonlinearity with <img class="math" src="images/math/c758babcf1dab882c42067c6ae8ad7770b5748ea.png" alt="n'"/> variables <img class="math" src="images/math/53f7647f98e24053ebcc8d5da16c50fc968ae514.png" alt="(n' &lt; n)"/>. Adding coordinate functions and bricklayering are constructions used to build modern ciphers such as CAST <a class="reference internal" href="bibliography.html#cast-256" id="id2">[CAST:256]</a>, DES <a class="reference internal" href="bibliography.html#des-77" id="id3">[DES:77]</a> and AES <a class="reference internal" href="bibliography.html#daemenr-02" id="id4">[DaemenR:02]</a>. Additionally, VBF provides operations for
+<p>In this chapter, some basic constructions for Vector Boolean functions supported by the VBF class are described. Some of them correspond to secondary constructions, which build <img class="math" src="images/math/a9df15af4cf500f2f889a6b792703a511c16fbe9.png" alt="(n,m)"/> variable vector Boolean functions from <img class="math" src="images/math/a1fe68a196ff231a5ef7e55bf8fbbfea8501fbf9.png" alt="(n',m')"/> variable ones (with <img class="math" src="images/math/7bdb98065caa35acf16240874845e395426c0a93.png" alt="n' \leq n, m' \leq m"/>). The direct sum has been used to construct resilient and bent Boolean functions <a class="reference internal" href="bibliography.html#carlet-04" id="id1">[Carlet:04]</a>. The concatenation can be used to obtain resilient functions or functions with maximal nonlinearity. The concatenation of polynomials in ANF can be used to obtain functions of high nonlinearity with <img class="math" src="images/math/94a7a23ed84e13ca5927c0c1008925d84bbe3883.png" alt="n"/> variables from functions with high nonlinearity with <img class="math" src="images/math/6b03c5432f4987831771701c06e4aaf0e268cb66.png" alt="n'"/> variables <img class="math" src="images/math/8d2401458161f98f2d24d1ebd7f6ff6648d565e2.png" alt="(n' &lt; n)"/>. Adding coordinate functions and bricklayering are constructions used to build modern ciphers such as CAST <a class="reference internal" href="bibliography.html#cast-256" id="id2">[CAST:256]</a>, DES <a class="reference internal" href="bibliography.html#des-77" id="id3">[DES:77]</a> and AES <a class="reference internal" href="bibliography.html#daemenr-02" id="id4">[DaemenR:02]</a>. Additionally, VBF provides operations for
 identification if two vector Boolean functions are equal, the sum of two vector Boolean functions, the composition of two vector Boolean functions and the inverse of a Vector Boolean function.</p>
 <div class="section" id="equality-testing">
 <h2><a class="toc-backref" href="#id32">Equality testing</a><a class="headerlink" href="#equality-testing" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description">
 <h3><a class="toc-backref" href="#id33">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
-<p>Let <img class="math" src="images/math/55c8b30fa512982f0c4481cd21852f1d8c1ffbeb.png" alt="n \geq 1, m \geq 1"/>, <img class="math" src="images/math/de8c4fc651c833c66445ed88fb4eb354fdd7ea7d.png" alt="F,G \in \funct{F}_{n,m}"/>. <em>F</em> and <em>G</em> are <em>equal</em> if their Truth Tables are the same.</p>
+<p>Let <img class="math" src="images/math/9f15e6f8a184f92800b15918f90da90efcef8945.png" alt="n \geq 1, m \geq 1"/>, <img class="math" src="images/math/b22fc7043c2baf7a8192401bd8d8efb835b96eea.png" alt="F,G \in \funct{F}_{n,m}"/>. <em>F</em> and <em>G</em> are <em>equal</em> if their Truth Tables are the same.</p>
 </div>
 <div class="section" id="library">
 <h3><a class="toc-backref" href="#id34">Library</a><a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h3>
 <p>We can compare two functions for equality with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">long</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">long</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 <span class="kt">long</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
 <p>The following program informs if two Vector Boolean functions are equal given their Truth Tables.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -312,8 +353,8 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The output for the execution of the example program with the code above and the Truth Tables of <img class="math" src="images/math/e54d89990a70a3e748f61dcfe7ec814a4f8750f1.png" alt="S_1"/> and <img class="math" src="images/math/405a77688125b6d757a05435337ef38523b3db8f.png" alt="S_2"/> DES S-boxes as inputs would be:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">F and G are not equal</span>
+<p>The output for the execution of the example program with the code above and the Truth Tables of <img class="math" src="images/math/504d41c4876827c8436b210d4ebc3cf0b24597f6.png" alt="S_1"/> and <img class="math" src="images/math/13854b75c144dd5cf4bd9154054fc42481eae276.png" alt="S_2"/> DES S-boxes as inputs would be:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">F and G are not equal</span>
 </pre></div>
 </div>
 </div>
@@ -323,21 +364,21 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <h2><a class="toc-backref" href="#id35">Composition</a><a class="headerlink" href="#composition" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id5">
 <h3><a class="toc-backref" href="#id36">Description</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<p>Let <img class="math" src="images/math/01cb399dd9404dc21503ee1a9415124466369f1f.png" alt="F \in \funct{F}_{n,p}"/>, <img class="math" src="images/math/a2fe85128ab9cc59be22cffdff4b0b5d31539e9e.png" alt="G \in \funct{F}_{p,m}"/> and the composition function <img class="math" src="images/math/90f335a4c8fa2f7042afa3decc5c8531778b78a5.png" alt="G \circ F \in \funct{F}_{n,m}"/> where <img class="math" src="images/math/5b7c1abd127fd4f33240513dbf32773e98ac86af.png" alt="G \circ F (\vec{x}) = G (F(\vec{x})) \ \fa \vec{x} \in \gf{V_n}"/>.</p>
+<p>Let <img class="math" src="images/math/75269ba7187804f545799ae71fe2ad579888dc8e.png" alt="F \in \funct{F}_{n,p}"/>, <img class="math" src="images/math/bc0539d7e09b7a57528f25e8da888288f018b76e.png" alt="G \in \funct{F}_{p,m}"/> and the composition function <img class="math" src="images/math/f21b797facaeecfcb59e5c40454c308d4da248ab.png" alt="G \circ F \in \funct{F}_{n,m}"/> where <img class="math" src="images/math/4d1ceac23a14ecf4d0c82a9407abe0ed6daafbd4.png" alt="G \circ F (\vec{x}) = G (F(\vec{x})) \ \fa \vec{x} \in \gf{V_n}"/>.</p>
 <a class="reference internal image-reference" href="images/Composition.png"><img alt="images/Composition.png" class="align-center" src="images/Composition.png" style="width: 750px;" /></a>
 </div>
 <div class="section" id="id6">
 <h3><a class="toc-backref" href="#id37">Library</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>It can be obtained with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">Comp</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Comp</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example-1">
 <h4>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the correlation immunity and balancedness of two Vector Boolean functions given their Truth Tables and calculates the same criteria for their composition.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -393,8 +434,8 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If we use <img class="math" src="images/math/bc6e09578aa5a1ec1ee2c115762f0ab5a9954dcf.png" alt="\vec{y_0}"/> of CLEFIA <img class="math" src="images/math/774b18b6427c81f5a4e5edb37844fdcaee529452.png" alt="S_0"/> cipher (see CLEFIA section in &#8220;Analysis of CRYPTEC project cryptographic algorithms&#8221;) and <em>NibbleSub</em> Truth Tables as inputs, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">Correlation immunity of F: 1</span>
+<p>If we use <img class="math" src="images/math/494206d2a01b9fdf0fc29af799bb64a5b7dc79a5.png" alt="\vec{y_0}"/> of CLEFIA <img class="math" src="images/math/923ce285836cceaf26beed482949b7c110276600.png" alt="S_0"/> cipher (see CLEFIA section in &#8220;Analysis of CRYPTEC project cryptographic algorithms&#8221;) and <em>NibbleSub</em> Truth Tables as inputs, the output would be the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">Correlation immunity of F: 1</span>
 <span class="go">F is a balanced function</span>
 
 <span class="go">Correlation immunity of G: 0</span>
@@ -408,9 +449,9 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <div class="section" id="example-2">
 <h4>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the balancedness of two Vector Boolean functions given its polynomial representation in ANF and calculates the balancedness for the its composition.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -475,7 +516,7 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </pre></div>
 </div>
 <p>If we use the Boolean functions of first example described in <a class="reference internal" href="bibliography.html#guptas-05" id="id7">[GuptaS:05]</a> as inputs, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The polynomial in ANF of F is</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The polynomial in ANF of F is</span>
 <span class="go">x1+x2+x1x3+x1x2x3</span>
 <span class="go">x2+x1x2+x2x3+x1x3+x1x2x3</span>
 <span class="go">F is a non-balanced function</span>
@@ -490,7 +531,7 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </pre></div>
 </div>
 <p>If we use the Boolean functions of second example described in <a class="reference internal" href="bibliography.html#guptas-05" id="id8">[GuptaS:05]</a> as inputs, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The polynomial in ANF of F is</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The polynomial in ANF of F is</span>
 <span class="go">x3+x1x2+x1x2x3</span>
 <span class="go">x2+x3+x1x2+x2x3+x1x2x3</span>
 <span class="go">F is a non-balanced function</span>
@@ -511,21 +552,21 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <h2><a class="toc-backref" href="#id38">Inverse</a><a class="headerlink" href="#inverse" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id9">
 <h3><a class="toc-backref" href="#id39">Description</a><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-<p>Let <img class="math" src="images/math/ff1ddd15aee35b4682121107638ec3eb52b2fe13.png" alt="n \geq 1$, $F \in \funct{F}_{n,n}"/>. <img class="math" src="images/math/2028fb36641c00155779820046bc1e7a177e9b08.png" alt="F^{-1}"/> is the <em>functional inverse</em> of <em>F</em> if the composition of both functions results in the identity function.</p>
+<p>Let <img class="math" src="images/math/9508df615ca2f8a70e73a79260c5489c85e40179.png" alt="n \geq 1$, $F \in \funct{F}_{n,n}"/>. <img class="math" src="images/math/8ecdc443205b11b200ea2c9c79d785fb25b61edc.png" alt="F^{-1}"/> is the <em>functional inverse</em> of <em>F</em> if the composition of both functions results in the identity function.</p>
 <a class="reference internal image-reference" href="images/Inverse.png"><img alt="images/Inverse.png" class="align-center" src="images/Inverse.png" style="width: 750px;" /></a>
 </div>
 <div class="section" id="id10">
 <h3><a class="toc-backref" href="#id40">Library</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>If a Vector Boolean Function $F in funct{F}_{n,n}$ is invertible, then we can find its inverse with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">inv</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">inv</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id11">
 <h4>Example<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the Truth Table of a the inverse of a Vector Boolean function given its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -552,7 +593,7 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </pre></div>
 </div>
 <p>The output for the execution of the example program with the code above and the Truth Table of <em>NibbleSub</em> S-box as input will be:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The Truth Table of the inverse of F is</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Truth Table of the inverse of F is</span>
 <span class="go">[[1 1 1 0]</span>
 <span class="go">[0 0 1 1]</span>
 <span class="go">[0 1 0 0]</span>
@@ -579,20 +620,20 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <h2><a class="toc-backref" href="#id41">Sum</a><a class="headerlink" href="#sum" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id12">
 <h3><a class="toc-backref" href="#id42">Description</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
-<p>Let <img class="math" src="images/math/55c8b30fa512982f0c4481cd21852f1d8c1ffbeb.png" alt="n \geq 1, m \geq 1"/>, <img class="math" src="images/math/de8c4fc651c833c66445ed88fb4eb354fdd7ea7d.png" alt="F,G \in \funct{F}_{n,m}"/>. The <em>Sum</em> of <em>F</em> and <em>G</em>, denoted by <img class="math" src="images/math/2108eebc03556e10a000a2f4a76cadb0b782afd7.png" alt="F + G \in \funct{F}_{n,m}"/> is the Vector Boolean Function whose Truth Table results from the addition of the Truth Tables of <em>F</em> and <em>G</em>: <img class="math" src="images/math/284d029da88d51a2a4c493f63005248c1cdc21df.png" alt="\matr{T}_{F+G} = \matr{T}_F+\matr{T}_G"/>.</p>
+<p>Let <img class="math" src="images/math/9f15e6f8a184f92800b15918f90da90efcef8945.png" alt="n \geq 1, m \geq 1"/>, <img class="math" src="images/math/b22fc7043c2baf7a8192401bd8d8efb835b96eea.png" alt="F,G \in \funct{F}_{n,m}"/>. The <em>Sum</em> of <em>F</em> and <em>G</em>, denoted by <img class="math" src="images/math/b4d22fe4fef37018b6a4df3c7d0ebc63caf40988.png" alt="F + G \in \funct{F}_{n,m}"/> is the Vector Boolean Function whose Truth Table results from the addition of the Truth Tables of <em>F</em> and <em>G</em>: <img class="math" src="images/math/caa854b45dc7a0edd15f3e3d0737d8d0cbe527d1.png" alt="\matr{T}_{F+G} = \matr{T}_F+\matr{T}_G"/>.</p>
 </div>
 <div class="section" id="id13">
 <h3><a class="toc-backref" href="#id43">Library</a><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <p>It can be obtained with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">sum</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">sum</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id14">
 <h4>Example<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the nonlinearity, absolute indicator and linearity distance of two Vector Boolean functions given its polynomial representation in ANF and its hexadecimal representation of Truth Table respectively and calculates the same criteria for the its sum.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -646,8 +687,8 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If we use the Boolean function <em>F</em> with ANF <img class="math" src="images/math/ceba7e34e6d37185d590580135fb326a6a0e682c.png" alt="x_1x_2+x_3x_4"/> and function <em>G</em> with hexadecimal representation of Truth Table <em>0001</em> as inputs, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The polynomial in ANF of F is</span>
+<p>If we use the Boolean function <em>F</em> with ANF <img class="math" src="images/math/e04bc61140f6239b9cbc5faef099073fcd600b5a.png" alt="x_1x_2+x_3x_4"/> and function <em>G</em> with hexadecimal representation of Truth Table <em>0001</em> as inputs, the output would be the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The polynomial in ANF of F is</span>
 <span class="go">x1x2+x3x4</span>
 <span class="go">nl(F)=6</span>
 <span class="go">ACmax(F)=0</span>
@@ -665,9 +706,9 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </div>
 <p>These results are congruent with the properties of changing one bit of the Truth Table:</p>
 <ol class="arabic simple">
-<li><img class="math" src="images/math/ec959b42d80ea8bda3170291015bb3f7c9f3c158.png" alt="\crit{NL}(F+G)=\crit{NL}(F)-1=6-1=5"/>.</li>
-<li><img class="math" src="images/math/59bbd0ae00d2e3f24177fce008e52815cc8dc145.png" alt="\crit{AC_{max}}(F+G)=\crit{AC_{max}}(F)+4=0+4=4"/>.</li>
-<li><img class="math" src="images/math/ce29c39a28c1aacc3bb8dbb0f474b652c57cf7e5.png" alt="\crit{LD}(F+G)=\crit{LD}(F)-1=4-1=3"/>.</li>
+<li><img class="math" src="images/math/ebab8fe3b838336ccce9c33c37afed544d14ff56.png" alt="\crit{NL}(F+G)=\crit{NL}(F)-1=6-1=5"/>.</li>
+<li><img class="math" src="images/math/53205b38f4d77c4369889979813cb084325fd88e.png" alt="\crit{AC_{max}}(F+G)=\crit{AC_{max}}(F)+4=0+4=4"/>.</li>
+<li><img class="math" src="images/math/5ece08fc40c7c07b29a6de81ce3d2580b7936db2.png" alt="\crit{LD}(F+G)=\crit{LD}(F)-1=4-1=3"/>.</li>
 </ol>
 </div>
 </div>
@@ -676,21 +717,21 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <h2><a class="toc-backref" href="#id44">Direct sum</a><a class="headerlink" href="#direct-sum" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id15">
 <h3><a class="toc-backref" href="#id45">Description</a><a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
-<p>Let <img class="math" src="images/math/2dfa34395f449d68b80a3edd31481b8454ac2095.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="images/math/c382c142f71217e6b48e940e87b6c4e54221837f.png" alt="F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="images/math/a6b3bb40fe9e15eeec045dc60049c7df296e3afe.png" alt="F_1 \oplus F_2 \in \funct{F}_{n_1+n_2,m}"/>, called direct sum, defined as <img class="math" src="images/math/629ce091ee46d93cf6f918f0f4bd08f83ec6ab7d.png" alt="(F_1 \oplus F_2) \left( (\vec{x_1},\vec{x_2}) \right)= F_1(\vec{x_1}) + F_2(\vec{x_2})"/>.</p>
+<p>Let <img class="math" src="images/math/5b7705963514449bd782a5c6b5f5481877b33231.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="images/math/71251d852519690f9e5dd8051440c86700480904.png" alt="F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="images/math/99651bf452a6f7a5aaa7203c042d6d9467fd3cae.png" alt="F_1 \oplus F_2 \in \funct{F}_{n_1+n_2,m}"/>, called direct sum, defined as <img class="math" src="images/math/d7acb8d8b91d8e33c6af1ad7bf8499578cf55127.png" alt="(F_1 \oplus F_2) \left( (\vec{x_1},\vec{x_2}) \right)= F_1(\vec{x_1}) + F_2(\vec{x_2})"/>.</p>
 <a class="reference internal image-reference" href="images/DirectSum.png"><img alt="images/DirectSum.png" class="align-center" src="images/DirectSum.png" style="width: 750px;" /></a>
 </div>
 <div class="section" id="id16">
 <h3><a class="toc-backref" href="#id46">Library</a><a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <p>The method included in VBF to perform this construction is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">directsum</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">directsum</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id17">
 <h4>Example<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the weight, algebraic degree, balancedness, correlation immunity, nonlinearity and algebraic immunity of two Vector Boolean functions given its polynomial representation in ANF and calculates the same criteria for the its direct sum.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -768,14 +809,14 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </pre></div>
 </div>
 <p>If we use the Boolean functions with the following Truth Tables (in hexadecimal representation) as inputs:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">6cb405778ea9bd30</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">6cb405778ea9bd30</span>
 </pre></div>
 </div>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">5c721bcaac27b1c5</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">5c721bcaac27b1c5</span>
 </pre></div>
 </div>
 <p>The output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">weight(F)=32</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">weight(F)=32</span>
 <span class="go">deg(F)=3</span>
 <span class="go">F is a balanced function</span>
 <span class="go">Degree of Correlation immunity of F=1</span>
@@ -811,14 +852,14 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </div>
 <p>These results are congruent with the properties derived in <a class="reference internal" href="bibliography.html#sarkarmaitra-00" id="id18">[SarkarMaitra:00]</a> and others derived by Jose Antonio Alvarez:</p>
 <ol class="arabic simple">
-<li><img class="math" src="images/math/797fc36e25dba93ce91dc096c2fc17f5646c2bed.png" alt="wt(F \oplus G) = 2^6 \cdot 32+2^6 \cdot 32 - 2 \cdot 32 \cdot 32 = 2048"/>.</li>
-<li><img class="math" src="images/math/18f1dc22a26667c6317412fdcc3f317c3812ec25.png" alt="\crit{deg}(F \oplus G) = \max \left\{ 3, 3 \right\} = 3"/>.</li>
-<li><em>F</em> is <em>1</em>-resilient, <em>G</em> is <em>2</em>-resilient, and <img class="math" src="images/math/1a567449896c86269e9ad6fad77e74eeb85c8f46.png" alt="F \oplus G"/> is <img class="math" src="images/math/bbc77d8bcba800c4f6f2b284a9892ec79335b3fa.png" alt="(1+2+1)"/>-resilient.</li>
-<li><img class="math" src="images/math/ee5b0bb5aaa6fd840d1e656369ca526246e7cbf3.png" alt="\crit{R}(F \oplus G) = 16 \cdot 32=512"/> because <em>F</em> and <em>G</em> are Boolean functions.</li>
-<li><img class="math" src="images/math/c3a20ce7b406d26e28a42e7fc4f2a329a234cfc2.png" alt="\crit{NL}(F \oplus G) = 2^{12-1} -\frac{1}{2} \cdot 512 = 1792"/>.</li>
-<li><img class="math" src="images/math/c7ef01dc2b7eb781070e9c5d8db100b8600340db.png" alt="\crit{AC_{max}}(F \oplus G) = \max \{ 32 \cdot 64, 64 \cdot 64 \} = 4096"/>.</li>
-<li><img class="math" src="images/math/00d6ac55ddb486f8ed5c26453452e268510b6065.png" alt="\crit{LD}(F \oplus G) =2^{12-2}-\frac{1}{4} \cdot 4096 = 0"/>.</li>
-<li><img class="math" src="images/math/8870192183f49e64672baff41a079399973fa855.png" alt="\max \{ 3, 2 \} \leq \crit{AI}(F \oplus G) = 3 \leq \min \left\{ \max \left\{ 3 , 3 \right\} ,  3 + 2 \right\}"/>.</li>
+<li><img class="math" src="images/math/2a3574716bfe0cdb6c6258865770ab6e2344d680.png" alt="wt(F \oplus G) = 2^6 \cdot 32+2^6 \cdot 32 - 2 \cdot 32 \cdot 32 = 2048"/>.</li>
+<li><img class="math" src="images/math/3dd26eeb4965793534406cfc8c89c067287b079a.png" alt="\crit{deg}(F \oplus G) = \max \left\{ 3, 3 \right\} = 3"/>.</li>
+<li><em>F</em> is <em>1</em>-resilient, <em>G</em> is <em>2</em>-resilient, and <img class="math" src="images/math/46d91924efd702f7779089316fdd78f219d07124.png" alt="F \oplus G"/> is <img class="math" src="images/math/b474d2da21e98ce3e468e3183e15da4c08ab8631.png" alt="(1+2+1)"/>-resilient.</li>
+<li><img class="math" src="images/math/21d3320fc87d7cdd071e31abab9ebd124189873c.png" alt="\crit{R}(F \oplus G) = 16 \cdot 32=512"/> because <em>F</em> and <em>G</em> are Boolean functions.</li>
+<li><img class="math" src="images/math/ad3c9589c2d94e532f5c9debcc83424582f961b4.png" alt="\crit{NL}(F \oplus G) = 2^{12-1} -\frac{1}{2} \cdot 512 = 1792"/>.</li>
+<li><img class="math" src="images/math/20211a8cfb34de7068ae24b91cb24692b4ecf98b.png" alt="\crit{AC_{max}}(F \oplus G) = \max \{ 32 \cdot 64, 64 \cdot 64 \} = 4096"/>.</li>
+<li><img class="math" src="images/math/c56030a04d6aac27baca8c7c2288d551786a1aad.png" alt="\crit{LD}(F \oplus G) =2^{12-2}-\frac{1}{4} \cdot 4096 = 0"/>.</li>
+<li><img class="math" src="images/math/60d66793b4ac5cf17d4479912cd6090ac861a214.png" alt="\max \{ 3, 2 \} \leq \crit{AI}(F \oplus G) = 3 \leq \min \left\{ \max \left\{ 3 , 3 \right\} ,  3 + 2 \right\}"/>.</li>
 </ol>
 </div>
 </div>
@@ -827,20 +868,20 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <h2><a class="toc-backref" href="#id47">Concatenation</a><a class="headerlink" href="#concatenation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id19">
 <h3><a class="toc-backref" href="#id48">Description</a><a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
-<p>Let <img class="math" src="images/math/2dfa34395f449d68b80a3edd31481b8454ac2095.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="images/math/c8cfefcbb0066324312d4e8a7efc7d3d113f7ecd.png" alt="F_1 \in \funct{F}_{n,m}, F_2 \in \funct{F}_{n,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="images/math/92cb66050182fee39e9032197c77b74ad8d5c5d9.png" alt="F_1 |_{c} F_2 \in \funct{F}_{n+1,m}"/> defined as <img class="math" src="images/math/7cb7c9085eda5e7496d943331454d246aefa9297.png" alt="(\vec{x},x_{n+1}) \rightarrow \left( x_{n+1}+1 \right) F_1(\vec{x})+ x_{n+1} F_2(\vec{x})"/> where <img class="math" src="images/math/e638ef401ecd2a3f96a168ae956d6ddb447f0a96.png" alt="\vec{x} \in \gf{V_n}"/>.</p>
+<p>Let <img class="math" src="images/math/5b7705963514449bd782a5c6b5f5481877b33231.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="images/math/03a55e9c4c1e98adfb7deff9030961f17ff836bf.png" alt="F_1 \in \funct{F}_{n,m}, F_2 \in \funct{F}_{n,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="images/math/d23f731ded5a746e6deda8e20cb18e8ae3f66b88.png" alt="F_1 |_{c} F_2 \in \funct{F}_{n+1,m}"/> defined as <img class="math" src="images/math/e2ed9d17497a2dae7ac100f01efc80b38a0ae42d.png" alt="(\vec{x},x_{n+1}) \rightarrow \left( x_{n+1}+1 \right) F_1(\vec{x})+ x_{n+1} F_2(\vec{x})"/> where <img class="math" src="images/math/f47882b307ce7e18b04e850329e53655d65736eb.png" alt="\vec{x} \in \gf{V_n}"/>.</p>
 </div>
 <div class="section" id="id20">
 <h3><a class="toc-backref" href="#id49">Library</a><a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <p>The method included in VBF to perform this construction is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">concat</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">concat</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id21">
 <h4>Example<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the weight, algebraic degree, balancedness, correlation immunity, nonlinearity and algebraic immunity of two Vector Boolean functions given its polynomial representation in ANF and calculates the same criteria for its concatenation.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -912,8 +953,8 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If we use the Boolean functions <img class="math" src="images/math/df8492d91ab31acbfbf8c7fac67a512d4089145e.png" alt="1+x_3x_4+x_2+x_2x_4+x_1+x_1x_3+x_1x_3x_4"/> and <img class="math" src="images/math/acc45a820d7ce8d7c76c769b773ed4b29406537a.png" alt="x_3+x_2x_4+x_1+x_1x_4+x_1x_3x_4"/> as inputs, the output would be the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="n">weight</span><span class="p">(</span><span class="n">F</span><span class="p">)</span><span class="o">=</span><span class="mi">8</span>
+<p>If we use the Boolean functions <img class="math" src="images/math/8bdca4103ed8f3d61daad686024090b100080308.png" alt="1+x_3x_4+x_2+x_2x_4+x_1+x_1x_3+x_1x_3x_4"/> and <img class="math" src="images/math/9f965bd84c585f97ae4d0b4e5bf101b57a8e4280.png" alt="x_3+x_2x_4+x_1+x_1x_4+x_1x_3x_4"/> as inputs, the output would be the following:</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">weight</span><span class="p">(</span><span class="n">F</span><span class="p">)</span><span class="o">=</span><span class="mi">8</span>
 <span class="n">deg</span><span class="p">(</span><span class="n">F</span><span class="p">)</span><span class="o">=</span><span class="mi">3</span>
 <span class="n">F</span> <span class="n">is</span> <span class="n">a</span> <span class="n">balanced</span> <span class="n">function</span>
 <span class="n">Degree</span> <span class="n">of</span> <span class="n">Correlation</span> <span class="n">immunity</span> <span class="n">of</span> <span class="n">F</span><span class="o">=</span><span class="mi">0</span>
@@ -939,11 +980,11 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 </div>
 <p>These results are congruent with the properties of this construction:</p>
 <ol class="arabic simple">
-<li><img class="math" src="images/math/8c3d277ce9256a03e3ff8a670856de9049fb7075.png" alt="wt(F |_{c} G) = 8 + 8 = 16"/>.</li>
-<li><img class="math" src="images/math/40551cf30ae6868ef6485d9db92f8cf1f5ba25bb.png" alt="\crit{deg}(F |_{c} G) = 3 \leq 1 + \max \left\{ 3, 3 \right\} = 1+3=4"/>.</li>
-<li><em>F</em> is <em>0</em>-resilient, <em>G</em> is <em>0</em>-resilient, and <img class="math" src="images/math/08cd9b26639f48332556d0ade884e1f7d19f1097.png" alt="F |_{c} G"/> is <em>0</em>-resilient.</li>
-<li><img class="math" src="images/math/82796db8919a8efb5b9ce02b0dcbb12ed30ebda4.png" alt="\crit{NL}(F |_{c} G) =8 \geq 4 + 4 = 8"/>.</li>
-<li>If <img class="math" src="images/math/afca81a2d12211a7907179127f2788fbcda06987.png" alt="\crit{AI}(F) = \crit{AI}(G) = 2"/>, then <img class="math" src="images/math/11a85e07cb97ac9b18367d93094d716f7032d8ee.png" alt="\crit{AI}(F |_{c} G) = 2 \leq 2 + 1"/>.</li>
+<li><img class="math" src="images/math/d7e0bd6b74546c702d949b5037c7988cc6bd3f70.png" alt="wt(F |_{c} G) = 8 + 8 = 16"/>.</li>
+<li><img class="math" src="images/math/92f76efd977ed2581add3f61f2ba437e98eb187e.png" alt="\crit{deg}(F |_{c} G) = 3 \leq 1 + \max \left\{ 3, 3 \right\} = 1+3=4"/>.</li>
+<li><em>F</em> is <em>0</em>-resilient, <em>G</em> is <em>0</em>-resilient, and <img class="math" src="images/math/7b8a4ef061c1c59b9c1d6d37cee718cb7967beaa.png" alt="F |_{c} G"/> is <em>0</em>-resilient.</li>
+<li><img class="math" src="images/math/bf5568294fdff0896b334347eb38707327377833.png" alt="\crit{NL}(F |_{c} G) =8 \geq 4 + 4 = 8"/>.</li>
+<li>If <img class="math" src="images/math/c5e49c4a2c943298ded144d518a86312a6b8a82d.png" alt="\crit{AI}(F) = \crit{AI}(G) = 2"/>, then <img class="math" src="images/math/d586432d211b262b066a5d2d287caec54b177f4d.png" alt="\crit{AI}(F |_{c} G) = 2 \leq 2 + 1"/>.</li>
 </ol>
 </div>
 </div>
@@ -952,20 +993,20 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <h2><a class="toc-backref" href="#id50">Concatenation of polynomials in ANF</a><a class="headerlink" href="#concatenation-of-polynomials-in-anf" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id22">
 <h3><a class="toc-backref" href="#id51">Description</a><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
-<p>Let <img class="math" src="images/math/2dfa34395f449d68b80a3edd31481b8454ac2095.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="images/math/c382c142f71217e6b48e940e87b6c4e54221837f.png" alt="F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="images/math/8b67722d23a901c5a7c4dc994768bd9857ed369a.png" alt="F_1 |_{p} F_2 \in \funct{F}_{n_1+n_2,m}"/> defined as <img class="math" src="images/math/663a463ccef50ed921945ce3ceb4f570e6404f64.png" alt="(x_1,\ldots,x_{n_1},x_{n_1+1},\ldots,x_{n_1+n_2}) \rightarrow F_1(x_1,\ldots,x_{n_1})+ F_2(x_{n_1+1},\ldots,x_{n_1+n_2})"/> where <img class="math" src="images/math/365c2853b96040a3a3886781b6446f889e8f8bb1.png" alt="\vec{x} \in \gf{V_{n_1+n_2}}"/>.</p>
+<p>Let <img class="math" src="images/math/5b7705963514449bd782a5c6b5f5481877b33231.png" alt="n_1,n_2 \geq 1"/>, <img class="math" src="images/math/71251d852519690f9e5dd8051440c86700480904.png" alt="F_1 \in \funct{F}_{n_1,m}, F_2 \in \funct{F}_{n_2,m}"/> be Vector Boolean functions. Consider the Vector Boolean function <img class="math" src="images/math/750746f239dc4d8aed72ca0b90db002a8118c257.png" alt="F_1 |_{p} F_2 \in \funct{F}_{n_1+n_2,m}"/> defined as <img class="math" src="images/math/e35d4c048aab14faccb903630cb68cb1eb678d41.png" alt="(x_1,\ldots,x_{n_1},x_{n_1+1},\ldots,x_{n_1+n_2}) \rightarrow F_1(x_1,\ldots,x_{n_1})+ F_2(x_{n_1+1},\ldots,x_{n_1+n_2})"/> where <img class="math" src="images/math/1c2497aae029f8829cbd8e8ceb0ba76bd0662af3.png" alt="\vec{x} \in \gf{V_{n_1+n_2}}"/>.</p>
 </div>
 <div class="section" id="id23">
 <h3><a class="toc-backref" href="#id52">Library</a><a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <p>The method included in VBF to perform this construction is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">concatpol</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">concatpol</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id24">
 <h4>Example<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the ANF of the concatenation of polynomials in ANF of two Vector Boolean functions given its polynomial representation.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1003,8 +1044,8 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If we use the Boolean functions <img class="math" src="images/math/ceba7e34e6d37185d590580135fb326a6a0e682c.png" alt="x_1x_2+x_3x_4"/> and <img class="math" src="images/math/0604580d2103453d5b9378d2614e090ef6c56f45.png" alt="x_1+1"/> as inputs, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The ANF of the concatenation of polynomials in ANF of F and G is</span>
+<p>If we use the Boolean functions <img class="math" src="images/math/e04bc61140f6239b9cbc5faef099073fcd600b5a.png" alt="x_1x_2+x_3x_4"/> and <img class="math" src="images/math/bf0f928c99b0e697e94e555274a5d021f9c03b40.png" alt="x_1+1"/> as inputs, the output would be the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The ANF of the concatenation of polynomials in ANF of F and G is</span>
 <span class="go">x1x2+x3x4+x5+1</span>
 </pre></div>
 </div>
@@ -1015,22 +1056,22 @@ identification if two vector Boolean functions are equal, the sum of two vector 
 <h2><a class="toc-backref" href="#id53">Addition of coordinate functions</a><a class="headerlink" href="#addition-of-coordinate-functions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id25">
 <h3><a class="toc-backref" href="#id54">Description</a><a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
-<p>Let <img class="math" src="images/math/e0a3a35b03ea69e93467ee9e7f2c9ccbb97ec12b.png" alt="F=(f_1,\ldots,f_{m_1}) \in \funct{F}_{n,m_1}"/>, <img class="math" src="images/math/107b48e68d326750c07c4bdcea8ecbc286b8787e.png" alt="G=(g_1,\ldots,g_{m_2}) \in \funct{F}_{n,m_2}"/> and the function conformed by adding the coordinate functions <img class="math" src="images/math/06f6c39d7bbbb014d7ca13e317ccde28c3154c28.png" alt="(F,G) =(f_1,\dots,f_{m_1},g_1,\ldots,g_{m_2}) \in \funct{F}_{n,m_1+m_2}"/>. Let <img class="math" src="images/math/ae1ff34f321f497a0240bd2dcf39a34b433f7fbc.png" alt="\vec{v} \in \gf{V_{m_1+m_2}}"/>, <img class="math" src="images/math/4dc01f4e7f198c614d74dce1c7d42ab4627cc68d.png" alt="\vec{v_F} \in \gf{V_{m_1}}"/> and <img class="math" src="images/math/05f24d15383f39e18aadafc9f5e36678336eb9b2.png" alt="\vec{v_G} \in \gf{V_{m_2}}"/> so that <img class="math" src="images/math/f1ed186067c5513d8576b66efdeba8b5619fcaec.png" alt="\vec{v} = (\vec{v_F}, \vec{v_G})"/>.</p>
+<p>Let <img class="math" src="images/math/67454308984425998f7461b7e9965432f521609e.png" alt="F=(f_1,\ldots,f_{m_1}) \in \funct{F}_{n,m_1}"/>, <img class="math" src="images/math/61af28bda08971a2ac31ddbf4cee358829c703fe.png" alt="G=(g_1,\ldots,g_{m_2}) \in \funct{F}_{n,m_2}"/> and the function conformed by adding the coordinate functions <img class="math" src="images/math/20ea59d9481f8a7f5c48f6ed840bf5f43e84c062.png" alt="(F,G) =(f_1,\dots,f_{m_1},g_1,\ldots,g_{m_2}) \in \funct{F}_{n,m_1+m_2}"/>. Let <img class="math" src="images/math/eb53ba488cec508f41391bafa660a7fa23d3f1c4.png" alt="\vec{v} \in \gf{V_{m_1+m_2}}"/>, <img class="math" src="images/math/6243737ad2d9c5960a3035b61c5f1637157f07f1.png" alt="\vec{v_F} \in \gf{V_{m_1}}"/> and <img class="math" src="images/math/2ad4f1697b1535f92a688d97a1ecbcd3ac98a364.png" alt="\vec{v_G} \in \gf{V_{m_2}}"/> so that <img class="math" src="images/math/700d440cb279e437dc6d21448f6e354fe2c1af53.png" alt="\vec{v} = (\vec{v_F}, \vec{v_G})"/>.</p>
 <a class="reference internal image-reference" href="images/AddImage.png"><img alt="images/AddImage.png" class="align-center" src="images/AddImage.png" style="width: 750px;" /></a>
 </div>
 <div class="section" id="id26">
 <h3><a class="toc-backref" href="#id55">Library</a><a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <p>This construction can be obtained with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">addimage</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">addimage</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id27">
 <h4>Example<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
-<p>The following program provides the Truth Tables of the different intermediate constructions that allow to obtain CLEFIA <img class="math" src="images/math/774b18b6427c81f5a4e5edb37844fdcaee529452.png" alt="S_0"/> <img class="math" src="images/math/d40b7c0e8501fe5022955f0e30246a197a1732ee.png" alt="8 \times 8"/> S-box from the Truth Tables of the four 4-bit S-boxes <img class="math" src="images/math/7dbebae876f4d76e972583fe7934924dfb36030b.png" alt="SS_0,SS_1,SS_2"/> and <img class="math" src="images/math/e458b156a2dc524c085512d719245babc5b193d8.png" alt="SS_3"/> in which it is constructed and the Truth Table of the multiplication operation in <em>0x2</em> performed in <img class="math" src="images/math/be8bf6952ef89a325e77efc22f145e6458434d80.png" alt="\gf{GF(2^4)}"/> defined by the
-primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599fbecf4d425eaf308.png" alt="x^4 + x + 1"/>.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<p>The following program provides the Truth Tables of the different intermediate constructions that allow to obtain CLEFIA <img class="math" src="images/math/923ce285836cceaf26beed482949b7c110276600.png" alt="S_0"/> <img class="math" src="images/math/20dcb48f5d806254d82093da16010cacaf88b210.png" alt="8 \times 8"/> S-box from the Truth Tables of the four 4-bit S-boxes <img class="math" src="images/math/121adafb31f65ec83f950d4a9c4765335590fe54.png" alt="SS_0,SS_1,SS_2"/> and <img class="math" src="images/math/c68a7b5f9f29a887e74e9dbd4a1f992fa18c455b.png" alt="SS_3"/> in which it is constructed and the Truth Table of the multiplication operation in <em>0x2</em> performed in <img class="math" src="images/math/a82ad45cf09b2d5d80858517ff4c5b701017a2e2.png" alt="\gf{GF(2^4)}"/> defined by the
+primitive polynomial <img class="math" src="images/math/bf018b7b6ace3a2f744f44a9cb60c13dc52d41a8.png" alt="x^4 + x + 1"/>.</p>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1132,7 +1173,7 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
 </pre></div>
 </div>
 <p>The output of this program is described in CLEFIA section in &#8220;Analysis of CRYPTEC project cryptographic algorithms&#8221;.</p>
-<p>Note that the output of <img class="math" src="images/math/774b18b6427c81f5a4e5edb37844fdcaee529452.png" alt="S_0"/> S-box <img class="math" src="images/math/cfc1fcb02f1a4359703bb4428850699ee312f35e.png" alt="\vec{y} \in \funct{F}_{8,8}"/> is defined by the addition of coordinate functions of both <img class="math" src="images/math/fb6b583ca67ab7a0ca594e145cccc9d3939cf004.png" alt="\vec{y_0} \in \funct{F}_{8,4}"/> and <img class="math" src="images/math/bdc02d4531009971849210f7e13427b9d8c21039.png" alt="\vec{y_1} \in \funct{F}_{8,4}"/>.</p>
+<p>Note that the output of <img class="math" src="images/math/923ce285836cceaf26beed482949b7c110276600.png" alt="S_0"/> S-box <img class="math" src="images/math/315a23f68a408fc7dfcaf14e095c1900aea101b7.png" alt="\vec{y} \in \funct{F}_{8,8}"/> is defined by the addition of coordinate functions of both <img class="math" src="images/math/86a3de50836a8b9ec5982e864cdfaeae286637e7.png" alt="\vec{y_0} \in \funct{F}_{8,4}"/> and <img class="math" src="images/math/f9a05e1edec4e240bb7c1a470bc482dbf145cd58.png" alt="\vec{y_1} \in \funct{F}_{8,4}"/>.</p>
 </div>
 </div>
 </div>
@@ -1140,23 +1181,23 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
 <h2><a class="toc-backref" href="#id56">Bricklayer</a><a class="headerlink" href="#bricklayer" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id28">
 <h3><a class="toc-backref" href="#id57">Description</a><a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
-<p>Let <img class="math" src="images/math/a5ea1d880d4663ab624ae91a93993f0d4c1c0672.png" alt="n_1,n_2,m_1,m_2 \geq 1"/> and <img class="math" src="images/math/7b65471691f29f8adda41ec6523b07eca48a148c.png" alt="F_1 \in \funct{F}_{n_1,m_1}"/> , <img class="math" src="images/math/bfffbd6a3030a1aebfcafbbb827eaa3681da2734.png" alt="F_2 \in \funct{F}_{n_2,m_2}"/> and the Bricklayer function <img class="math" src="images/math/6dcfa3d46054c73350ddb9cf62748cb12ca3c1f0.png" alt="F_1 | F_2 \in \funct{F}_{n_1+n_2,m_1+m_2}"/>. Let <img class="math" src="images/math/c11e359f2172458f69363c0c19980509ff2e7f1c.png" alt="\vec{u_1} \in \gf{V_{n_1}}"/>, <img class="math" src="images/math/b86e0a28efdcdd3ab6cba11f77d29d80c82e2c87.png" alt="\vec{u_2} \in \gf{V_{n_2}}"/> and <img class="math" src="images/math/2404026a316dd3e73c9fce243b24dbe2eafa11bc.png" alt="\vec{u}=(\vec{u_1} , \vec{u_2})"/>, <img class="math" src="images/math/d0390b9c1c7ad299408427df49841ca75dc28e86.png" alt="\vec{v_1} \in \gf{V_{m_1}}"/>, <img class="math" src="images/math/21515fa800ae2708c6d1a293ee1dbb8fb968740d.png" alt="\vec{v_2} \in \gf{V_{m_2}}"/> and <img class="math" src="images/math/403fd1dff26dd6b74a1428f0f6763b0f2847e54d.png" alt="\vec{v}=(\vec{v_1} , \vec{v_2})"/>.</p>
+<p>Let <img class="math" src="images/math/9a78e06f4151c95b7b679f829ca25d9a88b6cba8.png" alt="n_1,n_2,m_1,m_2 \geq 1"/> and <img class="math" src="images/math/f6184ce2d26cfe17a9ce54ab9034863f85998c8c.png" alt="F_1 \in \funct{F}_{n_1,m_1}"/> , <img class="math" src="images/math/2ec1a6d424aa1479a8745d52ac6a7ef72e046e73.png" alt="F_2 \in \funct{F}_{n_2,m_2}"/> and the Bricklayer function <img class="math" src="images/math/4c626762f82ee97c5ea02ca75c765b54dc144884.png" alt="F_1 | F_2 \in \funct{F}_{n_1+n_2,m_1+m_2}"/>. Let <img class="math" src="images/math/e23e2fe22eede2517c6470ce2e21cd0184b188a2.png" alt="\vec{u_1} \in \gf{V_{n_1}}"/>, <img class="math" src="images/math/5ca24de8c323582079c6692ae770d7e0f14ea32c.png" alt="\vec{u_2} \in \gf{V_{n_2}}"/> and <img class="math" src="images/math/b37cc2045456a69639bf590c103b63ba9e833c94.png" alt="\vec{u}=(\vec{u_1} , \vec{u_2})"/>, <img class="math" src="images/math/9d1a645b2a4a2284e960b2dd2772db96eecb5de3.png" alt="\vec{v_1} \in \gf{V_{m_1}}"/>, <img class="math" src="images/math/de99a61008b96fa84382c780b3c37afba451ef32.png" alt="\vec{v_2} \in \gf{V_{m_2}}"/> and <img class="math" src="images/math/678079e3bb0d103d886d4e6f5769259dffd66c5b.png" alt="\vec{v}=(\vec{v_1} , \vec{v_2})"/>.</p>
 <a class="reference internal image-reference" href="images/Bricklayer.png"><img alt="images/Bricklayer.png" class="align-center" src="images/Bricklayer.png" style="width: 750px;" /></a>
 </div>
 <div class="section" id="id29">
 <h3><a class="toc-backref" href="#id58">Library</a><a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 <p>It can be obtained with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">bricklayer</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">bricklayer</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id30">
 <h4>Example 1<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
-<p>KHAZAD is a block cipher designed by Paulo S. L. M. Barreto together with Vincent Rijmen, which was presented at the first NESSIE workshop in 2000, and, after some small changes, was selected as a finalist in the project. This cipher uses a <img class="math" src="images/math/d40b7c0e8501fe5022955f0e30246a197a1732ee.png" alt="8 \times 8"/> S-box composed of smaller pseudo-randomly generated <img class="math" src="images/math/8976852233990c4445ce14de4cabeff673492ce8.png" alt="4 \times 4"/> mini S-boxes (the P-box and the Q-box) as represented in the figure:</p>
+<p>KHAZAD is a block cipher designed by Paulo S. L. M. Barreto together with Vincent Rijmen, which was presented at the first NESSIE workshop in 2000, and, after some small changes, was selected as a finalist in the project. This cipher uses a <img class="math" src="images/math/20dcb48f5d806254d82093da16010cacaf88b210.png" alt="8 \times 8"/> S-box composed of smaller pseudo-randomly generated <img class="math" src="images/math/4a8026030bd8dfd11962e0c05d910a913ccd6b44.png" alt="4 \times 4"/> mini S-boxes (the P-box and the Q-box) as represented in the figure:</p>
 <img alt="images/KHAZADS.png" class="align-center" src="images/KHAZADS.png" />
 <p>The following program provides the Truth Tables of the different intermediate constructions that allow to obtain KHAZAD S-box from <em>P</em> and <em>Q</em> mini S-boxes and the permutation that apply between them.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1231,9 +1272,9 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
 <div class="section" id="id31">
 <h4>Example 2<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the balancedness and correlation immunity (resiliency) of two Vector Boolean functions given its Truth Table in hexadecimal representation and calculates the same criteria for the bricklayering of <em>F</em> and <em>G</em> taking as inputs their Truth Tables in hexadecimal representation.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1285,14 +1326,14 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
 </pre></div>
 </div>
 <p>If we use the Boolean functions with the following Truth Tables (in hexadecimal representation) as inputs:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">6cb405778ea9bd30</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">6cb405778ea9bd30</span>
 </pre></div>
 </div>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">5c721bcaac27b1c5</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">5c721bcaac27b1c5</span>
 </pre></div>
 </div>
 <p>The output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">Correlation immunity of F: 1</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">Correlation immunity of F: 1</span>
 <span class="go">F is a balanced function</span>
 <span class="go">Correlation immunity of G: 2</span>
 <span class="go">G is a balanced function</span>
@@ -1322,28 +1363,28 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
 <td>Returns <em>1</em> if <em>F</em> and <em>G</em> are equal</td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">Comp(VBF&amp;</span> <span class="pre">X,</span> <span class="pre">VBF&amp;</span> <span class="pre">F,</span> <span class="pre">VBF&amp;</span> <span class="pre">G)</span></code></td>
-<td><img class="math" src="images/math/443c96bfa8d2851b74a6bb23a63251e3a64668a1.png" alt="X = G \circ F"/></td>
+<td><img class="math" src="images/math/fc1f6c49e8ce42a4a7574ee6311bdb8ae6043e31.png" alt="X = G \circ F"/></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">inv(VBF&amp;</span> <span class="pre">X,</span> <span class="pre">VBF&amp;</span> <span class="pre">A)</span></code></td>
-<td><img class="math" src="images/math/2800b5617fd085a907b722ba696c0eac6ce8c107.png" alt="X = F^{-1}"/></td>
+<td><img class="math" src="images/math/ce363c011f5474bf01d7109d0e40b47fd690e52e.png" alt="X = F^{-1}"/></td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">sum(VBF&amp;</span> <span class="pre">X,</span> <span class="pre">VBF&amp;</span> <span class="pre">F,</span> <span class="pre">VBF&amp;</span> <span class="pre">G)</span></code></td>
-<td><img class="math" src="images/math/d134856e70cd14342c7359ad88f39760c47c9d2c.png" alt="X = F+G"/></td>
+<td><img class="math" src="images/math/b48f9b6810838b8c8860500ffc5909053dbc49cf.png" alt="X = F+G"/></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">directsum(VBF&amp;</span> <span class="pre">X,</span> <span class="pre">VBF&amp;</span> <span class="pre">F,</span> <span class="pre">VBF&amp;</span> <span class="pre">G)</span></code></td>
-<td><img class="math" src="images/math/d6871e8e0a6ea354862e1d48ea02ac7f015a2c97.png" alt="X = F \oplus G"/></td>
+<td><img class="math" src="images/math/24775fb9357ca8097469d94afafc932472dc55c9.png" alt="X = F \oplus G"/></td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">concat(VBF&amp;</span> <span class="pre">X,</span> <span class="pre">VBF&amp;</span> <span class="pre">F,</span> <span class="pre">VBF&amp;</span> <span class="pre">G)</span></code></td>
-<td><img class="math" src="images/math/0956040d5ff24c3ae8a3095cf3f01deb3851e83b.png" alt="X(\vec{x},x_{n+1}) =\left( x_{n+1}+1 \right) F(\vec{x})+ x_{n+1} G(\vec{x})"/></td>
+<td><img class="math" src="images/math/b403caa9e86c7333cabdc92f98368e3788355874.png" alt="X(\vec{x},x_{n+1}) =\left( x_{n+1}+1 \right) F(\vec{x})+ x_{n+1} G(\vec{x})"/></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">concatpol(VBF&amp;</span> <span class="pre">X,</span> <span class="pre">VBF&amp;</span> <span class="pre">F,</span> <span class="pre">VBF&amp;</span> <span class="pre">G)</span></code></td>
-<td><img class="math" src="images/math/5771c6b4ac29a46a88ec5fdb6b0a5f86c92b7c39.png" alt="X(x_1,\ldots,x_{n_1},x_{n_1+1},\ldots,x_{n_1+n_2}) = F(x_1,\ldots,x_{n_1})+G(x_{n_1+1},\ldots,x_{n_1+n_2})"/></td>
+<td><img class="math" src="images/math/6e4bac2d7a6bf6e23594db712752b24a60e8860a.png" alt="X(x_1,\ldots,x_{n_1},x_{n_1+1},\ldots,x_{n_1+n_2}) = F(x_1,\ldots,x_{n_1})+G(x_{n_1+1},\ldots,x_{n_1+n_2})"/></td>
 </tr>
 <tr class="row-even"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">addimage(VBF&amp;</span> <span class="pre">X,</span> <span class="pre">VBF&amp;</span> <span class="pre">F,</span> <span class="pre">VBF&amp;</span> <span class="pre">F)</span></code></td>
-<td><img class="math" src="images/math/13c8b52b78fb91f62e21b549b4c3be4a581fcd6d.png" alt="X = (F,G)"/></td>
+<td><img class="math" src="images/math/9816ca866ad2f51eb76c74d0c383cba2e931e85d.png" alt="X = (F,G)"/></td>
 </tr>
 <tr class="row-odd"><td><code class="code docutils literal"><span class="pre">void</span> <span class="pre">bricklayer(VBF&amp;</span> <span class="pre">X,</span> <span class="pre">VBF&amp;</span> <span class="pre">F,</span> <span class="pre">VBF&amp;</span> <span class="pre">G)</span></code></td>
-<td><img class="math" src="images/math/2907a275a52870fe23ebaa39728b6a07f23884e4.png" alt="X = F | G"/></td>
+<td><img class="math" src="images/math/971a6d7a2bb4a08cf6982ad59961f679abcaa1e0.png" alt="X = F | G"/></td>
 </tr>
 </tbody>
 </table>
@@ -1351,15 +1392,19 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="aes.html" class="btn btn-neutral float-right" title="Analysis of AES competition cryptographic algorithms">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="aes.html" class="btn btn-neutral float-right" title="Analysis of AES competition cryptographic algorithms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="criteria.html" class="btn btn-neutral" title="Cryptographic Criteria"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="criteria.html" class="btn btn-neutral" title="Cryptographic Criteria" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1369,12 +1414,13 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -1390,9 +1436,11 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="static/jquery.js"></script>
@@ -1412,16 +1460,6 @@ primitive polynomial <img class="math" src="images/math/bd4fe7390ad978e64b8df599
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

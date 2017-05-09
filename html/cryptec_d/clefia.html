@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>CLEFIA &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,24 +30,46 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -53,159 +77,99 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>CLEFIA</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/cryptec_d/clefia.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="clefia">
 <h1>CLEFIA<a class="headerlink" href="#clefia" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p><em>CLEFIA</em> is a proprietary block cipher algorithm, developed by Sony. It is intended to be used in DRM systems. It is among the cryptographic techniques recommended candidate for Japanese government use by CRYPTREC revision in 2013. It has two <img class="math" src="../images/math/d40b7c0e8501fe5022955f0e30246a197a1732ee.png" alt="8 \times 8"/> S-boxes: <img class="math" src="../images/math/6c448c054c13684164fd79dd14b922865ba7eada.png" alt="S_0,S_1"/></p>
+<p><em>CLEFIA</em> is a proprietary block cipher algorithm, developed by Sony. It is intended to be used in DRM systems. It is among the cryptographic techniques recommended candidate for Japanese government use by CRYPTREC revision in 2013. It has two <img class="math" src="../images/math/20dcb48f5d806254d82093da16010cacaf88b210.png" alt="8 \times 8"/> S-boxes: <img class="math" src="../images/math/77f68e5f3eeaf40e7a496c9ef9b81b30698c3d58.png" alt="S_0,S_1"/></p>
 </div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
@@ -228,7 +192,7 @@
 <th class="head"><em>DEG</em></th>
 <th class="head"><em>AI</em></th>
 <th class="head"><em>MAXAC</em></th>
-<th class="head"><img class="math" src="../images/math/da2d97c415c38f72735f86472669b38073aa4561.png" alt="\sigma"/></th>
+<th class="head"><img class="math" src="../images/math/efdef34dbaca15f50a1fe150b9660f076f53d54f.png" alt="\sigma"/></th>
 <th class="head"><em>LP</em></th>
 <th class="head"><em>DP</em></th>
 </tr>
@@ -261,7 +225,7 @@
 <h2>S0<a class="headerlink" href="#s0" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="representations">
 <h3>Representations<a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h3>
-<p>Polynomial function over <img class="math" src="../images/math/a304670c9f29763f9f68c5efbc6720d035f3c4b1.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="../images/math/0e4484b1a2a2c24c4b7f4ef0d4b1044f7876e352.png" alt="x^8 + x^4 + x^3 + x^2 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0-trace.pdf">Trace representation</a></p>
+<p>Polynomial function over <img class="math" src="../images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="../images/math/d2b0a5fe7cbb5978507483d7222106f0437e6682.png" alt="x^8 + x^4 + x^3 + x^2 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0.anf">ANF Table</a></p>
@@ -310,11 +274,11 @@
 </div>
 <div class="section" id="construction">
 <h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
-<p><img class="math" src="../images/math/774b18b6427c81f5a4e5edb37844fdcaee529452.png" alt="S_0"/> is generated by combining four 4-bit S-boxes <img class="math" src="../images/math/7dbebae876f4d76e972583fe7934924dfb36030b.png" alt="SS_0,SS_1,SS_2"/> and <img class="math" src="../images/math/e458b156a2dc524c085512d719245babc5b193d8.png" alt="SS_3"/> in the following way:</p>
-<p>Step 1. <img class="math" src="../images/math/3d2bc03570fa3e642d67eba1e9fc7223f3b2170b.png" alt="\vec{t_0}=SS_0(\vec{x_0}), \ \vec{t_1}=SS_1(\vec{x_1})"/> where <img class="math" src="../images/math/1befb65c07e4583a40217cb6c78909212126aa8c.png" alt="\vec{x} = \vec{x_0} | \vec{x_1}, \vec{x_i} \in \gf{V_4}"/></p>
-<p>Step 2. <img class="math" src="../images/math/3a8d42e1cbcbda846d2f712fac2ba8a7677ba652.png" alt="\vec{u_0}=\vec{t_0}+0x2 \cdot \vec{t_1}, \ \vec{u_1}= 0x2 \cdot \vec{t_0}+\vec{t_1}"/></p>
-<p>Step 3. <img class="math" src="../images/math/b35aebedb2a27a3a7adda97691aceedd35b9a681.png" alt="\vec{y_0}=SS_2(\vec{u_0}), \ \vec{y_1}=SS_3(\vec{u_1})"/> where <img class="math" src="../images/math/a545baa6fd7df0d243c2e62cd007499b2178eefa.png" alt="\vec{y} = \vec{y_0} | \vec{y_1}, \vec{y_i} \in \gf{V_4}"/></p>
-<p>Tables of CLEFIA S-boxes <img class="math" src="../images/math/71369b47c20de921353b88824b916484689e2b10.png" alt="SS_i (0 \leq i \leq 3)"/>:</p>
+<p><img class="math" src="../images/math/923ce285836cceaf26beed482949b7c110276600.png" alt="S_0"/> is generated by combining four 4-bit S-boxes <img class="math" src="../images/math/121adafb31f65ec83f950d4a9c4765335590fe54.png" alt="SS_0,SS_1,SS_2"/> and <img class="math" src="../images/math/c68a7b5f9f29a887e74e9dbd4a1f992fa18c455b.png" alt="SS_3"/> in the following way:</p>
+<p>Step 1. <img class="math" src="../images/math/8e405dc73ba186935cbfe337133451e43ad30c22.png" alt="\vec{t_0}=SS_0(\vec{x_0}), \ \vec{t_1}=SS_1(\vec{x_1})"/> where <img class="math" src="../images/math/0f70d7dac33d6d25a2e58429c68fa86efac14d7d.png" alt="\vec{x} = \vec{x_0} | \vec{x_1}, \vec{x_i} \in \gf{V_4}"/></p>
+<p>Step 2. <img class="math" src="../images/math/51cfe89ca9d36b45f8bd82e2291c3b0174ca6421.png" alt="\vec{u_0}=\vec{t_0}+0x2 \cdot \vec{t_1}, \ \vec{u_1}= 0x2 \cdot \vec{t_0}+\vec{t_1}"/></p>
+<p>Step 3. <img class="math" src="../images/math/ac4edf4a87565c570d3fae4893588ceb52ca23a3.png" alt="\vec{y_0}=SS_2(\vec{u_0}), \ \vec{y_1}=SS_3(\vec{u_1})"/> where <img class="math" src="../images/math/9287837e764e3a9be483f02ae339a2aff95fac0e.png" alt="\vec{y} = \vec{y_0} | \vec{y_1}, \vec{y_i} \in \gf{V_4}"/></p>
+<p>Tables of CLEFIA S-boxes <img class="math" src="../images/math/65786ca2ad71d4b33ded844c54411470fb5074a2.png" alt="SS_i (0 \leq i \leq 3)"/>:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -428,8 +392,8 @@
 </tr>
 </tbody>
 </table>
-<p>The multiplication in <img class="math" src="../images/math/bde4267695eca79b3f1fd6480c9bd2e9fd830bc7.png" alt="0x2 \cdot \vec{t_i}"/> is performed in <img class="math" src="../images/math/be8bf6952ef89a325e77efc22f145e6458434d80.png" alt="\gf{GF(2^4)}"/> defined by the lexicographically first primitive polynomial <img class="math" src="../images/math/6882314189e87a84279664689a38cb64b9361baa.png" alt="x^4+x+1"/>. Here we provide the table of multiplication of <img class="math" src="../images/math/36ee1287ab8e3d601f5b0e5982df2708f705f9a6.png" alt="0x2"/> with an element modulo <img class="math" src="../images/math/6882314189e87a84279664689a38cb64b9361baa.png" alt="x^4+x+1"/>. The entries in the Table are represented in hexadecimal notation for compactness. The column indices represent the element to be multplied by <img class="math" src="../images/math/36ee1287ab8e3d601f5b0e5982df2708f705f9a6.png" alt="0x2"/> modulo <img class="math" src="../images/math/6882314189e87a84279664689a38cb64b9361baa.png" alt="x^4+x+1"/>, and the product is the corresponding entry in the column.</p>
-<p>Table of the multiplication <img class="math" src="../images/math/3fda81310778dc4e2f44751e9b0bfd1d48f142d9.png" alt="0x2 \cdot \vec{x}"/>:</p>
+<p>The multiplication in <img class="math" src="../images/math/ca723b7284f99d9c858ab5c3be6d3e1f6240ceed.png" alt="0x2 \cdot \vec{t_i}"/> is performed in <img class="math" src="../images/math/a82ad45cf09b2d5d80858517ff4c5b701017a2e2.png" alt="\gf{GF(2^4)}"/> defined by the lexicographically first primitive polynomial <img class="math" src="../images/math/f8cc26f5d4615736026b03de857863aed42317f0.png" alt="x^4+x+1"/>. Here we provide the table of multiplication of <img class="math" src="../images/math/d9b5db3462af7d5a1f1524c0cbab42db65af5eaa.png" alt="0x2"/> with an element modulo <img class="math" src="../images/math/f8cc26f5d4615736026b03de857863aed42317f0.png" alt="x^4+x+1"/>. The entries in the Table are represented in hexadecimal notation for compactness. The column indices represent the element to be multplied by <img class="math" src="../images/math/d9b5db3462af7d5a1f1524c0cbab42db65af5eaa.png" alt="0x2"/> modulo <img class="math" src="../images/math/f8cc26f5d4615736026b03de857863aed42317f0.png" alt="x^4+x+1"/>, and the product is the corresponding entry in the column.</p>
+<p>Table of the multiplication <img class="math" src="../images/math/682b74907bcb4c716e7c7b1554d560c5140b2af1.png" alt="0x2 \cdot \vec{x}"/>:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="36%" />
@@ -451,7 +415,7 @@
 <col width="4%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><img class="math" src="../images/math/238c379726aaa131539d14959425122f18a7f70a.png" alt="\vec{x}"/></td>
+<tr class="row-odd"><td><img class="math" src="../images/math/3b4f52848fe7519c81e1734ff55cbf6cf2075beb.png" alt="\vec{x}"/></td>
 <td>0</td>
 <td>1</td>
 <td>2</td>
@@ -469,7 +433,7 @@
 <td>e</td>
 <td>f</td>
 </tr>
-<tr class="row-even"><td><img class="math" src="../images/math/3fda81310778dc4e2f44751e9b0bfd1d48f142d9.png" alt="0x2 \cdot \vec{x}"/></td>
+<tr class="row-even"><td><img class="math" src="../images/math/682b74907bcb4c716e7c7b1554d560c5140b2af1.png" alt="0x2 \cdot \vec{x}"/></td>
 <td>0</td>
 <td>2</td>
 <td>4</td>
@@ -489,18 +453,18 @@
 </tr>
 </tbody>
 </table>
-<p>Next figure shows the construction of <img class="math" src="../images/math/774b18b6427c81f5a4e5edb37844fdcaee529452.png" alt="S_0"/>:</p>
+<p>Next figure shows the construction of <img class="math" src="../images/math/923ce285836cceaf26beed482949b7c110276600.png" alt="S_0"/>:</p>
 <a class="reference internal image-reference" href="../images/ClefiaS0Construction.png"><img alt="../images/ClefiaS0Construction.png" class="align-center" src="../images/ClefiaS0Construction.png" style="width: 750px;" /></a>
 <p>Hence, CLEFIA S0 can be denoted by:</p>
-<p><img class="math" src="../images/math/09e29de20004f69c83d9d50fc1b1bf397ab015cb.png" alt="S_0(\vec{x_0},\vec{x_1}) = \left( SS_2 \left( SS_0(\vec{x_0}) \oplus Mul2 \left( SS_1(\vec{x_1}) \right) \right), SS_3 \left( Mul2 \left( SS_0(\vec{x_0}) \right) \oplus SS_1(\vec{x_1}) \right) \right)"/></p>
-<p>Note that the symbol <img class="math" src="../images/math/6d3cd74908606ce42037c551780284cf792d88e3.png" alt="\circ"/> refers to the composition of functions, <img class="math" src="../images/math/7d79759cb84755f5c4b6eb00ffc3a9d9d6b44939.png" alt="\oplus"/> refers to the direct sum of functions and <img class="math" src="../images/math/64bf40533f7dd8538a0f270f7aebcdbdf0fa57c6.png" alt="Mul2(\vec{x}) = 0x2 \cdot \vec{x}"/>.</p>
-<p>The criteria of several constructions in <img class="math" src="../images/math/774b18b6427c81f5a4e5edb37844fdcaee529452.png" alt="S_0"/> are summarized in the following tables:</p>
+<p><img class="math" src="../images/math/604106a7ce74951184282901f22e70f1aa95aae4.png" alt="S_0(\vec{x_0},\vec{x_1}) = \left( SS_2 \left( SS_0(\vec{x_0}) \oplus Mul2 \left( SS_1(\vec{x_1}) \right) \right), SS_3 \left( Mul2 \left( SS_0(\vec{x_0}) \right) \oplus SS_1(\vec{x_1}) \right) \right)"/></p>
+<p>Note that the symbol <img class="math" src="../images/math/09103a364b1d5881d707f5421747301915f26126.png" alt="\circ"/> refers to the composition of functions, <img class="math" src="../images/math/2e3e204470419ebabb5f95a6b2098db928482b55.png" alt="\oplus"/> refers to the direct sum of functions and <img class="math" src="../images/math/d85cea084cae284f7db0922aae786f1ad1a0dba5.png" alt="Mul2(\vec{x}) = 0x2 \cdot \vec{x}"/>.</p>
+<p>The criteria of several constructions in <img class="math" src="../images/math/923ce285836cceaf26beed482949b7c110276600.png" alt="S_0"/> are summarized in the following tables:</p>
 <a class="reference internal image-reference" href="../images/ClefiaS0NL.png"><img alt="../images/ClefiaS0NL.png" class="align-center" src="../images/ClefiaS0NL.png" style="width: 750px;" /></a>
 <a class="reference internal image-reference" href="../images/ClefiaS0deg.png"><img alt="../images/ClefiaS0deg.png" class="align-center" src="../images/ClefiaS0deg.png" style="width: 750px;" /></a>
 <p>You can find a program which calculates the Truth Tables of these constructions in chapter &#8220;Operations and constructions over Vector Boolean Functions&#8221;, section &#8220;Addition of coordinate functions&#8221;.</p>
 <div class="section" id="mul2">
 <h4>Mul2<a class="headerlink" href="#mul2" title="Permalink to this headline">¶</a></h4>
-<p>Let <img class="math" src="../images/math/64bf40533f7dd8538a0f270f7aebcdbdf0fa57c6.png" alt="Mul2(\vec{x}) = 0x2 \cdot \vec{x}"/> the multiplication in <img class="math" src="../images/math/be8bf6952ef89a325e77efc22f145e6458434d80.png" alt="\gf{GF(2^4)}"/> defined by the primitive polynomial <img class="math" src="../images/math/6882314189e87a84279664689a38cb64b9361baa.png" alt="x^4+x+1"/> as in CLEFIA cipher.</p>
+<p>Let <img class="math" src="../images/math/d85cea084cae284f7db0922aae786f1ad1a0dba5.png" alt="Mul2(\vec{x}) = 0x2 \cdot \vec{x}"/> the multiplication in <img class="math" src="../images/math/a82ad45cf09b2d5d80858517ff4c5b701017a2e2.png" alt="\gf{GF(2^4)}"/> defined by the primitive polynomial <img class="math" src="../images/math/f8cc26f5d4615736026b03de857863aed42317f0.png" alt="x^4+x+1"/> as in CLEFIA cipher.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/Mul2.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/Mul2.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/Mul2.anf">ANF Table</a></p>
@@ -535,8 +499,8 @@
 <p>It has 1 negated fixed point: (0,1,0,1)</p>
 </div>
 <div class="section" id="id9">
-<h4><img class="math" src="../images/math/fa62f3882d6e95430305d26e1083445a117ae6cf.png" alt="0x2 \cdot \vec{t_1}"/><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
-<p>The operation <img class="math" src="../images/math/fa62f3882d6e95430305d26e1083445a117ae6cf.png" alt="0x2 \cdot \vec{t_1}"/> in Step 2 can be interpreted as the composition of <img class="math" src="../images/math/dd603b4008b6660d975429ab50be62c4f92c9977.png" alt="Mul2"/> and <img class="math" src="../images/math/daf2a8ebe46d9901e2c2f66cc75edb58f0d2879f.png" alt="SS_1"/>.</p>
+<h4><img class="math" src="../images/math/e27bee069b6f195064deadc37adc8a153c966789.png" alt="0x2 \cdot \vec{t_1}"/><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>The operation <img class="math" src="../images/math/e27bee069b6f195064deadc37adc8a153c966789.png" alt="0x2 \cdot \vec{t_1}"/> in Step 2 can be interpreted as the composition of <img class="math" src="../images/math/1b0393fd48d69dc12e7ecc65ac9fc7ca3eae247d.png" alt="Mul2"/> and <img class="math" src="../images/math/f8af9e7ebce13a4dcb0249ab4da5cb365ca3d7c5.png" alt="SS_1"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/0x2t1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/0x2t1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/0x2t1.anf">ANF Table</a></p>
@@ -569,7 +533,7 @@
 </tbody>
 </table>
 <p>There are 3 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 0],[0 1 0 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 0],[0 1 0 1])</span>
 <span class="go">([0 1 0 0],[0 1 0 1])</span>
 <span class="go">([0 1 1 0],[0 1 0 1])</span>
 </pre></div>
@@ -578,8 +542,8 @@
 <p>It has 1 negated fixed point: (1,1,0,0)</p>
 </div>
 <div class="section" id="id18">
-<h4><img class="math" src="../images/math/cb77622382ef8c4ef5f350e2f0792073c8417b48.png" alt="0x2 \cdot \vec{t_0}"/><a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
-<p>The operation <img class="math" src="../images/math/cb77622382ef8c4ef5f350e2f0792073c8417b48.png" alt="0x2 \cdot \vec{t_0}"/> in Step 2 can be interpreted as the composition of <img class="math" src="../images/math/dd603b4008b6660d975429ab50be62c4f92c9977.png" alt="Mul2"/> and <img class="math" src="../images/math/b7f11c90fc6196efcea24c098aecfc324a2cc86d.png" alt="SS_0"/>.</p>
+<h4><img class="math" src="../images/math/a1608c108853f643b57b60199ad5a2094f42e94d.png" alt="0x2 \cdot \vec{t_0}"/><a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<p>The operation <img class="math" src="../images/math/a1608c108853f643b57b60199ad5a2094f42e94d.png" alt="0x2 \cdot \vec{t_0}"/> in Step 2 can be interpreted as the composition of <img class="math" src="../images/math/1b0393fd48d69dc12e7ecc65ac9fc7ca3eae247d.png" alt="Mul2"/> and <img class="math" src="../images/math/42fbb8c55c4898850943645b2d1490d3975054b4.png" alt="SS_0"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/0x2t0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/0x2t0.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/0x2t0.anf">ANF Table</a></p>
@@ -606,7 +570,7 @@
 </tbody>
 </table>
 <p>There are 3 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 1],[1 0 0 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 1],[1 0 0 1])</span>
 <span class="go">([1 0 0 1],[1 0 0 1])</span>
 <span class="go">([1 0 1 0],[1 0 0 1])</span>
 </pre></div>
@@ -615,8 +579,8 @@
 <p>It has 1 negated fixed point: (0,0,0,0)</p>
 </div>
 <div class="section" id="id27">
-<h4><img class="math" src="../images/math/4da35612d7f566f65daab6c80d588f95b7d2d461.png" alt="\vec{u_0}"/><a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
-<p>The operation <img class="math" src="../images/math/2c6bd837d886ee449814b081f40d10f6fc573541.png" alt="\vec{u_0} = \vec{t_0} \oplus 0x2 \cdot \vec{t_1}"/> in Step 2 can be interpreted as the direct sum of <img class="math" src="../images/math/b7f11c90fc6196efcea24c098aecfc324a2cc86d.png" alt="SS_0"/> and <img class="math" src="../images/math/a7cd3cf217d6519de3bd3b2b386e4137340bb082.png" alt="Mul2 \circ SS_1"/>.</p>
+<h4><img class="math" src="../images/math/4bbd24f4bd182e8adf86fa8626cb317bd1c858e6.png" alt="\vec{u_0}"/><a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+<p>The operation <img class="math" src="../images/math/2a911972317df7ab9137d6dd664f35e7aa2857d5.png" alt="\vec{u_0} = \vec{t_0} \oplus 0x2 \cdot \vec{t_1}"/> in Step 2 can be interpreted as the direct sum of <img class="math" src="../images/math/42fbb8c55c4898850943645b2d1490d3975054b4.png" alt="SS_0"/> and <img class="math" src="../images/math/88bb488d3c519636ae52fa4bdc1bfc7dd0777203.png" alt="Mul2 \circ SS_1"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u0.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u0.anf">ANF Table</a></p>
@@ -626,7 +590,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u0.dp">Differential Profile</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u0.ac">Autocorrelation Spectrum</a></p>
 <p>There are 6 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 0 0 0 0 1 0],[0 1 0 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 0 0 0 0 1 0],[0 1 0 1])</span>
 <span class="go">([0 0 0 0 0 1 0 0],[0 1 0 1])</span>
 <span class="go">([0 0 0 0 0 1 1 0],[0 1 0 1])</span>
 <span class="go">([0 0 1 1 0 0 0 0],[1 1 0 0])</span>
@@ -636,8 +600,8 @@
 </div>
 </div>
 <div class="section" id="id36">
-<h4><img class="math" src="../images/math/6ef90a40d84906f8c39411a1c19f1c20363797d3.png" alt="\vec{u_1}"/><a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h4>
-<p>The operation <img class="math" src="../images/math/154496a599fb4e5fbc0d2051951bd53336d1d27e.png" alt="\vec{u_1}= 0x2 \cdot \vec{t_0} \oplus \vec{t_1}"/> in Step 2 can be interpreted as the direct sum of <img class="math" src="../images/math/5b14ef488499462bf5b7e18e2c42769857384a13.png" alt="Mul2 \circ SS_0"/> and <img class="math" src="../images/math/daf2a8ebe46d9901e2c2f66cc75edb58f0d2879f.png" alt="SS_1"/>.</p>
+<h4><img class="math" src="../images/math/368c919114e1b8e7a7f8d91e522a50ad8b7aad0e.png" alt="\vec{u_1}"/><a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h4>
+<p>The operation <img class="math" src="../images/math/9fc4b168f0d1d18c9ce6397f168ac67a22e1ebb4.png" alt="\vec{u_1}= 0x2 \cdot \vec{t_0} \oplus \vec{t_1}"/> in Step 2 can be interpreted as the direct sum of <img class="math" src="../images/math/7573e9ba2adaa6ace661231d776c8530748de580.png" alt="Mul2 \circ SS_0"/> and <img class="math" src="../images/math/f8af9e7ebce13a4dcb0249ab4da5cb365ca3d7c5.png" alt="SS_1"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u1.anf">ANF Table</a></p>
@@ -647,7 +611,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u1.dp">Differential Profile</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u1.ac">Autocorrelation Spectrum</a></p>
 <p>There are 6 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 0 0 0 0 1 0],[1 0 1 0])</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 0 0 0 0 1 0],[1 0 1 0])</span>
 <span class="go">([0 0 0 0 0 1 0 0],[1 0 1 0])</span>
 <span class="go">([0 0 0 0 0 1 1 0],[1 0 1 0])</span>
 <span class="go">([0 0 1 1 0 0 0 0],[1 0 0 1])</span>
@@ -657,8 +621,8 @@
 </div>
 </div>
 <div class="section" id="id45">
-<h4><img class="math" src="../images/math/bc6e09578aa5a1ec1ee2c115762f0ab5a9954dcf.png" alt="\vec{y_0}"/><a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h4>
-<p>In the Step 3, <img class="math" src="../images/math/bc6e09578aa5a1ec1ee2c115762f0ab5a9954dcf.png" alt="\vec{y_0}"/> is obtained by composing <img class="math" src="../images/math/a74351acfc0416ca579e96b53554fc2fff007b5a.png" alt="SS_2"/> S-box with <img class="math" src="../images/math/4da35612d7f566f65daab6c80d588f95b7d2d461.png" alt="\vec{u_0}"/>.</p>
+<h4><img class="math" src="../images/math/494206d2a01b9fdf0fc29af799bb64a5b7dc79a5.png" alt="\vec{y_0}"/><a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h4>
+<p>In the Step 3, <img class="math" src="../images/math/494206d2a01b9fdf0fc29af799bb64a5b7dc79a5.png" alt="\vec{y_0}"/> is obtained by composing <img class="math" src="../images/math/17a54ac38e174343cc0923370ada16da0e6fcc91.png" alt="SS_2"/> S-box with <img class="math" src="../images/math/4bbd24f4bd182e8adf86fa8626cb317bd1c858e6.png" alt="\vec{u_0}"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/y0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/y0.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/y0.anf">ANF Table</a></p>
@@ -670,8 +634,8 @@
 <p>There are no linear structures.</p>
 </div>
 <div class="section" id="id54">
-<h4><img class="math" src="../images/math/336de4c9c5879b4d5892510827e460b334e24d4d.png" alt="\vec{y_1}"/><a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h4>
-<p>In the Step 3, <img class="math" src="../images/math/336de4c9c5879b4d5892510827e460b334e24d4d.png" alt="\vec{y_1}"/> is obtained by composing <img class="math" src="../images/math/e458b156a2dc524c085512d719245babc5b193d8.png" alt="SS_3"/> S-box with <img class="math" src="../images/math/6ef90a40d84906f8c39411a1c19f1c20363797d3.png" alt="\vec{u_1}"/>.</p>
+<h4><img class="math" src="../images/math/f440ab2b377b1e2d79b6d32761e056b4221473a3.png" alt="\vec{y_1}"/><a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h4>
+<p>In the Step 3, <img class="math" src="../images/math/f440ab2b377b1e2d79b6d32761e056b4221473a3.png" alt="\vec{y_1}"/> is obtained by composing <img class="math" src="../images/math/c68a7b5f9f29a887e74e9dbd4a1f992fa18c455b.png" alt="SS_3"/> S-box with <img class="math" src="../images/math/368c919114e1b8e7a7f8d91e522a50ad8b7aad0e.png" alt="\vec{u_1}"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/y1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/y1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/y1.anf">ANF Table</a></p>
@@ -688,7 +652,7 @@
 <h2>S1<a class="headerlink" href="#s1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id63">
 <h3>Representations<a class="headerlink" href="#id63" title="Permalink to this headline">¶</a></h3>
-<p>Polynomial function over <img class="math" src="../images/math/a304670c9f29763f9f68c5efbc6720d035f3c4b1.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="../images/math/0e4484b1a2a2c24c4b7f4ef0d4b1044f7876e352.png" alt="x^8 + x^4 + x^3 + x^2 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1-trace.pdf">Trace representation</a></p>
+<p>Polynomial function over <img class="math" src="../images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="../images/math/d2b0a5fe7cbb5978507483d7222106f0437e6682.png" alt="x^8 + x^4 + x^3 + x^2 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1.anf">ANF Table</a></p>
@@ -727,6 +691,10 @@
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -736,12 +704,13 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -757,9 +726,11 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../static/jquery.js"></script>
@@ -779,16 +750,6 @@
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Truth Table &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,24 +30,46 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -53,253 +77,193 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Truth Table</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/representations_d/tt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="truth-table">
 <h1>Truth Table<a class="headerlink" href="#truth-table" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>A Vector Boolean function <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> can be uniquely represented by its Truth Table which is a matrix with <img class="math" src="../images/math/372fc4dd1270e8bd966735a2567c798ab49d57c8.png" alt="2^n"/> rows and <em>m</em> columns whose elements are the values of <em>F</em> taken on all possible vector of <img class="math" src="../images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.png" alt="\gf{V_n}"/> ordered lexicographically.</p>
-<p>Let <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/>, if we take into account the one-to-one mapping of <img class="math" src="../images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.png" alt="\gf{V_n}"/> onto the set of integers, we are able to define any vector Boolean function by the corresponding set of values:</p>
+<p>A Vector Boolean function <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> can be uniquely represented by its Truth Table which is a matrix with <img class="math" src="../images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/> rows and <em>m</em> columns whose elements are the values of <em>F</em> taken on all possible vector of <img class="math" src="../images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/> ordered lexicographically.</p>
+<p>Let <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, if we take into account the one-to-one mapping of <img class="math" src="../images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/> onto the set of integers, we are able to define any vector Boolean function by the corresponding set of values:</p>
 <div class="math">
-<p><img src="../images/math/b03c410ac2b115b21156df4a1d6474431a08c9a4.png" alt="F(\boldsymbol{\alpha_i}) \in \gf{V_m} \  \  \fa i \in \{0,\dots,2^n-1\}"/></p>
-</div><p>The matrix with <img class="math" src="../images/math/372fc4dd1270e8bd966735a2567c798ab49d57c8.png" alt="2^n"/> rows and <img class="math" src="../images/math/01069aff128fadf3a7beda62dedbc96983060010.png" alt="m"/> columns will be referred as the <em>Truth Table</em> of <em>F</em> and will be generally written as <img class="math" src="../images/math/4dffb5ab64fd80d0e489760b285db76678cb398e.png" alt="\matr{TT}_F"/>:</p>
+<p><img src="../images/math/8a5ff8b43983cb53cca5610a83aedc600bd4c033.png" alt="F(\boldsymbol{\alpha_i}) \in \gf{V_m} \  \  \fa i \in \{0,\dots,2^n-1\}"/></p>
+</div><p>The matrix with <img class="math" src="../images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/> rows and <img class="math" src="../images/math/def2a6efeb7517994d688e5b628ecc692bb30eb2.png" alt="m"/> columns will be referred as the <em>Truth Table</em> of <em>F</em> and will be generally written as <img class="math" src="../images/math/a4fc15c6bf967fe4c252b3391bc438a308c2dac3.png" alt="\matr{TT}_F"/>:</p>
 <div class="math">
-<p><img src="../images/math/41e75fe7442fa972c2313ae3c17ed8fe55b1f261.png" alt="\matr{TT}_F=\begin{bmatrix} f_1(\boldsymbol{\alpha_0})&amp;\dots&amp;f_{m}(\boldsymbol{\alpha_0}) \\
+<p><img src="../images/math/48596239bfb2e221e296803a1255741658bcec77.png" alt="\matr{TT}_F=\begin{bmatrix} f_1(\boldsymbol{\alpha_0})&amp;\dots&amp;f_{m}(\boldsymbol{\alpha_0}) \\
 f_1(\boldsymbol{\alpha_1})&amp;\dots&amp;f_{m}(\boldsymbol{\alpha_1}) \\
 \hdotsfor[2]{3} \\
 f_1(\boldsymbol{\alpha_{2^n-1}})&amp;\dots&amp;f_{m}(\boldsymbol{\alpha_{2^n-1}}) \end{bmatrix}"/></p>
-</div><p>each <img class="math" src="../images/math/53d86f8a35f58dc9c8c6cd97d506eceada7bb3ec.png" alt="\boldsymbol{\alpha_i} = (x_1,\dots ,x_n) \in \gf{V_n} \  \  i \in
+</div><p>each <img class="math" src="../images/math/649e284385ad785e0468706bea51e86ff80d06f6.png" alt="\boldsymbol{\alpha_i} = (x_1,\dots ,x_n) \in \gf{V_n} \  \  i \in
 \{1,\dots,2^n-1\}"/> is a vector whose decimal equivalent is
-<img class="math" src="../images/math/cfc52bf0c4ff5ae3afde58d1874379b782970629.png" alt="dec(\boldsymbol{\alpha_i})=i=\sum_{j=1}^{n} x_j 2^{n-j}"/>, and all
-the vectors of <img class="math" src="../images/math/358b25c3571d4783e5d1120ede7efe9c6a4557aa.png" alt="\gf{V_n}"/> can be listed so that <img class="math" src="../images/math/dbb6c8e8a73138191a6ff9ff74ce5a5cffa42c7c.png" alt="\boldsymbol{\alpha_0} &lt;
+<img class="math" src="../images/math/b57a76d50681bb7185a7b72707bf8e60e8266005.png" alt="dec(\boldsymbol{\alpha_i})=i=\sum_{j=1}^{n} x_j 2^{n-j}"/>, and all
+the vectors of <img class="math" src="../images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/> can be listed so that <img class="math" src="../images/math/e9cf00c5aed194070850a574b416817a3e418025.png" alt="\boldsymbol{\alpha_0} &lt;
 \boldsymbol{\alpha_1} &lt; \dotsb &lt; \boldsymbol{\alpha_{2^{n-1}}}"/>.</p>
-<p>As a total order is defined over the assignments (inputs) of the Vector Boolean Function, the Truth Table can be uniquely represented by this matrix. Any function <em>F</em> can be uniquely described by its Truth Table <img class="math" src="../images/math/594318a659a3ae52df82a5b22406f657d8efeb05.png" alt="\matr{TT}_F \in \matr{M}_{2^n \times m}(\gf{GF(2)})"/> (or by the Truth Tables of its coordinate functions <img class="math" src="../images/math/1dbae0dc9046313ed4db6b8d4780d2ac17269fd7.png" alt="\matr{TT}_{f_i} \  \  i \in \{1,\dots,m\}"/>) and it holds that:</p>
+<p>As a total order is defined over the assignments (inputs) of the Vector Boolean Function, the Truth Table can be uniquely represented by this matrix. Any function <em>F</em> can be uniquely described by its Truth Table <img class="math" src="../images/math/958e1287e12573291d25f545ab6e859d2753789b.png" alt="\matr{TT}_F \in \matr{M}_{2^n \times m}(\gf{GF(2)})"/> (or by the Truth Tables of its coordinate functions <img class="math" src="../images/math/a37aa3af4e1fa91c98bf877f45fd063b5e1c4ff1.png" alt="\matr{TT}_{f_i} \  \  i \in \{1,\dots,m\}"/>) and it holds that:</p>
 <div class="math">
-<p><img src="../images/math/e0555b82cdd2a6af1c86a1b60f193c128f10d63f.png" alt="\begin{array}{rcl}
+<p><img src="../images/math/bc8434339c808c8f36f4c09904c39a8d68977266.png" alt="\begin{array}{rcl}
  \gamma:\funct{F}_{n,m} &amp;\to&amp; \matr{M}_{2^n \times m}(\gf{GF(2)}) \\
    F &amp;\to&amp; \matr{TT}_F
 \end{array}"/></p>
-</div><p>is an isomorphism between the vector spaces <img class="math" src="../images/math/1f4243b94a9ad5a58dee6e19bc851f9b27fb22ef.png" alt="\funct{F}_{n,m}"/> and <img class="math" src="../images/math/7b6140731b37d93136ef99658fb05877cd01433e.png" alt="\matr{M}_{2^n \times m}(\gf{GF(2)})"/>, so that <img class="math" src="../images/math/685b082be82303b892380d626c40d3d7ec39d3b7.png" alt="\#\funct{F}_{n,m}=2^{2^n \cdot m}"/>.</p>
+</div><p>is an isomorphism between the vector spaces <img class="math" src="../images/math/31445a25c5968b3f5c1a666953c20b064f0399e6.png" alt="\funct{F}_{n,m}"/> and <img class="math" src="../images/math/6943818d3040dfc2c7b833df925f00f34ac2b024.png" alt="\matr{M}_{2^n \times m}(\gf{GF(2)})"/>, so that <img class="math" src="../images/math/0f6f4bc9641d08d93dc95bd6877a2d406ae16869.png" alt="\#\funct{F}_{n,m}=2^{2^n \cdot m}"/>.</p>
 <p>The Truth Table for an <em>n</em>-variable Boolean function <em>f</em> should be in
-lexicographical form, i.e., <img class="math" src="../images/math/fec052e15bbf498934c167333db17be00b402c25.png" alt="\matr{TT}_f = (f(0),f(1),f(2),\ldots,f(2^{n-1}))"/>. Since the
+lexicographical form, i.e., <img class="math" src="../images/math/670634742524ff97a07092febb8b90fdbffe92a9.png" alt="\matr{TT}_f = (f(0),f(1),f(2),\ldots,f(2^{n-1}))"/>. Since the
 Truth Table length might be too large, we represent it in hexadecimal
 rather than in binary notation. The hexadecimal Truth Table is obtained
 by replacing each four bits by their corresponding
-hexadecimal form. For instance, to enter <img class="math" src="../images/math/3d9035a4199697ca6285ec9dae142c4947d999de.png" alt="\matr{TT}_f = (0, 0, 1, 1, 1, 1, 1, 1)"/>
-one should just write <img class="math" src="../images/math/1e8b0798c8ea6c660d5a2812803e49169afef1b4.png" alt="\matr{TT}_f=3f"/>.</p>
-<p>The distance between two Vector Boolean functions <img class="math" src="../images/math/a65ea8c7eb524aa2717f4cb7f28e3980927f153a.png" alt="F, G \in \funct{F}_{n,m}"/> is defined as the number of bits that are different in their respective Truth Tables:</p>
+hexadecimal form. For instance, to enter <img class="math" src="../images/math/4093cba4039d558fb3a2f73c47011c600dd2bd78.png" alt="\matr{TT}_f = (0, 0, 1, 1, 1, 1, 1, 1)"/>
+one should just write <img class="math" src="../images/math/363c1c0bb302eab64a9fed7f75fc12b426555726.png" alt="\matr{TT}_f=3f"/>.</p>
+<p>The distance between two Vector Boolean functions <img class="math" src="../images/math/4ab75c33506350de4b1b0b9c8ec630084d7eec5e.png" alt="F, G \in \funct{F}_{n,m}"/> is defined as the number of bits that are different in their respective Truth Tables:</p>
 <div class="math">
-<p><img src="../images/math/b5628172b0e3764405e9843bf2ddd2a4773656bd.png" alt="d(F,G) = \sum_{\vec{x} \in \gf{V_n}} d \left( F(\vec{x}), G(\vec{x}) \right)"/></p>
-</div><p>where <img class="math" src="../images/math/f44fe8b7d9861f029996ae387a5bef80cff77514.png" alt="d\left( F(\vec{x}), G(\vec{x}) \right)"/> is the Hamming distance between the two vectors <img class="math" src="../images/math/852e7d29112e8b38aeb161ea06a77f5f18b3d557.png" alt="F(\vec{x}), G(\vec{x}) \in \gf{V_m}"/>.</p>
-<p>The weight of a Vector Boolean function <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> is equal to the distance between <em>F</em> and the corresponding zero Vector Boolean function <img class="math" src="../images/math/d43f553ec56c55688d2ae9c7308cf87b70a29630.png" alt="0 \in \funct{F}_{n,m}"/> where <img class="math" src="../images/math/e6a0b1b3caea5781c20a181a5f7828de80a48d15.png" alt="0(\vec{x})=\vec{0} \ \fa \vec{x} \in \gf{V_n}"/>.</p>
-<p>In order to obtain certain characterizations (such as Autocorrelation Spectrum), it is important to take into account two additional representations related to the Truth Table: <img class="math" src="../images/math/74999bc1620359cb2df1afad4cf87a1654657076.png" alt="\matr{LTT}"/> and <img class="math" src="../images/math/4da58c028fedf9de2fea1b5ea34ed4d6c35bcd54.png" alt="\matr{CTT}"/>.</p>
-<p>We will denote by <img class="math" src="../images/math/74999bc1620359cb2df1afad4cf87a1654657076.png" alt="\matr{LTT}"/> of <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> the matrix whose columns are the Truth Tables of the <img class="math" src="../images/math/151c10fa3095a1bb9c2018384589e8cd0b38edd1.png" alt="2^m"/> component functions of <em>F</em>. We will denote by <img class="math" src="../images/math/4da58c028fedf9de2fea1b5ea34ed4d6c35bcd54.png" alt="\matr{CTT}"/> of <em>F</em> the matrix whose columns are the sequence vectors of the <img class="math" src="../images/math/151c10fa3095a1bb9c2018384589e8cd0b38edd1.png" alt="2^m"/> component functions of <em>F</em> (Sometimes it is called the Polarity Truth Table).</p>
+<p><img src="../images/math/f5f264401fde677a7fda18d0c8e2c0706f25cf79.png" alt="d(F,G) = \sum_{\vec{x} \in \gf{V_n}} d \left( F(\vec{x}), G(\vec{x}) \right)"/></p>
+</div><p>where <img class="math" src="../images/math/1fcb5c7969954db89dfec0138e0763d661f07537.png" alt="d\left( F(\vec{x}), G(\vec{x}) \right)"/> is the Hamming distance between the two vectors <img class="math" src="../images/math/8a7548ca07a3495ee0aa0fb2aea6d75f2707d8c3.png" alt="F(\vec{x}), G(\vec{x}) \in \gf{V_m}"/>.</p>
+<p>The weight of a Vector Boolean function <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> is equal to the distance between <em>F</em> and the corresponding zero Vector Boolean function <img class="math" src="../images/math/047bc4e62ce0400fee6a94930e10966c24932a4d.png" alt="0 \in \funct{F}_{n,m}"/> where <img class="math" src="../images/math/d2eefd84c4fd9201a7a42019a1ed3104c6874987.png" alt="0(\vec{x})=\vec{0} \ \fa \vec{x} \in \gf{V_n}"/>.</p>
+<p>In order to obtain certain characterizations (such as Autocorrelation Spectrum), it is important to take into account two additional representations related to the Truth Table: <img class="math" src="../images/math/9a1c857ea770f7f71383b280b15bb0454bf21dad.png" alt="\matr{LTT}"/> and <img class="math" src="../images/math/04cd63f80d78faf3224fa9e06a09b4f3bb40fca0.png" alt="\matr{CTT}"/>.</p>
+<p>We will denote by <img class="math" src="../images/math/9a1c857ea770f7f71383b280b15bb0454bf21dad.png" alt="\matr{LTT}"/> of <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> the matrix whose columns are the Truth Tables of the <img class="math" src="../images/math/6d8796db255608aa2dcde1ef9eb2e383cf84ba24.png" alt="2^m"/> component functions of <em>F</em>. We will denote by <img class="math" src="../images/math/04cd63f80d78faf3224fa9e06a09b4f3bb40fca0.png" alt="\matr{CTT}"/> of <em>F</em> the matrix whose columns are the sequence vectors of the <img class="math" src="../images/math/6d8796db255608aa2dcde1ef9eb2e383cf84ba24.png" alt="2^m"/> component functions of <em>F</em> (Sometimes it is called the Polarity Truth Table).</p>
 </div>
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>A VBF class can be initialized by a Boolean Matrix representing the Truth Table with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">puttt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">T</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">puttt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Truth Table of a Vector Boolean function the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">TT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">TT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a collection of strings separated by carriage returns defined by <em>s</em> with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putHexTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putHexTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Each row must be the hexadecimal representation of the Truth Table of the coordinate functions of a Vector Boolean function. To obtain the Truth Table in hexadecimal representation the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">getHexTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">getHexTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Analogously a VBF class can be initialized by a collecting of strings with binary representation of the Truth Table of coordinate functions:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putBinTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putBinTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain its Truth Table in binary representation the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">getBinTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">getBinTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a Boolean vector representing the decimal representation of the Truth Table of a Vector Boolean Function defined by a vector of outputs in lexicographic order, called <em>d</em>, and knowing the number of component Boolean functions <em>m</em>:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putDecTT</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span><span class="k">const</span> <span class="kt">long</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putDecTT</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span><span class="k">const</span> <span class="kt">long</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Truth Table in decimal representation the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span> <span class="n">getDecTT</span><span class="p">()</span> <span class="k">const</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span> <span class="n">getDecTT</span><span class="p">()</span> <span class="k">const</span>
 </pre></div>
 </div>
 <p>To obtain the weight of a Vector Boolean function <em>F</em> the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">weight</span><span class="p">(</span><span class="kt">long</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">weight</span><span class="p">(</span><span class="kt">long</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a Boolean Matrix representing the Truth Table of their component functions with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putltt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putltt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Truth Table of the component functions of a Vector Boolean function the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">LTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">LTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a Boolean Matrix representing its Polarity Truth Table with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putctt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putctt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Polarity Truth Table of a Vector Boolean function the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">CTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">CTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <p>The Truth Table of the NibbleSub S-box is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="p">[[</span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span><span class="p">]</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
@@ -319,9 +283,9 @@ one should just write <img class="math" src="../images/math/1e8b0798c8ea6c660d5a
 </pre></div>
 </div>
 <p>If we use a file with this matrix as the input of the following program, we can obtain its hexadecimal, binary and decimal representation, as well as the Truth Tables of the components functions and its Polarity Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -360,7 +324,7 @@ one should just write <img class="math" src="../images/math/1e8b0798c8ea6c660d5a
 </pre></div>
 </div>
 <p>The output of this program would be:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">The hexadecimal representation is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The hexadecimal representation is:</span>
 <span class="go">a754</span>
 <span class="go">e439</span>
 <span class="go">8ee1</span>
@@ -419,6 +383,10 @@ one should just write <img class="math" src="../images/math/1e8b0798c8ea6c660d5a
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -428,12 +396,13 @@ one should just write <img class="math" src="../images/math/1e8b0798c8ea6c660d5a
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -449,9 +418,11 @@ one should just write <img class="math" src="../images/math/1e8b0798c8ea6c660d5a
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../static/jquery.js"></script>
@@ -471,16 +442,6 @@ one should just write <img class="math" src="../images/math/1e8b0798c8ea6c660d5a
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 

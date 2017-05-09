@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Correlation Immunity &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
@@ -12,9 +13,10 @@
 
   
   
+  
+  
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,24 +30,46 @@
   
 
   
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="../index.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../static/js/modernizr.min.js"></script>
 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="../index.html" class="fa fa-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -53,180 +77,120 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+              
+            
+            
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#dedications">Dedications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgements">Acknowledgements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-writing-methodology">Book Writing Methodology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#who-should-read-this-book">Who Should Read This Book?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#book-objectives">Book Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../preface.html#organization-of-this-book">Organization of this Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#functions-available-in-vbf">Functions available in VBF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#conventions-used-in-this-manual">Conventions used in this manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#software-implementation">Software implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#preliminaries">Preliminaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#design-philosophy">Design Philosophy</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#an-example-program">An Example Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#compiling">Compiling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../using.html#how-to-evaluate-new-algorithms">How to evaluate new algorithms</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#truth-table">Truth Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#trace-representation">Trace representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#polynomials-in-anf">Polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#anf-table">ANF table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#characteristic-function">Characteristic Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#walsh-spectrum">Walsh Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#linear-profile">Linear Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#differential-profile">Differential Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#autocorrelation-spectrum">Autocorrelation Spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#affine-function-and-affine-equivalence">Affine function and affine equivalence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#permutation-matrix">Permutation matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#des-representations">DES representations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-degree">Algebraic degree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#nonlinearity">Nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#r-th-order-nonlinearity">r-th order nonlinearity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#balancedness">Balancedness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#correlation-immunity">Correlation Immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#algebraic-immunity">Algebraic immunity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#global-avalanche-criterion">Global avalanche criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#linearity-distance">Linearity distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#propagation-criterion">Propagation criterion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../criteria.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#equality-testing">Equality testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#composition">Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#inverse">Inverse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#sum">Sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#direct-sum">Direct sum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation">Concatenation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#concatenation-of-polynomials-in-anf">Concatenation of polynomials in ANF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#addition-of-coordinate-functions">Addition of coordinate functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#bricklayer">Bricklayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operations.html#summary">Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#cast-256">CAST-256</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#crypton">Crypton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#deal">DEAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#e2">E2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#loki97">LOKI97</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#magenta">Magenta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#mars">Mars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#rijndael">Rijndael</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#safer">Safer+</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../aes.html#serpent">Serpent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#cipherunicorn-e">CIPHERUNICORN-E</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#clefia">CLEFIA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#hierocrypt3">Hierocrypt3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cryptec.html#sc2000">SC2000</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#anubis">Anubis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#camellia">Camellia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nessie.html#grand-cru">Grand Cru</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#des">DES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#kasumi">KASUMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#macguffin">MacGuffin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#mini-aes">Mini-AES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../other.html#square">Square</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#bent-functions">Bent functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../design.html#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html#using-vbf">Using VBF</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms</a>
+        
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div></div>
-          <div role="main" class="document">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Correlation Immunity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/criteria_d/ci.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="correlation-immunity">
 <h1>Correlation Immunity<a class="headerlink" href="#correlation-immunity" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>In stream cipher applications, it is vital that the Boolean function used as the combining function have certain properties. In addition to being balanced, possessing high nonlinearity and high algebraic degree, the function should have correlation immunity greater than zero to resist a <em>divide and conquer attack</em> <a class="reference internal" href="../bibliography.html#siegenthaler-84" id="id1">[Siegenthaler:84]</a>.</p>
-<p>This criterion describes the extent to which input values of a Vector Boolean function <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> can be guessed given the output value. Equivalently, we can say that <em>F</em> is <em>t</em>-CI if its output distribution does not change when we fix <em>t</em> variables <img class="math" src="../images/math/cc7e821201371a8d463764c7884645addff2bf7f.png" alt="x_i"/> of its input.</p>
+<p>This criterion describes the extent to which input values of a Vector Boolean function <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> can be guessed given the output value. Equivalently, we can say that <em>F</em> is <em>t</em>-CI if its output distribution does not change when we fix <em>t</em> variables <img class="math" src="../images/math/42e187df2e77c37dacb219d81e3aa501eae0d228.png" alt="x_i"/> of its input.</p>
 <p>Interest in this criterion came from discovery by Siegenthaler <a class="reference internal" href="../bibliography.html#siegenthaler-84" id="id2">[Siegenthaler:84]</a> in 1984 of an attack on pseudo-random generators using combining functions (used in stream ciphers), called a correlation attack. This attack is based on the idea of finding correlation between the outputs and the inputs, that is, finding S-boxes with low resiliency.</p>
-<p>A function <img class="math" src="../images/math/ff8ff8fe04d527a17abb73d88132266b000fa947.png" alt="f \in \funct{F}_{n}"/> is <img class="math" src="../images/math/2041c24c0386883aa6b9bd83aff590397413077f.png" alt="t-\crit{CI}"/> if and only if, for every set <img class="math" src="../images/math/6aeea1fefa9fd9d0ee1cfceb432faa052ed8cf9b.png" alt="\set{S}"/> of <em>t</em> variables, <img class="math" src="../images/math/41808830e33d6aa91d21874be8eccf55e1b98585.png" alt="1 \leq t \leq n"/>, given the value of <em>f</em>, the probability that <img class="math" src="../images/math/6aeea1fefa9fd9d0ee1cfceb432faa052ed8cf9b.png" alt="\set{S}"/> takes on any of its <img class="math" src="../images/math/faee1e02b482b2df65f2a5e4bbe9796eda1b8ab7.png" alt="2^t"/> assignments of values to the <em>t</em> variables is <img class="math" src="../images/math/387377f7cbbb126f0429d58a1cd481937240b95e.png" alt="\frac{1}{2^t}"/>. If <em>f</em> is <img class="math" src="../images/math/2041c24c0386883aa6b9bd83aff590397413077f.png" alt="t-\crit{CI}"/> and balanced, then it is <em>t</em>-resilient.</p>
-<p><img class="math" src="../images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> is said to be <em>t</em>-CI if for each linear function <img class="math" src="../images/math/a52f920dc7e80f978e4c45f3af4fc8c40f0ee057.png" alt="l_{\vec{u}}=u_1x_1+\dotsb+u_nx_n"/> with <img class="math" src="../images/math/fdfc4f0b8f750dc9ed125084d0bb3b6bfd85575d.png" alt="1 \leq wt(\vec{u}) \leq t"/>, <img class="math" src="../images/math/50f6b85649f5848f80ce44bdc47a936c7bc5cf0f.png" alt="f+l_{\vec{u}}"/> is balanced <a class="reference internal" href="../bibliography.html#xiaom-88" id="id3">[XiaoM:88]</a>.</p>
-<p><img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> is an <em>t</em>-CI function (or <img class="math" src="../images/math/9b84d024ab8f0eb51795c5b5b00cc47f0fce47ab.png" alt="(n,m,t)"/>-CI function) if and only if every component function of <em>F</em> is an <em>t</em>-CI function. <em>F</em> is said to be <em>t</em>-resilient (or <img class="math" src="../images/math/9b84d024ab8f0eb51795c5b5b00cc47f0fce47ab.png" alt="(n,m,t)"/>-resilient function) if it is balanced and <em>t</em>-CI <a class="reference internal" href="../bibliography.html#chen-02" id="id4">[Chen:02]</a>.</p>
-<p>Let <img class="math" src="../images/math/74a88d4301d245a75908ffa09fa3b57b450baa06.png" alt="f \in \funct{F}_n"/> and <img class="math" src="../images/math/90416470e66635405d7ae128cc1cfeea8c644b16.png" alt="t \in \left\{1,\dots,n-1\right\}"/>, <em>f</em> is called correlation immune (CI) of order <em>t</em> if its Walsh coefficients, at values of the nonzero vector indexes whose weight at most <em>t</em>, are zero: <img class="math" src="../images/math/989117377680fd0fe4c6bc8aa53c2bc03a940d04.png" alt="\walsh{\chi}_f(\vec{u}) = 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq t"/>. <em>f</em> can also be denoted as <img class="math" src="../images/math/5ac815f1d7ba767a1d1c09cb434e095dbbfd5421.png" alt="(n,1,t)"/>-CI function.[XiaoM:88]_</p>
-<p>Let <img class="math" src="../images/math/5540a3041be53b05c513f03c131ad45ad3e8996d.png" alt="F \in \funct{F}_{n,m}"/> and <img class="math" src="../images/math/90416470e66635405d7ae128cc1cfeea8c644b16.png" alt="t \in \left\{1,\dots,n-1\right\}"/>, <em>F</em> is a correlation immune Vector Boolean function of order <em>t</em> if its Walsh coefficients, at values of the nonzero vector indexes whose weight at most <em>t</em>, are zero: <img class="math" src="../images/math/d0a2ce7c4ef3ca18b589e51e0fef6e9e0167500c.png" alt="\walsh{\theta}_F(\vec{u},\vec{v})= 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq t, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}"/>. <em>F</em> can also be denoted as an <em>t</em>-CI function.</p>
+<p>A function <img class="math" src="../images/math/3f6611883a661ad9826a91529107c8e2c8d9a798.png" alt="f \in \funct{F}_{n}"/> is <img class="math" src="../images/math/c2d3d90e6ff816d6c6cbe6ce209f1aaa65acdb57.png" alt="t-\crit{CI}"/> if and only if, for every set <img class="math" src="../images/math/690c9078b2ed42a7250e8e9eff6ccec803b5794b.png" alt="\set{S}"/> of <em>t</em> variables, <img class="math" src="../images/math/4c12608acd5f91ee55a0f683b5cdd6c9708213f3.png" alt="1 \leq t \leq n"/>, given the value of <em>f</em>, the probability that <img class="math" src="../images/math/690c9078b2ed42a7250e8e9eff6ccec803b5794b.png" alt="\set{S}"/> takes on any of its <img class="math" src="../images/math/972a146e73d1405d3dd9640870bb5e24f9ba4445.png" alt="2^t"/> assignments of values to the <em>t</em> variables is <img class="math" src="../images/math/e22c08717122224aa7dcb8922a600a0e4786fd20.png" alt="\frac{1}{2^t}"/>. If <em>f</em> is <img class="math" src="../images/math/c2d3d90e6ff816d6c6cbe6ce209f1aaa65acdb57.png" alt="t-\crit{CI}"/> and balanced, then it is <em>t</em>-resilient.</p>
+<p><img class="math" src="../images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> is said to be <em>t</em>-CI if for each linear function <img class="math" src="../images/math/1f0bc180b1501facf34d9b4bd95cccea1165e220.png" alt="l_{\vec{u}}=u_1x_1+\dotsb+u_nx_n"/> with <img class="math" src="../images/math/561bd357b81b9f0669e122bf6ec70523f812e824.png" alt="1 \leq wt(\vec{u}) \leq t"/>, <img class="math" src="../images/math/2033c56bbd0438ff493292bf72f5ca77c8d3a632.png" alt="f+l_{\vec{u}}"/> is balanced <a class="reference internal" href="../bibliography.html#xiaom-88" id="id3">[XiaoM:88]</a>.</p>
+<p><img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> is an <em>t</em>-CI function (or <img class="math" src="../images/math/67f293f096c343a94507452c812b1c31f0baa35f.png" alt="(n,m,t)"/>-CI function) if and only if every component function of <em>F</em> is an <em>t</em>-CI function. <em>F</em> is said to be <em>t</em>-resilient (or <img class="math" src="../images/math/67f293f096c343a94507452c812b1c31f0baa35f.png" alt="(n,m,t)"/>-resilient function) if it is balanced and <em>t</em>-CI <a class="reference internal" href="../bibliography.html#chen-02" id="id4">[Chen:02]</a>.</p>
+<p>Let <img class="math" src="../images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> and <img class="math" src="../images/math/bea230f089de6a2725a99c530357ef1bf51a2fde.png" alt="t \in \left\{1,\dots,n-1\right\}"/>, <em>f</em> is called correlation immune (CI) of order <em>t</em> if its Walsh coefficients, at values of the nonzero vector indexes whose weight at most <em>t</em>, are zero: <img class="math" src="../images/math/89478e3649eccb584f667c395b0bdf2b8d1d3fc0.png" alt="\walsh{\chi}_f(\vec{u}) = 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq t"/>. <em>f</em> can also be denoted as <img class="math" src="../images/math/932b48cf075335e5e580a45d10ee3d9d4275678d.png" alt="(n,1,t)"/>-CI function.[XiaoM:88]_</p>
+<p>Let <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> and <img class="math" src="../images/math/bea230f089de6a2725a99c530357ef1bf51a2fde.png" alt="t \in \left\{1,\dots,n-1\right\}"/>, <em>F</em> is a correlation immune Vector Boolean function of order <em>t</em> if its Walsh coefficients, at values of the nonzero vector indexes whose weight at most <em>t</em>, are zero: <img class="math" src="../images/math/1e454ef863665be187ec1f4cadffa3792bfe0072.png" alt="\walsh{\theta}_F(\vec{u},\vec{v})= 0, \ \fa \vec{u} \in \gf{V_n}, \ 1 \leq wt(\vec{u}) \leq t, \ \fa \vec{v} \neq \vec{0} \in \gf{V_m}"/>. <em>F</em> can also be denoted as an <em>t</em>-CI function.</p>
 <p>From the definition of resiliency we can derive that a balanced Vector Boolean function can be interpreted as a <em>0</em>-resilient function.</p>
 </div>
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>The method used to obtain this criterion is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">CI</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">CI</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <p>The following program provides the order of correlation immunity of a Vector Boolean function given its polynomial in ANF.</p>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
-<span class="cp">#include &lt;fstream&gt;</span>
-<span class="cp">#include &quot;VBF.h&quot;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -253,8 +217,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If we use the function <img class="math" src="../images/math/e6d244ae687e0af0533518f46602e29221694123.png" alt="f = (1+x_1)(1+x_2)(1+x_3)(1+x_4)+x_1x_2x_3x_4"/> polynomial in ANF as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="go">It is a (4,1,1)-CI function</span>
+<p>If we use the function <img class="math" src="../images/math/cd2ce8501bcc10f9e1c3f7d3b5da2fd921b0341a.png" alt="f = (1+x_1)(1+x_2)(1+x_3)(1+x_4)+x_1x_2x_3x_4"/> polynomial in ANF as input, the output would be the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">It is a (4,1,1)-CI function</span>
 </pre></div>
 </div>
 <p>The following figure represents the Walsh Spectrum of <em>f</em> and emphasizes in red the rows whose indexes are of weight 1.</p>
@@ -265,6 +229,10 @@
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -274,12 +242,13 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Jose Antonio Alvarez Cubero.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -295,9 +264,11 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../static/jquery.js"></script>
@@ -317,16 +288,6 @@
       jQuery(function () {
           SphinxRtdTheme.StickyNav.enable();
       });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-60418502-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
    
 
