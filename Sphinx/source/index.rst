@@ -16,7 +16,9 @@ Vector Boolean Functions Library: User Manual, Analysis and Design of Cryptograp
 Table of Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :name: Table of Contents
+   :numbered:
+   :maxdepth: 3
 
    Preface <preface>
    Introduction <intro>
