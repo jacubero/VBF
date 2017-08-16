@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Representations and characterizations &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  <title>4. Representations and characterizations &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
-        <link rel="next" title="Cryptographic Criteria" href="criteria.html"/>
-        <link rel="prev" title="Using the library" href="using.html"/> 
+        <link rel="next" title="5. Cryptographic Criteria" href="criteria.html"/>
+        <link rel="prev" title="3. Using the library" href="using.html"/> 
 
   
   <script src="static/js/modernizr.min.js"></script>
@@ -59,6 +59,9 @@
             <a href="index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
           
 
+          
+            
+            <img src="_static/wrapping_paper-binary.jpg" class="logo" />
           
           </a>
 
@@ -91,132 +94,132 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Representations and characterizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#truth-table">Truth Table</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#library">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">3. Using the library</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Representations and characterizations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#truth-table">4.1. Truth Table</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">4.1.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#library">4.1.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">4.1.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#trace-representation">Trace representation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id4">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trace-representation">4.2. Trace representation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">4.2.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">4.2.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">4.2.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#polynomials-in-anf">Polynomials in ANF</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id5">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id9">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#polynomials-in-anf">4.3. Polynomials in ANF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">4.3.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">4.3.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">4.3.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#anf-table">ANF table</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id10">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id12">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#anf-table">4.4. ANF table</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">4.4.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">4.4.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id12">4.4.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#characteristic-function">Characteristic Function</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id13">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id15">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#characteristic-function">4.5. Characteristic Function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">4.5.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">4.5.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id15">4.5.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#walsh-spectrum">Walsh Spectrum</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id16">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id17">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id18">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#walsh-spectrum">4.6. Walsh Spectrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">4.6.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">4.6.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id18">4.6.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#linear-profile">Linear Profile</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id19">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id20">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id21">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linear-profile">4.7. Linear Profile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id19">4.7.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">4.7.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id21">4.7.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#differential-profile">Differential Profile</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id22">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id24">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id25">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#differential-profile">4.8. Differential Profile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id22">4.8.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">4.8.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id25">4.8.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#autocorrelation-spectrum">Autocorrelation Spectrum</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id26">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#linear-structures">Linear structures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id34">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id35">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#autocorrelation-spectrum">4.9. Autocorrelation Spectrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id26">4.9.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linear-structures">4.9.2. Linear structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">4.9.3. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id35">4.9.3.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#affine-function-and-affine-equivalence">Affine function and affine equivalence</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id36">Description</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#affine-equivalence-of-boolean-functions">Affine equivalence of Boolean functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#frequency-distribution-of-absolute-values-of-walsh-spectrum">Frequency distribution of absolute values of Walsh Spectrum</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#frequency-distribution-of-absolute-values-of-autocorrelation-spectrum">Frequency distribution of absolute values of Autocorrelation Spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#affine-function-and-affine-equivalence">4.10. Affine function and affine equivalence</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id36">4.10.1. Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#affine-equivalence-of-boolean-functions">4.10.1.1. Affine equivalence of Boolean functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frequency-distribution-of-absolute-values-of-walsh-spectrum">4.10.1.2. Frequency distribution of absolute values of Walsh Spectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frequency-distribution-of-absolute-values-of-autocorrelation-spectrum">4.10.1.3. Frequency distribution of absolute values of Autocorrelation Spectrum</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id39">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id40">Example</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#cycle-structure-fixed-points-and-negated-fixed-points">Cycle structure, fixed points and negated fixed points</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id41">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id42">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id43">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id39">4.10.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id40">4.10.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#permutation-matrix">Permutation matrix</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id44">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id45">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id46">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cycle-structure-fixed-points-and-negated-fixed-points">4.11. Cycle structure, fixed points and negated fixed points</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id41">4.11.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id42">4.11.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id43">4.11.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#des-representations">DES representations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id48">Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id49">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#permutation-matrix">4.12. Permutation matrix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id44">4.12.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id45">4.12.2. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id46">4.12.2.1. Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#auxiliary-functions">Auxiliary functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#des-representations">4.13. DES representations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id48">4.13.1. Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id49">4.13.1.1. Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#auxiliary-functions">4.14. Auxiliary functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">4.15. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aes.html">7. Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">8. Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">10. Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">11. Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -261,7 +264,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Representations and characterizations</li>
+      <li>4. Representations and characterizations</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -281,7 +284,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="representations-and-characterizations">
-<h1>Representations and characterizations<a class="headerlink" href="#representations-and-characterizations" title="Permalink to this headline">¶</a></h1>
+<h1>4. Representations and characterizations<a class="headerlink" href="#representations-and-characterizations" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#truth-table" id="id50">Truth Table</a><ul>
@@ -365,9 +368,9 @@ The description of each representation and characterization is complemented with
 <a class="reference internal image-reference" href="images/relationshipsrep.png"><img alt="images/relationshipsrep.png" class="align-center" src="images/relationshipsrep.png" style="width: 750px;" /></a>
 <p>The representations which are Boolean matrices are coloured in red, those which are Integer matrices are coloured in blue, those that are vector of integers are coloured in yellow and those which are polynomial are coloured in green.</p>
 <div class="section" id="truth-table">
-<h2><a class="toc-backref" href="#id50">Truth Table</a><a class="headerlink" href="#truth-table" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id50">4.1. Truth Table</a><a class="headerlink" href="#truth-table" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description">
-<h3><a class="toc-backref" href="#id51">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id51">4.1.1. Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
 <p>A Vector Boolean function <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> can be uniquely represented by its Truth Table which is a matrix with <img class="math" src="images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/> rows and <em>m</em> columns whose elements are the values of <em>F</em> taken on all possible vector of <img class="math" src="images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/> ordered lexicographically.</p>
 <p>Let <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, if we take into account the one-to-one mapping of <img class="math" src="images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/> onto the set of integers, we are able to define any vector Boolean function by the corresponding set of values:</p>
 <div class="math">
@@ -406,63 +409,63 @@ one should just write <img class="math" src="images/math/363c1c0bb302eab64a9fed7
 <p>We will denote by <img class="math" src="images/math/9a1c857ea770f7f71383b280b15bb0454bf21dad.png" alt="\matr{LTT}"/> of <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> the matrix whose columns are the Truth Tables of the <img class="math" src="images/math/6d8796db255608aa2dcde1ef9eb2e383cf84ba24.png" alt="2^m"/> component functions of <em>F</em>. We will denote by <img class="math" src="images/math/04cd63f80d78faf3224fa9e06a09b4f3bb40fca0.png" alt="\matr{CTT}"/> of <em>F</em> the matrix whose columns are the sequence vectors of the <img class="math" src="images/math/6d8796db255608aa2dcde1ef9eb2e383cf84ba24.png" alt="2^m"/> component functions of <em>F</em> (Sometimes it is called the Polarity Truth Table).</p>
 </div>
 <div class="section" id="library">
-<h3><a class="toc-backref" href="#id52">Library</a><a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id52">4.1.2. Library</a><a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h3>
 <p>A VBF class can be initialized by a Boolean Matrix representing the Truth Table with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">puttt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">T</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">puttt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Truth Table of a Vector Boolean function the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">TT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">TT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a collection of strings separated by carriage returns defined by <em>s</em> with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putHexTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putHexTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Each row must be the hexadecimal representation of the Truth Table of the coordinate functions of a Vector Boolean function. To obtain the Truth Table in hexadecimal representation the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">getHexTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">getHexTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Analogously a VBF class can be initialized by a collecting of strings with binary representation of the Truth Table of coordinate functions:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putBinTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putBinTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain its Truth Table in binary representation the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">getBinTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">getBinTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a Boolean vector representing the decimal representation of the Truth Table of a Vector Boolean Function defined by a vector of outputs in lexicographic order, called <em>d</em>, and knowing the number of component Boolean functions <em>m</em>:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putDecTT</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span><span class="k">const</span> <span class="kt">long</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putDecTT</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span><span class="k">const</span> <span class="kt">long</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Truth Table in decimal representation the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span> <span class="n">getDecTT</span><span class="p">()</span> <span class="k">const</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span> <span class="n">getDecTT</span><span class="p">()</span> <span class="k">const</span>
 </pre></div>
 </div>
 <p>To obtain the weight of a Vector Boolean function <em>F</em> the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">weight</span><span class="p">(</span><span class="kt">long</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">weight</span><span class="p">(</span><span class="kt">long</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a Boolean Matrix representing the Truth Table of their component functions with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putltt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putltt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Truth Table of the component functions of a Vector Boolean function the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">LTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">LTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a Boolean Matrix representing its Polarity Truth Table with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putctt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putctt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Polarity Truth Table of a Vector Boolean function the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">CTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">CTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
-<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<h4>4.1.2.1. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
 <p>The Truth Table of the NibbleSub S-box is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span><span class="p">]</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="p">[[</span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
@@ -482,9 +485,9 @@ one should just write <img class="math" src="images/math/363c1c0bb302eab64a9fed7
 </pre></div>
 </div>
 <p>If we use a file with this matrix as the input of the following program, we can obtain its hexadecimal, binary and decimal representation, as well as the Truth Tables of the components functions and its Polarity Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -523,7 +526,7 @@ one should just write <img class="math" src="images/math/363c1c0bb302eab64a9fed7
 </pre></div>
 </div>
 <p>The output of this program would be:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The hexadecimal representation is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The hexadecimal representation is:</span>
 <span class="go">a754</span>
 <span class="go">e439</span>
 <span class="go">8ee1</span>
@@ -581,9 +584,9 @@ one should just write <img class="math" src="images/math/363c1c0bb302eab64a9fed7
 </div>
 </div>
 <div class="section" id="trace-representation">
-<h2><a class="toc-backref" href="#id53">Trace representation</a><a class="headerlink" href="#trace-representation" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id53">4.2. Trace representation</a><a class="headerlink" href="#trace-representation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
-<h3><a class="toc-backref" href="#id54">Description</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id54">4.2.1. Description</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>We identify a Boolean function in <em>n</em> variables with a function from <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/> to <img class="math" src="images/math/7226a807fa9c82958d0ddd8fb72d9287d29411f1.png" alt="\gf{GF(2)}"/> and Vector Boolean function in <em>n</em> variables with a function from <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/> to <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/>.</p>
 <p>A <em>trace</em> is a function over a finite field <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/> defined as: <img class="math" src="images/math/6c181b339999fd4fdd76d2bf072aee905307896b.png" alt="tr(\vec{x}) = \sum_{i=0}^{2^n-1} x^i"/></p>
 <p>Since there is is an isomorphism between <img class="math" src="images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/> and <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/>, it is possible to identify the trace function with a Boolean function in <em>n</em> variables. Analogously, a Vector Boolean function can be identified with trace as follows:</p>
@@ -594,26 +597,26 @@ one should just write <img class="math" src="images/math/363c1c0bb302eab64a9fed7
 <p>The <em>interpolation attack</em> <a class="reference internal" href="bibliography.html#jakobsenk-97" id="id2">[JakobsenK:97]</a> is efficient when the degree of the univariate polynomial representation of the S-box over <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/> is low or when the distance of the S-box to the set of low univariate degree functions is small. This attack exploits the low degree of the algebraic relation between some input (respective output) and intermediate data to infer some keybits relating the output (respective input) and the intermediate data.</p>
 </div>
 <div class="section" id="id3">
-<h3><a class="toc-backref" href="#id55">Library</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id55">4.2.2. Library</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>A VBF class can be initialized giving its trace <em>f</em> and the irreducible polynomial <em>g</em> with the following methods:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putirrpol</span><span class="p">(</span><span class="n">GF2X</span><span class="o">&amp;</span> <span class="n">g</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putirrpol</span><span class="p">(</span><span class="n">GF2X</span><span class="o">&amp;</span> <span class="n">g</span><span class="p">)</span>
 <span class="kt">void</span> <span class="n">puttrace</span><span class="p">(</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain a Vector Boolean function trace representation the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Trace</span><span class="p">(</span><span class="n">GF2EX</span><span class="o">&amp;</span> <span class="n">f</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">Trace</span><span class="p">(</span><span class="n">GF2EX</span><span class="o">&amp;</span> <span class="n">f</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and to print the trace representation use the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">print</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">GF2EX</span><span class="o">&amp;</span> <span class="n">f</span><span class="p">,</span> <span class="k">const</span> <span class="kt">long</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">print</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">GF2EX</span><span class="o">&amp;</span> <span class="n">f</span><span class="p">,</span> <span class="k">const</span> <span class="kt">long</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id4">
-<h4>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
-<p>The following program provides the Trace representation over <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/> of a Vector Boolean function with Truth Table in a file with extension &#8221;.tt&#8221;. <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/> is constructed with the irreducible polynomial whose corresponding GF2X representation is in a file with extension &#8221;.irr&#8221;. The class GF2X implements polynomial arithmetic modulo 2 and a polynomial is represented as a coefficient vector.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<h4>4.2.2.1. Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>The following program provides the Trace representation over <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/> of a Vector Boolean function with Truth Table in a file with extension “.tt”. <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/> is constructed with the irreducible polynomial whose corresponding GF2X representation is in a file with extension “.irr”. The class GF2X implements polynomial arithmetic modulo 2 and a polynomial is represented as a coefficient vector.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -655,7 +658,7 @@ one should just write <img class="math" src="images/math/363c1c0bb302eab64a9fed7
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>In this cipher, <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> is constructed with the irreducible polynomial <img class="math" src="images/math/d2b761984e8df10955320ba48ae358bab414b193.png" alt="g(\vec{x}) = {\vec{x}}^8+{\vec{x}}^4+{\vec{x}}^3+\vec{x}+\vec{1}"/>. The inputs of this program would be the Truth Table of <img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/> in a file with extension &#8221;.tt&#8221; and the corresponding GF2X representation of <img class="math" src="images/math/7d2c699ad6e53faddcd02758a0d028bfc6fdb959.png" alt="g: [1 1 0 1 1 0 0 0 1]"/> in a file with extension &#8221;.irr&#8221;. The output of the program would be a GF2EX which represents polynomials over GF2E, and so can be used, for example, for arithmetic in <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/>:</p>
+<p>In this cipher, <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> is constructed with the irreducible polynomial <img class="math" src="images/math/d2b761984e8df10955320ba48ae358bab414b193.png" alt="g(\vec{x}) = {\vec{x}}^8+{\vec{x}}^4+{\vec{x}}^3+\vec{x}+\vec{1}"/>. The inputs of this program would be the Truth Table of <img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/> in a file with extension “.tt” and the corresponding GF2X representation of <img class="math" src="images/math/7d2c699ad6e53faddcd02758a0d028bfc6fdb959.png" alt="g: [1 1 0 1 1 0 0 0 1]"/> in a file with extension “.irr”. The output of the program would be a GF2EX which represents polynomials over GF2E, and so can be used, for example, for arithmetic in <img class="math" src="images/math/a16b2a1e3c941e219b292cbba12545321112d3ff.png" alt="\gf{GF(2^n)}"/>:</p>
 <div class="math">
 <p><img src="images/math/08106a81fee14072c327b61f9a903dbdeedc5d62.png" alt="05 \cdot x^{254} + 09 \cdot x^{253} + f9 \cdot x^{251} + 25 \cdot x^{247} + f4 \cdot x^{239} + 01 \cdot x^{223} + b5 \cdot x^{191} + 8f \cdot x^{127} + 63"/></p>
 </div><p>The coefficients are elements of <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/>.</p>
@@ -663,9 +666,9 @@ one should just write <img class="math" src="images/math/363c1c0bb302eab64a9fed7
 </div>
 </div>
 <div class="section" id="polynomials-in-anf">
-<h2><a class="toc-backref" href="#id56">Polynomials in ANF</a><a class="headerlink" href="#polynomials-in-anf" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id56">4.3. Polynomials in ANF</a><a class="headerlink" href="#polynomials-in-anf" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id5">
-<h3><a class="toc-backref" href="#id57">Description</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id57">4.3.1. Description</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>Any vector Boolean function <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> can be uniquely represented by <em>m</em> multivariate polynomials over <img class="math" src="images/math/7226a807fa9c82958d0ddd8fb72d9287d29411f1.png" alt="\gf{GF(2)}"/> (called coordinate functions) where each variable has power at most one. Each of these polynomials can be expressed as a sum of all distinct <a href="#id6"><span class="problematic" id="id7">*</span></a>k*th-order product terms <img class="math" src="images/math/9f0606a6c51b5da0838bb78b4645d50a04f891c8.png" alt="(0 &lt; k \leq n)"/> of the variables in the form:</p>
 <div class="math">
 <p><img src="images/math/1724c4f5021bf8ca3f38c614492c19d6c9b4050d.png" alt="\begin{array}{ll}
@@ -676,21 +679,21 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div><p>where <img class="math" src="images/math/a52cdcddad16d9e66b763334b64780a9ba7a9fd6.png" alt="\set{P}(N)"/> denotes the power set of <img class="math" src="images/math/d6ddd54c3939c380edea9b7865fb830a63ac3f4c.png" alt="N=\{1,\dots,n\}"/>. This representation of <em>f</em> is called the <em>algebraic normal form (ANF)</em> of <em>f</em>. The algebraic normal form is thus a set of multivariate polynomials and the constant functions (those obtained by decomposition) are the coefficients of the <img class="math" src="images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/> products of input variables (i.e. monomials).</p>
 </div>
 <div class="section" id="id8">
-<h3><a class="toc-backref" href="#id58">Library</a><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id58">4.3.2. Library</a><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <p>A VBF class can be initialized giving its Polynomials in ANF with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putpol</span><span class="p">(</span><span class="n">vec_pol</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putpol</span><span class="p">(</span><span class="n">vec_pol</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain its representation as Polynomials in ANF, the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Pol</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">Pol</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id9">
-<h4>Example<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<h4>4.3.2.1. Example<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the Polynomials in ANF Vector Boolean function from its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -715,7 +718,7 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </pre></div>
 </div>
 <p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">1+x4+x2+x2x3+x2x3x4+x1+x1x2+x1x2x3</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">1+x4+x2+x2x3+x2x3x4+x1+x1x2+x1x2x3</span>
 <span class="go">1+x3x4+x2+x2x4+x1+x1x3+x1x3x4</span>
 <span class="go">1+x4+x3+x3x4+x2x4+x2x3+x1x4+x1x3+x1x2+x1x2x4+x1x2x3</span>
 <span class="go">x3+x2x4+x1+x1x4+x1x3x4</span>
@@ -733,29 +736,29 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div>
 </div>
 <div class="section" id="anf-table">
-<h2><a class="toc-backref" href="#id59">ANF table</a><a class="headerlink" href="#anf-table" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id59">4.4. ANF table</a><a class="headerlink" href="#anf-table" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id10">
-<h3><a class="toc-backref" href="#id60">Description</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id60">4.4.1. Description</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p><em>ANF table</em> of <em>F</em>, denoted by <img class="math" src="images/math/d2adb2de18434bbbf8f2728980012ef69b9ffd4a.png" alt="\matr{ANF}_F \in \matr{M}_{2^n \times m}(\gf{GF(2)})"/>, represents the <img class="math" src="images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/> coefficients of the polynomials of each of the m coordinate functions in <em>ANF</em>.</p>
 <p>The ANF table of <em>F</em>, denoted by <img class="math" src="images/math/d2adb2de18434bbbf8f2728980012ef69b9ffd4a.png" alt="\matr{ANF}_F \in \matr{M}_{2^n \times m}(\gf{GF(2)})"/>, is defined by <img class="math" src="images/math/f7cb844ea9fa131f715f22af86dee97581e5762e.png" alt="{\matr{ANF}_{F}}^i= \matr{ANF}_{f_i} \  \  i \in \{1,\dots,m\}"/> where <img class="math" src="images/math/e549d4bc18134baeac1a91080738e6e8414b0247.png" alt="{\matr{ANF}_{F}}^i"/> is the <em>i</em>-th column of <img class="math" src="images/math/55a0e22dc4c8595d66b22923366b739a9f531cc7.png" alt="\matr{ANF}_{F}"/>.</p>
 <p>The ANF Table can be derived from the Truth Table by a binary matrix transformation called the Algebraic Normal Form Transformation (implemented in the VBF library with <em>getanf</em> method). The Truth Table can be obtained from the ANF Table using a method we call <em>rev</em>.</p>
 </div>
 <div class="section" id="id11">
-<h3><a class="toc-backref" href="#id61">Library</a><a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id61">4.4.2. Library</a><a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <p>A VBF class can be initialized giving its ANF table with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putanf</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">A</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putanf</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain its representation as ANF table, the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">ANF</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">ANF</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id12">
-<h4>Example<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<h4>4.4.2.1. Example<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the ANF Table of a Vector Boolean function from its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -781,7 +784,7 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </pre></div>
 </div>
 <p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The ANF Table is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The ANF Table is:</span>
 <span class="go">[[1 1 1 0]</span>
 <span class="go">[1 0 1 0]</span>
 <span class="go">[0 0 1 1]</span>
@@ -805,9 +808,9 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div>
 </div>
 <div class="section" id="characteristic-function">
-<h2><a class="toc-backref" href="#id62">Characteristic Function</a><a class="headerlink" href="#characteristic-function" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id62">4.5. Characteristic Function</a><a class="headerlink" href="#characteristic-function" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id13">
-<h3><a class="toc-backref" href="#id63">Description</a><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id63">4.5.1. Description</a><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <p>The <em>characteristic or indicator</em> function of <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/>, denoted by <img class="math" src="images/math/022974f27ac0d7b72b72d7999a15c3ce395061cd.png" alt="\theta_F : \gf{V_n} \times \gf{V_m} \to \left\{0,1\right\}"/>, is defined by: <img class="math" src="images/math/147f57454bdd5a408e47522f95c085aa5988a7c5.png" alt="\theta_{F}(\vec{x},\vec{y}) = \left\{ \begin{array}{cc} 1 &amp; \mbox{if }\vec{y}=F(\vec{x}) \\ 0 &amp; \mbox{if }\vec{y} \neq F(\vec{x}) \end{array} \right."/></p>
 <p>The Image of <em>F</em> can be represented by a matrix whose rows are indexed by <img class="math" src="images/math/f47882b307ce7e18b04e850329e53655d65736eb.png" alt="\vec{x} \in \gf{V_n}"/> and whose columns are indexed by <img class="math" src="images/math/18990efa8434621ba9dec6087aaae65b7cc625d5.png" alt="\vec{y} \in \gf{V_m}"/> in lexicographic order, denoted by <img class="math" src="images/math/0ac63f35f52f57fe531ab88ad5f8d73ff45f14f0.png" alt="\matr{Img(F)} \in \matr{M}_{2^n \times 2^m}(\gf{GF(2)})"/> and defined as follows:</p>
 <div class="math">
@@ -826,21 +829,21 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div><p>The Image of <em>F</em> can be derived from the Truth Table by a method implemented in the VBF library called <em>charfunct</em>. The Truth Table can be obtained from the Characteristic function using a method we call <em>truthtable</em>.</p>
 </div>
 <div class="section" id="id14">
-<h3><a class="toc-backref" href="#id64">Library</a><a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id64">4.5.2. Library</a><a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <p>A VBF class can be initialized giving its Image with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putchar</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putchar</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain its representation as Image, the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Charact</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">Charact</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id15">
-<h4>Example<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<h4>4.5.2.1. Example<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the Image of a Vector Boolean function from its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -866,7 +869,7 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </pre></div>
 </div>
 <p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Image is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Image is:</span>
 <span class="go">[[0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0]</span>
 <span class="go">[0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0]</span>
 <span class="go">[0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0]</span>
@@ -893,9 +896,9 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div>
 </div>
 <div class="section" id="walsh-spectrum">
-<h2><a class="toc-backref" href="#id65">Walsh Spectrum</a><a class="headerlink" href="#walsh-spectrum" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id65">4.6. Walsh Spectrum</a><a class="headerlink" href="#walsh-spectrum" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id16">
-<h3><a class="toc-backref" href="#id66">Description</a><a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id66">4.6.1. Description</a><a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <p>Linear and affine functions are considered as cryptographically weak functions. It is important to measure if a Vector Boolean function has some similarity with these functions. The similarity is measured by means of correlation. The values of Walsh Spectrum provide a measure of the correlation of the Vector Boolean function with the different Vector Boolean Linear functions.</p>
 <p>Let <img class="math" src="images/math/99ab6abcb5173e4776cc6644334f2a03944d1234.png" alt="\matr{H_n}"/> be the Walsh-Hadamard matrix of order <img class="math" src="images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/>, then the vectors associated with its columns constitute an orthogonal basis for <img class="math" src="images/math/ec35452c349454ab79ec2a6eafb68908e0ee6389.png" alt="\bbbr^{2^n}"/> over <img class="math" src="images/math/6bb288302233ff7c24c3b37a8d8171c563c0bb6f.png" alt="\bbbr"/> so that:</p>
 <div class="math">
@@ -938,21 +941,21 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 <p>We can deduce that the columns of this matrix are the spectra of the Boolean functions <img class="math" src="images/math/e8125ddef6f7c51864342abcdc2e48fa5f19a1b2.png" alt="l_{\vec{v}} \circ F"/> for all the linear functions <img class="math" src="images/math/7712336dec8f142ed237d98c49bb8770b94415c0.png" alt="l_{\vec{v}} \in \funct{L}_m"/>.</p>
 </div>
 <div class="section" id="id17">
-<h3><a class="toc-backref" href="#id67">Library</a><a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id67">4.6.2. Library</a><a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <p>A VBF class can be initialized giving its Walsh Spectrum with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putwalsh</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putwalsh</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain its representation as Walsh Spectrum the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Walsh</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">Walsh</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id18">
-<h4>Example<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<h4>4.6.2.1. Example<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
 <p>The following program provides the Walsh Spectrum of a Vector Boolean function from its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -978,7 +981,7 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </pre></div>
 </div>
 <p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Walsh Spectrum is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Walsh Spectrum is:</span>
 <span class="go">[[16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]</span>
 <span class="go">[0 0 -4 -4 0 0 -4 12 4 4 0 0 4 4 0 0]</span>
 <span class="go">[0 0 -4 -4 0 0 -4 -4 0 0 4 4 0 0 -12 4]</span>
@@ -1006,37 +1009,37 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div>
 </div>
 <div class="section" id="linear-profile">
-<h2><a class="toc-backref" href="#id68">Linear Profile</a><a class="headerlink" href="#linear-profile" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id68">4.7. Linear Profile</a><a class="headerlink" href="#linear-profile" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id19">
-<h3><a class="toc-backref" href="#id69">Description</a><a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id69">4.7.1. Description</a><a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <p>A complete enumeration of all linear approximations of the S-box is given in the <em>Linear Profile</em> (In the literature, an equivalent matrix called Linear Approximation Table is used as well), which is a matrix whose rows are indexed by <img class="math" src="images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> and whose columns are indexed by <img class="math" src="images/math/8e4bad02219f6039a23600926977eef31d95526c.png" alt="\vec{v} \in \gf{V_m}"/> in lexicographic order, denoted by <img class="math" src="images/math/ca6840a6b6d1d1c5dac8e255e1dadd14dbc8b5a8.png" alt="\matr{LP}(F) \in \matr{M}_{2^n \times 2^m}(\bbbr)"/>. It holds that <img class="math" src="images/math/e715a7fa94c9b4528292bc27e4e1c57237f94093.png" alt="\matr{LP}(F)(\vec{u},\vec{v}) =|\matr{WS}(F)(\vec{u},\vec{v})|^2"/>. The lower bound of the Linear Profile values is <em>0</em> and the upper bound is <img class="math" src="images/math/7aa58f365a2c4690e720eb488dca397777f96cc2.png" alt="2^{2n}"/>.</p>
-<p>If we divide each element in the Linear Profile by the value on <img class="math" src="images/math/934250c46f605b44a65174e1e7b612d01721a541.png" alt="\matr{LP}(F)(\vec{0},\vec{0})"/>, these values represent the number of matches between the linear equation represented in hexadecimal as &#8220;Input Sum&#8221; and the sum of the output bits represented in hexadecimal as &#8220;Output Sum&#8221;. Hence, subtracting to these values <img class="math" src="images/math/016b930211a0955237121ff1b1e12459c7bdd760.png" alt="\frac{1}{2}"/> give the probability bias for the particular linear combination of input and output bits. The hexadecimal value representing a sum, when viewed as a binary value indicates the variables involved in the sum. For a linear combination of input variables represented as <img class="math" src="images/math/b95f8e0e38647a90eec6d2a7ff6796a0ca196ffe.png" alt="u_1 \cdot x_1+ \cdots +u_n \cdot x_n"/> where <img class="math" src="images/math/ca673fc425e76db731f97b2a57e1c085cd745231.png" alt="u_i \in \gf{GF(2)}"/>, the hexadecimal value represents the binary value <img class="math" src="images/math/05079fbb2672ed03cd0c18f4c8b00247c0c96e48.png" alt="u_1 \ldots u_n"/>, where <img class="math" src="images/math/3ab7ffeb0320178ce636fee494206b0d078bc7b9.png" alt="u_1"/> is the most significant bit. Similarly, for a linear combination of output bits <img class="math" src="images/math/d133925277bcb831cfafbefd87c5fdf977758cf9.png" alt="v_1 \cdot y_1+ \cdots +v_m \cdot y_m"/> where <img class="math" src="images/math/3acb878c3dd3abbdecdbcd0389ae80db209fa0e0.png" alt="v_i \in \gf{GF(2)}"/>, the hexadecimal value represents the binary vector <img class="math" src="images/math/360c38a10374c25cc97432e21caeb62a6674afb1.png" alt="(v_1, \ldots ,v_m)"/>.</p>
-<p>In Linear Profiles, we are looking for entries with large value. If all of the entries are small, then the S-box does not have a very linear structure, and it may make Linear Cryptanalysis on the cipher difficult. The <em>Linear potential</em> of <em>F</em>, defined as <img class="math" src="images/math/0cd97a6f5673ea237f996be5a57dd63e2857cace.png" alt="\crit{lp}(F) = \frac{1}{2^{2n}} \cdot \stackrel{*}{\max} \left( {\matr{WS}(F)(\vec{u},\vec{v})}^2 \right)"/> is a measure of linearity in Linear Cryptanalysis, and satisfies <img class="math" src="images/math/c0bf65649ce6c00ca61c6ba958574a6048c7bfac.png" alt="2^{-n} \leq \crit{lp}(F) \leq 1"/> so that the lower bound holds if and only if <em>F</em> has maximum nonlinearity (<em>F</em> is bent) and the upper bound is reached when <em>F</em> is linear or affine. This criterion can take values from <img class="math" src="images/math/d90787f6e3cb0aa69556f2e02211fcfb1453b49c.png" alt="\frac{1}{2^n}"/> to 1. The larger <img class="math" src="images/math/3ce6b7bd9c1f6d0e0c6dfa8f25c99e304097b33e.png" alt="\crit{lp}(F)"/> is, the &#8220;closer&#8221; to a Linear Vector Boolean function is <em>F</em>.</p>
+<p>If we divide each element in the Linear Profile by the value on <img class="math" src="images/math/934250c46f605b44a65174e1e7b612d01721a541.png" alt="\matr{LP}(F)(\vec{0},\vec{0})"/>, these values represent the number of matches between the linear equation represented in hexadecimal as “Input Sum” and the sum of the output bits represented in hexadecimal as “Output Sum”. Hence, subtracting to these values <img class="math" src="images/math/016b930211a0955237121ff1b1e12459c7bdd760.png" alt="\frac{1}{2}"/> give the probability bias for the particular linear combination of input and output bits. The hexadecimal value representing a sum, when viewed as a binary value indicates the variables involved in the sum. For a linear combination of input variables represented as <img class="math" src="images/math/b95f8e0e38647a90eec6d2a7ff6796a0ca196ffe.png" alt="u_1 \cdot x_1+ \cdots +u_n \cdot x_n"/> where <img class="math" src="images/math/ca673fc425e76db731f97b2a57e1c085cd745231.png" alt="u_i \in \gf{GF(2)}"/>, the hexadecimal value represents the binary value <img class="math" src="images/math/05079fbb2672ed03cd0c18f4c8b00247c0c96e48.png" alt="u_1 \ldots u_n"/>, where <img class="math" src="images/math/3ab7ffeb0320178ce636fee494206b0d078bc7b9.png" alt="u_1"/> is the most significant bit. Similarly, for a linear combination of output bits <img class="math" src="images/math/d133925277bcb831cfafbefd87c5fdf977758cf9.png" alt="v_1 \cdot y_1+ \cdots +v_m \cdot y_m"/> where <img class="math" src="images/math/3acb878c3dd3abbdecdbcd0389ae80db209fa0e0.png" alt="v_i \in \gf{GF(2)}"/>, the hexadecimal value represents the binary vector <img class="math" src="images/math/360c38a10374c25cc97432e21caeb62a6674afb1.png" alt="(v_1, \ldots ,v_m)"/>.</p>
+<p>In Linear Profiles, we are looking for entries with large value. If all of the entries are small, then the S-box does not have a very linear structure, and it may make Linear Cryptanalysis on the cipher difficult. The <em>Linear potential</em> of <em>F</em>, defined as <img class="math" src="images/math/0cd97a6f5673ea237f996be5a57dd63e2857cace.png" alt="\crit{lp}(F) = \frac{1}{2^{2n}} \cdot \stackrel{*}{\max} \left( {\matr{WS}(F)(\vec{u},\vec{v})}^2 \right)"/> is a measure of linearity in Linear Cryptanalysis, and satisfies <img class="math" src="images/math/c0bf65649ce6c00ca61c6ba958574a6048c7bfac.png" alt="2^{-n} \leq \crit{lp}(F) \leq 1"/> so that the lower bound holds if and only if <em>F</em> has maximum nonlinearity (<em>F</em> is bent) and the upper bound is reached when <em>F</em> is linear or affine. This criterion can take values from <img class="math" src="images/math/d90787f6e3cb0aa69556f2e02211fcfb1453b49c.png" alt="\frac{1}{2^n}"/> to 1. The larger <img class="math" src="images/math/3ce6b7bd9c1f6d0e0c6dfa8f25c99e304097b33e.png" alt="\crit{lp}(F)"/> is, the “closer” to a Linear Vector Boolean function is <em>F</em>.</p>
 </div>
 <div class="section" id="id20">
-<h3><a class="toc-backref" href="#id70">Library</a><a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id70">4.7.2. Library</a><a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <p>Note that the Linear Profile does not uniquely determine a Vector Boolean function. Thus, a VBF class cannot be initialized by its Linear Profile. To obtain its representation as Linear Profile, the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">LAT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">LP</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">LAT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">LP</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>In the VBF library, several methods have been defined in order to analyse the feasibility of Linear Cryptanalysis: Linear potential and Linear relations associated with a specific value of the Linear Profile. The method used to obtain the linear potential is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">lp</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">lp</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If we want to obtain the linear expressions associated with the value of the Linear Profile &#8220;w&#8221;, we will use this method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">linear</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
+<p>If we want to obtain the linear expressions associated with the value of the Linear Profile “w”, we will use this method:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">linear</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If we want to obtain the probability bias <img class="math" src="images/math/0bf984fc3a55aa42c0f242a5530c6ac28e8777d8.png" alt="|p_L-\frac{1}{2}|"/> that a linear expression holds with the value of the Linear Profile &#8220;w&#8221;, we will use this method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">ProbLin</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
+<p>If we want to obtain the probability bias <img class="math" src="images/math/0bf984fc3a55aa42c0f242a5530c6ac28e8777d8.png" alt="|p_L-\frac{1}{2}|"/> that a linear expression holds with the value of the Linear Profile “w”, we will use this method:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">ProbLin</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id21">
-<h4>Example<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<h4>4.7.2.1. Example<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
 <p>The following program finds out the Linear Profile of a Vector Boolean function together with the linear expressions that have the highest value, except from the value in <img class="math" src="images/math/934250c46f605b44a65174e1e7b612d01721a541.png" alt="\matr{LP}(F)(\vec{0},\vec{0})"/>, their probability, this highest value and the linear potential.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1079,7 +1082,7 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </pre></div>
 </div>
 <p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Linear Profile is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Linear Profile is:</span>
 <span class="go">[[256 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]</span>
 <span class="go">[0 0 16 16 0 0 16 144 16 16 0 0 16 16 0 0]</span>
 <span class="go">[0 0 16 16 0 0 16 16 0 0 16 16 0 0 144 16]</span>
@@ -1117,9 +1120,9 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div>
 </div>
 <div class="section" id="differential-profile">
-<h2><a class="toc-backref" href="#id71">Differential Profile</a><a class="headerlink" href="#differential-profile" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id71">4.8. Differential Profile</a><a class="headerlink" href="#differential-profile" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id22">
-<h3><a class="toc-backref" href="#id72">Description</a><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id72">4.8.1. Description</a><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <p>The first step of Differential Cryptanalysis is to compute the characteristics of inputs and the outputs of the S-boxes, which we will then combine together to form a characteristic for the complete cipher. Consider a <img class="math" src="images/math/87258a1e3b5c35cdf892710a4afcd3ddb5cfd34f.png" alt="n \times m"/> S-box with input <img class="math" src="images/math/3e5b0dcfd7727974bc0030f19144e9e6e94ebe76.png" alt="\vec{x} = (x_1, \ldots, x_n)"/> and output <img class="math" src="images/math/3998252cccad17fc922591c0b3494faf142dfb06.png" alt="\vec{y} = (y_1,\ldots,y_m)"/>. All difference pairs of an S-box, <img class="math" src="images/math/b5101cf66e37982158684dda581f5275301e2f27.png" alt="(\Delta \vec{x}, \Delta \vec{y})"/>, can be examined and the probability of <img class="math" src="images/math/2a9f35e8af72b468413c4dc744b988a68bd5d8b2.png" alt="\Delta \vec{y}"/> given <img class="math" src="images/math/2dde92fe8758dfcccb09a3fd604f8d9cf62eaa10.png" alt="\Delta \vec{x}"/> can be derived by considering input pairs <img class="math" src="images/math/20197c18316362c3a72ef372571576827e515a47.png" alt="(\vec{x}^{'},\vec{x}^{''})"/> such that <img class="math" src="images/math/23e07b8f83d32c0a21607f53d45f76c08e378d5c.png" alt="\vec{x}^{'}+\vec{x}^{''} = \Delta \vec{x}"/>. Since the ordering of the pair is not relevant, for a <img class="math" src="images/math/87258a1e3b5c35cdf892710a4afcd3ddb5cfd34f.png" alt="n \times m"/> S-box we need only consider all <img class="math" src="images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/> values for <img class="math" src="images/math/54e6a3e05029c95b70a5c6be08f909bc9a092bc3.png" alt="\vec{x}^{'}"/> and then the value of <img class="math" src="images/math/2dde92fe8758dfcccb09a3fd604f8d9cf62eaa10.png" alt="\Delta \vec{x}"/> constrains the value of <img class="math" src="images/math/fcbef3acb87d2ea50f19cf4871fb9e51727942b9.png" alt="\vec{x}^{''}"/> to be <img class="math" src="images/math/0f5e8e165604175d47cd1af41c4bc99b470937d7.png" alt="\vec{x}^{''} = \vec{x}^{'}+\Delta \vec{x}"/>. We can derive the resulting values of <img class="math" src="images/math/2a9f35e8af72b468413c4dc744b988a68bd5d8b2.png" alt="\Delta \vec{y}"/> for each input pair <img class="math" src="images/math/78e3121c80ffefb9115ffe3850ce5135bec71eb6.png" alt="(\vec{x}^{'}, \vec{x}^{''} = \vec{x}^{'}+\Delta \vec{x})"/>.</p>
 <p>We can tabulate the complete differential data for an S-box in the <em>Differential Profile</em> (In the literature, an equivalent matrix called Difference Distribution Table is used as well), which the rows represent <img class="math" src="images/math/2dde92fe8758dfcccb09a3fd604f8d9cf62eaa10.png" alt="\Delta \vec{x}"/> values and the columns represent <img class="math" src="images/math/2a9f35e8af72b468413c4dc744b988a68bd5d8b2.png" alt="\Delta \vec{y}"/> values.</p>
 <p>If we divide each element in the Differential Profile by the value on <img class="math" src="images/math/4a7942e41fdfe5cb2f1290ba63a8a424b99f7646.png" alt="\matr{DP}(F)(\vec{0},\vec{0})"/>, these values represent the probability of the corresponding output difference <img class="math" src="images/math/2a9f35e8af72b468413c4dc744b988a68bd5d8b2.png" alt="\Delta \vec{y}"/> value given the input difference <img class="math" src="images/math/2dde92fe8758dfcccb09a3fd604f8d9cf62eaa10.png" alt="\Delta \vec{x}"/>, that is <img class="math" src="images/math/8be5cfbdd764ddbf4c9ad12c9f555f39337939d2.png" alt="(\Delta \vec{x} \Rightarrow \Delta \vec{y})"/>, called <em>characteristic</em>. In general, entries in the Differential Profile with fewer bits set in the <img class="math" src="images/math/2dde92fe8758dfcccb09a3fd604f8d9cf62eaa10.png" alt="\Delta \vec{x}"/> and <img class="math" src="images/math/2a9f35e8af72b468413c4dc744b988a68bd5d8b2.png" alt="\Delta \vec{y}"/> that have higher probability are desirable.</p>
@@ -1150,29 +1153,29 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 <p>It is a measure of the robustness against differential cryptanalysis where <img class="math" src="images/math/cfecd696c1c0826cd0bbd420cbef8b7cb0d909c1.png" alt="2^{-m} \leq \crit{dp}(F) \leq 1"/> and the lower bound holds if and only if <em>F</em> is bent and the upper bound is reached when <em>F</em> is linear or affine.  The differential uniformity of <img class="math" src="images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> and its differential potential are related by <img class="math" src="images/math/e1012501271ab1f99fdccc5daed1782827062a3b.png" alt="\crit{dp}(F) = 2^{-n} \crit{du}(F)"/>.</p>
 </div>
 <div class="section" id="id24">
-<h3><a class="toc-backref" href="#id73">Library</a><a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id73">4.8.2. Library</a><a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <p>Note that the Differential Profile does not uniquely determine a Vector Boolean function. Thus, a VBF class cannot be initialized by its Differential Profile. To obtain its representation as Differential Profile, the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">DAT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">DP</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">DAT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">DP</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>In the VBF library, several methods have been defined in order to analyse the feasibility of differential cryptanalysis: Differential potential and Differential relations associated with a specific value of the Differential profile. The method used to obtain the differential potential is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">dp</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">dp</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If we want to obtain the characteristics associated with the value of the Differential Profile &#8220;w&#8221;, we will use this method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">differential</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
+<p>If we want to obtain the characteristics associated with the value of the Differential Profile “w”, we will use this method:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">differential</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If we want to obtain the probability that a characteristic <img class="math" src="images/math/8be5cfbdd764ddbf4c9ad12c9f555f39337939d2.png" alt="(\Delta \vec{x} \Rightarrow \Delta \vec{y})"/> holds with the value of the Differential Profile &#8220;w&#8221;, we will use this method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">ProbDif</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
+<p>If we want to obtain the probability that a characteristic <img class="math" src="images/math/8be5cfbdd764ddbf4c9ad12c9f555f39337939d2.png" alt="(\Delta \vec{x} \Rightarrow \Delta \vec{y})"/> holds with the value of the Differential Profile “w”, we will use this method:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">ProbDif</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">RR</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">NTL</span><span class="o">::</span><span class="n">ZZ</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id25">
-<h4>Example<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+<h4>4.8.2.1. Example<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
 <p>The following program finds out the Differential Profile of a Vector Boolean function together with the characteristics that have the highest value, except from the value in <img class="math" src="images/math/4a7942e41fdfe5cb2f1290ba63a8a424b99f7646.png" alt="\matr{DP}(F)(\vec{0},\vec{0})"/>, their probability, this highest value and the differential potential.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1213,7 +1216,7 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </pre></div>
 </div>
 <p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Differential Profile is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Differential Profile is:</span>
 <span class="go">[[4096 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]</span>
 <span class="go">[0 0 0 512 0 0 0 512 0 512 1024 0 1024 512 0 0]</span>
 <span class="go">[0 0 0 512 0 1536 512 512 0 512 0 0 0 0 512 0]</span>
@@ -1248,9 +1251,9 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div>
 </div>
 <div class="section" id="autocorrelation-spectrum">
-<h2><a class="toc-backref" href="#id74">Autocorrelation Spectrum</a><a class="headerlink" href="#autocorrelation-spectrum" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id74">4.9. Autocorrelation Spectrum</a><a class="headerlink" href="#autocorrelation-spectrum" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id26">
-<h3><a class="toc-backref" href="#id75">Description</a><a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id75">4.9.1. Description</a><a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <p>The Autocorrelation provides a useful description of a Vector Boolean function in relation to some cryptographic criteria. It is derived from the sequences of the component functions of the Vector Boolean function and does not uniquely determine the Vector Boolean function itself.</p>
 <p>The <em>directional derivative</em> of <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> in the direction of <img class="math" src="images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> is defined as <img class="math" src="images/math/5b53ea138b97fe111051b301bbbbc65c9a5b77ac.png" alt="\Delta_{\vec{u}}f(\vec{x}) = f(\vec{x}+\vec{u}) + f(\vec{x}), \  \  \vec{x} \in \gf{V_n}"/>.</p>
 <p>Similarly, the <em>directional derivative</em> of the sequence of a Boolean function <img class="math" src="images/math/ded2bf0dea17c6057b9629b0bcff658eb2e1b899.png" alt="\xi_f"/> in the direction of <img class="math" src="images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> is defined as: <img class="math" src="images/math/929556bf10e30c8f9eab3bb70bb72586771323b1.png" alt="\Delta_{\vec{u}} \chi_f(\vec{x}) = \chi_f(\vec{x}+\vec{u}) \cdot \chi_f(\vec{x}), \  \  \vec{x} \in \gf{V_n}"/>.</p>
@@ -1270,7 +1273,7 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </dl>
 </div>
 <div class="section" id="linear-structures">
-<h3><a class="toc-backref" href="#id76">Linear structures</a><a class="headerlink" href="#linear-structures" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id76">4.9.2. Linear structures</a><a class="headerlink" href="#linear-structures" title="Permalink to this headline">¶</a></h3>
 <p>If the <em>directional derivative</em> of <img class="math" src="images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> in the direction of <img class="math" src="images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/>: <img class="math" src="images/math/8724c9c94601c0e6a724cf8b426208302a70e517.png" alt="\Delta_{\vec{u}}f(\vec{x}) = f(\vec{x}+\vec{u}) + f(\vec{x})"/> is a constant function, then <img class="math" src="images/math/2184ff78be3b934ca690852a9d1906d9dcff61dc.png" alt="\vec{u}"/> is a <em>linear structure</em> of <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/> <a class="reference internal" href="bibliography.html#lai-95" id="id29">[Lai:95]</a> <a class="reference internal" href="bibliography.html#chaum-e85" id="id30">[Chaum:E85]</a>. The zero vector <img class="math" src="images/math/9da054dabc9d0fd37e77a582b84686bf6fd970f9.png" alt="\vec{0}"/> is a trivial linear structure since <img class="math" src="images/math/13a69bf784a44f5ef23ab1061f1c51597fe990ba.png" alt="\Delta_{\vec{0}}f(\vec{x}) = 0 \ \ \fa \vec{x} \in \gf{V_n}"/>. From the point of view of autocorrelation, a vector in <img class="math" src="images/math/323bd5c05c5c9e23cbaa1f1b2ec96d5318145d5c.png" alt="\gf{V_n}"/> is a linear structure if it satisfies the following:</p>
 <p>The vector <img class="math" src="images/math/f0923c866b6a63283377ac10f15019157c9b06d5.png" alt="\vec{u} \in \gf{V_n}"/> is a linear structure of <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/> if and only if <img class="math" src="images/math/dc462f436bfacb6af32ffaa13e056b4fd50999c7.png" alt="|\R_f(\vec{u})|= 2^n"/>.</p>
 <p>The notion of linear structures can be extended for the case of Vector Boolean functions. The definition of a Vector Boolean function that has a linear structure was originally proposed by Chaum <a class="reference internal" href="bibliography.html#chaum-e85" id="id31">[Chaum:E85]</a> and Evertse <a class="reference internal" href="bibliography.html#evertse-87" id="id32">[Evertse:87]</a>. They defined that a Vector Boolean function <em>F</em> has a linear structure by considering the existence of nontrivial linear structure in any of the component functions of <em>F</em>.</p>
@@ -1279,21 +1282,21 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 <p>Nonlinear cryptographic functions used in block ciphers should have no nonzero linear structures <a class="reference internal" href="bibliography.html#evertse-87" id="id33">[Evertse:87]</a>. The existence of nonzero linear structures, for the functions implemented in stream ciphers, is a potential risk that should also be avoided, despite the fact that such existence could not be used in attacks, so far.</p>
 </div>
 <div class="section" id="id34">
-<h3><a class="toc-backref" href="#id77">Library</a><a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id77">4.9.3. Library</a><a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
 <p>To obtain its representation as Autocorrelation Spectrum, the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">AC</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">R</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">AC</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">R</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the linear structures is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">LS</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">LS</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id35">
-<h4>Example<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h4>
+<h4>4.9.3.1. Example<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h4>
 <p>The following program finds out the Autocorrelation Spectrum of a Vector Boolean function together with its linear structures having as input its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1321,7 +1324,7 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </pre></div>
 </div>
 <p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Autocorrelation Spectrum is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Autocorrelation Spectrum is:</span>
 <span class="go">[[16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16]</span>
 <span class="go">[16 0 0 0 0 0 -8 -8 -8 -8 -8 8 0 0 8 8]</span>
 <span class="go">[16 -8 0 -8 -8 0 0 8 8 -8 0 0 -8 8 -8 8]</span>
@@ -1357,30 +1360,30 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div>
 </div>
 <div class="section" id="affine-function-and-affine-equivalence">
-<h2><a class="toc-backref" href="#id78">Affine function and affine equivalence</a><a class="headerlink" href="#affine-function-and-affine-equivalence" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id78">4.10. Affine function and affine equivalence</a><a class="headerlink" href="#affine-function-and-affine-equivalence" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id36">
-<h3><a class="toc-backref" href="#id79">Description</a><a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id79">4.10.1. Description</a><a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
 <p>A Boolean linear function is defined as a Boolean function consisting only of the sum of single input variables. Similarly, the set of Boolean affine functions is defined as the set of linear functions and their complements. A mathematical description of the linear and affine Boolean functions is given as follows.</p>
 <p>A Boolean linear function is defined as the sum of a subset of the input variables, denoted <img class="math" src="images/math/521e16a6b63afc7bf54a70f6348dc88498226773.png" alt="l_{\vec{u}}(\vec{x})=u_1x_1+u_2x_2+ \cdots + u_nx_n"/> where <img class="math" src="images/math/ee197c074fee1b4261bed9d08736423f752ee18f.png" alt="\vec{u} = (u_1, \ldots, u_n) \in \gf{V_n}"/>.</p>
 <p>The set of Boolean affine functions are the linear functions and their complements, denoted <img class="math" src="images/math/9e47aa3d71a6add55a8ca8316ea6a28753692a9f.png" alt="l_{\vec{u},b}(\vec{x})=l_{\vec{u}}(\vec{x})+b"/> where <img class="math" src="images/math/196f2e1103a6c8cb0c171c70f4daed5d51c36fbf.png" alt="b \in \gf{GF(2)}"/>.</p>
 <p>An affine Vector Boolean function is defined in terms of a linear Vector Boolean function and a dyadic shift. A linear Vector Boolean function involves the multiplication of the input vector by a Boolean matrix. A dyadic shift (or translation) involves the complement of a subset of input bits. As such, an affine Vector Boolean function may be defined as the combination of a linear Vector Boolean function and dyadic shift.  A mathematical description of the linear and affine Vector Boolean functions is given as follows.</p>
 <p>A Vector Boolean function <img class="math" src="images/math/24a983823326e26d6b24e8edb443211a36d83da5.png" alt="L_{\matr{A},\vec{b}} \in \funct{F}_{n,m}"/> defined as <img class="math" src="images/math/a28a9d9c9b6f8a489e2e2a372454208a9f0715b1.png" alt="L_{\matr{A},\vec{b}}(\vec{x}) = \vec{x} \cdot \matr{A} + \vec{b}"/> with <img class="math" src="images/math/48e9bee1b739ea5e5ecbfbd959e4c3f0cd366474.png" alt="\vec{x} \in \gf{V_n}, \matr{A} \in \matr{M}_{n \times m}(\gf{GF(2)})"/> and <img class="math" src="images/math/a0ed464f1eb901308df2eca66c96d9541f9046f0.png" alt="\vec{b} \in \gf{V_m}"/> so that if <img class="math" src="images/math/a8248531f2ca7fea7bcbe1a6fab234e4b53974bd.png" alt="\vec{b} = \vec{0}"/> then <em>F</em> is linear and if <img class="math" src="images/math/e5f0c40cc6b564c0c6e11acf6894785892210140.png" alt="\vec{b} \neq \vec{0}"/> then <em>F</em> is affine.</p>
 <div class="section" id="affine-equivalence-of-boolean-functions">
-<h4>Affine equivalence of Boolean functions<a class="headerlink" href="#affine-equivalence-of-boolean-functions" title="Permalink to this headline">¶</a></h4>
+<h4>4.10.1.1. Affine equivalence of Boolean functions<a class="headerlink" href="#affine-equivalence-of-boolean-functions" title="Permalink to this headline">¶</a></h4>
 <p>Equivalence classes provide a powerful tool in both the construction and analysis of Boolean functions for cryptography. In particular, rather than considering the entire space of <img class="math" src="images/math/907cf8bac7b21b98c70c835680a64af9299c29e2.png" alt="2^{2^n}"/> functions a reduced view can be found in the consideration of only one function from each equivalence class.</p>
 <p>If <img class="math" src="images/math/2b37ae628979b1093c77a0921d8332660be0f3ff.png" alt="g(\vec{x}) = f(\matr{A} \vec{x} + \vec{b}) + \vec{c}\vec{x}+d"/></p>
 <p>where <img class="math" src="images/math/3a2bf70d991700424ec2ca2ccfbd1f419f635241.png" alt="\matr{A} \in \matr{M}_{n \times n}(\gf{GF(2)})"/>    non-singular, <img class="math" src="images/math/27c874d3e863fc2d5c60280f090acb39e4ecdee1.png" alt="\vec{b}, \vec{c} \in \gf{V_n}"/> and <img class="math" src="images/math/649c3612a8e4e864ac037ae0eaa5a10c05b2c21a.png" alt="d \in \gf{GF(2)}"/> and it is an affine transformation. The functions <em>f</em> and <em>g</em> satisfying the previous equation are called equivalent under the action of <img class="math" src="images/math/5388ac9fa38b50eaa4c29c895418a823e22c6d27.png" alt="AGL(n, 2)"/>.</p>
 <p>Of particular interest in the study of equivalence classes is the effect of the affine transformation on the algebraic degree, the Walsh Spectrum and Autocorrelation Spectrum of a Boolean function.</p>
 </div>
 <div class="section" id="frequency-distribution-of-absolute-values-of-walsh-spectrum">
-<h4>Frequency distribution of absolute values of Walsh Spectrum<a class="headerlink" href="#frequency-distribution-of-absolute-values-of-walsh-spectrum" title="Permalink to this headline">¶</a></h4>
+<h4>4.10.1.2. Frequency distribution of absolute values of Walsh Spectrum<a class="headerlink" href="#frequency-distribution-of-absolute-values-of-walsh-spectrum" title="Permalink to this headline">¶</a></h4>
 <p>The effect of the application of an affine transformation to a Boolean function on the Walsh Spectrum is to rearrange the values and hence, the Walsh value distributions are invariant under all affine transformations <a class="reference internal" href="bibliography.html#preneel-93" id="id37">[Preneel:93]</a>:</p>
 <div class="math">
 <p><img src="images/math/0d1ce6972f39a1a4419694299cea50acaac767b9.png" alt="\walsh{\chi}_g(\vec{u}) = (-1)^{\vec{c} \cdot \matr{A}^{-1} \vec{b}} (-1)^{\vec{u} \cdot \matr{A}^{-1} \vec{b}} \walsh{\chi}_f\left( \left(  \matr{A}^{-1} \right) \vec{u} + \left(  \matr{A}^{-1} \right) \vec{c} \right)"/></p>
 </div><p>Thus nonlinearity is also invariant under affine transformation.</p>
 </div>
 <div class="section" id="frequency-distribution-of-absolute-values-of-autocorrelation-spectrum">
-<h4>Frequency distribution of absolute values of Autocorrelation Spectrum<a class="headerlink" href="#frequency-distribution-of-absolute-values-of-autocorrelation-spectrum" title="Permalink to this headline">¶</a></h4>
+<h4>4.10.1.3. Frequency distribution of absolute values of Autocorrelation Spectrum<a class="headerlink" href="#frequency-distribution-of-absolute-values-of-autocorrelation-spectrum" title="Permalink to this headline">¶</a></h4>
 <p>The effect of the application of an affine transformation to a Boolean function on the Autocorrelation Spectrum is to rearrange the values and hence, the Autocorrelation value distributions are invariant under all affine transformations <a class="reference internal" href="bibliography.html#preneel-93" id="id38">[Preneel:93]</a>:</p>
 <div class="math">
 <p><img src="images/math/a063712e3e5873093fc91785d8b5dcf3f53fd39e.png" alt="\R_{g}(\vec{u}) = (-1)^{\vec{u} \cdot \vec{c} } \R_{f}(         \matr{A} \vec{u})"/></p>
@@ -1388,27 +1391,27 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div>
 </div>
 <div class="section" id="id39">
-<h3><a class="toc-backref" href="#id80">Library</a><a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id80">4.10.2. Library</a><a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
 <p>A VBF class can be initialized for a affine Vector Boolean function giving its corresponding matrix and vector by the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putaffine</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">A</span><span class="p">,</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_GF2</span><span class="o">&amp;</span>        <span class="n">b</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putaffine</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">A</span><span class="p">,</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_GF2</span><span class="o">&amp;</span>        <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the Frequency distribution of the absolute values of the Walsh Spectrum is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">printFWH</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">printFWH</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the Frequency distribution of the absolute values of the Autocorrelation Spectrum is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">printFAC</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">printFAC</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id40">
-<h4>Example<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h4>
+<h4>4.10.2.1. Example<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h4>
 <p>The following program finds out the Walsh Spectrum, Frequency distribution of the absolute values of the Walsh Spectrum,  Autocorrelation Spectrum, and Frequency distribution of the absolute values of the Autocorrelation Spectrum of a Vector Boolean function having as input the matrix <img class="math" src="images/math/4b28f45d9c57739a44e809d69efb07ebcabc7301.png" alt="\matr{A}"/> and the vector <img class="math" src="images/math/baf2c95f878c731cf7909331acbc3f1451d67a35.png" alt="\vec{b}"/> associated with an affine function where:</p>
 <div class="math">
 <p><img src="images/math/36ebf777116f7b9cc6a10f9c4f78e84aaa21ed5a.png" alt="\matr{A} = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \\ \end{bmatrix}, \ \ \vec{b} = (0,1)"/></p>
-</div><div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+</div><div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1447,7 +1450,7 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </pre></div>
 </div>
 <p>The output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Walsh Spectrum is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Walsh Spectrum is:</span>
 <span class="go">[[4 0 0 0]</span>
 <span class="go">[0 0 4 0]</span>
 <span class="go">[0 -4 0 0]</span>
@@ -1475,9 +1478,9 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 </div>
 </div>
 <div class="section" id="cycle-structure-fixed-points-and-negated-fixed-points">
-<h2><a class="toc-backref" href="#id81">Cycle structure, fixed points and negated fixed points</a><a class="headerlink" href="#cycle-structure-fixed-points-and-negated-fixed-points" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id81">4.11. Cycle structure, fixed points and negated fixed points</a><a class="headerlink" href="#cycle-structure-fixed-points-and-negated-fixed-points" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id41">
-<h3><a class="toc-backref" href="#id82">Description</a><a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id82">4.11.1. Description</a><a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
 <p>The <em>cycle structure</em> of an invertible vector Boolean function <img class="math" src="images/math/214dc8e43abe968464421883287c148a68e97541.png" alt="F \in \funct{F}_{n,n}"/> (permutation) describes the number of cycles and their length.</p>
 <p>A permutation can also be written in a way that groups together the images of a given number under repeated applications of <em>F</em>. For example, the permutation:</p>
 <div class="math">
@@ -1500,29 +1503,29 @@ x_n+a_{12}x_1x_2+\dotsb+a_{n-1,n}x_{n-1}x_n+\dotsb \\ &amp;+a_{12\dots n}x_1x_2\
 negated fixed points is considered to be not well designed, since it lacks the needed randomness.</p>
 </div>
 <div class="section" id="id42">
-<h3><a class="toc-backref" href="#id83">Library</a><a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id83">4.11.2. Library</a><a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
 <p>The method used to obtain the Cycle Structure is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Cycle</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">vec_ZZ</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">Cycle</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">vec_ZZ</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to print the Cycle structure so that each row has two values separated by a comma: the first one is the Cycle length and the second one is the number of cycles for this length.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">printCycle</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">printCycle</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The fixed points of <em>F</em> are obtained by this method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">fixedpoints</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">fixedpoints</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The negated fixed points of <em>F</em> are obtained by this method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">negatedfixedpoints</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span> <span class="n">negatedfixedpoints</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id43">
-<h4>Example<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h4>
+<h4>4.11.2.1. Example<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h4>
 <p>The following program prints the cycle structure of a Vector Boolean function having as input its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1556,7 +1559,7 @@ negated fixed points is considered to be not well designed, since it lacks the n
 </pre></div>
 </div>
 <p>If we use as input of this program the Truth Table of <em>NibbleSub</em>, the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Cycle Structure is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Cycle Structure is:</span>
 <span class="go">2,1</span>
 <span class="go">14,1</span>
 
@@ -1592,7 +1595,7 @@ negated fixed points is considered to be not well designed, since it lacks the n
 </tbody>
 </table>
 <p>It has no fixed points and 2 negated fixed points which are the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">[0 0 1 0]</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">[0 0 1 0]</span>
 <span class="go">[0 1 1 1]</span>
 </pre></div>
 </div>
@@ -1601,31 +1604,31 @@ negated fixed points is considered to be not well designed, since it lacks the n
 </div>
 </div>
 <div class="section" id="permutation-matrix">
-<h2><a class="toc-backref" href="#id84">Permutation matrix</a><a class="headerlink" href="#permutation-matrix" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id84">4.12. Permutation matrix</a><a class="headerlink" href="#permutation-matrix" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id44">
-<h3><a class="toc-backref" href="#id85">Description</a><a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id85">4.12.1. Description</a><a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
 <p>If <em>F</em> is a Boolean permutation, that is, it is bijective and has the same number of input bits as output bits <em>(n=m)</em>, then it can be defined as an array: <img class="math" src="images/math/00e110c5c1b44f2cecd59b332031cc3768954838.png" alt="F = \begin{bmatrix} F(1) &amp; \dots &amp; F(n) \end{bmatrix}"/> where <img class="math" src="images/math/92f7118ddcb99496e218c971a8bc1221d1f01963.png" alt="F(i)"/> is the output bit of the input bit <em>i</em> for <em>F</em>.</p>
 </div>
 <div class="section" id="id45">
-<h3><a class="toc-backref" href="#id86">Library</a><a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id86">4.12.2. Library</a><a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
 <p>A VBF class can be initialized giving its permutation vector with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putper</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_ZZ</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putper</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_ZZ</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain its representation as permutation vector, the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">PER</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">vec_ZZ</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">PER</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">vec_ZZ</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id46">
-<h4>Example<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h4>
+<h4>4.12.2.1. Example<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h4>
 <p>The following program finds out the Truth Table of a Vector Boolean function having as input its Permutation Vector:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">[ 1 2 3 4 13 14 15 16 9 10 11 12 5 6 7 8 ]</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">[ 1 2 3 4 13 14 15 16 9 10 11 12 5 6 7 8 ]</span>
 </pre></div>
 </div>
 <p>For example, you can see bit 13 moves to bit 5, while bit 5 moves to bit 13.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1651,7 +1654,7 @@ negated fixed points is considered to be not well designed, since it lacks the n
 </pre></div>
 </div>
 <p>The first 10 lines of the output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Truth Table is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Truth Table is:</span>
 <span class="go">[[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]</span>
 <span class="go">[0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0]</span>
 <span class="go">[0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0]</span>
@@ -1667,7 +1670,7 @@ negated fixed points is considered to be not well designed, since it lacks the n
 </div>
 </div>
 <div class="section" id="des-representations">
-<h2><a class="toc-backref" href="#id87">DES representations</a><a class="headerlink" href="#des-representations" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id87">4.13. DES representations</a><a class="headerlink" href="#des-representations" title="Permalink to this headline">¶</a></h2>
 <p>The VBF library accepts to types of representations of DES <a class="reference internal" href="bibliography.html#des-77" id="id47">[DES:77]</a> components:</p>
 <ol class="arabic">
 <li><p class="first"><em>Expansion and Compression DES permutations</em>. It can be used to represent both the Compression Permutation in the Key Transformation of DES and the Expansion Permutation Feistel Function of the DES cipher. The Compression Permutation permutes the order of the bits as well as selects a subset of bits. The Expansion Permutation expands the right half of the data, <img class="math" src="images/math/ed835b78069d5348d1ce94398c518cbee1950b44.png" alt="R_i"/>, from 32 bits to 48 bits. Because this operation changes the order of the bits as well as repeating certain bits, it is known as an expansion permutation.</p>
@@ -1677,37 +1680,37 @@ negated fixed points is considered to be not well designed, since it lacks the n
 <div><p>The input bits specify an entry in the S-box as follows: Consider an S-box input of 6-bits,
 labeled <img class="math" src="images/math/913cbd25d2bec04ecc2625eebd0ccc74fcf030a3.png" alt="b_1, b_2, b_3, b_4, b_5,"/> and <img class="math" src="images/math/a85806cab2e73b560c53439f18e28bcd4f37ce07.png" alt="b_6"/>. Bits <img class="math" src="images/math/77a665c9e4f7ebad9caa0bd1a24954bafcff27ca.png" alt="b_1"/> and <img class="math" src="images/math/a85806cab2e73b560c53439f18e28bcd4f37ce07.png" alt="b_6"/> are combined to form a 2-bit number, from 0 to 3, which corresponds to a row in the table. The middle 4 bits, <img class="math" src="images/math/b3ecd741da111cef43b0fbe6cd3419cb34a5a2b5.png" alt="b_2"/> through <img class="math" src="images/math/c5e72a390ddd98a7cc827e6bc59ecb3904ffb528.png" alt="b_5"/>, are combined to form a 4-bit number, from 0 to 15, which corresponds to a column in the table.</p>
 <p>For example, assume that the input to the first S-box (i.e. bits 1 to 6 of the XOR function) is <em>110011</em>. The first and last bits combine to form <em>11</em>, which corresponds to row 3 of the first S-box. The middle 4 bits combine to form <em>1001</em>, which corresponds to the column 9 of the same S-box. The entry under row 3, column 9 of S-box 1 is 11 (count rows and columns starting from 0). The value <em>1110</em> is substituted for <em>001011</em></p>
-<p>The following figures list the eight S-boxes used in DES. Each S-box replaces a 6-bit input with a 4-bit output. Given a 6-bit input, the 4-bit output is found by selecting the row using the outer two bits, and the column using the inner four bits. For example, an input &#8220;011011&#8221; has outer bits &#8220;01&#8221; and inner bits &#8220;1101&#8221;; noting that the first row is &#8220;00&#8221; and the first column is &#8220;0000&#8221;, the corresponding output for S-box S5 would be &#8220;1001&#8221; (=9), the value in the second row, 14th column.</p>
+<p>The following figures list the eight S-boxes used in DES. Each S-box replaces a 6-bit input with a 4-bit output. Given a 6-bit input, the 4-bit output is found by selecting the row using the outer two bits, and the column using the inner four bits. For example, an input “011011” has outer bits “01” and inner bits “1101”; noting that the first row is “00” and the first column is “0000”, the corresponding output for S-box S5 would be “1001” (=9), the value in the second row, 14th column.</p>
 <a class="reference internal image-reference" href="images/S1-4.png"><img alt="images/S1-4.png" class="align-center" src="images/S1-4.png" style="width: 750px;" /></a>
 <a class="reference internal image-reference" href="images/S5-8.png"><img alt="images/S5-8.png" class="align-center" src="images/S5-8.png" style="width: 750px;" /></a>
 </div></blockquote>
 </li>
 </ol>
 <div class="section" id="id48">
-<h3><a class="toc-backref" href="#id88">Library</a><a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id88">4.13.1. Library</a><a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
 <p>A VBF class can be initialized giving its Expansion and Compression DES permutation vector with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putexp_comp</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_ZZ</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putexp_comp</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_ZZ</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized giving its DES-like S-box representation matrix with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putsbox</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">S</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putsbox</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">S</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="id49">
-<h4>Example<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h4>
+<h4>4.13.1.1. Example<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h4>
 <p>The following program prints the Truth Table of a Expansion permutation and of the DES S1 S-box. The inputs are respectively the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">[ 4 1 2 3 4 1 ]</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">[ 4 1 2 3 4 1 ]</span>
 </pre></div>
 </div>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">[[14 4 13 1 2 15 11 8 3 10 6 12 5 9 0 7 ]</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">[[14 4 13 1 2 15 11 8 3 10 6 12 5 9 0 7 ]</span>
 <span class="go">[ 0 15 7 4 14 2 13 1 10 6 12 11 9 5 3 8 ]</span>
 <span class="go">[ 4 1 14 8 13 6 2 11 15 12 9 7 3 10 5 0]</span>
 <span class="go">[ 15 12 8 2 4 9 1 7 5 11 3 14 10 0 6 13]]</span>
 </pre></div>
 </div>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -1745,7 +1748,7 @@ labeled <img class="math" src="images/math/913cbd25d2bec04ecc2625eebd0ccc74fcf03
 </pre></div>
 </div>
 <p>The output of the program would be the following (Only a few values of S1 Truth Table is printed for space reasons):</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Truth Table of Expansion Permutation is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Truth Table of Expansion Permutation is:</span>
 <span class="go">[[0 0 0 0 0 0]</span>
 <span class="go">[1 0 0 0 1 0]</span>
 <span class="go">[0 0 0 1 0 0]</span>
@@ -1788,7 +1791,7 @@ labeled <img class="math" src="images/math/913cbd25d2bec04ecc2625eebd0ccc74fcf03
 </div>
 </div>
 <div class="section" id="auxiliary-functions">
-<h2><a class="toc-backref" href="#id89">Auxiliary functions</a><a class="headerlink" href="#auxiliary-functions" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id89">4.14. Auxiliary functions</a><a class="headerlink" href="#auxiliary-functions" title="Permalink to this headline">¶</a></h2>
 <p>In order to compute the matrices described above, some functions have been
 implemented which allow to obtain some of these matrices from others:</p>
 <ol class="arabic simple">
@@ -1801,7 +1804,7 @@ implemented which allow to obtain some of these matrices from others:</p>
 </ol>
 </div>
 <div class="section" id="summary">
-<h2><a class="toc-backref" href="#id90">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id90">4.15. Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>Table <a class="reference internal" href="representations_d/summary.html#representation"><span class="std std-ref">Representations Table</span></a> lists the member functions related to
 methods of vector Boolean functions initialization. Table
 <a class="reference internal" href="representations_d/summary.html#characterization"><span class="std std-ref">Characterizations Table</span></a> lists the member functions related to the characterizations of vector Boolean functions as described above. Most of the member
@@ -1973,10 +1976,10 @@ functions of <em>VBF</em> have an in-line definition, for instance: <code class=
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="criteria.html" class="btn btn-neutral float-right" title="Cryptographic Criteria" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="criteria.html" class="btn btn-neutral float-right" title="5. Cryptographic Criteria" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="using.html" class="btn btn-neutral" title="Using the library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="using.html" class="btn btn-neutral" title="3. Using the library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -2008,7 +2011,6 @@ functions of <em>VBF</em> have an in-line definition, for instance: <code class=
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

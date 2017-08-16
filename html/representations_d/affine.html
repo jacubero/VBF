@@ -58,6 +58,9 @@
           
 
           
+            
+            <img src="../_static/wrapping_paper-binary.jpg" class="logo" />
+          
           </a>
 
           
@@ -89,19 +92,19 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">3. Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">4. Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">7. Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">8. Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">10. Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">11. Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -199,15 +202,15 @@
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>A VBF class can be initialized for a affine Vector Boolean function giving its corresponding matrix and vector by the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putaffine</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">A</span><span class="p">,</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_GF2</span><span class="o">&amp;</span>        <span class="n">b</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putaffine</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">A</span><span class="p">,</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_GF2</span><span class="o">&amp;</span>        <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the Frequency distribution of the absolute values of the Walsh Spectrum is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">printFWH</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">printFWH</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The method used to obtain the Frequency distribution of the absolute values of the Autocorrelation Spectrum is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">printFAC</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">printFAC</span><span class="p">(</span><span class="n">NTL_SNS</span> <span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
@@ -215,9 +218,9 @@
 <p>The following program finds out the Walsh Spectrum, Frequency distribution of the absolute values of the Walsh Spectrum,  Autocorrelation Spectrum, and Frequency distribution of the absolute values of the Autocorrelation Spectrum of a Vector Boolean function having as input the matrix <img class="math" src="../images/math/4b28f45d9c57739a44e809d69efb07ebcabc7301.png" alt="\matr{A}"/> and the vector <img class="math" src="../images/math/baf2c95f878c731cf7909331acbc3f1451d67a35.png" alt="\vec{b}"/> associated with an affine function where:</p>
 <div class="math">
 <p><img src="../images/math/36ebf777116f7b9cc6a10f9c4f78e84aaa21ed5a.png" alt="\matr{A} = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \\ \end{bmatrix}, \ \ \vec{b} = (0,1)"/></p>
-</div><div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+</div><div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -256,7 +259,7 @@
 </pre></div>
 </div>
 <p>The output of the program would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Walsh Spectrum is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Walsh Spectrum is:</span>
 <span class="go">[[4 0 0 0]</span>
 <span class="go">[0 0 4 0]</span>
 <span class="go">[0 -4 0 0]</span>
@@ -320,7 +323,6 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

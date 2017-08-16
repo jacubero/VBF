@@ -58,6 +58,9 @@
           
 
           
+            
+            <img src="../_static/wrapping_paper-binary.jpg" class="logo" />
+          
           </a>
 
           
@@ -89,19 +92,19 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">3. Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">4. Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">7. Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">8. Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">10. Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">11. Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -171,7 +174,7 @@
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="galib">
 <h3>Galib<a class="headerlink" href="#galib" title="Permalink to this headline">¶</a></h3>
-<p>The Genetic Algorithm Library called GAlib was (straightforwardly) linked with our VBF library to perform a search of Boolean functions with good combined cryptographic criteria. In using the GAlib library we will work primarily with two classes: a genome and a genetic algorithm. Each genome instance represents a single solution to our optimization problem. The genetic algorithm object defines how the evolution should take place. The genetic algorithm uses an objective function to determine how &#8216;fit&#8217; each genome is for survival. It uses the genome operators (built into the genome) and selection/replacement strategies (built into the genetic algorithm) to generate new individuals.</p>
+<p>The Genetic Algorithm Library called GAlib was (straightforwardly) linked with our VBF library to perform a search of Boolean functions with good combined cryptographic criteria. In using the GAlib library we will work primarily with two classes: a genome and a genetic algorithm. Each genome instance represents a single solution to our optimization problem. The genetic algorithm object defines how the evolution should take place. The genetic algorithm uses an objective function to determine how ‘fit’ each genome is for survival. It uses the genome operators (built into the genome) and selection/replacement strategies (built into the genetic algorithm) to generate new individuals.</p>
 <p>The following three items must be defined in order to solve an optimization problem using a genetic algorithm: A representation, the genetic operators and the objective function.</p>
 <p>The <em>genetic algorithm</em> object determines which individuals should survive, which should reproduce, and which should die. It also records statistics and decides how long the evolution should continue. The algorithm updates the population of solutions over a number of iterations (or generations*). We have used the number of generations as a stopping measure. In each iteration a number of steps are involved:</p>
 <ol class="arabic simple">
@@ -180,7 +183,7 @@
 <li>Mutation of the offspring.</li>
 <li>Selection from the mutated offspring and the current population of solutions to determine the population of solutions for the next iteration.</li>
 </ol>
-<p>Among the many different types of genetic algorithms offered by GAlib we have chosen the standard &#8216;simple genetic algorithm&#8217; described by Goldberg in his book <a class="reference internal" href="../bibliography.html#goldberg-1989" id="id1">[Goldberg:1989]</a>. This algorithm uses non-overlapping populations and optional elitism. Each generation the algorithm creates an entirely new population of individuals.</p>
+<p>Among the many different types of genetic algorithms offered by GAlib we have chosen the standard ‘simple genetic algorithm’ described by Goldberg in his book <a class="reference internal" href="../bibliography.html#goldberg-1989" id="id1">[Goldberg:1989]</a>. This algorithm uses non-overlapping populations and optional elitism. Each generation the algorithm creates an entirely new population of individuals.</p>
 </div>
 <div class="section" id="representation">
 <h3>Representation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h3>
@@ -189,9 +192,9 @@
 <div class="section" id="genetic-operators">
 <h3>Genetic operators<a class="headerlink" href="#genetic-operators" title="Permalink to this headline">¶</a></h3>
 <p>Each genome has three primary <em>operators</em>: initialization, mutation, and crossover. With these operators you can bias an initial population, define a mutation or crossover specific to our representation, or evolve parts of the genetic algorithm as our population evolves.</p>
-<p>The <em>initialization operator</em> determines how the genome is initialized. It is called when you initialize a population or the genetic algorithm. This operator does not actually create new genomes, rather it &#8216;stuffs&#8217; the genomes with the primordial genetic material from which all solutions will evolve. We have used a uniform random initialization operator.</p>
+<p>The <em>initialization operator</em> determines how the genome is initialized. It is called when you initialize a population or the genetic algorithm. This operator does not actually create new genomes, rather it ‘stuffs’ the genomes with the primordial genetic material from which all solutions will evolve. We have used a uniform random initialization operator.</p>
 <p>The <em>mutation operator</em> defines the procedure for mutating each genome. The mutation operation introduces randomness to the population of solutions. Mutation is generally applied to the children which result from the breeding process. We have used the typical mutator for a binary string genome which flips the bits in the string with a given probability (uniform random bit flip).</p>
-<p>The <em>crossover operator</em> defines the procedure for generating a child from two parent genomes in order to obtain offspring. The crossover operation involves selecting two &#8220;parents&#8221; from the current population of solutions, picking a random point in the binary string representing each of the parents and swapping the values beyond that point between the two parents. This process results in two &#8220;children&#8221; with some characteristics of each of the parents.</p>
+<p>The <em>crossover operator</em> defines the procedure for generating a child from two parent genomes in order to obtain offspring. The crossover operation involves selecting two “parents” from the current population of solutions, picking a random point in the binary string representing each of the parents and swapping the values beyond that point between the two parents. This process results in two “children” with some characteristics of each of the parents.</p>
 </div>
 <div class="section" id="weighted-objective-functions">
 <h3>Weighted Objective Functions<a class="headerlink" href="#weighted-objective-functions" title="Permalink to this headline">¶</a></h3>
@@ -230,7 +233,7 @@ function:</p>
 <div class="section" id="implementation">
 <h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
 <p>In order to use Galib library, the installation instructions described in <a class="reference external" href="http://lancet.mit.edu/galib-2.4/Installation.html">Installation Instructions for GAlib</a> must be followed. Once Galib is installed, we can use this library in conjunction with VBF library by using the following Makefile:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span>include makevars
+<div class="highlight-c"><div class="highlight"><pre>include makevars
 
 ############# User settings ######################
 
@@ -262,14 +265,14 @@ clean:
         rm -f *.exe
 </pre></div>
 </div>
-<p>Note that a file called &#8220;makevars&#8221; must be present in the same directory as the Makefile file.</p>
+<p>Note that a file called “makevars” must be present in the same directory as the Makefile file.</p>
 <p>Example program for each of the objective functions could be the following:</p>
-<div class="literal-block-wrapper docutils container" id="o1-cpp">
+<div class="literal-block-wrapper container" id="o1-cpp">
 <div class="code-block-caption"><span class="caption-text">o1.cpp</span><a class="headerlink" href="#o1-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -350,12 +353,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="o2-cpp">
+<div class="literal-block-wrapper container" id="o2-cpp">
 <div class="code-block-caption"><span class="caption-text">o2.cpp</span><a class="headerlink" href="#o2-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -441,12 +444,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="o3-cpp">
+<div class="literal-block-wrapper container" id="o3-cpp">
 <div class="code-block-caption"><span class="caption-text">o3.cpp</span><a class="headerlink" href="#o3-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -535,12 +538,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="o4-cpp">
+<div class="literal-block-wrapper container" id="o4-cpp">
 <div class="code-block-caption"><span class="caption-text">o4.cpp</span><a class="headerlink" href="#o4-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -631,12 +634,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="o5-cpp">
+<div class="literal-block-wrapper container" id="o5-cpp">
 <div class="code-block-caption"><span class="caption-text">o5.cpp</span><a class="headerlink" href="#o5-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -731,11 +734,11 @@ clean:
 </pre></div>
 </div>
 </div>
-<p>The following program illustrates how can be set the seed (included in a file called &#8220;seed.bin&#8221; with the binary representation of the Truth Table of the function) of the Genetic algorithm for the o4 objective function:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<p>The following program illustrates how can be set the seed (included in a file called “seed.bin” with the binary representation of the Truth Table of the function) of the Genetic algorithm for the o4 objective function:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+<span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+<span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="cp">#define cout STD_COUT</span>
 
@@ -864,7 +867,6 @@ clean:
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

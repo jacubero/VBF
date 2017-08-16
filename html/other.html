@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Analysis of other cryptographic algorithms &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  <title>10. Analysis of other cryptographic algorithms &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
-        <link rel="next" title="Design of cryptographically robust Vector Boolean functions" href="design.html"/>
-        <link rel="prev" title="Analysis of NESSIE project cryptographic algorithms" href="nessie.html"/> 
+        <link rel="next" title="11. Design of cryptographically robust Vector Boolean functions" href="design.html"/>
+        <link rel="prev" title="9. Analysis of NESSIE project cryptographic algorithms" href="nessie.html"/> 
 
   
   <script src="static/js/modernizr.min.js"></script>
@@ -59,6 +59,9 @@
             <a href="index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
           
 
+          
+            
+            <img src="_static/wrapping_paper-binary.jpg" class="logo" />
           
           </a>
 
@@ -91,173 +94,173 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis of other cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#des">DES</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#s1">S1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#representations">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#other-useful-information-in-cryptanalysis">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">3. Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">4. Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aes.html">7. Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">8. Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Analysis of other cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#des">10.1. DES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">10.1.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">10.1.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s1">10.1.3. S1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#representations">10.1.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-useful-information-in-cryptanalysis">10.1.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s2">S2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id10">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s2">10.1.4. S2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">10.1.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">10.1.4.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s3">S3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id11">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id20">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s3">10.1.5. S3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">10.1.5.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">10.1.5.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s4">S4</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id21">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id30">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s4">10.1.6. S4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id21">10.1.6.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id30">10.1.6.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s5">S5</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id31">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id40">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s5">10.1.7. S5</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id31">10.1.7.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id40">10.1.7.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s6">S6</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id41">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id50">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s6">10.1.8. S6</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id41">10.1.8.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id50">10.1.8.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s7">S7</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id51">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id60">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s7">10.1.9. S7</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id51">10.1.9.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id60">10.1.9.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s8">S8</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id61">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id70">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#kasumi">KASUMI</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id71">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id72">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id73">S7</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id74">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id83">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s9">S9</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id84">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id94">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#fi">FI</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#macguffin">MacGuffin</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id95">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id96">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id97">S1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id98">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id107">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id108">S2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id109">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id118">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id119">S3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id120">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id129">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id130">S4</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id131">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id140">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id141">S5</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id142">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id151">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id152">S6</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id153">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id162">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id163">S7</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id164">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id173">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id174">S8</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id175">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id184">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s8">10.1.10. S8</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id61">10.1.10.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id70">10.1.10.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#mini-aes">Mini-AES</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id185">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id187">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#nibblesub">NibbleSub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id188">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id197">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kasumi">10.2. KASUMI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id71">10.2.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id72">10.2.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id73">10.2.3. S7</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id74">10.2.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id83">10.2.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#nibblesubinv">NibbleSubInv</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id198">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id211">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s9">10.2.4. S9</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id84">10.2.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id94">10.2.4.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#mixcolumn">MixColumn</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id212">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id221">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fi">10.2.5. FI</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#ks0">ks0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id222">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id226">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#macguffin">10.3. MacGuffin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id95">10.3.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id96">10.3.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id97">10.3.3. S1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id98">10.3.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id107">10.3.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#ks1">ks1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id227">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id233">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id108">10.3.4. S2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id109">10.3.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id118">10.3.4.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#ks2">ks2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id234">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id239">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id119">10.3.5. S3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id120">10.3.5.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id129">10.3.5.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id240">mini-AES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id130">10.3.6. S4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id131">10.3.6.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id140">10.3.6.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#square">Square</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id244">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id245">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#s">S</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id246">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id255">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id141">10.3.7. S5</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id142">10.3.7.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id151">10.3.7.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id152">10.3.8. S6</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id153">10.3.8.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id162">10.3.8.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id163">10.3.9. S7</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id164">10.3.9.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id173">10.3.9.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id174">10.3.10. S8</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id175">10.3.10.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id184">10.3.10.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mini-aes">10.4. Mini-AES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id185">10.4.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id187">10.4.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nibblesub">10.4.3. NibbleSub</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id188">10.4.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id197">10.4.3.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nibblesubinv">10.4.4. NibbleSubInv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id198">10.4.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id211">10.4.4.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mixcolumn">10.4.5. MixColumn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id212">10.4.5.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id221">10.4.5.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ks0">10.4.6. ks0</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id222">10.4.6.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id226">10.4.6.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ks1">10.4.7. ks1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id227">10.4.7.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id233">10.4.7.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ks2">10.4.8. ks2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id234">10.4.8.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id239">10.4.8.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id240">10.4.9. mini-AES</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#square">10.5. Square</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id244">10.5.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id245">10.5.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s">10.5.3. S</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id246">10.5.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id255">10.5.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">11. Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -302,7 +305,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Analysis of other cryptographic algorithms</li>
+      <li>10. Analysis of other cryptographic algorithms</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -322,7 +325,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="analysis-of-other-cryptographic-algorithms">
-<h1>Analysis of other cryptographic algorithms<a class="headerlink" href="#analysis-of-other-cryptographic-algorithms" title="Permalink to this headline">¶</a></h1>
+<h1>10. Analysis of other cryptographic algorithms<a class="headerlink" href="#analysis-of-other-cryptographic-algorithms" title="Permalink to this headline">¶</a></h1>
 <p>There are some block ciphers that are relevant either because its wide use or because of its importance in the development of cryptanalysis techniques. In this chapter, some cryptographic algorithms from other block ciphers are analysed.</p>
 <p>Below you can find a legend describing the cryptographic criteria used in this chapter:</p>
 <table border="1" class="docutils">
@@ -421,13 +424,13 @@
 </ul>
 </div>
 <div class="section" id="des">
-<h2><a class="toc-backref" href="#id256">DES</a><a class="headerlink" href="#des" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id256">10.1. DES</a><a class="headerlink" href="#des" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description">
-<h3><a class="toc-backref" href="#id257">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id257">10.1.1. Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
 <p><em>DES</em> is a block cipher used for securing sensitive but unclassified material by U.S. Government agencies and became the de facto encryption standard for commercial transactions in the private sector up to December 6, 2001. It was superseded by AES. DES has eight 6x4 S-boxes: S1, S2, S3, S4, S5, S6, S7, S8.</p>
 </div>
 <div class="section" id="summary">
-<h3><a class="toc-backref" href="#id258">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id258">10.1.2. Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="9%" />
@@ -547,9 +550,9 @@
 </table>
 </div>
 <div class="section" id="s1">
-<h3><a class="toc-backref" href="#id259">S1</a><a class="headerlink" href="#s1" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id259">10.1.3. S1</a><a class="headerlink" href="#s1" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="representations">
-<h4>Representations<a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.3.1. Representations<a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.anf">ANF Table</a></p>
@@ -562,14 +565,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S1/S1.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="other-useful-information-in-cryptanalysis">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#other-useful-information-in-cryptanalysis" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#other-useful-information-in-cryptanalysis" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="s2">
-<h3><a class="toc-backref" href="#id260">S2</a><a class="headerlink" href="#s2" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id260">10.1.4. S2</a><a class="headerlink" href="#s2" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id1">
-<h4>Representations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.4.1. Representations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.anf">ANF Table</a></p>
@@ -582,14 +585,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S2/S2.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id10">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.4.2. Other useful information in cryptanalysis<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="s3">
-<h3><a class="toc-backref" href="#id261">S3</a><a class="headerlink" href="#s3" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id261">10.1.5. S3</a><a class="headerlink" href="#s3" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id11">
-<h4>Representations<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.5.1. Representations<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.anf">ANF Table</a></p>
@@ -602,14 +605,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S3/S3.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id20">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.5.2. Other useful information in cryptanalysis<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="s4">
-<h3><a class="toc-backref" href="#id262">S4</a><a class="headerlink" href="#s4" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id262">10.1.6. S4</a><a class="headerlink" href="#s4" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id21">
-<h4>Representations<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.6.1. Representations<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.anf">ANF Table</a></p>
@@ -622,9 +625,9 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S4/S4.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id30">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.6.2. Other useful information in cryptanalysis<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
 <p>There are 9 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 0 0 0 1],[0 0 1 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 0 0 0 1],[0 0 1 1])</span>
 <span class="go">([0 0 0 0 0 1],[1 1 0 0])</span>
 <span class="go">([0 0 0 0 0 1],[1 1 1 1])</span>
 <span class="go">([1 0 1 1 1 0],[0 1 0 1])</span>
@@ -638,9 +641,9 @@
 </div>
 </div>
 <div class="section" id="s5">
-<h3><a class="toc-backref" href="#id263">S5</a><a class="headerlink" href="#s5" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id263">10.1.7. S5</a><a class="headerlink" href="#s5" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id31">
-<h4>Representations<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.7.1. Representations<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.anf">ANF Table</a></p>
@@ -653,14 +656,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S5/S5.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id40">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.7.2. Other useful information in cryptanalysis<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="s6">
-<h3><a class="toc-backref" href="#id264">S6</a><a class="headerlink" href="#s6" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id264">10.1.8. S6</a><a class="headerlink" href="#s6" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id41">
-<h4>Representations<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.8.1. Representations<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.anf">ANF Table</a></p>
@@ -673,14 +676,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S6/S6.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id50">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.8.2. Other useful information in cryptanalysis<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="s7">
-<h3><a class="toc-backref" href="#id265">S7</a><a class="headerlink" href="#s7" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id265">10.1.9. S7</a><a class="headerlink" href="#s7" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id51">
-<h4>Representations<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.9.1. Representations<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.anf">ANF Table</a></p>
@@ -693,14 +696,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S7/S7.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id60">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.9.2. Other useful information in cryptanalysis<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="s8">
-<h3><a class="toc-backref" href="#id266">S8</a><a class="headerlink" href="#s8" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id266">10.1.10. S8</a><a class="headerlink" href="#s8" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id61">
-<h4>Representations<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.10.1. Representations<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.anf">ANF Table</a></p>
@@ -713,19 +716,19 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/DES/S8/S8.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id70">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h4>
+<h4>10.1.10.2. Other useful information in cryptanalysis<a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 </div>
 <div class="section" id="kasumi">
-<h2><a class="toc-backref" href="#id267">KASUMI</a><a class="headerlink" href="#kasumi" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id267">10.2. KASUMI</a><a class="headerlink" href="#kasumi" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id71">
-<h3><a class="toc-backref" href="#id268">Description</a><a class="headerlink" href="#id71" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id268">10.2.1. Description</a><a class="headerlink" href="#id71" title="Permalink to this headline">¶</a></h3>
 <p>KASUMI is a block cipher used in UMTS, GSM, and GPRS mobile communications systems. UMTS uses KASUMI in the confidentiality (f8) and integrity algorithms (f9) named UEA1 and UIA1, respectively. GSM employs KASUMI in the A5/3 key stream generator whereas GPRS does so in the GEA3 key stream generator. This cipher has two S-boxes: a 7x7 S-box called S7 and a 9x9 S-box called S9.</p>
 </div>
 <div class="section" id="id72">
-<h3><a class="toc-backref" href="#id269">Summary</a><a class="headerlink" href="#id72" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id269">10.2.2. Summary</a><a class="headerlink" href="#id72" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="8%" />
@@ -783,9 +786,9 @@
 </table>
 </div>
 <div class="section" id="id73">
-<h3><a class="toc-backref" href="#id270">S7</a><a class="headerlink" href="#id73" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id270">10.2.3. S7</a><a class="headerlink" href="#id73" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id74">
-<h4>Representations<a class="headerlink" href="#id74" title="Permalink to this headline">¶</a></h4>
+<h4>10.2.3.1. Representations<a class="headerlink" href="#id74" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.dec">Decimal Representation</a></p>
@@ -799,7 +802,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S7/S7.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id83">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id83" title="Permalink to this headline">¶</a></h4>
+<h4>10.2.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#id83" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -832,9 +835,9 @@
 </div>
 </div>
 <div class="section" id="s9">
-<h3><a class="toc-backref" href="#id271">S9</a><a class="headerlink" href="#s9" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id271">10.2.4. S9</a><a class="headerlink" href="#s9" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id84">
-<h4>Representations<a class="headerlink" href="#id84" title="Permalink to this headline">¶</a></h4>
+<h4>10.2.4.1. Representations<a class="headerlink" href="#id84" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.dec">Decimal Representation</a></p>
@@ -846,7 +849,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/S9/S9.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id94">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id94" title="Permalink to this headline">¶</a></h4>
+<h4>10.2.4.2. Other useful information in cryptanalysis<a class="headerlink" href="#id94" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -889,7 +892,7 @@
 </div>
 </div>
 <div class="section" id="fi">
-<h3><a class="toc-backref" href="#id272">FI</a><a class="headerlink" href="#fi" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id272">10.2.5. FI</a><a class="headerlink" href="#fi" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/FI/FIdeg.pdf">Algebraic degree from key 00000 to 65535</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/FI/cycle.pdf">Cycle structure from key 00000 to 65535</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/KASUMI/FI/points.pdf">Fixed and negated points from key 00000 to 65535</a></p>
@@ -971,13 +974,13 @@
 </div>
 </div>
 <div class="section" id="macguffin">
-<h2><a class="toc-backref" href="#id273">MacGuffin</a><a class="headerlink" href="#macguffin" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id273">10.3. MacGuffin</a><a class="headerlink" href="#macguffin" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id95">
-<h3><a class="toc-backref" href="#id274">Description</a><a class="headerlink" href="#id95" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id274">10.3.1. Description</a><a class="headerlink" href="#id95" title="Permalink to this headline">¶</a></h3>
 <p>MacGuffin is a block cipher uses a F-function which consists of the 8 S-boxes of the DES, but the two middle output bits of each S-box are neglected in order to obtain a 16-bit output. MacGuffin has eight 6x2 S-boxes: S1, S2, S3, S4, S5, S6, S7, S8.</p>
 </div>
 <div class="section" id="id96">
-<h3><a class="toc-backref" href="#id275">Summary</a><a class="headerlink" href="#id96" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id275">10.3.2. Summary</a><a class="headerlink" href="#id96" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="8%" />
@@ -1097,9 +1100,9 @@
 </table>
 </div>
 <div class="section" id="id97">
-<h3><a class="toc-backref" href="#id276">S1</a><a class="headerlink" href="#id97" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id276">10.3.3. S1</a><a class="headerlink" href="#id97" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id98">
-<h4>Representations<a class="headerlink" href="#id98" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.3.1. Representations<a class="headerlink" href="#id98" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S1/S1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S1/S1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S1/S1.anf">ANF Table</a></p>
@@ -1111,14 +1114,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S1/S1.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id107">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id107" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#id107" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="id108">
-<h3><a class="toc-backref" href="#id277">S2</a><a class="headerlink" href="#id108" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id277">10.3.4. S2</a><a class="headerlink" href="#id108" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id109">
-<h4>Representations<a class="headerlink" href="#id109" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.4.1. Representations<a class="headerlink" href="#id109" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S2/S2.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S2/S2.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S2/S2.anf">ANF Table</a></p>
@@ -1130,14 +1133,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S2/S2.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id118">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id118" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.4.2. Other useful information in cryptanalysis<a class="headerlink" href="#id118" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="id119">
-<h3><a class="toc-backref" href="#id278">S3</a><a class="headerlink" href="#id119" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id278">10.3.5. S3</a><a class="headerlink" href="#id119" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id120">
-<h4>Representations<a class="headerlink" href="#id120" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.5.1. Representations<a class="headerlink" href="#id120" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S3/S3.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S3/S3.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S3/S3.anf">ANF Table</a></p>
@@ -1149,14 +1152,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S3/S3.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id129">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id129" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.5.2. Other useful information in cryptanalysis<a class="headerlink" href="#id129" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="id130">
-<h3><a class="toc-backref" href="#id279">S4</a><a class="headerlink" href="#id130" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id279">10.3.6. S4</a><a class="headerlink" href="#id130" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id131">
-<h4>Representations<a class="headerlink" href="#id131" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.6.1. Representations<a class="headerlink" href="#id131" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S4/S4.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S4/S4.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S4/S4.anf">ANF Table</a></p>
@@ -1168,17 +1171,17 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S4/S4.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id140">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id140" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.6.2. Other useful information in cryptanalysis<a class="headerlink" href="#id140" title="Permalink to this headline">¶</a></h4>
 <p>There are 1 linear structure:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([1 0 1 1 1 1],[1 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([1 0 1 1 1 1],[1 1])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="id141">
-<h3><a class="toc-backref" href="#id280">S5</a><a class="headerlink" href="#id141" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id280">10.3.7. S5</a><a class="headerlink" href="#id141" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id142">
-<h4>Representations<a class="headerlink" href="#id142" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.7.1. Representations<a class="headerlink" href="#id142" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S5/S5.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S5/S5.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S5/S5.anf">ANF Table</a></p>
@@ -1190,14 +1193,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S5/S5.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id151">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id151" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.7.2. Other useful information in cryptanalysis<a class="headerlink" href="#id151" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="id152">
-<h3><a class="toc-backref" href="#id281">S6</a><a class="headerlink" href="#id152" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id281">10.3.8. S6</a><a class="headerlink" href="#id152" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id153">
-<h4>Representations<a class="headerlink" href="#id153" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.8.1. Representations<a class="headerlink" href="#id153" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S6/S6.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S6/S6.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S6/S6.anf">ANF Table</a></p>
@@ -1209,14 +1212,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S6/S6.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id162">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id162" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.8.2. Other useful information in cryptanalysis<a class="headerlink" href="#id162" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="id163">
-<h3><a class="toc-backref" href="#id282">S7</a><a class="headerlink" href="#id163" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id282">10.3.9. S7</a><a class="headerlink" href="#id163" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id164">
-<h4>Representations<a class="headerlink" href="#id164" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.9.1. Representations<a class="headerlink" href="#id164" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S7/S7.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S7/S7.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S7/S7.anf">ANF Table</a></p>
@@ -1228,14 +1231,14 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S7/S7.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id173">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id173" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.9.2. Other useful information in cryptanalysis<a class="headerlink" href="#id173" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 <div class="section" id="id174">
-<h3><a class="toc-backref" href="#id283">S8</a><a class="headerlink" href="#id174" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id283">10.3.10. S8</a><a class="headerlink" href="#id174" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id175">
-<h4>Representations<a class="headerlink" href="#id175" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.10.1. Representations<a class="headerlink" href="#id175" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S8/S8.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S8/S8.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S8/S8.anf">ANF Table</a></p>
@@ -1247,15 +1250,15 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MacGuffin/S8/S8.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id184">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id184" title="Permalink to this headline">¶</a></h4>
+<h4>10.3.10.2. Other useful information in cryptanalysis<a class="headerlink" href="#id184" title="Permalink to this headline">¶</a></h4>
 <p>There are no linear structures</p>
 </div>
 </div>
 </div>
 <div class="section" id="mini-aes">
-<h2><a class="toc-backref" href="#id284">Mini-AES</a><a class="headerlink" href="#mini-aes" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id284">10.4. Mini-AES</a><a class="headerlink" href="#mini-aes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id185">
-<h3><a class="toc-backref" href="#id285">Description</a><a class="headerlink" href="#id185" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id285">10.4.1. Description</a><a class="headerlink" href="#id185" title="Permalink to this headline">¶</a></h3>
 <p>Raphael Chung-Wei Phan presented a version of the AES <a class="reference internal" href="bibliography.html#phan02miniadvanced" id="id186">[Phan02miniadvanced]</a>, with all the parameters significantly reduced while preserving its original structure. This Mini version is purely educational and is designed to grasp the underlying concepts of Rijndael-like ciphers. It may also serve as a testbed for starting cryptanalysts to experiment with various cryptanalytic attacks. The Mini-AES cipher is a <img class="math" src="images/math/4b1955b075a4c1e7247256416c1b86db8bad20a8.png" alt="16 \times 16"/> vector Boolean function and the Mini-AES encryption is performed with a secret key of 16 bits.</p>
 <p>The Mini-AES S-box is called <em>NibbleSub</em>, and defines a simple operation that substitutes each input with an output according to a 4x4 substitution table (S-box) given in the table below. These values are, in fact, taken from the first row of the first S-box in DES.</p>
 <table border="1" class="docutils">
@@ -1387,7 +1390,7 @@
 </table>
 </div>
 <div class="section" id="id187">
-<h3><a class="toc-backref" href="#id286">Summary</a><a class="headerlink" href="#id187" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id286">10.4.2. Summary</a><a class="headerlink" href="#id187" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -1460,9 +1463,9 @@
 </table>
 </div>
 <div class="section" id="nibblesub">
-<h3><a class="toc-backref" href="#id287">NibbleSub</a><a class="headerlink" href="#nibblesub" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id287">10.4.3. NibbleSub</a><a class="headerlink" href="#nibblesub" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id188">
-<h4>Representations<a class="headerlink" href="#id188" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.3.1. Representations<a class="headerlink" href="#id188" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.anf">ANF Table</a></p>
@@ -1769,7 +1772,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSub.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id197">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id197" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#id197" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1791,7 +1794,7 @@
 </tbody>
 </table>
 <p>There are 7 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 1],[0 1 1 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 1],[0 1 1 1])</span>
 <span class="go">([0 1 0 0],[0 1 0 1])</span>
 <span class="go">([1 0 1 0],[1 1 1 1])</span>
 <span class="go">([1 0 1 1],[0 1 0 1])</span>
@@ -1804,9 +1807,9 @@
 </div>
 </div>
 <div class="section" id="nibblesubinv">
-<h3><a class="toc-backref" href="#id288">NibbleSubInv</a><a class="headerlink" href="#nibblesubinv" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id288">10.4.4. NibbleSubInv</a><a class="headerlink" href="#nibblesubinv" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id198">
-<h4>Representations<a class="headerlink" href="#id198" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.4.1. Representations<a class="headerlink" href="#id198" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.anf">ANF Table</a></p>
@@ -2111,7 +2114,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/NibbleSubInv.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id211">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id211" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.4.2. Other useful information in cryptanalysis<a class="headerlink" href="#id211" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2133,7 +2136,7 @@
 </tbody>
 </table>
 <p>There are 7 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 0],[0 0 1 0])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 0],[0 0 1 0])</span>
 <span class="go">([0 1 0 1],[1 0 1 1])</span>
 <span class="go">([1 0 0 0],[0 0 1 1])</span>
 <span class="go">([1 0 0 0],[1 0 0 0])</span>
@@ -2146,9 +2149,9 @@
 </div>
 </div>
 <div class="section" id="mixcolumn">
-<h3><a class="toc-backref" href="#id289">MixColumn</a><a class="headerlink" href="#mixcolumn" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id289">10.4.5. MixColumn</a><a class="headerlink" href="#mixcolumn" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id212">
-<h4>Representations<a class="headerlink" href="#id212" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.5.1. Representations<a class="headerlink" href="#id212" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.anf">ANF Table</a></p>
@@ -2161,7 +2164,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/mixcolumn.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id221">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id221" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.5.2. Other useful information in cryptanalysis<a class="headerlink" href="#id221" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2188,9 +2191,9 @@
 </div>
 </div>
 <div class="section" id="ks0">
-<h3><a class="toc-backref" href="#id290">ks0</a><a class="headerlink" href="#ks0" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id290">10.4.6. ks0</a><a class="headerlink" href="#ks0" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id222">
-<h4>Representations<a class="headerlink" href="#id222" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.6.1. Representations<a class="headerlink" href="#id222" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks0.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks0.anf">ANF Table</a></p>
@@ -2198,7 +2201,7 @@
 <p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/ks0.lp.gz">Linear Profile (each row represents a column of Linear Profile)</a></p>
 </div>
 <div class="section" id="id226">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id226" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.6.2. Other useful information in cryptanalysis<a class="headerlink" href="#id226" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2219,9 +2222,9 @@
 </div>
 </div>
 <div class="section" id="ks1">
-<h3><a class="toc-backref" href="#id291">ks1</a><a class="headerlink" href="#ks1" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id291">10.4.7. ks1</a><a class="headerlink" href="#ks1" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id227">
-<h4>Representations<a class="headerlink" href="#id227" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.7.1. Representations<a class="headerlink" href="#id227" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/ks1.anf">ANF Table</a></p>
@@ -2229,7 +2232,7 @@
 <p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/ks1.lp.gz">Linear Profile (each row represents a column of Linear Profile)</a></p>
 </div>
 <div class="section" id="id233">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id233" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.7.2. Other useful information in cryptanalysis<a class="headerlink" href="#id233" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2271,9 +2274,9 @@
 </div>
 </div>
 <div class="section" id="ks2">
-<h3><a class="toc-backref" href="#id292">ks2</a><a class="headerlink" href="#ks2" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id292">10.4.8. ks2</a><a class="headerlink" href="#ks2" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id234">
-<h4>Representations<a class="headerlink" href="#id234" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.8.1. Representations<a class="headerlink" href="#id234" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial representation in ANF:</p>
 <p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f1.pdf">f1</a></p>
 <p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/f2.pdf">f2</a></p>
@@ -2297,7 +2300,7 @@
 <p><a class="reference external" href="https://github.com/jacubero/VBF/blob/master/miniAES/ks2.lp.gz">Linear Profile (each row represents a column of Linear Profile)</a></p>
 </div>
 <div class="section" id="id239">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id239" title="Permalink to this headline">¶</a></h4>
+<h4>10.4.8.2. Other useful information in cryptanalysis<a class="headerlink" href="#id239" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2351,7 +2354,7 @@
 </div>
 </div>
 <div class="section" id="id240">
-<h3><a class="toc-backref" href="#id293">mini-AES</a><a class="headerlink" href="#id240" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id293">10.4.9. mini-AES</a><a class="headerlink" href="#id240" title="Permalink to this headline">¶</a></h3>
 <p>Algebraic degree from key 00000 to 65535 is equal to 14</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/cycle.pdf">Cycle structure from key 00000 to 65535</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/miniAES/points.pdf">Fixed and negated points from key 00000 to 65535</a></p>
@@ -2434,13 +2437,13 @@
 </div>
 </div>
 <div class="section" id="square">
-<h2><a class="toc-backref" href="#id294">Square</a><a class="headerlink" href="#square" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id294">10.5. Square</a><a class="headerlink" href="#square" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id244">
-<h3><a class="toc-backref" href="#id295">Description</a><a class="headerlink" href="#id244" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id295">10.5.1. Description</a><a class="headerlink" href="#id244" title="Permalink to this headline">¶</a></h3>
 <p><em>Square</em> is a block cipher invented by Joan Daemen and Vincent Rijmen. The design, published in 1997, is a forerunner to Rijndael, which has been adopted as the Advanced Encryption Standard. It has a 8x8 S-box called S.</p>
 </div>
 <div class="section" id="id245">
-<h3><a class="toc-backref" href="#id296">Summary</a><a class="headerlink" href="#id245" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id296">10.5.2. Summary</a><a class="headerlink" href="#id245" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="8%" />
@@ -2483,9 +2486,9 @@
 </table>
 </div>
 <div class="section" id="s">
-<h3><a class="toc-backref" href="#id297">S</a><a class="headerlink" href="#s" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id297">10.5.3. S</a><a class="headerlink" href="#s" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id246">
-<h4>Representations<a class="headerlink" href="#id246" title="Permalink to this headline">¶</a></h4>
+<h4>10.5.3.1. Representations<a class="headerlink" href="#id246" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Square/S.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Square/S.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Square/S.anf">ANF Table</a></p>
@@ -2497,7 +2500,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Square/S.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id255">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id255" title="Permalink to this headline">¶</a></h4>
+<h4>10.5.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#id255" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2548,10 +2551,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="design.html" class="btn btn-neutral float-right" title="Design of cryptographically robust Vector Boolean functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="design.html" class="btn btn-neutral float-right" title="11. Design of cryptographically robust Vector Boolean functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="nessie.html" class="btn btn-neutral" title="Analysis of NESSIE project cryptographic algorithms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="nessie.html" class="btn btn-neutral" title="9. Analysis of NESSIE project cryptographic algorithms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -2583,7 +2586,6 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

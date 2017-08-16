@@ -58,6 +58,9 @@
           
 
           
+            
+            <img src="../_static/wrapping_paper-binary.jpg" class="logo" />
+          
           </a>
 
           
@@ -89,19 +92,19 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">3. Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">4. Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">7. Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">8. Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">10. Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">11. Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -209,61 +212,61 @@ one should just write <img class="math" src="../images/math/363c1c0bb302eab64a9f
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>A VBF class can be initialized by a Boolean Matrix representing the Truth Table with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">puttt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">T</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">puttt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Truth Table of a Vector Boolean function the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">TT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">TT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a collection of strings separated by carriage returns defined by <em>s</em> with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putHexTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putHexTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Each row must be the hexadecimal representation of the Truth Table of the coordinate functions of a Vector Boolean function. To obtain the Truth Table in hexadecimal representation the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">getHexTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">getHexTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Analogously a VBF class can be initialized by a collecting of strings with binary representation of the Truth Table of coordinate functions:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putBinTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putBinTT</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain its Truth Table in binary representation the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">getBinTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">getBinTT</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a Boolean vector representing the decimal representation of the Truth Table of a Vector Boolean Function defined by a vector of outputs in lexicographic order, called <em>d</em>, and knowing the number of component Boolean functions <em>m</em>:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putDecTT</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span><span class="k">const</span> <span class="kt">long</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putDecTT</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span><span class="k">const</span> <span class="kt">long</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Truth Table in decimal representation the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span> <span class="n">getDecTT</span><span class="p">()</span> <span class="k">const</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="n">NTL</span><span class="o">::</span><span class="n">vec_long</span> <span class="n">getDecTT</span><span class="p">()</span> <span class="k">const</span>
 </pre></div>
 </div>
 <p>To obtain the weight of a Vector Boolean function <em>F</em> the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">weight</span><span class="p">(</span><span class="kt">long</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">weight</span><span class="p">(</span><span class="kt">long</span><span class="o">&amp;</span> <span class="n">w</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a Boolean Matrix representing the Truth Table of their component functions with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putltt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putltt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Truth Table of the component functions of a Vector Boolean function the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">LTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">LTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_GF2</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized by a Boolean Matrix representing its Polarity Truth Table with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putctt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putctt</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To obtain the Polarity Truth Table of a Vector Boolean function the following method must be used:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">CTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">CTT</span><span class="p">(</span><span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">X</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <p>The Truth Table of the NibbleSub S-box is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span><span class="p">]</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="p">[[</span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
@@ -283,9 +286,9 @@ one should just write <img class="math" src="../images/math/363c1c0bb302eab64a9f
 </pre></div>
 </div>
 <p>If we use a file with this matrix as the input of the following program, we can obtain its hexadecimal, binary and decimal representation, as well as the Truth Tables of the components functions and its Polarity Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -324,7 +327,7 @@ one should just write <img class="math" src="../images/math/363c1c0bb302eab64a9f
 </pre></div>
 </div>
 <p>The output of this program would be:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The hexadecimal representation is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The hexadecimal representation is:</span>
 <span class="go">a754</span>
 <span class="go">e439</span>
 <span class="go">8ee1</span>
@@ -418,7 +421,6 @@ one should just write <img class="math" src="../images/math/363c1c0bb302eab64a9f
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Analysis of AES competition cryptographic algorithms &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  <title>7. Analysis of AES competition cryptographic algorithms &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
-        <link rel="next" title="Analysis of CRYPTEC project cryptographic algorithms" href="cryptec.html"/>
-        <link rel="prev" title="Operations and constructions over Vector Boolean Functions" href="operations.html"/> 
+        <link rel="next" title="8. Analysis of CRYPTEC project cryptographic algorithms" href="cryptec.html"/>
+        <link rel="prev" title="6. Operations and constructions over Vector Boolean Functions" href="operations.html"/> 
 
   
   <script src="static/js/modernizr.min.js"></script>
@@ -59,6 +59,9 @@
             <a href="index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
           
 
+          
+            
+            <img src="_static/wrapping_paper-binary.jpg" class="logo" />
           
           </a>
 
@@ -91,222 +94,222 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis of AES competition cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cast-256">CAST-256</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#s1">S1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#representations">Representations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">3. Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">4. Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Analysis of AES competition cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cast-256">7.1. CAST-256</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">7.1.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s1">7.1.2. S1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#representations">7.1.2.1. Representations</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s2">S2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s2">7.1.3. S2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">7.1.3.1. Representations</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s3">S3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id5">Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s3">7.1.4. S3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">7.1.4.1. Representations</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s4">S4</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id9">Representations</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#crypton">Crypton</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id13">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#s0-v0-5">S0 (v0.5)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id14">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#other-useful-information-in-cryptanalysis">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s1-v0-5">S1 (v0.5)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id18">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id27">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s0-v1-0">S0 (v1.0)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id28">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id37">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s1-v1-0">S1 (v1.0)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id38">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id47">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s2-v1-0">S2 (v1.0)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id48">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id57">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s3-v1-0">S3 (v1.0)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id58">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id67">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s4">7.1.5. S4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">7.1.5.1. Representations</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#deal">DEAL</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id68">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crypton">7.2. Crypton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">7.2.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">7.2.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s0-v0-5">7.2.3. S0 (v0.5)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id14">7.2.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-useful-information-in-cryptanalysis">7.2.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#e2">E2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id69">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id70">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#s">S</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id71">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id80">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s1-v0-5">7.2.4. S1 (v0.5)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id18">7.2.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">7.2.4.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#s0-v1-0">7.2.5. S0 (v1.0)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id28">7.2.5.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id37">7.2.5.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#loki97">LOKI97</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id81">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id82">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id83">S1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id84">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id93">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s1-v1-0">7.2.6. S1 (v1.0)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id38">7.2.6.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id47">7.2.6.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id94">S2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id95">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id104">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s2-v1-0">7.2.7. S2 (v1.0)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id48">7.2.7.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id57">7.2.7.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#magenta">Magenta</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id106">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id107">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id108">S</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id109">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id118">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s3-v1-0">7.2.8. S3 (v1.0)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id58">7.2.8.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id67">7.2.8.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#mars">Mars</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id119">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#s0">S0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id120">Representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deal">7.3. DEAL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id68">7.3.1. Description</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id124">S1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id125">Representations</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#rijndael">Rijndael</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id129">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id135">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id136"><img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id137">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id147">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id148"><img class="math" src="images/math/b8e97c2eb45b8c3885d04349587a60a1a05271df.png" alt="{S_{RD}}^{-1}"/></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id149">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id159">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id160"><img class="math" src="images/math/a6ab649d825f4fa093a4e86ed8ea11988e6f3ee2.png" alt="g"/></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id161">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id170">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id171"><img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id172">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id181">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id182"><img class="math" src="images/math/bfa02ca759555f38561c5c1df74ff8c205cb20b9.png" alt="f^{-1}"/></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id183">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id192">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#xtime">xtime</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id193">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id202">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#e2">7.4. E2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id69">7.4.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id70">7.4.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s">7.4.3. S</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id71">7.4.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id80">7.4.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#safer">Safer+</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id203">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id204">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#expf">expf</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id205">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id214">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loki97">7.5. LOKI97</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id81">7.5.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id82">7.5.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id83">7.5.3. S1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id84">7.5.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id93">7.5.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#logf">logf</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id215">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id224">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#serpent">Serpent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id226">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id227">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id228">S0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id229">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id238">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id239">S1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id240">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id249">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id250">S2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id251">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id260">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id261">S3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id262">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id271">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id272">S4</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id273">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id282">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s5">S5</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id283">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id292">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s6">S6</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id293">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id302">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s7">S7</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id303">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id312">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id94">7.5.4. S2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id95">7.5.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id104">7.5.4.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#magenta">7.6. Magenta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id106">7.6.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id107">7.6.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id108">7.6.3. S</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id109">7.6.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id118">7.6.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mars">7.7. Mars</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id119">7.7.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s0">7.7.2. S0</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id120">7.7.2.1. Representations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id124">7.7.3. S1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id125">7.7.3.1. Representations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rijndael">7.8. Rijndael</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id129">7.8.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id135">7.8.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id136">7.8.3. <img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id137">7.8.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id147">7.8.3.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id148">7.8.4. <img class="math" src="images/math/b8e97c2eb45b8c3885d04349587a60a1a05271df.png" alt="{S_{RD}}^{-1}"/></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id149">7.8.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id159">7.8.4.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id160">7.8.5. <img class="math" src="images/math/a6ab649d825f4fa093a4e86ed8ea11988e6f3ee2.png" alt="g"/></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id161">7.8.5.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id170">7.8.5.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id171">7.8.6. <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id172">7.8.6.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id181">7.8.6.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id182">7.8.7. <img class="math" src="images/math/bfa02ca759555f38561c5c1df74ff8c205cb20b9.png" alt="f^{-1}"/></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id183">7.8.7.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id192">7.8.7.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#xtime">7.8.8. xtime</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id193">7.8.8.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id202">7.8.8.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#safer">7.9. Safer+</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id203">7.9.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id204">7.9.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expf">7.9.3. expf</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id205">7.9.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id214">7.9.3.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#logf">7.9.4. logf</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id215">7.9.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id224">7.9.4.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#serpent">7.10. Serpent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id226">7.10.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id227">7.10.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id228">7.10.3. S0</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id229">7.10.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id238">7.10.3.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id239">7.10.4. S1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id240">7.10.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id249">7.10.4.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id250">7.10.5. S2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id251">7.10.5.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id260">7.10.5.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id261">7.10.6. S3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id262">7.10.6.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id271">7.10.6.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id272">7.10.7. S4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id273">7.10.7.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id282">7.10.7.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#s5">7.10.8. S5</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id283">7.10.8.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id292">7.10.8.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#s6">7.10.9. S6</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id293">7.10.9.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id302">7.10.9.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#s7">7.10.10. S7</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id303">7.10.10.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id312">7.10.10.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">8. Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">10. Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">11. Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -351,7 +354,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Analysis of AES competition cryptographic algorithms</li>
+      <li>7. Analysis of AES competition cryptographic algorithms</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -371,7 +374,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="analysis-of-aes-competition-cryptographic-algorithms">
-<h1>Analysis of AES competition cryptographic algorithms<a class="headerlink" href="#analysis-of-aes-competition-cryptographic-algorithms" title="Permalink to this headline">¶</a></h1>
+<h1>7. Analysis of AES competition cryptographic algorithms<a class="headerlink" href="#analysis-of-aes-competition-cryptographic-algorithms" title="Permalink to this headline">¶</a></h1>
 <p>In January 1997, the US National Institute of Standards and Technology (NIST) announced the start of an initiative to develop a new encryption standard: the AES. The AES selection process was open in which 15 candidates were accepted for the first evaluation round and 5 finalists were announced in the second round. On October 2, 2000, NIST officially announced that Rijndael would become the AES. In this chapter, a number of cryptographic algorithms from the AES (Advanced Encryption Standard) candidates accepted for the first evaluation round process are analysed.</p>
 <p>Below you can find a legend describing the cryptographic criteria used in this chapter:</p>
 <table border="1" class="docutils">
@@ -497,42 +500,42 @@
 </ul>
 </div>
 <div class="section" id="cast-256">
-<h2><a class="toc-backref" href="#id313">CAST-256</a><a class="headerlink" href="#cast-256" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id313">7.1. CAST-256</a><a class="headerlink" href="#cast-256" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description">
-<h3><a class="toc-backref" href="#id314">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
-<p><em>CAST-256</em> is a symmetric-key block cipher published in June 1998. It was submitted as a candidate for the Advanced Encryption Standard (AES); however, it was not among the five AES finalists. It is an extension of an earlier cipher, CAST-128; both were designed according to the &#8220;CAST&#8221; design methodology invented by Carlisle Adams and Stafford Tavares. Howard Heys and Michael Wiener also contributed to the design. It has four 8x32 S-boxes: S1,S2,S3 and S4.</p>
+<h3><a class="toc-backref" href="#id314">7.1.1. Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p><em>CAST-256</em> is a symmetric-key block cipher published in June 1998. It was submitted as a candidate for the Advanced Encryption Standard (AES); however, it was not among the five AES finalists. It is an extension of an earlier cipher, CAST-128; both were designed according to the “CAST” design methodology invented by Carlisle Adams and Stafford Tavares. Howard Heys and Michael Wiener also contributed to the design. It has four 8x32 S-boxes: S1,S2,S3 and S4.</p>
 </div>
 <div class="section" id="s1">
-<h3><a class="toc-backref" href="#id315">S1</a><a class="headerlink" href="#s1" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id315">7.1.2. S1</a><a class="headerlink" href="#s1" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="representations">
-<h4>Representations<a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h4>
+<h4>7.1.2.1. Representations<a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S1.anf">ANF Table</a></p>
 </div>
 </div>
 <div class="section" id="s2">
-<h3><a class="toc-backref" href="#id316">S2</a><a class="headerlink" href="#s2" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id316">7.1.3. S2</a><a class="headerlink" href="#s2" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id1">
-<h4>Representations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4>7.1.3.1. Representations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S2.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S2.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S2.anf">ANF Table</a></p>
 </div>
 </div>
 <div class="section" id="s3">
-<h3><a class="toc-backref" href="#id317">S3</a><a class="headerlink" href="#s3" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id317">7.1.4. S3</a><a class="headerlink" href="#s3" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id5">
-<h4>Representations<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<h4>7.1.4.1. Representations<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S3.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S3.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S3.anf">ANF Table</a></p>
 </div>
 </div>
 <div class="section" id="s4">
-<h3><a class="toc-backref" href="#id318">S4</a><a class="headerlink" href="#s4" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id318">7.1.5. S4</a><a class="headerlink" href="#s4" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id9">
-<h4>Representations<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<h4>7.1.5.1. Representations<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S4.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S4.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CAST/S4.anf">ANF Table</a></p>
@@ -540,13 +543,13 @@
 </div>
 </div>
 <div class="section" id="crypton">
-<h2><a class="toc-backref" href="#id319">Crypton</a><a class="headerlink" href="#crypton" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id319">7.2. Crypton</a><a class="headerlink" href="#crypton" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id13">
-<h3><a class="toc-backref" href="#id320">Description</a><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id320">7.2.1. Description</a><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <p><em>CRYPTON</em> is a symmetric block cipher designed by Chae Hoon Lim of Future Systems Inc. In this section, we study both the AES proposal (v0.5) and the revised version (v1.0). In v0.5 the authors used two 8x8 S-boxes constructed from 4-bit permutations using a 3-round Feistel Cipher (<a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/lim98crypton.pdf">Tabular representation of S-boxes</a>). In v1.0 the authors used four variants of one S-box, instead of independent four S-boxes to allow greater flexibility in memory requirements. The four 8x8 S-boxes are <img class="math" src="images/math/3f448b78b3ca4edf6485729eab2ce2e9b09bca83.png" alt="S_i (0 \leq i \leq 3)"/>, such that <img class="math" src="images/math/46405d958c8c07c4866b255445f792f44e74bd01.png" alt="S2 = {S_0}^{-1}"/> and <img class="math" src="images/math/769706c877ce512d30301881fc94e2e7d8adbac3.png" alt="S3 = {S_1}^{-1}"/></p>
 </div>
 <div class="section" id="summary">
-<h3><a class="toc-backref" href="#id321">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id321">7.2.2. Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="13%" />
@@ -636,9 +639,9 @@
 </table>
 </div>
 <div class="section" id="s0-v0-5">
-<h3><a class="toc-backref" href="#id322">S0 (v0.5)</a><a class="headerlink" href="#s0-v0-5" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id322">7.2.3. S0 (v0.5)</a><a class="headerlink" href="#s0-v0-5" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id14">
-<h4>Representations<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.3.1. Representations<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.anf">ANF Table</a></p>
@@ -651,7 +654,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S0.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="other-useful-information-in-cryptanalysis">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#other-useful-information-in-cryptanalysis" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#other-useful-information-in-cryptanalysis" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -705,9 +708,9 @@
 </div>
 </div>
 <div class="section" id="s1-v0-5">
-<h3><a class="toc-backref" href="#id323">S1 (v0.5)</a><a class="headerlink" href="#s1-v0-5" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id323">7.2.4. S1 (v0.5)</a><a class="headerlink" href="#s1-v0-5" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id18">
-<h4>Representations<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.4.1. Representations<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.anf">ANF Table</a></p>
@@ -720,7 +723,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/0.5/S1.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id27">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.4.2. Other useful information in cryptanalysis<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -774,9 +777,9 @@
 </div>
 </div>
 <div class="section" id="s0-v1-0">
-<h3><a class="toc-backref" href="#id324">S0 (v1.0)</a><a class="headerlink" href="#s0-v1-0" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id324">7.2.5. S0 (v1.0)</a><a class="headerlink" href="#s0-v1-0" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id28">
-<h4>Representations<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.5.1. Representations<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.anf">ANF Table</a></p>
@@ -789,7 +792,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S0.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id37">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.5.2. Other useful information in cryptanalysis<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -822,9 +825,9 @@
 </div>
 </div>
 <div class="section" id="s1-v1-0">
-<h3><a class="toc-backref" href="#id325">S1 (v1.0)</a><a class="headerlink" href="#s1-v1-0" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id325">7.2.6. S1 (v1.0)</a><a class="headerlink" href="#s1-v1-0" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id38">
-<h4>Representations<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.6.1. Representations<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.anf">ANF Table</a></p>
@@ -837,7 +840,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S1.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id47">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.6.2. Other useful information in cryptanalysis<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -882,9 +885,9 @@
 </div>
 </div>
 <div class="section" id="s2-v1-0">
-<h3><a class="toc-backref" href="#id326">S2 (v1.0)</a><a class="headerlink" href="#s2-v1-0" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id326">7.2.7. S2 (v1.0)</a><a class="headerlink" href="#s2-v1-0" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id48">
-<h4>Representations<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.7.1. Representations<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.anf">ANF Table</a></p>
@@ -897,7 +900,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S2.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id57">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.7.2. Other useful information in cryptanalysis<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -930,9 +933,9 @@
 </div>
 </div>
 <div class="section" id="s3-v1-0">
-<h3><a class="toc-backref" href="#id327">S3 (v1.0)</a><a class="headerlink" href="#s3-v1-0" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id327">7.2.8. S3 (v1.0)</a><a class="headerlink" href="#s3-v1-0" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id58">
-<h4>Representations<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.8.1. Representations<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.anf">ANF Table</a></p>
@@ -945,7 +948,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Crypton/1.0/S3.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id67">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id67" title="Permalink to this headline">¶</a></h4>
+<h4>7.2.8.2. Other useful information in cryptanalysis<a class="headerlink" href="#id67" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -991,21 +994,21 @@
 </div>
 </div>
 <div class="section" id="deal">
-<h2><a class="toc-backref" href="#id328">DEAL</a><a class="headerlink" href="#deal" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id328">7.3. DEAL</a><a class="headerlink" href="#deal" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id68">
-<h3><a class="toc-backref" href="#id329">Description</a><a class="headerlink" href="#id68" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id329">7.3.1. Description</a><a class="headerlink" href="#id68" title="Permalink to this headline">¶</a></h3>
 <p><em>DEAL</em> (Data Encryption Algorithm with Larger blocks) is a symmetric block cipher derived from the Data Encryption Standard (DES). The design was proposed in a report by Lars Knudsen in 1998, and was submitted to the AES competition by Richard Outerbridge (who notes that Knudsen had presented the design at the SAC conference in 1997).</p>
 <p>DEAL has eight 6x4 S-boxes: S1, S2, S3, S4, S5, S6, S7, S8. They are the same as DES S-boxes and you can see an analysis in <span class="xref std std-ref">DES</span>.</p>
 </div>
 </div>
 <div class="section" id="e2">
-<h2><a class="toc-backref" href="#id330">E2</a><a class="headerlink" href="#e2" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id330">7.4. E2</a><a class="headerlink" href="#e2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id69">
-<h3><a class="toc-backref" href="#id331">Description</a><a class="headerlink" href="#id69" title="Permalink to this headline">¶</a></h3>
-<p><em>E2</em> is a symmetric block cipher which was created in 1998 by NTT and submitted to the AES competition. E2 has an input transformation and output transformation that both use modular multiplication, but the round function itself consists only of XORs and S-box lookups. The single 8×8-bit S-box is constructed from the composition of an affine transformation with the discrete exponentiation <img class="math" src="images/math/673cc513b9fca23a5be69aa971622e33eaa25b3a.png" alt="x^{127}"/> over the finite field <img class="math" src="images/math/2dd9097e2103990967c549f8e7fad8a41ee2273c.png" alt="GF(2^8)"/>. NTT adopted many of E2&#8217;s special characteristics in Camellia, which has essentially replaced E2.</p>
+<h3><a class="toc-backref" href="#id331">7.4.1. Description</a><a class="headerlink" href="#id69" title="Permalink to this headline">¶</a></h3>
+<p><em>E2</em> is a symmetric block cipher which was created in 1998 by NTT and submitted to the AES competition. E2 has an input transformation and output transformation that both use modular multiplication, but the round function itself consists only of XORs and S-box lookups. The single 8×8-bit S-box is constructed from the composition of an affine transformation with the discrete exponentiation <img class="math" src="images/math/673cc513b9fca23a5be69aa971622e33eaa25b3a.png" alt="x^{127}"/> over the finite field <img class="math" src="images/math/2dd9097e2103990967c549f8e7fad8a41ee2273c.png" alt="GF(2^8)"/>. NTT adopted many of E2’s special characteristics in Camellia, which has essentially replaced E2.</p>
 </div>
 <div class="section" id="id70">
-<h3><a class="toc-backref" href="#id332">Summary</a><a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id332">7.4.2. Summary</a><a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="9%" />
@@ -1045,9 +1048,9 @@
 </table>
 </div>
 <div class="section" id="s">
-<h3><a class="toc-backref" href="#id333">S</a><a class="headerlink" href="#s" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id333">7.4.3. S</a><a class="headerlink" href="#s" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id71">
-<h4>Representations<a class="headerlink" href="#id71" title="Permalink to this headline">¶</a></h4>
+<h4>7.4.3.1. Representations<a class="headerlink" href="#id71" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.anf">ANF Table</a></p>
@@ -1060,7 +1063,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/E2/S.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id80">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id80" title="Permalink to this headline">¶</a></h4>
+<h4>7.4.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#id80" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1100,16 +1103,16 @@
 </div>
 </div>
 <div class="section" id="loki97">
-<h2><a class="toc-backref" href="#id334">LOKI97</a><a class="headerlink" href="#loki97" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id334">7.5. LOKI97</a><a class="headerlink" href="#loki97" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id81">
-<h3><a class="toc-backref" href="#id335">Description</a><a class="headerlink" href="#id81" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id335">7.5.1. Description</a><a class="headerlink" href="#id81" title="Permalink to this headline">¶</a></h3>
 <p><em>LOKI97</em> is a block cipher which was a candidate in the Advanced Encryption Standard competition. It is a member of the LOKI family of ciphers, earlier instances being LOKI89 and LOKI91. LOKI97 was designed by Lawrie Brown, assisted by Jennifer Seberry and Josef Pieprzyk. The LOKI97 round function uses two columns each with multiple copies of two basic S-boxes. The S-boxes chosen for LOKI97 use cubing in a galois field <img class="math" src="images/math/701217b291646e2a10f11025289db30ffe7410e8.png" alt="GF(2^n)"/> with n odd. In order to use odd sized inputs, S1 uses 13 input bits, and S2 uses 11. The S-box functions are:</p>
 <p>S1[x]=((x XOR 1FFF)^3 mod 2911) &amp; FF <img class="math" src="images/math/a8473af8c58c8c81f15e1d3992faea93fc1323db.png" alt="\in GF(2^{13})"/></p>
 <p>S2[x]=((x XOR 7FF)^3 mod AA7) &amp; FF <img class="math" src="images/math/ad3ba503c8042268fca1c418fcf733daa9869bc4.png" alt="\in GF(2^{11})"/></p>
 <p>where all constant above are written in hex and all computations are done as polynomials in <img class="math" src="images/math/701217b291646e2a10f11025289db30ffe7410e8.png" alt="GF(2^n)"/>.</p>
 </div>
 <div class="section" id="id82">
-<h3><a class="toc-backref" href="#id336">Summary</a><a class="headerlink" href="#id82" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id336">7.5.2. Summary</a><a class="headerlink" href="#id82" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="8%" />
@@ -1163,9 +1166,9 @@
 </table>
 </div>
 <div class="section" id="id83">
-<h3><a class="toc-backref" href="#id337">S1</a><a class="headerlink" href="#id83" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id337">7.5.3. S1</a><a class="headerlink" href="#id83" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id84">
-<h4>Representations<a class="headerlink" href="#id84" title="Permalink to this headline">¶</a></h4>
+<h4>7.5.3.1. Representations<a class="headerlink" href="#id84" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.anf">ANF Table</a></p>
@@ -1178,15 +1181,15 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id93">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id93" title="Permalink to this headline">¶</a></h4>
+<h4>7.5.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#id93" title="Permalink to this headline">¶</a></h4>
 <p>There are 255 linear structures:</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki1.ls">Linear structures</a></p>
 </div>
 </div>
 <div class="section" id="id94">
-<h3><a class="toc-backref" href="#id338">S2</a><a class="headerlink" href="#id94" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id338">7.5.4. S2</a><a class="headerlink" href="#id94" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id95">
-<h4>Representations<a class="headerlink" href="#id95" title="Permalink to this headline">¶</a></h4>
+<h4>7.5.4.1. Representations<a class="headerlink" href="#id95" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.anf">ANF Table</a></p>
@@ -1199,20 +1202,20 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id104">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id104" title="Permalink to this headline">¶</a></h4>
+<h4>7.5.4.2. Other useful information in cryptanalysis<a class="headerlink" href="#id104" title="Permalink to this headline">¶</a></h4>
 <p>There are 256 linear structures:</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/LOKI97/loki2.ls">Linear structures</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="magenta">
-<h2><a class="toc-backref" href="#id339">Magenta</a><a class="headerlink" href="#magenta" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id339">7.6. Magenta</a><a class="headerlink" href="#magenta" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id106">
-<h3><a class="toc-backref" href="#id340">Description</a><a class="headerlink" href="#id106" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id340">7.6.1. Description</a><a class="headerlink" href="#id106" title="Permalink to this headline">¶</a></h3>
 <p><em>Magenta</em> is a symmetric key block cipher developed by Michael Jacobson Jr. and Klaus Huber for Deutsche Telekom. The cipher was submitted to the Advanced Encryption Standard process, but did not advance beyond the first round; cryptographic weaknesses were discovered and it was found to be one of the slower ciphers submitted. It has one 8x8 S-box.</p>
 </div>
 <div class="section" id="id107">
-<h3><a class="toc-backref" href="#id341">Summary</a><a class="headerlink" href="#id107" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id341">7.6.2. Summary</a><a class="headerlink" href="#id107" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="9%" />
@@ -1252,9 +1255,9 @@
 </table>
 </div>
 <div class="section" id="id108">
-<h3><a class="toc-backref" href="#id342">S</a><a class="headerlink" href="#id108" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id342">7.6.3. S</a><a class="headerlink" href="#id108" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id109">
-<h4>Representations<a class="headerlink" href="#id109" title="Permalink to this headline">¶</a></h4>
+<h4>7.6.3.1. Representations<a class="headerlink" href="#id109" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial function over <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/e59968d8d8239c9377961136f401b5149358fe61.png" alt="x^8+x^6+x^5+x^2+1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.tt">Truth Table</a></p>
@@ -1268,7 +1271,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MAGENTA/Magenta.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id118">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id118" title="Permalink to this headline">¶</a></h4>
+<h4>7.6.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#id118" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1305,24 +1308,24 @@
 </div>
 </div>
 <div class="section" id="mars">
-<h2><a class="toc-backref" href="#id343">Mars</a><a class="headerlink" href="#mars" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id343">7.7. Mars</a><a class="headerlink" href="#mars" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id119">
-<h3><a class="toc-backref" href="#id344">Description</a><a class="headerlink" href="#id119" title="Permalink to this headline">¶</a></h3>
-<p><em>Mars</em> is a block cipher that was IBM&#8217;s submission to the Advanced Encryption Standard process. MARS was selected as an AES finalist in August 1999, after the AES2 conference in March 1999, where it was voted as the fifth and last finalist algorithm. It has two 8x32 S-boxes: S0 and S1</p>
+<h3><a class="toc-backref" href="#id344">7.7.1. Description</a><a class="headerlink" href="#id119" title="Permalink to this headline">¶</a></h3>
+<p><em>Mars</em> is a block cipher that was IBM’s submission to the Advanced Encryption Standard process. MARS was selected as an AES finalist in August 1999, after the AES2 conference in March 1999, where it was voted as the fifth and last finalist algorithm. It has two 8x32 S-boxes: S0 and S1</p>
 </div>
 <div class="section" id="s0">
-<h3><a class="toc-backref" href="#id345">S0</a><a class="headerlink" href="#s0" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id345">7.7.2. S0</a><a class="headerlink" href="#s0" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id120">
-<h4>Representations<a class="headerlink" href="#id120" title="Permalink to this headline">¶</a></h4>
+<h4>7.7.2.1. Representations<a class="headerlink" href="#id120" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S0.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S0.anf">ANF Table</a></p>
 </div>
 </div>
 <div class="section" id="id124">
-<h3><a class="toc-backref" href="#id346">S1</a><a class="headerlink" href="#id124" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id346">7.7.3. S1</a><a class="headerlink" href="#id124" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id125">
-<h4>Representations<a class="headerlink" href="#id125" title="Permalink to this headline">¶</a></h4>
+<h4>7.7.3.1. Representations<a class="headerlink" href="#id125" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/MARS/S1.anf">ANF Table</a></p>
@@ -1330,14 +1333,14 @@
 </div>
 </div>
 <div class="section" id="rijndael">
-<h2><a class="toc-backref" href="#id347">Rijndael</a><a class="headerlink" href="#rijndael" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id347">7.8. Rijndael</a><a class="headerlink" href="#rijndael" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id129">
-<h3><a class="toc-backref" href="#id348">Description</a><a class="headerlink" href="#id129" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id348">7.8.1. Description</a><a class="headerlink" href="#id129" title="Permalink to this headline">¶</a></h3>
 <p><em>Rijndael</em>, later called <em>AES</em>, is a block cipher used for securing sensitive but unclassified material by U.S. Government agencies since December 6, 2001 and has become the de facto encryption standard for commercial transactions in the private sector.</p>
-<p><img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/> is AES 8x8 S-box and it is generated by determining the multiplicative inverse for a given number in <img class="math" src="images/math/03c13535d709efd71392cc0708acf95e36f08d00.png" alt="GF(2^8) = GF(2)[x]/(x^8 + x^4 + x^3 + x + 1)"/>, Rijndael&#8217;s finite field. <img class="math" src="images/math/b8e97c2eb45b8c3885d04349587a60a1a05271df.png" alt="{S_{RD}}^{-1}"/> is the inverse S-box and it is simply the S-box <img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/> run in reverse.</p>
+<p><img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/> is AES 8x8 S-box and it is generated by determining the multiplicative inverse for a given number in <img class="math" src="images/math/03c13535d709efd71392cc0708acf95e36f08d00.png" alt="GF(2^8) = GF(2)[x]/(x^8 + x^4 + x^3 + x + 1)"/>, Rijndael’s finite field. <img class="math" src="images/math/b8e97c2eb45b8c3885d04349587a60a1a05271df.png" alt="{S_{RD}}^{-1}"/> is the inverse S-box and it is simply the S-box <img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/> run in reverse.</p>
 <p>The tabular representation of <img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/> S-box represented in hexadecimal notation is the following:</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD-hex.txt">Tabular representation in hexadecimal notation</a></p>
-<p>Here the column is determined by the least significant nibble (four-bit aggregation), and the row is determined by the most significant nibble. For example, the value 0x9a is converted into 0xb8 by Rijndael&#8217;s S-box. Note that the multiplicative inverse of 0x00 is defined as itself.</p>
+<p>Here the column is determined by the least significant nibble (four-bit aggregation), and the row is determined by the most significant nibble. For example, the value 0x9a is converted into 0xb8 by Rijndael’s S-box. Note that the multiplicative inverse of 0x00 is defined as itself.</p>
 <p>The tabular representation of <img class="math" src="images/math/b8e97c2eb45b8c3885d04349587a60a1a05271df.png" alt="{S_{RD}}^{-1}"/> S-box represented in hexadecimal notation is the following:</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv-hex.txt">Tabular representation in hexadecimal notation</a></p>
 <p>For hardware implementations, it might be useful to use the following decomposition of <img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/>:</p>
@@ -1355,7 +1358,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime-hex.txt">Tabular representation in hexadecimal notation</a></p>
 </div>
 <div class="section" id="id135">
-<h3><a class="toc-backref" href="#id349">Summary</a><a class="headerlink" href="#id135" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id349">7.8.2. Summary</a><a class="headerlink" href="#id135" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="25%" />
@@ -1445,9 +1448,9 @@
 </table>
 </div>
 <div class="section" id="id136">
-<h3><a class="toc-backref" href="#id350"><img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/></a><a class="headerlink" href="#id136" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id350">7.8.3. <img class="math" src="images/math/fe3bc1432d4848ccb2b049c70b1d52ecd4255783.png" alt="S_{RD}"/></a><a class="headerlink" href="#id136" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id137">
-<h4>Representations<a class="headerlink" href="#id137" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.3.1. Representations<a class="headerlink" href="#id137" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial function over <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/fda0725b4ea5feb9c0288e26efa050d6fd242991.png" alt="x^8 + x^4 + x^3 + x + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.tt">Truth Table</a></p>
@@ -1461,7 +1464,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRD/SRD.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id147">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id147" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#id147" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1496,9 +1499,9 @@
 </div>
 </div>
 <div class="section" id="id148">
-<h3><a class="toc-backref" href="#id351"><img class="math" src="images/math/b8e97c2eb45b8c3885d04349587a60a1a05271df.png" alt="{S_{RD}}^{-1}"/></a><a class="headerlink" href="#id148" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id351">7.8.4. <img class="math" src="images/math/b8e97c2eb45b8c3885d04349587a60a1a05271df.png" alt="{S_{RD}}^{-1}"/></a><a class="headerlink" href="#id148" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id149">
-<h4>Representations<a class="headerlink" href="#id149" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.4.1. Representations<a class="headerlink" href="#id149" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial function over <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/fda0725b4ea5feb9c0288e26efa050d6fd242991.png" alt="x^8 + x^4 + x^3 + x + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.tt">Truth Table</a></p>
@@ -1512,7 +1515,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/SRDinv/SRDinv.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id159">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id159" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.4.2. Other useful information in cryptanalysis<a class="headerlink" href="#id159" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1547,9 +1550,9 @@
 </div>
 </div>
 <div class="section" id="id160">
-<h3><a class="toc-backref" href="#id352"><img class="math" src="images/math/a6ab649d825f4fa093a4e86ed8ea11988e6f3ee2.png" alt="g"/></a><a class="headerlink" href="#id160" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id352">7.8.5. <img class="math" src="images/math/a6ab649d825f4fa093a4e86ed8ea11988e6f3ee2.png" alt="g"/></a><a class="headerlink" href="#id160" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id161">
-<h4>Representations<a class="headerlink" href="#id161" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.5.1. Representations<a class="headerlink" href="#id161" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.anf">ANF Table</a></p>
@@ -1562,7 +1565,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/g/g.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id170">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id170" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.5.2. Other useful information in cryptanalysis<a class="headerlink" href="#id170" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1589,9 +1592,9 @@
 </div>
 </div>
 <div class="section" id="id171">
-<h3><a class="toc-backref" href="#id353"><img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/></a><a class="headerlink" href="#id171" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id353">7.8.6. <img class="math" src="images/math/11c870eea0a2a0654e9696a6c08af75f8f6bd138.png" alt="f"/></a><a class="headerlink" href="#id171" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id172">
-<h4>Representations<a class="headerlink" href="#id172" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.6.1. Representations<a class="headerlink" href="#id172" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.anf">ANF Table</a></p>
@@ -1604,7 +1607,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/f/f.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id181">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id181" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.6.2. Other useful information in cryptanalysis<a class="headerlink" href="#id181" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1627,9 +1630,9 @@
 </div>
 </div>
 <div class="section" id="id182">
-<h3><a class="toc-backref" href="#id354"><img class="math" src="images/math/bfa02ca759555f38561c5c1df74ff8c205cb20b9.png" alt="f^{-1}"/></a><a class="headerlink" href="#id182" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id354">7.8.7. <img class="math" src="images/math/bfa02ca759555f38561c5c1df74ff8c205cb20b9.png" alt="f^{-1}"/></a><a class="headerlink" href="#id182" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id183">
-<h4>Representations<a class="headerlink" href="#id183" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.7.1. Representations<a class="headerlink" href="#id183" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.anf">ANF Table</a></p>
@@ -1642,7 +1645,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/finv/finv.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id192">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id192" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.7.2. Other useful information in cryptanalysis<a class="headerlink" href="#id192" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1665,9 +1668,9 @@
 </div>
 </div>
 <div class="section" id="xtime">
-<h3><a class="toc-backref" href="#id355">xtime</a><a class="headerlink" href="#xtime" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id355">7.8.8. xtime</a><a class="headerlink" href="#xtime" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id193">
-<h4>Representations<a class="headerlink" href="#id193" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.8.1. Representations<a class="headerlink" href="#id193" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.anf">ANF Table</a></p>
@@ -1680,7 +1683,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/AES/xtime/xtime.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id202">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id202" title="Permalink to this headline">¶</a></h4>
+<h4>7.8.8.2. Other useful information in cryptanalysis<a class="headerlink" href="#id202" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1723,13 +1726,13 @@
 </div>
 </div>
 <div class="section" id="safer">
-<h2><a class="toc-backref" href="#id356">Safer+</a><a class="headerlink" href="#safer" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id356">7.9. Safer+</a><a class="headerlink" href="#safer" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id203">
-<h3><a class="toc-backref" href="#id357">Description</a><a class="headerlink" href="#id203" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id357">7.9.1. Description</a><a class="headerlink" href="#id203" title="Permalink to this headline">¶</a></h3>
 <p><em>Safer+</em> (Massey et al., 1998) was submitted as a candidate for the Advanced Encryption Standard and has a block size of 128 bits. The cipher was not selected as a finalist. Bluetooth uses custom algorithms based on SAFER+ for key derivation (called E21 and E22) and authentication as message authentication codes (called E1). Encryption in Bluetooth does not use SAFER+. It has one 8x8 S-box called expf and other 9x8 S-box called logf.</p>
 </div>
 <div class="section" id="id204">
-<h3><a class="toc-backref" href="#id358">Summary</a><a class="headerlink" href="#id204" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id358">7.9.2. Summary</a><a class="headerlink" href="#id204" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="8%" />
@@ -1783,9 +1786,9 @@
 </table>
 </div>
 <div class="section" id="expf">
-<h3><a class="toc-backref" href="#id359">expf</a><a class="headerlink" href="#expf" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id359">7.9.3. expf</a><a class="headerlink" href="#expf" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id205">
-<h4>Representations<a class="headerlink" href="#id205" title="Permalink to this headline">¶</a></h4>
+<h4>7.9.3.1. Representations<a class="headerlink" href="#id205" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.anf">ANF Table</a></p>
@@ -1798,7 +1801,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/expf.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id214">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id214" title="Permalink to this headline">¶</a></h4>
+<h4>7.9.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#id214" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1829,7 +1832,7 @@
 </tbody>
 </table>
 <p>There are 3 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([1 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([1 0 0 0 0 0 0 0],[0 0 0 0 0 0 0 1])</span>
 <span class="go">([1 0 0 0 0 0 0 0],[0 0 0 0 0 0 1 0])</span>
 <span class="go">([1 0 0 0 0 0 0 0],[0 0 0 0 0 0 1 1])</span>
 </pre></div>
@@ -1839,9 +1842,9 @@
 </div>
 </div>
 <div class="section" id="logf">
-<h3><a class="toc-backref" href="#id360">logf</a><a class="headerlink" href="#logf" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id360">7.9.4. logf</a><a class="headerlink" href="#logf" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id215">
-<h4>Representations<a class="headerlink" href="#id215" title="Permalink to this headline">¶</a></h4>
+<h4>7.9.4.1. Representations<a class="headerlink" href="#id215" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.anf">ANF Table</a></p>
@@ -1854,20 +1857,20 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id224">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id224" title="Permalink to this headline">¶</a></h4>
+<h4>7.9.4.2. Other useful information in cryptanalysis<a class="headerlink" href="#id224" title="Permalink to this headline">¶</a></h4>
 <p>There is 255 linear structures:</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/safer/logf.ls">Linear structures</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="serpent">
-<h2><a class="toc-backref" href="#id361">Serpent</a><a class="headerlink" href="#serpent" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id361">7.10. Serpent</a><a class="headerlink" href="#serpent" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id226">
-<h3><a class="toc-backref" href="#id362">Description</a><a class="headerlink" href="#id226" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id362">7.10.1. Description</a><a class="headerlink" href="#id226" title="Permalink to this headline">¶</a></h3>
 <p><em>Serpent</em> is a symmetric key block cipher that was a finalist in the Advanced Encryption Standard (AES) contest, where it was ranked second to Rijndael. Serpent was designed by Ross Anderson, Eli Biham, and Lars Knudsen. It has eight 4x4 S-boxes: S0, S1, S2, S3, S4, S5, S6, S7.</p>
 </div>
 <div class="section" id="id227">
-<h3><a class="toc-backref" href="#id363">Summary</a><a class="headerlink" href="#id227" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id363">7.10.2. Summary</a><a class="headerlink" href="#id227" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="9%" />
@@ -1987,9 +1990,9 @@
 </table>
 </div>
 <div class="section" id="id228">
-<h3><a class="toc-backref" href="#id364">S0</a><a class="headerlink" href="#id228" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id364">7.10.3. S0</a><a class="headerlink" href="#id228" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id229">
-<h4>Representations<a class="headerlink" href="#id229" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.3.1. Representations<a class="headerlink" href="#id229" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.anf">ANF Table</a></p>
@@ -2002,7 +2005,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S0/S0.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id238">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id238" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.3.2. Other useful information in cryptanalysis<a class="headerlink" href="#id238" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2027,7 +2030,7 @@
 </tbody>
 </table>
 <p>There are 9 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 0],[1 0 0 0])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 0],[1 0 0 0])</span>
 <span class="go">([0 1 0 0],[0 0 1 1])</span>
 <span class="go">([0 1 0 0],[1 0 0 0])</span>
 <span class="go">([0 1 0 0],[1 0 1 1])</span>
@@ -2042,9 +2045,9 @@
 </div>
 </div>
 <div class="section" id="id239">
-<h3><a class="toc-backref" href="#id365">S1</a><a class="headerlink" href="#id239" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id365">7.10.4. S1</a><a class="headerlink" href="#id239" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id240">
-<h4>Representations<a class="headerlink" href="#id240" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.4.1. Representations<a class="headerlink" href="#id240" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.anf">ANF Table</a></p>
@@ -2057,7 +2060,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S1/S1.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id249">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id249" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.4.2. Other useful information in cryptanalysis<a class="headerlink" href="#id249" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2082,7 +2085,7 @@
 </tbody>
 </table>
 <p>There are 9 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 1],[1 1 1 0])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 1],[1 1 1 0])</span>
 <span class="go">([0 1 0 0],[0 1 0 0])</span>
 <span class="go">([0 1 0 0],[1 0 1 0])</span>
 <span class="go">([0 1 0 0],[1 1 1 0])</span>
@@ -2098,9 +2101,9 @@
 </div>
 </div>
 <div class="section" id="id250">
-<h3><a class="toc-backref" href="#id366">S2</a><a class="headerlink" href="#id250" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id366">7.10.5. S2</a><a class="headerlink" href="#id250" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id251">
-<h4>Representations<a class="headerlink" href="#id251" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.5.1. Representations<a class="headerlink" href="#id251" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.anf">ANF Table</a></p>
@@ -2113,7 +2116,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S2/S2.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id260">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id260" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.5.2. Other useful information in cryptanalysis<a class="headerlink" href="#id260" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2135,7 +2138,7 @@
 </tbody>
 </table>
 <p>There are 9 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 0],[0 0 0 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 0],[0 0 0 1])</span>
 <span class="go">([0 0 1 0],[1 1 1 0])</span>
 <span class="go">([0 0 1 0],[1 1 1 1])</span>
 <span class="go">([0 1 0 0],[1 1 1 0])</span>
@@ -2151,9 +2154,9 @@
 </div>
 </div>
 <div class="section" id="id261">
-<h3><a class="toc-backref" href="#id367">S3</a><a class="headerlink" href="#id261" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id367">7.10.6. S3</a><a class="headerlink" href="#id261" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id262">
-<h4>Representations<a class="headerlink" href="#id262" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.6.1. Representations<a class="headerlink" href="#id262" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.anf">ANF Table</a></p>
@@ -2166,7 +2169,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S3/S3.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id271">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id271" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.6.2. Other useful information in cryptanalysis<a class="headerlink" href="#id271" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2191,7 +2194,7 @@
 </tbody>
 </table>
 <p>There are 3 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 1],[1 1 1 0])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 1],[1 1 1 0])</span>
 <span class="go">([0 1 0 0],[1 1 1 0])</span>
 <span class="go">([0 1 1 1],[1 1 1 0])</span>
 </pre></div>
@@ -2201,9 +2204,9 @@
 </div>
 </div>
 <div class="section" id="id272">
-<h3><a class="toc-backref" href="#id368">S4</a><a class="headerlink" href="#id272" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id368">7.10.7. S4</a><a class="headerlink" href="#id272" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id273">
-<h4>Representations<a class="headerlink" href="#id273" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.7.1. Representations<a class="headerlink" href="#id273" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.anf">ANF Table</a></p>
@@ -2216,7 +2219,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S4/S4.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id282">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id282" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.7.2. Other useful information in cryptanalysis<a class="headerlink" href="#id282" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2241,7 +2244,7 @@
 </tbody>
 </table>
 <p>There are 3 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 1 0 0],[0 0 0 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 1 0 0],[0 0 0 1])</span>
 <span class="go">([1 0 1 1],[0 0 0 1])</span>
 <span class="go">([1 1 1 1],[0 0 0 1])</span>
 </pre></div>
@@ -2251,9 +2254,9 @@
 </div>
 </div>
 <div class="section" id="s5">
-<h3><a class="toc-backref" href="#id369">S5</a><a class="headerlink" href="#s5" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id369">7.10.8. S5</a><a class="headerlink" href="#s5" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id283">
-<h4>Representations<a class="headerlink" href="#id283" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.8.1. Representations<a class="headerlink" href="#id283" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.anf">ANF Table</a></p>
@@ -2266,7 +2269,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S5/S5.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id292">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id292" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.8.2. Other useful information in cryptanalysis<a class="headerlink" href="#id292" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2288,7 +2291,7 @@
 </tbody>
 </table>
 <p>There are 3 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 1 0 0],[0 0 0 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 1 0 0],[0 0 0 1])</span>
 <span class="go">([1 0 1 1],[0 0 0 1])</span>
 <span class="go">([1 1 1 1],[0 0 0 1])</span>
 </pre></div>
@@ -2298,9 +2301,9 @@
 </div>
 </div>
 <div class="section" id="s6">
-<h3><a class="toc-backref" href="#id370">S6</a><a class="headerlink" href="#s6" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id370">7.10.9. S6</a><a class="headerlink" href="#s6" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id293">
-<h4>Representations<a class="headerlink" href="#id293" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.9.1. Representations<a class="headerlink" href="#id293" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.anf">ANF Table</a></p>
@@ -2313,7 +2316,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S6/S6.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id302">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id302" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.9.2. Other useful information in cryptanalysis<a class="headerlink" href="#id302" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2338,7 +2341,7 @@
 </tbody>
 </table>
 <p>There are 9 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 0],[0 0 1 0])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 0],[0 0 1 0])</span>
 <span class="go">([0 1 0 0],[0 0 1 0])</span>
 <span class="go">([0 1 1 0],[0 0 1 0])</span>
 <span class="go">([0 1 1 0],[0 1 0 1])</span>
@@ -2354,9 +2357,9 @@
 </div>
 </div>
 <div class="section" id="s7">
-<h3><a class="toc-backref" href="#id371">S7</a><a class="headerlink" href="#s7" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id371">7.10.10. S7</a><a class="headerlink" href="#s7" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id303">
-<h4>Representations<a class="headerlink" href="#id303" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.10.1. Representations<a class="headerlink" href="#id303" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.anf">ANF Table</a></p>
@@ -2369,7 +2372,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Serpent/S7/S7.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id312">
-<h4>Other useful information in cryptanalysis<a class="headerlink" href="#id312" title="Permalink to this headline">¶</a></h4>
+<h4>7.10.10.2. Other useful information in cryptanalysis<a class="headerlink" href="#id312" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2394,7 +2397,7 @@
 </tbody>
 </table>
 <p>There are 3 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 0 1],[1 1 1 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 0 1],[1 1 1 1])</span>
 <span class="go">([1 0 1 0],[1 1 1 1])</span>
 <span class="go">([1 0 1 1],[1 1 1 1])</span>
 </pre></div>
@@ -2416,10 +2419,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cryptec.html" class="btn btn-neutral float-right" title="Analysis of CRYPTEC project cryptographic algorithms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cryptec.html" class="btn btn-neutral float-right" title="8. Analysis of CRYPTEC project cryptographic algorithms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="operations.html" class="btn btn-neutral" title="Operations and constructions over Vector Boolean Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="operations.html" class="btn btn-neutral" title="6. Operations and constructions over Vector Boolean Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -2451,7 +2454,6 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

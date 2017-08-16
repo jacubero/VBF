@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Analysis of CRYPTEC project cryptographic algorithms &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  <title>8. Analysis of CRYPTEC project cryptographic algorithms &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
-        <link rel="next" title="Analysis of NESSIE project cryptographic algorithms" href="nessie.html"/>
-        <link rel="prev" title="Analysis of AES competition cryptographic algorithms" href="aes.html"/> 
+        <link rel="next" title="9. Analysis of NESSIE project cryptographic algorithms" href="nessie.html"/>
+        <link rel="prev" title="7. Analysis of AES competition cryptographic algorithms" href="aes.html"/> 
 
   
   <script src="static/js/modernizr.min.js"></script>
@@ -59,6 +59,9 @@
             <a href="index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
           
 
+          
+            
+            <img src="_static/wrapping_paper-binary.jpg" class="logo" />
           
           </a>
 
@@ -91,92 +94,92 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis of CRYPTEC project cryptographic algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cipherunicorn-e">CIPHERUNICORN-E</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#s0">S0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#representations">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#other-useful-information-in-cryptanalysis">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">3. Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">4. Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aes.html">7. Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Analysis of CRYPTEC project cryptographic algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cipherunicorn-e">8.1. CIPHERUNICORN-E</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">8.1.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">8.1.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s0">8.1.3. S0</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#representations">8.1.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-useful-information-in-cryptanalysis">8.1.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s1">S1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id11">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s1">8.1.4. S1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">8.1.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">8.1.4.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s2">S2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id12">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id22">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s2">8.1.5. S2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id12">8.1.5.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">8.1.5.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#s3">S3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id23">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id33">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#clefia">CLEFIA</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id34">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id35">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id36">S0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id37">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id47">Other useful information in cryptanalysis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#construction">Construction</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id110">S1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id111">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id121">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s3">8.1.6. S3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id23">8.1.6.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id33">8.1.6.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#hierocrypt3">Hierocrypt3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id122">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id123">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#s">S</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id124">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id134">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clefia">8.2. CLEFIA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id34">8.2.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">8.2.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">8.2.3. S0</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id37">8.2.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id47">8.2.3.2. Other useful information in cryptanalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#construction">8.2.3.3. Construction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id110">8.2.4. S1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id111">8.2.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id121">8.2.4.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#sc2000">SC2000</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id135">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id136">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#s4">S4</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id137">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id146">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s5">S5</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id147">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id156">Other useful information in cryptanalysis</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#s6">S6</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id157">Representations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id166">Other useful information in cryptanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hierocrypt3">8.3. Hierocrypt3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id122">8.3.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id123">8.3.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s">8.3.3. S</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id124">8.3.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id134">8.3.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#sc2000">8.4. SC2000</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id135">8.4.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id136">8.4.2. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s4">8.4.3. S4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id137">8.4.3.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id146">8.4.3.2. Other useful information in cryptanalysis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design.html">Design of cryptographically robust Vector Boolean functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s5">8.4.4. S5</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id147">8.4.4.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id156">8.4.4.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#s6">8.4.5. S6</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id157">8.4.5.1. Representations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id166">8.4.5.2. Other useful information in cryptanalysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">10. Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">11. Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -221,7 +224,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Analysis of CRYPTEC project cryptographic algorithms</li>
+      <li>8. Analysis of CRYPTEC project cryptographic algorithms</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -241,8 +244,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="analysis-of-cryptec-project-cryptographic-algorithms">
-<h1>Analysis of CRYPTEC project cryptographic algorithms<a class="headerlink" href="#analysis-of-cryptec-project-cryptographic-algorithms" title="Permalink to this headline">¶</a></h1>
-<p>CRYPTREC is the Cryptography Research and Evaluation Committees set up by the Japanese Government to evaluate and recommend cryptographic techniques for government and industrial use. It is comparable in many respects to the European Union&#8217;s NESSIE project and to the Advanced Encryption Standard process run by NIST in the U.S.. In this chapter, certain cryptographic algorithms from CRYPTEC project candidates are analysed.</p>
+<h1>8. Analysis of CRYPTEC project cryptographic algorithms<a class="headerlink" href="#analysis-of-cryptec-project-cryptographic-algorithms" title="Permalink to this headline">¶</a></h1>
+<p>CRYPTREC is the Cryptography Research and Evaluation Committees set up by the Japanese Government to evaluate and recommend cryptographic techniques for government and industrial use. It is comparable in many respects to the European Union’s NESSIE project and to the Advanced Encryption Standard process run by NIST in the U.S.. In this chapter, certain cryptographic algorithms from CRYPTEC project candidates are analysed.</p>
 <p>Below you can find a legend describing the cryptographic criteria used in this chapter:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -359,13 +362,13 @@
 </ul>
 </div>
 <div class="section" id="cipherunicorn-e">
-<h2><a class="toc-backref" href="#id167">CIPHERUNICORN-E</a><a class="headerlink" href="#cipherunicorn-e" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id167">8.1. CIPHERUNICORN-E</a><a class="headerlink" href="#cipherunicorn-e" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description">
-<h3><a class="toc-backref" href="#id168">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
-<p><em>CIPHERUNICORN-E</em> is a block cipher created by NEC in 1998. It was among the cryptographic techniques recommended for Japanese government use by CRYPTREC in 2003, however, has been dropped to &#8220;candidate&#8221; by CRYPTREC revision in 2013. It has four 8x8 S-boxes: S0,S1,S2,S3</p>
+<h3><a class="toc-backref" href="#id168">8.1.1. Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p><em>CIPHERUNICORN-E</em> is a block cipher created by NEC in 1998. It was among the cryptographic techniques recommended for Japanese government use by CRYPTREC in 2003, however, has been dropped to “candidate” by CRYPTREC revision in 2013. It has four 8x8 S-boxes: S0,S1,S2,S3</p>
 </div>
 <div class="section" id="summary">
-<h3><a class="toc-backref" href="#id169">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id169">8.1.2. Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="9%" />
@@ -435,9 +438,9 @@
 </table>
 </div>
 <div class="section" id="s0">
-<h3><a class="toc-backref" href="#id170">S0</a><a class="headerlink" href="#s0" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id170">8.1.3. S0</a><a class="headerlink" href="#s0" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="representations">
-<h4><a class="toc-backref" href="#id171">Representations</a><a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id171">8.1.3.1. Representations</a><a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial function over <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/d2b0a5fe7cbb5978507483d7222106f0437e6682.png" alt="x^8 + x^4 + x^3 + x^2 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S0-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S0.tt">Truth Table</a></p>
@@ -451,7 +454,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S0.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="other-useful-information-in-cryptanalysis">
-<h4><a class="toc-backref" href="#id172">Other useful information in cryptanalysis</a><a class="headerlink" href="#other-useful-information-in-cryptanalysis" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id172">8.1.3.2. Other useful information in cryptanalysis</a><a class="headerlink" href="#other-useful-information-in-cryptanalysis" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -480,9 +483,9 @@
 </div>
 </div>
 <div class="section" id="s1">
-<h3><a class="toc-backref" href="#id173">S1</a><a class="headerlink" href="#s1" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id173">8.1.4. S1</a><a class="headerlink" href="#s1" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id1">
-<h4><a class="toc-backref" href="#id174">Representations</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id174">8.1.4.1. Representations</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial function over <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/e65c2694685cf9374c5e4aab8e64177ca674bb82.png" alt="x^8 + x^6 + x^5 + x^2 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S1-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S1.tt">Truth Table</a></p>
@@ -496,7 +499,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S1.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id11">
-<h4><a class="toc-backref" href="#id175">Other useful information in cryptanalysis</a><a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id175">8.1.4.2. Other useful information in cryptanalysis</a><a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -525,9 +528,9 @@
 </div>
 </div>
 <div class="section" id="s2">
-<h3><a class="toc-backref" href="#id176">S2</a><a class="headerlink" href="#s2" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id176">8.1.5. S2</a><a class="headerlink" href="#s2" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id12">
-<h4><a class="toc-backref" href="#id177">Representations</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id177">8.1.5.1. Representations</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial function over <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/b47128bb5e200c6d60c4f6eed027afbcbb32481f.png" alt="x^8 + x^6 + x^3 + x^2 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S2-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S2.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S2.tt">Truth Table</a></p>
@@ -541,7 +544,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S2.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id22">
-<h4><a class="toc-backref" href="#id178">Other useful information in cryptanalysis</a><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id178">8.1.5.2. Other useful information in cryptanalysis</a><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -576,9 +579,9 @@
 </div>
 </div>
 <div class="section" id="s3">
-<h3><a class="toc-backref" href="#id179">S3</a><a class="headerlink" href="#s3" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id179">8.1.6. S3</a><a class="headerlink" href="#s3" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id23">
-<h4><a class="toc-backref" href="#id180">Representations</a><a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id180">8.1.6.1. Representations</a><a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial function over <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/1abcd5b4e07b1d29269cb873a2fd85f22ee345f7.png" alt="x^8 + x^6 + x^5 + x^4 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S3-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S3.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S3.tt">Truth Table</a></p>
@@ -592,7 +595,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/CIPHERUNICORN-E/S3.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id33">
-<h4><a class="toc-backref" href="#id181">Other useful information in cryptanalysis</a><a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id181">8.1.6.2. Other useful information in cryptanalysis</a><a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -626,13 +629,13 @@
 </div>
 </div>
 <div class="section" id="clefia">
-<h2><a class="toc-backref" href="#id182">CLEFIA</a><a class="headerlink" href="#clefia" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id182">8.2. CLEFIA</a><a class="headerlink" href="#clefia" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id34">
-<h3><a class="toc-backref" href="#id183">Description</a><a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id183">8.2.1. Description</a><a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
 <p><em>CLEFIA</em> is a proprietary block cipher algorithm, developed by Sony. It is intended to be used in DRM systems. It is among the cryptographic techniques recommended candidate for Japanese government use by CRYPTREC revision in 2013. It has two <img class="math" src="images/math/20dcb48f5d806254d82093da16010cacaf88b210.png" alt="8 \times 8"/> S-boxes: <img class="math" src="images/math/77f68e5f3eeaf40e7a496c9ef9b81b30698c3d58.png" alt="S_0,S_1"/></p>
 </div>
 <div class="section" id="id35">
-<h3><a class="toc-backref" href="#id184">Summary</a><a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id184">8.2.2. Summary</a><a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="9%" />
@@ -682,9 +685,9 @@
 </table>
 </div>
 <div class="section" id="id36">
-<h3><a class="toc-backref" href="#id185">S0</a><a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id185">8.2.3. S0</a><a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id37">
-<h4><a class="toc-backref" href="#id186">Representations</a><a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id186">8.2.3.1. Representations</a><a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial function over <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/d2b0a5fe7cbb5978507483d7222106f0437e6682.png" alt="x^8 + x^4 + x^3 + x^2 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0.tt">Truth Table</a></p>
@@ -698,7 +701,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S0.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id47">
-<h4><a class="toc-backref" href="#id187">Other useful information in cryptanalysis</a><a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id187">8.2.3.2. Other useful information in cryptanalysis</a><a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -733,7 +736,7 @@
 <p>It has 2 negated fixed points: (0,1,0,0,0,0,0,1), (1,1,1,1,1,1,0,1)</p>
 </div>
 <div class="section" id="construction">
-<h4><a class="toc-backref" href="#id188">Construction</a><a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id188">8.2.3.3. Construction</a><a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h4>
 <p><img class="math" src="images/math/923ce285836cceaf26beed482949b7c110276600.png" alt="S_0"/> is generated by combining four 4-bit S-boxes <img class="math" src="images/math/121adafb31f65ec83f950d4a9c4765335590fe54.png" alt="SS_0,SS_1,SS_2"/> and <img class="math" src="images/math/c68a7b5f9f29a887e74e9dbd4a1f992fa18c455b.png" alt="SS_3"/> in the following way:</p>
 <p>Step 1. <img class="math" src="images/math/8e405dc73ba186935cbfe337133451e43ad30c22.png" alt="\vec{t_0}=SS_0(\vec{x_0}), \ \vec{t_1}=SS_1(\vec{x_1})"/> where <img class="math" src="images/math/0f70d7dac33d6d25a2e58429c68fa86efac14d7d.png" alt="\vec{x} = \vec{x_0} | \vec{x_1}, \vec{x_i} \in \gf{V_4}"/></p>
 <p>Step 2. <img class="math" src="images/math/51cfe89ca9d36b45f8bd82e2291c3b0174ca6421.png" alt="\vec{u_0}=\vec{t_0}+0x2 \cdot \vec{t_1}, \ \vec{u_1}= 0x2 \cdot \vec{t_0}+\vec{t_1}"/></p>
@@ -921,9 +924,9 @@
 <p>The criteria of several constructions in <img class="math" src="images/math/923ce285836cceaf26beed482949b7c110276600.png" alt="S_0"/> are summarized in the following tables:</p>
 <a class="reference internal image-reference" href="images/ClefiaS0NL.png"><img alt="images/ClefiaS0NL.png" class="align-center" src="images/ClefiaS0NL.png" style="width: 750px;" /></a>
 <a class="reference internal image-reference" href="images/ClefiaS0deg.png"><img alt="images/ClefiaS0deg.png" class="align-center" src="images/ClefiaS0deg.png" style="width: 750px;" /></a>
-<p>You can find a program which calculates the Truth Tables of these constructions in chapter &#8220;Operations and constructions over Vector Boolean Functions&#8221;, section &#8220;Addition of coordinate functions&#8221;.</p>
+<p>You can find a program which calculates the Truth Tables of these constructions in chapter “Operations and constructions over Vector Boolean Functions”, section “Addition of coordinate functions”.</p>
 <div class="section" id="mul2">
-<h5>Mul2<a class="headerlink" href="#mul2" title="Permalink to this headline">¶</a></h5>
+<h5>8.2.3.3.1. Mul2<a class="headerlink" href="#mul2" title="Permalink to this headline">¶</a></h5>
 <p>Let <img class="math" src="images/math/d85cea084cae284f7db0922aae786f1ad1a0dba5.png" alt="Mul2(\vec{x}) = 0x2 \cdot \vec{x}"/> the multiplication in <img class="math" src="images/math/a82ad45cf09b2d5d80858517ff4c5b701017a2e2.png" alt="\gf{GF(2^4)}"/> defined by the primitive polynomial <img class="math" src="images/math/f8cc26f5d4615736026b03de857863aed42317f0.png" alt="x^4+x+1"/> as in CLEFIA cipher.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/Mul2.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/Mul2.tt">Truth Table</a></p>
@@ -959,7 +962,7 @@
 <p>It has 1 negated fixed point: (0,1,0,1)</p>
 </div>
 <div class="section" id="id56">
-<h5><img class="math" src="images/math/e27bee069b6f195064deadc37adc8a153c966789.png" alt="0x2 \cdot \vec{t_1}"/><a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h5>
+<h5>8.2.3.3.2. <img class="math" src="images/math/e27bee069b6f195064deadc37adc8a153c966789.png" alt="0x2 \cdot \vec{t_1}"/><a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h5>
 <p>The operation <img class="math" src="images/math/e27bee069b6f195064deadc37adc8a153c966789.png" alt="0x2 \cdot \vec{t_1}"/> in Step 2 can be interpreted as the composition of <img class="math" src="images/math/1b0393fd48d69dc12e7ecc65ac9fc7ca3eae247d.png" alt="Mul2"/> and <img class="math" src="images/math/f8af9e7ebce13a4dcb0249ab4da5cb365ca3d7c5.png" alt="SS_1"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/0x2t1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/0x2t1.tt">Truth Table</a></p>
@@ -993,7 +996,7 @@
 </tbody>
 </table>
 <p>There are 3 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 0],[0 1 0 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 0],[0 1 0 1])</span>
 <span class="go">([0 1 0 0],[0 1 0 1])</span>
 <span class="go">([0 1 1 0],[0 1 0 1])</span>
 </pre></div>
@@ -1002,7 +1005,7 @@
 <p>It has 1 negated fixed point: (1,1,0,0)</p>
 </div>
 <div class="section" id="id65">
-<h5><img class="math" src="images/math/a1608c108853f643b57b60199ad5a2094f42e94d.png" alt="0x2 \cdot \vec{t_0}"/><a class="headerlink" href="#id65" title="Permalink to this headline">¶</a></h5>
+<h5>8.2.3.3.3. <img class="math" src="images/math/a1608c108853f643b57b60199ad5a2094f42e94d.png" alt="0x2 \cdot \vec{t_0}"/><a class="headerlink" href="#id65" title="Permalink to this headline">¶</a></h5>
 <p>The operation <img class="math" src="images/math/a1608c108853f643b57b60199ad5a2094f42e94d.png" alt="0x2 \cdot \vec{t_0}"/> in Step 2 can be interpreted as the composition of <img class="math" src="images/math/1b0393fd48d69dc12e7ecc65ac9fc7ca3eae247d.png" alt="Mul2"/> and <img class="math" src="images/math/42fbb8c55c4898850943645b2d1490d3975054b4.png" alt="SS_0"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/0x2t0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/0x2t0.tt">Truth Table</a></p>
@@ -1030,7 +1033,7 @@
 </tbody>
 </table>
 <p>There are 3 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 1 1],[1 0 0 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 1 1],[1 0 0 1])</span>
 <span class="go">([1 0 0 1],[1 0 0 1])</span>
 <span class="go">([1 0 1 0],[1 0 0 1])</span>
 </pre></div>
@@ -1039,7 +1042,7 @@
 <p>It has 1 negated fixed point: (0,0,0,0)</p>
 </div>
 <div class="section" id="id74">
-<h5><img class="math" src="images/math/4bbd24f4bd182e8adf86fa8626cb317bd1c858e6.png" alt="\vec{u_0}"/><a class="headerlink" href="#id74" title="Permalink to this headline">¶</a></h5>
+<h5>8.2.3.3.4. <img class="math" src="images/math/4bbd24f4bd182e8adf86fa8626cb317bd1c858e6.png" alt="\vec{u_0}"/><a class="headerlink" href="#id74" title="Permalink to this headline">¶</a></h5>
 <p>The operation <img class="math" src="images/math/2a911972317df7ab9137d6dd664f35e7aa2857d5.png" alt="\vec{u_0} = \vec{t_0} \oplus 0x2 \cdot \vec{t_1}"/> in Step 2 can be interpreted as the direct sum of <img class="math" src="images/math/42fbb8c55c4898850943645b2d1490d3975054b4.png" alt="SS_0"/> and <img class="math" src="images/math/88bb488d3c519636ae52fa4bdc1bfc7dd0777203.png" alt="Mul2 \circ SS_1"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u0.tt">Truth Table</a></p>
@@ -1050,7 +1053,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u0.dp">Differential Profile</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u0.ac">Autocorrelation Spectrum</a></p>
 <p>There are 6 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 0 0 0 0 1 0],[0 1 0 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 0 0 0 0 1 0],[0 1 0 1])</span>
 <span class="go">([0 0 0 0 0 1 0 0],[0 1 0 1])</span>
 <span class="go">([0 0 0 0 0 1 1 0],[0 1 0 1])</span>
 <span class="go">([0 0 1 1 0 0 0 0],[1 1 0 0])</span>
@@ -1060,7 +1063,7 @@
 </div>
 </div>
 <div class="section" id="id83">
-<h5><img class="math" src="images/math/368c919114e1b8e7a7f8d91e522a50ad8b7aad0e.png" alt="\vec{u_1}"/><a class="headerlink" href="#id83" title="Permalink to this headline">¶</a></h5>
+<h5>8.2.3.3.5. <img class="math" src="images/math/368c919114e1b8e7a7f8d91e522a50ad8b7aad0e.png" alt="\vec{u_1}"/><a class="headerlink" href="#id83" title="Permalink to this headline">¶</a></h5>
 <p>The operation <img class="math" src="images/math/9fc4b168f0d1d18c9ce6397f168ac67a22e1ebb4.png" alt="\vec{u_1}= 0x2 \cdot \vec{t_0} \oplus \vec{t_1}"/> in Step 2 can be interpreted as the direct sum of <img class="math" src="images/math/7573e9ba2adaa6ace661231d776c8530748de580.png" alt="Mul2 \circ SS_0"/> and <img class="math" src="images/math/f8af9e7ebce13a4dcb0249ab4da5cb365ca3d7c5.png" alt="SS_1"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u1.tt">Truth Table</a></p>
@@ -1071,7 +1074,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u1.dp">Differential Profile</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/u1.ac">Autocorrelation Spectrum</a></p>
 <p>There are 6 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 0 0 0 0 0 1 0],[1 0 1 0])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 0 0 0 0 0 1 0],[1 0 1 0])</span>
 <span class="go">([0 0 0 0 0 1 0 0],[1 0 1 0])</span>
 <span class="go">([0 0 0 0 0 1 1 0],[1 0 1 0])</span>
 <span class="go">([0 0 1 1 0 0 0 0],[1 0 0 1])</span>
@@ -1081,7 +1084,7 @@
 </div>
 </div>
 <div class="section" id="id92">
-<h5><img class="math" src="images/math/494206d2a01b9fdf0fc29af799bb64a5b7dc79a5.png" alt="\vec{y_0}"/><a class="headerlink" href="#id92" title="Permalink to this headline">¶</a></h5>
+<h5>8.2.3.3.6. <img class="math" src="images/math/494206d2a01b9fdf0fc29af799bb64a5b7dc79a5.png" alt="\vec{y_0}"/><a class="headerlink" href="#id92" title="Permalink to this headline">¶</a></h5>
 <p>In the Step 3, <img class="math" src="images/math/494206d2a01b9fdf0fc29af799bb64a5b7dc79a5.png" alt="\vec{y_0}"/> is obtained by composing <img class="math" src="images/math/17a54ac38e174343cc0923370ada16da0e6fcc91.png" alt="SS_2"/> S-box with <img class="math" src="images/math/4bbd24f4bd182e8adf86fa8626cb317bd1c858e6.png" alt="\vec{u_0}"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/y0.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/y0.tt">Truth Table</a></p>
@@ -1094,7 +1097,7 @@
 <p>There are no linear structures.</p>
 </div>
 <div class="section" id="id101">
-<h5><img class="math" src="images/math/f440ab2b377b1e2d79b6d32761e056b4221473a3.png" alt="\vec{y_1}"/><a class="headerlink" href="#id101" title="Permalink to this headline">¶</a></h5>
+<h5>8.2.3.3.7. <img class="math" src="images/math/f440ab2b377b1e2d79b6d32761e056b4221473a3.png" alt="\vec{y_1}"/><a class="headerlink" href="#id101" title="Permalink to this headline">¶</a></h5>
 <p>In the Step 3, <img class="math" src="images/math/f440ab2b377b1e2d79b6d32761e056b4221473a3.png" alt="\vec{y_1}"/> is obtained by composing <img class="math" src="images/math/c68a7b5f9f29a887e74e9dbd4a1f992fa18c455b.png" alt="SS_3"/> S-box with <img class="math" src="images/math/368c919114e1b8e7a7f8d91e522a50ad8b7aad0e.png" alt="\vec{u_1}"/>.</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/y1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/y1.tt">Truth Table</a></p>
@@ -1109,9 +1112,9 @@
 </div>
 </div>
 <div class="section" id="id110">
-<h3><a class="toc-backref" href="#id189">S1</a><a class="headerlink" href="#id110" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id189">8.2.4. S1</a><a class="headerlink" href="#id110" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id111">
-<h4><a class="toc-backref" href="#id190">Representations</a><a class="headerlink" href="#id111" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id190">8.2.4.1. Representations</a><a class="headerlink" href="#id111" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial function over <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/d2b0a5fe7cbb5978507483d7222106f0437e6682.png" alt="x^8 + x^4 + x^3 + x^2 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1.tt">Truth Table</a></p>
@@ -1125,7 +1128,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Clefia/S1.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id121">
-<h4><a class="toc-backref" href="#id191">Other useful information in cryptanalysis</a><a class="headerlink" href="#id121" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id191">8.2.4.2. Other useful information in cryptanalysis</a><a class="headerlink" href="#id121" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1150,13 +1153,13 @@
 </div>
 </div>
 <div class="section" id="hierocrypt3">
-<h2><a class="toc-backref" href="#id192">Hierocrypt3</a><a class="headerlink" href="#hierocrypt3" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id192">8.3. Hierocrypt3</a><a class="headerlink" href="#hierocrypt3" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id122">
-<h3><a class="toc-backref" href="#id193">Description</a><a class="headerlink" href="#id122" title="Permalink to this headline">¶</a></h3>
-<p><em>Hierocrypt3</em> and Hierocrypt-L1 are block ciphers created by Toshiba in 2000. They were submitted to the NESSIE project, but were not selected. Both algorithms were among the cryptographic techniques recommended for Japanese government use by CRYPTREC in 2003, however, both have been dropped to &#8220;candidate&#8221; by CRYPTREC revision in 2013. Both of them have the same 8x8 S-box: S</p>
+<h3><a class="toc-backref" href="#id193">8.3.1. Description</a><a class="headerlink" href="#id122" title="Permalink to this headline">¶</a></h3>
+<p><em>Hierocrypt3</em> and Hierocrypt-L1 are block ciphers created by Toshiba in 2000. They were submitted to the NESSIE project, but were not selected. Both algorithms were among the cryptographic techniques recommended for Japanese government use by CRYPTREC in 2003, however, both have been dropped to “candidate” by CRYPTREC revision in 2013. Both of them have the same 8x8 S-box: S</p>
 </div>
 <div class="section" id="id123">
-<h3><a class="toc-backref" href="#id194">Summary</a><a class="headerlink" href="#id123" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id194">8.3.2. Summary</a><a class="headerlink" href="#id123" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="9%" />
@@ -1196,9 +1199,9 @@
 </table>
 </div>
 <div class="section" id="s">
-<h3><a class="toc-backref" href="#id195">S</a><a class="headerlink" href="#s" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id195">8.3.3. S</a><a class="headerlink" href="#s" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id124">
-<h4><a class="toc-backref" href="#id196">Representations</a><a class="headerlink" href="#id124" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id196">8.3.3.1. Representations</a><a class="headerlink" href="#id124" title="Permalink to this headline">¶</a></h4>
 <p>Polynomial function over <img class="math" src="images/math/775382db92bf1a061ee03b1ac0d0fd46abdf6cf5.png" alt="\gf{GF(2^8)}"/> with irreducible polynomial <img class="math" src="images/math/d2b0a5fe7cbb5978507483d7222106f0437e6682.png" alt="x^8 + x^4 + x^3 + x^2 + 1"/>: <a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Hierocrypt3/S-trace.pdf">Trace representation</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Hierocrypt3/S.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Hierocrypt3/S.tt">Truth Table</a></p>
@@ -1212,7 +1215,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Hierocrypt3/S.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id134">
-<h4><a class="toc-backref" href="#id197">Other useful information in cryptanalysis</a><a class="headerlink" href="#id134" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id197">8.3.3.2. Other useful information in cryptanalysis</a><a class="headerlink" href="#id134" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1249,13 +1252,13 @@
 </div>
 </div>
 <div class="section" id="sc2000">
-<h2><a class="toc-backref" href="#id198">SC2000</a><a class="headerlink" href="#sc2000" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id198">8.4. SC2000</a><a class="headerlink" href="#sc2000" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id135">
-<h3><a class="toc-backref" href="#id199">Description</a><a class="headerlink" href="#id135" title="Permalink to this headline">¶</a></h3>
-<p><em>SC2000</em> is a block cipher invented by a research group at Fujitsu Labs. It was submitted to the NESSIE project, but was not selected. It was among the cryptographic techniques recommended for Japanese government use by CRYPTREC in 2003, however, has been dropped to &#8220;candidate&#8221; by CRYPTREC revision in 2013. It has three 3 S-boxes: S4,S5,S6</p>
+<h3><a class="toc-backref" href="#id199">8.4.1. Description</a><a class="headerlink" href="#id135" title="Permalink to this headline">¶</a></h3>
+<p><em>SC2000</em> is a block cipher invented by a research group at Fujitsu Labs. It was submitted to the NESSIE project, but was not selected. It was among the cryptographic techniques recommended for Japanese government use by CRYPTREC in 2003, however, has been dropped to “candidate” by CRYPTREC revision in 2013. It has three 3 S-boxes: S4,S5,S6</p>
 </div>
 <div class="section" id="id136">
-<h3><a class="toc-backref" href="#id200">Summary</a><a class="headerlink" href="#id136" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id200">8.4.2. Summary</a><a class="headerlink" href="#id136" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="8%" />
@@ -1325,9 +1328,9 @@
 </table>
 </div>
 <div class="section" id="s4">
-<h3><a class="toc-backref" href="#id201">S4</a><a class="headerlink" href="#s4" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id201">8.4.3. S4</a><a class="headerlink" href="#s4" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id137">
-<h4><a class="toc-backref" href="#id202">Representations</a><a class="headerlink" href="#id137" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id202">8.4.3.1. Representations</a><a class="headerlink" href="#id137" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S4.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S4.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S4.anf">ANF Table</a></p>
@@ -1340,7 +1343,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S4.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id146">
-<h4><a class="toc-backref" href="#id203">Other useful information in cryptanalysis</a><a class="headerlink" href="#id146" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id203">8.4.3.2. Other useful information in cryptanalysis</a><a class="headerlink" href="#id146" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1365,7 +1368,7 @@
 </tbody>
 </table>
 <p>There are 3 linear structures:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">([0 1 0 1],[0 0 1 1])</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">([0 1 0 1],[0 0 1 1])</span>
 <span class="go">([1 0 0 1],[0 0 1 1])</span>
 <span class="go">([1 1 0 0],[0 0 1 1])</span>
 </pre></div>
@@ -1375,9 +1378,9 @@
 </div>
 </div>
 <div class="section" id="s5">
-<h3><a class="toc-backref" href="#id204">S5</a><a class="headerlink" href="#s5" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id204">8.4.4. S5</a><a class="headerlink" href="#s5" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id147">
-<h4><a class="toc-backref" href="#id205">Representations</a><a class="headerlink" href="#id147" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id205">8.4.4.1. Representations</a><a class="headerlink" href="#id147" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S5.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S5.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S5.anf">ANF Table</a></p>
@@ -1390,7 +1393,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S5.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id156">
-<h4><a class="toc-backref" href="#id206">Other useful information in cryptanalysis</a><a class="headerlink" href="#id156" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id206">8.4.4.2. Other useful information in cryptanalysis</a><a class="headerlink" href="#id156" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1419,9 +1422,9 @@
 </div>
 </div>
 <div class="section" id="s6">
-<h3><a class="toc-backref" href="#id207">S6</a><a class="headerlink" href="#s6" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id207">8.4.5. S6</a><a class="headerlink" href="#s6" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id157">
-<h4><a class="toc-backref" href="#id208">Representations</a><a class="headerlink" href="#id157" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id208">8.4.5.1. Representations</a><a class="headerlink" href="#id157" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S6.pdf">Polynomial representation in ANF</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S6.tt">Truth Table</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S6.anf">ANF Table</a></p>
@@ -1434,7 +1437,7 @@
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/sc2000/S6.ac">Autocorrelation Spectrum</a></p>
 </div>
 <div class="section" id="id166">
-<h4><a class="toc-backref" href="#id209">Other useful information in cryptanalysis</a><a class="headerlink" href="#id166" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id209">8.4.5.2. Other useful information in cryptanalysis</a><a class="headerlink" href="#id166" title="Permalink to this headline">¶</a></h4>
 <p>Cycle structure:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1478,10 +1481,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="nessie.html" class="btn btn-neutral float-right" title="Analysis of NESSIE project cryptographic algorithms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="nessie.html" class="btn btn-neutral float-right" title="9. Analysis of NESSIE project cryptographic algorithms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="aes.html" class="btn btn-neutral" title="Analysis of AES competition cryptographic algorithms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="aes.html" class="btn btn-neutral" title="7. Analysis of AES competition cryptographic algorithms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1513,7 +1516,6 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

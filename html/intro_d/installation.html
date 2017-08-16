@@ -58,6 +58,9 @@
           
 
           
+            
+            <img src="../_static/wrapping_paper-binary.jpg" class="logo" />
+          
           </a>
 
           
@@ -89,19 +92,19 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">3. Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">4. Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">7. Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">8. Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">10. Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">11. Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -169,16 +172,16 @@
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>We are going to illustrate the installation of the package in an Unix or Unix-like platforms (including Linux distributions).</p>
 <ol class="arabic simple">
-<li><strong>Download the lastest version of the library</strong> from <a class="reference external" href="https://github.com/jacubero/VBF/tree/master/src">VBF source code URL</a> and place it in the working directory. You should see the example program, input files and the &#8220;<a href="#id1"><span class="problematic" id="id2">*</span></a>.h&#8221; files.</li>
+<li><strong>Download the lastest version of the library</strong> from <a class="reference external" href="https://github.com/jacubero/VBF/tree/master/src">VBF source code URL</a> and place it in the working directory. You should see the example program, input files and the “<a href="#id1"><span class="problematic" id="id2">*</span></a>.h” files.</li>
 <li><strong>Obtain NTL library source code</strong>. To obtain the source code and documentation for NTL, download ntl-xxx.tar.gz from <a class="reference external" href="http://www.shoup.net/ntl/download.html">Download NTL library</a>, placing it in a different directory.</li>
-<li><strong>Run the configuration script</strong>. Working in the directory where you placed the NTL library, do the following (here, &#8220;xxx&#8221; denotes the desired version number of NTL; any version of NTL can be employed):</li>
+<li><strong>Run the configuration script</strong>. Working in the directory where you placed the NTL library, do the following (here, “xxx” denotes the desired version number of NTL; any version of NTL can be employed):</li>
 </ol>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> ntl-xxx/src
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">cd </span>ntl-xxx/src
 <span class="gp">$</span> ./configure
 </pre></div>
 </div>
-<p>The execution of <em>configure</em> generates the file &#8220;makefile&#8221; and the file &#8221;../include/NTL/config.h&#8221;, based upon the values assigned to the variables on the command line. In the example above no arguments were employed. The most important variables are: &#8220;CC&#8221; for choosing the C compiler,
-&#8220;CXX&#8221; for choosing the C++ compiler, &#8220;PREFIX&#8221; for choosing the directory in which to install NTL library components.</p>
+<p>The execution of <em>configure</em> generates the file “makefile” and the file “../include/NTL/config.h”, based upon the values assigned to the variables on the command line. In the example above no arguments were employed. The most important variables are: “CC” for choosing the C compiler,
+“CXX” for choosing the C++ compiler, “PREFIX” for choosing the directory in which to install NTL library components.</p>
 <div class="note admonition">
 <p class="first admonition-title">Disable GMP</p>
 <blockquote class="last">
@@ -187,7 +190,7 @@
 <ol class="arabic simple" start="4">
 <li><strong>Build NTL:</strong></li>
 </ol>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> make
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> make
 <span class="gp">$</span> make check
 <span class="gp">$</span> make install
 </pre></div>
@@ -232,7 +235,6 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

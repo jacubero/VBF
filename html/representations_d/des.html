@@ -58,6 +58,9 @@
           
 
           
+            
+            <img src="../_static/wrapping_paper-binary.jpg" class="logo" />
+          
           </a>
 
           
@@ -89,19 +92,19 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">3. Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">4. Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">7. Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">8. Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">10. Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">11. Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -176,7 +179,7 @@
 <div><p>The input bits specify an entry in the S-box as follows: Consider an S-box input of 6-bits,
 labeled <img class="math" src="../images/math/913cbd25d2bec04ecc2625eebd0ccc74fcf030a3.png" alt="b_1, b_2, b_3, b_4, b_5,"/> and <img class="math" src="../images/math/a85806cab2e73b560c53439f18e28bcd4f37ce07.png" alt="b_6"/>. Bits <img class="math" src="../images/math/77a665c9e4f7ebad9caa0bd1a24954bafcff27ca.png" alt="b_1"/> and <img class="math" src="../images/math/a85806cab2e73b560c53439f18e28bcd4f37ce07.png" alt="b_6"/> are combined to form a 2-bit number, from 0 to 3, which corresponds to a row in the table. The middle 4 bits, <img class="math" src="../images/math/b3ecd741da111cef43b0fbe6cd3419cb34a5a2b5.png" alt="b_2"/> through <img class="math" src="../images/math/c5e72a390ddd98a7cc827e6bc59ecb3904ffb528.png" alt="b_5"/>, are combined to form a 4-bit number, from 0 to 15, which corresponds to a column in the table.</p>
 <p>For example, assume that the input to the first S-box (i.e. bits 1 to 6 of the XOR function) is <em>110011</em>. The first and last bits combine to form <em>11</em>, which corresponds to row 3 of the first S-box. The middle 4 bits combine to form <em>1001</em>, which corresponds to the column 9 of the same S-box. The entry under row 3, column 9 of S-box 1 is 11 (count rows and columns starting from 0). The value <em>1110</em> is substituted for <em>001011</em></p>
-<p>The following figures list the eight S-boxes used in DES. Each S-box replaces a 6-bit input with a 4-bit output. Given a 6-bit input, the 4-bit output is found by selecting the row using the outer two bits, and the column using the inner four bits. For example, an input &#8220;011011&#8221; has outer bits &#8220;01&#8221; and inner bits &#8220;1101&#8221;; noting that the first row is &#8220;00&#8221; and the first column is &#8220;0000&#8221;, the corresponding output for S-box S5 would be &#8220;1001&#8221; (=9), the value in the second row, 14th column.</p>
+<p>The following figures list the eight S-boxes used in DES. Each S-box replaces a 6-bit input with a 4-bit output. Given a 6-bit input, the 4-bit output is found by selecting the row using the outer two bits, and the column using the inner four bits. For example, an input “011011” has outer bits “01” and inner bits “1101”; noting that the first row is “00” and the first column is “0000”, the corresponding output for S-box S5 would be “1001” (=9), the value in the second row, 14th column.</p>
 <a class="reference internal image-reference" href="../images/S1-4.png"><img alt="../images/S1-4.png" class="align-center" src="../images/S1-4.png" style="width: 750px;" /></a>
 <a class="reference internal image-reference" href="../images/S5-8.png"><img alt="../images/S5-8.png" class="align-center" src="../images/S5-8.png" style="width: 750px;" /></a>
 </div></blockquote>
@@ -185,28 +188,28 @@ labeled <img class="math" src="../images/math/913cbd25d2bec04ecc2625eebd0ccc74fc
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>A VBF class can be initialized giving its Expansion and Compression DES permutation vector with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putexp_comp</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_ZZ</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putexp_comp</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">vec_ZZ</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A VBF class can be initialized giving its DES-like S-box representation matrix with the following method:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">putsbox</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">S</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">putsbox</span><span class="p">(</span><span class="k">const</span> <span class="n">NTL</span><span class="o">::</span><span class="n">mat_ZZ</span><span class="o">&amp;</span> <span class="n">S</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <p>The following program prints the Truth Table of a Expansion permutation and of the DES S1 S-box. The inputs are respectively the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">[ 4 1 2 3 4 1 ]</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">[ 4 1 2 3 4 1 ]</span>
 </pre></div>
 </div>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">[[14 4 13 1 2 15 11 8 3 10 6 12 5 9 0 7 ]</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">[[14 4 13 1 2 15 11 8 3 10 6 12 5 9 0 7 ]</span>
 <span class="go">[ 0 15 7 4 14 2 13 1 10 6 12 11 9 5 3 8 ]</span>
 <span class="go">[ 4 1 14 8 13 6 2 11 15 12 9 7 3 10 5 0]</span>
 <span class="go">[ 15 12 8 2 4 9 1 7 5 11 3 14 10 0 6 13]]</span>
 </pre></div>
 </div>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -244,7 +247,7 @@ labeled <img class="math" src="../images/math/913cbd25d2bec04ecc2625eebd0ccc74fc
 </pre></div>
 </div>
 <p>The output of the program would be the following (Only a few values of S1 Truth Table is printed for space reasons):</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">The Truth Table of Expansion Permutation is:</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">The Truth Table of Expansion Permutation is:</span>
 <span class="go">[[0 0 0 0 0 0]</span>
 <span class="go">[1 0 0 0 1 0]</span>
 <span class="go">[0 0 0 1 0 0]</span>
@@ -323,7 +326,6 @@ labeled <img class="math" src="../images/math/913cbd25d2bec04ecc2625eebd0ccc74fc
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

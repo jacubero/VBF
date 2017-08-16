@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Design of cryptographically robust Vector Boolean functions &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
+  <title>11. Design of cryptographically robust Vector Boolean functions &mdash; VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms 1.0.1 documentation" href="index.html"/>
-        <link rel="next" title="FAQ: Frequently Asked Questions" href="faq.html"/>
-        <link rel="prev" title="Analysis of other cryptographic algorithms" href="other.html"/> 
+        <link rel="next" title="12. FAQ: Frequently Asked Questions" href="faq.html"/>
+        <link rel="prev" title="10. Analysis of other cryptographic algorithms" href="other.html"/> 
 
   
   <script src="static/js/modernizr.min.js"></script>
@@ -59,6 +59,9 @@
             <a href="index.html" class="icon icon-home"> VBF Library: User Manual, Analysis and Design of Cryptographic Algorithms
           
 
+          
+            
+            <img src="_static/wrapping_paper-binary.jpg" class="logo" />
           
           </a>
 
@@ -91,40 +94,40 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="representations.html">Representations and characterizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aes.html">Analysis of AES competition cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Analysis of other cryptographic algorithms</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Design of cryptographically robust Vector Boolean functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#bent-functions">Bent functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#two-variables">Two variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#four-variables">Four variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">3. Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">4. Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aes.html">7. Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryptec.html">8. Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">10. Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Design of cryptographically robust Vector Boolean functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bent-functions">11.1. Bent functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#two-variables">11.1.1. Two variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#four-variables">11.1.2. Four variables</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#optimization-of-boolean-functions-via-genetic-algorithms">Optimization of Boolean functions via Genetic Algorithms</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#description">Description</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#galib">Galib</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#representation">Representation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#genetic-operators">Genetic operators</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#weighted-objective-functions">Weighted Objective Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optimization-of-boolean-functions-via-genetic-algorithms">11.2. Optimization of Boolean functions via Genetic Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">11.2.1. Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#galib">11.2.1.1. Galib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#representation">11.2.1.2. Representation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#genetic-operators">11.2.1.3. Genetic operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#weighted-objective-functions">11.2.1.4. Weighted Objective Functions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#implementation">Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implementation">11.2.2. Implementation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#variable-boolean-functions-with-nonlinearity-242">9-variable Boolean functions with nonlinearity 242</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#variable-balanced-boolean-functions-with-nonlinearity-240">9-variable Balanced Boolean functions with nonlinearity 240</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#variable-balanced-boolean-functions-with-nonlinearity-992">11-variable Balanced Boolean functions with nonlinearity 992</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable-boolean-functions-with-nonlinearity-242">11.3. 9-variable Boolean functions with nonlinearity 242</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable-balanced-boolean-functions-with-nonlinearity-240">11.4. 9-variable Balanced Boolean functions with nonlinearity 240</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable-balanced-boolean-functions-with-nonlinearity-992">11.5. 11-variable Balanced Boolean functions with nonlinearity 992</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -169,7 +172,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Design of cryptographically robust Vector Boolean functions</li>
+      <li>11. Design of cryptographically robust Vector Boolean functions</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,7 +192,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="design-of-cryptographically-robust-vector-boolean-functions">
-<h1>Design of cryptographically robust Vector Boolean functions<a class="headerlink" href="#design-of-cryptographically-robust-vector-boolean-functions" title="Permalink to this headline">¶</a></h1>
+<h1>11. Design of cryptographically robust Vector Boolean functions<a class="headerlink" href="#design-of-cryptographically-robust-vector-boolean-functions" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#bent-functions" id="id4">Bent functions</a><ul>
@@ -208,25 +211,25 @@
 </ul>
 </div>
 <div class="section" id="bent-functions">
-<h2><a class="toc-backref" href="#id4">Bent functions</a><a class="headerlink" href="#bent-functions" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">11.1. Bent functions</a><a class="headerlink" href="#bent-functions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="two-variables">
-<h3><a class="toc-backref" href="#id5">Two variables</a><a class="headerlink" href="#two-variables" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">11.1.1. Two variables</a><a class="headerlink" href="#two-variables" title="Permalink to this headline">¶</a></h3>
 <p>There are 8 bent functions:</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Bent/2.pdf">Polynomial representation in ANF</a></p>
 </div>
 <div class="section" id="four-variables">
-<h3><a class="toc-backref" href="#id6">Four variables</a><a class="headerlink" href="#four-variables" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">11.1.2. Four variables</a><a class="headerlink" href="#four-variables" title="Permalink to this headline">¶</a></h3>
 <p>There are 896 bent functions:</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/Bent/4.pdf">Polynomial representation in ANF</a></p>
 </div>
 </div>
 <div class="section" id="optimization-of-boolean-functions-via-genetic-algorithms">
-<h2><a class="toc-backref" href="#id7">Optimization of Boolean functions via Genetic Algorithms</a><a class="headerlink" href="#optimization-of-boolean-functions-via-genetic-algorithms" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">11.2. Optimization of Boolean functions via Genetic Algorithms</a><a class="headerlink" href="#optimization-of-boolean-functions-via-genetic-algorithms" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description">
-<h3><a class="toc-backref" href="#id8">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">11.2.1. Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="galib">
-<h4>Galib<a class="headerlink" href="#galib" title="Permalink to this headline">¶</a></h4>
-<p>The Genetic Algorithm Library called GAlib was (straightforwardly) linked with our VBF library to perform a search of Boolean functions with good combined cryptographic criteria. In using the GAlib library we will work primarily with two classes: a genome and a genetic algorithm. Each genome instance represents a single solution to our optimization problem. The genetic algorithm object defines how the evolution should take place. The genetic algorithm uses an objective function to determine how &#8216;fit&#8217; each genome is for survival. It uses the genome operators (built into the genome) and selection/replacement strategies (built into the genetic algorithm) to generate new individuals.</p>
+<h4>11.2.1.1. Galib<a class="headerlink" href="#galib" title="Permalink to this headline">¶</a></h4>
+<p>The Genetic Algorithm Library called GAlib was (straightforwardly) linked with our VBF library to perform a search of Boolean functions with good combined cryptographic criteria. In using the GAlib library we will work primarily with two classes: a genome and a genetic algorithm. Each genome instance represents a single solution to our optimization problem. The genetic algorithm object defines how the evolution should take place. The genetic algorithm uses an objective function to determine how ‘fit’ each genome is for survival. It uses the genome operators (built into the genome) and selection/replacement strategies (built into the genetic algorithm) to generate new individuals.</p>
 <p>The following three items must be defined in order to solve an optimization problem using a genetic algorithm: A representation, the genetic operators and the objective function.</p>
 <p>The <em>genetic algorithm</em> object determines which individuals should survive, which should reproduce, and which should die. It also records statistics and decides how long the evolution should continue. The algorithm updates the population of solutions over a number of iterations (or generations*). We have used the number of generations as a stopping measure. In each iteration a number of steps are involved:</p>
 <ol class="arabic simple">
@@ -235,21 +238,21 @@
 <li>Mutation of the offspring.</li>
 <li>Selection from the mutated offspring and the current population of solutions to determine the population of solutions for the next iteration.</li>
 </ol>
-<p>Among the many different types of genetic algorithms offered by GAlib we have chosen the standard &#8216;simple genetic algorithm&#8217; described by Goldberg in his book <a class="reference internal" href="bibliography.html#goldberg-1989" id="id2">[Goldberg:1989]</a>. This algorithm uses non-overlapping populations and optional elitism. Each generation the algorithm creates an entirely new population of individuals.</p>
+<p>Among the many different types of genetic algorithms offered by GAlib we have chosen the standard ‘simple genetic algorithm’ described by Goldberg in his book <a class="reference internal" href="bibliography.html#goldberg-1989" id="id2">[Goldberg:1989]</a>. This algorithm uses non-overlapping populations and optional elitism. Each generation the algorithm creates an entirely new population of individuals.</p>
 </div>
 <div class="section" id="representation">
-<h4>Representation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h4>
+<h4>11.2.1.2. Representation<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h4>
 <p>When you use a genetic algorithm to solve an optimization problem, you must be able to represent a single solution to your problem in a single <em>data structure</em>. The genetic algorithm will create a population of solutions based on a sample data structure that you provide. The genetic algorithm then operates on the population to evolve the best solution. In GAlib, the sample data structure is called a GAGenome (some people refer to it as a chromosome). We have used a type of genome called GA2DBinaryStringGenome. This class is derived from the base GAGenome class and a data structure class which consists of a 2-dimensional array of Boolean with <img class="math" src="images/math/836454ccac1cb1f57b1820a677f32adb63e52a57.png" alt="2^n"/> elements (the binary string is the Truth Table of the Boolean function).</p>
 </div>
 <div class="section" id="genetic-operators">
-<h4>Genetic operators<a class="headerlink" href="#genetic-operators" title="Permalink to this headline">¶</a></h4>
+<h4>11.2.1.3. Genetic operators<a class="headerlink" href="#genetic-operators" title="Permalink to this headline">¶</a></h4>
 <p>Each genome has three primary <em>operators</em>: initialization, mutation, and crossover. With these operators you can bias an initial population, define a mutation or crossover specific to our representation, or evolve parts of the genetic algorithm as our population evolves.</p>
-<p>The <em>initialization operator</em> determines how the genome is initialized. It is called when you initialize a population or the genetic algorithm. This operator does not actually create new genomes, rather it &#8216;stuffs&#8217; the genomes with the primordial genetic material from which all solutions will evolve. We have used a uniform random initialization operator.</p>
+<p>The <em>initialization operator</em> determines how the genome is initialized. It is called when you initialize a population or the genetic algorithm. This operator does not actually create new genomes, rather it ‘stuffs’ the genomes with the primordial genetic material from which all solutions will evolve. We have used a uniform random initialization operator.</p>
 <p>The <em>mutation operator</em> defines the procedure for mutating each genome. The mutation operation introduces randomness to the population of solutions. Mutation is generally applied to the children which result from the breeding process. We have used the typical mutator for a binary string genome which flips the bits in the string with a given probability (uniform random bit flip).</p>
-<p>The <em>crossover operator</em> defines the procedure for generating a child from two parent genomes in order to obtain offspring. The crossover operation involves selecting two &#8220;parents&#8221; from the current population of solutions, picking a random point in the binary string representing each of the parents and swapping the values beyond that point between the two parents. This process results in two &#8220;children&#8221; with some characteristics of each of the parents.</p>
+<p>The <em>crossover operator</em> defines the procedure for generating a child from two parent genomes in order to obtain offspring. The crossover operation involves selecting two “parents” from the current population of solutions, picking a random point in the binary string representing each of the parents and swapping the values beyond that point between the two parents. This process results in two “children” with some characteristics of each of the parents.</p>
 </div>
 <div class="section" id="weighted-objective-functions">
-<h4>Weighted Objective Functions<a class="headerlink" href="#weighted-objective-functions" title="Permalink to this headline">¶</a></h4>
+<h4>11.2.1.4. Weighted Objective Functions<a class="headerlink" href="#weighted-objective-functions" title="Permalink to this headline">¶</a></h4>
 <p>In addition to the three primary operators, each genome must also contain an <em>Objective Function</em>. The Objective Function is used to evaluate the
 genome in order to know how good it is compared to the other genomes. Several objective functions were employed gradually involving more criteria in a weighted manner:</p>
 <p>1. Nonlinearity of the Boolean function: <img class="math" src="images/math/ee93a4aa0d857058ed88625aeb1b3cde5b3f6e43.png" alt="\crit{NL}(f)"/>. This cryptographic criterion is represented by a locally smooth fitness
@@ -283,9 +286,9 @@ function:</p>
 </div>
 </div>
 <div class="section" id="implementation">
-<h3><a class="toc-backref" href="#id9">Implementation</a><a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">11.2.2. Implementation</a><a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
 <p>In order to use Galib library, the installation instructions described in <a class="reference external" href="http://lancet.mit.edu/galib-2.4/Installation.html">Installation Instructions for GAlib</a> must be followed. Once Galib is installed, we can use this library in conjunction with VBF library by using the following Makefile:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span>include makevars
+<div class="highlight-c"><div class="highlight"><pre>include makevars
 
 ############# User settings ######################
 
@@ -317,14 +320,14 @@ clean:
         rm -f *.exe
 </pre></div>
 </div>
-<p>Note that a file called &#8220;makevars&#8221; must be present in the same directory as the Makefile file.</p>
+<p>Note that a file called “makevars” must be present in the same directory as the Makefile file.</p>
 <p>Example program for each of the objective functions could be the following:</p>
-<div class="literal-block-wrapper docutils container" id="o1-cpp">
+<div class="literal-block-wrapper container" id="o1-cpp">
 <div class="code-block-caption"><span class="caption-text">o1.cpp</span><a class="headerlink" href="#o1-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -405,12 +408,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="o2-cpp">
+<div class="literal-block-wrapper container" id="o2-cpp">
 <div class="code-block-caption"><span class="caption-text">o2.cpp</span><a class="headerlink" href="#o2-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -496,12 +499,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="o3-cpp">
+<div class="literal-block-wrapper container" id="o3-cpp">
 <div class="code-block-caption"><span class="caption-text">o3.cpp</span><a class="headerlink" href="#o3-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -590,12 +593,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="o4-cpp">
+<div class="literal-block-wrapper container" id="o4-cpp">
 <div class="code-block-caption"><span class="caption-text">o4.cpp</span><a class="headerlink" href="#o4-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -686,12 +689,12 @@ clean:
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="o5-cpp">
+<div class="literal-block-wrapper container" id="o5-cpp">
 <div class="code-block-caption"><span class="caption-text">o5.cpp</span><a class="headerlink" href="#o5-cpp" title="Permalink to this code">¶</a></div>
-<div class="highlight-c"><div class="highlight"><pre><span></span>     <span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-     <span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre>     <span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+     <span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+     <span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+     <span class="cp">#include &quot;VBF.h&quot;</span>
 
      <span class="cp">#define cout STD_COUT</span>
 
@@ -786,11 +789,11 @@ clean:
 </pre></div>
 </div>
 </div>
-<p>The following program illustrates how can be set the seed (included in a file called &#8220;seed.bin&#8221; with the binary representation of the Truth Table of the function) of the Genetic algorithm for the o4 objective function:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;ga/GASimpleGA.h&gt;      // we&#39;re going to use the simple GA</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;ga/GA2DBinStrGenome.h&gt; // and the 2D binary string genome</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;ga/std_stream.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<p>The following program illustrates how can be set the seed (included in a file called “seed.bin” with the binary representation of the Truth Table of the function) of the Genetic algorithm for the o4 objective function:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ga/GASimpleGA.h&gt;      </span><span class="c1">// we&#39;re going to use the simple GA</span>
+<span class="cp">#include &lt;ga/GA2DBinStrGenome.h&gt; </span><span class="c1">// and the 2D binary string genome</span>
+<span class="cp">#include &lt;ga/std_stream.h&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="cp">#define cout STD_COUT</span>
 
@@ -883,7 +886,7 @@ clean:
 </div>
 </div>
 <div class="section" id="variable-boolean-functions-with-nonlinearity-242">
-<h2><a class="toc-backref" href="#id10">9-variable Boolean functions with nonlinearity 242</a><a class="headerlink" href="#variable-boolean-functions-with-nonlinearity-242" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">11.3. 9-variable Boolean functions with nonlinearity 242</a><a class="headerlink" href="#variable-boolean-functions-with-nonlinearity-242" title="Permalink to this headline">¶</a></h2>
 <p>Below you can find the Truth Tables of a set of 9-variable functions with the the best known nonlinearity (242). These Boolean functions can be grouped in five different affine equivalence classes:</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl242/1.txt">A representative Boolean function of class f1</a></p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl242/2.txt">A representative Boolean function of class f2</a></p>
@@ -1007,13 +1010,13 @@ clean:
 </table>
 </div>
 <div class="section" id="variable-balanced-boolean-functions-with-nonlinearity-240">
-<h2><a class="toc-backref" href="#id11">9-variable Balanced Boolean functions with nonlinearity 240</a><a class="headerlink" href="#variable-balanced-boolean-functions-with-nonlinearity-240" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id11">11.4. 9-variable Balanced Boolean functions with nonlinearity 240</a><a class="headerlink" href="#variable-balanced-boolean-functions-with-nonlinearity-240" title="Permalink to this headline">¶</a></h2>
 <p>Below you can find the profiles of 9-variable balanced functions with the the best known nonlinearity (240). Each row represents a profile with four values separated by commmas: Algebraic Degree, Algebraic Immunity, Absolute Indicator and Sum-of-square Indicator:</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl240/240b.cri">Profiles</a></p>
 <p>567 different profiles were found with nonlinearity 240 and algebraic degree 8. The algebraic immunity takes values from the set {4, 5}.The linearity distance takes values from the set {110, 112, 114, 116, 118, 120, 122 }. The absolute indicator takes values from the set { 24, 32, 40, 48, 56, 64, 72 }. The sum-of-square indicator takes 137 different values between 323456 and 377600.</p>
 </div>
 <div class="section" id="variable-balanced-boolean-functions-with-nonlinearity-992">
-<h2><a class="toc-backref" href="#id12">11-variable Balanced Boolean functions with nonlinearity 992</a><a class="headerlink" href="#variable-balanced-boolean-functions-with-nonlinearity-992" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id12">11.5. 11-variable Balanced Boolean functions with nonlinearity 992</a><a class="headerlink" href="#variable-balanced-boolean-functions-with-nonlinearity-992" title="Permalink to this headline">¶</a></h2>
 <p>Below you can find the profiles of 11-variable balanced functions with the the best known nonlinearity (992). Each row represents a profile with four values separated by commmas: Algebraic Degree, Algebraic Immunity, Absolute Indicator and Sum-of-square Indicator:</p>
 <p><a class="reference external" href="https://raw.githubusercontent.com/jacubero/VBF/master/nl992/992b.cri">Profiles</a></p>
 <p>3316 different profiles were found with nonlinearity 992. The algebraic degree takes values from the set { 9, 10 }. The algebraic immunity takes values from the set { 4, 5 }. The absolute indicator takes values from the set: { 120, 128, 136, 144, 160, 168, 176, 192, 200, 208, 224, 232, 240, 248, 256, 264 }. The sum-of-square indicator takes 682 different values between 5244800 and 5844608.</p>
@@ -1030,10 +1033,10 @@ clean:
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ: Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="12. FAQ: Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="other.html" class="btn btn-neutral" title="Analysis of other cryptographic algorithms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="other.html" class="btn btn-neutral" title="10. Analysis of other cryptographic algorithms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1065,7 +1068,6 @@ clean:
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

@@ -58,6 +58,9 @@
           
 
           
+            
+            <img src="../_static/wrapping_paper-binary.jpg" class="logo" />
+          
           </a>
 
           
@@ -89,19 +92,19 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using.html">Using the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../representations.html">Representations and characterizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../criteria.html">Cryptographic Criteria</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations and constructions over Vector Boolean Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../aes.html">Analysis of AES competition cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">Analysis of CRYPTEC project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../nessie.html">Analysis of NESSIE project cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../other.html">Analysis of other cryptographic algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design of cryptographically robust Vector Boolean functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">2. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using.html">3. Using the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../representations.html">4. Representations and characterizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../criteria.html">5. Cryptographic Criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">6. Operations and constructions over Vector Boolean Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aes.html">7. Analysis of AES competition cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cryptec.html">8. Analysis of CRYPTEC project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nessie.html">9. Analysis of NESSIE project cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">10. Analysis of other cryptographic algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">11. Design of cryptographically robust Vector Boolean functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">12. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">13. Bibliography</a></li>
 </ul>
 
             
@@ -174,24 +177,24 @@
 <p><img class="math" src="../images/math/8c68c5bd4146369f28d14ba8983052187c54ccb4.png" alt="f \in \funct{F}_n"/> is balanced if and only if the Walsh coefficient at <img class="math" src="../images/math/9da054dabc9d0fd37e77a582b84686bf6fd970f9.png" alt="\vec{0}"/> is zero. <img class="math" src="../images/math/377572293b5dd8b95f1f89cc688efe22fa8c20d0.png" alt="F \in \funct{F}_{n,m}"/> is balanced if and only if the first row of its Walsh Spectrum has all its elements equal to zero except from the first entry.</p>
 <p>The imbalance of a Boolean function is defined to be <img class="math" src="../images/math/6fd411ad0b4c9f58ab57ad8dfff4d6e58ba8ba5c.png" alt="\crit{I}(f)= | wt(f)-2^{n-1} | = 2^{n-1} | \Cor(f,0)  |"/> where <em>0</em> indicates the constant zero Boolean function.</p>
 <p>Imbalance is defined as the minimum Hamming distance to a balanced function and is therefore directly proportional to the magnitude of the correlation with the constant zero Boolean function. Thus, when imbalance is zero, the function is balanced. Balancedness is a fundamental cryptographic criterion as an imbalanced function has suboptimal unconditional entropy, i.e. it is correlated to a constant function.</p>
-<p>The significance of the balancedness criterion is that the higher the magnitude of a function&#8217;s imbalance (deviation from uniform distribution of outputs), the more likelihood of a high probability linear approximation being obtained. This, in turn, represents a weakness in the function in terms of linear cryptanalysis. In particular, a large imbalance may enable the function to be easily approximated by a constant function.</p>
+<p>The significance of the balancedness criterion is that the higher the magnitude of a function’s imbalance (deviation from uniform distribution of outputs), the more likelihood of a high probability linear approximation being obtained. This, in turn, represents a weakness in the function in terms of linear cryptanalysis. In particular, a large imbalance may enable the function to be easily approximated by a constant function.</p>
 </div>
 <div class="section" id="library">
 <h2>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h2>
 <p>This criterion can only take values <em>0</em> (meaning <em>F</em> is not balanced) or <em>1</em> (meaning <em>F</em> is balanced). The method used to obtain this criterion is the following:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Bal</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">bal</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kt">void</span> <span class="n">Bal</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">bal</span><span class="p">,</span> <span class="n">VBF</span><span class="o">&amp;</span> <span class="n">F</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and there is also an inline function:</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="kr">inline</span> <span class="kt">int</span> <span class="n">Bal</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span>
+<div class="highlight-c"><div class="highlight"><pre><span class="kr">inline</span> <span class="kt">int</span> <span class="n">Bal</span><span class="p">(</span><span class="n">VBF</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <p>The following program finds out if a Vector Boolean function is balanced given its Truth Table.</p>
-<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;VBF.h&quot;</span><span class="cp"></span>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;fstream&gt;</span>
+<span class="cp">#include &quot;VBF.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
@@ -220,13 +223,13 @@
 </pre></div>
 </div>
 <p>If we use the <em>NibbleSub</em> S-box Truth Table as input, the output would be the following:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">It is a balanced function</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">It is a balanced function</span>
 </pre></div>
 </div>
 <p><em>NibbleSub</em> S-box is balanced as each possible 4-tuple occurs with equal probability <img class="math" src="../images/math/a00ad690590f422b78c9d1ab8588f7cc166de008.png" alt="\frac{1}{2^4}"/>.</p>
 <p>The following figure represents the Walsh Spectrum of <em>NibbleSub</em> and emphasizes in red the first row.</p>
 <a class="reference internal image-reference" href="../images/bal.png"><img alt="../images/bal.png" class="align-center" src="../images/bal.png" style="width: 750px;" /></a>
-<p>As all Walsh Spectrum&#8217;s values are 0 except from the <img class="math" src="../images/math/2f152207e13c3bba4194f64a1e7c90f40935752d.png" alt="\vec{0} \in \gf{V_4}"/>, we can conclude that <em>NibbleSub</em> is balanced.</p>
+<p>As all Walsh Spectrum’s values are 0 except from the <img class="math" src="../images/math/2f152207e13c3bba4194f64a1e7c90f40935752d.png" alt="\vec{0} \in \gf{V_4}"/>, we can conclude that <em>NibbleSub</em> is balanced.</p>
 </div>
 </div>
 </div>
@@ -267,7 +270,6 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.0.1',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
