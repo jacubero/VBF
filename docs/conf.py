@@ -195,24 +195,13 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-'preamble': '\usepackage{amsmath}\n\usepackage{amssymb}\n\usepackage{stmaryrd}\n',
+'preamble': r'\input{latex_macros.sty}',
 }
 
 #####################################################
 # add LaTeX macros 
 
-f = file('latex_macros.sty')
-
-try:
-    imgmath_latex_preamble  # check whether this is already defined
-except NameError:
-    imgmath_latex_preamble = ""
-
-for macro in f:
-    # used when building latex and pdf versions
-    latex_elements['preamble'] += macro + '\n'
-    # used when building html version
-    imgmath_latex_preamble += macro + '\n'
+latex_additional_files = ["latex_macros.sty"]
 
 #####################################################
 
