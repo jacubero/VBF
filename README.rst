@@ -1,7 +1,9 @@
-# VBF library
+***********
+VBF library
+***********
 
-
-# Description
+Description
+===========
 
 The Vector Boolean Function Library (VBF) is a collection of C++ classes designed for analyzing Vector Boolean Functions (functions that map a Boolean vector to another Boolean vector) from a cryptographic perspective. This implementation uses the NTL library from Victor Shoup, modifying some of the general purpose modules of this library (to make it better suited to cryptography), and adding new modules that complement the existing ones. The class representing a Vector Boolean Function can be initialized by several data structures such as Truth Table, Trace representation, Algebraic Normal Form (ANF) among others. The most relevant cryptographic criteria for both block and stream ciphers can be evaluated with VBF. It allows to obtain some interesting cryptologic characterizing features such as linear structures, frequency distribution of the absolute values of the Walsh Spectrum or Autocorrelation Spectrum, among others. In addition, operations such as equality checking, composition, inversion, sum, direct sum, concatenation, bricklayering (parallel application of Vector Boolean Functions as employed in Rijndael cipher), and adding coordinate functions of two Vector Boolean Functions can be executed.
 
@@ -9,19 +11,23 @@ The full documentation is published at the following link:
 [http://vbflibrary.tk/](http://vbflibrary.tk/)
 
 
-# Installation
+Installation
+============
 
-## Environment
+Environment
+-----------
 
 Required
 
 * NTL Library (http://www.shoup.net/ntl/download.html)
 
-## Downloading
+Downloading
+-----------
 
 	https://github.com/jacubero/VBF/tree/master/src 
 
-## Installing
+Installing
+----------
 
 After downloading, **Obtain NTL library source code**. To obtain the source code and documentation for NTL, download ntl-xxx.tar.gz from `Download VBF library <http://www.shoup.net/ntl/download.html>`, placing it in a different directory
 
@@ -43,12 +49,14 @@ The *make* execution in the directory *src/* compiles all the source files and c
 
 Do not forget to use an account with appropriate permissions: *root* for instance.
 
-# Usage
+Usage
+-----
 
 A tutorial and overview of the VBF library can be found at
 [http://vbflibrary.tk/](http://vbflibrary.tk/)
 
-# License
+License
+-------
 
 Copyright Jose Antonio Alvarez Cubero.
 

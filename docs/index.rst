@@ -35,8 +35,14 @@ Table of Contents:
    Bibliography <bibliography>
    Appendix <appendix>   
 
+
+   *
+
+
+
 Indices and tables
 ==================
 
+* :ref:`genindex`
+* :ref:`modindex`
 * :ref:`search`
-
