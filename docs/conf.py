@@ -33,7 +33,6 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
-    'sphinxtogithub',
     'sphinx.ext.imgmath',
 ]
 
