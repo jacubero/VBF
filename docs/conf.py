@@ -194,13 +194,8 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-'preamble': r'\input{latex_macros.sty}',
+'preamble': r'\input{latex_macros.txt}',
 }
-
-#####################################################
-# add LaTeX macros 
-
-latex_additional_files = ["latex_macros.sty"]
 
 #####################################################
 
