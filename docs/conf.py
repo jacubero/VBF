@@ -194,7 +194,41 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-'preamble': r'\input{latex_macros.txt}',
+'preamble': r'''
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newcommand{\gf}[1]{\ensuremath{\mathrm{#1}}}
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\code}[1]{\ensuremath{\mathcal{#1}}}
+\newcommand{\set}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\matr}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\funct}[1]{\ensuremath{\mathpzc{#1}}}
+\newcommand{\numset}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\dft}{\ensuremath{\mathcal{DFT}}}
+\newcommand{\idft}{\ensuremath{\mathcal{IDFT}}}
+\newcommand{\W}{\ensuremath{\mathcal{W}}}
+\newcommand{\F}{\ensuremath{\mathcal{F}}}
+\newcommand{\rnd}[1]{\ensuremath{\mathrm{#1}}}
+\newcommand{\crit}[1]{\ensuremath{#1}}
+\newcommand{\walsh}[1]{\hat{#1}}
+\newcommand{\R}{\ensuremath{r}}
+\newcommand{\med}{\ensuremath{\mathrm{E}}}
+\newcommand{\Var}{\ensuremath{\mathrm{Var}}}
+\newcommand{\D}{\ensuremath{\mathrm{D}}}
+\newcommand{\Cov}{\ensuremath{\mathrm{Cov}}}
+\newcommand{\Cor}{\ensuremath{\mathrm{C}}}
+\newcommand{\given}{\ | \ }
+\newcommand{\fa}{\forall \thinspace}
+\def\bbbr{{\numset{R}}}
+\def\bbbf{{\numset{F}}}
+\def\bbbk{{\numset{K}}}
+\def\bbbn{{\numset{N}}}
+\def\bbbz{{\numset{Z}}}
+\def\bbbc{{\numset{C}}}
+\def\bbbq{{\numset{Q}}}
+''',
 }
 
 #####################################################
