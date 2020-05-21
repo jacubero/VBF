@@ -32,7 +32,7 @@ Using VBF
 How do I get started?
 =====================
 
-To download VBF source code, go to `VBF source code URL <https://github.com/jacubero/VBF/tree/master/src>`_ . You can read the documentation on http://vbflibrary.tk.
+To download VBF source code, go to `VBF source code URL <https://github.com/jacubero/VBF/tree/master/src>`_ . You can read the documentation on `<http://vbf.rtfd.io>`_.
 
 What are VBF prerequisites?
 =============================
